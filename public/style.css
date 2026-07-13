@@ -54,7 +54,7 @@ img { max-width: 100%; }
 .brand:hover { text-decoration: none; }
 .brand .mark { display: inline-flex; width: 32px; height: 32px; background: var(--accent); border-radius: 6px; align-items: center; justify-content: center; color: #fff; font-weight: 800; }
 nav.main { display: flex; flex-wrap: wrap; gap: 0.25rem; }
-nav.main a { color: #d5e3ef; padding: 0.5rem 0.7rem; border-radius: 6px; font-size: 0.95rem; }
+nav.main a { color: #d5e3ef; padding: 0.6rem 0.7rem; border-radius: 6px; font-size: 1rem; }
 nav.main a:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
 nav.main a.active { background: var(--accent); color: #fff; }
 
@@ -124,7 +124,7 @@ th { background: var(--surface); font-weight: 600; }
 .note p:last-child, .note ul:last-child { margin-bottom: 0; }
 
 /* Section kicker / tag on hero + card labels */
-.kicker { display: inline-block; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.06em;
+.kicker { display: inline-block; font-size: 0.85rem; font-weight: 700; letter-spacing: 0.06em;
   text-transform: uppercase; color: var(--accent); margin: 0 0 0.4rem; }
 .pill { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.04em;
   text-transform: uppercase; padding: 0.15rem 0.5rem; border-radius: 999px;
@@ -169,8 +169,9 @@ details.qa > div > *:first-child { margin-top: 0; }
 #glossary-search:focus { outline: none; border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(28,126,214,0.2); }
 .letter-nav { display: flex; flex-wrap: wrap; gap: 0.25rem; margin: 0.6rem 0 0; }
-.letter-nav a { padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.85rem;
-  font-weight: 600; color: var(--accent); }
+.letter-nav a { padding: 0.5rem 0.7rem; border-radius: 4px; font-size: 1rem;
+  font-weight: 600; color: var(--accent); min-width: 44px; min-height: 44px;
+  display: inline-flex; align-items: center; justify-content: center; }
 .letter-nav a:hover { background: var(--surface); text-decoration: none; }
 dl.glossary { margin: 1rem 0; }
 dl.glossary dt { font-weight: 700; color: var(--brand); margin-top: 1.1rem; font-size: 1.05rem; scroll-margin-top: 5rem; }
@@ -227,7 +228,8 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
   width: 1.1rem; height: 1.1rem; border: 2px solid var(--accent); border-radius: 3px; background: transparent; }
 .print-hint { font-size: 0.9rem; color: var(--muted); }
 .print-btn { display: inline-block; background: var(--accent); color: #fff; border: none; border-radius: 6px;
-  padding: 0.5rem 0.9rem; font-weight: 600; cursor: pointer; font-family: var(--font); margin: 0.5rem 0; }
+  padding: 0.6rem 1rem; font-weight: 600; cursor: pointer; font-family: var(--font); margin: 0.5rem 0;
+  font-size: 1rem; min-height: 44px; }
 .print-btn:hover { background: var(--brand); text-decoration: none; }
 
 @media print {
@@ -266,7 +268,7 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
 .nav-options label:has(input:checked) { border-color: var(--accent); background: rgba(28,126,214,0.06); }
 .nav-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
 .nav-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 0.6rem 1.1rem;
-  font-weight: 700; font-family: var(--font); cursor: pointer; font-size: 1rem; }
+  font-weight: 700; font-family: var(--font); cursor: pointer; font-size: 1rem; min-height: 44px; }
 .nav-btn:hover { background: var(--brand); }
 .nav-btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--border); }
 .nav-hidden { display: none; }
@@ -299,7 +301,7 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
 .help-options label:has(input:checked) { border-color: var(--accent); background: rgba(28,126,214,0.06); }
 .help-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
 .help-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 0.6rem 1.1rem;
-  font-weight: 700; font-family: var(--font); cursor: pointer; font-size: 1rem; }
+  font-weight: 700; font-family: var(--font); cursor: pointer; font-size: 1rem; min-height: 44px; }
 .help-btn:hover { background: var(--brand); }
 .help-btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--border); }
 .help-hidden { display: none; }
@@ -339,11 +341,12 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
    Top-nav dropdown menus
    ============================================================ */
 .nav-toggle { display: none; background: none; border: 1px solid rgba(255,255,255,0.35);
-  color: #fff; font-size: 1.2rem; line-height: 1; padding: 0.35rem 0.6rem; border-radius: 6px; cursor: pointer; }
+  color: #fff; font-size: 1.3rem; line-height: 1; padding: 0.6rem 0.85rem; border-radius: 6px; cursor: pointer;
+  min-width: 44px; min-height: 44px; }
 .navitem { position: relative; display: inline-flex; align-items: center; }
 .navitem .navtop { padding-right: 0.35rem; }
-.menu-caret { background: none; border: none; color: #d5e3ef; cursor: pointer; font-size: 0.8rem;
-  padding: 0.4rem 0.5rem 0.4rem 0.1rem; line-height: 1; }
+.menu-caret { background: none; border: none; color: #d5e3ef; cursor: pointer; font-size: 0.9rem;
+  padding: 0.6rem 0.6rem 0.6rem 0.2rem; line-height: 1; min-height: 44px; }
 .menu-caret:hover { color: #fff; }
 .dropdown { position: absolute; top: 100%; left: 0; min-width: 250px; background: var(--brand-dark);
   border: 1px solid var(--accent); border-top: none; border-radius: 0 0 8px 8px; padding: 0.35rem 0;

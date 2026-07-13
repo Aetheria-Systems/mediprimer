@@ -32,6 +32,7 @@ MENUS = {
     ],
     "members": [
         ("/turning-65.html", "★ Turning 65: Start Here", True),
+        ("/planning-for-two.html", "Medicare for Couples", False),
         ("/choosing-coverage.html", "Choosing Coverage", False),
         ("/costs.html", "Understanding Your Costs", False),
         ("/enrollment.html", "Enrollment & Deadlines", False),
@@ -76,6 +77,7 @@ ACTIVE = {
     "choosing-coverage.html": "members", "how-do-i.html": "members", "rights.html": "members",
     "getting-help.html": "members", "caregivers.html": "members", "member-journey.html": "members",
     "turning-65.html": "members", "retiring-losing-coverage.html": "members",
+    "planning-for-two.html": "members",
     "disability-medicare.html": "members", "working-past-65.html": "members",
     "dual-eligible.html": "members", "moving-states.html": "members",
     "veterans-medicare.html": "members", "edge-cases.html": "members", "questions-to-ask.html": "members",

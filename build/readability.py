@@ -16,7 +16,7 @@ MEMBER = {
  "medicare-part-d","medicare-advantage","medicaid-eligibility","marketplace","dual-eligible",
  "working-past-65","retiring-losing-coverage","disability-medicare","moving-states","chip",
  "enrollment-calendar","checklists","member-journey","coverage-basics","plan-types",
- "medicaid-starting-out","using-plan-finder","common-mistakes",
+ "medicaid-starting-out","using-plan-finder","common-mistakes","planning-for-two",
 }
 
 def text_of_main(html):

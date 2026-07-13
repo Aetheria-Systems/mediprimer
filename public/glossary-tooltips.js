@@ -95,6 +95,7 @@
   // One shared tooltip bubble.
   var tip = document.createElement("div");
   tip.className = "gloss-tip";
+  tip.setAttribute("role", "tooltip");
   tip.hidden = true;
   document.body.appendChild(tip);
 
@@ -118,11 +119,22 @@
   main.addEventListener("focusin", function (e) {
     if (e.target.classList && e.target.classList.contains("gloss")) show(e.target);
   });
-  main.addEventListener("focusout", hide);
+  main.addEventListener("focusout", function (e) {
+    if (e.target.classList && e.target.classList.contains("gloss")) hide();
+  });
+  function toggle(el) {
+    if (tip.hidden || tip.textContent !== el.getAttribute("data-def")) show(el);
+    else hide();
+  }
   main.addEventListener("click", function (e) {
-    if (e.target.classList && e.target.classList.contains("gloss")) {
-      if (tip.hidden || tip.textContent !== e.target.getAttribute("data-def")) show(e.target);
-      else hide();
+    if (e.target.classList && e.target.classList.contains("gloss")) toggle(e.target);
+  });
+  // Keyboard activation: the spans carry role="button", so Enter and Space must work.
+  main.addEventListener("keydown", function (e) {
+    if ((e.key === "Enter" || e.key === " ") &&
+        e.target.classList && e.target.classList.contains("gloss")) {
+      e.preventDefault();
+      toggle(e.target);
     }
   });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") hide(); });

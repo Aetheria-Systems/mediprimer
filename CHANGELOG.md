@@ -1,5 +1,29 @@
 # Changelog
 
+## 2026-07-13 — Couples planning, pre-65 path, accessibility pass
+
+- **New page — Planning for Two: Medicare for Couples** (`planning-for-two.html`):
+  the individual-premium rule (no family Medicare), household cost math with
+  2026 figures, the two "gap years" scenarios (older spouse retires first;
+  younger spouse loses employer coverage at the older's Medicare move), IRMAA
+  for joint filers with the SSA-44 appeal path, domestic-partner caveat, and a
+  couples checklist. Linked from the homepage, Start Here menu, Turning 65,
+  Retiring/Losing Coverage, and Costs. FAQ structured data included. All facts
+  verified against ssa.gov/medicare.gov/cms.gov.
+- **Pre-65 entry path**: new "Not 65 yet? What to do in your early 60s"
+  section on Turning 65 (income timing, HSA endgame, bridge-coverage pricing
+  before picking a retirement date) plus a homepage route card, so people
+  planning at 61–63 have a first click.
+- **Content gaps closed**: IRMAA two-year lookback, joint-filing rule, and the
+  SSA-44 lower-my-IRMAA appeal added to Understanding Your Costs; "When Your
+  Coverage Actually Starts" section (post-2023 effective-date rules, GEP
+  month-after start) added to Enrollment & Deadlines.
+- **Accessibility**: glossary tooltips now respond to Enter/Space and carry
+  `role="tooltip"`; touch targets raised to 44px minimum (nav buttons, help
+  buttons, print button, hamburger, glossary A–Z); main-nav and glossary
+  letter-nav font sizes raised; kicker labels enlarged.
+- **GitHub**: repository homepage and topics set.
+
 ## 2026-07-13 — Member-first overhaul
 
 - **Dual-eligible discovery path**: "Getting Help Paying" rebuilt around a

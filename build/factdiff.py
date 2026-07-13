@@ -11,7 +11,7 @@ NEW = "/home/deltaprism/mediprimer/public"
 PAGES = """medicaid-eligibility disability-medicare medicare-part-b medicare-advantage
 marketplace medicare-part-a dual-eligible medigap caregivers edge-cases enrollment
 medicare-part-d choosing-coverage working-past-65 retiring-losing-coverage chip
-veterans-medicare moving-states rights getting-help""".split()
+veterans-medicare moving-states rights getting-help planning-for-two""".split()
 
 # High-signal claim tokens: program/acronym names + rule words. Numbers handled separately.
 TERMS = ["TRICARE","CHAMPVA","CHIP","COBRA","HSA","ESRD","ALS","SSDI","SSI","PACE",

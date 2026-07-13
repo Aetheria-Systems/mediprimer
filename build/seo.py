@@ -29,6 +29,12 @@ FAQ = {
         ("Can I switch from Medicare Advantage back to Original Medicare later?",
          "You can switch during set windows, but buying a Medigap supplement afterward can require medical underwriting, and you can be turned down. This 'one-way door' is the most important thing to weigh before you choose."),
     ],
+    "planning-for-two.html": [
+        ("Does Medicare cover my spouse?",
+         "No. Medicare has no family or spouse coverage. Each spouse gets their own Medicare at their own 65th birthday, pays their own premiums, and picks their own plans. A younger spouse needs other coverage until their own Medicare begins."),
+        ("Does my spouse's income affect my Medicare premium?",
+         "It can. If you file taxes jointly, Social Security uses your combined income from two years ago to set the income surcharge (IRMAA) on each spouse's Part B and Part D premiums. If your income dropped after retiring, you can ask Social Security to lower it using form SSA-44."),
+    ],
     "veterans-medicare.html": [
         ("If I have VA health care, do I still need Medicare Part B?",
          "VA health care does not let you delay Part B without a lifelong penalty, and Part B is what covers care outside the VA. Many veterans enroll in Part B at 65 to keep that option; some skip it deliberately. Decide on purpose during your enrollment window."),
