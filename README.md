@@ -27,13 +27,18 @@ A static website that explains U.S. health-coverage programs in plain English (a
 ## Build
 
 ```sh
-cd public
-python3 ../build/normalize.py
-python3 ../build/assemble.py
-python3 ../build/seo.py "$(date +%F)"
+make build    # normalize + assemble + seo (stamps today's date)
+make check    # build, then JS syntax check + plain-language gate (grade <= 9.5)
+make deploy   # check, factual-drift report, rsync to the live docroot
 ```
 
-Then serve `public/` with any static web server.
+`make check` is the canonical verification — run it before committing content
+changes. Then serve `public/` with any static web server.
+
+## License
+
+Site content (`public/`) is [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/);
+build tooling and JavaScript are MIT. See `LICENSE`.
 
 ## Independence
 

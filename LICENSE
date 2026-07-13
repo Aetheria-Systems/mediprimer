@@ -1,0 +1,43 @@
+MediPrimer — License
+
+Copyright (c) 2026 Kurt Hamm
+
+SITE CONTENT (everything under public/: HTML pages, text, and data files)
+
+  Licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+  International (CC BY-NC-ND 4.0).
+
+  You may copy and redistribute the content in any medium or format, provided
+  you give appropriate credit to MediPrimer (mediprimer.org), do not use it
+  for commercial purposes, and do not distribute modified versions.
+
+  Full legal text: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
+
+  Note: MediPrimer content is educational information only — not medical,
+  legal, or financial advice. See public/disclaimer.html.
+
+BUILD TOOLING (everything under build/, the Makefile, and JavaScript files
+under public/)
+
+  Licensed under the MIT License:
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+
+The MediPrimer name and "MP" mark identify this site's editorial voice and may
+not be used to imply endorsement of derivative works.
