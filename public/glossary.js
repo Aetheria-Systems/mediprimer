@@ -78,9 +78,11 @@
       if (typeof gtag !== "function") { return; }
       clearTimeout(searchTimer);
       searchTimer = setTimeout(function () {
-        var term = search.value.trim();
-        if (term.length >= 2) {
-          gtag("event", "glossary_search", { search_term: term });
+        if (typeof gtag === "function") {
+          var term = search.value.trim().toLowerCase().slice(0, 100);
+          if (term.length >= 2) {
+            gtag("event", "glossary_search", { search_term: term });
+          }
         }
       }, 1000);
     });

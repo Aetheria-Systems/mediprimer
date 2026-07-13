@@ -12,10 +12,13 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
-gtag("config", "G-5HZF6BCSF3");
-window.matchMedia("print").addEventListener("change", function (e) {
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
   if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
-});
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 </script>
 <!--/P:analytics-->
 <!--seo-->
@@ -114,7 +117,7 @@ window.matchMedia("print").addEventListener("change", function (e) {
 
     <h2>Our editorial-independence promise</h2>
     <p>Any support we accept comes with one non-negotiable condition: <strong>no supporter, donor, or grantor has any say over what we write.</strong> Content is based solely on official government sources and our commitment to plain, neutral, accurate information. If a supporter ever asked us to soften, slant, or steer our content, we would decline the support. Supporters are disclosed; influence is not for sale. See our <a href="/editorial-standards.html">Editorial Standards</a>.</p>
-    <p>We also don't sell or share your data — there's nothing to sell, because we don't collect it.</p>
+    <p>We don't collect personal information or sell your data. We use Google Analytics only to see which pages help people.</p>
 
     <div class="note info">
       <strong>Are you a foundation, nonprofit, library, or community organization</strong> interested in supporting or partnering with MediPrimer through a grant or clearly-disclosed underwriting? We welcome inquiries that fit the standards above at <a href="mailto:editor@mediprimer.org">editor@mediprimer.org</a>.

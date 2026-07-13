@@ -12,10 +12,13 @@
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag("js", new Date());
-gtag("config", "G-5HZF6BCSF3");
-window.matchMedia("print").addEventListener("change", function (e) {
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
   if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
-});
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 </script>
 <!--/P:analytics-->
 <!--seo-->
