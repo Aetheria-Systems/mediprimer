@@ -21,4 +21,5 @@ check: build
 deploy: check
 	python3 build/factdiff.py
 	sudo rsync -a --delete --chown=www-data:www-data $(PUB)/ $(LIVE)/
+	python3 build/indexnow.py
 	@echo 'Deployed to $(LIVE)'

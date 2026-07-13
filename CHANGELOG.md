@@ -23,6 +23,13 @@
   buttons, print button, hamburger, glossary A–Z); main-nav and glossary
   letter-nav font sizes raised; kicker labels enlarged.
 - **GitHub**: repository homepage and topics set.
+- **Contact channel**: `editor@mediprimer.org` (Google Workspace) published on
+  About, Editorial Standards, and Support for corrections and professional
+  inquiries — a plain mailto, no form, so the no-data-collection promise holds.
+  Members are still routed to SHIP/1-800-MEDICARE for personal help.
+- **IndexNow wired into deploy**: `build/indexnow.py` submits every sitemap URL
+  to api.indexnow.org after each rsync (key was already provisioned but unused),
+  so content updates get crawled in minutes instead of weeks.
 
 ## 2026-07-13 — Member-first overhaul
 
