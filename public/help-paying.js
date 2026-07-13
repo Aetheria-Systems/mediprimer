@@ -61,8 +61,8 @@
       name: "PACE (Programs of All-Inclusive Care for the Elderly)",
       limit_single: null,
       limit_couple: null,
-      impact: 4,
-      what: "For people with ongoing health needs who want to stay at home. Includes medical care, social services, daily help.",
+      impact: 3,
+      what: "For people 55 or older who need a nursing-home level of care but want to stay at home. Includes medical care, social services, and daily help. Only offered in some areas, and your state must certify the level of need. You can join with Medicare, Medicaid, or both.",
       apply: "<a href=\"https://www.medicare.gov/\" rel=\"noopener\">medicare.gov</a>"
     },
     marketplace: {
@@ -94,11 +94,12 @@
           '<label><input type="radio" name="coverage" value="both"><span>Both Medicare and Medicaid</span></label>' +
           '<label><input type="radio" name="coverage" value="neither"><span>Neither or unsure</span></label>' +
         '</div></div>' +
-      '<div class="help-q"><span class="help-label">2. How many people are in your household?</span>' +
+      '<div class="help-q"><span class="help-label">2. Do you live alone, or with a spouse or partner?</span>' +
         '<div class="help-options">' +
-          '<label><input type="radio" name="household" value="one"><span>Just me (1 person)</span></label>' +
-          '<label><input type="radio" name="household" value="two"><span>2 or more people</span></label>' +
-        '</div></div>' +
+          '<label><input type="radio" name="household" value="one"><span>Just me</span></label>' +
+          '<label><input type="radio" name="household" value="two"><span>Me and my spouse or partner</span></label>' +
+        '</div>' +
+        '<p class="help-note-small">Other household sizes have different limits — your state agency or SHIP can check the exact numbers for you.</p></div>' +
       '<div class="help-q"><span class="help-label">3. Approximately how much does your household earn per month (gross income, before taxes)?</span>' +
         '<div class="help-options">' +
           '<label><input type="radio" name="income" value="under-1000"><span>Under about $1,000</span></label>' +
@@ -129,22 +130,24 @@
     else if (e.target.name === "drugs") state.drugs = e.target.value;
   }
 
-  function getIncomeNum(income_range) {
+  // Upper bound of the selected band. A program is only flagged as a match when
+  // the WHOLE band fits under its limit — never overstate eligibility.
+  function getIncomeMax(income_range) {
     var ranges = {
-      "under-1000": 999,
-      "1000-1200": 1100,
-      "1200-1400": 1300,
-      "1400-1600": 1500,
-      "1600-2000": 1800,
-      "over-2000": 2500
+      "under-1000": 1000,
+      "1000-1200": 1200,
+      "1200-1400": 1400,
+      "1400-1600": 1600,
+      "1600-2000": 2000,
+      "over-2000": Infinity
     };
     return ranges[income_range] || 0;
   }
 
-  function checkQualifies(prog, income, household) {
+  function checkQualifies(prog, incomeMax, household) {
     var limit = household === "one" ? prog.limit_single : prog.limit_couple;
     if (!limit) return null; // No hard limit (state-dependent or automatic)
-    return income <= limit;
+    return incomeMax <= limit;
   }
 
   function onGo() {
@@ -155,41 +158,42 @@
     }
     warn.className = "glossary-empty help-hidden";
 
-    var income = getIncomeNum(state.income);
+    var incomeMax = getIncomeMax(state.income);
     var household = state.household;
     var qualified = [];
 
-    // Determine which programs to show
+    // MSPs for people with (or eligible for) Medicare. Income is only one part of
+    // the test — resources and state rules matter too — so a match means "worth
+    // applying", not a promise.
     if (state.coverage === "medicare" || state.coverage === "both") {
-      // MSPs for Medicare holders
-      if (checkQualifies(PROGRAMS.qmb, income, household) !== false) {
-        qualified.push({prog: "qmb", likely: checkQualifies(PROGRAMS.qmb, income, household)});
-      }
-      if (checkQualifies(PROGRAMS.slmb, income, household) !== false) {
-        qualified.push({prog: "slmb", likely: checkQualifies(PROGRAMS.slmb, income, household)});
-      }
-      if (checkQualifies(PROGRAMS.qi, income, household) !== false) {
-        qualified.push({prog: "qi", likely: checkQualifies(PROGRAMS.qi, income, household)});
+      ["qmb", "slmb", "qi"].forEach(function (key) {
+        if (checkQualifies(PROGRAMS[key], incomeMax, household) !== false) {
+          qualified.push({prog: key, likely: checkQualifies(PROGRAMS[key], incomeMax, household)});
+        }
+      });
+    }
+
+    // Extra Help: anyone with BOTH Medicare and Medicaid gets it automatically,
+    // at any income. Otherwise it's income-based for Medicare holders.
+    if (state.coverage === "both") {
+      qualified.push({prog: "extra_help", likely: true, automatic: true});
+    } else if (state.coverage === "medicare" && state.drugs === "yes") {
+      if (checkQualifies(PROGRAMS.extra_help, incomeMax, household) !== false) {
+        qualified.push({prog: "extra_help", likely: checkQualifies(PROGRAMS.extra_help, incomeMax, household)});
       }
     }
 
-    // Extra Help for Medicare holders with low income + drugs
-    if ((state.coverage === "medicare" || state.coverage === "both") && state.drugs === "yes") {
-      if (checkQualifies(PROGRAMS.extra_help, income, household) !== false) {
-        qualified.push({prog: "extra_help", likely: checkQualifies(PROGRAMS.extra_help, income, household)});
-      }
-    }
-
-    // Medicaid and PACE for low-income people (all coverage statuses)
-    if (income < 2000) {
+    // Medicaid — only for people who don't already have it.
+    if (state.coverage !== "medicaid" && state.coverage !== "both" && incomeMax <= 2000) {
       qualified.push({prog: "medicaid", likely: null});
-      if (state.coverage !== "marketplace") {
-        qualified.push({prog: "pace", likely: null});
-      }
     }
 
-    // Marketplace subsidies if no Medicare (all low-income)
-    if (state.coverage !== "medicare" && income < 2000) {
+    // PACE has non-income gates (55+, nursing-home-level care need, service area),
+    // so it is always informational — never a "match".
+    qualified.push({prog: "pace", likely: null});
+
+    // Marketplace subsidies only make sense with no Medicare or Medicaid.
+    if (state.coverage === "neither") {
       qualified.push({prog: "marketplace", likely: null});
     }
 
@@ -213,16 +217,14 @@
     var maybe = qualified.filter(function (q) { return q.likely === null || q.likely === false; });
 
     likely.forEach(function (q) {
-      var prog = PROGRAMS[q.prog];
-      html += programHTML(prog, true);
+      html += programHTML(PROGRAMS[q.prog], true, q.automatic);
     });
     maybe.forEach(function (q) {
-      var prog = PROGRAMS[q.prog];
-      html += programHTML(prog, false);
+      html += programHTML(PROGRAMS[q.prog], false, false);
     });
 
     html += '<div class="help-note">';
-    html += '<strong>These are 2026 figures and change every year.</strong> Many states have higher income limits or no asset test. Apply even if you are close to the limit — it costs nothing, and you might qualify.';
+    html += '<strong>These are approximate 2026 figures and change every year.</strong> Income is only part of the test: most of these programs also have resource (savings) limits, and many states set higher limits or drop the resource test entirely. Only your state agency can decide. Apply even if you are close to the limit — it costs nothing, and you might qualify.';
     html += '</div>';
 
     html += '<div class="help-actions"><button type="button" class="help-btn secondary" id="help-reset">Answer again</button></div>';
@@ -238,13 +240,20 @@
     root.querySelector(".help-result").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function programHTML(prog, likely) {
-    var limit = prog.limit_single ? " (income under about $" + prog.limit_single + "/month for one person)" : " (limits vary by state)";
-    var badge = likely ? '<span class="help-badge">Likely qualifies</span>' : '';
+  function programHTML(prog, likely, automatic) {
+    var limitNum = state.household === "one" ? prog.limit_single : prog.limit_couple;
+    var who = state.household === "one" ? "for one person" : "for a couple";
+    var badge = automatic ? '<span class="help-badge">Automatic with Medicare + Medicaid</span>'
+      : likely ? '<span class="help-badge">Worth applying — your answers fit</span>' : '';
+    var limitLine = automatic
+      ? '<p class="help-limit">If you have both Medicare and full Medicaid, you get this automatically — no income test.</p>'
+      : limitNum
+        ? '<p class="help-limit">Approximate 2026 income limit: $' + limitNum.toLocaleString("en-US") + '/month ' + who + '. Resource limits also apply; many states go higher.</p>'
+        : '<p class="help-limit">Limits and rules vary by state.</p>';
     return '<div class="help-program">' +
       '<div class="help-prog-header">' + badge + '<h4>' + prog.name + '</h4></div>' +
       '<p class="help-what"><strong>What it does:</strong> ' + prog.what + '</p>' +
-      (prog.limit_single ? '<p class="help-limit">2026 income limit' + limit + '</p>' : '<p class="help-limit">Income limits vary by state.</p>') +
+      limitLine +
       '<p class="help-apply"><strong>How to apply:</strong> ' + prog.apply + '</p>' +
       '</div>';
   }

@@ -312,7 +312,8 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
 .help-prog-header { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem; }
 .help-prog-header h4 { margin: 0; color: var(--brand); font-size: 1rem; }
 .help-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.04em; color: #fff; background: #16a34a; padding: 0.25rem 0.55rem; border-radius: 3px; }
+  letter-spacing: 0.04em; color: #fff; background: #166534; padding: 0.25rem 0.55rem; border-radius: 3px; }
+.help-note-small { font-size: 0.85rem; color: var(--muted); margin: 0.3rem 0 0; }
 .help-program p { margin: 0.4rem 0; font-size: 0.95rem; }
 .help-what { margin-top: 0; }
 .help-limit { color: var(--muted); font-size: 0.9rem; }

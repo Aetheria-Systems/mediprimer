@@ -338,11 +338,11 @@
 
     var birthMonth = parseInt(month, 10);
     var birthYear = parseInt(year, 10);
-    var windowStart = new Date(birthYear, birthMonth - 3, 1);
-    if (birthMonth <= 3) {
-      windowStart = new Date(birthYear - 1, birthMonth + 9, 1);
-    }
-    var windowEnd = new Date(birthYear, birthMonth + 3, 30);
+    // birthMonth is 1-based; Date months are 0-based. Birthday month index is
+    // birthMonth - 1, so the 7-month IEP runs from index birthMonth - 4 through
+    // birthMonth + 2 (Date rolls the year automatically for negative months).
+    var windowStart = new Date(birthYear, birthMonth - 4, 1);
+    var windowEnd = new Date(birthYear, birthMonth + 3, 0); // last day of that month
 
     var title = encodeURIComponent("Check your Medicare enrollment window");
     var desc = encodeURIComponent("Your 7-month Initial Enrollment Period runs from " +
