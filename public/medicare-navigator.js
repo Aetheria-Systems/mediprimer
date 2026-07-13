@@ -197,6 +197,12 @@
       warn.className = "glossary-empty"; return;
     }
     warn.className = "glossary-empty nav-hidden";
+    if (typeof gtag === "function") {
+      gtag("event", "navigator_result", {
+        coverage: state.you,
+        married: state.married ? "yes" : "no"
+      });
+    }
 
     var html = '<div class="nav-result">';
     html += '<div class="verdict">Here’s your directive plan. Everything below assumes you act during your 7-month Initial Enrollment Period.</div>';
