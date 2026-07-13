@@ -6,3 +6,4 @@ build/.indexnow-key
 *.tgz
 backups/
 .DS_Store
+.claude/
