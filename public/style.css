@@ -25,7 +25,7 @@
     --brand: #4a9fd4;
     --brand-dark: #0b1620;
     --accent: #4dabf7;
-    --link: #7cc2f0;
+    --link: #89d4ff;
     --warn-bg: #2a2410;
     --warn-border: #6b5a1f;
   }
@@ -281,6 +281,44 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
 .nav-result .track ul { margin: 0.4rem 0; }
 .nav-result .reflinks { margin: 0.5rem 0 0; font-size: 0.95rem; }
 .nav-result .reflinks a { margin-right: 0.9rem; white-space: nowrap; }
+
+/* ============================================================
+   Interactive "Help Paying" questionnaire
+   ============================================================ */
+#help-paying-questionnaire { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface);
+  padding: 1.25rem 1.4rem; margin: 1.5rem 0; }
+#help-paying-questionnaire h2, #help-paying-questionnaire h3 { margin-top: 0; }
+.help-q { margin: 0 0 1.4rem; }
+.help-q > .help-label { display: block; font-weight: 700; color: var(--brand); margin-bottom: 0.6rem; font-size: 1.05rem; }
+.help-options { display: grid; gap: 0.4rem; }
+.help-options label { display: flex; align-items: flex-start; gap: 0.6rem; padding: 0.6rem 0.75rem;
+  border: 1px solid var(--border); border-radius: 6px; background: var(--bg); cursor: pointer; font-size: 0.97rem; }
+.help-options label:hover { border-color: var(--accent); }
+.help-options input { margin-top: 0.2rem; flex: 0 0 auto; }
+.help-options input:checked + span { font-weight: 600; }
+.help-options label:has(input:checked) { border-color: var(--accent); background: rgba(28,126,214,0.06); }
+.help-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.5rem; }
+.help-btn { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 0.6rem 1.1rem;
+  font-weight: 700; font-family: var(--font); cursor: pointer; font-size: 1rem; }
+.help-btn:hover { background: var(--brand); }
+.help-btn.secondary { background: transparent; color: var(--accent); border: 1px solid var(--border); }
+.help-hidden { display: none; }
+.help-result { margin-top: 0.5rem; }
+.result-header { background: var(--bg); border: 1px solid var(--accent); border-left: 5px solid var(--accent);
+  border-radius: 6px; padding: 0.9rem 1.1rem; margin: 0 0 1rem; }
+.result-header h3 { margin: 0 0 0.3rem; color: var(--brand); }
+.result-header p { margin: 0.3rem 0 0; font-size: 0.97rem; }
+.help-program { border: 1px solid var(--border); border-radius: 6px; background: var(--bg); padding: 1rem 1.15rem; margin: 0 0 0.9rem; }
+.help-prog-header { display: flex; align-items: baseline; gap: 0.75rem; margin-bottom: 0.5rem; }
+.help-prog-header h4 { margin: 0; color: var(--brand); font-size: 1rem; }
+.help-badge { display: inline-block; font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.04em; color: #fff; background: #166534; padding: 0.25rem 0.55rem; border-radius: 3px; }
+.help-note-small { font-size: 0.85rem; color: var(--muted); margin: 0.3rem 0 0; }
+.help-program p { margin: 0.4rem 0; font-size: 0.95rem; }
+.help-what { margin-top: 0; }
+.help-limit { color: var(--muted); font-size: 0.9rem; }
+.help-apply { margin-bottom: 0; }
+.help-note { background: var(--warn-bg); border: 1px solid var(--warn-border); border-radius: var(--radius); padding: 0.9rem 1.1rem; margin: 1rem 0 0.5rem; font-size: 0.95rem; color: var(--ink); }
 
 /* Glossary tooltips (define once, show everywhere) */
 .gloss { border-bottom: 1px dotted var(--accent); cursor: help; }

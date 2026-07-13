@@ -114,7 +114,7 @@
   var root = document.getElementById("medicare-navigator");
   if (!root) return;
 
-  var state = { married: null, you: null, spouseAge: null, spouse: null };
+  var state = { deciding: null, married: null, you: null, spouseAge: null, spouse: null };
 
   function optionsHTML(name) {
     return COVERAGE.map(function (c) {
@@ -128,20 +128,28 @@
     root.innerHTML =
       '<h2>Answer a few questions for a plan built around you</h2>' +
       '<p>This gives you directive, plain-language next steps for your situation. It explains the Medicare rules for you — it does not sell or recommend any specific plan.</p>' +
-      '<div class="nav-q"><span class="nav-label">1. Are you single or married/partnered?</span>' +
+      '<div class="nav-q"><span class="nav-label">1. Are you deciding for yourself, or helping someone else?</span>' +
+        '<div class="nav-options">' +
+          '<label><input type="radio" name="deciding" value="self"><span>Deciding for myself</span></label>' +
+          '<label><input type="radio" name="deciding" value="other"><span>Helping someone else</span></label>' +
+        '</div></div>' +
+      '<div id="helper-note" class="nav-hidden note tip" style="margin: 1rem 0; font-size: 0.95rem;">' +
+        '<strong>You\'re a helper.</strong> Answer the remaining questions <em>on behalf of the person</em> you\'re helping. See <a href="/caregivers.html">Caregivers and Authorized Representatives</a> for what authority you need.' +
+      '</div>' +
+      '<div class="nav-q"><span class="nav-label">2. Are you single or married/partnered?</span>' +
         '<div class="nav-options">' +
           '<label><input type="radio" name="married" value="no"><span>Single</span></label>' +
           '<label><input type="radio" name="married" value="yes"><span>Married or partnered</span></label>' +
         '</div></div>' +
-      '<div class="nav-q"><span class="nav-label">2. What health coverage do you have or expect around age 65?</span>' +
+      '<div class="nav-q"><span class="nav-label">3. What health coverage do you have or expect around age 65?</span>' +
         '<div class="nav-options">' + optionsHTML("you") + '</div></div>' +
       '<div id="spouse-block" class="nav-hidden">' +
-        '<div class="nav-q"><span class="nav-label">3. Is your spouse/partner 65 or older, or under 65?</span>' +
+        '<div class="nav-q"><span class="nav-label">4. Is your spouse/partner 65 or older, or under 65?</span>' +
           '<div class="nav-options">' +
             '<label><input type="radio" name="spouseAge" value="65plus"><span>65 or older (deciding about Medicare now)</span></label>' +
             '<label><input type="radio" name="spouseAge" value="under65"><span>Under 65 (not yet Medicare-eligible)</span></label>' +
           '</div></div>' +
-        '<div class="nav-q nav-hidden" id="spouse-cov-q"><span class="nav-label">4. What health coverage does your spouse/partner have or expect?</span>' +
+        '<div class="nav-q nav-hidden" id="spouse-cov-q"><span class="nav-label">5. What health coverage does your spouse/partner have or expect?</span>' +
           '<div class="nav-options">' + optionsHTML("spouse") + '</div></div>' +
       '</div>' +
       '<div class="nav-actions">' +
@@ -154,7 +162,10 @@
   }
 
   function onChange(e) {
-    if (e.target.name === "married") {
+    if (e.target.name === "deciding") {
+      state.deciding = e.target.value;
+      document.getElementById("helper-note").className = e.target.value === "other" ? "note tip" : "nav-hidden";
+    } else if (e.target.name === "married") {
       state.married = e.target.value === "yes";
       document.getElementById("spouse-block").className = state.married ? "" : "nav-hidden";
     } else if (e.target.name === "you") state.you = e.target.value;
@@ -180,7 +191,7 @@
 
   function onGo() {
     var warn = document.getElementById("nav-warn");
-    if (state.married === null || !state.you ||
+    if (!state.deciding || state.married === null || !state.you ||
         (state.married && !state.spouseAge) ||
         (state.married && state.spouseAge === "65plus" && !state.spouse)) {
       warn.className = "glossary-empty"; return;
@@ -210,6 +221,18 @@
     html += '<div class="track"><span class="tag">Do these next</span><h3>Your next steps</h3><ol class="steps">' +
       NEXT_STEPS.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "</ol></div>";
 
+    html += '<div class="track"><span class="tag">Limited income?</span><h3>Getting help paying</h3>' +
+      '<p>If money is tight, Medicaid, Medicare Savings Programs, and Extra Help can pay your premiums and reduce drug costs. Having both Medicare and Medicaid (called "dual eligible") unlocks extra benefits. <strong>Many people qualify and don\'t realize it.</strong></p>' +
+      '<p class="reflinks"><a href="/getting-help.html">See programs you might qualify for</a><a href="/dual-eligible.html">How being dual eligible works</a></p></div>';
+
+    html += '<div class="track"><span class="tag">Anything special apply?</span><h3>Edge cases to watch</h3>' +
+      '<p>Do any of these apply to you? They can change your timing or choices:</p>' +
+      '<ul style="margin: 0.6rem 0; padding-left: 1.4rem;">' +
+      '<li><strong>HSA contributor:</strong> Enrolling in Part A freezes new HSA contributions. <a href="/edge-cases.html">See what that means.</a></li>' +
+      '<li><strong>Higher income:</strong> Income over certain limits triggers IRMAA (extra premiums). <a href="/costs.html">Understanding costs and premiums.</a></li>' +
+      '<li><strong>Living part-time abroad:</strong> Original Medicare may limit coverage. <a href="/edge-cases.html">Traveling and living abroad.</a></li>' +
+      '</ul></div>';
+
     html += '<div class="note">Verify before you act: this is general educational information, not advice about your specific case. Confirm creditable-coverage and timing with your plan, Social Security, and a free <a href="/ship-directory.html">SHIP counselor</a> before you decide.</div>';
     html += '<div class="nav-actions"><button type="button" class="nav-btn secondary" id="nav-reset">Start over</button></div>';
     html += '</div>';
@@ -217,7 +240,7 @@
     root.insertAdjacentHTML("beforeend", html);
     document.getElementById("nav-go").className = "nav-btn nav-hidden";
     document.getElementById("nav-reset").addEventListener("click", function () {
-      state = { married: null, you: null, spouseAge: null, spouse: null };
+      state = { deciding: null, married: null, you: null, spouseAge: null, spouse: null };
       renderForm();
       root.scrollIntoView({ behavior: "smooth", block: "start" });
     });

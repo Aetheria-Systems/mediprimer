@@ -45,6 +45,10 @@ def ld(obj):
     return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False) + '</script>'
 
 SEO_RE = re.compile(r'\n?<!--seo-->.*?<!--/seo-->', re.DOTALL)
+# Hand-written OG/Twitter/canonical tags outside the seo block duplicate (and can
+# contradict) the generated ones; remove them so the seo block is the single source.
+MANUAL_META_RE = re.compile(
+    r'\n?<(?:meta (?:property="og:[^"]*"|name="twitter:[^"]*")|link rel="canonical") [^>]*>')
 
 def q(s):
     return s.replace('"', '&quot;')
@@ -98,6 +102,7 @@ for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
     url = BASE + "/" + ("" if name == "index.html" else name)
     urls.append((url, name))
     html2 = SEO_RE.sub("", html)
+    html2 = MANUAL_META_RE.sub("", html2)
     if "</head>" in html2:
         html2 = html2.replace("</head>", seo_block(name, url, title, desc) + "\n</head>", 1)
     if html2 != html:
@@ -106,7 +111,15 @@ for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
 sm = ['<?xml version="1.0" encoding="UTF-8"?>',
       '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
 for url, name in urls:
-    pr = "1.0" if name == "index.html" else ("0.9" if name in ("turning-65.html", "choosing-coverage.html", "members.html", "getting-help.html") else "0.7")
+    LEGAL = ("privacy.html", "terms-of-use.html", "disclaimer.html", "accessibility.html", "site-map.html")
+    KEY = ("turning-65.html", "choosing-coverage.html", "members.html", "getting-help.html",
+           "medicaid-starting-out.html", "dual-eligible.html")
+    HUB = ("basics.html", "coverage-basics.html", "how-do-i.html", "enrollment.html",
+           "costs.html", "glossary.html", "professionals.html", "caregivers.html")
+    pr = ("1.0" if name == "index.html" else
+          "0.9" if name in KEY else
+          "0.8" if name in HUB else
+          "0.3" if name in LEGAL else "0.7")
     sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, TODAY, pr))
 sm.append("</urlset>")
 open(os.path.join(PUB, "sitemap.xml"), "w").write("\n".join(sm) + "\n")

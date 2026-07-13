@@ -80,6 +80,7 @@ ACTIVE = {
     "dual-eligible.html": "members", "moving-states.html": "members",
     "veterans-medicare.html": "members", "edge-cases.html": "members", "questions-to-ask.html": "members",
     "checklists.html": "members", "enrollment-calendar.html": "members",
+    "medicaid-starting-out.html": "members", "using-plan-finder.html": "members", "common-mistakes.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
