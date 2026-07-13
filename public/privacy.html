@@ -4,19 +4,34 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy — MediPrimer</title>
-<meta name="description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no advertising or third-party tracking, and no data sales.">
+<meta name="description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no data sales. We use Google Analytics to understand which pages help people.">
 <link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HZF6BCSF3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
 <!--seo-->
 <link rel="canonical" href="https://mediprimer.org/privacy.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
 <meta property="og:title" content="Privacy Policy — MediPrimer">
-<meta property="og:description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no advertising or third-party tracking, and no data sales.">
+<meta property="og:description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no data sales. We use Google Analytics to understand which pages help people.">
 <meta property="og:url" content="https://mediprimer.org/privacy.html">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Privacy Policy — MediPrimer">
-<meta name="twitter:description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no advertising or third-party tracking, and no data sales.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy", "description": "MediPrimer's privacy policy: no accounts, no forms collecting personal information, no advertising or third-party tracking, and no data sales.", "url": "https://mediprimer.org/privacy.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<meta name="twitter:description" content="MediPrimer's privacy policy: no accounts, no forms collecting personal information, no data sales. We use Google Analytics to understand which pages help people.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Privacy Policy", "description": "MediPrimer's privacy policy: no accounts, no forms collecting personal information, no data sales. We use Google Analytics to understand which pages help people.", "url": "https://mediprimer.org/privacy.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://mediprimer.org/privacy.html"}]}</script>
 <!--/seo-->
 </head>
@@ -91,10 +106,10 @@
 </section>
 <main>
   <div class="wrap">
-    <p><em>Last updated: July 2026.</em></p>
+    <p><em>Last updated: July 13, 2026.</em></p>
 
     <div class="note info">
-      <strong>In plain terms:</strong> MediPrimer is a read-only educational site. There are no accounts, no sign-ups, and no forms that ask for your personal or health information. We don't sell data, and we don't use advertising or third-party tracking.
+      <strong>In plain terms:</strong> MediPrimer is a read-only educational site. There are no accounts, no sign-ups, and no forms that ask for your personal or health information. We don't sell data. We use Google Analytics to see which pages people read, so we can make the site better.
     </div>
 
     <h2>Information we do not collect</h2>
@@ -104,10 +119,12 @@
     <p>Like virtually all websites, our web server automatically records standard technical information when you visit — such as your IP address, browser type, the pages you request, and the date and time. This information is used only to operate the site, keep it secure, diagnose problems, and understand general usage. It is not used to identify you personally and is not combined with any marketing profile.</p>
 
     <h2>Cookies and tracking</h2>
-    <p>MediPrimer does not use advertising cookies or third-party tracking or analytics that follow you across the web. The glossary search runs entirely in your browser and does not send your searches anywhere. If this ever changes, we will update this policy and describe what is used.</p>
+    <p>We use Google Analytics to understand how the site is used. It records the pages you view, how you arrived, your approximate location (city level), and general device and browser information. Google processes this data on our behalf; we have turned off ads personalization features. We use it only to learn which content helps people and to improve the site.</p>
+    <p>Analytics also records use of on-page tools, such as glossary searches and the Medicare navigator, so we can see which tools are useful. These signals describe how the tools are used; they are not tied to your identity.</p>
+    <p>If you prefer not to be counted, you can install Google's free <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out browser add-on</a>, or use a browser or extension that blocks analytics. The site works fully either way.</p>
 
     <h2>How information is used and shared</h2>
-    <p>We do not sell, rent, or trade any information. Standard server logs may be shared only with our hosting or security providers as needed to run and protect the site, or where required by law. We do not share information with advertisers or data brokers.</p>
+    <p>We do not sell, rent, or trade any information. Standard server logs may be shared only with our hosting or security providers as needed to run and protect the site, or where required by law. Analytics data is processed by Google as described above. We do not share information with advertisers or data brokers.</p>
 
     <h2>Third-party websites</h2>
     <p>This site links to third-party websites, including government sites. Once you follow a link, you are subject to that site's own privacy practices, which we do not control. We encourage you to review the privacy policy of any site you visit.</p>
@@ -116,7 +133,7 @@
     <p>This site is intended for a general adult audience and is not directed to children under 13. We do not knowingly collect personal information from children.</p>
 
     <h2>Your choices</h2>
-    <p>Because we don't collect personal information through the site, there is nothing for you to update or delete with us. You can control cookies and browsing data through your own browser settings, and you can stop using the site at any time.</p>
+    <p>Because we don't collect personal information through the site, there is nothing for you to update or delete with us. You can control cookies and browsing data through your own browser settings, block analytics with the opt-out add-on above, and stop using the site at any time.</p>
 
     <h2>Changes to this policy</h2>
     <p>We may update this Privacy Policy from time to time. Material changes will be reflected here with an updated "last updated" date. Your continued use of the site after changes take effect constitutes acceptance of the revised policy.</p>

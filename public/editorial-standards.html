@@ -6,6 +6,21 @@
 <title>Editorial Standards &amp; Independence — MediPrimer</title>
 <meta name="description" content="How MediPrimer stays accurate and independent: our sources, our independence from insurers, how we keep content current, and our limits.">
 <link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HZF6BCSF3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
 <!--seo-->
 <link rel="canonical" href="https://mediprimer.org/editorial-standards.html">
 <meta property="og:type" content="website">
@@ -16,7 +31,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Editorial Standards &amp; Independence — MediPrimer">
 <meta name="twitter:description" content="How MediPrimer stays accurate and independent: our sources, our independence from insurers, how we keep content current, and our limits.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Editorial Standards & Independence", "description": "How MediPrimer stays accurate and independent: our sources, our independence from insurers, how we keep content current, and our limits.", "url": "https://mediprimer.org/editorial-standards.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Editorial Standards & Independence", "description": "How MediPrimer stays accurate and independent: our sources, our independence from insurers, how we keep content current, and our limits.", "url": "https://mediprimer.org/editorial-standards.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Editorial Standards & Independence", "item": "https://mediprimer.org/editorial-standards.html"}]}</script>
 <!--/seo-->
 </head>
@@ -97,7 +112,7 @@
     <ul>
       <li><strong>No products.</strong> We do not sell, broker, or recommend any insurance plan, and we earn no commission from any plan, insurer, or agent.</li>
       <li><strong>No ads or affiliate links.</strong> There is no advertising on this site and no paid or affiliate links. Nothing you read is influenced by a sponsor.</li>
-      <li><strong>No data collection.</strong> We don't ask you to sign in or share personal information, and we don't track you across the web. See our <a href="/privacy.html">Privacy Policy</a>.</li>
+      <li><strong>No accounts, minimal data.</strong> We don't ask you to sign in or share personal information. We use Google Analytics only to see which pages help people. See our <a href="/privacy.html">Privacy Policy</a>.</li>
       <li><strong>Not affiliated with government or insurers.</strong> MediPrimer is an independent educational project. It is not affiliated with, endorsed by, or representing CMS, Medicare, Medicaid, the Social Security Administration, any state agency, or any insurance company.</li>
     </ul>
     <p>Because we have nothing to sell, we can explain the tradeoffs plainly and point you to free, unbiased help instead of a sales line.</p>

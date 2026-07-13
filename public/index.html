@@ -6,6 +6,21 @@
 <title>MediPrimer — Plain-English Guide to Medicare &amp; Medicaid</title>
 <meta name="description" content="Plain-language help with Medicare, Medicaid, and Medicare Advantage for members and caregivers — plus a working reference for professionals.">
 <link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HZF6BCSF3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
 <!--seo-->
 <link rel="canonical" href="https://mediprimer.org/">
 <meta property="og:type" content="website">
@@ -18,7 +33,7 @@
 <meta name="twitter:description" content="Plain-language help with Medicare, Medicaid, and Medicare Advantage for members and caregivers — plus a working reference for professionals.">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MediPrimer", "url": "https://mediprimer.org/", "description": "Independent, plain-language educational resource on Medicare, Medicaid, and managed care. Not affiliated with any agency or insurer."}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://mediprimer.org/glossary.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "MediPrimer — Plain-English Guide to Medicare & Medicaid", "description": "Plain-language help with Medicare, Medicaid, and Medicare Advantage for members and caregivers — plus a working reference for professionals.", "url": "https://mediprimer.org/", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "MediPrimer — Plain-English Guide to Medicare & Medicaid", "description": "Plain-language help with Medicare, Medicaid, and Medicare Advantage for members and caregivers — plus a working reference for professionals.", "url": "https://mediprimer.org/", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <!--/seo-->
 </head>
 <body>

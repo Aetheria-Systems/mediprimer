@@ -6,6 +6,21 @@
 <title>Support MediPrimer — Independent &amp; Free — MediPrimer</title>
 <meta name="description" content="How MediPrimer is supported and how you can help keep it free and independent — with a plain promise that no supporter has any say over what we write.">
 <link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5HZF6BCSF3"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-5HZF6BCSF3", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
 <!--seo-->
 <link rel="canonical" href="https://mediprimer.org/support.html">
 <meta property="og:type" content="website">
@@ -16,7 +31,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Support MediPrimer — Independent &amp; Free — MediPrimer">
 <meta name="twitter:description" content="How MediPrimer is supported and how you can help keep it free and independent — with a plain promise that no supporter has any say over what we write.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Support MediPrimer — Independent & Free", "description": "How MediPrimer is supported and how you can help keep it free and independent — with a plain promise that no supporter has any say over what we write.", "url": "https://mediprimer.org/support.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Support MediPrimer — Independent & Free", "description": "How MediPrimer is supported and how you can help keep it free and independent — with a plain promise that no supporter has any say over what we write.", "url": "https://mediprimer.org/support.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Support MediPrimer — Independent & Free", "item": "https://mediprimer.org/support.html"}]}</script>
 <!--/seo-->
 </head>
@@ -102,7 +117,7 @@
 
     <h2>Our editorial-independence promise</h2>
     <p>Any support we accept comes with one non-negotiable condition: <strong>no supporter, donor, or grantor has any say over what we write.</strong> Content is based solely on official government sources and our commitment to plain, neutral, accurate information. If a supporter ever asked us to soften, slant, or steer our content, we would decline the support. Supporters are disclosed; influence is not for sale. See our <a href="/editorial-standards.html">Editorial Standards</a>.</p>
-    <p>We also don't sell or share your data — there's nothing to sell, because we don't collect it.</p>
+    <p>We don't collect personal information or sell your data. We use Google Analytics only to see which pages help people.</p>
 
     <div class="note info">
       <strong>Are you a foundation, nonprofit, library, or community organization</strong> interested in supporting or partnering with MediPrimer through a grant or clearly-disclosed underwriting? We welcome inquiries that fit the standards above at <a href="mailto:editor@mediprimer.org">editor@mediprimer.org</a>.

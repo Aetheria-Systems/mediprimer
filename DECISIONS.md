@@ -2,6 +2,17 @@
 
 Strategic decisions and pivots, with the reasoning. Newest first.
 
+## 2026-07-13 — Measure usage with Google Analytics
+
+The site launched with a strict no-analytics stance. That left no way to know
+whether the content helps anyone: which pages get read, which tools get used,
+what people search for. We now use Google Analytics 4, disclosed plainly in
+the privacy policy, with ads personalization off. Server logs alone were
+considered but give no view of tool engagement; a first-party analytics stack
+was considered but adds operational surface for a one-person site. The policy
+page links Google's opt-out add-on, and every page works with analytics
+blocked.
+
 ## 2026-07-13 — Dual-eligible discovery is the site's centerpiece
 
 The most underserved, highest-stakes audience is people who qualify for both

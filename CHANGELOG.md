@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-13 — Site analytics
+
+- **Google Analytics 4 added** on every page via a shared build partial, with
+  events for glossary searches, Medicare-navigator completions, and printing.
+  Ads personalization (Google Signals) is off.
+- **Privacy policy updated** to disclose analytics plainly and link Google's
+  opt-out browser add-on.
+
 ## 2026-07-13 — Couples planning, pre-65 path, accessibility pass
 
 - **New page — Planning for Two: Medicare for Couples** (`planning-for-two.html`):

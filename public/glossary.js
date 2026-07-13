@@ -71,9 +71,20 @@
     empty.hidden = anyVisible;
   }
 
+  var searchTimer = null;
   search &&
     search.addEventListener("input", function () {
       apply(search.value);
+      if (typeof gtag !== "function") { return; }
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(function () {
+        if (typeof gtag === "function") {
+          var term = search.value.trim().toLowerCase().slice(0, 100);
+          if (term.length >= 2) {
+            gtag("event", "glossary_search", { search_term: term });
+          }
+        }
+      }, 1000);
     });
 
   // If the page loads with a query in the URL (?q=term), pre-filter.
