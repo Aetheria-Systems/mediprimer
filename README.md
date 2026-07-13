@@ -42,7 +42,7 @@ build tooling and JavaScript are MIT. See `LICENSE`.
 
 ## Independence
 
-MediPrimer sells nothing, carries no advertising or affiliate links, and collects no personal data. It does not accept funding from insurers, brokers, or anyone with a stake in coverage decisions. Editor: Kurt Hamm. See `public/editorial-standards.html`.
+MediPrimer sells nothing, carries no advertising or affiliate links, and collects no personal data. No supporter, donor, or grantor has any say over what we write. Editor: Kurt Hamm. See `public/editorial-standards.html`.
 
 ## Disclaimer
 
