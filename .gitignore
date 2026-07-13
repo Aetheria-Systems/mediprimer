@@ -1,0 +1,8 @@
+# Operational / server-side (not for the public repo)
+update/
+marketing/
+build/.indexnow-key
+*.log
+*.tgz
+backups/
+.DS_Store
