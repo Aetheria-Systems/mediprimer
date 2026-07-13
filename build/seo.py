@@ -7,6 +7,7 @@ Per page, injects a marked <!--seo-->…<!--/seo--> block into <head> with:
 Also (re)generates sitemap.xml and robots.txt.
 Pass the build date as argv[1] (YYYY-MM-DD); scripts must not call date()."""
 import re, os, glob, sys, json
+from html import unescape
 PUB = "/home/deltaprism/mediprimer/public"
 BASE = "https://mediprimer.org"
 TODAY = sys.argv[1] if len(sys.argv) > 1 else "2026-07-12"
@@ -83,9 +84,10 @@ def seo_block(name, url, title, desc):
         parts.append(ld({"@context": "https://schema.org", "@type": "FAQPage",
                          "mainEntity": [{"@type": "Question", "name": qq,
                                          "acceptedAnswer": {"@type": "Answer", "text": a}} for qq, a in FAQ[name]]}))
-    clean = re.sub(r'\s*—\s*MediPrimer$', '', title)
+    # JSON-LD is raw text inside <script>, not HTML — entities must be decoded
+    clean = unescape(re.sub(r'\s*—\s*MediPrimer$', '', title))
     parts.append(ld({"@context": "https://schema.org", "@type": "WebPage",
-                     "name": clean, "description": desc, "url": url, "inLanguage": "en-US",
+                     "name": clean, "description": unescape(desc), "url": url, "inLanguage": "en-US",
                      "datePublished": PUBLISHED, "dateModified": TODAY,
                      "author": {"@type": "Person", "name": EDITOR, "url": BASE + "/about.html"},
                      "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": BASE + "/"},
