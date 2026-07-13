@@ -6,14 +6,6 @@
 <title>Turning 65? Your Step-by-Step Medicare Checklist — MediPrimer</title>
 <meta name="description" content="A plain-language walkthrough for people who know nothing about Medicare: what to understand first, your timeline, which situation you're in, what to gather, the decisions you'll make, and your next steps.">
 <link rel="stylesheet" href="/style.css">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="MediPrimer">
-<meta property="og:title" content="Turning 65: Start Here — MediPrimer">
-<meta property="og:description" content="A plain-language walkthrough for people who know nothing about Medicare: what to understand first, your timeline, which situation you're in, what to gather, the decisions you'll make, and your next steps.">
-<meta property="og:url" content="https://mediprimer.org/turning-65.html">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Turning 65: Start Here — MediPrimer">
-<meta name="twitter:description" content="A plain-language walkthrough for people who know nothing about Medicare: what to understand first, your timeline, which situation you're in, what to gather, the decisions you'll make, and your next steps.">
 <!--seo-->
 <link rel="canonical" href="https://mediprimer.org/turning-65.html">
 <meta property="og:type" content="website">
@@ -101,10 +93,31 @@
   <div class="wrap">
     <p class="lead">If you're approaching 65 and feeling like you have no idea what happens next, that's normal — Medicare is genuinely confusing, and the mail you're about to start getting will make it worse. Use the quick navigator below to get directive steps for your exact situation, or read the full walkthrough underneath it. By the end you'll know the handful of decisions that matter, what to gather, and who to call for free help.</p>
 
+    <div class="note">
+      <strong>Medicare Advantage is a one-way door.</strong> Choosing Medicare Advantage now can be hard to reverse later. If you switch to Original Medicare and want a Medigap supplement later, you may need to pass medical underwriting or be denied — this choice can stick with you for decades. Understand this tradeoff before you enroll. <a href="/choosing-coverage.html">See the full explanation here.</a>
+    </div>
+
+    <div class="note tip">
+      <strong>Helping someone else through this?</strong> If you're a family member or caregiver walking through Medicare for someone else, see <a href="/caregivers.html">Caregivers and Authorized Representatives</a> for how to help and what authority you'll need.
+    </div>
+
+    <div class="note info">
+      <strong>Money is tight?</strong> If your income is limited, Medicaid, Medicare Savings Programs, and Extra Help can pay your premiums and reduce drug costs. Having both Medicare and Medicaid — called "dual eligible" — is common and unlocks benefits many people don't know about. <a href="/getting-help.html">See programs you might qualify for</a> and <a href="/dual-eligible.html">how being dual eligible works.</a>
+    </div>
+
     <div id="medicare-navigator" class="navigator">
       <noscript>
-        <h2>Answer a few questions for a plan built around you</h2>
-        <p>The interactive navigator needs JavaScript. No problem — the full step-by-step walkthrough below covers every situation, including still working, retiring, VA health care, a spouse on other insurance, limited income, and having no coverage.</p>
+        <h2>Find your situation below</h2>
+        <p>The interactive navigator needs JavaScript. No problem — use this index to jump straight to the coverage situation that matches you, or read the full step-by-step walkthrough below.</p>
+        <ul style="margin: 1rem 0; padding-left: 1.4rem;">
+          <li><strong><a href="/veterans-medicare.html">I have VA health care</a></strong> — VA and Medicare are separate systems. There are real traps, especially around Part B.</li>
+          <li><strong><a href="/working-past-65.html">I (or my spouse) still work with employer coverage</a></strong> — You may be able to delay Part B without penalty — but only if the coverage qualifies.</li>
+          <li><strong><a href="/retiring-losing-coverage.html">I'm retiring or losing job-based coverage</a></strong> — Losing coverage opens special windows, and COBRA has a costly Part B trap to avoid.</li>
+          <li><strong><a href="/getting-help.html">Money is tight</a></strong> — Programs can pay your premiums and lower drug costs. Many people qualify and don't realize it.</li>
+          <li><strong><a href="/disability-medicare.html">I'm under 65 with a disability</a></strong> — Medicare can start before 65 through SSDI, ESRD, or ALS.</li>
+          <li><strong><a href="/turning-65.html">None of these — I'm just turning 65</a></strong> — The straightforward roadmap: your options, side by side, with a timeline.</li>
+        </ul>
+        <p>Or scroll down to read the complete step-by-step walkthrough that covers every situation.</p>
       </noscript>
     </div>
 
@@ -118,7 +131,39 @@
     <h2>Step 2 — Your timeline (this is the part with deadlines)</h2>
     <p>The single most important date is your <strong>Initial Enrollment Period (IEP)</strong>: a 7-month window that starts 3 months before the month you turn 65, includes your birthday month, and ends 3 months after. This is when you can sign up without hassle. Missing it can cause <em>permanent</em> late penalties and a gap in coverage — so even if you decide to delay some parts (a valid choice in certain situations), you need to make that decision <em>on purpose</em>, within the window.</p>
     <div class="note info">
-      <strong>Do this now, months ahead:</strong> mark your 7-month window on a calendar, and create your free accounts at <a href="https://www.ssa.gov/" rel="noopener">ssa.gov</a> (Social Security handles Medicare sign-up) and <a href="https://www.medicare.gov/" rel="noopener">medicare.gov</a>. See the full <a href="/enrollment.html">enrollment periods</a> and the <a href="/enrollment-calendar.html">calendar</a>.
+      <strong>Do this now, months ahead:</strong> mark your 7-month window on a calendar, and create your free accounts at <a href="https://www.ssa.gov/" rel="noopener">ssa.gov</a> (Social Security handles Medicare sign-up) and <a href="https://www.medicare.gov/" rel="noopener">medicare.gov</a>.
+      <button type="button" id="calendar-helper-btn" style="display: none; background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 0.4rem 0.8rem; font-weight: 600; cursor: pointer; font-family: var(--font); font-size: 0.9rem; margin-left: 0.5rem;">Add reminder to calendar</button>
+      See the full <a href="/enrollment.html">enrollment periods</a> and the <a href="/enrollment-calendar.html">calendar</a>.
+    </div>
+    <div id="calendar-helper" style="display:none; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; margin: 1rem 0;">
+      <p style="margin-top: 0;"><strong>Create a calendar reminder</strong></p>
+      <p style="font-size: 0.95rem; margin: 0.5rem 0;">Enter the month and year you'll turn 65, and we'll help you set a calendar reminder for your 7-month enrollment window.</p>
+      <div style="margin: 1rem 0; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: flex-end;">
+        <div>
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem;">Month</label>
+          <select id="cal-month" style="padding: 0.5rem; border: 1px solid var(--border); border-radius: 6px; font-family: var(--font);">
+            <option value="">Select month</option>
+            <option value="01">January</option>
+            <option value="02">February</option>
+            <option value="03">March</option>
+            <option value="04">April</option>
+            <option value="05">May</option>
+            <option value="06">June</option>
+            <option value="07">July</option>
+            <option value="08">August</option>
+            <option value="09">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+          </select>
+        </div>
+        <div>
+          <label style="display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.3rem;">Year</label>
+          <input type="number" id="cal-year" min="2024" max="2050" style="padding: 0.5rem; border: 1px solid var(--border); border-radius: 6px; width: 100px; font-family: var(--font);" placeholder="2025">
+        </div>
+        <button type="button" id="cal-generate" style="background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 0.5rem 1rem; font-weight: 600; cursor: pointer; font-family: var(--font);">Generate reminder</button>
+      </div>
+      <p id="cal-result" style="font-size: 0.9rem; margin: 0.5rem 0; color: var(--muted);"></p>
     </div>
 
     <h2>Step 3 — Which situation are you in?</h2>
@@ -265,5 +310,57 @@
 <script src="/medicare-navigator.js"></script>
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script>
+(function() {
+  var btn = document.getElementById("calendar-helper-btn");
+  var helper = document.getElementById("calendar-helper");
+  var generateBtn = document.getElementById("cal-generate");
+  var monthSel = document.getElementById("cal-month");
+  var yearInput = document.getElementById("cal-year");
+  var resultDiv = document.getElementById("cal-result");
+
+  if (!btn) return;
+  btn.style.display = "inline-block";
+
+  btn.addEventListener("click", function() {
+    helper.style.display = helper.style.display === "none" ? "block" : "none";
+    if (helper.style.display === "block") monthSel.focus();
+  });
+
+  generateBtn.addEventListener("click", function() {
+    var month = monthSel.value;
+    var year = yearInput.value;
+    if (!month || !year) {
+      resultDiv.textContent = "Please select a month and year.";
+      resultDiv.style.color = "var(--ink)";
+      return;
+    }
+
+    var birthMonth = parseInt(month, 10);
+    var birthYear = parseInt(year, 10);
+    var windowStart = new Date(birthYear, birthMonth - 3, 1);
+    if (birthMonth <= 3) {
+      windowStart = new Date(birthYear - 1, birthMonth + 9, 1);
+    }
+    var windowEnd = new Date(birthYear, birthMonth + 3, 30);
+
+    var title = encodeURIComponent("Check your Medicare enrollment window");
+    var desc = encodeURIComponent("Your 7-month Initial Enrollment Period runs from " +
+      windowStart.toLocaleDateString("en-US", {month: "long", year: "numeric"}) + " through " +
+      windowEnd.toLocaleDateString("en-US", {month: "long", year: "numeric"}) + ". Enroll at ssa.gov or medicare.gov.");
+    var startDate = windowStart.toISOString().split("T")[0].replace(/-/g, "");
+    var endDate = new Date(windowEnd.getTime() + 24*60*60*1000).toISOString().split("T")[0].replace(/-/g, "");
+
+    var calUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + title +
+      "&dates=" + startDate + "/" + endDate + "&details=" + desc;
+
+    resultDiv.innerHTML = '<strong>Your 7-month window:</strong> ' +
+      windowStart.toLocaleDateString("en-US", {month: "long", year: "numeric"}) + ' through ' +
+      windowEnd.toLocaleDateString("en-US", {month: "long", year: "numeric"}) + '<br>' +
+      '<a href="' + calUrl + '" target="_blank" rel="noopener" style="display: inline-block; margin-top: 0.5rem; padding: 0.4rem 0.8rem; background: var(--accent); color: #fff; border-radius: 6px; text-decoration: none;">Add to Google Calendar</a>';
+    resultDiv.style.color = "var(--ink)";
+  });
+})();
+</script>
 </body>
 </html>

@@ -58,7 +58,7 @@
     if (answered === 0) lean = "Answer a few above to see how your priorities line up.";
     else if (om > ma) lean = "Your priorities lean toward <strong>Original Medicare</strong> (often paired with a Medigap supplement and a Part D drug plan).";
     else if (ma > om) lean = "Your priorities lean toward <strong>Medicare Advantage</strong>.";
-    else lean = "Your priorities are <strong>mixed</strong> — both paths have real appeal for you, which is common.";
+    else lean = "Your priorities are <strong>mixed</strong> — both paths have real appeal for you, which is common. That's okay: spend time with <a href=\"/questions-to-ask.html\">the right questions to ask</a>, compare plans side by side at <a href=\"https://www.medicare.gov/\" rel=\"noopener\">Medicare's Plan Finder</a>, and talk through the tradeoffs with a free <a href=\"/ship-directory.html\">SHIP counselor</a> or talk about your financial situation with <a href=\"/getting-help.html\">getting-help resources</a>.";
 
     var html = '<div class="nav-result">' +
       '<div class="verdict">' + lean + '</div>';
