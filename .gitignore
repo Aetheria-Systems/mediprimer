@@ -1,6 +1,7 @@
 # Operational / server-side (not for the public repo)
 update/
 marketing/
+seo/
 build/.indexnow-key
 *.log
 *.tgz

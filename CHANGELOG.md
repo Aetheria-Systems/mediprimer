@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-14 — Honest page dates
+
+- **Per-page `dateModified`**: a page's modified date (and sitemap `lastmod`)
+  now advances only when its content actually changes, instead of re-stamping
+  every page on every build.
+
 ## 2026-07-13 — Site analytics
 
 - **Google Analytics 4 added** on every page via a shared build partial, with

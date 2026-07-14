@@ -6,13 +6,28 @@ Per page, injects a marked <!--seo-->…<!--/seo--> block into <head> with:
   - JSON-LD: Organization + WebSite(+SearchAction) on home; FAQPage on key pages.
 Also (re)generates sitemap.xml and robots.txt.
 Pass the build date as argv[1] (YYYY-MM-DD); scripts must not call date()."""
-import re, os, glob, sys, json
+import re, os, glob, sys, json, hashlib
 from html import unescape
 PUB = "/home/deltaprism/mediprimer/public"
 BASE = "https://mediprimer.org"
 TODAY = sys.argv[1] if len(sys.argv) > 1 else "2026-07-12"
 PUBLISHED = "2026-07-12"
 EDITOR = "Kurt Hamm"  # named editor for E-E-A-T; change here if the byline should differ
+DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-dates.json")
+ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
+
+def content_hash(html):
+    core = SEO_RE.sub("", ANALYTICS_RE.sub("", html))
+    text = re.sub(r"<[^>]+>", " ", core)
+    return hashlib.md5(re.sub(r"\s+", " ", text).strip().encode()).hexdigest()
+
+def page_date(name, html, dates):
+    h = content_hash(html)
+    entry = dates.get(name)
+    if entry and entry["hash"] == h:
+        return entry["date"]
+    dates[name] = {"hash": h, "date": TODAY}
+    return TODAY
 
 # Accurate FAQ pairs that reflect on-page content (Google requires the match).
 FAQ = {
@@ -60,7 +75,7 @@ MANUAL_META_RE = re.compile(
 def q(s):
     return s.replace('"', '&quot;')
 
-def seo_block(name, url, title, desc):
+def seo_block(name, url, title, desc, mod_date):
     parts = ['<!--seo-->',
              '<link rel="canonical" href="%s">' % url,
              '<meta property="og:type" content="website">',
@@ -88,7 +103,7 @@ def seo_block(name, url, title, desc):
     clean = unescape(re.sub(r'\s*—\s*MediPrimer$', '', title))
     parts.append(ld({"@context": "https://schema.org", "@type": "WebPage",
                      "name": clean, "description": unescape(desc), "url": url, "inLanguage": "en-US",
-                     "datePublished": PUBLISHED, "dateModified": TODAY,
+                     "datePublished": PUBLISHED, "dateModified": mod_date,
                      "author": {"@type": "Person", "name": EDITOR, "url": BASE + "/about.html"},
                      "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": BASE + "/"},
                      "publisher": {"@type": "Organization", "name": "MediPrimer",
@@ -101,35 +116,58 @@ def seo_block(name, url, title, desc):
     parts.append('<!--/seo-->')
     return "\n".join(parts)
 
-changed, urls = 0, []
-for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
-    name = os.path.basename(path)
-    html = open(path, encoding="utf-8").read()
-    title = field(html, r'<title>(.*?)</title>')
-    desc = field(html, r'<meta name="description" content="(.*?)">')
-    url = BASE + "/" + ("" if name == "index.html" else name)
-    urls.append((url, name))
-    html2 = SEO_RE.sub("", html)
-    html2 = MANUAL_META_RE.sub("", html2)
-    if "</head>" in html2:
-        html2 = html2.replace("</head>", seo_block(name, url, title, desc) + "\n</head>", 1)
-    if html2 != html:
-        open(path, "w", encoding="utf-8").write(html2); changed += 1
+def main():
+    # Load existing page dates or start fresh
+    try:
+        with open(DATES_FILE, encoding="utf-8") as f:
+            dates = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        dates = {}
 
-sm = ['<?xml version="1.0" encoding="UTF-8"?>',
-      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-for url, name in urls:
-    LEGAL = ("privacy.html", "terms-of-use.html", "disclaimer.html", "accessibility.html", "site-map.html")
-    KEY = ("turning-65.html", "choosing-coverage.html", "members.html", "getting-help.html",
-           "medicaid-starting-out.html", "dual-eligible.html")
-    HUB = ("basics.html", "coverage-basics.html", "how-do-i.html", "enrollment.html",
-           "costs.html", "glossary.html", "professionals.html", "caregivers.html")
-    pr = ("1.0" if name == "index.html" else
-          "0.9" if name in KEY else
-          "0.8" if name in HUB else
-          "0.3" if name in LEGAL else "0.7")
-    sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, TODAY, pr))
-sm.append("</urlset>")
-open(os.path.join(PUB, "sitemap.xml"), "w").write("\n".join(sm) + "\n")
-open(os.path.join(PUB, "robots.txt"), "w").write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
-print("seo: head block on %d page(s); sitemap %d urls; robots.txt written" % (changed, len(urls)))
+    changed, urls = 0, []
+    page_mods = {}  # Track mod_date for each page for sitemap
+    for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
+        name = os.path.basename(path)
+        with open(path, encoding="utf-8") as f:
+            html = f.read()
+        title = field(html, r'<title>(.*?)</title>')
+        desc = field(html, r'<meta name="description" content="(.*?)">')
+        url = BASE + "/" + ("" if name == "index.html" else name)
+        urls.append((url, name))
+        html2 = SEO_RE.sub("", html)
+        html2 = MANUAL_META_RE.sub("", html2)
+        mod = page_date(name, html2, dates)
+        page_mods[name] = mod
+        if "</head>" in html2:
+            html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod) + "\n</head>", 1)
+        if html2 != html:
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html2)
+            changed += 1
+
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>',
+          '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for url, name in urls:
+        LEGAL = ("privacy.html", "terms-of-use.html", "disclaimer.html", "accessibility.html", "site-map.html")
+        KEY = ("turning-65.html", "choosing-coverage.html", "members.html", "getting-help.html",
+               "medicaid-starting-out.html", "dual-eligible.html")
+        HUB = ("basics.html", "coverage-basics.html", "how-do-i.html", "enrollment.html",
+               "costs.html", "glossary.html", "professionals.html", "caregivers.html")
+        pr = ("1.0" if name == "index.html" else
+              "0.9" if name in KEY else
+              "0.8" if name in HUB else
+              "0.3" if name in LEGAL else "0.7")
+        sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name], pr))
+    sm.append("</urlset>")
+    with open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8") as f:
+        f.write("\n".join(sm) + "\n")
+    with open(os.path.join(PUB, "robots.txt"), "w", encoding="utf-8") as f:
+        f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
+
+    # Save updated dates for next run
+    with open(DATES_FILE, "w", encoding="utf-8") as f:
+        f.write(json.dumps(dates, indent=1, sort_keys=True))
+    print("seo: head block on %d page(s); sitemap %d urls; robots.txt written" % (changed, len(urls)))
+
+if __name__ == "__main__":
+    main()
