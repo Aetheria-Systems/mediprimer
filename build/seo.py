@@ -119,7 +119,7 @@ def seo_block(name, url, title, desc, mod_date):
 def main():
     # Load existing page dates or start fresh
     try:
-        with open(DATES_FILE) as f:
+        with open(DATES_FILE, encoding="utf-8") as f:
             dates = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         dates = {}
@@ -159,13 +159,13 @@ def main():
               "0.3" if name in LEGAL else "0.7")
         sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name], pr))
     sm.append("</urlset>")
-    with open(os.path.join(PUB, "sitemap.xml"), "w") as f:
+    with open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(sm) + "\n")
-    with open(os.path.join(PUB, "robots.txt"), "w") as f:
+    with open(os.path.join(PUB, "robots.txt"), "w", encoding="utf-8") as f:
         f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
 
     # Save updated dates for next run
-    with open(DATES_FILE, "w") as f:
+    with open(DATES_FILE, "w", encoding="utf-8") as f:
         f.write(json.dumps(dates, indent=1, sort_keys=True))
     print("seo: head block on %d page(s); sitemap %d urls; robots.txt written" % (changed, len(urls)))
 
