@@ -116,13 +116,26 @@ def seo_block(name, url, title, desc, mod_date):
     parts.append('<!--/seo-->')
     return "\n".join(parts)
 
+def load_page_dates():
+    """Missing file = legitimate first run. A corrupt or malformed file must
+    abort loudly: silently starting fresh would re-stamp every page's
+    dateModified to today, which is the exact failure this file prevents.
+    Recover with: git checkout -- build/page-dates.json"""
+    if not os.path.exists(DATES_FILE):
+        return {}
+    with open(DATES_FILE, encoding="utf-8") as f:
+        dates = json.load(f)  # JSONDecodeError = corrupt file: crash, don't mask
+    if not isinstance(dates, dict) or not all(
+            isinstance(v, dict) and isinstance(v.get("hash"), str)
+            and isinstance(v.get("date"), str) for v in dates.values()):
+        raise SystemExit(f"seo.py: {DATES_FILE} is malformed — restore it "
+                         "(git checkout -- build/page-dates.json) instead of rebuilding, "
+                         "or every page re-stamps to today.")
+    return dates
+
+
 def main():
-    # Load existing page dates or start fresh
-    try:
-        with open(DATES_FILE, encoding="utf-8") as f:
-            dates = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        dates = {}
+    dates = load_page_dates()
 
     changed, urls = 0, []
     page_mods = {}  # Track mod_date for each page for sitemap
