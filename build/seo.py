@@ -121,10 +121,15 @@ def load_page_dates():
     abort loudly: silently starting fresh would re-stamp every page's
     dateModified to today, which is the exact failure this file prevents.
     Recover with: git checkout -- build/page-dates.json"""
-    if not os.path.exists(DATES_FILE):
+    try:
+        with open(DATES_FILE, encoding="utf-8") as f:
+            dates = json.load(f)
+    except FileNotFoundError:
         return {}
-    with open(DATES_FILE, encoding="utf-8") as f:
-        dates = json.load(f)  # JSONDecodeError = corrupt file: crash, don't mask
+    except json.JSONDecodeError as e:
+        raise SystemExit(f"seo.py: {DATES_FILE} is corrupt ({e}) — restore it "
+                         "(git checkout -- build/page-dates.json) instead of rebuilding, "
+                         "or every page re-stamps to today.")
     if not isinstance(dates, dict) or not all(
             isinstance(v, dict) and isinstance(v.get("hash"), str)
             and isinstance(v.get("date"), str) for v in dates.values()):
