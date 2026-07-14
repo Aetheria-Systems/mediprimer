@@ -119,7 +119,8 @@ def seo_block(name, url, title, desc, mod_date):
 def main():
     # Load existing page dates or start fresh
     try:
-        dates = json.load(open(DATES_FILE))
+        with open(DATES_FILE) as f:
+            dates = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         dates = {}
 
@@ -127,7 +128,8 @@ def main():
     page_mods = {}  # Track mod_date for each page for sitemap
     for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
         name = os.path.basename(path)
-        html = open(path, encoding="utf-8").read()
+        with open(path, encoding="utf-8") as f:
+            html = f.read()
         title = field(html, r'<title>(.*?)</title>')
         desc = field(html, r'<meta name="description" content="(.*?)">')
         url = BASE + "/" + ("" if name == "index.html" else name)
@@ -139,7 +141,9 @@ def main():
         if "</head>" in html2:
             html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod) + "\n</head>", 1)
         if html2 != html:
-            open(path, "w", encoding="utf-8").write(html2); changed += 1
+            with open(path, "w", encoding="utf-8") as f:
+                f.write(html2)
+            changed += 1
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -155,11 +159,14 @@ def main():
               "0.3" if name in LEGAL else "0.7")
         sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name], pr))
     sm.append("</urlset>")
-    open(os.path.join(PUB, "sitemap.xml"), "w").write("\n".join(sm) + "\n")
-    open(os.path.join(PUB, "robots.txt"), "w").write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
+    with open(os.path.join(PUB, "sitemap.xml"), "w") as f:
+        f.write("\n".join(sm) + "\n")
+    with open(os.path.join(PUB, "robots.txt"), "w") as f:
+        f.write("User-agent: *\nAllow: /\n\nSitemap: %s/sitemap.xml\n" % BASE)
 
     # Save updated dates for next run
-    open(DATES_FILE, "w").write(json.dumps(dates, indent=1, sort_keys=True))
+    with open(DATES_FILE, "w") as f:
+        f.write(json.dumps(dates, indent=1, sort_keys=True))
     print("seo: head block on %d page(s); sitemap %d urls; robots.txt written" % (changed, len(urls)))
 
 if __name__ == "__main__":
