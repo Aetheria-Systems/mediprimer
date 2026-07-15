@@ -21,8 +21,14 @@
     return;
   }
 
-  // Check: not already dismissed.
-  if (localStorage.getItem(dismissKey)) {
+  // Check: not already dismissed (feature detection: private browsing or storage quota may fail).
+  var isDismissed = false;
+  try {
+    isDismissed = Boolean(localStorage.getItem(dismissKey));
+  } catch (e) {
+    // SecurityError (private browsing) or other storage errors: proceed to show banner.
+  }
+  if (isDismissed) {
     return;
   }
 
@@ -100,10 +106,14 @@
     });
   }
 
-  // Close button: dismiss and set localStorage key.
+  // Close button: dismiss and set localStorage key (feature detection: storage may be unavailable).
   closeBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    localStorage.setItem(dismissKey, "1");
+    try {
+      localStorage.setItem(dismissKey, "1");
+    } catch (e) {
+      // SecurityError (private browsing) or QuotaExceededError: silently skip persistence.
+    }
     banner.remove();
     if (typeof gtag === "function") {
       gtag("event", "language_switch", {
