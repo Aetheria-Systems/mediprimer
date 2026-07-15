@@ -14,6 +14,7 @@ TODAY = sys.argv[1] if len(sys.argv) > 1 else "2026-07-12"
 PUBLISHED = "2026-07-12"
 EDITOR = "Kurt Hamm"  # named editor for E-E-A-T; change here if the byline should differ
 DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-dates.json")
+LANGUAGES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "languages.json")
 ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
 
 def content_hash(html):
@@ -75,17 +76,80 @@ MANUAL_META_RE = re.compile(
 def q(s):
     return s.replace('"', '&quot;')
 
-def seo_block(name, url, title, desc, mod_date):
+def load_languages():
+    """Load languages.json; return dict of code -> lang config."""
+    try:
+        with open(LANGUAGES_FILE, encoding="utf-8") as f:
+            data = json.load(f)
+            return {lang["code"]: lang for lang in data.get("languages", [])}
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+
+def alternates(name, langs_dict, pub_dir):
+    """Emit hreflang link cluster for a page name.
+    For English page: include en + all launched languages where public/<code>/name exists + x-default.
+    Only emit if there are actually launched languages with translations.
+    Returns HTML link string."""
+    links = []
+
+    # Check if any languages are launched
+    has_launched = any(lang_config.get("launched") for lang_config in langs_dict.values())
+    if not has_launched:
+        return ""
+
+    # Always include English with x-default pointing to it
+    en_url = BASE + "/" + ("" if name == "index.html" else name)
+    links.append('<link rel="alternate" hreflang="en" href="%s">' % en_url)
+
+    # Check launched languages for translated files
+    for code, lang_config in sorted(langs_dict.items()):
+        if lang_config.get("launched"):
+            # Check if the translated file exists
+            lang_file = os.path.join(pub_dir, code, name)
+            if os.path.exists(lang_file):
+                lang_url = BASE + "/" + code + "/" + ("" if name == "index.html" else name)
+                links.append('<link rel="alternate" hreflang="%s" href="%s">' % (code, lang_url))
+
+    # x-default points to English
+    links.append('<link rel="alternate" hreflang="x-default" href="%s">' % en_url)
+
+    return "\n".join(links)
+
+def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None, langs_dict=None):
     parts = ['<!--seo-->',
              '<link rel="canonical" href="%s">' % url,
              '<meta property="og:type" content="website">',
              '<meta property="og:site_name" content="MediPrimer">',
              '<meta property="og:title" content="%s">' % q(title),
              '<meta property="og:description" content="%s">' % q(desc),
-             '<meta property="og:url" content="%s">' % url,
+             '<meta property="og:url" content="%s">' % url]
+
+    # Add og:locale for translated pages
+    if lang_code and lang_code != "en":
+        locale_map = {
+            "es": "es_US",
+            "zh": "zh_CN",
+            "vi": "vi_VN",
+            "ko": "ko_KR",
+            "tl": "tl_PH",
+            "ru": "ru_RU",
+            "ar": "ar_SA",
+            "ht": "ht_HT",
+            "pt": "pt_BR",
+            "fr": "fr_FR",
+            "pl": "pl_PL",
+            "hi": "hi_IN",
+            "ja": "ja_JP",
+            "fa": "fa_IR",
+            "de": "de_DE"
+        }
+        og_locale = locale_map.get(lang_code, lang_code.upper())
+        parts.append('<meta property="og:locale" content="%s">' % og_locale)
+
+    parts.extend([
              '<meta name="twitter:card" content="summary">',
              '<meta name="twitter:title" content="%s">' % q(title),
-             '<meta name="twitter:description" content="%s">' % q(desc)]
+             '<meta name="twitter:description" content="%s">' % q(desc)])
     if name == "index.html":
         parts.append(ld({"@context": "https://schema.org", "@type": "Organization",
                          "name": "MediPrimer", "url": BASE + "/",
@@ -101,13 +165,32 @@ def seo_block(name, url, title, desc, mod_date):
                                          "acceptedAnswer": {"@type": "Answer", "text": a}} for qq, a in FAQ[name]]}))
     # JSON-LD is raw text inside <script>, not HTML — entities must be decoded
     clean = unescape(re.sub(r'\s*—\s*MediPrimer$', '', title))
+
+    # Use provided in_language or default to "en-US" for English, constructed for translations
+    if in_language is None:
+        in_language = "en-US" if not lang_code or lang_code == "en" else lang_code + "-US"
+
+    # Add alternates cluster for English and translated pages
+    if not lang_code or lang_code == "en":
+        if langs_dict is not None:
+            alt_str = alternates(name, langs_dict, PUB)
+            if alt_str:
+                parts.append(alt_str)
+
     parts.append(ld({"@context": "https://schema.org", "@type": "WebPage",
-                     "name": clean, "description": unescape(desc), "url": url, "inLanguage": "en-US",
+                     "name": clean, "description": unescape(desc), "url": url, "inLanguage": in_language,
                      "datePublished": PUBLISHED, "dateModified": mod_date,
                      "author": {"@type": "Person", "name": EDITOR, "url": BASE + "/about.html"},
                      "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": BASE + "/"},
                      "publisher": {"@type": "Organization", "name": "MediPrimer",
                                    "founder": {"@type": "Person", "name": EDITOR}}}))
+
+    # Add alternates cluster for translated pages too
+    if lang_code and lang_code != "en" and langs_dict is not None:
+        alt_str = alternates(name, langs_dict, PUB)
+        if alt_str:
+            parts.append(alt_str)
+
     if name != "index.html":
         parts.append(ld({"@context": "https://schema.org", "@type": "BreadcrumbList",
                          "itemListElement": [
@@ -141,6 +224,7 @@ def load_page_dates():
 
 def main():
     dates = load_page_dates()
+    langs_dict = load_languages()
 
     changed, urls = 0, []
     page_mods = {}  # Track mod_date for each page for sitemap
@@ -157,11 +241,52 @@ def main():
         mod = page_date(name, html2, dates)
         page_mods[name] = mod
         if "</head>" in html2:
-            html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod) + "\n</head>", 1)
+            html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod, langs_dict=langs_dict) + "\n</head>", 1)
         if html2 != html:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(html2)
             changed += 1
+
+    # Process language directories for launched languages
+    trans_state = {}
+    try:
+        trans_file = os.path.join(os.path.dirname(__file__), "translation-state.json")
+        with open(trans_file, encoding="utf-8") as f:
+            trans_state = json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        trans_state = {}
+
+    for code, lang_config in sorted(langs_dict.items()):
+        if lang_config.get("launched"):
+            lang_dir = os.path.join(PUB, code)
+            if os.path.isdir(lang_dir):
+                for path in sorted(glob.glob(os.path.join(lang_dir, "*.html"))):
+                    name = os.path.basename(path)
+                    with open(path, encoding="utf-8") as f:
+                        html = f.read()
+                    title = field(html, r'<title>(.*?)</title>')
+                    desc = field(html, r'<meta name="description" content="(.*?)">')
+                    url = BASE + "/" + code + "/" + ("" if name == "index.html" else name)
+
+                    # Use translation state date or today as dateModified
+                    if code in trans_state and name in trans_state[code]:
+                        mod = trans_state[code][name] if isinstance(trans_state[code][name], str) else TODAY
+                    else:
+                        mod = TODAY
+
+                    urls.append((url, name))
+                    page_mods[code + "/" + name] = mod
+
+                    html2 = SEO_RE.sub("", html)
+                    html2 = MANUAL_META_RE.sub("", html2)
+                    if "</head>" in html2:
+                        html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod,
+                                                                   lang_code=code, in_language=code + "-US",
+                                                                   langs_dict=langs_dict) + "\n</head>", 1)
+                    if html2 != html:
+                        with open(path, "w", encoding="utf-8") as f:
+                            f.write(html2)
+                        changed += 1
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -175,7 +300,7 @@ def main():
               "0.9" if name in KEY else
               "0.8" if name in HUB else
               "0.3" if name in LEGAL else "0.7")
-        sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name], pr))
+        sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name if "/" not in name else name.split("/")[1]], pr))
     sm.append("</urlset>")
     with open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(sm) + "\n")
