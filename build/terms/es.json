@@ -21,7 +21,7 @@
     "Creditable Coverage": "Cobertura Acreditable",
     "Deductible": "Deducible",
     "Denial (Claims Denial)": "Negación de Reclamación",
-    "Dual Eligible": "Beneficiario de Doble Elegibilidad",
+    "Dual Eligible": "Doble Elegibilidad",
     "Durable Medical Equipment (DME)": "Equipo Médico Duradero",
     "Explanation of Benefits (EOB)": "Explicación de Beneficios",
     "Enrollment": "Inscripción",
@@ -55,7 +55,7 @@
     "Medicare Part B": "Parte B de Medicare",
     "Medicare Part C": "Parte C de Medicare",
     "Medicare Part D": "Parte D de Medicare",
-    "Preauthorization (Prior Authorization)": "Preautorización",
+    "Preauthorization (Prior Authorization)": "Autorización Previa",
     "Preferred Drug": "Medicamento Preferido",
     "Premium": "Prima",
     "Premium Tax Credit": "Crédito Fiscal de Prima",
@@ -89,7 +89,7 @@
     "Prior Authorization": "Autorización Previa",
     "Underwriting": "Suscripción",
     "Annual Notice of Change": "Aviso Anual de Cambios",
-    "Hospice": "Cuidados Paliativos",
+    "Hospice": "Cuidado de Hospicio",
     "Home Health": "Atención Domiciliaria"
   },
   "sources": [
