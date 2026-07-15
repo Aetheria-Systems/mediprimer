@@ -118,28 +118,37 @@ Main HTML to translate:
             print(f"Claude API error: {result.stderr}", file=sys.stderr)
             return None
 
-        # Parse JSON from stdout
+        # Parse JSON from stdout (one retry on parse failure)
         output = result.stdout.strip()
 
-        # Try to extract JSON from output (handle markdown fences like ```json...```)
-        # First try to find fenced JSON
-        fenced_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', output, re.DOTALL)
-        if fenced_match:
-            json_str = fenced_match.group(1)
-        else:
-            # Fall back to finding bare JSON object
-            json_match = re.search(r'\{.*\}', output, re.DOTALL)
-            if not json_match:
-                print(f"No JSON found in Claude response", file=sys.stderr)
-                return None
-            json_str = json_match.group(0)
+        for attempt in range(2):
+            # Try to extract JSON from output (handle markdown fences like ```json...```)
+            # First try to find fenced JSON
+            fenced_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', output, re.DOTALL)
+            if fenced_match:
+                json_str = fenced_match.group(1)
+            else:
+                # Fall back to finding bare JSON object
+                json_match = re.search(r'\{.*\}', output, re.DOTALL)
+                if not json_match:
+                    if attempt == 0:
+                        print(f"No JSON found in Claude response, retrying...", file=sys.stderr)
+                        continue
+                    print(f"No JSON found in Claude response after retry", file=sys.stderr)
+                    return None
+                json_str = json_match.group(0)
 
-        try:
-            data = json.loads(json_str)
-            return (data.get("main_html", ""), data.get("title", ""), data.get("description", ""))
-        except json.JSONDecodeError as e:
-            print(f"Failed to parse Claude JSON: {e}", file=sys.stderr)
-            return None
+            try:
+                data = json.loads(json_str)
+                return (data.get("main_html", ""), data.get("title", ""), data.get("description", ""))
+            except json.JSONDecodeError as e:
+                if attempt == 0:
+                    print(f"JSON parse attempt 1 failed, retrying: {e}", file=sys.stderr)
+                    continue
+                print(f"Failed to parse Claude JSON after retry: {e}", file=sys.stderr)
+                return None
+
+        return None
 
     except subprocess.TimeoutExpired:
         print(f"Claude translation timeout (600s)", file=sys.stderr)

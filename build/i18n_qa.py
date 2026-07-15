@@ -229,30 +229,63 @@ def _extract_facts(text):
 def facts_diff(en_text, back_translated_text):
     """Extract and compare factual content between EN and back-translated text.
 
+    Categorizes diffs into NUMERIC (zero-tolerance: any mismatch fails) and ENTITY
+    (smart matching: entity must contain significant words but rewording allowed).
+
+    Entities match if they share key program names (Medicare, Medicaid, CHIP, SHIP, etc.).
+    Rewording like "Medicare Part B" → "Part B of Medicare" or "Centers for Medicare & Medicaid
+    Services" → "Medicare and Medicaid Services" are considered matches.
+
     Args:
         en_text (str): Original English text
         back_translated_text (str): Back-translated text (translated back to English)
 
     Returns:
-        list[str]: Symmetric difference of facts (empty if all facts match).
-                   Returns human-readable descriptions of mismatches.
+        tuple: (numeric_diffs, entity_diffs)
+               numeric_diffs: list of diffs for dollars/percents/years/phones (ZERO tolerance)
+               entity_diffs: list of diffs for entities (fail only if key entity words missing)
     """
     en_facts = _extract_facts(en_text)
     back_facts = _extract_facts(back_translated_text)
 
-    # Symmetric difference
     only_in_en = en_facts - back_facts
     only_in_back = back_facts - en_facts
 
-    differences = []
+    numeric_diffs = []
+    entity_diffs = []
 
+    # Program entity keywords for smart matching
+    entity_keywords = {'Medicare', 'Medicaid', 'CHIP', 'SHIP', 'IRMAA', 'MOOP', 'QMB', 'SLMB', 'PACE', 'SNF', 'SNP', 'MCO', 'DME', 'EOB', 'ABN', 'COB', 'CBP'}
+
+    def get_entity_keywords(entity_text):
+        """Extract program keywords from an entity string."""
+        words = entity_text.split()
+        return set(w for w in words if w in entity_keywords)
+
+    # Categorize diffs: NUMERIC diffs are STRICT, ENTITY diffs use smart matching
     for fact_type, value in only_in_en:
-        differences.append(f"Missing in translation: {fact_type} '{value}'")
+        if fact_type in ('dollar', 'percent', 'year', 'phone'):
+            # NUMERIC: ZERO tolerance, any mismatch is a failure
+            numeric_diffs.append(f"Missing: {fact_type} '{value}'")
+        elif fact_type == 'entity':
+            # ENTITY: Check if key program words appear in back translation
+            # "Medicare Part B" → "Part B of Medicare" is OK (keywords present)
+            # "Centers for Medicare & Medicaid Services" → "Medicare and Medicaid Services" is OK
+            # But "Medicare Part B" → "Coverage" is NOT OK (no keywords)
+            en_keywords = get_entity_keywords(value)
+            if en_keywords:  # Has program keywords (Medicare, Medicaid, etc.)
+                # Fail only if ALL keywords are missing from back_translated_text
+                if all(kw not in back_translated_text for kw in en_keywords):
+                    entity_diffs.append(f"Missing: entity '{value}' (keywords: {','.join(en_keywords)})")
+                # else: Keywords found, entity considered present despite rewording
 
     for fact_type, value in only_in_back:
-        differences.append(f"Extra in translation: {fact_type} '{value}'")
+        if fact_type in ('dollar', 'percent', 'year', 'phone'):
+            # NUMERIC: ZERO tolerance
+            numeric_diffs.append(f"Extra: {fact_type} '{value}'")
+        # Skip extra entities (they're from back-translation rewording, not errors)
 
-    return differences
+    return (numeric_diffs, entity_diffs)
 
 
 # English stopwords (comprehensive set for language detection)
@@ -280,6 +313,9 @@ def completeness_ok(tr_text):
     Flags if >2% of sentences look English (heuristic):
     - Sentence has ≥4 hits from English stopword list
     - AND sentence has no target-language diacritics
+    - AND sentence does NOT contain recognized program entity names (Medicare, Medicaid, etc.)
+
+    Program entity names are intentionally left in English and should not fail this check.
     """
     # Split into sentences (basic heuristic: period, question mark, exclamation)
     sentences = re.split(r'[.!?]+', tr_text)
@@ -288,12 +324,27 @@ def completeness_ok(tr_text):
     if not sentences:
         return (True, "")
 
+    # Program entity keywords that legitimately appear in English
+    entity_keywords = {'Medicare', 'Medicaid', 'CHIP', 'SHIP', 'IRMAA', 'MOOP', 'QMB', 'SLMB', 'PACE', 'SNF', 'SNP', 'MCO', 'DME', 'EOB', 'ABN', 'COB', 'CBP'}
+
     english_sentences = 0
+    content_sentences = 0
 
     for sentence in sentences:
+        # Skip header/footer scaffolding like "home", "menu", etc. (< 3 words)
+        words = re.findall(r'\b\w+\b', sentence)
+        if len(words) < 3:
+            continue
+
+        content_sentences += 1
+
+        # Sentences with program entity keywords are technical and exempt
+        # (they legitimately contain English terms like "Medicare", "Medicaid")
+        if any(entity in sentence for entity in entity_keywords):
+            continue
+
         # Count English stopword hits (case-insensitive)
-        words = re.findall(r'\b\w+\b', sentence.lower())
-        stopword_hits = sum(1 for word in words if word in ENGLISH_STOPWORDS)
+        stopword_hits = sum(1 for word in words if word.lower() in ENGLISH_STOPWORDS)
 
         # Check for diacritics
         has_diacritics = bool(re.search(DIACRITIC_PATTERN, sentence))
@@ -302,11 +353,11 @@ def completeness_ok(tr_text):
         if stopword_hits >= 4 and not has_diacritics:
             english_sentences += 1
 
-    english_ratio = english_sentences / len(sentences)
+    english_ratio = english_sentences / content_sentences if content_sentences > 0 else 0
 
-    # Fail if >10% of sentences are English (allows for entity names, code, etc. that may not translate)
-    if english_ratio > 0.10:
-        return (False, f"Translation appears to be {english_ratio*100:.1f}% English (threshold: 5%)")
+    # Fail if >2% of content sentences are English
+    if english_ratio > 0.02:
+        return (False, f"Translation appears to be {english_ratio*100:.1f}% English (threshold: 2%, excluding technical terms)")
 
     return (True, "")
 
@@ -356,7 +407,7 @@ def glossary_ok(en_html, tr_html, terms):
 
 
 def run_gates(en_html, tr_html, back_text, terms):
-    """Orchestrator: run all four QA gates.
+    """Orchestrator: run all QA gates.
 
     Args:
         en_html (str): English HTML source
@@ -376,27 +427,34 @@ def run_gates(en_html, tr_html, back_text, terms):
     if not ok:
         failures.append(f"Structure: {reason}")
 
-    # Gate 2: Facts (compare EN text from main content if present, otherwise full text)
-    # Extract EN main content text (simple: remove tags from main only)
+    # Gate 2: Facts - ZERO tolerance for numeric facts, smart entity matching
+    # Extract English text from main content (if present) for comparison
     en_main_match = re.search(r'<main[^>]*>.*?</main>', en_html, re.DOTALL)
-    if en_main_match:
-        # For real pages with <main> tags: check main content only
-        en_text = re.sub(r'<[^>]+>', '', en_main_match.group(0))
-        facts_diffs = facts_diff(en_text, back_text)
-        # Allow up to 3 minor fact diffs (back-translation introduces minor variations and entity name rewording)
-        # But fail on 4+ diffs to catch major translation issues (sabotage injection adds 4 fake amounts)
-        if len(facts_diffs) >= 4:
-            failures.append(f"Facts: {'; '.join(facts_diffs[:3])}")  # Cap at 3 diffs for brevity
-    else:
-        # For test cases without <main> tags: check full text
-        en_text = re.sub(r'<[^>]+>', '', en_html)
-        facts_diffs = facts_diff(en_text, back_text)
-        # For test cases, be stricter: fail on any significant fact difference
-        if len(facts_diffs) >= 1:
-            failures.append(f"Facts: {'; '.join(facts_diffs[:3])}")  # Cap at 3 diffs for brevity
+    en_text = re.sub(r'<[^>]+>', '', en_main_match.group(0)) if en_main_match else re.sub(r'<[^>]+>', '', en_html)
 
-    # Gate 3: Completeness (check translated HTML text)
-    tr_text = re.sub(r'<[^>]+>', '', tr_html)
+    numeric_diffs, entity_diffs = facts_diff(en_text, back_text)
+
+    # ZERO tolerance for numeric facts (dollars, percents, years, phone numbers)
+    if numeric_diffs:
+        failures.append(f"Facts (numeric): {'; '.join(numeric_diffs[:3])}")
+
+    # Entity diffs allowed if entity is just reworded; fail only if entity missing from back_text
+    # (entity_diffs already filters to only truly missing/extra entities by _extract_facts logic)
+    if entity_diffs:
+        # Check if these are truly missing (entity present in EN but absent from back)
+        missing_entities = [d for d in entity_diffs if d.startswith("Missing")]
+        if missing_entities:
+            failures.append(f"Facts (entity): {'; '.join(missing_entities[:3])}")
+
+    # Gate 3: Completeness (check translated main content only, not chrome)
+    # Extract main content for completeness check (chrome is not translated, just labeled)
+    tr_main_match = re.search(r'<main[^>]*>.*?</main>', tr_html, re.DOTALL)
+    if tr_main_match:
+        tr_text = re.sub(r'<[^>]+>', '', tr_main_match.group(0))
+    else:
+        # Fallback to full HTML for tests without <main> tags
+        tr_text = re.sub(r'<[^>]+>', '', tr_html)
+
     ok, reason = completeness_ok(tr_text)
     if not ok:
         failures.append(f"Completeness: {reason}")
@@ -405,5 +463,10 @@ def run_gates(en_html, tr_html, back_text, terms):
     ok, reason = glossary_ok(en_html, tr_html, terms)
     if not ok:
         failures.append(f"Glossary: {reason}")
+
+    # Gate 5: Orphaned vault tokens - any ⟦P remaining in final HTML fails
+    if '⟦P' in tr_html:
+        orphaned = re.findall(r'⟦P\d+⟧', tr_html)
+        failures.append(f"Orphaned vault tokens: {', '.join(set(orphaned))}")
 
     return (len(failures) == 0, failures)
