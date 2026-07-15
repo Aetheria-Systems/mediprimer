@@ -175,3 +175,188 @@ def test_missing_label_raises():
 
     with pytest.raises(KeyError):
         render_header("es", "members", "turning-65.html", incomplete_chrome)
+
+
+def test_render_header_embeds_switcher():
+    """render_header embeds switcher when launched languages exist (Critical 1)."""
+    chrome = {
+        "nav": {
+            "Home": "Inicio",
+            "Start Here": "Comience aquí",
+            "Learn the Basics": "Aprenda los conceptos básicos",
+            "Find Help": "Encuentre ayuda",
+            "Glossary": "Glosario",
+            "For Professionals": "Para profesionales",
+            "About": "Acerca de"
+        },
+        "menus": {
+            "Coverage Basics": "Conceptos básicos de la cobertura",
+            "Plan Types": "Tipos de planes",
+            "Medigap Plans": "Planes Medigap",
+            "Medicare Advantage": "Medicare Advantage",
+            "The Marketplace (ACA)": "El Mercado de Seguros Médicos (ACA)",
+            "How Programs Are Governed": "Cómo se rigen los programas",
+            "Policy & Rule Changes": "Cambios de políticas y normas",
+            "All Basics →": "Todos los conceptos básicos →",
+            "★ Turning 65: Start Here": "★ Al cumplir 65 años: comience aquí",
+            "Medicare for Couples": "Medicare para parejas",
+            "Choosing Coverage": "Cómo elegir la cobertura",
+            "Understanding Your Costs": "Entienda sus costos",
+            "Enrollment & Deadlines": "Inscripción y plazos",
+            "Getting Help Paying": "Obtenga ayuda para pagar",
+            "Questions to Ask": "Preguntas que debe hacer",
+            "Edge Cases & Complications": "Casos especiales y complicaciones",
+            "All Member guides →": "Todas las guías para miembros →",
+            "Health-Plan Operations": "Operaciones de planes de salud",
+            "Providers & Billing": "Proveedores y facturación",
+            "Brokers & Advisors": "Agentes y asesores",
+            "Case Managers & Navigators": "Administradores de casos y navegadores",
+            "Star Ratings & Quality": "Calificaciones de estrellas y calidad",
+            "Appeals: Levels & Timelines": "Apelaciones: niveles y plazos",
+            "All Professional refs →": "Todas las referencias profesionales →",
+            "State Medicaid": "Medicaid estatal",
+            "SHIP (Medicare help)": "SHIP (ayuda con Medicare)",
+            "Insurance Departments": "Departamentos de seguros",
+            "All Resources": "Todos los recursos",
+            "Printable Checklists": "Listas de verificación para imprimir",
+            "Directories home →": "Inicio de directorios →"
+        },
+        "menu_button": "Menú",
+        "open_menu": "Abrir menú de"
+    }
+
+    languages = {
+        "languages": [
+            {"code": "es", "name": "Spanish", "native": "Español", "launched": True, "ui": {"switcher_label": "Idioma"}}
+        ]
+    }
+
+    result = render_header("es", "members", "turning-65.html", chrome, languages)
+    # Critical 1: Switcher must be embedded after brand anchor
+    assert 'class="lang-switch"' in result, f"Switcher not embedded in: {result}"
+    assert 'aria-current="page"' in result, "aria-current not in switcher"
+
+
+def test_render_header_prefixes_brand_href():
+    """render_header prefixes brand href for non-English (Critical 2)."""
+    chrome = {
+        "nav": {
+            "Home": "Inicio",
+            "Start Here": "Comience aquí",
+            "Learn the Basics": "Aprenda los conceptos básicos",
+            "Find Help": "Encuentre ayuda",
+            "Glossary": "Glosario",
+            "For Professionals": "Para profesionales",
+            "About": "Acerca de"
+        },
+        "menus": {
+            "Coverage Basics": "Conceptos básicos de la cobertura",
+            "Plan Types": "Tipos de planes",
+            "Medigap Plans": "Planes Medigap",
+            "Medicare Advantage": "Medicare Advantage",
+            "The Marketplace (ACA)": "El Mercado de Seguros Médicos (ACA)",
+            "How Programs Are Governed": "Cómo se rigen los programas",
+            "Policy & Rule Changes": "Cambios de políticas y normas",
+            "All Basics →": "Todos los conceptos básicos →",
+            "★ Turning 65: Start Here": "★ Al cumplir 65 años: comience aquí",
+            "Medicare for Couples": "Medicare para parejas",
+            "Choosing Coverage": "Cómo elegir la cobertura",
+            "Understanding Your Costs": "Entienda sus costos",
+            "Enrollment & Deadlines": "Inscripción y plazos",
+            "Getting Help Paying": "Obtenga ayuda para pagar",
+            "Questions to Ask": "Preguntas que debe hacer",
+            "Edge Cases & Complications": "Casos especiales y complicaciones",
+            "All Member guides →": "Todas las guías para miembros →",
+            "Health-Plan Operations": "Operaciones de planes de salud",
+            "Providers & Billing": "Proveedores y facturación",
+            "Brokers & Advisors": "Agentes y asesores",
+            "Case Managers & Navigators": "Administradores de casos y navegadores",
+            "Star Ratings & Quality": "Calificaciones de estrellas y calidad",
+            "Appeals: Levels & Timelines": "Apelaciones: niveles y plazos",
+            "All Professional refs →": "Todas las referencias profesionales →",
+            "State Medicaid": "Medicaid estatal",
+            "SHIP (Medicare help)": "SHIP (ayuda con Medicare)",
+            "Insurance Departments": "Departamentos de seguros",
+            "All Resources": "Todos los recursos",
+            "Printable Checklists": "Listas de verificación para imprimir",
+            "Directories home →": "Inicio de directorios →"
+        },
+        "menu_button": "Menú",
+        "open_menu": "Abrir menú de"
+    }
+
+    result = render_header("es", "members", "turning-65.html", chrome)
+    # Critical 2: Brand href must be /es/
+    assert 'href="/es/"' in result, f"Brand href not prefixed with /es/ in: {result}"
+
+
+def test_render_footer_contains_note_and_links():
+    """render_footer contains localized note with English link and official materials link (Critical 3)."""
+    chrome = {
+        "footer_headings": {
+            "The Basics": "Los conceptos básicos",
+            "For Members": "Para miembros",
+            "For Professionals": "Para profesionales",
+            "Directories & Tools": "Directorios y herramientas",
+            "Official sources": "Fuentes oficiales"
+        },
+        "footer_links": {
+            "Coverage Basics": "Conceptos básicos de la cobertura",
+            "Plan Types": "Tipos de planes",
+            "Medigap Plans": "Planes Medigap",
+            "Policy & Rule Changes": "Cambios de políticas y normas",
+            "Glossary": "Glosario",
+            "Enrollment & Deadlines": "Inscripción y plazos",
+            "Understanding Your Costs": "Entienda sus costos",
+            "Choosing Coverage": "Cómo elegir la cobertura",
+            "Getting Help Paying": "Obtenga ayuda para pagar",
+            "Turning 65": "Al cumplir 65 años",
+            "Health-Plan Operations": "Operaciones de planes de salud",
+            "Providers & Billing": "Proveedores y facturación",
+            "Brokers & Advisors": "Agentes y asesores",
+            "Case Managers & Navigators": "Administradores de casos y navegadores",
+            "State Medicaid": "Medicaid estatal",
+            "SHIP (Medicare help)": "SHIP (ayuda con Medicare)",
+            "Insurance Departments": "Departamentos de seguros",
+            "All Resources": "Todos los recursos",
+            "Printable Checklists": "Listas de verificación para imprimir",
+            "Medicare.gov": "Medicare.gov",
+            "Medicaid.gov": "Medicaid.gov",
+            "CMS.gov": "CMS.gov",
+            "HealthCare.gov": "CuidadoDeSalud.gov",
+            "Privacy": "Privacidad",
+            "Terms of Use": "Términos de uso",
+            "Disclaimer": "Aviso legal",
+            "Accessibility": "Accesibilidad",
+            "Editorial Standards": "Normas editoriales",
+            "Support": "Apoyo",
+            "Site Map": "Mapa del sitio"
+        }
+    }
+
+    languages = {
+        "languages": [
+            {
+                "code": "es",
+                "name": "Spanish",
+                "native": "Español",
+                "launched": True,
+                "official_url": "https://www.medicare.gov/es",
+                "ui": {
+                    "note": "Traducción del original en inglés.",
+                    "note_english_link": "Ver la versión original en inglés",
+                    "note_official": "Materiales oficiales de Medicare en español"
+                }
+            }
+        ]
+    }
+
+    result = render_footer("es", "turning-65.html", chrome, languages)
+    # Critical 3: Footer must contain note, English link, and official materials link
+    assert "Traducción del original en inglés." in result, f"Note text missing in: {result}"
+    assert 'href="/turning-65.html"' in result, f"English link missing in: {result}"
+    assert 'href="https://www.medicare.gov/es"' in result, f"Official URL missing in: {result}"
+    assert "Ver la versión original en inglés" in result, f"English link text missing in: {result}"
+    assert "Materiales oficiales de Medicare en español" in result, f"Official materials link text missing in: {result}"
+    # No English footer labels should survive
+    assert "The Basics" not in result, f"English heading 'The Basics' found in: {result}"
