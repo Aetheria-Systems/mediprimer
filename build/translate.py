@@ -15,6 +15,7 @@ Workflow:
 """
 
 import argparse
+import datetime
 import json
 import os
 import re
@@ -219,7 +220,18 @@ def translate_page(page_name, code, force=False):
     lang_state = state.get(code, {})
     current_hash = content_hash(en_html)
 
-    if not force and lang_state.get(page_name) == current_hash:
+    # Handle both legacy (bare string) and new (dict with hash/date) formats
+    entry = lang_state.get(page_name)
+    stored_hash = None
+
+    if isinstance(entry, str):
+        # Legacy format: bare hash string
+        stored_hash = entry
+    elif isinstance(entry, dict):
+        # New format: {"hash": "...", "date": "YYYY-MM-DD"}
+        stored_hash = entry.get("hash")
+
+    if not force and stored_hash == current_hash:
         return (False, f"Not stale (hash match)")
 
     # Step 1: Split page
@@ -271,7 +283,7 @@ def translate_page(page_name, code, force=False):
     # Step 6: Render chrome
     active_key = ACTIVE.get(page_name, "home")
     tr_header = render_header(code, active_key, page_name, load_chrome(code), LANGUAGES)
-    tr_footer = render_footer(code, page_name, load_chrome(code), LANGUAGES)
+    tr_footer = render_footer(code, page_name, load_chrome(code), LANGUAGES, en_html)
 
     # Preserve any trailing content after </footer> from original (e.g., scripts)
     footer_end_pos = segments["footer"].find("</footer>")
@@ -318,10 +330,13 @@ def translate_page(page_name, code, force=False):
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(tr_html)
 
-    # Step 10: Update state
+    # Step 10: Update state with hash and date (YYYY-MM-DD format)
     if code not in state:
         state[code] = {}
-    state[code][page_name] = current_hash
+    state[code][page_name] = {
+        "hash": current_hash,
+        "date": datetime.date.today().strftime("%Y-%m-%d")
+    }
     save_state(state)
 
     return (True, f"Translated to {code}: {out_path}")
@@ -340,7 +355,17 @@ def get_stale_pages(code):
             en_html = f.read()
 
         current_hash = content_hash(en_html)
-        stored_hash = lang_state.get(page_name)
+
+        # Handle both legacy (bare string) and new (dict with hash/date) formats
+        entry = lang_state.get(page_name)
+        stored_hash = None
+
+        if isinstance(entry, str):
+            # Legacy format: bare hash string
+            stored_hash = entry
+        elif isinstance(entry, dict):
+            # New format: {"hash": "...", "date": "YYYY-MM-DD"}
+            stored_hash = entry.get("hash")
 
         if stored_hash != current_hash:
             stale.append(page_name)

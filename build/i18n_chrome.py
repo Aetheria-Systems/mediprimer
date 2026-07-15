@@ -3,6 +3,7 @@
 import re
 import json
 import os
+from i18n_lib import get_launched_codes
 
 
 def _esc(s):
@@ -65,18 +66,6 @@ def switcher_html(current_code, page_name, languages):
     return f'''<div class="lang-switch">
     {links}
   </div>'''
-
-
-def _get_launched_codes(languages):
-    """
-    Extract list of launched language codes from languages dict.
-    Returns list of codes (e.g., ["es", "zh"]) in languages.json order.
-    """
-    launched = []
-    for lang in languages.get("languages", []):
-        if lang.get("launched", False):
-            launched.append(lang.get("code"))
-    return launched
 
 
 def render_header(code, active_key, page_name, chrome, languages=None):
@@ -153,16 +142,44 @@ def render_header(code, active_key, page_name, chrome, languages=None):
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
-    launched = _get_launched_codes(languages)
+    launched = get_launched_codes(languages)
     if launched:
-        langs_json = json.dumps(launched)
+        # Build object mapping language codes to banner text
+        # Each launched language must have ui.banner field; missing = config error
+        langs_dict = {}
+        for lang in languages.get("languages", []):
+            if lang.get("launched", False):
+                code = lang.get("code")
+                banner_text = lang.get("ui", {}).get("banner")
+                if not banner_text:
+                    raise KeyError(
+                        f"i18n_chrome: launched language {code} missing ui.banner in languages.json"
+                    )
+                langs_dict[code] = banner_text
+
+        langs_json = json.dumps(langs_dict, ensure_ascii=False)
         header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
                        f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
 
     return header_html
 
 
-def render_footer(code, page_name, chrome, languages=None):
+def _has_tool_scripts(html):
+    """Check if HTML references any interactive tool scripts."""
+    tool_scripts = [
+        "glossary.js",
+        "help-paying.js",
+        "medicare-navigator.js",
+        "priorities.js",
+        "your-state.js"
+    ]
+    for script in tool_scripts:
+        if script in html:
+            return True
+    return False
+
+
+def render_footer(code, page_name, chrome, languages=None, en_html=None):
     """
     Render footer with translated labels and localized note.
 
@@ -171,6 +188,7 @@ def render_footer(code, page_name, chrome, languages=None):
         page_name: Current page filename (for reference)
         chrome: Dict with footer_headings, footer_links, and localized note fields
         languages: Dict with languages list; if None, loaded internally
+        en_html: English source page HTML (for checking tool scripts); if None, skips tool note
 
     Returns: HTML footer string with translated labels and localized note
     Raises: KeyError if any label is missing from chrome
@@ -310,6 +328,7 @@ def render_footer(code, page_name, chrome, languages=None):
     if code != "en":
         # Find UI strings for this language
         ui_strings = {}
+        official_url = ""
         for lang in languages.get("languages", []):
             if lang.get("code") == code:
                 ui_strings = lang.get("ui", {})
@@ -320,11 +339,18 @@ def render_footer(code, page_name, chrome, languages=None):
             note_text = ui_strings.get("note", "")
             note_english_link_text = ui_strings.get("note_english_link", "")
             note_official_text = ui_strings.get("note_official", "")
+            tool_english_text = ui_strings.get("tool_english", "")
 
-            if note_text or note_english_link_text or note_official_text:
+            # Check if English source page references tool scripts (for tool note)
+            has_tools = en_html is not None and _has_tool_scripts(en_html)
+
+            if note_text or note_english_link_text or note_official_text or (has_tools and tool_english_text):
                 note_html = '    <div class="note">\n'
                 if note_text:
                     note_html += f'      <p>{_esc(note_text)}</p>\n'
+                # Add tool note before links if applicable
+                if has_tools and tool_english_text:
+                    note_html += f'      <p>{_esc(tool_english_text)}</p>\n'
                 note_html += '      <p>\n'
                 if note_english_link_text:
                     note_html += f'        <a href="/{page_name}">{_esc(note_english_link_text)}</a>\n'

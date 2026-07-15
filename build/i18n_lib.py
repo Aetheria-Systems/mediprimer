@@ -8,6 +8,23 @@ opaque vault tokens using the ⟦Pn⟧ format. Round-trip byte-identical.
 import re
 
 
+def get_launched_codes(languages):
+    """
+    Extract list of launched language codes from languages dict.
+
+    Args:
+        languages: Dict with "languages" key containing list of language configs
+
+    Returns:
+        list: Codes (e.g., ["es", "zh"]) in languages.json order, empty if none launched
+    """
+    launched = []
+    for lang in languages.get("languages", []):
+        if lang.get("launched", False):
+            launched.append(lang.get("code"))
+    return launched
+
+
 def split_page(html):
     """Split HTML into canonical segments.
 

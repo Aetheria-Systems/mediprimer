@@ -258,9 +258,25 @@ def main():
                     desc = field(html, r'<meta name="description" content="(.*?)">')
                     url = BASE + "/" + code + "/" + ("" if name == "index.html" else name)
 
-                    # Use translation state date or today as dateModified
+                    # Use translation state date or fail if legacy/malformed entry found
                     if code in trans_state and name in trans_state[code]:
-                        mod = trans_state[code][name] if isinstance(trans_state[code][name], str) else TODAY
+                        entry = trans_state[code][name]
+                        if isinstance(entry, dict) and "date" in entry:
+                            mod = entry["date"]
+                        elif isinstance(entry, str):
+                            # Legacy format found — fail fast
+                            raise SystemExit(
+                                f"seo.py: translation-state.json has legacy format for {code}/{name}\n"
+                                f"Expected: {{'hash': '...', 'date': 'YYYY-MM-DD'}}\n"
+                                f"Found: bare hash string\n"
+                                f"Fix by running: python3 build/translate.py --lang {code} --page {name} --force"
+                            )
+                        else:
+                            raise SystemExit(
+                                f"seo.py: translation-state.json has malformed entry for {code}/{name}\n"
+                                f"Expected: {{'hash': '...', 'date': 'YYYY-MM-DD'}}\n"
+                                f"Fix by running: python3 build/translate.py --lang {code} --page {name} --force"
+                            )
                     else:
                         mod = TODAY
 

@@ -227,7 +227,7 @@ def test_render_header_embeds_switcher():
 
     languages = {
         "languages": [
-            {"code": "es", "name": "Spanish", "native": "Español", "launched": True, "ui": {"switcher_label": "Idioma"}}
+            {"code": "es", "name": "Spanish", "native": "Español", "launched": True, "ui": {"switcher_label": "Idioma", "banner": "¿Prefiere leer esta página en español?"}}
         ]
     }
 

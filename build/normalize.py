@@ -3,6 +3,7 @@
 Guarantees byte-identical chrome + correct active nav across the whole site."""
 import re, os, glob, json
 from i18n_chrome import switcher_html
+from i18n_lib import get_launched_codes
 
 PUB = "/home/deltaprism/mediprimer/public"
 BUILD_DIR = os.path.dirname(__file__)
@@ -106,15 +107,6 @@ ACTIVE = {
     "support.html": None, "site-map.html": None,
 }
 
-def _get_launched_codes():
-    """Extract list of launched language codes from LANGUAGES dict."""
-    launched = []
-    for lang in LANGUAGES.get("languages", []):
-        if lang.get("launched", False):
-            launched.append(lang.get("code"))
-    return launched
-
-
 def header(active_key, page_name):
     items = []
     for href, label, key, menu in NAV:
@@ -142,9 +134,22 @@ def header(active_key, page_name):
                    '    <nav class="main">\n' + nav + '\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
-    launched = _get_launched_codes()
+    launched = get_launched_codes(LANGUAGES)
     if launched:
-        langs_json = json.dumps(launched)
+        # Build object mapping language codes to banner text
+        # Each launched language must have ui.banner field; missing = config error
+        langs_dict = {}
+        for lang in LANGUAGES.get("languages", []):
+            if lang.get("launched", False):
+                code = lang.get("code")
+                banner_text = lang.get("ui", {}).get("banner")
+                if not banner_text:
+                    raise SystemExit(
+                        f"normalize.py: launched language {code} missing ui.banner in languages.json"
+                    )
+                langs_dict[code] = banner_text
+
+        langs_json = json.dumps(langs_dict, ensure_ascii=False)
         header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
                        f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
 

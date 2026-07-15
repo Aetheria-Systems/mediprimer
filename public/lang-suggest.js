@@ -3,8 +3,8 @@
 (function () {
   "use strict";
 
-  // MP_LANGS is injected as a global array by the header renderer.
-  if (typeof window.MP_LANGS === "undefined" || !Array.isArray(window.MP_LANGS)) {
+  // MP_LANGS is injected as a global object {code: "banner text", ...} by the header renderer.
+  if (typeof window.MP_LANGS === "undefined" || typeof window.MP_LANGS !== "object" || Array.isArray(window.MP_LANGS)) {
     return;
   }
 
@@ -17,7 +17,7 @@
   var navLangCode = navLang.split("-")[0].toLowerCase();
 
   // Check: navigator.language prefix is available AND different from current.
-  if (!langs.includes(navLangCode) || navLangCode === currentLang) {
+  if (!(navLangCode in langs) || navLangCode === currentLang) {
     return;
   }
 
@@ -62,6 +62,23 @@
   banner.className = "lang-banner";
   banner.setAttribute("role", "banner");
 
+  var closeBtn = document.createElement("button");
+  closeBtn.type = "button";
+  closeBtn.className = "lang-banner-close";
+  closeBtn.setAttribute("aria-label", "Dismiss");
+  closeBtn.textContent = "\xd7"; // × character
+
+  // Use localized banner text from MP_LANGS object
+  var bannerText = langs[navLangCode];
+
+  var msg = document.createElement("div");
+  msg.className = "lang-banner-msg";
+  msg.appendChild(document.createTextNode(bannerText + " "));
+
+  var linkText = document.createElement("a");
+  linkText.href = counterpartUrl;
+  linkText.lang = navLangCode;
+
   // Get native language name from switcher if available.
   var langName = navLangCode;
   var switcher = document.querySelector(".lang-switch");
@@ -74,23 +91,9 @@
       }
     }
   }
+  linkText.textContent = langName;
 
-  var closeBtn = document.createElement("button");
-  closeBtn.type = "button";
-  closeBtn.className = "lang-banner-close";
-  closeBtn.setAttribute("aria-label", "Dismiss");
-  closeBtn.textContent = "\xd7"; // × character
-
-  var linkText = document.createElement("a");
-  linkText.href = counterpartUrl;
-  linkText.lang = navLangCode;
-  linkText.textContent = "View in " + langName;
-
-  var msg = document.createElement("div");
-  msg.className = "lang-banner-msg";
-  msg.appendChild(document.createTextNode("This page is available in "));
   msg.appendChild(linkText);
-  msg.appendChild(document.createTextNode("."));
 
   banner.appendChild(msg);
   banner.appendChild(closeBtn);
