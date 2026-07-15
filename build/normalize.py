@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
 """Rewrite the canonical <header>/<footer> on every MediPrimer page.
 Guarantees byte-identical chrome + correct active nav across the whole site."""
-import re, os, glob
+import re, os, glob, json
+from i18n_chrome import switcher_html
 
 PUB = "/home/deltaprism/mediprimer/public"
+BUILD_DIR = os.path.dirname(__file__)
+
+# Load languages to determine which are launched
+LANGUAGES = json.load(open(os.path.join(BUILD_DIR, "languages.json"), encoding="utf-8"))
 
 # (href, label, active-key, menu-key or None)
 # Members-first: the member journey leads; "For Professionals" is a secondary
@@ -101,7 +106,7 @@ ACTIVE = {
     "support.html": None, "site-map.html": None,
 }
 
-def header(active_key):
+def header(active_key, page_name):
     items = []
     for href, label, key, menu in NAV:
         active = " active" if key == active_key else ""
@@ -120,8 +125,10 @@ def header(active_key):
         else:
             items.append('      <a href="%s" class="navtop%s">%s</a>' % (href, active, _esc(label)))
     nav = "\n".join(items)
+    switcher = switcher_html("en", page_name, LANGUAGES)
+    switcher_html_str = f"\n    {switcher}" if switcher else ""
     return ('<header class="site-header">\n  <div class="wrap">\n'
-            '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>\n'
+            '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
             '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
             '    <nav class="main">\n' + nav + '\n    </nav>\n  </div>\n</header>')
 
@@ -201,7 +208,7 @@ for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
     src = open(path, encoding="utf-8").read()
     if not HEADER_RE.search(src) or not FOOTER_RE.search(src):
         skipped.append(name + " (missing header/footer)"); continue
-    out = HEADER_RE.sub(lambda m: header(ACTIVE[name]), src, count=1)
+    out = HEADER_RE.sub(lambda m: header(ACTIVE[name], name), src, count=1)
     out = FOOTER_RE.sub(lambda m: FOOTER, out, count=1)
     # Inject the site-wide glossary-tooltip script (single source of definitions),
     # everywhere except the glossary page itself.
