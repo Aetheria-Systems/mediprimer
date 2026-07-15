@@ -372,3 +372,37 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
     background: rgba(0,0,0,0.25); border-radius: 6px; margin: 0.2rem 0 0.4rem; }
   .menu-caret { font-size: 1rem; padding: 0.5rem 0.8rem; }
 }
+
+/* ============================================================
+   Language switcher (header-embedded)
+   ============================================================ */
+.lang-switch { display: flex; align-items: center; gap: 0; }
+.lang-switch a { display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.6rem 0.7rem; color: #d5e3ef; font-size: 0.95rem; border-radius: 6px;
+  min-width: 44px; min-height: 44px; }
+.lang-switch a:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
+.lang-switch a[aria-current="page"] { background: var(--accent); color: #fff; }
+/* RTL: switcher is still right-aligned in the header */
+[dir="rtl"] .lang-switch { direction: ltr; }
+
+/* ============================================================
+   Language suggestion banner (top strip)
+   ============================================================ */
+.lang-banner { position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: linear-gradient(90deg, #1c7ed6 0%, #14507a 100%);
+  color: #fff; padding: 0.65rem 1rem; font-size: 0.95rem; line-height: 1.4;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.lang-banner-msg { flex: 1; }
+.lang-banner-msg a { color: #fff; text-decoration: underline; font-weight: 600; }
+.lang-banner-msg a:hover { color: #e6f0ff; }
+.lang-banner-close { background: none; border: none; color: #fff; font-size: 1.4rem;
+  cursor: pointer; padding: 0.3rem 0.4rem; line-height: 1; min-width: 44px; min-height: 44px;
+  flex: 0 0 auto; }
+.lang-banner-close:hover, .lang-banner-close:focus { opacity: 0.8; outline: 2px solid #fff; outline-offset: 2px; }
+/* Account for fixed banner: add top padding to body */
+body:has(.lang-banner) { padding-top: 2.8rem; }
+
+/* ============================================================
+   RTL baseline
+   ============================================================ */
+[dir="rtl"] body { direction: rtl; text-align: right; }

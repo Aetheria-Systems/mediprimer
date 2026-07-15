@@ -67,6 +67,18 @@ def switcher_html(current_code, page_name, languages):
   </div>'''
 
 
+def _get_launched_codes(languages):
+    """
+    Extract list of launched language codes from languages dict.
+    Returns list of codes (e.g., ["es", "zh"]) in languages.json order.
+    """
+    launched = []
+    for lang in languages.get("languages", []):
+        if lang.get("launched", False):
+            launched.append(lang.get("code"))
+    return launched
+
+
 def render_header(code, active_key, page_name, chrome, languages=None):
     """
     Render header with translated labels, language-prefixed hrefs, and embedded switcher.
@@ -135,10 +147,19 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
 
-    return (f'<header class="site-header">\n  <div class="wrap">\n'
-            f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
-            f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
-            f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
+    header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
+                   f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
+                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
+                   f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
+
+    # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
+    launched = _get_launched_codes(languages)
+    if launched:
+        langs_json = json.dumps(launched)
+        header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
+                       f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
+
+    return header_html
 
 
 def render_footer(code, page_name, chrome, languages=None):

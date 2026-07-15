@@ -106,6 +106,15 @@ ACTIVE = {
     "support.html": None, "site-map.html": None,
 }
 
+def _get_launched_codes():
+    """Extract list of launched language codes from LANGUAGES dict."""
+    launched = []
+    for lang in LANGUAGES.get("languages", []):
+        if lang.get("launched", False):
+            launched.append(lang.get("code"))
+    return launched
+
+
 def header(active_key, page_name):
     items = []
     for href, label, key, menu in NAV:
@@ -127,10 +136,19 @@ def header(active_key, page_name):
     nav = "\n".join(items)
     switcher = switcher_html("en", page_name, LANGUAGES)
     switcher_html_str = f"\n    {switcher}" if switcher else ""
-    return ('<header class="site-header">\n  <div class="wrap">\n'
-            '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
-            '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
-            '    <nav class="main">\n' + nav + '\n    </nav>\n  </div>\n</header>')
+    header_html = ('<header class="site-header">\n  <div class="wrap">\n'
+                   '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
+                   '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
+                   '    <nav class="main">\n' + nav + '\n    </nav>\n  </div>\n</header>')
+
+    # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
+    launched = _get_launched_codes()
+    if launched:
+        langs_json = json.dumps(launched)
+        header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
+                       f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
+
+    return header_html
 
 FOOTER = '''<footer class="site-footer">
   <div class="wrap">
