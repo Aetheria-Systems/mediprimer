@@ -1,0 +1,177 @@
+{
+  "languages": [
+    {
+      "code": "es",
+      "name": "Spanish",
+      "native": "Español",
+      "tier": 1,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/es",
+      "ui": {
+        "switcher_label": "Idioma",
+        "note": "Traducción del original en inglés.",
+        "note_english_link": "Ver la versión original en inglés",
+        "note_official": "Materiales oficiales de Medicare en español",
+        "tool_english": "Esta herramienta está disponible en inglés.",
+        "last_updated": "Última actualización",
+        "banner": "¿Prefiere leer esta página en español?"
+      },
+      "og_locale": "es_US"
+    },
+    {
+      "code": "zh",
+      "name": "Chinese (Simplified)",
+      "native": "简体中文",
+      "tier": 2,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "zh_CN"
+    },
+    {
+      "code": "vi",
+      "name": "Vietnamese",
+      "native": "Tiếng Việt",
+      "tier": 2,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "vi_VN"
+    },
+    {
+      "code": "ko",
+      "name": "Korean",
+      "native": "한국어",
+      "tier": 2,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "ko_KR"
+    },
+    {
+      "code": "tl",
+      "name": "Tagalog",
+      "native": "Tagalog",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "tl_PH"
+    },
+    {
+      "code": "ru",
+      "name": "Russian",
+      "native": "Русский",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "ru_RU"
+    },
+    {
+      "code": "ar",
+      "name": "Arabic",
+      "native": "العربية",
+      "tier": 3,
+      "rtl": true,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "ar_SA"
+    },
+    {
+      "code": "ht",
+      "name": "Haitian Creole",
+      "native": "Kreyòl Ayisyen",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "ht_HT"
+    },
+    {
+      "code": "pt",
+      "name": "Portuguese",
+      "native": "Português",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "pt_BR"
+    },
+    {
+      "code": "fr",
+      "name": "French",
+      "native": "Français",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "fr_FR"
+    },
+    {
+      "code": "pl",
+      "name": "Polish",
+      "native": "Polski",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "pl_PL"
+    },
+    {
+      "code": "hi",
+      "name": "Hindi",
+      "native": "हिन्दी",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "hi_IN"
+    },
+    {
+      "code": "ja",
+      "name": "Japanese",
+      "native": "日本語",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "ja_JP"
+    },
+    {
+      "code": "fa",
+      "name": "Farsi",
+      "native": "فارسی",
+      "tier": 3,
+      "rtl": true,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "fa_IR"
+    },
+    {
+      "code": "de",
+      "name": "German",
+      "native": "Deutsch",
+      "tier": 3,
+      "rtl": false,
+      "launched": false,
+      "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
+      "ui": {},
+      "og_locale": "de_DE"
+    }
+  ]
+}

@@ -11,7 +11,8 @@ for p in glob.glob(os.path.join(PART, "*.html")):
     partials[os.path.basename(p)[:-5]] = open(p, encoding="utf-8").read().rstrip("\n")
 
 changed = 0
-for path in glob.glob(os.path.join(PUB, "*.html")):
+# Process top-level pages and language-dir pages
+for path in glob.glob(os.path.join(PUB, "*.html")) + glob.glob(os.path.join(PUB, "*/*.html")):
     src = open(path, encoding="utf-8").read()
     out = src
     for name, body in partials.items():
