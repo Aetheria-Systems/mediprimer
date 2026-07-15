@@ -120,14 +120,33 @@ class TestFactsDiff:
         diff = facts_diff(en, back)
         assert len(diff) > 0, "Dropped year should show in diff"
 
-    def test_facts_diff_tolerates_digit_grouping_localization(self):
-        """2.100 vs 2,100 should NOT false-positive (both represent 2100)."""
-        en = "2,100 beneficiaries"
-        back = "2.100 beneficiarios"
+    def test_facts_diff_digit_grouping_normalization_us_vs_eu(self):
+        """2,100 (US) vs 2.100 (EU) both represent 2100, should not diff."""
+        en = "There are 2,100 beneficiaries enrolled."
+        back = "There are 2.100 beneficiarios enrolled."
         diff = facts_diff(en, back)
-        # Should be empty or should handle digit grouping normalization
-        # The spec says "normalize digit grouping before comparing"
-        assert len(diff) == 0, "Localized digit grouping (2.100 vs 2,100) should be tolerated"
+        assert len(diff) == 0, "Localized digit grouping (2,100 vs 2.100) should normalize to same"
+
+    def test_facts_diff_dollar_localization_no_diff(self):
+        """$2,100 (US format) vs $2.100 (European format) both represent $2100."""
+        en = "The cost is $2,100 annually."
+        back = "The cost is $2.100 annually."
+        diff = facts_diff(en, back)
+        assert len(diff) == 0, "Dollar with different grouping should normalize to same value"
+
+    def test_facts_diff_ambiguity_edge_case_different_magnitudes(self):
+        """$283 vs $283.000 should be flagged as different (283 vs 283000)."""
+        en = "Cost is $283 monthly."
+        back = "Cost is $283.000 monthly."  # European format: 283 thousand
+        diff = facts_diff(en, back)
+        assert len(diff) > 0, "$283 and $283.000 (European) represent different amounts and should be flagged"
+
+    def test_facts_diff_ambiguity_edge_case_decimal_vs_thousands(self):
+        """$21.00 vs $2,100 should remain different (decimal vs thousands)."""
+        en = "Amount is $21.00."
+        back = "Amount is $2,100."
+        diff = facts_diff(en, back)
+        assert len(diff) > 0, "$21.00 and $2,100 are genuinely different amounts"
 
     def test_facts_diff_extracts_percentages(self):
         """Percentage difference caught."""

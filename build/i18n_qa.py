@@ -101,18 +101,68 @@ def structure_ok(en_html, tr_html):
     return (True, "")
 
 
+def _normalize_number(s):
+    """Normalize numbers with different digit grouping/decimal conventions.
+
+    Handles ambiguity by analyzing separator patterns:
+    - Comma: US thousands separator or European decimal separator
+    - Period: US decimal separator or European thousands separator
+
+    Rules:
+    - If separator is followed by exactly 2 digits and nothing after: it's decimal (e.g., ".00", ",99")
+    - If separator is followed by exactly 3 digits: it's thousands separator (e.g., ".100", ",000")
+    - For "2.100,50": European format (period=thousands, comma=decimal) → "2100.50"
+    - Return normalized as plain number string (no currency symbol)
+
+    Args:
+        s (str): Number string potentially with separators (e.g., "$2,100.50", "$2.100,50", "2,100")
+
+    Returns:
+        str: Normalized number (digits and optionally one decimal point)
+    """
+    # Strip currency symbol and whitespace
+    s = re.sub(r'[$€\s]', '', s)
+
+    # Handle European format (period as thousands, comma as decimal)
+    # Pattern: digit, period, exactly 3 digits, comma, 1-2 digits
+    if re.search(r'\d\.\d{3},\d{1,2}$', s):
+        s = s.replace('.', '').replace(',', '.')
+        return s
+
+    # Single separator followed by exactly 2 digits = decimal separator
+    if re.search(r'[.,]\d{2}$', s):
+        # Already has decimal, just ensure it's a period
+        return s.replace(',', '.')
+
+    # Single separator followed by exactly 3 digits = thousands separator
+    if re.search(r'[.,]\d{3}(?:[.,]|\d|$)', s):
+        # Remove the thousands separator
+        s = re.sub(r'[.,](?=\d{3}(?:[.,]|\d|$))', '', s)
+        return s
+
+    # No recognized pattern, return as-is
+    return s
+
+
 def _extract_facts(text):
     """Extract factual elements: dollar amounts, years, percentages, phone numbers, entities.
 
-    Returns a set of normalized fact strings for comparison.
+    Returns a set of normalized fact tuples for comparison.
     """
     facts = set()
 
-    # Dollar amounts: $1,234.56 or $1234.56
-    # Normalize to a consistent form (remove commas)
-    for match in re.finditer(r'\$[\d,]+(?:\.\d{2})?', text):
-        normalized = match.group(0).replace(',', '')
+    # Dollar amounts: $1,234.56, $2.100,50, $1234.56, etc.
+    # Match dollar sign followed by digits and common separators
+    for match in re.finditer(r'\$[\d,.]+', text):
+        raw = match.group(0)
+        normalized = _normalize_number(raw)
         facts.add(('dollar', normalized))
+
+    # Bare numbers with 3+ digits and separators (e.g., "2,100 beneficiaries", "2.100 pessoas")
+    for match in re.finditer(r'\b\d{1,3}[,.]\d{3}(?:[,.]\d{2,3})?\b', text):
+        raw = match.group(0)
+        normalized = _normalize_number(raw)
+        facts.add(('number', normalized))
 
     # Years: 19xx or 20xx (bare numbers with context)
     for match in re.finditer(r'\b(19|20)\d{2}\b', text):
