@@ -49,7 +49,8 @@ def split_page(html):
         raise ValueError("Missing </header> tag")
     header_end += len("</header>")
 
-    footer_start = body_content.find('<footer class="site-footer">')
+    # Use rfind() to find the LAST occurrence of footer (canonical chrome at end)
+    footer_start = body_content.rfind('<footer class="site-footer">')
     if footer_start == -1:
         raise ValueError("Missing required <footer class=\"site-footer\"> marker")
     footer_end = body_content.find("</html>")
@@ -88,41 +89,7 @@ def protect(main_html):
     protected = main_html
     token_counter = 0
 
-    # Protect <script>...</script> blocks (non-greedy, DOTALL)
-    for match in re.finditer(r'<script[^>]*>.*?</script>', protected, re.DOTALL):
-        token = f"⟦P{token_counter}⟧"
-        vault[token] = match.group(0)
-        token_counter += 1
-
-    # Protect <style>...</style> blocks (non-greedy, DOTALL)
-    for match in re.finditer(r'<style[^>]*>.*?</style>', protected, re.DOTALL):
-        token = f"⟦P{token_counter}⟧"
-        vault[token] = match.group(0)
-        token_counter += 1
-
-    # Protect HTML comments (non-greedy, DOTALL)
-    for match in re.finditer(r'<!--.*?-->', protected, re.DOTALL):
-        token = f"⟦P{token_counter}⟧"
-        vault[token] = match.group(0)
-        token_counter += 1
-
-    # Protect href and src attribute values (but not the attribute names)
-    # Match: href="..." or href='...' or href=value (unquoted)
-    # Similarly for src
-    for match in re.finditer(r'(href|src)=(["\']?)([^\s"\'>\]]+?)\2(?=\s|>)', protected):
-        attr_name = match.group(1)
-        quote = match.group(2)
-        attr_value = match.group(3)
-        token = f"⟦P{token_counter}⟧"
-        vault[token] = attr_value
-        token_counter += 1
-
-    # Now do the actual replacements in order
-    # We need to re-scan to avoid double-processing
-    protected = main_html
-    token_counter = 0
-
-    # Replace <script> blocks
+    # Replace <script> blocks (non-greedy, DOTALL)
     def replace_script(match):
         nonlocal token_counter
         token = f"⟦P{token_counter}⟧"
@@ -132,7 +99,7 @@ def protect(main_html):
 
     protected = re.sub(r'<script[^>]*>.*?</script>', replace_script, protected, flags=re.DOTALL)
 
-    # Replace <style> blocks
+    # Replace <style> blocks (non-greedy, DOTALL)
     def replace_style(match):
         nonlocal token_counter
         token = f"⟦P{token_counter}⟧"
@@ -142,7 +109,7 @@ def protect(main_html):
 
     protected = re.sub(r'<style[^>]*>.*?</style>', replace_style, protected, flags=re.DOTALL)
 
-    # Replace HTML comments
+    # Replace HTML comments (non-greedy, DOTALL)
     def replace_comment(match):
         nonlocal token_counter
         token = f"⟦P{token_counter}⟧"
@@ -152,7 +119,7 @@ def protect(main_html):
 
     protected = re.sub(r'<!--.*?-->', replace_comment, protected, flags=re.DOTALL)
 
-    # Replace href/src attribute values
+    # Replace href/src attribute values (single-pass callback)
     def replace_attr_value(match):
         nonlocal token_counter
         attr_name = match.group(1)
@@ -193,23 +160,25 @@ def retitle(head, title, desc):
 
     Args:
         head (str): HTML head section.
-        title (str): New title text.
-        desc (str): New meta description text.
+        title (str): New title text (may contain \\ or other regex sequences).
+        desc (str): New meta description text (may contain \\ or other regex sequences).
 
     Returns:
-        str: Modified head section.
+        str: Modified head section with title and description replaced literally.
     """
-    # Replace <title>
-    result = re.sub(
-        r'<title>[^<]*</title>',
-        f'<title>{title}</title>',
-        head
-    )
+    # Use callback to avoid backslash/backreference injection from user input
+    def replace_title(match):
+        return f'<title>{title}</title>'
 
-    # Replace meta description content attribute
+    result = re.sub(r'<title>[^<]*</title>', replace_title, head)
+
+    # Replace meta description content attribute with plain concatenation
+    def replace_meta_desc(match):
+        return match.group(1) + desc + match.group(2)
+
     result = re.sub(
         r'(<meta\s+name="description"\s+content=")[^"]*(")',
-        rf'\1{desc}\2',
+        replace_meta_desc,
         result
     )
 

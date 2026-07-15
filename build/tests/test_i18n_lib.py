@@ -73,6 +73,30 @@ class TestSplitPage:
         assert "<header class=\"site-header\">" in parts["header"]
         assert "<footer class=\"site-footer\">" in parts["footer"]
 
+    def test_split_footer_rfind_canonical(self):
+        """Regression: use rfind() to find LAST footer occurrence (canonical at end).
+        Decoy text earlier in content should not break split."""
+        html = """<!doctype html>
+<html>
+<head></head>
+<body>
+<header class="site-header">nav</header>
+<p>Some text mentioning <footer class="site-footer"> as a word in content</p>
+<footer class="site-footer">
+  <p>Real footer</p>
+</footer>
+</body>
+</html>
+"""
+        parts = split_page(html)
+        # Verify split found the REAL footer at the end
+        assert parts["footer"].startswith('<footer class="site-footer">\n  <p>Real footer</p>')
+        # Main should NOT include the "fake" footer text
+        assert "Some text mentioning" in parts["main"]
+        # Reconstruct to verify round-trip
+        reconstructed = parts["head"] + parts["header"] + parts["main"] + parts["footer"]
+        assert reconstructed == html
+
 
 class TestProtect:
     """Test protect/restore vault for scripts, styles, comments, URLs."""
@@ -95,7 +119,7 @@ class TestProtect:
             "restore(protect(html)) must equal original bytes"
 
     def test_protect_hides_urls(self):
-        """After protect, no unvaulted http or .html substrings in hrefs."""
+        """After protect, specific href/src values are not visible (vaulted)."""
         main_html = """<a href="https://example.com">link</a>
 <a href="/page.html">internal</a>
 <script src="https://cdn.com/script.js"></script>
@@ -103,11 +127,16 @@ class TestProtect:
 
         protected, vault = protect(main_html)
 
-        # Verify hrefs are tokenized (vault tokens contain URLs)
-        assert "https://example.com" not in protected or "⟦P" in protected
-        assert ".html" not in protected or "⟦P" in protected
-        # Text content should still have visible URLs (alt text, etc)
-        # but href/src attributes should be vaulted
+        # Specific URLs should NOT appear in protected output (they're vaulted)
+        # Note: "http" in alt text stays visible, but href values are tokenized
+        assert "https://example.com" not in protected, \
+            "URL value in href must be vaulted"
+        assert "/page.html" not in protected, \
+            "Internal href value must be vaulted"
+        assert "https://cdn.com/script.js" not in protected, \
+            "Script src URL must be vaulted"
+        assert "/image.png" not in protected, \
+            "Image src URL must be vaulted"
 
         # Check vault contains the protected values
         vault_values = " ".join(str(v) for v in vault.values())
@@ -170,3 +199,33 @@ class TestRetitle:
         assert 'href="/style.css"' in result
         assert "<title>New</title>" in result
         assert 'content="New desc"' in result
+
+    def test_retitle_with_backslash_in_desc(self):
+        """Regression: desc containing \\1 or other regex sequences must be literal.
+        Callback approach avoids backslash injection."""
+        head = """<head>
+<title>Old</title>
+<meta name="description" content="Old desc">
+</head>"""
+
+        # Description with regex backreference-like sequence
+        result = retitle(head, "Title", "Benefits & coverage: \\1 & \\2 rules")
+
+        # Should contain the literal backslashes and ampersands, not interpreted as regex
+        assert r'\1' in result
+        assert r'\2' in result
+        assert '&' in result
+        assert 'content="Benefits & coverage: \\1 & \\2 rules"' in result
+
+    def test_retitle_with_ampersand_in_desc(self):
+        """Regression: desc containing & must be preserved literally."""
+        head = """<head>
+<title>Old</title>
+<meta name="description" content="Old">
+</head>"""
+
+        result = retitle(head, "New & Improved", "Medicare & Medicaid coverage")
+
+        # Ampersands must appear literally in both title and description
+        assert "<title>New & Improved</title>" in result
+        assert 'content="Medicare & Medicaid coverage"' in result
