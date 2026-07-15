@@ -77,13 +77,16 @@ def q(s):
     return s.replace('"', '&quot;')
 
 def load_languages():
-    """Load languages.json; return dict of code -> lang config."""
+    """Load languages.json; return dict of code -> lang config.
+    Missing or corrupt file aborts loudly (file is repo-tracked and required)."""
     try:
         with open(LANGUAGES_FILE, encoding="utf-8") as f:
             data = json.load(f)
             return {lang["code"]: lang for lang in data.get("languages", [])}
-    except (FileNotFoundError, json.JSONDecodeError):
-        return {}
+    except FileNotFoundError:
+        raise SystemExit(f"seo.py: {LANGUAGES_FILE} not found — this file is required and should be repo-tracked.")
+    except json.JSONDecodeError as e:
+        raise SystemExit(f"seo.py: {LANGUAGES_FILE} is malformed ({e}) — restore it (git checkout -- build/languages.json).")
 
 def alternates(name, langs_dict, pub_dir):
     """Emit hreflang link cluster for a page name.
@@ -124,27 +127,14 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
              '<meta property="og:description" content="%s">' % q(desc),
              '<meta property="og:url" content="%s">' % url]
 
-    # Add og:locale for translated pages
-    if lang_code and lang_code != "en":
-        locale_map = {
-            "es": "es_US",
-            "zh": "zh_CN",
-            "vi": "vi_VN",
-            "ko": "ko_KR",
-            "tl": "tl_PH",
-            "ru": "ru_RU",
-            "ar": "ar_SA",
-            "ht": "ht_HT",
-            "pt": "pt_BR",
-            "fr": "fr_FR",
-            "pl": "pl_PL",
-            "hi": "hi_IN",
-            "ja": "ja_JP",
-            "fa": "fa_IR",
-            "de": "de_DE"
-        }
-        og_locale = locale_map.get(lang_code, lang_code.upper())
-        parts.append('<meta property="og:locale" content="%s">' % og_locale)
+    # Add og:locale for translated pages (from language config)
+    if lang_code and lang_code != "en" and langs_dict is not None:
+        if lang_code in langs_dict:
+            og_locale = langs_dict[lang_code].get("og_locale")
+            if og_locale:
+                parts.append('<meta property="og:locale" content="%s">' % og_locale)
+            else:
+                raise SystemExit(f"seo.py: launched language {lang_code} missing og_locale in languages.json")
 
     parts.extend([
              '<meta name="twitter:card" content="summary">',
@@ -227,7 +217,7 @@ def main():
     langs_dict = load_languages()
 
     changed, urls = 0, []
-    page_mods = {}  # Track mod_date for each page for sitemap
+    page_mods = {}  # Track mod_date for each page for sitemap (key -> date)
     for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
         name = os.path.basename(path)
         with open(path, encoding="utf-8") as f:
@@ -235,7 +225,7 @@ def main():
         title = field(html, r'<title>(.*?)</title>')
         desc = field(html, r'<meta name="description" content="(.*?)">')
         url = BASE + "/" + ("" if name == "index.html" else name)
-        urls.append((url, name))
+        urls.append((url, name))  # mods_key is just name for English
         html2 = SEO_RE.sub("", html)
         html2 = MANUAL_META_RE.sub("", html2)
         mod = page_date(name, html2, dates)
@@ -274,8 +264,9 @@ def main():
                     else:
                         mod = TODAY
 
-                    urls.append((url, name))
-                    page_mods[code + "/" + name] = mod
+                    mods_key = code + "/" + name  # Store key for later sitemap lookup
+                    urls.append((url, mods_key))
+                    page_mods[mods_key] = mod
 
                     html2 = SEO_RE.sub("", html)
                     html2 = MANUAL_META_RE.sub("", html2)
@@ -290,7 +281,9 @@ def main():
 
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for url, name in urls:
+    for url, mods_key in urls:
+        # Extract basename for priority lookup (e.g., "disclaimer.html" from "es/disclaimer.html")
+        name = mods_key.split("/")[-1]
         LEGAL = ("privacy.html", "terms-of-use.html", "disclaimer.html", "accessibility.html", "site-map.html")
         KEY = ("turning-65.html", "choosing-coverage.html", "members.html", "getting-help.html",
                "medicaid-starting-out.html", "dual-eligible.html")
@@ -300,7 +293,7 @@ def main():
               "0.9" if name in KEY else
               "0.8" if name in HUB else
               "0.3" if name in LEGAL else "0.7")
-        sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[name if "/" not in name else name.split("/")[1]], pr))
+        sm.append("  <url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>" % (url, page_mods[mods_key], pr))
     sm.append("</urlset>")
     with open(os.path.join(PUB, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write("\n".join(sm) + "\n")
