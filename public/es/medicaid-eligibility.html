@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elegibilidad para Medicaid, Exenciones y Cuidado a Largo Plazo — MediPrimer</title>
+<meta name="description" content="Cómo funciona la elegibilidad para Medicaid: vías MAGI y no MAGI, variación por estado, y cómo Medicaid paga el cuidado a largo plazo mediante exenciones.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicaid-eligibility.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicaid Eligibility, Waivers & Long-Term Care — MediPrimer">
+<meta property="og:description" content="How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.">
+<meta property="og:url" content="https://mediprimer.org/medicaid-eligibility.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicaid Eligibility, Waivers & Long-Term Care — MediPrimer">
+<meta name="twitter:description" content="How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicaid Eligibility, Waivers & Long-Term Care", "description": "How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.", "url": "https://mediprimer.org/medicaid-eligibility.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicaid Eligibility, Waivers & Long-Term Care", "item": "https://mediprimer.org/medicaid-eligibility.html"}]}</script>
+<!--/seo-->
+</head>
+<body><header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop active">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Lo Básico</p>
+    <h1>Elegibilidad para Medicaid, Exenciones y Cuidado a Largo Plazo</h1>
+    <p>Medicaid cubre a personas de bajos ingresos. Cada estado fija sus propias reglas de elegibilidad. Esta guía explica cómo funciona Medicaid y cómo paga el cuidado a largo plazo.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Quién Califica para Medicaid: El Marco Básico</h2>
+    <p>Cada estado fija sus propios límites de ingresos y bienes. Alguien que califica en un estado puede no calificar en otro, aun con el mismo ingreso.</p>
+    <p>Medicaid cubre a varios grupos de personas:</p>
+    <ul>
+      <li><strong>Grupos basados en MAGI</strong> — personas en edad de trabajar y familias, evaluadas por ingresos como en la declaración de impuestos.</li>
+      <li><strong>Grupos no MAGI</strong> — personas mayores y personas con discapacidades, con reglas más complejas de bienes e ingresos.</li>
+    </ul>
+    <p>Los límites de ingresos y bienes varían por estado y cambian cada año. Explicamos cómo funciona la elegibilidad y le indicamos dónde ver los límites actuales de su estado.</p>
+
+    <h2>Vías de Elegibilidad Basadas en MAGI</h2>
+    <p>La mayoría de los miembros de Medicaid están en grupos basados en MAGI. Para estos grupos, los estados usan una sola prueba de ingresos simple. Se basa, más o menos, en lo que muestra su declaración de impuestos.</p>
+
+    <h3>Niños</h3>
+    <p>Medicaid cubre a niños de familias de bajos ingresos. Los límites de ingresos varían por estado. Vea <a href="/chip.html">CHIP</a> para la cobertura entre Medicaid y el seguro privado.</p>
+
+    <h3>Personas Embarazadas y en Posparto</h3>
+    <p>Las personas embarazadas y las que acaban de dar a luz son elegibles según los límites de ingresos del estado. La cobertura incluye atención prenatal y apoyo posparto.</p>
+
+    <h3>Padres y Cuidadores</h3>
+    <p>Los padres y cuidadores pueden calificar para Medicaid. Pero sus límites de ingresos suelen ser más bajos que los límites para niños. Las reglas de elegibilidad varían por estado.</p>
+
+    <h3>Adultos de la Expansión del ACA</h3>
+    <p>La Ley del Cuidado de Salud a Bajo Precio (ACA) permite a los estados expandir Medicaid a adultos sin hijos. La mayoría de los estados lo han hecho, pero no todos. Consulte el programa de su estado para saber si se expandió.</p>
+
+    <h2>Vías de Elegibilidad No MAGI</h2>
+    <p>Los grupos no MAGI son en su mayoría personas mayores y personas con discapacidades. Tienen reglas más complejas sobre ingresos y bienes (los recursos son cosas que usted posee, como dinero o propiedades).</p>
+
+    <h3>Personas Mayores, Ciegas y con Discapacidades (Relacionadas con SSI)</h3>
+    <p>Las personas de 65 años o más, legalmente ciegas o con discapacidades suelen calificar. Debe cumplir los límites de ingresos y de bienes. Los bienes incluyen cuentas bancarias, propiedades y vehículos.</p>
+
+    <h3>Personas con Discapacidades que Trabajan</h3>
+    <p>Algunos estados tienen programas de incentivos laborales. Estos permiten que las personas con discapacidades mantengan Medicaid aunque ganen más. Las reglas son distintas en cada estado.</p>
+
+    <h2>Entender la Variación por Estado en la Expansión de Medicaid</h2>
+    <p>Después del ACA, cada estado eligió su propio camino:</p>
+    <ul>
+      <li><strong>Los estados con expansión</strong> ampliaron Medicaid a adultos sin hijos. Estos adultos suelen ganar hasta alrededor del 138% de la línea federal de pobreza.</li>
+      <li><strong>Los estados sin expansión</strong> no ampliaron Medicaid. Limitan la cobertura de adultos a grupos más reducidos, sobre todo padres y cuidadores de niños.</li>
+    </ul>
+    <p>Esto crea brechas de cobertura en los estados sin expansión. Los adultos en edad de trabajar sin hijos no pueden obtener Medicaid allí. Los estados pueden cambiar esta decisión con el tiempo. Para conocer la política actual de su estado, visite el <a href="/state-medicaid.html">Directorio Estatal de Medicaid</a> o <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>.</p>
+
+    <h2>Vías de Elegibilidad de Medicaid de un Vistazo</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Vía</th>
+            <th>Quién Califica</th>
+            <th>Base de Ingresos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Niños</td>
+            <td>Menores en familias de bajos ingresos</td>
+            <td>MAGI (límite fijado por el estado, a menudo por encima de la línea de pobreza)</td>
+          </tr>
+          <tr>
+            <td>Embarazo y Posparto</td>
+            <td>Personas embarazadas y las que están en el período de cobertura posparto</td>
+            <td>MAGI (fijado por el estado, normalmente más alto que para otros adultos)</td>
+          </tr>
+          <tr>
+            <td>Padres/Cuidadores</td>
+            <td>Tutores de niños dependientes</td>
+            <td>MAGI (fijado por el estado, más bajo que el límite para niños)</td>
+          </tr>
+          <tr>
+            <td>Adultos de la Expansión del ACA</td>
+            <td>Adultos sin hijos de 19 a 64 años (solo en estados con expansión)</td>
+            <td>MAGI (≤138% de la línea federal de pobreza, con variación por estado)</td>
+          </tr>
+          <tr>
+            <td>Personas Mayores (65+)</td>
+            <td>Adultos mayores</td>
+            <td>No MAGI (los límites de ingresos y bienes varían por estado)</td>
+          </tr>
+          <tr>
+            <td>Personas Ciegas</td>
+            <td>Personas legalmente ciegas de cualquier edad</td>
+            <td>No MAGI (los límites de ingresos y bienes varían por estado)</td>
+          </tr>
+          <tr>
+            <td>Personas con Discapacidades (Relacionadas con SSI)</td>
+            <td>Personas que reciben SSDI o SSI, o con discapacidad según el Seguro Social</td>
+            <td>No MAGI (los límites de ingresos y bienes varían por estado)</td>
+          </tr>
+          <tr>
+            <td>Personas con Discapacidades que Trabajan</td>
+            <td>Personas con discapacidades que trabajan (programas estatales de incentivos laborales)</td>
+            <td>No MAGI (definido por el estado; puede permitir ingresos más altos)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>El Cuidado a Largo Plazo y Medicaid</h2>
+    <p>Medicare cubre la atención médica, pero no el cuidado <em>de custodia</em> a largo plazo — ayuda continua con actividades diarias como bañarse y vestirse. Medicaid es el programa principal que paga ese tipo de cuidado, en centros o en el hogar. Lo que Medicaid cubre en el hogar varía según el estado y la elegibilidad, y en general no paga alojamiento y comida en residencias con asistencia.</p>
+
+    <h3>Medicaid Institucional: Centros de Enfermería</h3>
+    <p>Medicaid paga el cuidado a largo plazo en un Establecimiento de Enfermería Especializada (SNF) cuando se cumplen las necesidades médicas. Para calificar, los residentes deben reducir sus bienes hasta el límite de Medicaid de su estado. Una vez que llegan a ese límite, Medicaid cubre el costo completo. La mayoría de los seguros privados no lo hacen.</p>
+
+    <h3>Exenciones de Servicios en el Hogar y la Comunidad (HCBS)</h3>
+    <p>Los estados ofrecen <strong>exenciones de Servicios en el Hogar y la Comunidad (HCBS)</strong>. Estas permiten que Medicaid pague ayuda en el hogar, programas diurnos y residencias con asistencia. A menudo cuestan menos que los hogares de ancianos.</p>
+    <p>Las exenciones HCBS son opcionales. Cada estado diseña sus propios programas con distintos servicios y reglas de elegibilidad. Algunos tienen listas de espera largas. Para conocer los HCBS en su estado, comuníquese con la oficina de Medicaid de su estado o visite el <a href="/state-medicaid.html">Directorio Estatal de Medicaid</a>.</p>
+
+    <h3>Exenciones de Demostración y Flexibilidad del Programa</h3>
+    <p>Los estados también pueden usar <strong>exenciones de la Sección 1115</strong>. Estas permiten que un estado pruebe nuevas formas de administrar Medicaid. Algunas crean programas especiales para ciertos grupos. Pregunte en la oficina de Medicaid de su estado qué hace su estado.</p>
+
+    <h2>Límites de Bienes, Reducción de Bienes y Elegibilidad de Medicaid para el Cuidado a Largo Plazo</h2>
+    <p>Los grupos basados en MAGI se centran en los ingresos. Pero los grupos no MAGI —sobre todo personas mayores y personas con discapacidades que buscan cuidado institucional— también deben cumplir límites de bienes. Los bienes incluyen cuentas bancarias, vehículos, inversiones y propiedades.</p>
+
+    <h3>¿Qué Cuenta como un Bien?</h3>
+    <p>La mayoría de los recursos financieros cuentan para su límite de bienes. Pero algunos artículos están <strong>exentos</strong> (no cuentan). Estos suelen incluir su vivienda principal (hasta un valor fijado por el estado), un vehículo y algunos artículos personales. Su vivienda normalmente no cuenta si un cónyuge o un hijo dependiente vive allí.</p>
+
+    <h3>El Proceso de Reducción de Bienes</h3>
+    <p>Para calificar para el cuidado a largo plazo de Medicaid, puede que necesite reducir sus bienes hasta el límite de Medicaid. Puede gastar dinero en cuentas médicas, gastos funerarios y gastos personales. El límite de reducción de bienes es distinto en cada estado.</p>
+
+    <h3>Planificar con Anticipación</h3>
+    <p>Las reglas de reducción de bienes son complejas y distintas en cada estado. Muchas familias consultan con un abogado de derecho de personas mayores o un asesor financiero. Tenga cuidado: las transferencias o regalos indebidos de bienes pueden causar períodos de espera de Medicaid (penalizaciones por revisión retroactiva o "look-back"). La orientación de expertos es importante.</p>
+
+    <h2>Recuperación del Patrimonio por Medicaid</h2>
+    <p>Cuando Medicaid paga el cuidado a largo plazo de alguien de 55 años o más, el estado puede buscar la recuperación (el reembolso) de esos costos del patrimonio de esa persona después de su muerte. Esto suele ocurrir mediante la venta de la vivienda. Pero la recuperación puede no ocurrir si un cónyuge sobreviviente, un hijo menor, un hijo con discapacidad o un hermano vive en la vivienda y ayudó a mantenerla. Las reglas son distintas en cada estado.</p>
+    <p>Por eso se recomienda que los adultos mayores y sus familias hagan planificación patrimonial y de cuidado a largo plazo con un abogado.</p>
+
+    <h2>Doble Elegibilidad: Medicare y Medicaid Juntos</h2>
+    <p>Algunas personas califican para Medicare y Medicaid a la vez. Usted puede tener <strong>Doble Elegibilidad</strong> si tiene 65 años o más, recibe pagos por discapacidad y tiene bajos ingresos. Con ambos programas, recibe cobertura de cada uno. Medicaid a menudo paga servicios que Medicare no cubre, como el cuidado a largo plazo y las estadías prolongadas en hogares de ancianos.</p>
+    <p>Las personas con Doble Elegibilidad tienen opciones especiales de Inscripción. Puede calificar para modelos de cobertura especializados. Vea <a href="/dual-eligible.html">Doble Elegibilidad: Medicare y Medicaid</a> para más información.</p>
+
+    <h2>Mantener Su Cobertura: Redeterminaciones y Renovaciones</h2>
+    <p>Su cobertura de Medicaid no es permanente. Los estados revisan con regularidad si usted todavía califica. Una Redeterminación puede ocurrir por:</p>
+    <ul>
+      <li>Un cambio en los ingresos, el tamaño del hogar o la situación familiar.</li>
+      <li>Un período de renovación regular fijado por su estado (normalmente anual).</li>
+      <li>Que usted reporte un cambio a la oficina de Medicaid de su estado.</li>
+    </ul>
+    <p>Para mantener la cobertura, reporte los cambios pronto y responda a los avisos de renovación. No cumplir un plazo o no responder puede hacer que pierda la cobertura, aunque todavía califique. Vea <a href="/enrollment.html">Inscripción y Plazos</a> y <a href="/policy-changes.html">Cambios de Vida y Medicaid</a> para detalles sobre cómo reportar cambios y renovar la cobertura.</p>
+
+    <h2>Obtener Más Información</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="/state-medicaid.html">Directorio Estatal de Medicaid</a></h3>
+        <p>Encuentre la oficina de Medicaid de su estado, cómo comunicarse con ella, quién califica allí y enlaces a sus programas.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/chip.html">CHIP (Programa de Seguro Médico para Niños)</a></h3>
+        <p>Aprenda cómo CHIP cubre a niños de familias trabajadoras que ganan demasiado para Medicaid.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/dual-eligible.html">Doble Elegibilidad: Medicare y Medicaid</a></h3>
+        <p>Entienda las opciones de cobertura cuando califica para Medicare y Medicaid a la vez.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/getting-help.html">Obtener Ayuda para Pagar la Cobertura</a></h3>
+        <p>Explore programas de asistencia y recursos que le ayuden a costear la cobertura y la atención médica.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/enrollment.html">Inscripción y Plazos</a></h3>
+        <p>Aprenda cómo solicitar Medicaid y mantener su cobertura al día.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></h3>
+        <p>Información oficial del programa Medicaid, con enlaces de elegibilidad e Inscripción estado por estado.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Verifique en la fuente:</strong> Las reglas de Medicaid son complejas, cambian con frecuencia y difieren mucho según el estado. Los límites de ingresos, los límites de bienes y los servicios cubiertos no son iguales en todas partes. Antes de tomar decisiones sobre el cuidado a largo plazo o de solicitar el programa, consulte las reglas actuales con la oficina de Medicaid de su estado, <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a> o un abogado de derecho de personas mayores. Esta página educa; no es asesoría legal ni financiera.
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicaid-eligibility.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+</body>
+</html>
