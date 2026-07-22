@@ -38,7 +38,7 @@
     var disclaimer = el(
       "p",
       "mp-chatbot-disclaimer",
-      "General info, not personalized advice — verify at medicare.gov."
+      "General info from MediPrimer and official sources, not personalized advice — always verify with an official source."
     );
     var log = el("div", "mp-chatbot-log");
     log.setAttribute("role", "log");
