@@ -406,3 +406,17 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
    RTL baseline
    ============================================================ */
 [dir="rtl"] body { direction: rtl; text-align: right; }
+
+/* Help bot widget */
+.mp-chatbot { position: fixed; bottom: 1rem; right: 1rem; z-index: 1000; font-family: inherit; }
+.mp-chatbot-toggle { border-radius: 999px; padding: 0.6rem 1rem; cursor: pointer; }
+.mp-chatbot-panel { width: 320px; max-width: 90vw; max-height: 60vh; display: flex; flex-direction: column; background: #fff; border: 1px solid #ccc; border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+.mp-chatbot-disclaimer { font-size: 0.75rem; color: #666; margin: 0 0 0.5rem; }
+.mp-chatbot-log { overflow-y: auto; flex: 1; margin-bottom: 0.5rem; }
+.mp-chatbot-msg { margin: 0.25rem 0; font-size: 0.9rem; }
+.mp-chatbot-msg-you { text-align: right; color: #333; }
+.mp-chatbot-msg-bot { text-align: left; color: #111; }
+.mp-chatbot-sources { font-size: 0.7rem; color: #777; margin: 0 0 0.5rem; }
+.mp-chatbot-privacy-note { font-size: 0.7rem; color: #a33; margin: 0 0 0.35rem; }
+.mp-chatbot-form { display: flex; gap: 0.25rem; }
+.mp-chatbot-input { flex: 1; }
