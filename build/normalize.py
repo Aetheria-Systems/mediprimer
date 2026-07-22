@@ -127,11 +127,18 @@ def header(active_key, page_name):
             items.append('      <a href="%s" class="navtop%s">%s</a>' % (href, active, _esc(label)))
     nav = "\n".join(items)
     switcher = switcher_html("en", page_name, LANGUAGES)
-    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
+    switcher_html_str = f"    <!--switcher-->{switcher}<!--/switcher-->\n" if switcher else ""
+    # switcher + nav-toggle + nav.main are grouped in .header-controls so they
+    # wrap as one unit relative to the brand, instead of each being an
+    # independent flex item subject to justify-content: space-between --
+    # which made the switcher's position shift depending on how much nav
+    # text happened to fit per line (longer translated labels reflow
+    # differently than English, moving the switcher to a different edge).
     header_html = ('<header class="site-header">\n  <div class="wrap">\n'
-                   '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
+                   '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>\n'
+                   '    <div class="header-controls">\n' + switcher_html_str +
                    '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
-                   '    <nav class="main">\n' + nav + '\n    </nav>\n  </div>\n</header>')
+                   '    <nav class="main">\n' + nav + '\n    </nav>\n    </div>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
     launched = get_launched_codes(LANGUAGES)
