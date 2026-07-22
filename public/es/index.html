@@ -40,9 +40,12 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <link rel="alternate" hreflang="x-default" href="https://mediprimer.org/">
 <!--/seo-->
 </head>
-<body><header class="site-header">
+<body><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script>
+<header class="site-header">
   <div class="wrap">
     <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
     <!--switcher--><div class="navitem has-menu lang-switch">
     <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
     <div class="dropdown">
@@ -106,6 +109,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       </div>
       <a href="/es/about.html" class="navtop">Acerca de</a>
     </nav>
+    </div>
   </div>
 </header>
 

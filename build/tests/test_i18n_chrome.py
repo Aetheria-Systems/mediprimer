@@ -239,6 +239,57 @@ def test_render_header_embeds_switcher():
     assert 'aria-current="page"' in result, "aria-current not in switcher"
 
 
+def test_render_header_mp_langs_en_key_with_multiple_launched_languages():
+    """MP_LANGS must include the "en" key when 2+ languages are launched,
+    not just when exactly one is (the case every other test here covers).
+    Guards the langs_dict-building loop's variable naming: it previously
+    reused `code`, the same name as render_header's own current-language
+    parameter, shadowing it after the loop ran. That specific shadowing
+    happened to have no visible effect on this check (English can never be
+    a launched-language code, so `code != "en"` was true either way) --
+    but the fix (renaming the loop variable) is still correct hygiene, and
+    this test locks in the multi-language MP_LANGS behavior it protects."""
+    chrome = {
+        "nav": {
+            "Home": "Inicio", "Start Here": "Comience aquí", "Learn the Basics": "Aprenda los conceptos básicos",
+            "Find Help": "Encuentre ayuda", "Glossary": "Glosario", "For Professionals": "Para profesionales", "About": "Acerca de"
+        },
+        "menus": {
+            "Coverage Basics": "Conceptos básicos de la cobertura", "Plan Types": "Tipos de planes",
+            "Medigap Plans": "Planes Medigap", "Medicare Advantage": "Medicare Advantage",
+            "The Marketplace (ACA)": "El Mercado de Seguros Médicos (ACA)", "How Programs Are Governed": "Cómo se rigen los programas",
+            "Policy & Rule Changes": "Cambios de políticas y normas", "All Basics →": "Todos los conceptos básicos →",
+            "★ Turning 65: Start Here": "★ Al cumplir 65 años: comience aquí", "Medicare for Couples": "Medicare para parejas",
+            "Choosing Coverage": "Cómo elegir la cobertura", "Understanding Your Costs": "Entienda sus costos",
+            "Enrollment & Deadlines": "Inscripción y plazos", "Getting Help Paying": "Obtenga ayuda para pagar",
+            "Questions to Ask": "Preguntas que debe hacer", "Edge Cases & Complications": "Casos especiales y complicaciones",
+            "All Member guides →": "Todas las guías para miembros →", "Health-Plan Operations": "Operaciones de planes de salud",
+            "Providers & Billing": "Proveedores y facturación", "Brokers & Advisors": "Agentes y asesores",
+            "Case Managers & Navigators": "Administradores de casos y navegadores", "Star Ratings & Quality": "Calificaciones de estrellas y calidad",
+            "Appeals: Levels & Timelines": "Apelaciones: niveles y plazos", "All Professional refs →": "Todas las referencias profesionales →",
+            "State Medicaid": "Medicaid estatal", "SHIP (Medicare help)": "SHIP (ayuda con Medicare)",
+            "Insurance Departments": "Departamentos de seguros", "All Resources": "Todos los recursos",
+            "Printable Checklists": "Listas de verificación para imprimir", "Directories home →": "Inicio de directorios →"
+        },
+        "menu_button": "Menú",
+        "open_menu": "Abrir menú de"
+    }
+
+    # Two launched languages, "zh" listed AFTER "es" -- with the shadowing
+    # bug, the loop variable `code` ends up "zh" after the loop, corrupting
+    # any use of the (same-named) outer `code` parameter afterward.
+    languages = {
+        "languages": [
+            {"code": "es", "name": "Spanish", "native": "Español", "launched": True, "ui": {"switcher_label": "Idioma", "banner": "¿Prefiere leer esta página en español?"}},
+            {"code": "zh", "name": "Chinese", "native": "中文", "launched": True, "ui": {"switcher_label": "语言", "banner": "您希望阅读本页的中文版本吗？"}},
+        ]
+    }
+
+    result = render_header("es", "members", "turning-65.html", chrome, languages)
+    assert '"en": "Would you like to read this page in English?"' in result, \
+        f"MP_LANGS missing correct 'en' entry (possible loop-variable shadowing regression): {result}"
+
+
 def test_render_header_prefixes_brand_href():
     """render_header prefixes brand href for non-English (Critical 2)."""
     chrome = {

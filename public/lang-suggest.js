@@ -43,6 +43,17 @@
     } else {
       counterpartUrl = "/" + navLangCode + currentPath;
     }
+  } else if (navLangCode === "en") {
+    // Current is a translated page; English lives at the root, with no
+    // language prefix, so strip the current language segment rather than
+    // replacing it (that would produce a nonexistent /en/... URL).
+    var enParts = currentPath.split("/");
+    if (enParts.length > 1 && enParts[0] === "" && enParts[1] === currentLang) {
+      enParts.splice(1, 1);
+      counterpartUrl = enParts.join("/") || "/";
+    } else {
+      counterpartUrl = "/";
+    }
   } else {
     // Current is not English; replace the language prefix.
     // Path format: /es/page.html → /zh/page.html, /es/ → /zh/

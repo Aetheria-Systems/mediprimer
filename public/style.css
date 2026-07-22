@@ -53,6 +53,11 @@ img { max-width: 100%; }
 .brand { display: flex; align-items: center; gap: 0.6rem; color: #fff; font-weight: 700; font-size: 1.25rem; padding: 0.9rem 0; }
 .brand:hover { text-decoration: none; }
 .brand .mark { display: inline-flex; width: 32px; height: 32px; background: var(--accent); border-radius: 6px; align-items: center; justify-content: center; color: #fff; font-weight: 800; }
+/* Groups switcher + nav-toggle + nav.main so they wrap as one unit
+   relative to .brand, instead of each being an independent flex item
+   under justify-content: space-between (which let longer translated nav
+   text push the switcher to a different edge than on the English page). */
+.header-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
 nav.main { display: flex; flex-wrap: wrap; gap: 0.25rem; }
 nav.main a { color: #d5e3ef; padding: 0.6rem 0.7rem; border-radius: 6px; font-size: 1rem; }
 nav.main a:hover { background: rgba(255,255,255,0.1); text-decoration: none; }

@@ -145,18 +145,23 @@ def render_header(code, active_key, page_name, chrome, languages=None):
 
     nav_html = "\n".join(nav_items)
 
-    # Embed switcher after brand anchor
+    # Embed switcher, grouped with nav-toggle + nav.main in .header-controls
+    # so they wrap as one unit relative to the brand (see normalize.py's
+    # header() for why: longer translated nav labels reflow differently
+    # than English, which moved the switcher to a different edge when it
+    # was an independent flex item).
     switcher = switcher_html(code, page_name, languages)
-    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
+    switcher_html_str = f"    <!--switcher-->{switcher}<!--/switcher-->\n" if switcher else ""
 
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
 
     menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
-                   f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
+                   f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>\n'
+                   f'    <div class="header-controls">\n{switcher_html_str}'
                    f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc_attr(menu_button_label)}">☰</button>\n'
-                   f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
+                   f'    <nav class="main">\n{nav_html}\n    </nav>\n    </div>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
     launched = get_launched_codes(languages)
@@ -166,13 +171,21 @@ def render_header(code, active_key, page_name, chrome, languages=None):
         langs_dict = {}
         for lang in languages.get("languages", []):
             if lang.get("launched", False):
-                code = lang.get("code")
+                lang_code = lang.get("code")
                 banner_text = lang.get("ui", {}).get("banner")
                 if not banner_text:
                     raise KeyError(
-                        f"i18n_chrome: launched language {code} missing ui.banner in languages.json"
+                        f"i18n_chrome: launched language {lang_code} missing ui.banner in languages.json"
                     )
-                langs_dict[code] = banner_text
+                langs_dict[lang_code] = banner_text
+
+        # This page's own language is never in `languages` (English is the
+        # implicit default, not a languages.json entry), so an English-
+        # browser visitor here would never get a switch-to-English prompt
+        # without this. lang-suggest.js's root-level-URL handling for "en"
+        # depends on this key only ever being added on non-English pages.
+        if code != "en":
+            langs_dict["en"] = "Would you like to read this page in English?"
 
         langs_json = json.dumps(langs_dict, ensure_ascii=False)
         header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
