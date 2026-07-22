@@ -145,21 +145,21 @@ def render_header(code, active_key, page_name, chrome, languages=None):
 
     nav_html = "\n".join(nav_items)
 
-    # Embed switcher, grouped with nav-toggle + nav.main in .header-controls
-    # so they wrap as one unit relative to the brand (see normalize.py's
-    # header() for why: longer translated nav labels reflow differently
-    # than English, which moved the switcher to a different edge when it
-    # was an independent flex item).
+    # nav-toggle + nav.main are grouped in .header-controls so they wrap as
+    # one unit relative to the brand. The switcher is pinned absolutely to
+    # the header's top-right corner (see .lang-switch in style.css) --
+    # deliberately taken out of flex flow entirely, so its position can
+    # never depend on how much the nav wraps.
     switcher = switcher_html(code, page_name, languages)
-    switcher_html_str = f"    <!--switcher-->{switcher}<!--/switcher-->\n" if switcher else ""
+    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
 
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
 
     menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
-                   f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>\n'
-                   f'    <div class="header-controls">\n{switcher_html_str}'
+                   f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
+                   f'    <div class="header-controls">\n'
                    f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc_attr(menu_button_label)}">☰</button>\n'
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n    </div>\n  </div>\n</header>')
 
