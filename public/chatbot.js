@@ -18,10 +18,22 @@
 
   function buildWidget() {
     var root = el("div", "mp-chatbot");
-    var toggle = el("button", "mp-chatbot-toggle", "Ask a question");
+    var toggle = el("button", "mp-chatbot-toggle");
+    toggle.innerHTML = '<span class="mp-chatbot-toggle-icon" aria-hidden="true">💬</span> MediBot';
     toggle.setAttribute("aria-expanded", "false");
     var panel = el("div", "mp-chatbot-panel");
     panel.style.display = "none";
+
+    var header = el("div", "mp-chatbot-header");
+    var headerTitle = el("span", "mp-chatbot-header-title");
+    headerTitle.innerHTML = '<span aria-hidden="true">💬</span> MediBot';
+    var headerSubtitle = el(
+      "span",
+      "mp-chatbot-header-subtitle",
+      "Your Medicare & Medicaid guide"
+    );
+    header.appendChild(headerTitle);
+    header.appendChild(headerSubtitle);
 
     var disclaimer = el(
       "p",
@@ -43,6 +55,7 @@
 
     form.appendChild(input);
     form.appendChild(submit);
+    panel.appendChild(header);
     panel.appendChild(disclaimer);
     panel.appendChild(log);
     panel.appendChild(privacyNote);
