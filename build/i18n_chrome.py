@@ -171,13 +171,13 @@ def render_header(code, active_key, page_name, chrome, languages=None):
         langs_dict = {}
         for lang in languages.get("languages", []):
             if lang.get("launched", False):
-                code = lang.get("code")
+                lang_code = lang.get("code")
                 banner_text = lang.get("ui", {}).get("banner")
                 if not banner_text:
                     raise KeyError(
-                        f"i18n_chrome: launched language {code} missing ui.banner in languages.json"
+                        f"i18n_chrome: launched language {lang_code} missing ui.banner in languages.json"
                     )
-                langs_dict[code] = banner_text
+                langs_dict[lang_code] = banner_text
 
         # This page's own language is never in `languages` (English is the
         # implicit default, not a languages.json entry), so an English-
