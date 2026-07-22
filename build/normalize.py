@@ -220,7 +220,12 @@ FOOTER = '''<footer class="site-footer">
   </div>
 </footer>'''
 
-HEADER_RE = re.compile(r'<header class="site-header">.*?</header>', re.DOTALL)
+HEADER_RE = re.compile(
+    r'(?:<script>window\.MP_LANGS=.*?</script>\s*'
+    r'<script src="/lang-suggest\.js" defer></script>\s*)?'
+    r'<header class="site-header">.*?</header>',
+    re.DOTALL,
+)
 FOOTER_RE = re.compile(r'<footer class="site-footer">.*?</footer>', re.DOTALL)
 
 def main():
