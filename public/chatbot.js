@@ -29,6 +29,11 @@
       "General info, not personalized advice — verify at medicare.gov."
     );
     var log = el("div", "mp-chatbot-log");
+    var privacyNote = el(
+      "p",
+      "mp-chatbot-privacy-note",
+      "Don't include personal details like your name, SSN, or specific medical history."
+    );
     var form = el("form", "mp-chatbot-form");
     var input = el("input", "mp-chatbot-input");
     input.type = "text";
@@ -40,6 +45,7 @@
     form.appendChild(submit);
     panel.appendChild(disclaimer);
     panel.appendChild(log);
+    panel.appendChild(privacyNote);
     panel.appendChild(form);
     root.appendChild(panel);
     root.appendChild(toggle);

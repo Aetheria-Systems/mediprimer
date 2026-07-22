@@ -417,5 +417,6 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
 .mp-chatbot-msg-you { text-align: right; color: #333; }
 .mp-chatbot-msg-bot { text-align: left; color: #111; }
 .mp-chatbot-sources { font-size: 0.7rem; color: #777; margin: 0 0 0.5rem; }
+.mp-chatbot-privacy-note { font-size: 0.7rem; color: #a33; margin: 0 0 0.35rem; }
 .mp-chatbot-form { display: flex; gap: 0.25rem; }
 .mp-chatbot-input { flex: 1; }
