@@ -156,6 +156,31 @@ class TestProtect:
         tokens = re.findall(r'⟦P\d+⟧', protected)
         assert len(tokens) > 0
 
+    def test_protect_hides_input_min_max(self):
+        """min/max on <input type="number"> are numeric bounds, never
+        prose — protect() must vault them so a back-translation pass never
+        sees literal years leak through (root cause of a real turning-65.html
+        QA-gate failure: min="2024" max="2050" was un-vaulted)."""
+        main_html = '<input type="number" min="2024" max="2050" placeholder="2025">'
+
+        protected, vault = protect(main_html)
+
+        assert "2024" not in protected
+        assert "2050" not in protected
+        assert "2025" not in protected
+        assert restore(protected, vault) == main_html
+
+    def test_protect_translates_prose_placeholder(self):
+        """A placeholder with real text (not a bare number) must NOT be
+        vaulted — it needs to reach the translator, e.g. glossary.html's
+        search box placeholder."""
+        main_html = '<input type="search" placeholder="Search terms…">'
+
+        protected, vault = protect(main_html)
+
+        assert "Search terms" in protected, \
+            "prose placeholder text must remain translatable, not vaulted"
+
 
 class TestRetitle:
     """Test title and meta description replacement."""

@@ -38,6 +38,27 @@ class TestStructureOk:
         assert not ok, "Dropped tag should fail"
         assert "span" in reason.lower()
 
+    def test_structure_ok_same_tag_types_different_count_gives_useful_reason(self):
+        """Same set of tag types but a different count/order (e.g. an
+        extra repeated <strong>) previously produced an empty, useless
+        'Tag mismatch:' message (set-difference is blind to counts) — the
+        reason must now name which tag's count differs."""
+        en = """<html><body>
+<div><!--seo--></div>
+<p>One <strong>bold</strong> word.</p>
+<!--P:analytics-->
+</body></html>"""
+        tr = """<html><body>
+<div><!--seo--></div>
+<p>Two <strong>bold</strong> <strong>words</strong>.</p>
+<!--P:analytics-->
+</body></html>"""
+        ok, reason = structure_ok(en, tr)
+        assert not ok, "Different <strong> count should fail"
+        assert reason.strip() != "Tag mismatch:", \
+            "reason must not be the old empty/uninformative message"
+        assert "strong" in reason.lower()
+
     def test_structure_ok_href_multiset_must_match(self):
         """Changed external href fails."""
         en = """<html><body>
@@ -134,6 +155,20 @@ class TestFactsDiff:
         back = "The cost is $2.100 annually."
         numeric, entity = facts_diff(en, back)
         assert len(numeric) == 0, "Dollar with different grouping should normalize to same value"
+
+    def test_facts_diff_trailing_sentence_comma_not_part_of_amount(self):
+        """"$8,000, and your share..." — the comma right after the amount
+        belongs to the sentence, not the number. A naive greedy regex
+        swallows it into the match, producing a false mismatch against a
+        back-translation that (correctly) drops the redundant comma before
+        "and". Real bug found on costs.html: EN normalized to '8000,'
+        (trailing comma) while a faithful back-translation normalized to
+        '8000' (no comma) — pure punctuation artifact, not a value change."""
+        en = "The bill is $8,000, and your share would be $1,600."
+        back = "The bill is $8,000 and your share would be $1,600."
+        numeric, entity = facts_diff(en, back)
+        assert len(numeric) == 0, \
+            f"trailing sentence comma must not be treated as part of the amount: {numeric}"
 
     def test_facts_diff_ambiguity_edge_case_different_magnitudes(self):
         """$283 vs $283.000 should be flagged as different (283 vs 283000)."""
@@ -299,6 +334,22 @@ class TestGlossaryOk:
         ok, missing = glossary_ok(en_html, tr_html, terms)
         assert not ok, "Missing Medicaid translation should fail"
         assert "Medicaid" in missing
+
+    def test_glossary_ok_case_insensitive_midsentence(self):
+        """A correctly-lowercased mid-sentence use of the term must pass —
+        the glossary dict's capitalization is a display convention, not a
+        requirement; real Spanish prose lowercases common nouns
+        mid-sentence (e.g. 'cada reclamación precisa'). A prior
+        case-sensitive check rejected this as a real translation."""
+        en_html = """<html><body>
+<p>Each claim must be accurate to ensure proper payment.</p>
+</body></html>"""
+        tr_html = """<html><body>
+<p>Cada reclamación precisa asegura el pago correcto.</p>
+</body></html>"""
+        terms = {"Claim": "Reclamación"}
+        ok, missing = glossary_ok(en_html, tr_html, terms)
+        assert ok, f"Correctly-lowercased mid-sentence term should pass: {missing}"
 
 
 class TestRunGates:

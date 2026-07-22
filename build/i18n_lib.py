@@ -153,6 +153,27 @@ def protect(main_html):
 
     protected = re.sub(r'(href|src)=(["\']?)([^\s"\'>\]]+?)\2(?=\s|>)', replace_attr_value, protected)
 
+    # min/max on <input type="number"> etc. are always numeric bounds, never
+    # prose — protect unconditionally (unlike placeholder/aria-label, which
+    # often carry real translatable text, e.g. glossary.html's search box).
+    protected = re.sub(r'(min|max)=(["\']?)([^\s"\'>\]]+?)\2(?=\s|>)', replace_attr_value, protected)
+
+    # placeholder is usually prose (translate it), but a purely-numeric
+    # placeholder (e.g. a year-input's placeholder="2025") is a bound, not
+    # text — protect only that case so real placeholder text still gets
+    # translated.
+    def replace_numeric_placeholder(match):
+        attr_name, quote, attr_value = match.group(1), match.group(2), match.group(3)
+        if re.fullmatch(r'\d+', attr_value):
+            return replace_attr_value(match)
+        return match.group(0)
+
+    protected = re.sub(
+        r'(placeholder)=(["\']?)([^\s"\'>\]]+?)\2(?=\s|>)',
+        replace_numeric_placeholder,
+        protected,
+    )
+
     return (protected, vault)
 
 
