@@ -420,7 +420,7 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
   background: var(--brand); box-shadow: 0 6px 18px rgba(0,0,0,0.28); transform: translateY(-1px);
 }
 .mp-chatbot-toggle-icon { font-size: 1.1em; line-height: 1; }
-.mp-chatbot-panel { width: 320px; max-width: 90vw; max-height: 60vh; display: flex; flex-direction: column; background: #fff; border: 1px solid #ccc; border-radius: var(--radius); padding: 0.75rem; margin-bottom: 0.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.15); overflow: hidden; }
+.mp-chatbot-panel { width: 320px; max-width: 90vw; max-height: 60vh; display: flex; flex-direction: column; background: var(--surface, #fff); color: var(--ink, #111); border: 1px solid var(--border, #ccc); border-radius: var(--radius); padding: 0.75rem; margin-bottom: 0.5rem; box-shadow: 0 2px 10px rgba(0,0,0,0.15); overflow: hidden; }
 .mp-chatbot-header {
   display: flex; flex-direction: column; gap: 0.1rem;
   margin: -0.75rem -0.75rem 0.6rem; padding: 0.7rem 0.85rem;
@@ -428,12 +428,13 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
 }
 .mp-chatbot-header-title { font-weight: 800; font-size: 1rem; }
 .mp-chatbot-header-subtitle { font-size: 0.75rem; color: #cfe0ec; }
-.mp-chatbot-disclaimer { font-size: 0.75rem; color: #666; margin: 0 0 0.5rem; }
+.mp-chatbot-disclaimer { font-size: 0.75rem; color: var(--muted, #666); margin: 0 0 0.5rem; }
 .mp-chatbot-log { overflow-y: auto; flex: 1; margin-bottom: 0.5rem; }
 .mp-chatbot-msg { margin: 0.25rem 0; font-size: 0.9rem; }
-.mp-chatbot-msg-you { text-align: right; color: #333; }
-.mp-chatbot-msg-bot { text-align: left; color: #111; }
-.mp-chatbot-sources { font-size: 0.7rem; color: #777; margin: 0 0 0.5rem; }
-.mp-chatbot-privacy-note { font-size: 0.7rem; color: #a33; margin: 0 0 0.35rem; }
+.mp-chatbot-msg-you { text-align: right; color: var(--ink, #333); }
+.mp-chatbot-msg-bot { text-align: left; color: var(--ink, #111); }
+.mp-chatbot-sources { font-size: 0.7rem; color: var(--muted, #777); margin: 0 0 0.5rem; }
+.mp-chatbot-privacy-note { font-size: 0.7rem; color: #c0392b; margin: 0 0 0.35rem; }
 .mp-chatbot-form { display: flex; gap: 0.25rem; }
-.mp-chatbot-input { flex: 1; }
+.mp-chatbot-input { flex: 1; background: var(--surface, #fff); color: var(--ink, #111); border: 1px solid var(--border, #ccc); }
+.mp-chatbot-submit:disabled { opacity: 0.6; cursor: not-allowed; }
