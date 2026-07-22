@@ -1,12 +1,6 @@
 (function () {
   "use strict";
 
-  var QUIET_FLAG = "mp_bot";
-  var params = new URLSearchParams(window.location.search);
-  if (params.get(QUIET_FLAG) !== "1") {
-    return; // Task 9 flips this off once launch is confirmed good
-  }
-
   var history = [];
 
   function el(tag, className, text) {
