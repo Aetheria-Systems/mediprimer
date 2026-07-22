@@ -90,7 +90,31 @@ def split_page(html):
     }
 
 
-def protect(main_html):
+_ASSET_EXT_RE = re.compile(r'\.(css|js|xml|json|ico|png|jpe?g|svg|gif|webp|txt|pdf)(\?|#|$)', re.IGNORECASE)
+
+
+def localize_href(value, code):
+    """Prefix an internal page href with the language code.
+
+    Only rewrites site-relative links to HTML pages (starting with "/",
+    not "//"), skipping static assets (by extension), anchors/external/
+    mailto/tel links (they don't start with "/"), and values already
+    prefixed for this language.
+    """
+    if not code or code == "en":
+        return value
+    if not value.startswith("/") or value.startswith("//"):
+        return value
+    if _ASSET_EXT_RE.search(value):
+        return value
+    if value == f"/{code}" or value.startswith(f"/{code}/"):
+        return value
+    if value == "/":
+        return f"/{code}/"
+    return f"/{code}{value}"
+
+
+def protect(main_html, code=None):
     """Replace non-translatable content with vault tokens.
 
     Protects: <script>...</script>, <style>...</style>, HTML comments,
@@ -98,6 +122,10 @@ def protect(main_html):
 
     Args:
         main_html (str): HTML fragment to protect.
+        code (str, optional): Target language code. When given (and not
+            "en"), internal page hrefs are localized (see localize_href)
+            before being vaulted, so translated pages link to the
+            translated counterpart pages instead of the English originals.
 
     Returns:
         tuple: (protected_html, vault_dict) where vault maps token -> original value.
@@ -142,6 +170,8 @@ def protect(main_html):
         attr_name = match.group(1)
         quote = match.group(2)
         attr_value = match.group(3)
+        if attr_name == "href":
+            attr_value = localize_href(attr_value, code)
         token = f"⟦P{token_counter}⟧"
         vault[token] = attr_value
         token_counter += 1

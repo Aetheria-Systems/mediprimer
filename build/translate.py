@@ -272,7 +272,7 @@ def translate_page(page_name, code, force=False):
         return (False, f"Split error: {e}")
 
     # Step 2: Protect main
-    protected_main, vault = protect(segments["main"])
+    protected_main, vault = protect(segments["main"], code)
 
     # Extract title and description from head
     title_match = re.search(r'<title>([^<]+)</title>', segments["head"])

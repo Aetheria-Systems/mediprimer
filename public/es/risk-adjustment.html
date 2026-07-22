@@ -114,14 +114,14 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 
     <h2>El Propósito del Ajuste de Riesgo</h2>
     <p>El ajuste de riesgo es un mecanismo de pago que aborda un desafío fundamental del seguro por capitación: si a los planes se les paga la misma cantidad sin importar la salud de sus miembros, tienen un incentivo financiero para evitar inscribir o retener a los miembros más enfermos. El ajuste de riesgo evita esto al aumentar los pagos a los planes por los miembros con condiciones crónicas y necesidades médicas complejas.</p>
-    <p>En <a href="/medicare-advantage.html">Medicare Advantage</a>, los <a href="/marketplace.html">planes del Mercado de Seguros de ACA</a> y los programas de atención administrada de Medicaid, la capitación significa que el plan recibe un pago fijo por miembro por mes, aceptando el riesgo financiero total por la atención de ese miembro. Sin ajuste, ese pago fijo cubriría de forma insuficiente los costos de las poblaciones más enfermas; sin embargo, los planes aún podrían obtener ganancias atrayendo solo a los inscritos más saludables. El ajuste de riesgo inclina el pago hacia la necesidad médica, creando condiciones equitativas.</p>
+    <p>En <a href="/es/medicare-advantage.html">Medicare Advantage</a>, los <a href="/es/marketplace.html">planes del Mercado de Seguros de ACA</a> y los programas de atención administrada de Medicaid, la capitación significa que el plan recibe un pago fijo por miembro por mes, aceptando el riesgo financiero total por la atención de ese miembro. Sin ajuste, ese pago fijo cubriría de forma insuficiente los costos de las poblaciones más enfermas; sin embargo, los planes aún podrían obtener ganancias atrayendo solo a los inscritos más saludables. El ajuste de riesgo inclina el pago hacia la necesidad médica, creando condiciones equitativas.</p>
 
     <h2>El Modelo CMS-HCC: Del Diagnóstico a la Puntuación de Riesgo</h2>
     <p>Los Centros de Servicios de Medicare y Medicaid (CMS) usan el <strong>modelo de Categorías de Condiciones Jerárquicas (HCC)</strong> para medir el estado de salud de los miembros y calcular una <strong>puntuación de Factor de Ajuste de Riesgo (RAF)</strong>. Así es como funciona:</p>
     <ol class="steps">
       <li><strong>Recopilación de diagnósticos.</strong> Los proveedores presentan reclamaciones y registros de encuentros que contienen códigos de diagnóstico ICD-10 para cada miembro durante el Año de Beneficios (típicamente el año calendario para Medicare Advantage).
       <li><strong>Asignación a HCC.</strong> CMS asigna esos códigos de diagnóstico a HCC—agrupaciones clínicamente significativas que predicen los costos futuros de atención médica. Un código de diagnóstico puede corresponder a un HCC; varios códigos pueden corresponder al mismo HCC.
-      <li><strong>Aplicación de jerarquías.</strong> El modelo aplica jerarquías: si un miembro tiene tanto una forma menos grave como una más grave de una condición, solo se cuenta el HCC más grave. Por ejemplo, la diabetes sin complicaciones (HCC 19) se incorpora a la diabetes tipo 2 con complicaciones (HCC 18) si ambas están presentes; solo cuenta el HCC 18.
+      <li><strong>Aplicación de jerarquías.</strong> El modelo aplica jerarquías: si un miembro tiene tanto una forma menos grave como una más grave de una condición, solo se cuenta el HCC más grave. Por ejemplo, un diagnóstico menos grave de diabetes sin complicaciones se incorpora a un diagnóstico más grave de diabetes con complicaciones si ambos están presentes; solo cuenta el HCC más grave. (Los números específicos de HCC se reasignan cada vez que CMS recalibra el modelo, así que esta página describe el concepto en lugar de fijarlo a identificadores de una versión específica.)
       <li><strong>Cálculo del RAF.</strong> CMS asigna un peso de riesgo a cada HCC aplicable (por ejemplo, la insuficiencia cardíaca congestiva podría tener un peso de 0.45, lo que significa que agrega el 45% al pago base del miembro). El RAF es la suma de todos los pesos aplicables más un factor demográfico. Un RAF de 1.0 representa un riesgo promedio; 0.8 representa 20% por debajo del promedio; 1.2 representa 20% por encima del promedio.
       <li><strong>Ajuste del pago.</strong> El pago de capitación del plan se multiplica por el RAF. Un miembro con RAF de 1.2 genera un pago 20% más alto que un miembro con RAF de 1.0, reflejando costos esperados más altos.
     </ol>
@@ -155,7 +155,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <li><strong>Defectos de momento o documentación:</strong> El diagnóstico se registró, pero no durante un encuentro real dentro del año de beneficios, o la documentación es demasiado vaga para respaldar la conclusión clínica.
       <li><strong>Indicadores de fraude:</strong> Patrones que sugieren una sobrecodificación intencional o sistemática, como diagnósticos idénticos que aparecen en muchos miembros sin base clínica.
     </ul>
-    <p>Si los hallazgos de RADV indican un error sistémico o sobrecodificación, CMS puede ajustar el pago del plan de forma retroactiva o imponer sanciones. Por eso los planes invierten en <strong>auditorías de codificación concurrentes</strong> y <strong>programas de captura de encuentros</strong> para detectar y corregir errores antes de una auditoría externa, y en <strong>capacitación de proveedores</strong> para asegurar prácticas de documentación precisas. Consulte <a href="/policy-changes.html">Cambios de Políticas</a> para conocer las iniciativas actuales de RADV de CMS.</p>
+    <p>Si los hallazgos de RADV indican un error sistémico o sobrecodificación, CMS puede ajustar el pago del plan de forma retroactiva o imponer sanciones. Por eso los planes invierten en <strong>auditorías de codificación concurrentes</strong> y <strong>programas de captura de encuentros</strong> para detectar y corregir errores antes de una auditoría externa, y en <strong>capacitación de proveedores</strong> para asegurar prácticas de documentación precisas. Consulte <a href="/es/policy-changes.html">Cambios de Políticas</a> para conocer las iniciativas actuales de RADV de CMS.</p>
 
     <h2>La Línea Ética: Especificidad vs. Sobrecodificación</h2>
     <p>El límite entre la codificación precisa y la sobrecodificación indebida puede ser sutil. Así es como las organizaciones conscientes del cumplimiento lo manejan:</p>
@@ -176,9 +176,9 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     <h2>Temas Relacionados</h2>
     <p>El ajuste de riesgo se cruza con varias funciones profesionales. Vea también:</p>
     <ul>
-      <li><a href="/operations.html">Operaciones de Planes de Salud</a> — Cómo los planes organizan sus funciones clínicas y financieras.
-      <li><a href="/providers.html">Proveedores y Facturación</a> — Cómo los proveedores presentan encuentros y reclamaciones.
-      <li><a href="/star-ratings.html">Clasificación de Estrellas y Medición de Calidad</a> — Métricas relacionadas de CMS y sus fuentes de datos.
+      <li><a href="/es/operations.html">Operaciones de Planes de Salud</a> — Cómo los planes organizan sus funciones clínicas y financieras.
+      <li><a href="/es/providers.html">Proveedores y Facturación</a> — Cómo los proveedores presentan encuentros y reclamaciones.
+      <li><a href="/es/star-ratings.html">Clasificación de Estrellas y Medición de Calidad</a> — Métricas relacionadas de CMS y sus fuentes de datos.
       <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">Programa RADV de CMS</a> — Marco regulatorio oficial y procedimientos de auditoría.
     </ul>
 
@@ -286,7 +286,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
         </ul>
       </div>
     </div>
-<p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
     <nav class="legal-links">
       <a href="/es/privacy.html">Privacidad</a>
       <a href="/es/terms-of-use.html">Términos de uso</a>
