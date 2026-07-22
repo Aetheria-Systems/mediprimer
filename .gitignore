@@ -10,3 +10,4 @@ backups/
 .claude/
 __pycache__/
 .superpowers/
+.worktrees/
