@@ -20,15 +20,23 @@
       "og_locale": "es_US"
     },
     {
-      "code": "zh",
-      "name": "Chinese (Simplified)",
-      "native": "简体中文",
+      "code": "zh-Hant",
+      "name": "Chinese (Traditional)",
+      "native": "繁體中文",
       "tier": 2,
       "rtl": false,
       "launched": false,
       "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
-      "ui": {},
-      "og_locale": "zh_CN"
+      "ui": {
+        "switcher_label": "語言",
+        "note": "譯自英文原文。",
+        "note_english_link": "查看英文原版",
+        "note_official": "Medicare 官方多語言資料",
+        "tool_english": "此工具僅提供英文版本。",
+        "last_updated": "最後更新",
+        "banner": "您希望閱讀本頁的中文版本嗎？"
+      },
+      "og_locale": "zh_TW"
     },
     {
       "code": "vi",

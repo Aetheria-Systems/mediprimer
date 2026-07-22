@@ -90,6 +90,23 @@ class TestStructureOk:
         ok, reason = structure_ok(en, tr)
         assert ok, f"Internal href with /<code> prefix should pass: {reason}"
 
+    def test_structure_ok_internal_href_can_gain_hyphenated_prefix(self):
+        """Hyphenated/mixed-case language codes (e.g. zh-Hant) must also be
+        recognized as a valid internal href prefix, not just short
+        lowercase ISO 639 codes like es/vi/ko."""
+        en = """<html><body>
+<a href="/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        tr = """<html><body>
+<a href="/zh-Hant/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        ok, reason = structure_ok(en, tr)
+        assert ok, f"Internal href with hyphenated /zh-Hant/ prefix should pass: {reason}"
+
     def test_structure_ok_missing_seo_marker(self):
         """Missing <!--seo--> marker fails."""
         en = """<html><body>

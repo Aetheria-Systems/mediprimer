@@ -37,15 +37,18 @@ def _normalize_internal_href(href):
     if href.startswith('http://') or href.startswith('https://'):
         return href
 
-    # Internal hrefs: strip leading /<lang_code> prefix if present
+    # Internal hrefs: strip leading /<lang_code> prefix if present.
+    # Codes are 2-3 letter base tags, optionally with a script/region
+    # subtag (e.g. "es", "zh-Hant") -- BCP-47-ish, not just bare ISO 639.
+    LANG_CODE = r'[a-zA-Z]{2,3}(?:-[a-zA-Z]+)?'
     if href.startswith('/'):
         # Handle language home pages: /es/ -> /
-        match = re.match(r'^/([a-z]{2,3})/?$', href)
+        match = re.match(r'^/(' + LANG_CODE + r')/?$', href)
         if match:
             return '/'
 
-        # Match pattern /<1-3 letter code>/rest (e.g., /es/page.html -> /page.html)
-        match = re.match(r'^/([a-z]{2,3})/(.+)$', href)
+        # Match pattern /<code>/rest (e.g., /es/page.html -> /page.html)
+        match = re.match(r'^/(' + LANG_CODE + r')/(.+)$', href)
         if match:
             return '/' + match.group(2)
 

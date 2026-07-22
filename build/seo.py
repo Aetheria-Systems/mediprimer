@@ -61,9 +61,12 @@ FAQ = {
     ],
 }
 
-# Spanish translations of FAQ, keyed the same as FAQ. Used for FAQPage JSON-LD
-# on public/es/*.html pages so structured data matches inLanguage: es-US.
-FAQ_ES = {
+# Per-language translations of FAQ, keyed by lang_code then page name (same
+# keys as FAQ). Used for FAQPage JSON-LD on translated pages so structured
+# data matches each page's declared inLanguage.
+FAQ_TRANSLATIONS = {}
+
+FAQ_TRANSLATIONS["es"] = {
     "turning-65.html": [
         ("¿Cuándo puedo inscribirme en Medicare?",
          "Su Período de Inscripción Inicial es una ventana de 7 meses alrededor de su cumpleaños número 65: los 3 meses antes del mes de su cumpleaños, el mes de su cumpleaños, y los 3 meses después. Inscribirse dentro de esta ventana evita las penalizaciones por inscripción tardía."),
@@ -92,8 +95,37 @@ FAQ_ES = {
     ],
 }
 
+FAQ_TRANSLATIONS["zh-Hant"] = {
+    "turning-65.html": [
+        ("我什麼時候可以申請Medicare？",
+         "您的初始註冊期是圍繞您65歲生日的7個月期間：生日月份前的3個月、生日當月，以及之後的3個月。在此期間內申請可避免遲交註冊罰款。"),
+        ("如果我65歲時仍在工作，是否必須加入Medicare？",
+         "不一定。如果您有20名或以上員工的現職雇主提供的保險，您或許可以延遲加入B部分而不受罰款。退休人員保險、COBRA和VA福利都不能讓您安全地延遲加入B部分。"),
+        ("Medicare是家庭計劃嗎？",
+         "不是。Medicare是個人保險。您與配偶各自按照自己的時間表獲得各自的Medicare。"),
+    ],
+    "choosing-coverage.html": [
+        ("原始Medicare與Medicare Advantage有什麼區別？",
+         "兩者涵蓋相同的核心福利。原始Medicare讓您可以在幾乎無需事先核准的情況下就診任何接受Medicare的醫療提供者。Medicare Advantage使用網絡和預先授權，但通常會增加額外福利和每年自付費用上限。"),
+        ("我以後可以從Medicare Advantage轉回原始Medicare嗎？",
+         "您可以在特定期間內轉換，但之後購買Medigap補充保險可能需要醫療核保，並可能被拒保。這個「單向門」是您選擇前必須考慮的最重要因素。"),
+    ],
+    "planning-for-two.html": [
+        ("Medicare是否涵蓋我的配偶？",
+         "不。Medicare沒有家庭或配偶保險。每位配偶在自己65歲生日時獲得各自的Medicare，支付各自的保費，並選擇各自的計劃。較年輕的配偶在自己的Medicare開始之前需要其他保險。"),
+        ("配偶的收入是否會影響我的Medicare保費？",
+         "有可能。如果您與配偶合併報稅，社會安全局會使用您們兩年前的合併收入來設定每位配偶B部分和D部分保費的收入附加費（IRMAA）。如果您退休後收入下降，可以使用SSA-44表格要求社會安全局降低費用。"),
+    ],
+    "veterans-medicare.html": [
+        ("如果我有VA醫療保健，是否仍需要Medicare B部分？",
+         "VA醫療保健無法讓您在不受終身罰款的情況下延遲加入B部分，而B部分涵蓋VA以外的醫療照護。許多退伍軍人在65歲時加入B部分以保留此選擇；有些人則刻意跳過。請在您的註冊期間內審慎決定。"),
+        ("我可以使用VA藥房代替Medicare D部分嗎？",
+         "可以。VA藥物保險被視為合格承保，因此在使用VA藥房期間，您通常可以跳過D部分而不受罰款。"),
+    ],
+}
+
 # Translated "Home" breadcrumb label per language, for BreadcrumbList JSON-LD.
-BREADCRUMB_HOME = {"es": "Inicio"}
+BREADCRUMB_HOME = {"es": "Inicio", "zh-Hant": "首頁"}
 
 def field(html, pat):
     m = re.search(pat, html, re.DOTALL)
@@ -186,9 +218,9 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
                              "query-input": "required name=search_term_string"}}))
     if name in FAQ:
         if lang_code and lang_code != "en":
-            if name not in FAQ_ES:
-                raise SystemExit(f"seo.py: missing FAQ_ES translation for {name} (lang={lang_code})")
-            faq_pairs = FAQ_ES[name]
+            if lang_code not in FAQ_TRANSLATIONS or name not in FAQ_TRANSLATIONS[lang_code]:
+                raise SystemExit(f"seo.py: missing FAQ translation for {name} (lang={lang_code})")
+            faq_pairs = FAQ_TRANSLATIONS[lang_code][name]
         else:
             faq_pairs = FAQ[name]
         parts.append(ld({"@context": "https://schema.org", "@type": "FAQPage",
