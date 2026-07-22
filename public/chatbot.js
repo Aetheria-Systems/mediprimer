@@ -18,10 +18,22 @@
 
   function buildWidget() {
     var root = el("div", "mp-chatbot");
-    var toggle = el("button", "mp-chatbot-toggle", "Ask a question");
+    var toggle = el("button", "mp-chatbot-toggle");
+    toggle.innerHTML = '<span class="mp-chatbot-toggle-icon" aria-hidden="true">💬</span> MediBot';
     toggle.setAttribute("aria-expanded", "false");
     var panel = el("div", "mp-chatbot-panel");
     panel.style.display = "none";
+
+    var header = el("div", "mp-chatbot-header");
+    var headerTitle = el("span", "mp-chatbot-header-title");
+    headerTitle.innerHTML = '<span aria-hidden="true">💬</span> MediBot';
+    var headerSubtitle = el(
+      "span",
+      "mp-chatbot-header-subtitle",
+      "Your Medicare & Medicaid guide"
+    );
+    header.appendChild(headerTitle);
+    header.appendChild(headerSubtitle);
 
     var disclaimer = el(
       "p",
@@ -29,6 +41,8 @@
       "General info, not personalized advice — verify at medicare.gov."
     );
     var log = el("div", "mp-chatbot-log");
+    log.setAttribute("role", "log");
+    log.setAttribute("aria-live", "polite");
     var privacyNote = el(
       "p",
       "mp-chatbot-privacy-note",
@@ -38,11 +52,13 @@
     var input = el("input", "mp-chatbot-input");
     input.type = "text";
     input.placeholder = "Ask about Medicare or Medicaid…";
+    input.setAttribute("aria-label", "Ask MediBot a question");
     var submit = el("button", "mp-chatbot-submit", "Send");
     submit.type = "submit";
 
     form.appendChild(input);
     form.appendChild(submit);
+    panel.appendChild(header);
     panel.appendChild(disclaimer);
     panel.appendChild(log);
     panel.appendChild(privacyNote);
@@ -59,11 +75,15 @@
 
     form.addEventListener("submit", function (evt) {
       evt.preventDefault();
+      if (submit.disabled) return; // request already in flight
       var question = input.value.trim();
       if (!question) return;
       input.value = "";
       appendMessage(log, "you", question);
-      askBot(question, log);
+      submit.disabled = true;
+      askBot(question, log, function () {
+        submit.disabled = false;
+      });
     });
   }
 
@@ -73,7 +93,7 @@
     log.scrollTop = log.scrollHeight;
   }
 
-  function askBot(question, log) {
+  function askBot(question, log, onDone) {
     var pending = el("p", "mp-chatbot-msg mp-chatbot-msg-bot", "…");
     log.appendChild(pending);
 
@@ -117,7 +137,8 @@
       .catch(function () {
         pending.textContent =
           "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.";
-      });
+      })
+      .then(onDone, onDone); // runs after either branch above, success or failure
   }
 
   if (document.readyState === "loading") {
