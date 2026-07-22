@@ -232,8 +232,10 @@ def test_render_header_embeds_switcher():
     }
 
     result = render_header("es", "members", "turning-65.html", chrome, languages)
-    # Critical 1: Switcher must be embedded after brand anchor
-    assert 'class="lang-switch"' in result, f"Switcher not embedded in: {result}"
+    # Critical 1: Switcher must be embedded after brand anchor, as a dropdown
+    # (reusing the .navitem.has-menu/.menu-caret/.dropdown nav pattern)
+    assert 'lang-switch' in result, f"Switcher not embedded in: {result}"
+    assert 'class="menu-caret lang-switch-trigger"' in result, "Switcher trigger button missing"
     assert 'aria-current="page"' in result, "aria-current not in switcher"
 
 

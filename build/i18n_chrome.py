@@ -7,8 +7,15 @@ from i18n_lib import get_launched_codes
 
 
 def _esc(s):
-    """Escape ampersands for HTML."""
+    """Escape ampersands for HTML text content."""
     return s.replace("&", "&amp;")
+
+
+def _esc_attr(s):
+    """Escape a value for use inside a double-quoted HTML attribute.
+    Unlike _esc(), also escapes quotes so a translated label containing
+    a literal " can't break out of the attribute."""
+    return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 def _prefix_href(href, code):
@@ -27,11 +34,11 @@ def _prefix_href(href, code):
 
 def switcher_html(current_code, page_name, languages):
     """
-    Render language switcher dropdown.
+    Render language switcher as a dropdown, matching the site's existing
+    .navitem.has-menu / .menu-caret / .dropdown nav pattern so nav-menu.js's
+    generic toggle logic drives it with no JS changes.
 
     Returns empty string if no languages are launched.
-    Otherwise returns <div class="lang-switch"> with entries for English + launched languages,
-    each linking to counterpart URL for page_name, current language marked aria-current.
     Deterministic ordering: en first, then languages.json order.
     """
     launched = [lang for lang in languages.get("languages", []) if lang.get("launched", False)]
@@ -46,6 +53,8 @@ def switcher_html(current_code, page_name, languages):
     en_href = f"/{page_name}" if page_name != "index.html" else "/"
     en_current = ' aria-current="page"' if current_code == "en" else ""
     options.append(f'<a href="{en_href}" lang="en"{en_current}>English</a>')
+    current_native = "English"
+    switcher_label = "Language"
 
     # Other launched languages
     for lang in launched:
@@ -61,10 +70,17 @@ def switcher_html(current_code, page_name, languages):
         is_current = ' aria-current="page"' if current_code == code else ""
         options.append(f'<a href="{href}" lang="{code}"{is_current}>{_esc(native_name)}</a>')
 
-    # Join into dropdown
+        if current_code == code:
+            current_native = native_name
+            switcher_label = lang.get("ui", {}).get("switcher_label", "Language")
+
     links = "\n    ".join(options)
-    return f'''<div class="lang-switch">
+    trigger_label = f"{switcher_label}: {current_native}"
+    return f'''<div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="{_esc_attr(trigger_label)}"><span class="lang-switch-current">{_esc(current_native)}</span> ▾</button>
+    <div class="dropdown">
     {links}
+    </div>
   </div>'''
 
 
@@ -118,7 +134,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
             nav_items.append(
                 f'      <div class="navitem has-menu">\n'
                 f'        <a href="{prefixed_href}" class="navtop{active_class}">{_esc(translated_label)}</a>'
-                f'<button type="button" class="menu-caret" aria-expanded="false" aria-label="{_esc(menu_button_text)} {_esc(translated_label)}">▾</button>\n'
+                f'<button type="button" class="menu-caret" aria-expanded="false" aria-label="{_esc_attr(menu_button_text)} {_esc_attr(translated_label)}">▾</button>\n'
                 f'        <div class="dropdown">{menu_html}</div>\n'
                 f'      </div>'
             )
@@ -131,7 +147,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
 
     # Embed switcher after brand anchor
     switcher = switcher_html(code, page_name, languages)
-    switcher_html_str = f"\n    {switcher}" if switcher else ""
+    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
 
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
@@ -139,7 +155,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
                    f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
-                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc(menu_button_label)}">☰</button>\n'
+                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc_attr(menu_button_label)}">☰</button>\n'
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched

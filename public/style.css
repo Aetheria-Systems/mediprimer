@@ -366,22 +366,28 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
   .nav-toggle { display: inline-block; }
   nav.main { display: none; flex-direction: column; align-items: stretch; width: 100%; padding-bottom: 0.6rem; }
   nav.main.open { display: flex; }
-  .navitem { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; }
-  .navitem .navtop { flex: 1; }
-  .dropdown { position: static; min-width: 0; width: 100%; border: none; box-shadow: none;
+  /* Scoped to nav.main: the language switcher lives in the header bar
+     itself (outside nav.main, not hidden behind the hamburger), so it
+     must not inherit the full-width stacked layout meant for the
+     collapsible menu items below. */
+  nav.main .navitem { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; }
+  nav.main .navitem .navtop { flex: 1; }
+  nav.main .dropdown { position: static; min-width: 0; width: 100%; border: none; box-shadow: none;
     background: rgba(0,0,0,0.25); border-radius: 6px; margin: 0.2rem 0 0.4rem; }
   .menu-caret { font-size: 1rem; padding: 0.5rem 0.8rem; }
+  .lang-switch .dropdown { position: absolute; right: 0; left: auto; min-width: 180px; width: auto;
+    background: var(--brand-dark); border: 1px solid var(--accent); border-radius: 8px; box-shadow: 0 10px 28px rgba(0,0,0,0.4); }
 }
 
 /* ============================================================
-   Language switcher (header-embedded)
+   Language switcher (header-embedded dropdown)
+   Reuses .navitem/.has-menu/.menu-caret/.dropdown from the top-nav
+   dropdown pattern above, so nav-menu.js's generic toggle logic
+   drives it with no separate JS. Only switcher-specific styling here.
    ============================================================ */
-.lang-switch { display: flex; align-items: center; gap: 0; }
-.lang-switch a { display: inline-flex; align-items: center; justify-content: center;
-  padding: 0.6rem 0.7rem; color: #d5e3ef; font-size: 0.95rem; border-radius: 6px;
-  min-width: 44px; min-height: 44px; }
-.lang-switch a:hover { background: rgba(255,255,255,0.1); text-decoration: none; }
-.lang-switch a[aria-current="page"] { background: var(--accent); color: #fff; }
+.lang-switch-trigger { display: inline-flex; align-items: center; gap: 0.3rem; }
+.lang-switch-current { font-size: 0.95rem; }
+.dropdown a[aria-current="page"] { background: var(--accent); color: #fff; }
 /* RTL: switcher is still right-aligned in the header */
 [dir="rtl"] .lang-switch { direction: ltr; }
 
