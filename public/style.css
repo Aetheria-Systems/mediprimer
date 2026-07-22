@@ -49,7 +49,7 @@ img { max-width: 100%; }
   background: var(--brand-dark);
   border-bottom: 3px solid var(--accent);
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+.site-header .wrap { position: relative; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; padding-right: 8rem; }
 .brand { display: flex; align-items: center; gap: 0.6rem; color: #fff; font-weight: 700; font-size: 1.25rem; padding: 0.9rem 0; }
 .brand:hover { text-decoration: none; }
 .brand .mark { display: inline-flex; width: 32px; height: 32px; background: var(--accent); border-radius: 6px; align-items: center; justify-content: center; color: #fff; font-weight: 800; }
@@ -390,11 +390,21 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
    dropdown pattern above, so nav-menu.js's generic toggle logic
    drives it with no separate JS. Only switcher-specific styling here.
    ============================================================ */
+/* Pinned to the header's top-right corner, unconditionally, taken
+   completely out of the normal flex flow -- so its position never
+   depends on how much the nav wraps (longer translated nav labels
+   made the switcher land in a different spot per language when it
+   was a normal flex item). .site-header .wrap reserves space with
+   padding-right so nav content never runs underneath it. */
+.lang-switch { position: absolute; top: 0.5rem; right: 0; z-index: 10; }
 .lang-switch-trigger { display: inline-flex; align-items: center; gap: 0.3rem; }
 .lang-switch-current { font-size: 0.95rem; }
 .dropdown a[aria-current="page"] { background: var(--accent); color: #fff; }
 /* RTL: switcher is still right-aligned in the header */
 [dir="rtl"] .lang-switch { direction: ltr; }
+@media (max-width: 720px) {
+  .lang-switch { top: 0.5rem; right: 3.5rem; }
+}
 
 /* ============================================================
    Language suggestion banner (top strip)

@@ -127,16 +127,17 @@ def header(active_key, page_name):
             items.append('      <a href="%s" class="navtop%s">%s</a>' % (href, active, _esc(label)))
     nav = "\n".join(items)
     switcher = switcher_html("en", page_name, LANGUAGES)
-    switcher_html_str = f"    <!--switcher-->{switcher}<!--/switcher-->\n" if switcher else ""
-    # switcher + nav-toggle + nav.main are grouped in .header-controls so they
-    # wrap as one unit relative to the brand, instead of each being an
-    # independent flex item subject to justify-content: space-between --
-    # which made the switcher's position shift depending on how much nav
-    # text happened to fit per line (longer translated labels reflow
-    # differently than English, moving the switcher to a different edge).
+    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
+    # nav-toggle + nav.main are grouped in .header-controls so they wrap as
+    # one unit relative to the brand. The switcher is pinned absolutely to
+    # the header's top-right corner (see .lang-switch in style.css) --
+    # deliberately taken out of flex flow entirely, so its position can
+    # never depend on how much the nav wraps (longer translated nav labels
+    # reflow differently than English, which is what made the switcher land
+    # in a different spot per language when it was a normal flex item).
     header_html = ('<header class="site-header">\n  <div class="wrap">\n'
-                   '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>\n'
-                   '    <div class="header-controls">\n' + switcher_html_str +
+                   '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
+                   '    <div class="header-controls">\n'
                    '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
                    '    <nav class="main">\n' + nav + '\n    </nav>\n    </div>\n  </div>\n</header>')
 
