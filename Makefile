@@ -17,6 +17,7 @@ check: build
 	python3 build/readability.py
 	@python3 build/readability.py | grep -q 'Over target (grade > 9.5): 0' \
 		|| { echo 'FAIL: member pages over plain-language target (grade > 9.5)'; exit 1; }
+	python3 build/check_chatbot_injected.py
 
 deploy: check
 	python3 build/factdiff.py
