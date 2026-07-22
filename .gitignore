@@ -2,6 +2,7 @@
 update/
 marketing/
 seo/
+kb/
 build/.indexnow-key
 *.log
 *.tgz
