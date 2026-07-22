@@ -5,8 +5,8 @@ import re, os, glob, json
 from i18n_chrome import switcher_html
 from i18n_lib import get_launched_codes
 
-PUB = "/home/deltaprism/mediprimer/public"
 BUILD_DIR = os.path.dirname(__file__)
+PUB = os.path.join(os.path.dirname(BUILD_DIR), "public")
 
 # Load languages to determine which are launched
 LANGUAGES = json.load(open(os.path.join(BUILD_DIR, "languages.json"), encoding="utf-8"))
@@ -240,6 +240,9 @@ for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
     # Nav dropdown/mobile behavior — on every page (nav is everywhere).
     if "nav-menu.js" not in out:
         out = out.replace("</body>", '<script src="/nav-menu.js"></script>\n</body>', 1)
+    # Help bot chat widget (gated behind ?mp_bot=1 query param for pre-launch testing).
+    if "chatbot.js" not in out:
+        out = out.replace("</body>", '<script src="/chatbot.js" defer></script>\n</body>', 1)
     if out != src:
         open(path, "w", encoding="utf-8").write(out); changed.append(name)
 
