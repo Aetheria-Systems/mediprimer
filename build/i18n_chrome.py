@@ -179,6 +179,14 @@ def render_header(code, active_key, page_name, chrome, languages=None):
                     )
                 langs_dict[code] = banner_text
 
+        # This page's own language is never in `languages` (English is the
+        # implicit default, not a languages.json entry), so an English-
+        # browser visitor here would never get a switch-to-English prompt
+        # without this. lang-suggest.js's root-level-URL handling for "en"
+        # depends on this key only ever being added on non-English pages.
+        if code != "en":
+            langs_dict["en"] = "Would you like to read this page in English?"
+
         langs_json = json.dumps(langs_dict, ensure_ascii=False)
         header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
                        f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
