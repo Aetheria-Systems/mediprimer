@@ -3,7 +3,7 @@
 
   var QUIET_FLAG = "mp_bot";
   var params = new URLSearchParams(window.location.search);
-  if (!params.has(QUIET_FLAG)) {
+  if (params.get(QUIET_FLAG) !== "1") {
     return; // Task 9 flips this off once launch is confirmed good
   }
 
@@ -19,6 +19,7 @@
   function buildWidget() {
     var root = el("div", "mp-chatbot");
     var toggle = el("button", "mp-chatbot-toggle", "Ask a question");
+    toggle.setAttribute("aria-expanded", "false");
     var panel = el("div", "mp-chatbot-panel");
     panel.style.display = "none";
 
@@ -45,7 +46,9 @@
     document.body.appendChild(root);
 
     toggle.addEventListener("click", function () {
-      panel.style.display = panel.style.display === "none" ? "block" : "none";
+      var isOpen = panel.style.display !== "none";
+      panel.style.display = isOpen ? "none" : "flex";
+      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
     });
 
     form.addEventListener("submit", function (evt) {
@@ -82,13 +85,25 @@
         if (data.sources && data.sources.length) {
           var srcLine = el("p", "mp-chatbot-sources");
           data.sources.forEach(function (url, i) {
-            if (i > 0) srcLine.appendChild(document.createTextNode(" · "));
+            try {
+              var parsedUrl = new URL(url);
+              if (parsedUrl.protocol !== "https:") {
+                return; // Skip non-https URLs; don't render a link
+              }
+            } catch (e) {
+              return; // Skip malformed URLs
+            }
+            if (i > 0 && srcLine.childNodes.length > 0) {
+              srcLine.appendChild(document.createTextNode(" · "));
+            }
             var a = el("a", null, url.replace("https://", ""));
             a.href = url;
             a.rel = "noopener";
             srcLine.appendChild(a);
           });
-          pending.parentNode.insertBefore(srcLine, pending.nextSibling);
+          if (srcLine.childNodes.length > 0) {
+            pending.parentNode.insertBefore(srcLine, pending.nextSibling);
+          }
         }
         history.push({ role: "user", content: question });
         history.push({ role: "assistant", content: data.answer });

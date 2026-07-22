@@ -241,7 +241,7 @@ for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
     if "nav-menu.js" not in out:
         out = out.replace("</body>", '<script src="/nav-menu.js"></script>\n</body>', 1)
     # Help bot chat widget (gated behind ?mp_bot=1 query param for pre-launch testing).
-    if "chatbot.js" not in out:
+    if not re.search(r'<script[^>]+src="/chatbot\.js"', out):
         out = out.replace("</body>", '<script src="/chatbot.js" defer></script>\n</body>', 1)
     if out != src:
         open(path, "w", encoding="utf-8").write(out); changed.append(name)

@@ -1,6 +1,7 @@
 """make check gate: every public page must include the chat widget script."""
 import glob
 import pathlib
+import re
 import sys
 
 PUB = pathlib.Path(__file__).parent.parent / "public"
@@ -8,7 +9,7 @@ PUB = pathlib.Path(__file__).parent.parent / "public"
 missing = []
 for path in sorted(glob.glob(str(PUB / "*.html"))):
     src = pathlib.Path(path).read_text(encoding="utf-8")
-    if "chatbot.js" not in src:
+    if not re.search(r'<script[^>]+src="/chatbot\.js"', src):
         missing.append(pathlib.Path(path).name)
 
 if missing:
