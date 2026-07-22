@@ -3,7 +3,7 @@
 any previously-assembled block after it) with the current partials/<name>.html.
 Idempotent: safe to re-run. Define a shared component once; it propagates."""
 import re, os, glob
-PUB = "/home/deltaprism/mediprimer/public"
+PUB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public")
 PART = os.path.join(os.path.dirname(__file__), "partials")
 
 partials = {}

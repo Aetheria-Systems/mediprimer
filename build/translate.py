@@ -32,8 +32,8 @@ from i18n_qa import run_gates
 from seo import content_hash
 from normalize import ACTIVE
 
-PUB = "/home/deltaprism/mediprimer/public"
 BUILD_DIR = os.path.dirname(os.path.abspath(__file__))
+PUB = os.path.join(os.path.dirname(BUILD_DIR), "public")
 STATE_FILE = os.path.join(BUILD_DIR, "translation-state.json")
 
 # Load languages config

@@ -127,7 +127,7 @@ def header(active_key, page_name):
             items.append('      <a href="%s" class="navtop%s">%s</a>' % (href, active, _esc(label)))
     nav = "\n".join(items)
     switcher = switcher_html("en", page_name, LANGUAGES)
-    switcher_html_str = f"\n    {switcher}" if switcher else ""
+    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
     header_html = ('<header class="site-header">\n  <div class="wrap">\n'
                    '    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>' + switcher_html_str + '\n'
                    '    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
@@ -223,30 +223,34 @@ FOOTER = '''<footer class="site-footer">
 HEADER_RE = re.compile(r'<header class="site-header">.*?</header>', re.DOTALL)
 FOOTER_RE = re.compile(r'<footer class="site-footer">.*?</footer>', re.DOTALL)
 
-changed, skipped = [], []
-for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
-    name = os.path.basename(path)
-    if name not in ACTIVE:
-        skipped.append(name + " (NOT IN MAP)"); continue
-    src = open(path, encoding="utf-8").read()
-    if not HEADER_RE.search(src) or not FOOTER_RE.search(src):
-        skipped.append(name + " (missing header/footer)"); continue
-    out = HEADER_RE.sub(lambda m: header(ACTIVE[name], name), src, count=1)
-    out = FOOTER_RE.sub(lambda m: FOOTER, out, count=1)
-    # Inject the site-wide glossary-tooltip script (single source of definitions),
-    # everywhere except the glossary page itself.
-    if name != "glossary.html" and "glossary-tooltips.js" not in out:
-        out = out.replace("</body>", '<script src="/glossary-tooltips.js"></script>\n</body>', 1)
-    # Nav dropdown/mobile behavior — on every page (nav is everywhere).
-    if "nav-menu.js" not in out:
-        out = out.replace("</body>", '<script src="/nav-menu.js"></script>\n</body>', 1)
-    # Help bot chat widget (gated behind ?mp_bot=1 query param for pre-launch testing).
-    if not re.search(r'<script[^>]+src="/chatbot\.js"', out):
-        out = out.replace("</body>", '<script src="/chatbot.js" defer></script>\n</body>', 1)
-    if out != src:
-        open(path, "w", encoding="utf-8").write(out); changed.append(name)
+def main():
+    changed, skipped = [], []
+    for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
+        name = os.path.basename(path)
+        if name not in ACTIVE:
+            skipped.append(name + " (NOT IN MAP)"); continue
+        src = open(path, encoding="utf-8").read()
+        if not HEADER_RE.search(src) or not FOOTER_RE.search(src):
+            skipped.append(name + " (missing header/footer)"); continue
+        out = HEADER_RE.sub(lambda m: header(ACTIVE[name], name), src, count=1)
+        out = FOOTER_RE.sub(lambda m: FOOTER, out, count=1)
+        # Inject the site-wide glossary-tooltip script (single source of definitions),
+        # everywhere except the glossary page itself.
+        if name != "glossary.html" and "glossary-tooltips.js" not in out:
+            out = out.replace("</body>", '<script src="/glossary-tooltips.js"></script>\n</body>', 1)
+        # Nav dropdown/mobile behavior — on every page (nav is everywhere).
+        if "nav-menu.js" not in out:
+            out = out.replace("</body>", '<script src="/nav-menu.js"></script>\n</body>', 1)
+        # Help bot chat widget (gated behind ?mp_bot=1 query param for pre-launch testing).
+        if not re.search(r'<script[^>]+src="/chatbot\.js"', out):
+            out = out.replace("</body>", '<script src="/chatbot.js" defer></script>\n</body>', 1)
+        if out != src:
+            open(path, "w", encoding="utf-8").write(out); changed.append(name)
 
-print("CHANGED:", len(changed))
-if skipped:
-    print("SKIPPED/PROBLEM:")
-    for s in skipped: print("  ", s)
+    print("CHANGED:", len(changed))
+    if skipped:
+        print("SKIPPED/PROBLEM:")
+        for s in skipped: print("  ", s)
+
+if __name__ == "__main__":
+    main()

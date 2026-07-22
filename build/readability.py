@@ -6,7 +6,7 @@ Target for member content: grade <= ~9, ease >= ~55 (plain)."""
 import re, glob, os, sys
 
 PUB = sys.argv[1] if len(sys.argv) > 1 and not sys.argv[1].startswith("-") \
-      else "/home/deltaprism/mediprimer/public"
+      else os.path.join(os.path.dirname(os.path.dirname(__file__)), "public")
 SHOW_ALL = "--all" in sys.argv
 
 # Pages that are member-facing (held to the plain-language target).
