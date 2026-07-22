@@ -372,7 +372,7 @@ ul.checklist li::before { content: ""; position: absolute; left: 0; top: 0.5rem;
      collapsible menu items below. */
   nav.main .navitem { display: flex; flex-wrap: wrap; justify-content: space-between; width: 100%; }
   nav.main .navitem .navtop { flex: 1; }
-  .dropdown { position: static; min-width: 0; width: 100%; border: none; box-shadow: none;
+  nav.main .dropdown { position: static; min-width: 0; width: 100%; border: none; box-shadow: none;
     background: rgba(0,0,0,0.25); border-radius: 6px; margin: 0.2rem 0 0.4rem; }
   .menu-caret { font-size: 1rem; padding: 0.5rem 0.8rem; }
   .lang-switch .dropdown { position: absolute; right: 0; left: auto; min-width: 180px; width: auto;

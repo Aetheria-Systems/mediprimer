@@ -7,8 +7,15 @@ from i18n_lib import get_launched_codes
 
 
 def _esc(s):
-    """Escape ampersands for HTML."""
+    """Escape ampersands for HTML text content."""
     return s.replace("&", "&amp;")
+
+
+def _esc_attr(s):
+    """Escape a value for use inside a double-quoted HTML attribute.
+    Unlike _esc(), also escapes quotes so a translated label containing
+    a literal " can't break out of the attribute."""
+    return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
 
 
 def _prefix_href(href, code):
@@ -70,7 +77,7 @@ def switcher_html(current_code, page_name, languages):
     links = "\n    ".join(options)
     trigger_label = f"{switcher_label}: {current_native}"
     return f'''<div class="navitem has-menu lang-switch">
-    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="{_esc(trigger_label)}"><span class="lang-switch-current">{_esc(current_native)}</span> ▾</button>
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="{_esc_attr(trigger_label)}"><span class="lang-switch-current">{_esc(current_native)}</span> ▾</button>
     <div class="dropdown">
     {links}
     </div>
@@ -127,7 +134,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
             nav_items.append(
                 f'      <div class="navitem has-menu">\n'
                 f'        <a href="{prefixed_href}" class="navtop{active_class}">{_esc(translated_label)}</a>'
-                f'<button type="button" class="menu-caret" aria-expanded="false" aria-label="{_esc(menu_button_text)} {_esc(translated_label)}">▾</button>\n'
+                f'<button type="button" class="menu-caret" aria-expanded="false" aria-label="{_esc_attr(menu_button_text)} {_esc_attr(translated_label)}">▾</button>\n'
                 f'        <div class="dropdown">{menu_html}</div>\n'
                 f'      </div>'
             )
@@ -148,7 +155,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
                    f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
-                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc(menu_button_label)}">☰</button>\n'
+                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc_attr(menu_button_label)}">☰</button>\n'
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
