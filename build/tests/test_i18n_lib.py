@@ -147,7 +147,7 @@ class TestProtect:
         """Internal page links get the language prefix so translated pages
         link to translated counterparts, not the English originals."""
         main_html = '<a href="/costs.html">costs</a>'
-        protected, vault = protect(main_html, "es")
+        _protected, vault = protect(main_html, "es")
         vault_values = " ".join(str(v) for v in vault.values())
         assert "/es/costs.html" in vault_values
         assert vault_values.count("/costs.html") == 1, \
@@ -156,7 +156,7 @@ class TestProtect:
     def test_protect_does_not_localize_hrefs_without_code(self):
         """Backward compatible: no code arg means no href rewriting."""
         main_html = '<a href="/costs.html">costs</a>'
-        protected, vault = protect(main_html)
+        _protected, vault = protect(main_html)
         vault_values = " ".join(str(v) for v in vault.values())
         assert "/costs.html" in vault_values
         assert "/es/costs.html" not in vault_values
@@ -164,7 +164,7 @@ class TestProtect:
     def test_protect_does_not_localize_asset_hrefs(self):
         """Stylesheet/script/etc hrefs must not gain a language prefix."""
         main_html = '<a href="/sitemap.xml">sitemap</a><a href="/style.css">style</a>'
-        protected, vault = protect(main_html, "es")
+        _protected, vault = protect(main_html, "es")
         vault_values = " ".join(str(v) for v in vault.values())
         assert "/sitemap.xml" in vault_values
         assert "/style.css" in vault_values
@@ -175,7 +175,7 @@ class TestProtect:
         main_html = ('<a href="https://www.medicare.gov/">gov</a>'
                      '<a href="#section">anchor</a>'
                      '<a href="mailto:a@b.com">mail</a>')
-        protected, vault = protect(main_html, "es")
+        _protected, vault = protect(main_html, "es")
         vault_values = " ".join(str(v) for v in vault.values())
         assert "https://www.medicare.gov/" in vault_values
         assert "#section" in vault_values

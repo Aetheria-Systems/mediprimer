@@ -92,6 +92,9 @@ FAQ_ES = {
     ],
 }
 
+# Translated "Home" breadcrumb label per language, for BreadcrumbList JSON-LD.
+BREADCRUMB_HOME = {"es": "Inicio"}
+
 def field(html, pat):
     m = re.search(pat, html, re.DOTALL)
     return re.sub(r'\s+', ' ', m.group(1)).strip() if m else ""
@@ -220,9 +223,17 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
             parts.append(alt_str)
 
     if name != "index.html":
+        if lang_code and lang_code != "en":
+            if lang_code not in BREADCRUMB_HOME:
+                raise SystemExit(f"seo.py: missing BREADCRUMB_HOME translation for lang={lang_code}")
+            home_name = BREADCRUMB_HOME[lang_code]
+            home_url = BASE + "/" + lang_code + "/"
+        else:
+            home_name = "Home"
+            home_url = BASE + "/"
         parts.append(ld({"@context": "https://schema.org", "@type": "BreadcrumbList",
                          "itemListElement": [
-                             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+                             {"@type": "ListItem", "position": 1, "name": home_name, "item": home_url},
                              {"@type": "ListItem", "position": 2, "name": clean, "item": url}]}))
     parts.append('<!--/seo-->')
     return "\n".join(parts)

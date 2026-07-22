@@ -136,9 +136,10 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
 
+    menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
                    f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
-                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
+                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc(menu_button_label)}">☰</button>\n'
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
