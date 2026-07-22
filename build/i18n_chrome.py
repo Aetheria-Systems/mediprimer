@@ -27,11 +27,11 @@ def _prefix_href(href, code):
 
 def switcher_html(current_code, page_name, languages):
     """
-    Render language switcher dropdown.
+    Render language switcher as a dropdown, matching the site's existing
+    .navitem.has-menu / .menu-caret / .dropdown nav pattern so nav-menu.js's
+    generic toggle logic drives it with no JS changes.
 
     Returns empty string if no languages are launched.
-    Otherwise returns <div class="lang-switch"> with entries for English + launched languages,
-    each linking to counterpart URL for page_name, current language marked aria-current.
     Deterministic ordering: en first, then languages.json order.
     """
     launched = [lang for lang in languages.get("languages", []) if lang.get("launched", False)]
@@ -46,6 +46,8 @@ def switcher_html(current_code, page_name, languages):
     en_href = f"/{page_name}" if page_name != "index.html" else "/"
     en_current = ' aria-current="page"' if current_code == "en" else ""
     options.append(f'<a href="{en_href}" lang="en"{en_current}>English</a>')
+    current_native = "English"
+    switcher_label = "Language"
 
     # Other launched languages
     for lang in launched:
@@ -61,10 +63,17 @@ def switcher_html(current_code, page_name, languages):
         is_current = ' aria-current="page"' if current_code == code else ""
         options.append(f'<a href="{href}" lang="{code}"{is_current}>{_esc(native_name)}</a>')
 
-    # Join into dropdown
+        if current_code == code:
+            current_native = native_name
+            switcher_label = lang.get("ui", {}).get("switcher_label", "Language")
+
     links = "\n    ".join(options)
-    return f'''<div class="lang-switch">
+    trigger_label = f"{switcher_label}: {current_native}"
+    return f'''<div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="{_esc(trigger_label)}"><span class="lang-switch-current">{_esc(current_native)}</span> ▾</button>
+    <div class="dropdown">
     {links}
+    </div>
   </div>'''
 
 
@@ -131,7 +140,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
 
     # Embed switcher after brand anchor
     switcher = switcher_html(code, page_name, languages)
-    switcher_html_str = f"\n    {switcher}" if switcher else ""
+    switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
 
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
