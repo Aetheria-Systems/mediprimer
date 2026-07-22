@@ -6,7 +6,7 @@ that were ADDED or REMOVED. Added program names/numbers are the top risk."""
 import re, os
 
 OLD = "/var/www/mediprimer/public"
-NEW = "/home/deltaprism/mediprimer/public"
+NEW = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public")
 
 PAGES = """medicaid-eligibility disability-medicare medicare-part-b medicare-advantage
 marketplace medicare-part-a dual-eligible medigap caregivers edge-cases enrollment

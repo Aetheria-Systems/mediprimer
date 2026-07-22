@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ajuste de Riesgo y Codificación HCC — MediPrimer</title>
+<meta name="description" content="Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de sus miembros mediante la codificación de diagnósticos y las puntuaciones de riesgo.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/risk-adjustment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Ajuste de Riesgo y Codificación HCC — MediPrimer">
+<meta property="og:description" content="Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de sus miembros mediante la codificación de diagnósticos y las puntuaciones de riesgo.">
+<meta property="og:url" content="https://mediprimer.org/es/risk-adjustment.html">
+<meta property="og:locale" content="es_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajuste de Riesgo y Codificación HCC — MediPrimer">
+<meta name="twitter:description" content="Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de sus miembros mediante la codificación de diagnósticos y las puntuaciones de riesgo.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Ajuste de Riesgo y Codificación HCC", "description": "Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de sus miembros mediante la codificación de diagnósticos y las puntuaciones de riesgo.", "url": "https://mediprimer.org/es/risk-adjustment.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Ajuste de Riesgo y Codificación HCC", "item": "https://mediprimer.org/es/risk-adjustment.html"}]}</script>
+<!--/seo-->
+</head>
+<body><header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop active">Para profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Profesionales</p>
+    <h1>Ajuste de Riesgo y Codificación HCC</h1>
+    <p>Cómo se paga a los planes según el estado de salud de sus miembros, y el papel de la documentación precisa de los diagnósticos.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>El Propósito del Ajuste de Riesgo</h2>
+    <p>El ajuste de riesgo es un mecanismo de pago que aborda un desafío fundamental del seguro por capitación: si a los planes se les paga la misma cantidad sin importar la salud de sus miembros, tienen un incentivo financiero para evitar inscribir o retener a los miembros más enfermos. El ajuste de riesgo evita esto al aumentar los pagos a los planes por los miembros con condiciones crónicas y necesidades médicas complejas.</p>
+    <p>En <a href="/es/medicare-advantage.html">Medicare Advantage</a>, los <a href="/es/marketplace.html">planes del Mercado de Seguros de ACA</a> y los programas de atención administrada de Medicaid, la capitación significa que el plan recibe un pago fijo por miembro por mes, aceptando el riesgo financiero total por la atención de ese miembro. Sin ajuste, ese pago fijo cubriría de forma insuficiente los costos de las poblaciones más enfermas; sin embargo, los planes aún podrían obtener ganancias atrayendo solo a los inscritos más saludables. El ajuste de riesgo inclina el pago hacia la necesidad médica, creando condiciones equitativas.</p>
+
+    <h2>El Modelo CMS-HCC: Del Diagnóstico a la Puntuación de Riesgo</h2>
+    <p>Los Centros de Servicios de Medicare y Medicaid (CMS) usan el <strong>modelo de Categorías de Condiciones Jerárquicas (HCC)</strong> para medir el estado de salud de los miembros y calcular una <strong>puntuación de Factor de Ajuste de Riesgo (RAF)</strong>. Así es como funciona:</p>
+    <ol class="steps">
+      <li><strong>Recopilación de diagnósticos.</strong> Los proveedores presentan reclamaciones y registros de encuentros que contienen códigos de diagnóstico ICD-10 para cada miembro durante el Año de Beneficios (típicamente el año calendario para Medicare Advantage).
+      <li><strong>Asignación a HCC.</strong> CMS asigna esos códigos de diagnóstico a HCC—agrupaciones clínicamente significativas que predicen los costos futuros de atención médica. Un código de diagnóstico puede corresponder a un HCC; varios códigos pueden corresponder al mismo HCC.
+      <li><strong>Aplicación de jerarquías.</strong> El modelo aplica jerarquías: si un miembro tiene tanto una forma menos grave como una más grave de una condición, solo se cuenta el HCC más grave. Por ejemplo, un diagnóstico menos grave de diabetes sin complicaciones se incorpora a un diagnóstico más grave de diabetes con complicaciones si ambos están presentes; solo cuenta el HCC más grave. (Los números específicos de HCC se reasignan cada vez que CMS recalibra el modelo, así que esta página describe el concepto en lugar de fijarlo a identificadores de una versión específica.)
+      <li><strong>Cálculo del RAF.</strong> CMS asigna un peso de riesgo a cada HCC aplicable (por ejemplo, la insuficiencia cardíaca congestiva podría tener un peso de 0.45, lo que significa que agrega el 45% al pago base del miembro). El RAF es la suma de todos los pesos aplicables más un factor demográfico. Un RAF de 1.0 representa un riesgo promedio; 0.8 representa 20% por debajo del promedio; 1.2 representa 20% por encima del promedio.
+      <li><strong>Ajuste del pago.</strong> El pago de capitación del plan se multiplica por el RAF. Un miembro con RAF de 1.2 genera un pago 20% más alto que un miembro con RAF de 1.0, reflejando costos esperados más altos.
+    </ol>
+    <p>CMS recalibra el modelo HCC cada año con base en los datos de reclamaciones y encuentros, y los códigos de diagnóstico capturados determinan el RAF. La captura precisa y oportuna de los diagnósticos es, por lo tanto, central para un pago apropiado y la sostenibilidad del plan.</p>
+
+    <h2>Documentación y Cumplimiento: MEAT/TAMPER a Nivel de Concepto</h2>
+    <p>Para asegurar que la codificación HCC sea precisa, los proveedores y los planes siguen estándares de documentación a menudo abreviados como MEAT (para la documentación del médico) y TAMPER (para la verificación del auditor y del plan). Aunque estas siglas son listas de verificación, el principio subyacente es sencillo:</p>
+    <ul>
+      <li><strong>Respaldo en el expediente médico.</strong> Cada diagnóstico codificado debe estar claramente documentado en el expediente médico del miembro—notas de visitas, resultados de pruebas, informes de imágenes, listas de medicamentos o resúmenes de evaluación—creado por el proveedor tratante durante el encuentro clínico o poco después.
+      <li><strong>Especificidad.</strong> La documentación debe respaldar el diagnóstico más específico y preciso. La especificidad importa porque los diagnósticos más específicos a menudo corresponden a HCC más precisos. Por ejemplo, "diabetes tipo 2 con enfermedad renal crónica en etapa 2" es más específico y puede corresponder a un HCC diferente que "diabetes no especificada".
+      <li><strong>Momento del encuentro.</strong> El diagnóstico debe documentarse durante el año de beneficios en cuestión. Un diagnóstico documentado el 5 de enero de 2024 cuenta para el pago de 2024; uno documentado el 2 de enero de 2025 cuenta para 2025. Los datos de encuentros (reclamaciones y visitas presenciales) capturan estos diagnósticos.
+      <li><strong>Validez clínica.</strong> La codificación debe reflejar el estado clínico real del miembro. Un diagnóstico debe estar bajo manejo activo, mencionado en la evaluación o el plan, o respaldado por hallazgos objetivos—no listado de manera especulativa ni basado únicamente en antecedentes pasados.
+    </ul>
+    <p>Los datos de encuentros—tanto las reclamaciones (institucionales y profesionales) como la documentación suplementaria—alimentan el modelo HCC. Los encuentros precisos aseguran HCC precisos y un cálculo apropiado del RAF.</p>
+
+    <h2>Modelos de Pago y Conciliación Anual</h2>
+    <p>CMS calcula las puntuaciones RAF y determina los pagos a los planes por adelantado, con base en los diagnósticos capturados en las reclamaciones del año anterior. Por ejemplo, los diagnósticos presentados en 2023 informan el pago de 2024. Durante el año de beneficios, los planes y los proveedores continúan documentando; estos diagnósticos de 2024 informarán el pago de 2025.</p>
+    <p>Esta estructura crea varias dinámicas importantes:</p>
+    <ul>
+      <li><strong>Desfase y conciliación.</strong> Los planes reciben un pago prospectivo basado en los perfiles de riesgo del año anterior, y luego presentan los datos de encuentros del año en curso sabiendo que afectarán el pago de años futuros. CMS puede conciliar los pagos de años anteriores si las auditorías de datos revelan errores de codificación.
+      <li><strong>Alineación de incentivos y riesgo.</strong> La captura precisa y completa de los diagnósticos beneficia tanto al plan (mediante un RAF apropiado) como a los proveedores (mediante un pago que refleja la complejidad real de los casos). Los planes y los proveedores tienen incentivos alineados para asegurar que los diagnósticos se documenten de manera exhaustiva y precisa durante cada encuentro.
+      <li><strong>Integridad de los encuentros.</strong> No todos los encuentros quedan capturados en las reclamaciones. Los planes pueden complementar con documentación adicional de visitas para reflejar el panorama clínico completo. CMS distingue entre reclamaciones y encuentros suplementarios; ambos alimentan los modelos HCC en algunos programas.
+    </ul>
+
+    <h2>Auditorías RADV y Riesgo de Cumplimiento</h2>
+    <p>Las <strong>auditorías de Validación de Datos de Ajuste de Riesgo (RADV)</strong> son revisiones periódicas de cumplimiento realizadas por CMS, agencias estatales o auditores contratados. En una auditoría RADV, los auditores toman una muestra aleatoria de los expedientes médicos de un subconjunto de miembros para un año de beneficios determinado y verifican que los diagnósticos presentados para la codificación HCC estén realmente respaldados por el expediente médico y documentados conforme a los estándares clínicos.</p>
+    <p>Las auditorías RADV pueden identificar varios tipos de hallazgos:</p>
+    <ul>
+      <li><strong>Diagnósticos sin respaldo:</strong> Se codificó un diagnóstico, pero el expediente médico no muestra evidencia clínica de esa condición.
+      <li><strong>Diagnósticos especificados incorrectamente:</strong> Se usó el código ICD-10 equivocado, o se usó un código menos específico cuando correspondía uno más específico.
+      <li><strong>Defectos de momento o documentación:</strong> El diagnóstico se registró, pero no durante un encuentro real dentro del año de beneficios, o la documentación es demasiado vaga para respaldar la conclusión clínica.
+      <li><strong>Indicadores de fraude:</strong> Patrones que sugieren una sobrecodificación intencional o sistemática, como diagnósticos idénticos que aparecen en muchos miembros sin base clínica.
+    </ul>
+    <p>Si los hallazgos de RADV indican un error sistémico o sobrecodificación, CMS puede ajustar el pago del plan de forma retroactiva o imponer sanciones. Por eso los planes invierten en <strong>auditorías de codificación concurrentes</strong> y <strong>programas de captura de encuentros</strong> para detectar y corregir errores antes de una auditoría externa, y en <strong>capacitación de proveedores</strong> para asegurar prácticas de documentación precisas. Consulte <a href="/es/policy-changes.html">Cambios de Políticas</a> para conocer las iniciativas actuales de RADV de CMS.</p>
+
+    <h2>La Línea Ética: Especificidad vs. Sobrecodificación</h2>
+    <p>El límite entre la codificación precisa y la sobrecodificación indebida puede ser sutil. Así es como las organizaciones conscientes del cumplimiento lo manejan:</p>
+    <ul>
+      <li><strong>Apropiado:</strong> Un proveedor documenta "diabetes tipo 2 con enfermedad renal crónica en etapa 2" con base en análisis de laboratorio actuales y una evaluación clínica; el codificador selecciona el HCC específico que refleja este estado documentado. El expediente médico respalda la especificidad declarada.
+      <li><strong>Apropiado:</strong> Un plan identifica que muchos encuentros documentan un diagnóstico en la evaluación pero no en el campo de diagnóstico codificado, y agrega sistemáticamente los diagnósticos documentados faltantes al registro del encuentro, respaldados por la documentación clínica contemporánea del proveedor.
+      <li><strong>Cuestionable:</strong> Un proveedor codifica sistemáticamente los diagnósticos en su versión de mayor gravedad (por ejemplo, seleccionando siempre las variantes "con complicaciones") sin documentación clínica clara que respalde el nivel de gravedad.
+      <li><strong>Indebido:</strong> Un codificador infiere un diagnóstico no documentado por el proveedor, o asigna un diagnóstico que está documentado solo en antecedentes previos sin evidencia activa de que se esté manejando en el año en curso.
+    </ul>
+    <p>Las guías regulatorias y los casos judiciales han aclarado que la codificación debe reflejar diagnósticos actuales, bajo manejo activo y respaldados por el expediente médico. Se espera especificidad y jerarquías apropiadas; las mejoras sistemáticas sin base clínica no lo son. Los planes y los proveedores operan bajo una postura de cumplimiento que enfatiza la precisión y la transparencia con los auditores, en lugar de la maximización del RAF.</p>
+
+    <h2>El Ajuste de Riesgo en Otros Programas</h2>
+    <p><strong>Medicare Advantage</strong> usa el modelo HCC como se describió anteriormente. Se aplica la versión 28 del CMS-HCC (y las versiones en evolución).</p>
+    <p>Los <strong>planes del Mercado de Seguros de ACA</strong> también usan un mecanismo de ajuste de riesgo, financiado a través del programa de ajuste de riesgo de la ACA. Los planes con inscritos más enfermos que el promedio reciben transferencias del programa central; los planes con inscritos más saludables que el promedio contribuyen a él. El modelo y la asignación de HCC difieren ligeramente de Medicare Advantage, pero cumplen el mismo propósito: nivelar el campo de pago según el riesgo de salud.</p>
+    <p>El ajuste de riesgo en la <strong>atención administrada de Medicaid</strong> varía según el estado y el programa. Algunos estados usan modelos basados en HCC; otros usan factores demográficos más simples o categorías basadas en condiciones. Las agencias estatales de Medicaid definen la metodología de ajuste de riesgo en sus contratos de atención administrada.</p>
+    <p>Los <strong>planes comerciales</strong> no están sujetos al mismo marco de ajuste de riesgo de CMS, aunque las aseguradoras usan sus propios modelos internos de riesgo para la fijación de precios y la gestión de poblaciones.</p>
+
+    <h2>Temas Relacionados</h2>
+    <p>El ajuste de riesgo se cruza con varias funciones profesionales. Vea también:</p>
+    <ul>
+      <li><a href="/es/operations.html">Operaciones de Planes de Salud</a> — Cómo los planes organizan sus funciones clínicas y financieras.
+      <li><a href="/es/providers.html">Proveedores y Facturación</a> — Cómo los proveedores presentan encuentros y reclamaciones.
+      <li><a href="/es/star-ratings.html">Clasificación de Estrellas y Medición de Calidad</a> — Métricas relacionadas de CMS y sus fuentes de datos.
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">Programa RADV de CMS</a> — Marco regulatorio oficial y procedimientos de auditoría.
+    </ul>
+
+    <h2>Glosario</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Término</th>
+            <th>Definición</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HCC (Categoría de Condición Jerárquica)</strong></td>
+            <td>Una agrupación de diagnósticos clínicamente significativa que CMS usa para medir el estado de salud y predecir costos. Cada HCC tiene un peso de riesgo asignado.</td>
+          </tr>
+          <tr>
+            <td><strong>RAF (Factor de Ajuste de Riesgo)</strong></td>
+            <td>La puntuación de riesgo individual de un miembro, calculada como la suma de los pesos de los HCC aplicables más factores demográficos. Un RAF &gt; 1.0 indica un riesgo superior al promedio; un RAF &lt; 1.0 indica un riesgo inferior al promedio. Se usa para ajustar el pago de capitación del plan.</td>
+          </tr>
+          <tr>
+            <td><strong>RADV (Validación de Datos de Ajuste de Riesgo)</strong></td>
+            <td>Proceso de auditoría exigido por CMS que valida la precisión de los diagnósticos presentados por los planes para la codificación HCC y el pago. Los auditores revisan los expedientes médicos para confirmar que los diagnósticos estén documentados y clínicamente respaldados.</td>
+          </tr>
+          <tr>
+            <td><strong>MEAT</strong></td>
+            <td>Sigla en inglés de los estándares de documentación: respaldo en el expediente <strong>M</strong>édico, fecha del <strong>E</strong>ncuentro dentro del año de beneficios, manejo <strong>A</strong>ctivo, <strong>T</strong>erapia/especificidad. Los proveedores usan MEAT para guiar una documentación clínica precisa.</td>
+          </tr>
+          <tr>
+            <td><strong>TAMPER</strong></td>
+            <td>Sigla en inglés de los estándares de auditoría: <strong>T</strong>emporalidad (encuentro dentro del año de beneficios), precisión (<strong>A</strong>ccuracy) en la selección del código, respaldo en el expediente <strong>M</strong>édico, aplicación apropiada (<strong>P</strong>roper) de la jerarquía, validación del tipo de <strong>E</strong>ncuentro, razonabilidad (<strong>R</strong>easonableness) del diagnóstico. Los auditores usan TAMPER para evaluar la validez de la codificación.</td>
+          </tr>
+          <tr>
+            <td><strong>Datos de encuentros</strong></td>
+            <td>Reclamaciones y registros clínicos presentados por los proveedores que documentan visitas, servicios, diagnósticos y procedimientos de un miembro. Cada reclamación y registro de encuentro alimenta el modelo HCC.</td>
+          </tr>
+          <tr>
+            <td><strong>Capitación</strong></td>
+            <td>Un pago fijo por miembro por mes que se hace a un plan sin importar los servicios utilizados. El plan asume el riesgo financiero de todos los servicios cubiertos. El ajuste de riesgo modifica la capitación según el estado de salud del miembro.</td>
+          </tr>
+          <tr>
+            <td><strong>Jerarquía</strong></td>
+            <td>En los modelos HCC, una regla según la cual, si un miembro califica para varios HCC relacionados con la misma condición, solo se cuenta el más grave. Las jerarquías evitan el doble conteo y aseguran la precisión de los HCC.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>Verifique en la fuente:</strong> Esta página describe a grandes rasgos cómo funciona el ajuste de riesgo. Para conocer las versiones actuales del modelo HCC, los detalles del cálculo del RAF, los procedimientos de RADV y las guías de cumplimiento, consulte <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov (RADV)</a>, las políticas de cumplimiento de su plan y las regulaciones de atención administrada de su estado. Este contenido es educativo y no constituye asesoramiento legal ni de cumplimiento.
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/risk-adjustment.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -8,6 +8,7 @@ Four deterministic QA gates to validate translations before publishing:
 4. glossary_ok: verify glossary terms are translated correctly
 """
 import re
+from collections import Counter
 from html.parser import HTMLParser
 
 
@@ -96,6 +97,28 @@ def structure_ok(en_html, tr_html):
             reason += f" missing {missing_in_tr}"
         if extra_in_tr:
             reason += f" extra {extra_in_tr}"
+        if not missing_in_tr and not extra_in_tr:
+            # Same set of tag types on both sides — the divergence is in
+            # count or order (e.g. a repeated <strong> or reordered <p>s),
+            # which a plain set-difference can't reveal. Report count
+            # deltas per tag and the first index where the sequences part
+            # ways, so a retry has something concrete to act on.
+            en_counts, tr_counts = Counter(en_parser.tags), Counter(tr_parser.tags)
+            count_diffs = {
+                tag: (en_counts[tag], tr_counts[tag])
+                for tag in set(en_counts) | set(tr_counts)
+                if en_counts[tag] != tr_counts[tag]
+            }
+            first_diff_index = next(
+                (i for i, (a, b) in enumerate(zip(en_parser.tags, tr_parser.tags)) if a != b),
+                min(len(en_parser.tags), len(tr_parser.tags)),
+            )
+            reason += (
+                f" same tag types, different count/order — per-tag (en, tr) counts "
+                f"that differ: {count_diffs}; sequences first diverge at index "
+                f"{first_diff_index} (en={en_parser.tags[first_diff_index:first_diff_index+3]}, "
+                f"tr={tr_parser.tags[first_diff_index:first_diff_index+3]})"
+            )
         return (False, reason)
 
     # Check href/src (use main content for real pages, full page for tests)
@@ -186,9 +209,13 @@ def _extract_facts(text):
     facts = set()
 
     # Dollar amounts: $1,234.56, $2.100,50, $1234.56, etc.
-    # Match dollar sign followed by digits and common separators
+    # Match dollar sign followed by digits and common separators. A
+    # trailing ',' or '.' with no digit after it inside the match (e.g.
+    # "$8,000," at the end of a clause, comma belongs to the sentence) is
+    # never a real separator — a genuine thousands/decimal separator is by
+    # definition always followed by digits — so strip it before comparing.
     for match in re.finditer(r'\$[\d,.]+', text):
-        raw = match.group(0)
+        raw = match.group(0).rstrip(',.')
         normalized = _normalize_number(raw)
         facts.add(('dollar', normalized))
 
@@ -396,8 +423,12 @@ def glossary_ok(en_html, tr_html, terms):
         if en_term not in en_text:
             continue
 
-        # Verify translation appears in translated HTML
-        if tr_term not in tr_text:
+        # Verify translation appears in translated HTML. Case-insensitive:
+        # the glossary's capitalization is a dictionary-headword display
+        # convention, not a requirement — correct Spanish prose lowercases
+        # common nouns mid-sentence (e.g. "cada reclamación precisa"),
+        # which a case-sensitive check would wrongly reject.
+        if tr_term.lower() not in tr_text.lower():
             missing.append(f"'{en_term}' (should be '{tr_term}')")
 
     if missing:

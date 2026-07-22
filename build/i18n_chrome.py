@@ -136,9 +136,10 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     # Prefix brand href for non-English (Critical 2)
     brand_href = _prefix_href("/", code)
 
+    menu_button_label = chrome.get("menu_button", "Menu")
     header_html = (f'<header class="site-header">\n  <div class="wrap">\n'
                    f'    <a class="brand" href="{brand_href}"><span class="mark">MP</span> MediPrimer</a>{switcher_html_str}\n'
-                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>\n'
+                   f'    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="{_esc(menu_button_label)}">☰</button>\n'
                    f'    <nav class="main">\n{nav_html}\n    </nav>\n  </div>\n</header>')
 
     # Dormant rule: emit MP_LANGS + lang-suggest.js only if at least one language is launched
@@ -303,8 +304,15 @@ def render_footer(code, page_name, chrome, languages=None, en_html=None):
         official_html += f'          <li><a href="{href}" rel="noopener">{_esc(translated)}</a></li>\n'
     official_html += '        </ul>\n      </div>'
 
-    # Disclaimer text (English only, as per normalize.py)
-    disclaimer = '<p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>'
+    # Disclaimer text: localized per-language via chrome["footer_disclaimer"],
+    # falling back to the English source (normalize.py's FOOTER) if a
+    # language hasn't supplied a translation yet.
+    en_disclaimer_text = ('Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, '
+        'any state agency, or any health insurance company. Information is general and should be verified '
+        'through official program and plan materials. Nothing here is medical, legal, or financial advice, '
+        'and no page recommends a specific plan. Content last reviewed July 2026.')
+    disclaimer_text = chrome.get("footer_disclaimer", en_disclaimer_text)
+    disclaimer = f'<p class="disclaimer">{_esc(disclaimer_text)}</p>'
 
     # Legal links
     legal_links_list = [

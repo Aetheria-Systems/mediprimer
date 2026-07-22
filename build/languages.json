@@ -6,7 +6,7 @@
       "native": "Español",
       "tier": 1,
       "rtl": false,
-      "launched": false,
+      "launched": true,
       "official_url": "https://www.medicare.gov/es",
       "ui": {
         "switcher_label": "Idioma",

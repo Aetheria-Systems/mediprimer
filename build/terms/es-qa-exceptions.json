@@ -1,0 +1,6 @@
+{
+  "_comment": "Per-page exclusions from the mandatory glossary QA check (translate.py's run_gates call). These terms remain in the glossary passed to the translator as normal — only the automated QA verification is skipped for the listed (page, term) pairs, because the English source uses the term in a sense the glossary entry doesn't cover (e.g. a verb, not the noun the Spanish translation maps to). Document the reason inline.",
+  "brokers.html": {
+    "Claim": "Line 249's 'Claim your plan has a larger network...' uses 'Claim' as a verb (to falsely assert), not the insurance-claim noun 'Reclamación' maps to. Forcing 'Reclamación' into that sentence would be a mistranslation. 'Claim' stays a required term on other pages (claims-coding.html, operations.html, how-do-i.html, glossary.html) where it's used correctly."
+  }
+}

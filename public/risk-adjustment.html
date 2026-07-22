@@ -31,15 +31,24 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Risk Adjustment & HCC Coding — MediPrimer">
 <meta name="twitter:description" content="How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Risk Adjustment & HCC Coding", "description": "How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.", "url": "https://mediprimer.org/risk-adjustment.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-13", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Risk Adjustment & HCC Coding", "description": "How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.", "url": "https://mediprimer.org/risk-adjustment.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Risk Adjustment & HCC Coding", "item": "https://mediprimer.org/risk-adjustment.html"}]}</script>
 <!--/seo-->
 </head>
 <body>
 
+<script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?"};</script>
+<script src="/lang-suggest.js" defer></script>
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="lang-switch">
+    <a href="/risk-adjustment.html" lang="en" aria-current="page">English</a>
+    <a href="/es/risk-adjustment.html" lang="es">Español</a>
+  </div><!--/switcher-->
     <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
     <nav class="main">
       <a href="/" class="navtop">Home</a>
@@ -119,7 +128,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     <ol class="steps">
       <li><strong>Diagnosis collection.</strong> Providers submit claims and encounter records containing ICD-10 diagnosis codes for each member during the benefit year (typically calendar year for Medicare Advantage).
       <li><strong>HCC mapping.</strong> CMS maps those diagnosis codes into HCCs—clinically meaningful groupings that predict future healthcare costs. One diagnosis code may map to an HCC; multiple codes may map to the same HCC.
-      <li><strong>Hierarchies applied.</strong> The model enforces hierarchies: if a member has both a less severe and more severe form of a condition, only the more severe HCC is counted. For example, diabetes without complications (HCC 19) rolls up into Type 2 diabetes with complications (HCC 18) if both are present; only HCC 18 counts.
+      <li><strong>Hierarchies applied.</strong> The model enforces hierarchies: if a member has both a less severe and more severe form of a condition, only the more severe HCC is counted. For example, a less-severe diagnosis of diabetes without complications rolls up into a more-severe diagnosis of diabetes with complications if both are present; only the more severe HCC counts. (Specific HCC numbers are reassigned each time CMS recalibrates the model, so this page describes the concept rather than pinning it to version-specific IDs.)
       <li><strong>RAF calculation.</strong> CMS assigns a risk weight to each applicable HCC (e.g., congestive heart failure might have a weight of 0.45, meaning it adds 45% to the member's base payment). The RAF is the sum of all applicable weights plus a demographic factor. An RAF of 1.0 represents average risk; 0.8 represents 20% below average; 1.2 represents 20% above average.
       <li><strong>Payment adjustment.</strong> The plan's capitation payment is multiplied by the RAF. A member with RAF 1.2 generates 20% higher payment than a member with RAF 1.0, reflecting higher expected costs.
     </ol>

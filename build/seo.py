@@ -8,7 +8,7 @@ Also (re)generates sitemap.xml and robots.txt.
 Pass the build date as argv[1] (YYYY-MM-DD); scripts must not call date()."""
 import re, os, glob, sys, json, hashlib
 from html import unescape
-PUB = "/home/deltaprism/mediprimer/public"
+PUB = os.path.join(os.path.dirname(os.path.dirname(__file__)), "public")
 BASE = "https://mediprimer.org"
 TODAY = sys.argv[1] if len(sys.argv) > 1 else "2026-07-12"
 PUBLISHED = "2026-07-12"
@@ -16,9 +16,10 @@ EDITOR = "Kurt Hamm"  # named editor for E-E-A-T; change here if the byline shou
 DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-dates.json")
 LANGUAGES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "languages.json")
 ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
+SWITCHER_RE = re.compile(r'\n?<!--switcher-->.*?<!--/switcher-->', re.DOTALL)
 
 def content_hash(html):
-    core = SEO_RE.sub("", ANALYTICS_RE.sub("", html))
+    core = SEO_RE.sub("", ANALYTICS_RE.sub("", SWITCHER_RE.sub("", html)))
     text = re.sub(r"<[^>]+>", " ", core)
     return hashlib.md5(re.sub(r"\s+", " ", text).strip().encode()).hexdigest()
 
@@ -59,6 +60,40 @@ FAQ = {
          "Yes. VA drug coverage counts as creditable, so you can usually skip Part D without a penalty while you use the VA pharmacy."),
     ],
 }
+
+# Spanish translations of FAQ, keyed the same as FAQ. Used for FAQPage JSON-LD
+# on public/es/*.html pages so structured data matches inLanguage: es-US.
+FAQ_ES = {
+    "turning-65.html": [
+        ("¿Cuándo puedo inscribirme en Medicare?",
+         "Su Período de Inscripción Inicial es una ventana de 7 meses alrededor de su cumpleaños número 65: los 3 meses antes del mes de su cumpleaños, el mes de su cumpleaños, y los 3 meses después. Inscribirse dentro de esta ventana evita las penalizaciones por inscripción tardía."),
+        ("¿Tengo que inscribirme en Medicare a los 65 años si todavía estoy trabajando?",
+         "No siempre. Si tiene cobertura de un empleador actual con 20 o más empleados, es posible que pueda retrasar la Parte B sin penalización. La cobertura de jubilado, COBRA y los beneficios del VA no le permiten retrasar la Parte B de forma segura."),
+        ("¿Es Medicare un plan familiar?",
+         "No. Medicare es individual. Usted y su cónyuge reciben cada uno su propio Medicare según sus propios plazos."),
+    ],
+    "choosing-coverage.html": [
+        ("¿Cuál es la diferencia entre la Cobertura Original de Medicare y Medicare Advantage?",
+         "Ambas cubren los mismos beneficios principales. La Cobertura Original de Medicare le permite consultar a cualquier proveedor que acepte Medicare, con poca preaprobación. Medicare Advantage usa redes y autorización previa, pero a menudo añade beneficios adicionales y un límite anual de gastos de bolsillo."),
+        ("¿Puedo cambiar de Medicare Advantage de vuelta a la Cobertura Original de Medicare más adelante?",
+         "Puede cambiar durante ciertas ventanas establecidas, pero comprar un suplemento Medigap después puede requerir suscripción médica, y le pueden negar la cobertura. Esta 'puerta de un solo sentido' es lo más importante que debe considerar antes de elegir."),
+    ],
+    "planning-for-two.html": [
+        ("¿Medicare cubre a mi cónyuge?",
+         "No. Medicare no tiene cobertura familiar ni de cónyuge. Cada cónyuge recibe su propio Medicare en su propio cumpleaños número 65, paga sus propias primas y elige sus propios planes. Un cónyuge más joven necesita otra cobertura hasta que comience su propio Medicare."),
+        ("¿El ingreso de mi cónyuge afecta mi prima de Medicare?",
+         "Puede que sí. Si presenta impuestos de forma conjunta, el Seguro Social usa su ingreso combinado de hace dos años para fijar el cargo adicional por ingresos (IRMAA) en las primas de la Parte B y la Parte D de cada cónyuge. Si su ingreso bajó después de jubilarse, puede pedirle al Seguro Social que lo reduzca usando el formulario SSA-44."),
+    ],
+    "veterans-medicare.html": [
+        ("Si tengo atención médica del VA, ¿todavía necesito la Parte B de Medicare?",
+         "La atención médica del VA no le permite retrasar la Parte B sin una penalización de por vida, y la Parte B es lo que cubre la atención fuera del VA. Muchos veteranos se inscriben en la Parte B a los 65 años para mantener esa opción; algunos la omiten deliberadamente. Decida a propósito durante su ventana de inscripción."),
+        ("¿Puedo usar la farmacia del VA en lugar de la Parte D de Medicare?",
+         "Sí. La cobertura de medicamentos del VA cuenta como acreditable, por lo que generalmente puede omitir la Parte D sin penalización mientras use la farmacia del VA."),
+    ],
+}
+
+# Translated "Home" breadcrumb label per language, for BreadcrumbList JSON-LD.
+BREADCRUMB_HOME = {"es": "Inicio"}
 
 def field(html, pat):
     m = re.search(pat, html, re.DOTALL)
@@ -150,9 +185,15 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
                              "target": {"@type": "EntryPoint", "urlTemplate": BASE + "/glossary.html?q={search_term_string}"},
                              "query-input": "required name=search_term_string"}}))
     if name in FAQ:
+        if lang_code and lang_code != "en":
+            if name not in FAQ_ES:
+                raise SystemExit(f"seo.py: missing FAQ_ES translation for {name} (lang={lang_code})")
+            faq_pairs = FAQ_ES[name]
+        else:
+            faq_pairs = FAQ[name]
         parts.append(ld({"@context": "https://schema.org", "@type": "FAQPage",
                          "mainEntity": [{"@type": "Question", "name": qq,
-                                         "acceptedAnswer": {"@type": "Answer", "text": a}} for qq, a in FAQ[name]]}))
+                                         "acceptedAnswer": {"@type": "Answer", "text": a}} for qq, a in faq_pairs]}))
     # JSON-LD is raw text inside <script>, not HTML — entities must be decoded
     clean = unescape(re.sub(r'\s*—\s*MediPrimer$', '', title))
 
@@ -182,9 +223,17 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
             parts.append(alt_str)
 
     if name != "index.html":
+        if lang_code and lang_code != "en":
+            if lang_code not in BREADCRUMB_HOME:
+                raise SystemExit(f"seo.py: missing BREADCRUMB_HOME translation for lang={lang_code}")
+            home_name = BREADCRUMB_HOME[lang_code]
+            home_url = BASE + "/" + lang_code + "/"
+        else:
+            home_name = "Home"
+            home_url = BASE + "/"
         parts.append(ld({"@context": "https://schema.org", "@type": "BreadcrumbList",
                          "itemListElement": [
-                             {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+                             {"@type": "ListItem", "position": 1, "name": home_name, "item": home_url},
                              {"@type": "ListItem", "position": 2, "name": clean, "item": url}]}))
     parts.append('<!--/seo-->')
     return "\n".join(parts)

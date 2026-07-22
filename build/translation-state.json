@@ -1,8 +1,248 @@
 {
   "es": {
     "disclaimer.html": {
-      "hash": "bf0a91d541fc2378a1205ddaa28d5e29",
-      "date": "2026-07-14"
+      "hash": "74fc79d4d0a1514192b06edb5f7b0a55",
+      "date": "2026-07-22"
+    },
+    "members.html": {
+      "hash": "6f3a8c12a88d6c8f1548328f9dd3119b",
+      "date": "2026-07-15"
+    },
+    "caregivers.html": {
+      "hash": "596fed61b82e46233c48cec532fc82dc",
+      "date": "2026-07-15"
+    },
+    "about.html": {
+      "hash": "47686568301d19567e8252a8d0b4e3ad",
+      "date": "2026-07-22"
+    },
+    "accessibility.html": {
+      "hash": "7fd343d36af2ce2df1c808bd852242e5",
+      "date": "2026-07-15"
+    },
+    "appeals-timelines.html": {
+      "hash": "72d43a9d2efa8f39a5490b6dd9f7f215",
+      "date": "2026-07-15"
+    },
+    "basics.html": {
+      "hash": "3df63599ec159cab9e5badc6d2dc6780",
+      "date": "2026-07-15"
+    },
+    "checklists.html": {
+      "hash": "94ed17052239f7a2875d0d2aaafe7174",
+      "date": "2026-07-15"
+    },
+    "chip.html": {
+      "hash": "4ae3062e6ffe3c594f4794b8faa42d05",
+      "date": "2026-07-15"
+    },
+    "choosing-coverage.html": {
+      "hash": "09f8d1a027b3c346bb789ab6221d057b",
+      "date": "2026-07-15"
+    },
+    "claims-coding.html": {
+      "hash": "37acfee66761e519e8d957b97deea2df",
+      "date": "2026-07-15"
+    },
+    "cms-updates.html": {
+      "hash": "93c4b99b1b1f213cb62f7d7f0d843439",
+      "date": "2026-07-15"
+    },
+    "common-mistakes.html": {
+      "hash": "d54ce0cfd303ac7536f8470b9b77cb26",
+      "date": "2026-07-15"
+    },
+    "coverage-basics.html": {
+      "hash": "87b8a300e89334e76f3348a83817effc",
+      "date": "2026-07-15"
+    },
+    "directories.html": {
+      "hash": "c3c003e6d440dee1c75db2fec32f5945",
+      "date": "2026-07-15"
+    },
+    "dual-eligible.html": {
+      "hash": "cf2f86ed779e098dcf8085fbb4972eaf",
+      "date": "2026-07-15"
+    },
+    "edge-cases.html": {
+      "hash": "3c1b2d83f1d456460c491d9c19dfa0b6",
+      "date": "2026-07-15"
+    },
+    "editorial-standards.html": {
+      "hash": "1f24a503e13889900aabc85b0eb572c9",
+      "date": "2026-07-15"
+    },
+    "enrollment-calendar.html": {
+      "hash": "5b2bcbf4635f731c9742dec981a92ccb",
+      "date": "2026-07-15"
+    },
+    "enrollment.html": {
+      "hash": "ed44edee198110a232686c7482cc0d38",
+      "date": "2026-07-15"
+    },
+    "getting-help.html": {
+      "hash": "76806217d9a8ebaefd022cd78c622f99",
+      "date": "2026-07-22"
+    },
+    "glossary.html": {
+      "hash": "8a9eebaa1784904685110a71582484bf",
+      "date": "2026-07-15"
+    },
+    "how-do-i.html": {
+      "hash": "8f82a432814c0671ec24d2090f0e9293",
+      "date": "2026-07-15"
+    },
+    "index.html": {
+      "hash": "d696cd0f7ad8a47e20a51fd9c9a17128",
+      "date": "2026-07-15"
+    },
+    "insurance-departments.html": {
+      "hash": "74bad76507a397262439ae66006f81c2",
+      "date": "2026-07-15"
+    },
+    "marketplace.html": {
+      "hash": "d663082a41d1cdcbc7f7584834154030",
+      "date": "2026-07-15"
+    },
+    "medicaid-eligibility.html": {
+      "hash": "b34816380867dbae7edf20d27ec6e794",
+      "date": "2026-07-15"
+    },
+    "medicaid-starting-out.html": {
+      "hash": "f41463a997aa7664a310367a3d06370e",
+      "date": "2026-07-15"
+    },
+    "medicare-advantage.html": {
+      "hash": "ecfa6be598060f6a6f4b212661371af4",
+      "date": "2026-07-15"
+    },
+    "medicare-part-a.html": {
+      "hash": "486907885460584909e2483e4a00ac6f",
+      "date": "2026-07-15"
+    },
+    "medicare-part-b.html": {
+      "hash": "d1735d17faaeae70eda725f03b7b2f93",
+      "date": "2026-07-15"
+    },
+    "medigap.html": {
+      "hash": "52f37b35c22aab270726925aa70b4c77",
+      "date": "2026-07-15"
+    },
+    "member-journey.html": {
+      "hash": "98910fba7880699e1e082b043fda699e",
+      "date": "2026-07-15"
+    },
+    "moving-states.html": {
+      "hash": "c7ce0cbf46f0bd4b33477916a6a88b80",
+      "date": "2026-07-15"
+    },
+    "navigators.html": {
+      "hash": "f059b1bbaa60f28ddb964eaa258f2694",
+      "date": "2026-07-15"
+    },
+    "operations.html": {
+      "hash": "1bdee1c08e40acf6206577f373013006",
+      "date": "2026-07-15"
+    },
+    "plan-types.html": {
+      "hash": "671c448b739f624608d197f3d1aabd15",
+      "date": "2026-07-15"
+    },
+    "planning-for-two.html": {
+      "hash": "6725a33f53f29f9369226d23304a6f20",
+      "date": "2026-07-15"
+    },
+    "policy-changes.html": {
+      "hash": "8b5968dc7e2d068bd94b0079934ab556",
+      "date": "2026-07-15"
+    },
+    "privacy.html": {
+      "hash": "6c6841acb4020d35b0a7746ac6331897",
+      "date": "2026-07-22"
+    },
+    "professionals.html": {
+      "hash": "2ddeb87d6223804e67a1ecf700392c25",
+      "date": "2026-07-15"
+    },
+    "providers.html": {
+      "hash": "3d6b12fffed626ca4bb6434c2c0201ae",
+      "date": "2026-07-15"
+    },
+    "questions-to-ask.html": {
+      "hash": "e2de33c23a257323859d058f8d206739",
+      "date": "2026-07-15"
+    },
+    "resources.html": {
+      "hash": "c1acb1c8e13a1ec2f4ae6cf65b1c74a9",
+      "date": "2026-07-15"
+    },
+    "retiring-losing-coverage.html": {
+      "hash": "ad53aeeca78e164e70a55e8e14a65172",
+      "date": "2026-07-15"
+    },
+    "rights.html": {
+      "hash": "8965a591bae7657b4d31c1edc008f3bb",
+      "date": "2026-07-15"
+    },
+    "ship-directory.html": {
+      "hash": "d975ae66db2a2e6ff34b3ff7a513c53f",
+      "date": "2026-07-15"
+    },
+    "site-map.html": {
+      "hash": "4cb2f6fc74e358702dfd53b9c175933a",
+      "date": "2026-07-15"
+    },
+    "star-ratings.html": {
+      "hash": "4214a88c14485d470c1dad65b0a9c1e3",
+      "date": "2026-07-15"
+    },
+    "state-medicaid.html": {
+      "hash": "96254d3ae9d9c7cf721b91fd71aaba8b",
+      "date": "2026-07-15"
+    },
+    "support.html": {
+      "hash": "79da6445bbfb4fb0619172320ffe36bd",
+      "date": "2026-07-15"
+    },
+    "terms-of-use.html": {
+      "hash": "1048d0a5bdce023d0db8f987fc41ee31",
+      "date": "2026-07-15"
+    },
+    "using-plan-finder.html": {
+      "hash": "e1d713fdbfbeed077cff18a2dc213efa",
+      "date": "2026-07-15"
+    },
+    "veterans-medicare.html": {
+      "hash": "cbbaee8b639f8797d9bbc77b7669beb6",
+      "date": "2026-07-15"
+    },
+    "working-past-65.html": {
+      "hash": "33a123df1285e5842f2d77a9bb2a565d",
+      "date": "2026-07-15"
+    },
+    "turning-65.html": {
+      "hash": "3c57885b0043d348f8718e988738b757",
+      "date": "2026-07-22"
+    },
+    "brokers.html": {
+      "hash": "b74b6a660e9152c314deddd2a8416e68",
+      "date": "2026-07-22"
+    },
+    "disability-medicare.html": {
+      "hash": "378311e14bd5a3107d7ab02c988691a6",
+      "date": "2026-07-22"
+    },
+    "medicare-part-d.html": {
+      "hash": "5e2364c2cde70d3e2ce57a8dba18711e",
+      "date": "2026-07-22"
+    },
+    "risk-adjustment.html": {
+      "hash": "2d3283bc6a15dffba31f557f7a9394bc",
+      "date": "2026-07-22"
+    },
+    "costs.html": {
+      "hash": "07b67491c856bd59d9b304a7e35d448c",
+      "date": "2026-07-22"
     }
   }
 }
