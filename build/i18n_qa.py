@@ -7,9 +7,15 @@ Four deterministic QA gates to validate translations before publishing:
 3. completeness_ok: flag translations that are actually still in English
 4. glossary_ok: verify glossary terms are translated correctly
 """
+import json
+import os
 import re
 from collections import Counter
 from html.parser import HTMLParser
+
+_LANGUAGES_PATH = os.path.join(os.path.dirname(__file__), "languages.json")
+_LANGUAGES = json.load(open(_LANGUAGES_PATH, encoding="utf-8"))
+_LOCALE_CODES = [lang["code"] for lang in _LANGUAGES.get("languages", [])]
 
 
 class TagExtractor(HTMLParser):
@@ -38,9 +44,10 @@ def _normalize_internal_href(href):
         return href
 
     # Internal hrefs: strip leading /<lang_code> prefix if present.
-    # Codes are 2-3 letter base tags, optionally with a script/region
-    # subtag (e.g. "es", "zh-Hant") -- BCP-47-ish, not just bare ISO 639.
-    LANG_CODE = r'[a-zA-Z]{2,3}(?:-[a-zA-Z]+)?'
+    # Restrict to the actual configured locale codes (not a generic
+    # 2-3 letter pattern) so real routes like /faq/ or /api/ can't be
+    # mistaken for a language prefix.
+    LANG_CODE = '|'.join(re.escape(code) for code in _LOCALE_CODES)
     if href.startswith('/'):
         # Handle language home pages: /es/ -> /
         match = re.match(r'^/(' + LANG_CODE + r')/?$', href)
@@ -311,11 +318,14 @@ def facts_diff(en_text, back_translated_text):
 
     def keyword_present(kw, text):
         """True if the bare keyword or its known expansion appears in text."""
-        text_lower = text.lower()
-        if kw in text:
+        text_lower = text.casefold()
+        if re.search(rf"\b{re.escape(kw.casefold())}\b", text_lower):
             return True
         expansion = keyword_expansions.get(kw)
-        return expansion is not None and expansion in text_lower
+        return (
+            expansion is not None
+            and re.search(rf"\b{re.escape(expansion.casefold())}\b", text_lower) is not None
+        )
 
     # Categorize diffs: NUMERIC diffs are STRICT, ENTITY diffs use smart matching
     for fact_type, value in only_in_en:

@@ -107,6 +107,26 @@ class TestStructureOk:
         ok, reason = structure_ok(en, tr)
         assert ok, f"Internal href with hyphenated /zh-Hant/ prefix should pass: {reason}"
 
+    def test_structure_ok_non_locale_prefix_not_stripped(self):
+        """A path segment that merely looks like a language code (2-3
+        letters) but isn't a configured locale must NOT be treated as a
+        language prefix. Before restricting the pattern to configured
+        locale codes, routes like /faq/page.html normalized to
+        /page.html, which could let a translation that silently dropped
+        or changed a real route pass structure_ok."""
+        en = """<html><body>
+<a href="/faq/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        tr = """<html><body>
+<a href="/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        ok, reason = structure_ok(en, tr)
+        assert not ok, "Non-locale path segment /faq/ must not be stripped like a language prefix"
+
     def test_structure_ok_missing_seo_marker(self):
         """Missing <!--seo--> marker fails."""
         en = """<html><body>
@@ -229,6 +249,27 @@ class TestFactsDiff:
         back2 = "Plans for seniors."  # "Medicare Advantage" is missing
         numeric2, entity2 = facts_diff(en2, back2)
         assert len(entity2) > 0, "Missing entity keywords should show in diffs"
+
+    def test_facts_diff_keyword_substring_false_positive(self):
+        """A bare keyword must not match as a substring of an unrelated
+        word. "PACE" is a real entity keyword; "SPACE" merely contains it.
+        Before the word-boundary fix, `kw in text` matched "PACE" inside
+        "SPACE" and let a genuinely dropped entity through undetected."""
+        en = "Enrollees in PACE receive coordinated benefits."
+        back = "Enrollees receive coordinated benefits under a shared SPACE arrangement."
+        numeric, entity = facts_diff(en, back)
+        assert len(entity) > 0, "Missing PACE entity must not be masked by 'SPACE' substring match"
+
+    def test_facts_diff_keyword_case_insensitive(self):
+        """A bare keyword differing only in case from the back-translation
+        must still be recognized as present. Before the fix, the primary
+        check compared against original (non-lowercased) text, so a
+        keyword with no listed expansion (e.g. QMB) would be falsely
+        flagged as missing if the back-translation lowercased it."""
+        en = "You may qualify for QMB assistance."
+        back = "You may qualify for qmb assistance."
+        numeric, entity = facts_diff(en, back)
+        assert len(entity) == 0, "Case-differing keyword should still count as present"
 
     def test_facts_diff_symmetric_difference(self):
         """Returns symmetric difference (in EN but not back, or vice versa)."""
