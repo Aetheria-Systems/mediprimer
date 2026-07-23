@@ -90,6 +90,43 @@ class TestStructureOk:
         ok, reason = structure_ok(en, tr)
         assert ok, f"Internal href with /<code> prefix should pass: {reason}"
 
+    def test_structure_ok_internal_href_can_gain_hyphenated_prefix(self):
+        """Hyphenated/mixed-case language codes (e.g. zh-Hant) must also be
+        recognized as a valid internal href prefix, not just short
+        lowercase ISO 639 codes like es/vi/ko."""
+        en = """<html><body>
+<a href="/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        tr = """<html><body>
+<a href="/zh-Hant/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        ok, reason = structure_ok(en, tr)
+        assert ok, f"Internal href with hyphenated /zh-Hant/ prefix should pass: {reason}"
+
+    def test_structure_ok_non_locale_prefix_not_stripped(self):
+        """A path segment that merely looks like a language code (2-3
+        letters) but isn't a configured locale must NOT be treated as a
+        language prefix. Before restricting the pattern to configured
+        locale codes, routes like /faq/page.html normalized to
+        /page.html, which could let a translation that silently dropped
+        or changed a real route pass structure_ok."""
+        en = """<html><body>
+<a href="/faq/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        tr = """<html><body>
+<a href="/page.html">link</a>
+<div><!--seo--></div>
+<!--P:analytics-->
+</body></html>"""
+        ok, reason = structure_ok(en, tr)
+        assert not ok, "Non-locale path segment /faq/ must not be stripped like a language prefix"
+
     def test_structure_ok_missing_seo_marker(self):
         """Missing <!--seo--> marker fails."""
         en = """<html><body>
@@ -213,6 +250,27 @@ class TestFactsDiff:
         numeric2, entity2 = facts_diff(en2, back2)
         assert len(entity2) > 0, "Missing entity keywords should show in diffs"
 
+    def test_facts_diff_keyword_substring_false_positive(self):
+        """A bare keyword must not match as a substring of an unrelated
+        word. "PACE" is a real entity keyword; "SPACE" merely contains it.
+        Before the word-boundary fix, `kw in text` matched "PACE" inside
+        "SPACE" and let a genuinely dropped entity through undetected."""
+        en = "Enrollees in PACE receive coordinated benefits."
+        back = "Enrollees receive coordinated benefits under a shared SPACE arrangement."
+        numeric, entity = facts_diff(en, back)
+        assert len(entity) > 0, "Missing PACE entity must not be masked by 'SPACE' substring match"
+
+    def test_facts_diff_keyword_case_insensitive(self):
+        """A bare keyword differing only in case from the back-translation
+        must still be recognized as present. Before the fix, the primary
+        check compared against original (non-lowercased) text, so a
+        keyword with no listed expansion (e.g. QMB) would be falsely
+        flagged as missing if the back-translation lowercased it."""
+        en = "You may qualify for QMB assistance."
+        back = "You may qualify for qmb assistance."
+        numeric, entity = facts_diff(en, back)
+        assert len(entity) == 0, "Case-differing keyword should still count as present"
+
     def test_facts_diff_symmetric_difference(self):
         """Returns symmetric difference (in EN but not back, or vice versa)."""
         en = "Years: 2020, 2021, 2022"
@@ -286,6 +344,24 @@ class TestGlossaryOk:
         }
         ok, missing = glossary_ok(en_html, tr_html, terms)
         assert ok, f"Correct terms should pass: {missing}"
+
+    def test_glossary_ok_tolerates_paren_width_mismatch(self):
+        """Full-width （） vs half-width () around a Latin-script acronym
+        embedded in CJK text is a punctuation style choice, not a
+        translation error -- the same model produces either form
+        inconsistently, even within one page (verified against real
+        Chinese translation output during the zh-Hant launch)."""
+        en_html = """<html><body>
+<p>Contact the Centers for Medicare & Medicaid Services (CMS) for details.</p>
+</body></html>"""
+        tr_html = """<html><body>
+<p>詳情請聯絡美國醫療保險和醫療補助服務中心(CMS)。</p>
+</body></html>"""
+        terms = {
+            "Centers for Medicare & Medicaid Services (CMS)": "美國醫療保險和醫療補助服務中心（CMS）"
+        }
+        ok, missing = glossary_ok(en_html, tr_html, terms)
+        assert ok, f"Half-width parens should still match full-width glossary term: {missing}"
 
     def test_glossary_ok_catches_wrong_term(self):
         """Wrong glossary translation fails."""

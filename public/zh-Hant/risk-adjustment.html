@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>風險調整與HCC編碼 — MediPrimer</title>
+<meta name="description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="風險調整與HCC編碼 — MediPrimer">
+<meta property="og:description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="風險調整與HCC編碼 — MediPrimer">
+<meta name="twitter:description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "風險調整與HCC編碼", "description": "Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。", "url": "https://mediprimer.org/zh-Hant/risk-adjustment.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html"}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "風險調整與HCC編碼", "item": "https://mediprimer.org/zh-Hant/risk-adjustment.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/risk-adjustment.html" lang="en">English</a>
+    <a href="/es/risk-adjustment.html" lang="es">Español</a>
+    <a href="/zh-Hant/risk-adjustment.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop active">專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">專業人士專區</p>
+    <h1>風險調整與HCC編碼</h1>
+    <p>計劃如何依據會員的健康狀況獲得付款，以及準確診斷記錄所扮演的角色。</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>風險調整的目的</h2>
+    <p>風險調整是一種付款機制，用來解決按人頭付費保險中的一項根本難題：如果無論會員健康狀況如何，計劃收到的付款都相同，計劃就有財務誘因去迴避註冊或留住病情較重的會員。風險調整透過提高患有慢性疾病和複雜醫療需求會員的計劃付款，來防止這種情況。</p>
+    <p>在 <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage</a>、<a href="/zh-Hant/marketplace.html">ACA 醫療保險市場計劃</a>以及 Medicaid 管理式醫療項目中，按人頭付費意味著計劃每月為每位會員收取固定金額的付款，並為該會員的照護承擔全部財務風險。若不加以調整，這筆固定付款將不足以支應病情較重族群的費用——而計劃仍可能藉由只吸引最健康的註冊者來獲利。風險調整讓付款向醫療需求傾斜，創造公平的競爭環境。</p>
+
+    <h2>CMS-HCC 模型：從診斷到風險分數</h2>
+    <p>美國醫療保險和醫療補助服務中心（CMS）使用<strong>階層式病況分類（HCC）模型</strong>來衡量會員健康狀況，並計算<strong>風險調整因子（RAF）分數</strong>。其運作方式如下：</p>
+    <ol class="steps">
+      <li><strong>診斷收集。</strong>醫療服務提供者在福利年度內（Medicare Advantage 通常以曆年計）為每位會員提交包含 ICD-10 診斷代碼的理賠申請和就診記錄。
+      <li><strong>HCC 對應。</strong>CMS 將這些診斷代碼對應到各個 HCC——即能預測未來醫療費用、具臨床意義的分組。一個診斷代碼可能對應到一個 HCC；多個代碼也可能對應到同一個 HCC。
+      <li><strong>套用階層規則。</strong>模型執行階層規則：如果會員同時患有某疾病較輕和較重的形式，只計算較嚴重的 HCC。例如，若同時存在「無併發症的糖尿病」這一較輕診斷和「有併發症的糖尿病」這一較重診斷，前者會併入後者；只有較嚴重的 HCC 被計入。（CMS 每次重新校準模型時都會重新指派具體的 HCC 編號，因此本頁描述的是概念，而非鎖定特定版本的編號。）
+      <li><strong>RAF 計算。</strong>CMS 為每個適用的 HCC 指定一個風險權重（例如，充血性心臟衰竭的權重可能是 0.45，表示會員的基本付款會因此增加 45%）。RAF 是所有適用權重的總和再加上人口統計因子。RAF 為 1.0 代表平均風險；0.8 代表低於平均 20%；1.2 代表高於平均 20%。
+      <li><strong>付款調整。</strong>計劃的按人頭付費金額會乘以 RAF。RAF 為 1.2 的會員產生的付款比 RAF 為 1.0 的會員高 20%，反映其較高的預期費用。
+    </ol>
+    <p>CMS 每年根據理賠申請和就診資料重新校準 HCC 模型，而所擷取的診斷代碼決定了 RAF。因此，準確、及時地擷取診斷，對於合理付款和計劃的永續經營至關重要。</p>
+
+    <h2>記錄與合規：從概念層面理解 MEAT/TAMPER</h2>
+    <p>為確保 HCC 編碼準確，醫療服務提供者和計劃遵循的記錄標準常縮寫為 MEAT（供臨床醫師記錄使用）和 TAMPER（供稽核人員和計劃驗證使用）。這些縮寫雖是核對清單，但背後的原則很簡單：</p>
+    <ul>
+      <li><strong>病歷支持。</strong>每個編碼的診斷都必須在會員的病歷中有清楚記錄——包括就診筆記、檢驗結果、影像報告、用藥清單或評估摘要——由主治的醫療服務提供者在臨床就診期間或之後不久建立。
+      <li><strong>具體性。</strong>記錄應支持最具體、最準確的診斷。具體性之所以重要，是因為更具體的診斷往往對應到更準確的 HCC。例如，「第2型糖尿病合併第2期慢性腎臟病」更為具體，可能對應到與「未特定糖尿病」不同的 HCC。
+      <li><strong>就診時間。</strong>診斷必須在相關福利年度內記錄。2024年1月5日記錄的診斷計入 2024 年的付款；2025年1月2日記錄的則計入 2025 年。就診資料（理賠申請和面對面就診）擷取這些診斷。
+      <li><strong>臨床有效性。</strong>編碼應反映會員實際的臨床狀況。診斷必須正在被積極管理、在評估或治療計劃中被提及，或有客觀發現支持——不能是臆測性列出，也不能僅憑過往病史。
+    </ul>
+    <p>就診資料——包括理賠申請（機構和專業）以及補充記錄——輸入 HCC 模型。準確的就診資料確保準確的 HCC 和合理的 RAF 計算。</p>
+
+    <h2>付款模式與年度核算</h2>
+    <p>CMS 根據前一年理賠申請中擷取的診斷，預先計算 RAF 分數並決定計劃付款。例如，2023 年提交的診斷決定 2024 年的付款。在福利年度期間，計劃和醫療服務提供者持續記錄；這些 2024 年的診斷將決定 2025 年的付款。</p>
+    <p>這種結構產生了幾個重要的動態：</p>
+    <ul>
+      <li><strong>時間差與核算。</strong>計劃根據前一年的風險概況收取前瞻性付款，然後提交本年度的就診資料，並知道這些資料將影響未來年度的付款。如果資料稽核發現編碼錯誤，CMS 可能會對前一年的付款進行核算調整。
+      <li><strong>誘因一致與風險。</strong>準確、完整地擷取診斷，對計劃（透過合理的 RAF）和醫療服務提供者（透過反映實際病例複雜度的付款）都有利。計劃和醫療服務提供者有一致的誘因，確保每次就診時診斷都被詳盡、準確地記錄。
+      <li><strong>就診資料完整性。</strong>並非所有就診都會出現在理賠申請上。計劃可以用額外的就診記錄作補充，以反映完整的臨床全貌。CMS 區分理賠申請和補充就診記錄；在某些項目中，兩者都會輸入 HCC 模型。
+    </ul>
+
+    <h2>RADV 稽核與合規風險</h2>
+    <p><strong>風險調整資料驗證（RADV）稽核</strong>是由 CMS、州政府機構或受委託的稽核人員進行的定期合規審查。在 RADV 稽核中，稽核人員會隨機抽樣某一福利年度部分會員的病歷，驗證為 HCC 編碼提交的診斷確實有病歷支持，並且是依照臨床標準記錄的。</p>
+    <p>RADV 稽核可能發現以下幾類問題：</p>
+    <ul>
+      <li><strong>缺乏支持的診斷：</strong>診斷被編碼了，但病歷中沒有該病況的臨床證據。
+      <li><strong>指定不正確的診斷：</strong>使用了錯誤的 ICD-10 代碼，或在應使用更具體代碼時使用了較不具體的代碼。
+      <li><strong>時間或記錄缺陷：</strong>診斷有被記錄，但並非在福利年度內的實際就診中記錄，或記錄過於含糊，無法支持該臨床結論。
+      <li><strong>詐欺跡象：</strong>顯示蓄意或系統性過度編碼的模式，例如相同的診斷在許多會員身上出現卻沒有臨床依據。
+    </ul>
+    <p>如果 RADV 的發現顯示系統性錯誤或過度編碼，CMS 可能會追溯調整計劃付款或處以罰則。因此，計劃會投資於<strong>同步編碼稽核</strong>和<strong>就診資料擷取項目</strong>，在外部稽核之前發現並更正錯誤，並投資於<strong>醫療服務提供者培訓</strong>以確保準確的記錄實務。有關 CMS 目前的 RADV 措施，請參閱<a href="/zh-Hant/policy-changes.html">政策變更</a>。</p>
+
+    <h2>道德界線：具體性 vs. 過度編碼</h2>
+    <p>準確編碼與不當過度編碼之間的界線可能相當微妙。重視合規的機構是這樣把握分寸的：</p>
+    <ul>
+      <li><strong>恰當：</strong>醫療服務提供者根據當前檢驗結果和臨床評估記錄「第2型糖尿病合併第2期慢性腎臟病」；編碼人員選擇反映此記錄狀態的具體 HCC。病歷支持所聲稱的具體程度。
+      <li><strong>恰當：</strong>計劃發現許多就診記錄在評估欄中記載了某項診斷，但未填入診斷編碼欄位，於是有系統地將這些遺漏但已記錄的診斷補入就診記錄，並以醫療服務提供者當時的臨床記錄為依據。
+      <li><strong>有疑慮：</strong>醫療服務提供者在沒有明確臨床記錄支持嚴重程度的情況下，系統性地將診斷編碼為最嚴重的版本（例如，總是選擇「合併併發症」的變體）。
+      <li><strong>不當：</strong>編碼人員推斷出醫療服務提供者未記錄的診斷，或指派一個僅出現在過往病史中、卻沒有本年度正在管理的積極證據的診斷。
+    </ul>
+    <p>監管指引和法院判例已明確指出，編碼必須反映當前、正在積極管理且有病歷支持的診斷。具體性和恰當的階層應用是被期待的；沒有臨床依據的系統性升級則不被允許。計劃和醫療服務提供者的合規立場強調準確性以及對稽核人員的透明度，而非追求 RAF 最大化。</p>
+
+    <h2>其他項目中的風險調整</h2>
+    <p><strong>Medicare Advantage</strong> 使用上文所述的 HCC 模型。適用的是 CMS-HCC 第 28 版（及後續演進版本）。</p>
+    <p><strong>ACA 醫療保險市場計劃</strong>也使用風險調整機制，經費來自 ACA 的風險調整項目。註冊者病情比平均嚴重的計劃可從中央項目獲得移轉款項；註冊者比平均健康的計劃則向其繳款。其模型和 HCC 對應方式與 Medicare Advantage 略有不同，但目的相同：在不同健康風險之間拉平付款水準。</p>
+    <p><strong>Medicaid 管理式醫療</strong>的風險調整因州和項目而異。有些州使用基於 HCC 的模型；有些州則使用較簡單的人口統計因子或基於病況的分類。州 Medicaid 機構在其管理式醫療合約中定義風險調整方法。</p>
+    <p><strong>商業保險計劃</strong>不受同一套 CMS 風險調整框架的約束，不過保險公司會使用自己的內部風險模型進行定價和族群管理。</p>
+
+    <h2>相關主題</h2>
+    <p>風險調整與多項專業職能相互交織。另請參閱：</p>
+    <ul>
+      <li><a href="/zh-Hant/operations.html">健康計劃營運</a> — 計劃如何組織臨床和財務職能。
+      <li><a href="/zh-Hant/providers.html">醫療服務提供者與帳務</a> — 醫療服務提供者如何提交就診資料和理賠申請。
+      <li><a href="/zh-Hant/star-ratings.html">星級評定與品質衡量</a> — 相關的 CMS 指標及其資料來源。
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS RADV 項目</a> — 官方監管框架和稽核程序。
+    </ul>
+
+    <h2>詞彙表</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>術語</th>
+            <th>定義</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HCC（階層式病況分類）</strong></td>
+            <td>CMS 用來衡量健康狀況和預測費用、具臨床意義的診斷分組。每個 HCC 都有指定的風險權重。</td>
+          </tr>
+          <tr>
+            <td><strong>RAF（風險調整因子）</strong></td>
+            <td>會員的個人風險分數，計算方式為適用 HCC 權重的總和加上人口統計因子。RAF &gt; 1.0 表示風險高於平均；RAF &lt; 1.0 表示風險低於平均。用於調整計劃的按人頭付費金額。</td>
+          </tr>
+          <tr>
+            <td><strong>RADV（風險調整資料驗證）</strong></td>
+            <td>CMS 規定的稽核流程，驗證計劃為 HCC 編碼和付款所提交診斷的準確性。稽核人員審查病歷，確認診斷有記錄且有臨床支持。</td>
+          </tr>
+          <tr>
+            <td><strong>MEAT</strong></td>
+            <td>記錄標準的縮寫：<strong>M</strong>edical record support（病歷支持）、<strong>E</strong>ncounter date during benefit year（福利年度內的就診日期）、<strong>A</strong>ctive management（積極管理）、<strong>T</strong>herapy/specificity（治療／具體性）。醫療服務提供者以 MEAT 為指引，做出準確的臨床記錄。</td>
+          </tr>
+          <tr>
+            <td><strong>TAMPER</strong></td>
+            <td>稽核標準的縮寫：<strong>T</strong>emporality（時間性，即就診發生在福利年度內）、<strong>A</strong>ccuracy of code selection（代碼選擇的準確性）、<strong>M</strong>edical record support（病歷支持）、<strong>P</strong>roper hierarchy application（正確套用階層規則）、<strong>E</strong>ncounter type validation（就診類型驗證）、<strong>R</strong>easonableness of diagnosis（診斷的合理性）。稽核人員以 TAMPER 評估編碼的有效性。</td>
+          </tr>
+          <tr>
+            <td><strong>就診資料</strong></td>
+            <td>由醫療服務提供者提交的理賠申請和臨床記錄，記載會員的就診、服務、診斷和處置。就診資料輸入 HCC 模型。</td>
+          </tr>
+          <tr>
+            <td><strong>按人頭付費</strong></td>
+            <td>無論使用多少服務，每月按每位會員支付給計劃的固定款項。計劃為所有承保服務承擔財務風險。風險調整依據會員健康狀況修正按人頭付費金額。</td>
+          </tr>
+          <tr>
+            <td><strong>階層規則</strong></td>
+            <td>在 HCC 模型中的一項規則：如果會員符合同一病況相關的多個 HCC，只計算最嚴重的那一個。階層規則防止重複計算，確保 HCC 的準確性。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>請向原始來源查證：</strong>本頁概略描述風險調整的運作方式。有關當前 HCC 模型版本、RAF 計算細節、RADV 程序和合規指引，請參閱 <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov（RADV）</a>、您所屬計劃的合規政策，以及您所在州的管理式醫療法規。本內容僅供教育用途，不構成法律或合規建議。
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/risk-adjustment.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

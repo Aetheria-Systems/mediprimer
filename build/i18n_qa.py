@@ -7,9 +7,15 @@ Four deterministic QA gates to validate translations before publishing:
 3. completeness_ok: flag translations that are actually still in English
 4. glossary_ok: verify glossary terms are translated correctly
 """
+import json
+import os
 import re
 from collections import Counter
 from html.parser import HTMLParser
+
+_LANGUAGES_PATH = os.path.join(os.path.dirname(__file__), "languages.json")
+_LANGUAGES = json.load(open(_LANGUAGES_PATH, encoding="utf-8"))
+_LOCALE_CODES = [lang["code"] for lang in _LANGUAGES.get("languages", [])]
 
 
 class TagExtractor(HTMLParser):
@@ -37,15 +43,19 @@ def _normalize_internal_href(href):
     if href.startswith('http://') or href.startswith('https://'):
         return href
 
-    # Internal hrefs: strip leading /<lang_code> prefix if present
+    # Internal hrefs: strip leading /<lang_code> prefix if present.
+    # Restrict to the actual configured locale codes (not a generic
+    # 2-3 letter pattern) so real routes like /faq/ or /api/ can't be
+    # mistaken for a language prefix.
+    LANG_CODE = '|'.join(re.escape(code) for code in _LOCALE_CODES)
     if href.startswith('/'):
         # Handle language home pages: /es/ -> /
-        match = re.match(r'^/([a-z]{2,3})/?$', href)
+        match = re.match(r'^/(' + LANG_CODE + r')/?$', href)
         if match:
             return '/'
 
-        # Match pattern /<1-3 letter code>/rest (e.g., /es/page.html -> /page.html)
-        match = re.match(r'^/([a-z]{2,3})/(.+)$', href)
+        # Match pattern /<code>/rest (e.g., /es/page.html -> /page.html)
+        match = re.match(r'^/(' + LANG_CODE + r')/(.+)$', href)
         if match:
             return '/' + match.group(2)
 
@@ -284,10 +294,38 @@ def facts_diff(en_text, back_translated_text):
     # Program entity keywords for smart matching
     entity_keywords = {'Medicare', 'Medicaid', 'CHIP', 'SHIP', 'IRMAA', 'MOOP', 'QMB', 'SLMB', 'PACE', 'SNF', 'SNP', 'MCO', 'DME', 'EOB', 'ABN', 'COB', 'CBP'}
 
+    # Some keywords are acronyms whose full-English-name expansion is what a
+    # back-translation naturally produces (e.g. Chinese "耐用醫療設備" back-
+    # translates to "durable medical equipment", not the abbreviation "DME").
+    # Matching only the bare acronym string produced false failures despite
+    # the concept being fully and correctly preserved. Accept either form.
+    keyword_expansions = {
+        'DME': 'durable medical equipment',
+        'EOB': 'explanation of benefits',
+        'ABN': 'advance beneficiary notice',
+        'COB': 'coordination of benefits',
+        'MOOP': 'maximum out-of-pocket',
+        'SNF': 'skilled nursing facility',
+        'SNP': 'special needs plan',
+        'MCO': 'managed care organization',
+        'PACE': 'program of all-inclusive care for the elderly',
+    }
+
     def get_entity_keywords(entity_text):
         """Extract program keywords from an entity string."""
         words = entity_text.split()
         return set(w for w in words if w in entity_keywords)
+
+    def keyword_present(kw, text):
+        """True if the bare keyword or its known expansion appears in text."""
+        text_lower = text.casefold()
+        if re.search(rf"\b{re.escape(kw.casefold())}\b", text_lower):
+            return True
+        expansion = keyword_expansions.get(kw)
+        return (
+            expansion is not None
+            and re.search(rf"\b{re.escape(expansion.casefold())}\b", text_lower) is not None
+        )
 
     # Categorize diffs: NUMERIC diffs are STRICT, ENTITY diffs use smart matching
     for fact_type, value in only_in_en:
@@ -302,7 +340,7 @@ def facts_diff(en_text, back_translated_text):
             en_keywords = get_entity_keywords(value)
             if en_keywords:  # Has program keywords (Medicare, Medicaid, etc.)
                 # Fail only if ALL keywords are missing from back_translated_text
-                if all(kw not in back_translated_text for kw in en_keywords):
+                if all(not keyword_present(kw, back_translated_text) for kw in en_keywords):
                     entity_diffs.append(f"Missing: entity '{value}' (keywords: {','.join(en_keywords)})")
                 # else: Keywords found, entity considered present despite rewording
 
@@ -418,6 +456,14 @@ def glossary_ok(en_html, tr_html, terms):
 
     missing = []
 
+    # Full-width vs half-width parentheses around a Latin-script acronym
+    # embedded in CJK text (e.g. "（CMS）" vs "(CMS)") is a punctuation
+    # style choice, not a translation error -- the same model produces
+    # either form inconsistently, even within one page. Normalize both
+    # sides to half-width for comparison only.
+    def _normalize_parens(s):
+        return s.replace("（", "(").replace("）", ")")
+
     for en_term, tr_term in terms.items():
         # Only check if term actually appears in English source
         if en_term not in en_text:
@@ -428,7 +474,7 @@ def glossary_ok(en_html, tr_html, terms):
         # convention, not a requirement — correct Spanish prose lowercases
         # common nouns mid-sentence (e.g. "cada reclamación precisa"),
         # which a case-sensitive check would wrongly reject.
-        if tr_term.lower() not in tr_text.lower():
+        if _normalize_parens(tr_term.lower()) not in _normalize_parens(tr_text.lower()):
             missing.append(f"'{en_term}' (should be '{tr_term}')")
 
     if missing:

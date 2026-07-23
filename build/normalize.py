@@ -158,8 +158,8 @@ def header(active_key, page_name):
                 langs_dict[code] = banner_text
 
         langs_json = json.dumps(langs_dict, ensure_ascii=False)
-        header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
-                       f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
+        header_html = (f'<!--mp-langs--><script>window.MP_LANGS={langs_json};</script>\n'
+                       f'<script src="/lang-suggest.js" defer></script><!--/mp-langs-->\n' + header_html)
 
     return header_html
 
@@ -229,8 +229,13 @@ FOOTER = '''<footer class="site-footer">
 </footer>'''
 
 HEADER_RE = re.compile(
-    r'(?:<script>window\.MP_LANGS=.*?</script>\s*'
-    r'<script src="/lang-suggest\.js" defer></script>\s*)?'
+    r'(?:'
+    r'<!--mp-langs-->\s*<script>window\.MP_LANGS=.*?</script>\s*'
+    r'<script src="/lang-suggest\.js" defer></script><!--/mp-langs-->'
+    r'|'
+    r'<script>window\.MP_LANGS=.*?</script>\s*'
+    r'<script src="/lang-suggest\.js" defer></script>'
+    r')?\s*'
     r'<header class="site-header">.*?</header>',
     re.DOTALL,
 )

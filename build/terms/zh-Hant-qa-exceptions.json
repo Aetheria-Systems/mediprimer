@@ -1,0 +1,18 @@
+{
+  "_comment": "Per-page exclusions from the mandatory glossary QA check (translate.py's run_gates call). These terms remain in the glossary passed to the translator as normal -- only the automated QA verification is skipped for the listed (page, term) pairs, because the English source uses the term in a sense the glossary entry doesn't cover (e.g. a verb, not the noun the Chinese translation maps to). Document the reason inline. Same known case as terms/es-qa-exceptions.json's brokers.html entry.",
+  "brokers.html": {
+    "Claim": "Line 263's 'Claim your plan has a larger network...' uses 'Claim' as a verb (to falsely assert), not the insurance-claim noun '理賠申請' maps to. Forcing '理賠申請' into that sentence would be a mistranslation. 'Claim' stays a required term on other pages (claims-coding.html, operations.html, how-do-i.html, glossary.html) where it's used correctly."
+  },
+  "chip.html": {
+    "Medicare": "The only 'Medicare' occurrence in this page's <main> content is inside 'Centers for Medicare & Medicaid Services (CMS)', which has its own dedicated glossary entry translating the full compound name to '美國醫療保險和醫療補助服務中心（CMS）' -- a correct, fully-localized rendering that (unlike Spanish, which keeps 'Medicare' as an English loanword even mid-phrase) does not retain the bare English word 'Medicare' as a substring. Verified the CMS full-name translation is present and correct; this is not a missing translation."
+  },
+  "insurance-departments.html": {
+    "Medicaid": "Same case as chip.html's 'Medicare' exception: the only 'Medicaid' occurrence is inside 'Centers for Medicare & Medicaid Services (CMS)', correctly translated in full as '美國醫療保險和醫療補助服務中心（CMS）', which does not retain the bare English word 'Medicaid' as a substring."
+  },
+  "medicare-part-b.html": {
+    "Medicaid": "Same case as chip.html's 'Medicare' exception: the only 'Medicaid' occurrence is inside 'Centers for Medicare & Medicaid Services (CMS)', correctly translated in full, which does not retain the bare English word 'Medicaid' as a substring."
+  },
+  "providers.html": {
+    "Provider": "This page (NPI/PECOS/NPPES enrollment reference, dense tabular content) consistently uses the shorter '提供者' rather than the glossary's full '醫療服務提供者' throughout -- verified the shorter form appears correctly and consistently, not a missing or wrong translation, just a natural abbreviation favored by this page's compact technical/tabular register. 'Provider' stays a required term on other pages using normal prose."
+  }
+}
