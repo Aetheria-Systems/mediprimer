@@ -188,8 +188,8 @@ def render_header(code, active_key, page_name, chrome, languages=None):
             langs_dict["en"] = "Would you like to read this page in English?"
 
         langs_json = json.dumps(langs_dict, ensure_ascii=False)
-        header_html = (f'<script>window.MP_LANGS={langs_json};</script>\n'
-                       f'<script src="/lang-suggest.js" defer></script>\n' + header_html)
+        header_html = (f'<!--mp-langs--><script>window.MP_LANGS={langs_json};</script>\n'
+                       f'<script src="/lang-suggest.js" defer></script><!--/mp-langs-->\n' + header_html)
 
     return header_html
 

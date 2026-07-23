@@ -446,6 +446,14 @@ def glossary_ok(en_html, tr_html, terms):
 
     missing = []
 
+    # Full-width vs half-width parentheses around a Latin-script acronym
+    # embedded in CJK text (e.g. "（CMS）" vs "(CMS)") is a punctuation
+    # style choice, not a translation error -- the same model produces
+    # either form inconsistently, even within one page. Normalize both
+    # sides to half-width for comparison only.
+    def _normalize_parens(s):
+        return s.replace("（", "(").replace("）", ")")
+
     for en_term, tr_term in terms.items():
         # Only check if term actually appears in English source
         if en_term not in en_text:
@@ -456,7 +464,7 @@ def glossary_ok(en_html, tr_html, terms):
         # convention, not a requirement — correct Spanish prose lowercases
         # common nouns mid-sentence (e.g. "cada reclamación precisa"),
         # which a case-sensitive check would wrongly reject.
-        if tr_term.lower() not in tr_text.lower():
+        if _normalize_parens(tr_term.lower()) not in _normalize_parens(tr_text.lower()):
             missing.append(f"'{en_term}' (should be '{tr_term}')")
 
     if missing:

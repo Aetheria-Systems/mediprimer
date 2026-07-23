@@ -17,9 +17,10 @@ DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-date
 LANGUAGES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "languages.json")
 ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
 SWITCHER_RE = re.compile(r'\n?<!--switcher-->.*?<!--/switcher-->', re.DOTALL)
+MP_LANGS_RE = re.compile(r'\n?<!--mp-langs-->.*?<!--/mp-langs-->', re.DOTALL)
 
 def content_hash(html):
-    core = SEO_RE.sub("", ANALYTICS_RE.sub("", SWITCHER_RE.sub("", html)))
+    core = SEO_RE.sub("", ANALYTICS_RE.sub("", SWITCHER_RE.sub("", MP_LANGS_RE.sub("", html))))
     text = re.sub(r"<[^>]+>", " ", core)
     return hashlib.md5(re.sub(r"\s+", " ", text).strip().encode()).hexdigest()
 

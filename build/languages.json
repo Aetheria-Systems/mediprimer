@@ -25,7 +25,7 @@
       "native": "繁體中文",
       "tier": 2,
       "rtl": false,
-      "launched": false,
+      "launched": true,
       "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
       "ui": {
         "switcher_label": "語言",

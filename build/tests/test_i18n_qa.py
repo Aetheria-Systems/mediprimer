@@ -304,6 +304,24 @@ class TestGlossaryOk:
         ok, missing = glossary_ok(en_html, tr_html, terms)
         assert ok, f"Correct terms should pass: {missing}"
 
+    def test_glossary_ok_tolerates_paren_width_mismatch(self):
+        """Full-width （） vs half-width () around a Latin-script acronym
+        embedded in CJK text is a punctuation style choice, not a
+        translation error -- the same model produces either form
+        inconsistently, even within one page (verified against real
+        Chinese translation output during the zh-Hant launch)."""
+        en_html = """<html><body>
+<p>Contact the Centers for Medicare & Medicaid Services (CMS) for details.</p>
+</body></html>"""
+        tr_html = """<html><body>
+<p>詳情請聯絡美國醫療保險和醫療補助服務中心(CMS)。</p>
+</body></html>"""
+        terms = {
+            "Centers for Medicare & Medicaid Services (CMS)": "美國醫療保險和醫療補助服務中心（CMS）"
+        }
+        ok, missing = glossary_ok(en_html, tr_html, terms)
+        assert ok, f"Half-width parens should still match full-width glossary term: {missing}"
+
     def test_glossary_ok_catches_wrong_term(self):
         """Wrong glossary translation fails."""
         en_html = """<html><body>
