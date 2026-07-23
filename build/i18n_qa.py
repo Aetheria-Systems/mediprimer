@@ -287,10 +287,35 @@ def facts_diff(en_text, back_translated_text):
     # Program entity keywords for smart matching
     entity_keywords = {'Medicare', 'Medicaid', 'CHIP', 'SHIP', 'IRMAA', 'MOOP', 'QMB', 'SLMB', 'PACE', 'SNF', 'SNP', 'MCO', 'DME', 'EOB', 'ABN', 'COB', 'CBP'}
 
+    # Some keywords are acronyms whose full-English-name expansion is what a
+    # back-translation naturally produces (e.g. Chinese "耐用醫療設備" back-
+    # translates to "durable medical equipment", not the abbreviation "DME").
+    # Matching only the bare acronym string produced false failures despite
+    # the concept being fully and correctly preserved. Accept either form.
+    keyword_expansions = {
+        'DME': 'durable medical equipment',
+        'EOB': 'explanation of benefits',
+        'ABN': 'advance beneficiary notice',
+        'COB': 'coordination of benefits',
+        'MOOP': 'maximum out-of-pocket',
+        'SNF': 'skilled nursing facility',
+        'SNP': 'special needs plan',
+        'MCO': 'managed care organization',
+        'PACE': 'program of all-inclusive care for the elderly',
+    }
+
     def get_entity_keywords(entity_text):
         """Extract program keywords from an entity string."""
         words = entity_text.split()
         return set(w for w in words if w in entity_keywords)
+
+    def keyword_present(kw, text):
+        """True if the bare keyword or its known expansion appears in text."""
+        text_lower = text.lower()
+        if kw in text:
+            return True
+        expansion = keyword_expansions.get(kw)
+        return expansion is not None and expansion in text_lower
 
     # Categorize diffs: NUMERIC diffs are STRICT, ENTITY diffs use smart matching
     for fact_type, value in only_in_en:
@@ -305,7 +330,7 @@ def facts_diff(en_text, back_translated_text):
             en_keywords = get_entity_keywords(value)
             if en_keywords:  # Has program keywords (Medicare, Medicaid, etc.)
                 # Fail only if ALL keywords are missing from back_translated_text
-                if all(kw not in back_translated_text for kw in en_keywords):
+                if all(not keyword_present(kw, back_translated_text) for kw in en_keywords):
                     entity_diffs.append(f"Missing: entity '{value}' (keywords: {','.join(en_keywords)})")
                 # else: Keywords found, entity considered present despite rewording
 

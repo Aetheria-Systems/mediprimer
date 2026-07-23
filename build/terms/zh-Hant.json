@@ -36,10 +36,10 @@
     "Income-Related Monthly Adjustment Amount (IRMAA)": "與收入相關的每月調整金額（IRMAA）",
     "Long-Term Services and Supports (LTSS)": "長期服務與支援（LTSS）",
     "Managed Care Organization (MCO)": "管理式醫療機構（MCO）",
-    "Medicaid": "Medicaid（醫療補助）",
+    "Medicaid": "Medicaid",
     "Medically Necessary": "醫療必需的",
-    "Medicare": "Medicare（醫療保險）",
-    "Medicare Advantage (Part C)": "Medicare Advantage（優勢計劃，C部分）",
+    "Medicare": "Medicare",
+    "Medicare Advantage (Part C)": "Medicare Advantage",
     "Medicare Savings Program (MSP)": "醫療保險儲蓄計劃（MSP）",
     "Medigap (Medicare Supplement)": "Medigap（醫療保險補充計劃）",
     "Metal Tiers": "金屬等級",
@@ -77,8 +77,8 @@
     "Tiers (Drug Tiers)": "藥品等級",
     "Utilization Management (UM)": "使用管理（UM）",
     "Waiting Period": "等待期",
-    "CHIP": "CHIP（兒童健康保險計劃）",
-    "SHIP": "SHIP（州醫療保險援助計劃）",
+    "CHIP": "CHIP",
+    "SHIP": "SHIP",
     "General Enrollment Period": "一般註冊期",
     "Special Enrollment Period": "特殊註冊期",
     "Late Enrollment Penalty": "遲交註冊罰款",
@@ -91,7 +91,7 @@
     "Annual Notice of Change": "年度變更通知",
     "Hospice": "善終服務",
     "Home Health": "家庭醫療照護",
-    "Medicare Advantage": "Medicare Advantage（優勢計劃）"
+    "Medicare Advantage": "Medicare Advantage"
   },
   "sources": [
     "https://www.cms.gov/cciio/resources/files/downloads/sbc-uniform-glossary-chinese.pdf",
