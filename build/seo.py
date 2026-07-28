@@ -13,6 +13,15 @@ BASE = "https://mediprimer.org"
 TODAY = sys.argv[1] if len(sys.argv) > 1 else "2026-07-12"
 PUBLISHED = "2026-07-12"
 EDITOR = "Kurt Hamm"  # named editor for E-E-A-T; change here if the byline should differ
+EDITOR_SCHEMA = {
+    "@type": "Person", "name": EDITOR, "url": BASE + "/about.html",
+    "jobTitle": "Founder & Editor",
+    "description": "25+ years in enterprise technology, including systems work inside a "
+                   "national Medicaid/Medicare managed-care organization, plus service as a "
+                   "state-agency CIO and as Chief Administrative Officer of a state "
+                   "employment agency. Service-disabled veteran.",
+    "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"],
+}
 DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-dates.json")
 LANGUAGES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "languages.json")
 ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
@@ -244,7 +253,7 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
     parts.append(ld({"@context": "https://schema.org", "@type": "WebPage",
                      "name": clean, "description": unescape(desc), "url": url, "inLanguage": in_language,
                      "datePublished": PUBLISHED, "dateModified": mod_date,
-                     "author": {"@type": "Person", "name": EDITOR, "url": BASE + "/about.html"},
+                     "author": EDITOR_SCHEMA,
                      "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": BASE + "/"},
                      "publisher": {"@type": "Organization", "name": "MediPrimer",
                                    "founder": {"@type": "Person", "name": EDITOR}}}))
