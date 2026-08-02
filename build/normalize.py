@@ -89,6 +89,20 @@ ACTIVE = {
     "veterans-medicare.html": "members", "edge-cases.html": "members", "questions-to-ask.html": "members",
     "checklists.html": "members", "enrollment-calendar.html": "members",
     "medicaid-starting-out.html": "members", "using-plan-finder.html": "members", "common-mistakes.html": "members",
+    # Content-gap pages (2026-07-28): not registered in the visible nav menus
+    # (linked from hub pages + how-do-i.html instead, per the page-creation
+    # convention), but still need an ACTIVE entry or normalize.py silently
+    # excludes them from all future chrome maintenance (header/footer
+    # template changes, switcher fixes, etc. would never reach them again).
+    "marketplace-premium-increase.html": "members", "medicaid-estate-recovery.html": "members",
+    "medicaid-spend-down-look-back.html": "members", "medicaid-work-requirements.html": "members",
+    "medicare-advantage-prior-authorization.html": "members",
+    "medicare-advantage-to-original-medicare.html": "members",
+    "medicare-dental-vision-hearing.html": "members", "medicare-hospice-home-health.html": "members",
+    "medicare-immigrants.html": "members", "medicare-long-term-care.html": "members",
+    "medicare-mental-health.html": "members", "medicare-scams.html": "members",
+    "medicare-travel.html": "members", "medicare-weight-loss-drugs.html": "members",
+    "hospital-observation-status.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",

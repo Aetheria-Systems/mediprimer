@@ -20,8 +20,8 @@
   "hash": "ebe3c4873b5c4f4a35d20b22a5269f78"
  },
  "caregivers.html": {
-  "date": "2026-07-22",
-  "hash": "4479099a3b01eff1a1d6560fbf4c506f"
+  "date": "2026-07-28",
+  "hash": "2cf50d1aaeff5ee28656a46d64106261"
  },
  "checklists.html": {
   "date": "2026-07-22",
@@ -32,8 +32,8 @@
   "hash": "13fc8f4ce38e76b6e2f0f1c79f59ae40"
  },
  "choosing-coverage.html": {
-  "date": "2026-07-22",
-  "hash": "bb672331c7aaba06889fff7737dd81d5"
+  "date": "2026-08-02",
+  "hash": "636c33f785030563556682d026ae34cc"
  },
  "claims-coding.html": {
   "date": "2026-07-22",
@@ -48,7 +48,7 @@
   "hash": "cbe97e954405f6134fc024b9c6fd0792"
  },
  "costs.html": {
-  "date": "2026-07-22",
+  "date": "2026-08-02",
   "hash": "c07287d940ac144c38941caa0a0b9217"
  },
  "coverage-basics.html": {
@@ -95,9 +95,13 @@
   "date": "2026-07-22",
   "hash": "0deff19ddad4182c65c24d3f3b1415d2"
  },
+ "hospital-observation-status.html": {
+  "date": "2026-08-02",
+  "hash": "7fe21226ad588cfe98d8c4ec264f90d1"
+ },
  "how-do-i.html": {
-  "date": "2026-07-22",
-  "hash": "d554c3a70d9ee9667eea2b8d6c1c33ac"
+  "date": "2026-08-02",
+  "hash": "7e81231feb2703bd7a394f0641c895bd"
  },
  "index.html": {
   "date": "2026-07-22",
@@ -107,37 +111,97 @@
   "date": "2026-07-22",
   "hash": "3691321ca2b8a9f02d043f918dbf7255"
  },
+ "marketplace-premium-increase.html": {
+  "date": "2026-07-28",
+  "hash": "2cd6c9e40901e2d85e3a453b34ed6ab3"
+ },
  "marketplace.html": {
-  "date": "2026-07-22",
-  "hash": "e8286b3f55d64b99748fcc249be57f25"
+  "date": "2026-08-02",
+  "hash": "9e3bcc86a119470882ed86b3a160113c"
  },
  "medicaid-eligibility.html": {
-  "date": "2026-07-22",
-  "hash": "a909be0967fc4f5ae111264ada7632c6"
+  "date": "2026-07-28",
+  "hash": "de033a4b2af385de53ec7d90e549c43c"
+ },
+ "medicaid-estate-recovery.html": {
+  "date": "2026-07-28",
+  "hash": "bf7556c47a34821785455bbbc611536c"
+ },
+ "medicaid-spend-down-look-back.html": {
+  "date": "2026-07-28",
+  "hash": "22432bb821151a67ab7e08946248946b"
  },
  "medicaid-starting-out.html": {
   "date": "2026-07-22",
   "hash": "0068c7f85f228c48751c166afa41d09b"
  },
+ "medicaid-work-requirements.html": {
+  "date": "2026-07-28",
+  "hash": "e2c1fbec971594a2933a11629c4d5703"
+ },
+ "medicare-advantage-prior-authorization.html": {
+  "date": "2026-07-28",
+  "hash": "7528052503e2d48cd7df1c7837295b48"
+ },
+ "medicare-advantage-to-original-medicare.html": {
+  "date": "2026-07-28",
+  "hash": "16d17c3b1c203dcb65b30af24f3a0335"
+ },
  "medicare-advantage.html": {
-  "date": "2026-07-22",
-  "hash": "0a5d3caad1057fe402c4a46ef435148f"
+  "date": "2026-07-28",
+  "hash": "783bde73184132e7506bc369242cf4ba"
+ },
+ "medicare-dental-vision-hearing.html": {
+  "date": "2026-07-28",
+  "hash": "5c3d3a009306451a42cfdeeeeedf7b0b"
+ },
+ "medicare-hospice-home-health.html": {
+  "date": "2026-07-28",
+  "hash": "8e56692390bc67d076f763cc870b5a09"
+ },
+ "medicare-immigrants.html": {
+  "date": "2026-07-28",
+  "hash": "fbe6a741651e42d62f25558ee1805d35"
+ },
+ "medicare-long-term-care.html": {
+  "date": "2026-07-28",
+  "hash": "ed8db2bd490738109dfc91f9dfe9fcab"
+ },
+ "medicare-mental-health.html": {
+  "date": "2026-07-28",
+  "hash": "bf3c20da00dfabb75b601d1a29bfc898"
  },
  "medicare-part-a.html": {
-  "date": "2026-07-22",
-  "hash": "85a9a335b7e99e37f0868928e83fe810"
+  "date": "2026-08-02",
+  "hash": "c4bd8d5c6dce9e70433afed91c4e5a6c"
  },
  "medicare-part-b.html": {
-  "date": "2026-07-22",
-  "hash": "3c453bb3bb144b3c2dca1c12e05ecbff"
+  "date": "2026-07-28",
+  "hash": "1c0966c2a33c3a6c7525ad451df22352"
  },
  "medicare-part-d.html": {
-  "date": "2026-07-22",
-  "hash": "2446959ac752bcdf517bfda0bed7db89"
+  "date": "2026-07-28",
+  "hash": "2a4941c10a7f2ba9ffac9440c4fc74b8"
+ },
+ "medicare-scams.html": {
+  "date": "2026-07-28",
+  "hash": "93e635c958f6eae092026f562e8c5243"
+ },
+ "medicare-star-ratings.html": {
+  "date": "2026-07-29",
+  "hash": "4006cb45c9135a6a7fd73f0a4f276bd6"
+ },
+ "medicare-travel.html": {
+  "date": "2026-07-28",
+  "hash": "843cde8eddd151f2c53826f27ca207ab"
+ },
+ "medicare-weight-loss-drugs.html": {
+  "date": "2026-07-28",
+  "hash": "148a54685d8d5b78809d7037fc9a4c51"
  },
  "medigap.html": {
-  "date": "2026-07-22",
-  "hash": "3acd969ca43f61acb8ac0056f451dfb9"
+  "date": "2026-07-28",
+  "hash": "2fc5cfb99b400d1467bdc7a6423b9ad9"
  },
  "member-journey.html": {
   "date": "2026-07-22",
@@ -164,7 +228,7 @@
   "hash": "11df94bdf800975b656cc799aa75c90a"
  },
  "planning-for-two.html": {
-  "date": "2026-07-22",
+  "date": "2026-08-02",
   "hash": "e79b98c53c6f27f888b1cfdd494ce7a9"
  },
  "policy-changes.html": {
@@ -196,8 +260,8 @@
   "hash": "d5a31f77315e695fd8349ef113fb6e49"
  },
  "rights.html": {
-  "date": "2026-07-22",
-  "hash": "25f75f39f333c4fded45bccfbdf54a24"
+  "date": "2026-07-28",
+  "hash": "dc6b10255962aa809d3327e0df51eb58"
  },
  "risk-adjustment.html": {
   "date": "2026-07-22",
@@ -208,11 +272,11 @@
   "hash": "5b75ce707a4e39a0d7ebc3a0a4b5c144"
  },
  "site-map.html": {
-  "date": "2026-07-22",
-  "hash": "16143826c6f4d583f3f05e647a0fdbd4"
+  "date": "2026-08-02",
+  "hash": "9941acd32c0e4eba1edead0b4ad47220"
  },
  "star-ratings.html": {
-  "date": "2026-07-22",
+  "date": "2026-08-02",
   "hash": "472c70a73a003b533d6b39feb0536823"
  },
  "state-medicaid.html": {
@@ -223,13 +287,17 @@
   "date": "2026-07-22",
   "hash": "d864e619e5a7d44d4b9368de7469a260"
  },
+ "switching-back-to-original-medicare.html": {
+  "date": "2026-07-28",
+  "hash": "cfcf0155325973a741d046e587980d67"
+ },
  "terms-of-use.html": {
   "date": "2026-07-22",
   "hash": "2c4c06fe5da72ca836655a0cef1c6815"
  },
  "turning-65.html": {
-  "date": "2026-07-22",
-  "hash": "c0ab6d96f7e9c969acb1a29dc89235f1"
+  "date": "2026-07-28",
+  "hash": "d7b235180f1ab073e81f974d6118f9ec"
  },
  "using-plan-finder.html": {
   "date": "2026-07-22",
