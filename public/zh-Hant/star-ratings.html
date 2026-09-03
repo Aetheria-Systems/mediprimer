@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Medicare 星級評定與品質衡量指標 — MediPrimer</title>
-<meta name="description" content="CMS 星級評定解析：適用於 Medicare Advantage 與 Part D 計劃的 1–5 分品質量表、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
+<meta name="description" content="CMS 星級評定解析：Medicare Advantage 與 D 部分計劃的 1–5 品質評分制度、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
@@ -26,13 +26,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
 <meta property="og:title" content="Medicare 星級評定與品質衡量指標 — MediPrimer">
-<meta property="og:description" content="CMS 星級評定解析：適用於 Medicare Advantage 與 Part D 計劃的 1–5 分品質量表、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
+<meta property="og:description" content="CMS 星級評定解析：Medicare Advantage 與 D 部分計劃的 1–5 品質評分制度、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
 <meta property="og:url" content="https://mediprimer.org/zh-Hant/star-ratings.html">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Medicare 星級評定與品質衡量指標 — MediPrimer">
-<meta name="twitter:description" content="CMS 星級評定解析：適用於 Medicare Advantage 與 Part D 計劃的 1–5 分品質量表、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare 星級評定與品質衡量指標", "description": "CMS 星級評定解析：適用於 Medicare Advantage 與 Part D 計劃的 1–5 分品質量表、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。", "url": "https://mediprimer.org/zh-Hant/star-ratings.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<meta name="twitter:description" content="CMS 星級評定解析：Medicare Advantage 與 D 部分計劃的 1–5 品質評分制度、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare 星級評定與品質衡量指標", "description": "CMS 星級評定解析：Medicare Advantage 與 D 部分計劃的 1–5 品質評分制度、衡量指標組合，以及品質獎勵金（Quality Bonus Payments）。", "url": "https://mediprimer.org/zh-Hant/star-ratings.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-08-20", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/star-ratings.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/star-ratings.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/star-ratings.html">
@@ -118,7 +118,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
   <div class="wrap">
     <p class="kicker">專業人士專區</p>
     <h1>Medicare 星級評定與品質衡量指標</h1>
-    <p>CMS 針對 Medicare Advantage 與 Part D 計劃所建立的 1–5 分標準化品質衡量制度，推動計劃之間的競爭、回饋金分配以及會員的選擇。</p>
+    <p>什麼是星級衡量指標、它們如何彙整成 CMS 對 Medicare Advantage 與 D 部分計劃的 1–5 分評級，以及評級如何影響獎勵金、回饋金與會員選擇。</p>
   </div>
 </section>
 
@@ -126,22 +126,27 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
   <div class="wrap">
 
     <h2>什麼是星級評定？</h2>
-    <p>Medicare 星級評定是 CMS 每年為 Medicare Advantage（MA）與醫療保險D部分（Part D）處方藥計劃發布的綜合品質衡量指標。星級評定採用 1–5 分制，彙整數十項臨床、營運及會員體驗方面的表現，讓各計劃能以單一標準化指標互相比較。這套 5 星制度為會員提供清楚可見的差異化資訊，影響會員選擇計劃的行為，並決定計劃是否符合<strong>品質獎勵金（Quality Bonus Payments）</strong>（回饋金）的資格。</p>
-    <p>CMS 每年秋季在 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> 發布星級評定，通常於次一個計劃年度生效。業界專業人士也可透過詳細的技術文件與公開資料集取得評定資料。</p>
+    <p>Medicare 星級評定（Star Ratings）是 CMS 每年針對 Medicare Advantage（MA）與 D 部分處方藥計劃發布的綜合品質衡量結果。星級評定以 1–5 分的量表，彙總數十項臨床、營運與會員體驗指標的表現，讓不同計劃能用單一標準化指標互相比較。這套 5 星制度為會員提供清楚的差異化資訊、影響計劃選擇行為，並決定計劃是否符合<strong>品質獎勵金（Quality Bonus Payments）</strong>（回饋金）的資格。</p>
+    <p>CMS 每年秋季在 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> 發布星級評定，通常適用於下一個計劃年度。業界專業人士也可以透過詳細的技術文件與公開資料集取得評級資料。</p>
+    <p><em>本頁是專業參考資料。如果您是正在比較計劃的會員，請參閱白話指南：<a href="/zh-Hant/medicare-star-ratings.html">Medicare 星級評定：星星代表什麼</a>。</em></p>
+
+    <h2>什麼是星級衡量指標？</h2>
+    <p><strong>星級衡量指標</strong>是彙整成合約整體星級評定的個別品質與績效指標。每項指標會依 CMS 設定的門檻（稱為<strong>切分點</strong>）評為一到五星；這些切分點每年會根據衡量期間的實際表現重新計算，接著各指標的星級再依權重合併成領域評級與整體評級。以 2026 年星級評定為例，MA-PD 合約最多以 43 項不同指標評分，僅有 MA（不含 D 部分）的合約最多 33 項，獨立 PDP 合約最多 12 項。<!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>這些指標來自四個標準化資料來源 — HEDIS 臨床資料、CAHPS 會員體驗調查、健康結果調查（HOS），以及 CMS 行政與投訴資料 — 並歸入下方詳述的五個領域。具權威性的指標清單、權重與切分點每年發布於 Part C &amp; D 星級評定技術說明（Technical Notes），可在 <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">CMS.gov 的 Part C &amp; D 績效資料頁面</a>取得。<!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --></p>
 
     <h2>評分量表與計算方式</h2>
     <p>1–5 星量表的意義如下：</p>
     <ul>
-      <li><strong>5 星：</strong>表現名列前茅</li>
+      <li><strong>5 星：</strong>表現最佳之列</li>
       <li><strong>4–4.5 星：</strong>高於平均</li>
       <li><strong>3–3.5 星：</strong>平均水準</li>
       <li><strong>2–2.5 星：</strong>低於平均</li>
-      <li><strong>1 星：</strong>表現墊底</li>
+      <li><strong>1 星：</strong>表現最差之列</li>
     </ul>
-    <p>每個計劃會獲得一個整體星級評分（各領域評分的加權平均），同時每個品質領域也有各自的評分。評分依據前一年的資料計算，並可在多個層級查閱：全國計劃層級評分、區域差異，以及個別衡量指標的表現。</p>
+    <p>每個計劃會獲得一個整體星級（各領域評級的加權平均），以及每個品質領域的個別評級。評級使用前一年的資料計算，並提供多個層級的結果：全國性的計劃層級評級、區域差異，以及各指標的個別表現。</p>
 
     <h2>衡量領域</h2>
-    <p>星級評定針對計劃品質與表現衡量五大核心領域：</p>
+    <p>星級評定衡量計劃品質與績效的五個核心領域：</p>
 
     <div class="table-scroll">
       <table>
@@ -155,82 +160,83 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
         <tbody>
           <tr>
             <td><strong>保持健康／預防照護</strong></td>
-            <td>篩檢率（癌症、心血管疾病、糖尿病）、疫苗接種、年度健康檢查、預防性服務使用情況</td>
+            <td>篩檢率（癌症、心血管、糖尿病）、疫苗接種、年度健康檢查、預防性服務使用情況</td>
             <td>HEDIS、行政理賠資料</td>
           </tr>
           <tr>
             <td><strong>慢性病管理</strong></td>
-            <td>糖尿病、高血壓、冠狀動脈疾病（CAD）、慢性阻塞性肺病（COPD）、憂鬱症的疾病管理品質；用藥依從性；適當的檢驗與監測</td>
+            <td>糖尿病、高血壓、冠狀動脈疾病（CAD）、慢性阻塞性肺病（COPD）、憂鬱症的疾病管理品質；服藥依從性；適當的檢測與監測</td>
             <td>HEDIS、HOS、行政理賠資料</td>
           </tr>
           <tr>
             <td><strong>會員體驗與滿意度</strong></td>
-            <td>計劃回應速度、客戶服務、照護協調，以及對照護與承保的整體滿意度</td>
-            <td>CAHPS 調查（C部分與D部分）</td>
+            <td>計劃回應速度、客戶服務、照護協調、對照護與承保的整體滿意度</td>
+            <td>CAHPS 調查（C 部分與 D 部分）</td>
           </tr>
           <tr>
             <td><strong>投訴與客戶服務</strong></td>
-            <td>會員投訴率、上訴與申訴處理情況、計劃對會員意見的回應程度</td>
+            <td>會員投訴率、上訴與申訴處理、計劃對會員關切事項的回應</td>
             <td>CMS 投訴資料庫、上訴資料</td>
           </tr>
           <tr>
-            <td><strong>藥品安全與定價準確度</strong></td>
-            <td>藥品定價準確度、會員對藥品清單的滿意度、藥物副作用監測、藥局取得便利性</td>
-            <td>Part D 行政資料、CAHPS Part D 調查</td>
+            <td><strong>藥物安全與定價準確性</strong></td>
+            <td>藥物定價準確性、會員對藥品清單的滿意度、藥物副作用監測、藥局取藥便利性</td>
+            <td>D 部分行政資料、CAHPS D 部分調查</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <h2>基礎衡量指標組合</h2>
-    <p>星級評定由多套標準化的衡量指標組合構成，各自反映計劃表現的不同面向：</p>
+    <h2>基礎指標組合</h2>
+    <p>星級評定建立在多套標準化指標組合之上，各自反映計劃表現的不同面向：</p>
 
     <h3>HEDIS（醫療照護效能資料與資訊集）</h3>
-    <p>HEDIS 是由美國國家品質保證委員會（NCQA）制定的一套以實證為基礎的臨床品質衡量指標。HEDIS 指標依據行政理賠資料計算，涵蓋預防性服務（癌症篩檢、疫苗接種）、慢性病管理（糖尿病控制、血壓管理）以及用藥情況等比率。各計劃每年提報 HEDIS 資料，這些指標在「保持健康」與「慢性病管理」兩個領域的星級計算中佔了很大比重。</p>
+    <p>HEDIS 是由美國國家品質保證委員會（NCQA）制定的一套以實證為基礎的臨床品質指標。HEDIS 指標以行政理賠資料為依據，包括預防性服務的比率（癌症篩檢、疫苗接種）、慢性病管理（糖尿病控制、血壓管理）以及藥物使用情況。各計劃每年申報 HEDIS 資料，這些指標在「保持健康」與「慢性病管理」領域的星級計算中占很大比重。</p>
 
-    <h3>CAHPS（醫療服務提供者與體系消費者評估）</h3>
-    <p>CAHPS 是由第三方執行的標準化計劃會員調查。C部分 CAHPS 與D部分 CAHPS 調查會員對計劃客戶服務、就醫便利性、醫療服務提供者品質以及整體滿意度的體驗。調查結果直接納入星級評定的「會員體驗」與「藥品安全」領域。</p>
+    <h3>CAHPS（醫療照護提供者與體系消費者評估）</h3>
+    <p>CAHPS 是由第三方執行的標準化會員調查。C 部分 CAHPS 與 D 部分 CAHPS 調查會員對計劃客戶服務、獲得照護的便利性、醫療服務提供者的品質，以及整體滿意度的體驗。調查結果直接納入星級評定的「會員體驗」與「藥物安全」領域。</p>
 
     <h3>HOS（健康結果調查）</h3>
-    <p>HOS 每年調查 Medicare Advantage 會員的身心健康結果、身體功能狀態以及照護協調體驗。主要 HOS 指標包括用藥核對、症狀監測，以及身體與心理健康狀態的變化，這些都計入「慢性病管理」領域。</p>
+    <p>HOS 每年調查 Medicare Advantage 會員的身心健康結果、功能狀態與照護協調體驗。主要的 HOS 指標包括用藥核對、症狀監測，以及身體／心理健康狀態的變化，這些都納入「慢性病管理」領域。</p>
 
     <h3>CMS 行政資料與投訴</h3>
-    <p>CMS 直接從計劃提報資料與 CMS 監督系統中彙整投訴率、上訴／申訴資料以及會員上訴結果。這些資料納入「投訴與客戶服務」領域。</p>
+    <p>CMS 直接從計劃申報資料與 CMS 監督系統彙整投訴率、上訴／申訴資料，以及會員上訴的結果。這些資料納入「投訴與客戶服務」領域。</p>
 
-    <p>CMS 每年可能調整衡量指標組合、更新各領域的權重，或改進計算方法。請參閱<a href="/zh-Hant/policy-changes.html">政策變更</a>了解 CMS 關於星級評定更新的公告，或前往 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 查閱最新的技術規格。</p>
+    <p>CMS 每年可能調整指標組合、更新各領域的權重，或修訂計算方法。請參閱<a href="/zh-Hant/policy-changes.html">政策變更</a>了解 CMS 有關星級評定更新的公告，或到 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 查看現行技術規範。</p>
 
-    <h2>品質獎勵金（Quality Bonus Payments）</h2>
-    <p>獲得 4 星或以上評分的 Medicare Advantage 機構有資格獲得<strong>品質獎勵金（Quality Bonus Payments）</strong>——這是 MA 市場中的一項關鍵財務誘因。（此制度僅適用於 MA 計劃；獨立的 Part D 計劃不符合 QBP 資格。）CMS 會在用於計算該計劃郡費率的適用百分比上，加上標準的 5 個百分點，進而提高回饋給計劃的回饋金（並間接惠及會員），形式包括補充福利、較低的保費，或減少的費用分擔。</p>
+    <h2>品質獎勵金</h2>
+    <p>獲得 4 星或以上的 Medicare Advantage 機構有資格取得<strong>品質獎勵金（Quality Bonus Payments）</strong> — 這是 MA 市場中一項關鍵的財務誘因。（此規定適用於 MA 計劃；獨立的 D 部分計劃不符合 QBP 資格。）CMS 會在用於計算該計劃各郡費率的適用百分比上，加上標準的 5 個百分點，進而提高回饋給計劃（並間接回饋給會員）的回饋金，形式包括補充福利、較低的保費，或減少的費用分擔。</p>
     <ul>
-      <li><strong>4 星、4.5 星與 5 星計劃</strong>都獲得相同的標準待遇：適用百分比增加 5 個百分點</li>
-      <li><strong>5 星計劃</strong>另外為其會員解鎖一個特殊註冊期（見下文）</li>
+      <li><strong>4 星、4.5 星與 5 星計劃</strong>都獲得相同的標準加成：適用百分比提高 5 個百分點</li>
+      <li><strong>5 星計劃</strong>還為其會員解鎖一個特殊註冊期（見下文）</li>
     </ul>
-    <p>最終的回饋金金額取決於計劃實際節省的費用相對於其（已提高的）郡費率的差距，因此即使星級相同的兩個計劃，回饋金也可能不同。這套誘因結構促使各計劃投資於品質改善，也讓星級評定成為計劃策略與競爭定位的重要因素。詳細的回饋金計算方式公布於 CMS 指引中；營運層面的影響請參閱<a href="/zh-Hant/operations.html">健康計劃營運</a>。</p>
+    <p>實際的回饋金金額取決於計劃相對於其（已提高的）郡費率的實際節省金額，因此同一星級的兩個計劃仍可能有不同的回饋金。這種誘因結構促使計劃投資於品質改善，也讓星級評定成為計劃策略與競爭定位的重要因素。詳細的回饋金計算方式發布於 CMS 指引；營運層面的影響請參閱<a href="/zh-Hant/operations.html">健康計劃營運</a>。</p>
 
     <h2>特殊註冊期（5 星 SEP）</h2>
-    <p>獲得 5 星評定的 Medicare Advantage 計劃的會員享有一個特殊註冊期（SEP），可在 December 8 至次年 November 30 之間使用<strong>一次</strong>，讓他們能在正常的年度註冊期之外轉入 5 星計劃。這是受益人的權利，而非計劃本身獲得的福利，也是影響會員註冊決定的重要因素。有關轉換計劃的會員相關細節，請參閱<a href="/zh-Hant/enrollment.html">註冊與截止日期</a>及<a href="/zh-Hant/choosing-coverage.html">選擇承保</a>。</p>
+    <p>加入獲得 5 星評級 Medicare Advantage 計劃的會員可獲得一個特殊註冊期，可在 12 月 8 日至次年 11 月 30 日之間使用<strong>一次</strong>，讓他們在一般年度註冊期之外轉入 5 星計劃。這是受益人的權利，而不是計劃本身獲得的福利，也是影響會員註冊決定的重要因素。有關轉換計劃的會員說明，請參閱<a href="/zh-Hant/enrollment.html">註冊與截止日期</a>及<a href="/zh-Hant/choosing-coverage.html">選擇承保</a>。</p>
 
-    <h2>風險調整與星級評定的交互影響</h2>
-    <p>星級評定公布的是原始（未調整）比率；不過，品質指標的表現應放在各計劃風險概況的整體脈絡中評估。服務較高疾病負擔人群的計劃，其原始 HEDIS 比率可能較低，但相對其風險水準而言，仍可能展現出色的品質管理。理解風險調整、病例組合與星級評定解讀之間的關係，是進行準確比較分析的關鍵。詳情請參閱<a href="/zh-Hant/risk-adjustment.html">風險調整</a>。</p>
+    <h2>風險調整與星級評定的交互作用</h2>
+    <p>星級評定以原始（未經調整）比率發布；不過，品質指標表現仍須放在各計劃風險概況的整體脈絡中評估。服務較高疾病負擔人群的計劃，其原始 HEDIS 比率可能較低，但相對於其風險程度，仍可能展現出色的品質管理。理解風險調整、病例組合與星級評定解讀之間的關係，是進行準確比較分析的關鍵。詳情請參閱<a href="/zh-Hant/risk-adjustment.html">風險調整</a>。</p>
 
     <h2>計劃能見度與會員決策</h2>
-    <p>在註冊期間，星級評定會醒目地顯示在 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> 上，並提供互動式工具讓會員依評分篩選與比較計劃。5 星標誌對會員極具吸引力；5 星計劃的註冊人數往往較高，而 1–2 星計劃則可能面臨會員流失。這種能見度使星級評定成為對計劃市場定位影響最大的品質指標之一。</p>
+    <p>在註冊期間，星級評定會醒目地顯示於 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>，並提供互動工具讓會員依評級篩選與比較計劃。5 星標誌對會員極具吸引力；5 星計劃的註冊人數通常較高，而 1–2 星的計劃則可能面臨會員流失。這種能見度使星級評定成為對計劃市場定位影響最大的品質指標之一。</p>
 
     <h2>持續變動與方法更新</h2>
-    <p>CMS 會定期更新星級評定的方法、新增指標、調整各領域權重，並變更資料收集或提報要求。例如，為回應新的臨床證據、承保福利的變動，或受益人權益倡導者與業界利害關係人的意見，指標曾被新增或修訂。</p>
-    <p>專業人士應留意 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 及<a href="/zh-Hant/policy-changes.html">政策變更</a>頁面，掌握每年的星級評定更新、技術規格與指標定義。變更通常於 October 1 生效，並提前數月公告，讓計劃有時間調整提報作業與營運。</p>
+    <p>CMS 會定期更新星級評定的方法、新增指標、調整各領域權重，並變更資料收集或申報要求。例如，指標曾因新的臨床證據、承保福利的變化，或受益人倡議團體與業界利害關係人的意見回饋而新增或修訂。</p>
+    <p>2026 年星級評定顯示了單一週期內變動幅度之大：患者體驗／投訴與就醫可近性指標的權重從四降為二；新增了「糖尿病患者腎臟健康評估」指標；兩項健康結果指標（「改善或維持身體健康」與「改善或維持心理健康」）在規範修訂後重新納入，權重為一，並將自 2027 年星級評定起提高為三。<!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>專業人士應持續關注 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 與<a href="/zh-Hant/policy-changes.html">政策變更</a>，掌握每年的星級評定更新、技術規範與指標定義。變更通常於 10 月 1 日生效，並會提前數月公告，讓計劃有時間調整申報與營運。</p>
 
     <h2>專業資源</h2>
-    <p>如需詳細的星級評定文件、資料檔案與技術指引，請參考：</p>
+    <p>有關詳細的星級評定文件、資料檔案與技術指引，請參考：</p>
     <ul>
-      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 技術規格、指標定義、計算方法</li>
-      <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — 公開星級評定、計劃比較工具、會員資源</li>
+      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 技術規範、指標定義、計算方法</li>
+      <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — 公開的星級評定、計劃比較工具、會員資源</li>
       <li>NCQA — HEDIS 指標定義與更新</li>
-      <li>計劃提報系統 — 詳細表現資料、指標層級結果、趨勢分析</li>
+      <li>計劃申報系統 — 詳細績效資料、各指標層級的結果、趨勢分析</li>
     </ul>
 
     <div class="note">
-      <strong>請以官方來源為準：</strong>星級評定的方法、權重與指標每年都會變動。有關評分計算、個別指標定義與提報要求的權威指引，請務必查閱 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 上當年度的 CMS 技術文件及 Medicare.gov 官方資源。
+      <strong>請以官方來源為準：</strong>星級評定的方法、權重與指標每年都會變動。有關評級計算、個別指標定義與申報要求的權威指引，請一律參考 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> 上當年度的 CMS 技術文件與 Medicare.gov 官方資源。
     </div>
 
   </div>
