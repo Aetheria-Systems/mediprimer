@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-09-03 — Content corrections + pipeline git parity
+
+- **Glossary fix**: "redetermination" wrongly described an appeal; now defined
+  as the routine eligibility re-check (renewal/recertification).
+- **Automatic enrollment**: enrollment.html now explains who gets Part A/B
+  without signing up (Social Security/RRB before 65, 24 months of disability
+  benefits) and the Puerto Rico Part B exception.
+- **OBBBA 6-month Medicaid renewals**: policy-changes.html covers Section 71107
+  of PL 119-21 (expansion adults renew every 6 months from Jan 2027, per CMS
+  SMD #26-001); medicaid-eligibility.html renewal bullet updated to match.
+- **Pipeline git parity**: the SEO optimizer and nightly translation sync now
+  auto-commit each deploy to the `autopilot` branch and self-merge a PR, so
+  the repo can no longer drift from the live site.
+
 ## 2026-07-14 — Honest page dates
 
 - **Per-page `dateModified`**: a page's modified date (and sitemap `lastmod`)
