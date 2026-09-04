@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Glosario en Lenguaje Sencillo — MediPrimer</title>
-<meta name="description" content="Un glosario de la A a la Z, con función de búsqueda, que explica en lenguaje sencillo los términos del seguro de salud y de Medicare.">
+<meta name="description" content="Un glosario de la A a la Z, con buscador, de términos de seguros de salud y Medicare explicados en lenguaje sencillo.">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
@@ -26,13 +26,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
 <meta property="og:title" content="Glosario en Lenguaje Sencillo — MediPrimer">
-<meta property="og:description" content="Un glosario de la A a la Z, con función de búsqueda, que explica en lenguaje sencillo los términos del seguro de salud y de Medicare.">
+<meta property="og:description" content="Un glosario de la A a la Z, con buscador, de términos de seguros de salud y Medicare explicados en lenguaje sencillo.">
 <meta property="og:url" content="https://mediprimer.org/es/glossary.html">
 <meta property="og:locale" content="es_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Glosario en Lenguaje Sencillo — MediPrimer">
-<meta name="twitter:description" content="Un glosario de la A a la Z, con función de búsqueda, que explica en lenguaje sencillo los términos del seguro de salud y de Medicare.">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Glosario en Lenguaje Sencillo", "description": "Un glosario de la A a la Z, con función de búsqueda, que explica en lenguaje sencillo los términos del seguro de salud y de Medicare.", "url": "https://mediprimer.org/es/glossary.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-07-15", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<meta name="twitter:description" content="Un glosario de la A a la Z, con buscador, de términos de seguros de salud y Medicare explicados en lenguaje sencillo.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Glosario en Lenguaje Sencillo", "description": "Un glosario de la A a la Z, con buscador, de términos de seguros de salud y Medicare explicados en lenguaje sencillo.", "url": "https://mediprimer.org/es/glossary.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-09-04", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/glossary.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/glossary.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/glossary.html">
@@ -113,20 +113,21 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     </div>
   </div>
 </header>
+
 <section class="hero">
   <div class="wrap">
     <p class="kicker">Referencia</p>
     <h1>Glosario en Lenguaje Sencillo</h1>
-    <p>Una guía de la A a la Z, con función de búsqueda, sobre los términos que encontrará en Medicare, Medicaid y los seguros de salud.</p>
+    <p>Una guía de la A a la Z, con buscador, de los términos que encontrará en Medicare, Medicaid y los seguros de salud.</p>
   </div>
 </section>
 
 <main>
   <div class="wrap">
-    <p>Los seguros de salud y los programas del gobierno tienen su propio lenguaje. Este glosario explica los términos más comunes en lenguaje sencillo, para que pueda entender su cobertura y sus derechos.</p>
+    <p>Los seguros de salud y los programas del gobierno tienen su propio lenguaje. Este glosario explica los términos comunes en lenguaje sencillo, para que pueda entender su cobertura y sus derechos.</p>
 
     <div class="glossary-controls">
-      <input type="search" id="glossary-search" placeholder="Buscar términos… (ej. deducible, autorización previa, MOOP)" autocomplete="off" aria-label="Buscar términos del glosario">
+      <input type="search" id="glossary-search" placeholder="Buscar términos… (por ejemplo: deducible, autorización previa, MOOP)" autocomplete="off" aria-label="Buscar términos del glosario">
       <nav class="letter-nav" id="letter-nav"></nav>
     </div>
 
@@ -139,13 +140,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-a">A</h2>
 
       <dt id="term-abn">Aviso de Beneficiario Previo (ABN)</dt>
-      <dd>Un formulario que su médico le entrega antes de un servicio, advirtiéndole que Medicare podría no pagarlo. Usted firma para aceptar que pagará si no está cubierto.</dd>
+      <dd>Un formulario que su médico le da antes de un servicio, para avisarle que Medicare podría no pagarlo. Usted firma para aceptar que pagará si no está cubierto.</dd>
 
       <dt id="term-allowable">Cantidad Permitida</dt>
       <dd>Lo máximo que su plan pagará por un servicio. Si su médico cobra más, es posible que usted tenga que pagar la diferencia.</dd>
 
       <dt id="term-appeal">Apelación</dt>
-      <dd>Una forma de pedirle a su plan que reconsidere cuando se niega a pagar algo. Puede apelar si no está de acuerdo con su decisión.</dd>
+      <dd>Una forma de pedirle a su plan que reconsidere si dice que no pagará algo. Puede apelar si no está de acuerdo con su decisión.</dd>
 
       <dt id="term-assignment">Cesión de Derechos</dt>
       <dd>Cuando su médico acepta el pago de Medicare como pago completo. Su médico no le cobrará ningún costo adicional.</dd>
@@ -153,21 +154,21 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-b">B</h2>
 
       <dt id="term-balance-bill">Facturación del Saldo Restante</dt>
-      <dd>Cuando su médico le cobra la diferencia entre lo que cobra y lo que paga su plan. No está permitido si su médico acepta las tarifas de su plan.</dd>
+      <dd>Cuando su médico le cobra la diferencia entre lo que él cobra y lo que su plan paga. No está permitido si su médico acepta las tarifas de su plan.</dd>
 
       <dt id="term-beneficiary">Beneficiario</dt>
-      <dd>Alguien que recibe beneficios de un plan de salud o de un programa como Medicare o Medicaid. También puede referirse a la persona designada para recibir dinero de una cuenta.</dd>
+      <dd>Alguien que recibe beneficios de un plan de salud o de un programa como Medicare o Medicaid. También puede significar la persona nombrada para recibir el dinero de una cuenta.</dd>
 
       <dt id="term-benefit-period">Período de Beneficios</dt>
       <dd>El período de tiempo en que su plan cubre los servicios. Para Medicare, es del 1 de enero al 31 de diciembre de cada año.</dd>
 
       <dt id="term-benefit-year">Año de Beneficios</dt>
-      <dd>El período de 12 meses en que su plan de salud está vigente. La mayoría usa el año calendario (enero–diciembre), pero algunos usan otras fechas.</dd>
+      <dd>El período de 12 meses en que su plan de salud está en vigor. La mayoría usa el año calendario (enero a diciembre), pero algunos usan otras fechas.</dd>
 
       <h2 class="group-label" id="letter-c">C</h2>
 
       <dt id="term-capitation">Capitación</dt>
-      <dd>Un pago mensual fijo que su plan le hace a un médico por cada paciente, sin importar cuántos servicios brinde. El médico paga la mayor parte de la atención con ese pago.</dd>
+      <dd>Un pago mensual fijo que su plan le da a un médico por cada paciente, sin importar cuántos servicios brinde. El médico paga la mayor parte de la atención con ese pago.</dd>
 
       <dt id="term-catastrophic">Cobertura Catastrófica</dt>
       <dd>Un plan con una cuota mensual baja pero un deducible muy alto (a menudo para adultos menores de 30 años). Cubre los beneficios de salud esenciales una vez que usted alcanza el deducible.</dd>
@@ -179,22 +180,22 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <dd>Una reclamación con toda la información correcta y sin errores. Por ley, su plan debe procesarla dentro de un plazo establecido.</dd>
 
       <dt id="term-coinsurance">Coaseguro</dt>
-      <dd>El porcentaje de una factura que usted paga después de su deducible. Por ejemplo, usted podría pagar el 20% y su plan el 80%.</dd>
+      <dd>El porcentaje de una factura que usted paga después de su deducible. Por ejemplo, usted podría pagar el 20% y su plan paga el 80%.</dd>
 
       <dt id="term-cms">Centros de Servicios de Medicare y Medicaid (CMS)</dt>
       <dd>La agencia federal que administra Medicare, Medicaid y CHIP. Establece las reglas de estos programas.</dd>
 
       <dt id="term-cob">Coordinación de Beneficios (COB)</dt>
-      <dd>Cuando usted tiene dos planes, esto decide cuál paga primero. El primer plan paga, y luego el segundo paga lo que queda.</dd>
+      <dd>Cuando usted tiene dos planes, esto decide cuál paga primero. El primer plan paga y luego el segundo plan paga lo que queda.</dd>
 
       <dt id="term-copay">Copago</dt>
-      <dd>Una cantidad fija que usted paga por un servicio, como una visita al médico o una receta. Su plan establece esta cantidad, y no cuenta para su deducible.</dd>
+      <dd>Una cantidad fija que usted paga por un servicio, como una visita al médico o una receta. Su plan fija esta cantidad, y no cuenta para su deducible.</dd>
 
       <dt id="term-cost-sharing">Compartir Costos</dt>
       <dd>La cantidad que usted paga por los costos médicos, sin incluir su prima mensual. Esto incluye deducibles, copagos y coaseguro.</dd>
 
       <dt id="term-coverage-gap">Brecha de Cobertura</dt>
-      <dd>Un vacío en la cobertura de medicamentos de la Parte D de Medicare en el que usted paga más de su bolsillo. Comienza después de que usted y su plan gastan cierta cantidad y termina al llegar a la cobertura catastrófica.</dd>
+      <dd>Una brecha en la cobertura de medicamentos de la Parte D de Medicare en la que usted paga más de su bolsillo. Comienza después de que usted y su plan gastan cierta cantidad y termina en la cobertura catastrófica.</dd>
 
       <dt id="term-creditable">Cobertura Acreditable</dt>
       <dd>Cobertura de seguro que cumple con los estándares de Medicare y Medicaid. Si la tiene, puede retrasar su inscripción en los medicamentos de la Parte D de Medicare sin penalización.</dd>
@@ -202,27 +203,27 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-d">D</h2>
 
       <dt id="term-deductible">Deducible</dt>
-      <dd>La cantidad que usted debe pagar por su atención antes de que su plan comience a pagar. Los deducibles más altos suelen significar cuotas mensuales más bajas.</dd>
+      <dd>La cantidad que usted debe pagar por su atención antes de que su plan empiece a pagar. Los deducibles más altos suelen significar cuotas mensuales más bajas.</dd>
 
       <dt id="term-denials">Negación de Reclamación</dt>
-      <dd>Cuando su plan se niega a pagar un servicio. Esto suele ocurrir porque no cumple con las reglas del plan o no es médicamente necesario.</dd>
+      <dd>Cuando su plan se niega a pagar un servicio. Esto suele pasar porque no cumple con las reglas del plan o no es médicamente necesario.</dd>
 
       <dt id="term-dual-eligible">Doble Elegibilidad</dt>
       <dd>Alguien inscrito tanto en Medicare como en Medicaid. Usted recibe cobertura de ambos programas y puede calificar para ayuda adicional.</dd>
 
       <dt id="term-dme">Equipo Médico Duradero (DME)</dt>
-      <dd>Herramientas médicas reutilizables como sillas de ruedas, andadores, oxígeno y camas de hospital que su médico receta para uso en el hogar. La Parte B de Medicare cubre algunas de ellas.</dd>
+      <dd>Aparatos médicos reutilizables, como sillas de ruedas, andadores, oxígeno y camas de hospital, que su médico receta para usar en casa. La Parte B de Medicare cubre algunos de ellos.</dd>
 
       <h2 class="group-label" id="letter-e">E</h2>
 
       <dt id="term-eob">Explicación de Beneficios (EOB)</dt>
-      <dd>Un documento que su plan le envía después de recibir atención. Muestra lo que se cobró, lo que pagó su plan, lo que usted debe y por qué se negó algo.</dd>
+      <dd>Un documento que su plan le envía después de recibir atención. Muestra lo que se cobró, lo que su plan pagó, lo que usted debe y por qué se negó algo.</dd>
 
       <dt id="term-enroll">Inscripción</dt>
       <dd>Registrarse en un plan de salud. Esto ocurre durante los períodos de inscripción abierta o cuando usted tiene un cambio importante en su vida.</dd>
 
-      <dt id="term-extra-help">Ayuda Adicional (Low-Income Subsidy / LIS)</dt>
-      <dd>Un programa que ayuda a las personas con ingresos bajos a pagar los medicamentos de la Parte D de Medicare. Se solicita a través del Seguro Social.</dd>
+      <dt id="term-extra-help">Ayuda Adicional (Subsidio por Bajos Ingresos / LIS)</dt>
+      <dd>Un programa que ayuda a las personas de bajos ingresos a pagar los medicamentos de la Parte D de Medicare. Se solicita a través del Seguro Social.</dd>
 
       <h2 class="group-label" id="letter-f">F</h2>
 
@@ -230,12 +231,12 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <dd>Un modelo de pago en el que su médico recibe un pago por cada servicio que brinda, no una cantidad mensual fija. La Cobertura Original de Medicare usa este modelo.</dd>
 
       <dt id="term-formulary">Formulario de Medicamentos</dt>
-      <dd>La lista de medicamentos que cubre su plan. Los medicamentos de esta lista cuestan menos; los que no están pueden no estar cubiertos o costar más.</dd>
+      <dd>La lista de medicamentos que cubre su plan. Los medicamentos de esta lista cuestan menos; los que no están en ella pueden no estar cubiertos o costar más.</dd>
 
       <h2 class="group-label" id="letter-g">G</h2>
 
       <dt id="term-grievance">Queja</dt>
-      <dd>Un reclamo que usted presenta ante su plan si no está satisfecho con la atención que recibió, con una decisión del plan o con cómo lo trataron. Esto es diferente de una apelación.</dd>
+      <dd>Un reclamo que usted presenta ante su plan si no está satisfecho con la atención que recibió, una decisión del plan o cómo lo trataron. Esto es distinto de una apelación.</dd>
 
       <dt id="term-guaranteed-issue">Garantía de Emisión</dt>
       <dd>Una regla que dice que una compañía de seguros debe venderle un plan y no puede rechazarlo, cobrarle más ni excluir nada por su estado de salud. Las pólizas de Seguro Complementario de Medicare tienen esta protección.</dd>
@@ -243,23 +244,23 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-h">H</h2>
 
       <dt id="term-hmo">Organización de Mantenimiento de la Salud (HMO)</dt>
-      <dd>Un plan que le exige usar los médicos y hospitales de su red. Por lo general necesita una referencia para ver a un especialista. La atención fuera de la red no está cubierta, excepto en emergencias.</dd>
+      <dd>Un plan que le exige usar los médicos y hospitales de su red. Por lo general necesita una referencia para ver a un especialista. La atención fuera de la red no está cubierta, salvo en emergencias.</dd>
 
       <h2 class="group-label" id="letter-i">I</h2>
 
       <dt id="term-iep">Período de Inscripción Inicial (IEP)</dt>
-      <dd>Una ventana de siete meses alrededor de su cumpleaños número 65 en la que puede inscribirse por primera vez en Medicare. Su cobertura comienza el primer día del mes en que cumple 65 años.</dd>
+      <dd>Una ventana de siete meses alrededor de su cumpleaños número 65 en la que puede inscribirse en Medicare por primera vez. Su cobertura comienza el primer día del mes en que cumple 65 años.</dd>
 
       <dt id="term-in-network">Dentro de la Red</dt>
       <dd>Médicos, hospitales y centros que tienen un contrato con su plan. Sus servicios le cuestan menos que la atención fuera de la red.</dd>
 
       <dt id="term-irmaa">Cantidad de Ajuste Mensual Relacionada con Ingresos (IRMAA)</dt>
-      <dd>Una cantidad adicional que se agrega a sus primas de la Parte B y la Parte D de Medicare si sus ingresos son lo suficientemente altos. A mayores ingresos, primas más altas.</dd>
+      <dd>Una cantidad adicional que se suma a sus primas de la Parte B de Medicare y la Parte D de Medicare si sus ingresos son lo bastante altos. Más ingresos significan primas más altas.</dd>
 
       <h2 class="group-label" id="letter-l">L</h2>
 
       <dt id="term-ltss">Servicios y Apoyos a Largo Plazo (LTSS)</dt>
-      <dd>Ayuda con las actividades diarias durante un tiempo prolongado, como hogar de ancianos, vivienda asistida, atención en el hogar o programas de día. Medicaid cubre algunos; Medicare cubre menos.</dd>
+      <dd>Ayuda con las actividades diarias durante mucho tiempo, como un hogar de ancianos, vivienda asistida, atención en el hogar o programas de día. Medicaid cubre algunos; Medicare cubre menos.</dd>
 
       <h2 class="group-label" id="letter-m">M</h2>
 
@@ -267,13 +268,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <dd>Una compañía de seguros que administra su atención médica a través de una red de médicos. Controla los costos mediante la planificación y la coordinación de la atención.</dd>
 
       <dt id="term-medicaid">Medicaid</dt>
-      <dd>Un programa de salud para personas de bajos ingresos administrado por el gobierno federal y los estados. Las reglas y los beneficios varían según el estado.</dd>
+      <dd>Un programa de salud para personas de bajos ingresos, administrado por el gobierno federal y los estados. Las reglas y los beneficios varían según el estado.</dd>
 
       <dt id="term-medically-necessary">Médicamente Necesario</dt>
       <dd>Atención o servicios que se necesitan para diagnosticar, tratar o manejar su condición de salud. Su plan solo cubre los servicios que considera médicamente necesarios.</dd>
 
       <dt id="term-medicare">Medicare</dt>
-      <dd>Un programa federal de salud para personas de 65 años o más, algunas personas más jóvenes con discapacidades y personas con enfermedad renal en etapa terminal. Tiene cuatro partes principales: A, B, C y D.</dd>
+      <dd>Un programa de salud federal para personas de 65 años o más, algunas personas más jóvenes con discapacidad y personas con enfermedad renal en etapa terminal. Tiene cuatro partes principales: A, B, C y D.</dd>
 
       <dt id="term-medicare-advantage">Medicare Advantage (Parte C)</dt>
       <dd>Un plan de seguro privado aprobado por Medicare como alternativa a la Cobertura Original de Medicare. Por lo general incluye la cobertura de hospital (Parte A), médica (Parte B) y de medicamentos (Parte D) en un solo plan.</dd>
@@ -285,15 +286,15 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <dd>Un seguro privado que llena los vacíos de la Cobertura Original de Medicare. Paga costos como copagos y coaseguro que Medicare no paga.</dd>
 
       <dt id="term-metal-tiers">Niveles de Metales</dt>
-      <dd>Cuatro tipos de planes (Bronce, Plata, Oro, Platino) según cómo se dividen los costos entre su plan y usted. El Bronce tiene la cuota mensual más baja pero los costos más altos cuando usa la atención; el Platino tiene la cuota más alta pero los costos más bajos cuando usa la atención.</dd>
+      <dd>Cuatro tipos de planes (Bronce, Plata, Oro, Platino) según cómo se dividen los costos entre su plan y usted. Bronce tiene la cuota mensual más baja pero los costos más altos cuando usa la atención; Platino tiene la cuota más alta pero los costos más bajos cuando usa la atención.</dd>
 
       <dt id="term-moop">Máximo de Desembolso de Bolsillo (MOOP)</dt>
-      <dd>El total máximo que usted pagará por la atención cubierta en un año. Después de alcanzar este límite, su plan paga el 100% por el resto del año.</dd>
+      <dd>Lo máximo que pagará en total por atención cubierta en un año. Después de alcanzar este límite, su plan paga el 100% por el resto del año.</dd>
 
       <h2 class="group-label" id="letter-n">N</h2>
 
       <dt id="term-nemt">Transporte Médico No Emergente (NEMT)</dt>
-      <dd>Viajes gratuitos financiados por Medicaid hacia y desde sus citas médicas si usted no puede llegar por su cuenta.</dd>
+      <dd>Viajes gratuitos, pagados por Medicaid, de ida y vuelta a sus citas médicas si no puede llegar por su cuenta.</dd>
 
       <dt id="term-network">Red de Proveedores</dt>
       <dd>El grupo de médicos, hospitales y centros que trabajan con su plan. Usarlos cuesta menos que acudir a proveedores fuera de la red.</dd>
@@ -301,7 +302,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-o">O</h2>
 
       <dt id="term-open-enrollment">Inscripción Abierta</dt>
-      <dd>Una ventana anual en la que puede inscribirse en un plan o cambiar su cobertura sin un evento de vida. Para Medicare, suele ser del 15 de octubre al 7 de diciembre.</dd>
+      <dd>Una ventana anual en la que puede inscribirse en un plan o cambiar su cobertura sin necesidad de un evento de vida. Para Medicare, suele ser del 15 de octubre al 7 de diciembre.</dd>
 
       <dt id="term-original-medicare">Cobertura Original de Medicare</dt>
       <dd>El programa de pago por servicio de Medicare, que incluye la atención hospitalaria (Parte A) y los servicios médicos (Parte B). Puede ver a cualquier proveedor participante sin restricciones de red.</dd>
@@ -310,39 +311,39 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <dd>Médicos, hospitales y centros sin contrato con su plan. Usted paga más por sus servicios y podría tener que cumplir un deducible aparte.</dd>
 
       <dt id="term-oop-max">Máximo de Desembolso de Bolsillo</dt>
-      <dd><span class="term-see">Ver también: <a href="#term-moop">Máximo de Desembolso de Bolsillo (MOOP)</a>.</span></dd>
+      <dd><span class="term-see">Vea también: <a href="#term-moop">Máximo de Desembolso de Bolsillo (MOOP)</a>.</span></dd>
 
       <h2 class="group-label" id="letter-p">P</h2>
 
       <dt id="term-pace">Programas de Atención Integral para Ancianos (PACE)</dt>
-      <dd>Un programa de Medicare y Medicaid para personas mayores frágiles de 55 años o más que ofrece servicios médicos y sociales, incluida la atención de día. Ayuda a las personas a quedarse en su comunidad en lugar de un centro.</dd>
+      <dd>Un programa de Medicare y Medicaid para personas mayores frágiles de 55 años o más que brinda servicios médicos y sociales, incluido el cuidado de día. Ayuda a las personas a quedarse en su comunidad en lugar de ir a un centro.</dd>
 
       <dt id="term-part-a">Parte A de Medicare</dt>
-      <dd>La parte hospitalaria de la Cobertura Original de Medicare. Cubre estadías en el hospital, atención en centros de enfermería, cuidado de hospicio y atención domiciliaria. Suele ser gratuita para personas de 65 años o más.</dd>
+      <dd>La parte hospitalaria de la Cobertura Original de Medicare. Cubre estadías en el hospital, atención en un centro de enfermería, Cuidado de Hospicio y Atención Domiciliaria. Por lo general es gratuita para las personas de 65 años o más.</dd>
 
       <dt id="term-part-b">Parte B de Medicare</dt>
       <dd>La parte de servicios médicos de la Cobertura Original de Medicare. Cubre visitas al médico, atención ambulatoria, equipo médico y servicios preventivos. La mayoría de las personas paga una cuota mensual por la Parte B.</dd>
 
       <dt id="term-part-c">Parte C de Medicare</dt>
-      <dd><span class="term-see">Ver también: <a href="#term-medicare-advantage">Medicare Advantage (Parte C)</a>.</span></dd>
+      <dd><span class="term-see">Vea también: <a href="#term-medicare-advantage">Medicare Advantage (Parte C)</a>.</span></dd>
 
       <dt id="term-part-d">Parte D de Medicare</dt>
-      <dd>La parte de cobertura de medicamentos de Medicare. Por lo general necesita la Parte D u otra cobertura de medicamentos, o enfrentará una penalización si se inscribe más tarde.</dd>
+      <dd>La parte de cobertura de medicamentos de Medicare. Por lo general necesita la Parte D u otra cobertura de medicamentos, o tendrá una penalización si se inscribe más tarde.</dd>
 
       <dt id="term-preauth">Autorización Previa</dt>
-      <dd>Un permiso que debe obtener de su plan antes de un servicio para que esté cubierto. Sin él, su plan puede negar su reclamación o pagar solo una parte.</dd>
+      <dd>Permiso que debe obtener de su plan antes de un servicio para que esté cubierto. Sin él, su plan puede negar su reclamación o pagar solo una parte.</dd>
 
       <dt id="term-preferred-drug">Medicamento Preferido</dt>
-      <dd>Un medicamento en la lista de su plan que le cuesta menos que los medicamentos no preferidos. Su plan lo aprueba como una opción de buen costo.</dd>
+      <dd>Un medicamento de la lista de su plan que le cuesta menos que los medicamentos no preferidos. Su plan lo aprueba como una opción de bajo costo.</dd>
 
       <dt id="term-premium">Prima</dt>
-      <dd>La cuota mensual que usted paga por el seguro, use o no los servicios. Es aparte de los copagos y los deducibles.</dd>
+      <dd>La cuota mensual que paga por el seguro, use o no los servicios. Es aparte de los copagos y los deducibles.</dd>
 
       <dt id="term-premium-tax">Crédito Fiscal de Prima</dt>
-      <dd>Ayuda federal que reduce su pago mensual del seguro a través de healthcare.gov o de su estado. Su elegibilidad depende de sus ingresos y del tamaño de su familia.</dd>
+      <dd>Ayuda federal que reduce su pago mensual de seguro a través de healthcare.gov o de su estado. Su elegibilidad depende de sus ingresos y del tamaño de su familia.</dd>
 
       <dt id="term-pcp">Proveedor de Atención Primaria (PCP)</dt>
-      <dd>Su médico principal, por lo general un médico de medicina familiar o un internista. En los planes HMO y POS, usted suele necesitar una referencia de su PCP para ver a especialistas.</dd>
+      <dd>Su médico principal, por lo general un médico de familia o un internista. En los planes HMO y POS, normalmente necesita una referencia de su PCP para ver a especialistas.</dd>
 
       <dt id="term-provider">Proveedor</dt>
       <dd>Cualquier persona o lugar que brinda atención médica, como médicos, enfermeras practicantes, hospitales, laboratorios y farmacias.</dd>
@@ -358,41 +359,41 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-r">R</h2>
 
       <dt id="term-redetermination">Redeterminación</dt>
-      <dd>Un proceso formal para revisar una decisión sobre su elegibilidad para un programa como Medicaid o los ahorros de Medicare. Puede solicitarlo si cree que la decisión fue incorrecta.</dd>
+      <dd>La revisión periódica que hace su estado para ver si usted todavía califica para un programa como Medicaid o Ayuda Adicional. También se llama renovación o recertificación. Es un trámite de rutina, no un castigo — pero debe responder a los avisos o puede perder la cobertura aunque todavía califique. Si no está de acuerdo con una decisión, ese es otro proceso: vea <a href="#term-appeal">Apelación</a>.</dd>
 
       <dt id="term-referral">Referencia</dt>
-      <dd>Un permiso de su médico principal (por lo general en un plan HMO o POS) para ver a un especialista. Su plan puede exigirlo para que la visita esté cubierta.</dd>
+      <dd>Permiso de su médico principal (por lo general en un plan HMO o POS) para ver a un especialista. Su plan puede exigirlo para que la visita esté cubierta.</dd>
 
       <h2 class="group-label" id="letter-s">S</h2>
 
       <dt id="term-sep">Período Especial de Inscripción (SEP)</dt>
-      <dd>Un tiempo limitado fuera de la inscripción abierta normal en el que puede inscribirse en Medicare o Medicaid o cambiar su cobertura debido a un evento de vida o una circunstancia especial.</dd>
+      <dd>Un tiempo limitado fuera de la inscripción abierta normal en el que puede inscribirse en la cobertura de Medicare o Medicaid, o cambiarla, debido a un evento de vida o una circunstancia especial.</dd>
 
       <dt id="term-snf">Establecimiento de Enfermería Especializada (SNF)</dt>
-      <dd>Un centro que ofrece atención de enfermería las 24 horas y rehabilitación para personas que se recuperan de una enfermedad o lesión. La Parte A de Medicare cubre hasta 100 días por período de beneficios si se cumplen las condiciones.</dd>
+      <dd>Un centro que brinda atención de enfermería las 24 horas y rehabilitación a personas que se recuperan de una enfermedad o lesión. La Parte A de Medicare cubre hasta 100 días por período de beneficios si se cumplen las condiciones.</dd>
 
       <dt id="term-snp">Plan de Necesidades Especiales (SNP)</dt>
-      <dd>Un plan de Medicare Advantage diseñado para personas con condiciones crónicas o situaciones específicas, como doble elegibilidad, discapacidad grave o vivir en un centro. D-SNP, C-SNP e I-SNP son tipos diferentes.</dd>
+      <dd>Un plan Medicare Advantage diseñado para personas con condiciones crónicas o situaciones específicas, como tener doble elegibilidad, una discapacidad grave o vivir en un centro. D-SNP, C-SNP e I-SNP son tipos distintos.</dd>
 
       <dt id="term-star-ratings">Clasificación de Estrellas</dt>
-      <dd>Un sistema en Medicare.gov que califica los planes de Medicare Advantage y de la Parte D de una a cinco estrellas según su calidad y servicio. Más estrellas suele significar un mejor plan.</dd>
+      <dd>Un sistema en Medicare.gov que califica los planes Medicare Advantage y de la Parte D de una a cinco estrellas según su calidad y servicio. Más estrellas suele significar un mejor plan.</dd>
 
       <dt id="term-step-therapy">Terapia Escalonada</dt>
-      <dd>Cuando su plan le exige probar primero un medicamento más barato antes de cubrir uno más caro, aunque su médico recomiende el más caro. También se le llama \"fallar primero\".</dd>
+      <dd>Cuando su plan le exige probar primero un medicamento más barato antes de cubrir uno más caro, aunque su médico recomiende el caro. También se le llama "fallar primero".</dd>
 
       <dt id="term-subsidy">Subsidio</dt>
-      <dd>Ayuda del gobierno para reducir sus costos de atención médica. Incluye descuentos en las primas, ayuda con los copagos, asistencia con los medicamentos y los programas de ahorro de Medicare.</dd>
+      <dd>Ayuda del gobierno para reducir sus costos de atención médica. Incluye descuentos en las primas, ayuda con los copagos, asistencia para medicamentos y los programas de ahorro de Medicare.</dd>
 
       <dt id="term-summary-benefits">Resumen de Beneficios y Cobertura (SBC)</dt>
-      <dd>Un documento estándar que su plan debe entregarle y que muestra qué está cubierto, cuánto cuesta y qué no está incluido. Facilita la comparación de planes.</dd>
+      <dd>Un documento estándar que su plan debe darle y que muestra qué está cubierto, cuánto cuesta y qué no está incluido. Facilita comparar planes.</dd>
 
       <dt id="term-supplemental">Beneficios Suplementarios</dt>
-      <dd>Beneficios adicionales que algunos planes ofrecen más allá de la cobertura básica, como servicios dentales, de visión, de audición, programas de ejercicio o entrega de comidas. Varían según el plan y suelen estar en los planes de Medicare Advantage.</dd>
+      <dd>Beneficios adicionales que algunos planes ofrecen más allá de la cobertura básica, como dental, visión, audición, gimnasio o entrega de comidas. Varían según el plan y suelen estar en los planes Medicare Advantage.</dd>
 
       <h2 class="group-label" id="letter-t">T</h2>
 
       <dt id="term-tpl">Responsabilidad de Terceros (TLP)</dt>
-      <dd>Cuando otra persona o entidad es responsable del pago, como otra compañía de seguros o alguien culpable en un accidente. Su plan o Medicaid pueden intentar recuperar los costos de esa parte.</dd>
+      <dd>Cuando otra persona es responsable del pago, como otra compañía de seguros o alguien culpable en un accidente. Su plan o Medicaid pueden intentar recuperar los costos de esa parte.</dd>
 
       <dt id="term-tiers">Niveles de Medicamentos</dt>
       <dd>Categorías de medicamentos en la lista de su plan según su costo. Los niveles más bajos (genéricos y medicamentos preferidos) cuestan menos; los niveles más altos cuestan más.</dd>
@@ -400,12 +401,12 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <h2 class="group-label" id="letter-u">U</h2>
 
       <dt id="term-utilization">Gestión de Utilización (UM)</dt>
-      <dd>Herramientas que su plan usa para manejar los costos y asegurarse de que la atención sea apropiada, como exigir una aprobación antes de los servicios o probar primero medicamentos más baratos. Busca equilibrar el costo con la calidad.</dd>
+      <dd>Herramientas que su plan usa para controlar los costos y asegurarse de que la atención sea apropiada, como exigir aprobación antes de los servicios o probar primero medicamentos más baratos. Busca equilibrar el costo con la calidad.</dd>
 
       <h2 class="group-label" id="letter-w">W</h2>
 
       <dt id="term-waiting-period">Período de Espera</dt>
-      <dd>Un período de tiempo que su plan establece antes de que comiencen ciertos beneficios o de que pueda usar ciertos servicios. Puede aplicarse a miembros nuevos o a servicios específicos como salud mental o atención dental.</dd>
+      <dd>Un período de tiempo que fija su plan antes de que comiencen ciertos beneficios o de que pueda usar ciertos servicios. Puede aplicarse a los miembros nuevos o a servicios específicos, como la salud mental o la atención dental.</dd>
 
     </dl>
   </div>
@@ -485,5 +486,6 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 
 <script src="/glossary.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
 </body>
 </html>
