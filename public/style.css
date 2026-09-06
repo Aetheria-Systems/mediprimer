@@ -457,5 +457,10 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
 .mp-chatbot-sources { font-size: 0.7rem; color: var(--muted, #777); margin: 0 0 0.5rem; }
 .mp-chatbot-privacy-note { font-size: 0.7rem; color: #c0392b; margin: 0 0 0.35rem; }
 .mp-chatbot-form { display: flex; gap: 0.25rem; }
+.mp-chatbot-news { border-top: 1px solid #ddd; margin-top: 0.5rem; padding-top: 0.5rem; font-size: 0.8rem; }
+.mp-chatbot-news-label { display: block; margin-bottom: 0.25rem; color: #1f4e79; font-weight: 600; }
+.mp-chatbot-news-form { display: flex; gap: 0.25rem; }
+.mp-chatbot-news-input { flex: 1; min-width: 0; padding: 0.3rem 0.4rem; border: 1px solid #bbb; border-radius: 4px; font-size: 0.8rem; }
+.mp-chatbot-news-btn { padding: 0.3rem 0.6rem; border: none; border-radius: 4px; background: #1f4e79; color: #fff; cursor: pointer; font-size: 0.8rem; }
 .mp-chatbot-input { flex: 1; background: var(--surface, #fff); color: var(--ink, #111); border: 1px solid var(--border, #ccc); }
 .mp-chatbot-submit:disabled { opacity: 0.6; cursor: not-allowed; }
