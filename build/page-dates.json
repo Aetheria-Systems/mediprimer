@@ -8,8 +8,8 @@
   "hash": "da2e37d6e26c73d84641319df78f6388"
  },
  "appeals-timelines.html": {
-  "date": "2026-07-22",
-  "hash": "9df244359985746ac9165f2576af46b6"
+  "date": "2026-09-06",
+  "hash": "d96b62163e782849e9566d413418a3f2"
  },
  "basics.html": {
   "date": "2026-07-22",
@@ -84,8 +84,8 @@
   "hash": "909c9adcf96791c3f63d32b24cba033c"
  },
  "enrollment-calendar.html": {
-  "date": "2026-07-22",
-  "hash": "fcf6e1720c9d120c057e2d7408f6ae45"
+  "date": "2026-09-06",
+  "hash": "fbcae831a38c4da08368e5cb946f4d9e"
  },
  "enrollment.html": {
   "date": "2026-09-03",
@@ -105,7 +105,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-06",
-  "hash": "965263c475a16671b15df91f75e15876"
+  "hash": "d0ac300044c020aa4540c2dc12b9b138"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-06",
@@ -133,7 +133,7 @@
  },
  "marketplace.html": {
   "date": "2026-09-06",
-  "hash": "71d2634cf0b9dda3429278d8b074b82e"
+  "hash": "4b103a28599fa9fd164bf542ec657d54"
  },
  "medicaid-eligibility.html": {
   "date": "2026-09-06",
@@ -160,8 +160,8 @@
   "hash": "e5c2a3bbc26e159121fc150b08bf36b0"
  },
  "medicare-advantage-prior-authorization.html": {
-  "date": "2026-07-28",
-  "hash": "7528052503e2d48cd7df1c7837295b48"
+  "date": "2026-09-06",
+  "hash": "df2e48af7fcd52ca84f37cb0d48ee6fe"
  },
  "medicare-advantage-to-original-medicare.html": {
   "date": "2026-07-28",
@@ -171,9 +171,17 @@
   "date": "2026-09-02",
   "hash": "a40d2b4f305e6fea6c16b07709fac82c"
  },
+ "medicare-ambulance-emergency-room.html": {
+  "date": "2026-09-06",
+  "hash": "e0469ad9717acccdee253b187019f8cf"
+ },
  "medicare-dental-vision-hearing.html": {
   "date": "2026-08-02",
   "hash": "a26bd69203a8bda654419486727cc4e5"
+ },
+ "medicare-diabetes-coverage.html": {
+  "date": "2026-09-06",
+  "hash": "eb3c628c7af69efeafab7840fd0f2466"
  },
  "medicare-esrd-kidney-failure.html": {
   "date": "2026-09-06",
@@ -201,11 +209,11 @@
  },
  "medicare-part-b.html": {
   "date": "2026-09-06",
-  "hash": "e9fa062f2729541d165dc2d59a5b61e1"
+  "hash": "8d4e2e5d87b85474d4ff9301b0de4783"
  },
  "medicare-part-d.html": {
   "date": "2026-09-06",
-  "hash": "1fdab776a9ca342ba1701c34be685da1"
+  "hash": "e75e654ef7f4621f6209cbe2eb8d7347"
  },
  "medicare-prescription-payment-plan.html": {
   "date": "2026-09-06",
@@ -255,6 +263,10 @@
   "date": "2026-07-22",
   "hash": "c46ad247683aa6bca983393874272ce0"
  },
+ "part-d-formulary-exception-appeal.html": {
+  "date": "2026-09-06",
+  "hash": "0b1941eda42b9cbbd02b7f9749061af5"
+ },
  "plan-types.html": {
   "date": "2026-07-22",
   "hash": "11df94bdf800975b656cc799aa75c90a"
@@ -264,8 +276,8 @@
   "hash": "e79b98c53c6f27f888b1cfdd494ce7a9"
  },
  "policy-changes.html": {
-  "date": "2026-09-03",
-  "hash": "93e3cd3a1eb601d1ad75eb8145731d29"
+  "date": "2026-09-06",
+  "hash": "0ffb88888dec64855285378745bf4f9a"
  },
  "privacy.html": {
   "date": "2026-07-22",
@@ -292,8 +304,8 @@
   "hash": "b19db6b11cb4dbd983e357f34087b1a3"
  },
  "rights.html": {
-  "date": "2026-07-28",
-  "hash": "dc6b10255962aa809d3327e0df51eb58"
+  "date": "2026-09-06",
+  "hash": "be3c459bfec5d1a6689a51741af1c45f"
  },
  "risk-adjustment.html": {
   "date": "2026-07-22",
@@ -305,7 +317,7 @@
  },
  "site-map.html": {
   "date": "2026-09-06",
-  "hash": "d0be42b2b2860ac1ae44a0ea6d5543da"
+  "hash": "c0425f8c2daddfe9db80c4ae826dbc96"
  },
  "star-ratings.html": {
   "date": "2026-08-19",
@@ -326,6 +338,10 @@
  "terms-of-use.html": {
   "date": "2026-07-22",
   "hash": "2c4c06fe5da72ca836655a0cef1c6815"
+ },
+ "turning-26-health-insurance.html": {
+  "date": "2026-09-06",
+  "hash": "09b62bd2d33a8746336f5e95b6b7ea23"
  },
  "turning-65.html": {
   "date": "2026-07-28",
