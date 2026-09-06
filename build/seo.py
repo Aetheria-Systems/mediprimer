@@ -76,6 +76,26 @@ FAQ = {
 # data matches each page's declared inLanguage.
 FAQ_TRANSLATIONS = {}
 
+# Auto-derived FAQ schema: 31 pages carry <details class="qa"> Q&A sections
+# but only the 4 hardcoded FAQ entries above emitted FAQPage JSON-LD. Extract
+# pairs from the page markup itself — translated pages contain their own
+# translated Q&As, so no FAQ_TRANSLATIONS entry is needed for auto pairs.
+QA_RE = re.compile(
+    r'<details class="qa">\s*<summary>(.*?)</summary>\s*<div>(.*?)</div>\s*</details>',
+    re.DOTALL)
+
+
+def extract_faq_pairs(page_html):
+    pairs = []
+    for q_raw, a_raw in QA_RE.findall(page_html or ""):
+        q_text = unescape(re.sub(r"<[^>]+>", " ", q_raw))
+        a_text = unescape(re.sub(r"<[^>]+>", " ", a_raw))
+        q_text = re.sub(r"\s+", " ", q_text).strip()
+        a_text = re.sub(r"\s+", " ", a_text).strip()
+        if q_text and a_text:
+            pairs.append((q_text, a_text))
+    return pairs
+
 FAQ_TRANSLATIONS["es"] = {
     "turning-65.html": [
         ("¿Cuándo puedo inscribirme en Medicare?",
@@ -195,7 +215,7 @@ def alternates(name, langs_dict, pub_dir):
 
     return "\n".join(links)
 
-def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None, langs_dict=None):
+def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None, langs_dict=None, page_html=None):
     parts = ['<!--seo-->',
              '<link rel="canonical" href="%s">' % url,
              '<meta property="og:type" content="website">',
@@ -226,6 +246,7 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
                          "potentialAction": {"@type": "SearchAction",
                              "target": {"@type": "EntryPoint", "urlTemplate": BASE + "/glossary.html?q={search_term_string}"},
                              "query-input": "required name=search_term_string"}}))
+    faq_pairs = None
     if name in FAQ:
         if lang_code and lang_code != "en":
             if lang_code not in FAQ_TRANSLATIONS or name not in FAQ_TRANSLATIONS[lang_code]:
@@ -233,6 +254,11 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
             faq_pairs = FAQ_TRANSLATIONS[lang_code][name]
         else:
             faq_pairs = FAQ[name]
+    else:
+        auto = extract_faq_pairs(page_html)
+        if len(auto) >= 2:
+            faq_pairs = auto
+    if faq_pairs:
         parts.append(ld({"@context": "https://schema.org", "@type": "FAQPage",
                          "mainEntity": [{"@type": "Question", "name": qq,
                                          "acceptedAnswer": {"@type": "Answer", "text": a}} for qq, a in faq_pairs]}))
@@ -322,7 +348,7 @@ def main():
         mod = page_date(name, html2, dates)
         page_mods[name] = mod
         if "</head>" in html2:
-            html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod, langs_dict=langs_dict) + "\n</head>", 1)
+            html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod, langs_dict=langs_dict, page_html=html2) + "\n</head>", 1)
         if html2 != html:
             with open(path, "w", encoding="utf-8") as f:
                 f.write(html2)
@@ -380,7 +406,7 @@ def main():
                     if "</head>" in html2:
                         html2 = html2.replace("</head>", seo_block(name, url, title, desc, mod,
                                                                    lang_code=code, in_language=code + "-US",
-                                                                   langs_dict=langs_dict) + "\n</head>", 1)
+                                                                   langs_dict=langs_dict, page_html=html2) + "\n</head>", 1)
                     if html2 != html:
                         with open(path, "w", encoding="utf-8") as f:
                             f.write(html2)

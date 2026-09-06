@@ -3,6 +3,19 @@
 
   var history = [];
 
+  var NEWS_STRINGS = {
+    en: { prompt: "\uD83D\uDCEC Weekly plain-language updates", placeholder: "Your email", btn: "Sign up", ok: "You're signed up. Welcome!", err: "That didn't work \u2014 check the address and try again." },
+    es: { prompt: "\uD83D\uDCEC Novedades semanales en lenguaje sencillo", placeholder: "Su correo electr\u00F3nico", btn: "Suscribirse", ok: "\u00A1Listo! Ya est\u00E1 suscrito.", err: "No funcion\u00F3 \u2014 revise la direcci\u00F3n e intente de nuevo." },
+    "zh-Hant": { prompt: "\uD83D\uDCEC \u6BCF\u9031\u66F4\u65B0\u96FB\u5B50\u5831", placeholder: "\u60A8\u7684\u96FB\u5B50\u90F5\u4EF6", btn: "\u8A02\u95B1", ok: "\u8A02\u95B1\u6210\u529F\uFF0C\u6B61\u8FCE\uFF01", err: "\u672A\u80FD\u8A02\u95B1 \u2014 \u8ACB\u6AA2\u67E5\u90F5\u4EF6\u5730\u5740\u5F8C\u91CD\u8A66\u3002" }
+  };
+
+  function pageLang() {
+    var path = window.location.pathname;
+    if (path.indexOf("/es/") === 0) return "es";
+    if (path.indexOf("/zh-Hant/") === 0) return "zh-Hant";
+    return "en";
+  }
+
   function el(tag, className, text) {
     var e = document.createElement(tag);
     if (className) e.className = className;
@@ -57,6 +70,47 @@
     panel.appendChild(log);
     panel.appendChild(privacyNote);
     panel.appendChild(form);
+
+    var lang = pageLang();
+    var t = NEWS_STRINGS[lang] || NEWS_STRINGS.en;
+    var newsWrap = el("div", "mp-chatbot-news");
+    var newsLabel = el("span", "mp-chatbot-news-label", t.prompt);
+    var newsForm = el("form", "mp-chatbot-news-form");
+    var newsInput = el("input", "mp-chatbot-news-input");
+    newsInput.type = "email";
+    newsInput.required = true;
+    newsInput.placeholder = t.placeholder;
+    newsInput.setAttribute("aria-label", t.placeholder);
+    var newsBtn = el("button", "mp-chatbot-news-btn", t.btn);
+    newsBtn.type = "submit";
+    newsForm.appendChild(newsInput);
+    newsForm.appendChild(newsBtn);
+    newsWrap.appendChild(newsLabel);
+    newsWrap.appendChild(newsForm);
+    panel.appendChild(newsWrap);
+    newsForm.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      if (newsBtn.disabled) return;
+      newsBtn.disabled = true;
+      fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsInput.value.trim(), lang: lang })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.ok) {
+            newsWrap.textContent = t.ok;
+          } else {
+            newsLabel.textContent = t.err;
+            newsBtn.disabled = false;
+          }
+        })
+        .catch(function () {
+          newsLabel.textContent = t.err;
+          newsBtn.disabled = false;
+        });
+    });
     root.appendChild(panel);
     root.appendChild(toggle);
     document.body.appendChild(root);
