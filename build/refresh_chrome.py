@@ -31,7 +31,7 @@ def refresh(code):
         segments = split_page(html)
 
         active_key = ACTIVE.get(page_name, "home")
-        new_header = render_header(code, active_key, page_name, load_chrome(code), LANGUAGES)
+        new_header = render_header(code, active_key, page_name, load_chrome(code), LANGUAGES, PUB)
         new_footer = render_footer(code, page_name, load_chrome(code), LANGUAGES, html)
 
         footer_end_pos = segments["footer"].find("</footer>")

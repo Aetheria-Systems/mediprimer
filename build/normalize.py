@@ -103,6 +103,9 @@ ACTIVE = {
     "medicare-mental-health.html": "members", "medicare-scams.html": "members",
     "medicare-travel.html": "members", "medicare-weight-loss-drugs.html": "members",
     "hospital-observation-status.html": "members",
+    # Content-gap pages (2026-09-06)
+    "medicare-esrd-kidney-failure.html": "members", "lost-medicaid-what-now.html": "members",
+    "medicare-wellness-visit-vs-physical.html": "members", "marketplace-income-estimate.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
@@ -140,7 +143,7 @@ def header(active_key, page_name):
         else:
             items.append('      <a href="%s" class="navtop%s">%s</a>' % (href, active, _esc(label)))
     nav = "\n".join(items)
-    switcher = switcher_html("en", page_name, LANGUAGES)
+    switcher = switcher_html("en", page_name, LANGUAGES, PUB)
     switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
     # nav-toggle + nav.main are grouped in .header-controls so they wrap as
     # one unit relative to the brand. The switcher is pinned absolutely to

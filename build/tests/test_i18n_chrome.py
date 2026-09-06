@@ -413,3 +413,30 @@ def test_render_footer_contains_note_and_links():
     assert "Materiales oficiales de Medicare en español" in result, f"Official materials link text missing in: {result}"
     # No English footer labels should survive
     assert "The Basics" not in result, f"English heading 'The Basics' found in: {result}"
+
+
+def test_switcher_omits_languages_whose_page_is_missing(tmp_path):
+    """With pub_dir given, a launched language is listed only if its translated
+    counterpart exists -- a brand-new English page must not link to a
+    translation the nightly sync hasn't produced yet (validate.py rejects
+    such dead links). The current language and English are always listed."""
+    languages = {
+        "languages": [
+            {"code": "es", "name": "Spanish", "native": "Español", "launched": True, "ui": {"switcher_label": "Idioma"}},
+            {"code": "fr", "name": "French", "native": "Français", "launched": True, "ui": {"switcher_label": "Langue"}}
+        ]
+    }
+    (tmp_path / "es").mkdir()
+    (tmp_path / "es" / "new-page.html").write_text("<html></html>", encoding="utf-8")
+
+    result = switcher_html("en", "new-page.html", languages, str(tmp_path))
+    assert "/es/new-page.html" in result, f"Existing Spanish page missing from: {result}"
+    assert "/fr/new-page.html" not in result, f"Missing French page must not be linked: {result}"
+
+    # Rendering the (not-yet-written) French page itself: French stays listed as current.
+    result_fr = switcher_html("fr", "new-page.html", languages, str(tmp_path))
+    assert 'href="/fr/new-page.html" lang="fr" aria-current="page"' in result_fr, result_fr
+    assert "/es/new-page.html" in result_fr
+
+    # Without pub_dir, behaviour is unchanged (no filesystem check).
+    assert "/fr/new-page.html" in switcher_html("en", "new-page.html", languages)

@@ -32,7 +32,7 @@ def _prefix_href(href, code):
     return href
 
 
-def switcher_html(current_code, page_name, languages):
+def switcher_html(current_code, page_name, languages, pub_dir=None):
     """
     Render language switcher as a dropdown, matching the site's existing
     .navitem.has-menu / .menu-caret / .dropdown nav pattern so nav-menu.js's
@@ -40,8 +40,18 @@ def switcher_html(current_code, page_name, languages):
 
     Returns empty string if no languages are launched.
     Deterministic ordering: en first, then languages.json order.
+
+    pub_dir: path to public/. When given, a launched language is only listed
+    if its translated counterpart (public/<code>/<page_name>) exists, so a
+    brand-new English page doesn't link to a translation the nightly sync
+    hasn't produced yet (validate.py rejects such dead links). The current
+    language and English are always listed. Mirrors seo.py's hreflang rule.
     """
     launched = [lang for lang in languages.get("languages", []) if lang.get("launched", False)]
+    if pub_dir is not None:
+        launched = [lang for lang in launched
+                    if lang["code"] == current_code
+                    or os.path.isfile(os.path.join(pub_dir, lang["code"], page_name))]
 
     if not launched:
         return ""
@@ -84,7 +94,7 @@ def switcher_html(current_code, page_name, languages):
   </div>'''
 
 
-def render_header(code, active_key, page_name, chrome, languages=None):
+def render_header(code, active_key, page_name, chrome, languages=None, pub_dir=None):
     """
     Render header with translated labels, language-prefixed hrefs, and embedded switcher.
 
@@ -94,6 +104,8 @@ def render_header(code, active_key, page_name, chrome, languages=None):
         page_name: Current page filename (e.g., "turning-65.html", "index.html")
         chrome: Dict with "nav", "menus", "menu_button", "open_menu" keys
         languages: Dict with languages list (if None, loaded internally; avoid circular import)
+        pub_dir: path to public/; when given, the switcher only lists languages
+            whose translated page exists (see switcher_html)
 
     Returns: HTML header string with translated labels, switcher, and language-prefixed hrefs
     Raises: KeyError if any label is missing from chrome
@@ -150,7 +162,7 @@ def render_header(code, active_key, page_name, chrome, languages=None):
     # the header's top-right corner (see .lang-switch in style.css) --
     # deliberately taken out of flex flow entirely, so its position can
     # never depend on how much the nav wraps.
-    switcher = switcher_html(code, page_name, languages)
+    switcher = switcher_html(code, page_name, languages, pub_dir)
     switcher_html_str = f"\n    <!--switcher-->{switcher}<!--/switcher-->" if switcher else ""
 
     # Prefix brand href for non-English (Critical 2)

@@ -313,7 +313,7 @@ def translate_page(page_name, code, force=False):
 
     # Step 6: Render chrome
     active_key = ACTIVE.get(page_name, "home")
-    tr_header = render_header(code, active_key, page_name, load_chrome(code), LANGUAGES)
+    tr_header = render_header(code, active_key, page_name, load_chrome(code), LANGUAGES, PUB)
     tr_footer = render_footer(code, page_name, load_chrome(code), LANGUAGES, en_html)
 
     # Preserve any trailing content after </footer> from original (e.g., scripts)
