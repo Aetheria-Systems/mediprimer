@@ -44,12 +44,12 @@
   "hash": "6a7b1ef200775e3b58a31bb4335ff254"
  },
  "common-mistakes.html": {
-  "date": "2026-07-22",
-  "hash": "cbe97e954405f6134fc024b9c6fd0792"
+  "date": "2026-09-06",
+  "hash": "263a9ef31daed9639e6ed0e9bed87a90"
  },
  "costs.html": {
-  "date": "2026-09-02",
-  "hash": "48c192459ac50528f569312cac5ce6f6"
+  "date": "2026-09-06",
+  "hash": "13141efda96dbf9fded718ab8805f95d"
  },
  "coverage-basics.html": {
   "date": "2026-07-22",
@@ -60,8 +60,8 @@
   "hash": "a6ae0635b867df4e348368ddddd59c19"
  },
  "disability-medicare.html": {
-  "date": "2026-07-22",
-  "hash": "c1b0d8e2bdbd4341177842410607ea3c"
+  "date": "2026-09-06",
+  "hash": "f99fea2750a64a48a19fb6fae28d5494"
  },
  "disclaimer.html": {
   "date": "2026-07-22",
@@ -72,8 +72,8 @@
   "hash": "aeb603fd6c24d93f9eb6f2ab0fe101a1"
  },
  "edge-cases.html": {
-  "date": "2026-07-22",
-  "hash": "47aac4506e395a0054fef26a76a69d86"
+  "date": "2026-09-06",
+  "hash": "1dca37bf779547fcc6f0336553a26914"
  },
  "editorial-standards.html": {
   "date": "2026-07-22",
@@ -100,8 +100,8 @@
   "hash": "7fe21226ad588cfe98d8c4ec264f90d1"
  },
  "how-do-i.html": {
-  "date": "2026-08-05",
-  "hash": "bf8aa7b8eec49256b147256323c70847"
+  "date": "2026-09-06",
+  "hash": "7440b214d6415e239b6136f85496574f"
  },
  "index.html": {
   "date": "2026-07-22",
@@ -111,17 +111,25 @@
   "date": "2026-07-22",
   "hash": "3691321ca2b8a9f02d043f918dbf7255"
  },
+ "lost-medicaid-what-now.html": {
+  "date": "2026-09-06",
+  "hash": "945638869d001eab83f43bdcb556801b"
+ },
+ "marketplace-income-estimate.html": {
+  "date": "2026-09-06",
+  "hash": "2df0d272b2a0b566a3459d1b4f7136ed"
+ },
  "marketplace-premium-increase.html": {
-  "date": "2026-07-28",
-  "hash": "2cd6c9e40901e2d85e3a453b34ed6ab3"
+  "date": "2026-09-06",
+  "hash": "10aa749e4fa73a77148833ecc06d276c"
  },
  "marketplace.html": {
-  "date": "2026-09-02",
-  "hash": "7d793f17ffa014f316654fcf25c130d5"
+  "date": "2026-09-06",
+  "hash": "71d2634cf0b9dda3429278d8b074b82e"
  },
  "medicaid-eligibility.html": {
-  "date": "2026-09-03",
-  "hash": "575e995ad4de45e9e7d889aaab1df5a1"
+  "date": "2026-09-06",
+  "hash": "981a7fd5f614f528ed8ad0a610da4eee"
  },
  "medicaid-estate-recovery.html": {
   "date": "2026-07-28",
@@ -136,8 +144,8 @@
   "hash": "0068c7f85f228c48751c166afa41d09b"
  },
  "medicaid-work-requirements.html": {
-  "date": "2026-07-28",
-  "hash": "e2c1fbec971594a2933a11629c4d5703"
+  "date": "2026-09-06",
+  "hash": "e5c2a3bbc26e159121fc150b08bf36b0"
  },
  "medicare-advantage-prior-authorization.html": {
   "date": "2026-07-28",
@@ -154,6 +162,10 @@
  "medicare-dental-vision-hearing.html": {
   "date": "2026-08-02",
   "hash": "a26bd69203a8bda654419486727cc4e5"
+ },
+ "medicare-esrd-kidney-failure.html": {
+  "date": "2026-09-06",
+  "hash": "8c9cc43dac9b0d24dd4850c09afeda72"
  },
  "medicare-hospice-home-health.html": {
   "date": "2026-07-28",
@@ -172,12 +184,12 @@
   "hash": "bf3c20da00dfabb75b601d1a29bfc898"
  },
  "medicare-part-a.html": {
-  "date": "2026-08-02",
-  "hash": "c4bd8d5c6dce9e70433afed91c4e5a6c"
+  "date": "2026-09-06",
+  "hash": "cc8a78ce8ac86d9f55cd474637277443"
  },
  "medicare-part-b.html": {
-  "date": "2026-07-28",
-  "hash": "1c0966c2a33c3a6c7525ad451df22352"
+  "date": "2026-09-06",
+  "hash": "e9fa062f2729541d165dc2d59a5b61e1"
  },
  "medicare-part-d.html": {
   "date": "2026-07-28",
@@ -198,6 +210,10 @@
  "medicare-weight-loss-drugs.html": {
   "date": "2026-07-28",
   "hash": "148a54685d8d5b78809d7037fc9a4c51"
+ },
+ "medicare-wellness-visit-vs-physical.html": {
+  "date": "2026-09-06",
+  "hash": "95bdc99320ca22ca730bfb081f74e505"
  },
  "medigap.html": {
   "date": "2026-07-28",
@@ -256,8 +272,8 @@
   "hash": "c54f248118e6b9fc7a86154c862b463c"
  },
  "retiring-losing-coverage.html": {
-  "date": "2026-07-22",
-  "hash": "d5a31f77315e695fd8349ef113fb6e49"
+  "date": "2026-09-06",
+  "hash": "4f07cb230993d53eeebbc547059e97f8"
  },
  "rights.html": {
   "date": "2026-07-28",
@@ -272,8 +288,8 @@
   "hash": "5b75ce707a4e39a0d7ebc3a0a4b5c144"
  },
  "site-map.html": {
-  "date": "2026-08-02",
-  "hash": "9941acd32c0e4eba1edead0b4ad47220"
+  "date": "2026-09-06",
+  "hash": "9be2b04541db167bfed89c1b9fa8b89e"
  },
  "star-ratings.html": {
   "date": "2026-08-19",
