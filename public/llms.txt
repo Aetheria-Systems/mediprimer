@@ -1,0 +1,25 @@
+# MediPrimer
+
+> Free, independent, plain-language guide to U.S. health coverage: Medicare,
+> Medicaid, Medicare Advantage, the ACA Marketplace, and CHIP. No ads, no
+> plan recommendations, no lead sales. Written at an 8th-grade reading level
+> and maintained continuously against official sources (medicare.gov,
+> cms.gov, ssa.gov, medicaid.gov); every fact carries a source annotation.
+
+Every page is available in English, Spanish (/es/), and Traditional Chinese
+(/zh-Hant/), with more languages launching; the same complete guide in each.
+
+## Start here
+- [Turning 65: Start Here](https://mediprimer.org/turning-65.html)
+- [Dual Eligible: Medicare and Medicaid together](https://mediprimer.org/dual-eligible.html)
+- [Help paying for Medicare](https://mediprimer.org/getting-help.html)
+- [Medicare enrollment and deadlines](https://mediprimer.org/enrollment.html)
+- [Guía en español](https://mediprimer.org/es/turning-65.html)
+- [繁體中文指南](https://mediprimer.org/zh-Hant/turning-65.html)
+
+## Full index
+- [Sitemap](https://mediprimer.org/sitemap.xml)
+- [All member guides](https://mediprimer.org/members.html)
+- [Plain-English glossary](https://mediprimer.org/glossary.html)
+
+Editor: Kurt Hamm (https://mediprimer.org/about.html). Contact: editor@mediprimer.org.
