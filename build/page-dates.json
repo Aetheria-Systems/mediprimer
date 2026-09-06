@@ -83,6 +83,10 @@
   "date": "2026-07-22",
   "hash": "909c9adcf96791c3f63d32b24cba033c"
  },
+ "emergency-medicaid.html": {
+  "date": "2026-09-06",
+  "hash": "8feffb2d612e14d945f01f0142a40bda"
+ },
  "enrollment-calendar.html": {
   "date": "2026-09-06",
   "hash": "fbcae831a38c4da08368e5cb946f4d9e"
@@ -105,7 +109,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-06",
-  "hash": "8054237a22e47c3ee20305bcf8ff0009"
+  "hash": "7926b20ec463d50c2cceffacb9907cab"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-06",
@@ -191,6 +195,14 @@
   "date": "2026-09-06",
   "hash": "e0469ad9717acccdee253b187019f8cf"
  },
+ "medicare-assignment-excess-charges.html": {
+  "date": "2026-09-06",
+  "hash": "231189456d33ce5b3bf682e568a8a280"
+ },
+ "medicare-assignment.html": {
+  "date": "2026-09-06",
+  "hash": "4166e5f8a4d56d3dd00080194ac78bbe"
+ },
  "medicare-cancer-treatment.html": {
   "date": "2026-09-06",
   "hash": "181a5c8dd0c0989d08dbb80f0e8155d2"
@@ -199,9 +211,13 @@
   "date": "2026-09-06",
   "hash": "1d12cf9df1590f6123644a17438eb111"
  },
+ "medicare-chiropractic-acupuncture.html": {
+  "date": "2026-09-06",
+  "hash": "71622af3142e7bdb88deb4a86c02fdf8"
+ },
  "medicare-dental-vision-hearing.html": {
   "date": "2026-09-06",
-  "hash": "ca4122a091941bb140ba4f0cbe71e9d8"
+  "hash": "f44faf64bce9f1bca79186015f55e7f6"
  },
  "medicare-diabetes-coverage.html": {
   "date": "2026-09-06",
@@ -220,7 +236,7 @@
   "hash": "1f7662740eb0b95f92e36d65055b46a6"
  },
  "medicare-immigrants.html": {
-  "date": "2026-08-02",
+  "date": "2026-09-06",
   "hash": "4e9296f7508e6d3994e490c0812a925c"
  },
  "medicare-long-term-care.html": {
@@ -245,11 +261,15 @@
  },
  "medicare-part-b.html": {
   "date": "2026-09-06",
-  "hash": "dd258adbb8696cd7769777ad97b4f287"
+  "hash": "0782a416f0334cd7868d87ce3b6f8ca4"
  },
  "medicare-part-d.html": {
   "date": "2026-09-06",
   "hash": "2c5bd156a371274943694a3ee1a3da1a"
+ },
+ "medicare-physical-therapy.html": {
+  "date": "2026-09-06",
+  "hash": "12b7463e61a085d6c899e8618c8ea7df"
  },
  "medicare-prescription-payment-plan.html": {
   "date": "2026-09-06",
@@ -257,7 +277,15 @@
  },
  "medicare-scams.html": {
   "date": "2026-09-06",
-  "hash": "8571e96095998b7c3cc50c3a513052d2"
+  "hash": "d921b96b858b15fa2e668d4afab6cdf5"
+ },
+ "medicare-screening-surprise-bill.html": {
+  "date": "2026-09-06",
+  "hash": "4eac71c66496e293d52624e6b34f5647"
+ },
+ "medicare-screening-vs-diagnostic.html": {
+  "date": "2026-09-06",
+  "hash": "737ae1745b34ae1210548e212750371e"
  },
  "medicare-spouse-work-record.html": {
   "date": "2026-09-06",
@@ -266,6 +294,10 @@
  "medicare-star-ratings.html": {
   "date": "2026-09-02",
   "hash": "89000defa36fc6c9bd8e70f647651248"
+ },
+ "medicare-summary-notice.html": {
+  "date": "2026-09-06",
+  "hash": "95a7d38e8f85c2d8751316fe6bc5c643"
  },
  "medicare-telehealth.html": {
   "date": "2026-09-06",
@@ -353,7 +385,7 @@
  },
  "rights.html": {
   "date": "2026-09-06",
-  "hash": "be3c459bfec5d1a6689a51741af1c45f"
+  "hash": "4e5dc1694296e26e1c0745f651a036db"
  },
  "risk-adjustment.html": {
   "date": "2026-07-22",
@@ -365,7 +397,7 @@
  },
  "site-map.html": {
   "date": "2026-09-06",
-  "hash": "c0425f8c2daddfe9db80c4ae826dbc96"
+  "hash": "7430832231d01730d7a757b3b8384dd7"
  },
  "star-ratings.html": {
   "date": "2026-08-19",
