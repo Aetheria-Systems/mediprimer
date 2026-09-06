@@ -71,9 +71,13 @@
   "date": "2026-07-22",
   "hash": "bf0a91d541fc2378a1205ddaa28d5e29"
  },
+ "does-my-doctor-accept-medicare.html": {
+  "date": "2026-09-06",
+  "hash": "ea8d23032e832c0841b27b3c95e836d4"
+ },
  "dual-eligible.html": {
   "date": "2026-09-06",
-  "hash": "ff68758e70363e2670eb7ac5c845946b"
+  "hash": "1a074458d1e6adce9a795a26c7fed4ce"
  },
  "edge-cases.html": {
   "date": "2026-09-06",
@@ -85,15 +89,15 @@
  },
  "emergency-medicaid.html": {
   "date": "2026-09-06",
-  "hash": "8feffb2d612e14d945f01f0142a40bda"
+  "hash": "beef57a39da5f3bdb2593b2ffa752814"
  },
  "enrollment-calendar.html": {
   "date": "2026-09-06",
   "hash": "fbcae831a38c4da08368e5cb946f4d9e"
  },
  "enrollment.html": {
-  "date": "2026-09-03",
-  "hash": "8b42bc877e0b1dd25d321feb9af45fa6"
+  "date": "2026-09-06",
+  "hash": "c89111e3219e9f68c80d7a3d56d74801"
  },
  "getting-help.html": {
   "date": "2026-09-02",
@@ -109,7 +113,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-06",
-  "hash": "7926b20ec463d50c2cceffacb9907cab"
+  "hash": "6d3a9d05162d1296b3da0f49a75e069f"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-06",
@@ -189,7 +193,7 @@
  },
  "medicare-advantage.html": {
   "date": "2026-09-06",
-  "hash": "be9b91509bcb3e7887035f389055eaf7"
+  "hash": "c0c4cd040f8f2fa5d9a82ce509c08804"
  },
  "medicare-ambulance-emergency-room.html": {
   "date": "2026-09-06",
@@ -237,7 +241,7 @@
  },
  "medicare-immigrants.html": {
   "date": "2026-09-06",
-  "hash": "4e9296f7508e6d3994e490c0812a925c"
+  "hash": "f5a2c518932781aafce98f0f8a052083"
  },
  "medicare-long-term-care.html": {
   "date": "2026-09-06",
@@ -251,6 +255,10 @@
   "date": "2026-09-06",
   "hash": "16168e057d5355a3805a2b92a0af213a"
  },
+ "medicare-open-enrollment-2027.html": {
+  "date": "2026-09-06",
+  "hash": "c119953c6930bfc8e9b9a2ac19f4c45e"
+ },
  "medicare-part-a.html": {
   "date": "2026-09-06",
   "hash": "1710b7a1fe81d257f4834b235ead4fdf"
@@ -261,7 +269,7 @@
  },
  "medicare-part-b.html": {
   "date": "2026-09-06",
-  "hash": "0782a416f0334cd7868d87ce3b6f8ca4"
+  "hash": "52629a226c1966b4f5c98eca55ea96ef"
  },
  "medicare-part-d.html": {
   "date": "2026-09-06",
@@ -286,6 +294,10 @@
  "medicare-screening-vs-diagnostic.html": {
   "date": "2026-09-06",
   "hash": "737ae1745b34ae1210548e212750371e"
+ },
+ "medicare-special-needs-plans.html": {
+  "date": "2026-09-06",
+  "hash": "6347513da989201173f174638362160f"
  },
  "medicare-spouse-work-record.html": {
   "date": "2026-09-06",
@@ -397,7 +409,7 @@
  },
  "site-map.html": {
   "date": "2026-09-06",
-  "hash": "7430832231d01730d7a757b3b8384dd7"
+  "hash": "b66a4f1424fa18f806d04a6e8fc7c816"
  },
  "star-ratings.html": {
   "date": "2026-08-19",

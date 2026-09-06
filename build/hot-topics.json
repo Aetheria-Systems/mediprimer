@@ -1,0 +1,70 @@
+{
+  "_doc": "Homepage 'Happening right now' section. Keyed by month number. Each item: q = the trigger question in the visitor's voice, sub = one plain sentence, href = target page (item is SKIPPED if the file doesn't exist yet). 'breaking' may be swapped by the weekly update job when a real change lands; it fills the last slot when present.",
+  "breaking": [
+    {"q": "Medicare now covers some weight-loss drugs — new this year.",
+     "sub": "Wegovy and Zepbound for $50 a month, if you qualify. See the rules.",
+     "href": "/medicare-weight-loss-drugs.html"}
+  ],
+  "months": {
+    "1": [
+      {"q": "New year — your deductibles just reset.", "sub": "What you'll pay again this year, part by part.", "href": "/costs.html"},
+      {"q": "Second thoughts about the Medicare Advantage plan you picked?", "sub": "You can switch plans or go back to Original Medicare until March 31.", "href": "/medicare-advantage-to-original-medicare.html"},
+      {"q": "Missed your chance to sign up for Medicare?", "sub": "General Enrollment is open January through March.", "href": "/enrollment.html"}
+    ],
+    "2": [
+      {"q": "A tax form about your health coverage came in the mail?", "sub": "What the 1095 form is and what to do with it.", "href": "/marketplace-income-estimate.html"},
+      {"q": "Not happy with your Medicare Advantage plan?", "sub": "You have until March 31 to make one switch.", "href": "/medicare-advantage-to-original-medicare.html"},
+      {"q": "Paying more than you can afford for Medicare?", "sub": "Programs that pay premiums for people with limited income.", "href": "/getting-help.html"}
+    ],
+    "3": [
+      {"q": "March 31 is the last day to switch Medicare Advantage plans.", "sub": "One change allowed — how to decide before the window closes.", "href": "/medicare-advantage-to-original-medicare.html"},
+      {"q": "Got a letter saying you owe a higher Medicare premium?", "sub": "That's IRMAA — and if your income dropped, you can appeal it.", "href": "/costs.html"},
+      {"q": "Signing up during General Enrollment?", "sub": "March is the deadline; coverage starts the month after you enroll.", "href": "/enrollment.html"}
+    ],
+    "4": [
+      {"q": "New to Medicare this year and something got denied?", "sub": "You have appeal rights, with deadlines. Here's how they work.", "href": "/rights.html"},
+      {"q": "Did your state ask you to renew your Medicaid?", "sub": "Don't ignore the packet — missing it can end your coverage.", "href": "/medicaid-eligibility.html"},
+      {"q": "Paying full price for prescriptions?", "sub": "Extra Help can cut drug costs — see if you qualify.", "href": "/getting-help.html"}
+    ],
+    "5": [
+      {"q": "Caring for a parent's Medicare and feeling lost?", "sub": "What you can legally handle for them, and how to get set up.", "href": "/caregivers.html"},
+      {"q": "Moving this year?", "sub": "A new address can change your plan options — what to check first.", "href": "/enrollment.html"},
+      {"q": "Did your state ask you to renew your Medicaid?", "sub": "Don't ignore the packet — missing it can end your coverage.", "href": "/medicaid-eligibility.html"}
+    ],
+    "6": [
+      {"q": "Turning 65 in the next few months?", "sub": "Your sign-up window is 7 months — start here.", "href": "/turning-65.html"},
+      {"q": "Traveling this summer?", "sub": "What Medicare covers away from home — and what it doesn't overseas.", "href": "/medicare-travel.html"},
+      {"q": "Working past 65 and unsure about signing up?", "sub": "When you can wait, and when waiting costs you.", "href": "/working-past-65.html"}
+    ],
+    "7": [
+      {"q": "Halfway through the year — how close are you to your plan's spending cap?", "sub": "Check your out-of-pocket maximum before a big procedure.", "href": "/costs.html"},
+      {"q": "Traveling this summer?", "sub": "What Medicare covers away from home — and what it doesn't overseas.", "href": "/medicare-travel.html"},
+      {"q": "Turning 65 soon?", "sub": "Your sign-up window is 7 months — start here.", "href": "/turning-65.html"}
+    ],
+    "8": [
+      {"q": "Getting calls about your Medicare card or a 'flex card'?", "sub": "Medicare never calls to sell you anything. How to spot the scams.", "href": "/medicare-scams.html"},
+      {"q": "Rule changes are announced this time of year.", "sub": "What's changing in Medicare and Medicaid, in plain language.", "href": "/policy-changes.html"},
+      {"q": "Turning 65 soon?", "sub": "Your sign-up window is 7 months — start here.", "href": "/turning-65.html"}
+    ],
+    "9": [
+      {"q": "A letter came saying your plan is changing next year?", "sub": "That's your Annual Notice of Change. What to look for before fall enrollment.", "href": "/anoc-letter.html", "fallback": "/enrollment.html"},
+      {"q": "Fall open enrollment starts October 15.", "sub": "What you'll be able to change, and how to get ready now.", "href": "/medicare-open-enrollment.html", "fallback": "/enrollment.html"},
+      {"q": "The new 'Medicare & You' handbook is arriving in mailboxes.", "sub": "It's real, it's useful — here's how the pieces fit together.", "href": "/coverage-basics.html"}
+    ],
+    "10": [
+      {"q": "Open enrollment is here — October 15 to December 7.", "sub": "Switch, drop, or join plans for next year. What you can change.", "href": "/medicare-open-enrollment.html", "fallback": "/enrollment.html"},
+      {"q": "Comparing plans for next year?", "sub": "How to use Medicare's Plan Finder without getting overwhelmed.", "href": "/using-plan-finder.html"},
+      {"q": "New star ratings just came out.", "sub": "What the stars mean, and the special chance a 5-star plan unlocks.", "href": "/medicare-star-ratings.html"}
+    ],
+    "11": [
+      {"q": "December 7 is the deadline to change your coverage for next year.", "sub": "What you can still do, and what happens if you do nothing.", "href": "/medicare-open-enrollment.html", "fallback": "/enrollment.html"},
+      {"q": "Next year's premiums and deductibles were just announced.", "sub": "See what changes for you in January.", "href": "/costs.html"},
+      {"q": "Comparing plans for next year?", "sub": "How to use Medicare's Plan Finder without getting overwhelmed.", "href": "/using-plan-finder.html"}
+    ],
+    "12": [
+      {"q": "Missed the December 7 deadline?", "sub": "A 5-star plan in your area can still be joined almost any time.", "href": "/medicare-star-ratings.html"},
+      {"q": "A letter about next year's premium — higher than you expected?", "sub": "If your income dropped, you can appeal the surcharge.", "href": "/costs.html"},
+      {"q": "New coverage starts January 1.", "sub": "Cards, first appointments, and what to double-check in week one.", "href": "/enrollment.html"}
+    ]
+  }
+}
