@@ -106,6 +106,8 @@ ACTIVE = {
     # Content-gap pages (2026-09-06)
     "medicare-esrd-kidney-failure.html": "members", "lost-medicaid-what-now.html": "members",
     "medicare-wellness-visit-vs-physical.html": "members", "marketplace-income-estimate.html": "members",
+    "medicare-special-needs-plans.html": "members", "medicare-open-enrollment-2027.html": "members",
+    "emergency-medicaid.html": "members", "does-my-doctor-accept-medicare.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
