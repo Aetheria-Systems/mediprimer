@@ -97,7 +97,7 @@
  },
  "enrollment.html": {
   "date": "2026-09-06",
-  "hash": "c89111e3219e9f68c80d7a3d56d74801"
+  "hash": "735c598be815a22a4fab05054e51610a"
  },
  "getting-help.html": {
   "date": "2026-09-02",
@@ -113,7 +113,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-06",
-  "hash": "6d3a9d05162d1296b3da0f49a75e069f"
+  "hash": "c5277c7a56d6ece2a8e3039e83fe1a27"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-06",
@@ -193,11 +193,15 @@
  },
  "medicare-advantage.html": {
   "date": "2026-09-06",
-  "hash": "c0c4cd040f8f2fa5d9a82ce509c08804"
+  "hash": "187580834c529c25c9a6b46806d0168d"
  },
  "medicare-ambulance-emergency-room.html": {
   "date": "2026-09-06",
   "hash": "e0469ad9717acccdee253b187019f8cf"
+ },
+ "medicare-annual-notice-of-change.html": {
+  "date": "2026-09-06",
+  "hash": "726a3f239b7d6f97c4570538df91bc8b"
  },
  "medicare-assignment-excess-charges.html": {
   "date": "2026-09-06",
@@ -257,7 +261,7 @@
  },
  "medicare-open-enrollment-2027.html": {
   "date": "2026-09-06",
-  "hash": "c119953c6930bfc8e9b9a2ac19f4c45e"
+  "hash": "a37f17c450f7e60435ba1c78d34c6180"
  },
  "medicare-part-a.html": {
   "date": "2026-09-06",
@@ -277,11 +281,15 @@
  },
  "medicare-physical-therapy.html": {
   "date": "2026-09-06",
-  "hash": "12b7463e61a085d6c899e8618c8ea7df"
+  "hash": "11a3cba34d51b997bdecfe79c07c19bd"
  },
  "medicare-prescription-payment-plan.html": {
   "date": "2026-09-06",
   "hash": "66466d31450da1012bd4a06094f67619"
+ },
+ "medicare-preventive-screening-costs.html": {
+  "date": "2026-09-06",
+  "hash": "eb8fb0628c78ec9b5f10035c74a8894c"
  },
  "medicare-scams.html": {
   "date": "2026-09-06",

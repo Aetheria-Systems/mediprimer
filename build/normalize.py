@@ -108,6 +108,8 @@ ACTIVE = {
     "medicare-wellness-visit-vs-physical.html": "members", "marketplace-income-estimate.html": "members",
     "medicare-special-needs-plans.html": "members", "medicare-open-enrollment-2027.html": "members",
     "emergency-medicaid.html": "members", "does-my-doctor-accept-medicare.html": "members",
+    "medicare-annual-notice-of-change.html": "members", "medicare-physical-therapy.html": "members",
+    "medicare-preventive-screening-costs.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
