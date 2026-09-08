@@ -470,3 +470,7 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
 a.card.hot-topic { display: block; text-decoration: none; color: inherit; border-left: 4px solid #1f4e79; }
 a.card.hot-topic h3 { margin-top: 0; font-size: 1.05rem; color: #1f4e79; }
 a.card.hot-topic:hover { box-shadow: 0 2px 8px rgba(31,78,121,0.25); }
+
+figure.diagram { margin: 1.5rem 0; }
+figure.diagram img { width: 100%; height: auto; border: 1px solid #dfe4ea; border-radius: 8px; }
+figure.diagram figcaption { font-size: 0.85rem; color: #4a5568; margin-top: 0.4rem; font-style: italic; }

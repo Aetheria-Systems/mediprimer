@@ -1,0 +1,164 @@
+{
+ "_doc": "Labels for build/diagrams.py, per diagram, per language. English is the source of truth; other languages are translated (build/render_diagrams.py --translate <code>). Keep every key present for every language or the render for that language is skipped.",
+ "medicare-initial-enrollment-period": {
+  "en": {
+   "title": "Your Medicare sign-up window is 7 months long",
+   "desc": "A seven-month timeline. The three months before your 65th birthday month are the best time to sign up, because coverage starts the month you turn 65. Your birthday month and the three months after are still allowed, but coverage starts later.",
+   "sub": "It opens 3 months before the month you turn 65 — and when you sign up changes when coverage starts.",
+   "before": "3 months BEFORE", "before_sub": "your birthday month",
+   "bday1": "BIRTHDAY", "bday2": "MONTH", "age65": "65th",
+   "after": "3 months AFTER", "after_sub": "your birthday month",
+   "good_h": "Sign up in these 3 months",
+   "good_b": "Coverage starts the first day of the month you turn 65 — no gap, no penalty.",
+   "good_tag": "This is the best time.",
+   "late_h": "Sign up in your birthday month or after",
+   "late_b": "Still allowed, but coverage starts the first day of the NEXT month — so you can be left without coverage for a while.",
+   "foot1": "Miss all 7 months and you may pay a late-enrollment penalty for as long as you have Medicare.",
+   "foot2": "Different rules apply if you are still working and covered by a large employer's plan."
+  },
+  "es": {
+   "title": "Su período para inscribirse en Medicare dura 7 meses",
+   "desc": "Una línea de tiempo de siete meses. Los tres meses antes del mes en que cumple 65 años son el mejor momento para inscribirse, porque la cobertura empieza el mes en que cumple 65. El mes de su cumpleaños y los tres meses siguientes todavía se permiten, pero la cobertura empieza más tarde.",
+   "sub": "Empieza 3 meses antes del mes en que cumple 65 años — y cuándo se inscribe cambia cuándo empieza su cobertura.",
+   "before": "3 meses ANTES", "before_sub": "del mes de su cumpleaños",
+   "bday1": "MES DE SU", "bday2": "CUMPLEAÑOS", "age65": "65",
+   "after": "3 meses DESPUÉS", "after_sub": "del mes de su cumpleaños",
+   "good_h": "Si se inscribe en estos 3 meses",
+   "good_b": "La cobertura empieza el primer día del mes en que cumple 65 años, sin interrupción ni multa.",
+   "good_tag": "Este es el mejor momento.",
+   "late_h": "Si se inscribe en el mes de su cumpleaños o después",
+   "late_b": "Todavía se permite, pero la cobertura empieza el primer día del mes SIGUIENTE, así que puede quedarse sin cobertura por un tiempo.",
+   "foot1": "Si deja pasar los 7 meses, puede pagar una multa por inscripción tardía mientras tenga Medicare.",
+   "foot2": "Las reglas son distintas si sigue trabajando y tiene seguro de un empleador grande."
+  },
+  "zh-Hant": {
+   "title": "您的 Medicare 報名期為期 7 個月",
+   "desc": "七個月的時間表。年滿 65 歲當月之前的三個月是報名的最佳時機，因為保險會在您年滿 65 歲的當月開始。生日當月及之後三個月仍可報名，但保險會較晚開始。",
+   "sub": "從您年滿 65 歲的當月往前三個月開始；報名時間會影響保險生效的時間。",
+   "before": "生日當月前", "before_sub": "的 3 個月",
+   "bday1": "生日", "bday2": "當月", "age65": "65歲",
+   "after": "生日當月後", "after_sub": "的 3 個月",
+   "good_h": "在這 3 個月內報名",
+   "good_b": "保險從您年滿 65 歲當月的第一天開始，沒有空窗期，也沒有罰款。",
+   "good_tag": "這是最佳時機。",
+   "late_h": "在生日當月或之後報名",
+   "late_b": "仍然可以報名，但保險要到下個月的第一天才開始，因此可能有一段時間沒有保險。",
+   "foot1": "若錯過全部 7 個月，只要您持有 Medicare，就可能一直支付延遲報名罰款。",
+   "foot2": "如果您仍在工作並有大型雇主的保險，適用的規則不同。"
+  }
+ },
+ "medicare-parts-explained": {
+  "en": {
+   "title": "The parts of Medicare, and what each one pays for",
+   "desc": "Part A covers hospital care. Part B covers doctors and outpatient care. Part D covers prescription drugs. Part C, Medicare Advantage, is a private plan that bundles them together.",
+   "sub": "Original Medicare is Part A and Part B. Part D is added for drugs. Part C is a different way to get it all.",
+   "a_h": "PART A — Hospital",
+   "a_b": "Inpatient hospital stays. Skilled nursing after a hospital stay. Hospice care. Some home health care.",
+   "b_h": "PART B — Medical",
+   "b_b": "Doctor visits. Outpatient care. Preventive screenings. Lab tests. Durable medical equipment.",
+   "d_h": "PART D — Drugs",
+   "d_b": "Prescription drugs you pick up at a pharmacy. Sold by private plans. Each plan covers its own list of drugs.",
+   "c_h": "PART C — Medicare Advantage",
+   "c_b": "A private plan that replaces Original Medicare. It must cover everything Parts A and B cover, usually includes Part D, and often adds extras. In exchange you use the plan's network of doctors and follow its approval rules.",
+   "foot": "Medicare does not pay for long-term custodial care, and Original Medicare has no yearly limit on what you pay."
+  },
+  "es": {
+   "title": "Las partes de Medicare y lo que paga cada una",
+   "desc": "La Parte A cubre la atención hospitalaria. La Parte B cubre médicos y atención ambulatoria. La Parte D cubre medicamentos recetados. La Parte C, Medicare Advantage, es un plan privado que las combina.",
+   "sub": "Medicare Original son la Parte A y la Parte B. La Parte D se agrega para medicamentos. La Parte C es otra manera de recibirlo todo.",
+   "a_h": "PARTE A — Hospital",
+   "a_b": "Hospitalización. Enfermería especializada después de una hospitalización. Cuidado de hospicio. Algo de atención en el hogar.",
+   "b_h": "PARTE B — Médica",
+   "b_b": "Visitas al médico. Atención ambulatoria. Exámenes preventivos. Análisis de laboratorio. Equipo médico duradero.",
+   "d_h": "PARTE D — Medicamentos",
+   "d_b": "Medicamentos recetados que recoge en la farmacia. Los venden planes privados. Cada plan cubre su propia lista.",
+   "c_h": "PARTE C — Medicare Advantage",
+   "c_b": "Un plan privado que reemplaza a Medicare Original. Debe cubrir todo lo que cubren las Partes A y B, casi siempre incluye la Parte D y suele agregar beneficios. A cambio, usted usa la red de médicos del plan y sigue sus reglas de autorización.",
+   "foot": "Medicare no paga el cuidado a largo plazo de custodia, y Medicare Original no tiene límite anual de gastos."
+  },
+  "zh-Hant": {
+   "title": "Medicare 的各個部分各自給付什麼",
+   "desc": "A 部分給付住院照護。B 部分給付門診與醫師服務。D 部分給付處方藥。C 部分即 Medicare Advantage，是將這些整合在一起的私人保險計畫。",
+   "sub": "原始 Medicare 是 A 部分和 B 部分。D 部分用於藥品。C 部分是取得全部保障的另一種方式。",
+   "a_h": "A 部分 — 住院",
+   "a_b": "住院治療。住院後的專業護理。安寧療護。部分居家healthcare照護。",
+   "b_h": "B 部分 — 醫療",
+   "b_b": "門診看診。門診治療。預防性檢查。化驗檢查。耐用醫療設備。",
+   "d_h": "D 部分 — 藥品",
+   "d_b": "在藥局領取的處方藥。由私人計畫販售。每個計畫各有自己的藥品清單。",
+   "c_h": "C 部分 — Medicare Advantage",
+   "c_b": "取代原始 Medicare 的私人計畫。必須涵蓋 A 部分和 B 部分的所有給付，通常包含 D 部分，並常增加額外福利。相對地，您需使用該計畫的醫師網絡並遵守其事前授權規定。",
+   "foot": "Medicare 不給付長期生活照顧，且原始 Medicare 對您自付的金額沒有年度上限。"
+  }
+ },
+ "medicare-medicaid-which-program": {
+  "en": {
+   "title": "Medicare, Medicaid, or both?",
+   "desc": "Medicare is based on age or disability. Medicaid is based on income. Many people qualify for both, which is called being dual eligible and brings the most help.",
+   "sub": "They are different programs with different rules — and having both is common.",
+   "mcare_h": "MEDICARE", "mcare_q": "Based on age or disability",
+   "mcare_b": "You are 65 or older, or you have had disability benefits for 24 months, or you have ESRD or ALS. Your income does not matter.",
+   "mcaid_h": "MEDICAID", "mcaid_q": "Based on income",
+   "mcaid_b": "Your income and assets are under your state's limits. Rules and names differ by state. Any age.",
+   "dual_h": "BOTH — DUAL ELIGIBLE", "dual_q": "You qualify for each",
+   "dual_b": "Medicare pays first, Medicaid fills gaps. Premiums, copays and long-term care may be covered. Most help available.",
+   "foot_b": "If you have Medicare and a low income, check Medicaid and the Medicare Savings Programs. Many people who qualify never apply."
+  },
+  "es": {
+   "title": "¿Medicare, Medicaid o ambos?",
+   "desc": "Medicare se basa en la edad o la discapacidad. Medicaid se basa en los ingresos. Muchas personas califican para ambos, lo que se llama doble elegibilidad y brinda la mayor ayuda.",
+   "sub": "Son programas distintos con reglas distintas, y tener ambos es común.",
+   "mcare_h": "MEDICARE", "mcare_q": "Por edad o discapacidad",
+   "mcare_b": "Tiene 65 años o más, o ha recibido beneficios por discapacidad durante 24 meses, o tiene ESRD o ELA. Sus ingresos no importan.",
+   "mcaid_h": "MEDICAID", "mcaid_q": "Por ingresos",
+   "mcaid_b": "Sus ingresos y bienes están por debajo de los límites de su estado. Las reglas y los nombres varían por estado. Cualquier edad.",
+   "dual_h": "AMBOS — DOBLE ELEGIBILIDAD", "dual_q": "Califica para los dos",
+   "dual_b": "Medicare paga primero y Medicaid cubre lo que falta. Puede cubrir primas, copagos y cuidado a largo plazo. La mayor ayuda disponible.",
+   "foot_b": "Si tiene Medicare y bajos ingresos, consulte Medicaid y los Programas de Ahorros de Medicare. Muchas personas que califican nunca solicitan."
+  },
+  "zh-Hant": {
+   "title": "Medicare、Medicaid，還是兩者都有？",
+   "desc": "Medicare 依年齡或身心障礙資格。Medicaid 依收入資格。許多人同時符合兩者，稱為雙重資格，可獲得最多協助。",
+   "sub": "這是兩個不同的計畫，規則不同；同時擁有兩者很常見。",
+   "mcare_h": "MEDICARE", "mcare_q": "依年齡或身心障礙",
+   "mcare_b": "您年滿 65 歲，或已領取身心障礙給付 24 個月，或患有末期腎病或漸凍症。收入不影響資格。",
+   "mcaid_h": "MEDICAID", "mcaid_q": "依收入",
+   "mcaid_b": "您的收入與資產低於所在州的上限。各州規則與名稱不同。不限年齡。",
+   "dual_h": "兩者皆有 — 雙重資格", "dual_q": "兩項都符合資格",
+   "dual_b": "Medicare 先給付，Medicaid 補足差額。可能涵蓋保費、部分負擔與長期照護。可獲得最多協助。",
+   "foot_b": "若您有 Medicare 且收入偏低，請查詢 Medicaid 與 Medicare 儲蓄計畫。許多符合資格的人從未申請。"
+  }
+ },
+ "medicare-enrollment-calendar": {
+  "en": {
+   "title": "The Medicare year: which window is open when",
+   "desc": "Open Enrollment runs October 15 to December 7. The Medicare Advantage Open Enrollment Period and the General Enrollment Period both run January 1 to March 31.",
+   "sub": "These windows repeat every year. Outside them, you usually cannot change your coverage.",
+   "months": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+   "aep_h": "Open Enrollment — Oct 15 to Dec 7", "aep_n": "Join, switch or drop a plan for next year",
+   "oep_h": "Medicare Advantage Open Enrollment — Jan 1 to Mar 31", "oep_n": "One change if you are already in an Advantage plan",
+   "gep_h": "General Enrollment — Jan 1 to Mar 31", "gep_n": "For people who missed their first chance to sign up",
+   "foot_b": "A life event such as moving, losing other coverage, or qualifying for Extra Help can open a Special Enrollment Period at any time of year."
+  },
+  "es": {
+   "title": "El año de Medicare: qué período está abierto y cuándo",
+   "desc": "La Inscripción Abierta va del 15 de octubre al 7 de diciembre. El Período de Inscripción Abierta de Medicare Advantage y el Período de Inscripción General van del 1 de enero al 31 de marzo.",
+   "sub": "Estos períodos se repiten cada año. Fuera de ellos, por lo general no puede cambiar su cobertura.",
+   "months": "Ene,Feb,Mar,Abr,May,Jun,Jul,Ago,Sep,Oct,Nov,Dic",
+   "aep_h": "Inscripción Abierta — 15 de oct al 7 de dic", "aep_n": "Entrar, cambiar o dejar un plan para el próximo año",
+   "oep_h": "Inscripción Abierta de Medicare Advantage — 1 de ene al 31 de mar", "oep_n": "Un cambio si ya tiene un plan Advantage",
+   "gep_h": "Inscripción General — 1 de ene al 31 de mar", "gep_n": "Para quienes perdieron su primera oportunidad",
+   "foot_b": "Un evento de vida como mudarse, perder otra cobertura o calificar para Ayuda Adicional puede abrir un Período Especial de Inscripción en cualquier momento del año."
+  },
+  "zh-Hant": {
+   "title": "Medicare 的一年：各報名期何時開放",
+   "desc": "公開報名期為 10 月 15 日至 12 月 7 日。Medicare Advantage 公開報名期與一般報名期均為 1 月 1 日至 3 月 31 日。",
+   "sub": "這些期間每年重複。在這些期間之外，通常無法變更您的保險。",
+   "months": "1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月",
+   "aep_h": "公開報名期 — 10月15日至12月7日", "aep_n": "為明年加入、變更或退出計畫",
+   "oep_h": "Medicare Advantage 公開報名期 — 1月1日至3月31日", "oep_n": "若已參加 Advantage 計畫，可變更一次",
+   "gep_h": "一般報名期 — 1月1日至3月31日", "gep_n": "適用於錯過首次報名機會的人",
+   "foot_b": "搬家、失去其他保險或符合額外補助資格等生活事件，可在一年中任何時候開啟特殊報名期。"
+  }
+ }
+}
