@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tài liệu Tham khảo về Yêu cầu Thanh toán & Mã hóa — MediPrimer</title>
+<meta name="description" content="Cách các yêu cầu thanh toán chăm sóc sức khỏe được cấu trúc, mã hóa, nộp và xử lý trong các chương trình y tế của chính phủ Hoa Kỳ.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/claims-coding.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Claims & Coding Reference — MediPrimer">
+<meta property="og:description" content="How healthcare claims are structured, coded, submitted, and processed in U.S. government health programs.">
+<meta property="og:url" content="https://mediprimer.org/claims-coding.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Claims & Coding Reference — MediPrimer">
+<meta name="twitter:description" content="How healthcare claims are structured, coded, submitted, and processed in U.S. government health programs.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/claims-coding.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/claims-coding.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/claims-coding.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/claims-coding.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Claims & Coding Reference", "description": "How healthcare claims are structured, coded, submitted, and processed in U.S. government health programs.", "url": "https://mediprimer.org/claims-coding.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Claims & Coding Reference", "item": "https://mediprimer.org/claims-coding.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/claims-coding.html" lang="en">English</a>
+    <a href="/es/claims-coding.html" lang="es">Español</a>
+    <a href="/zh-Hant/claims-coding.html" lang="zh-Hant">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Bước sang tuổi 65: bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên hỏi</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Các chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị trường Bảo hiểm Sức khỏe (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở Bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả nguồn trợ giúp</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chính danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop active">Dành cho chuyên gia</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Dành cho chuyên gia">▾</button>
+        <div class="dropdown">
+        <a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: các cấp và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Chuyên gia</p>
+    <h1>Tài liệu Tham khảo về Yêu cầu Thanh toán &amp; Mã hóa</h1>
+    <p>Hướng dẫn thực hành về cách các yêu cầu thanh toán chăm sóc sức khỏe được cấu trúc, mã hóa, nộp và xử lý trong bảo hiểm y tế của chính phủ và tư nhân tại Hoa Kỳ.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Tổng quan</h2>
+    <p>Một yêu cầu thanh toán (Yêu cầu thanh toán) chăm sóc sức khỏe là đề nghị được trả tiền từ một nhà cung cấp (Nhà cung cấp: bác sĩ, bệnh viện, phòng xét nghiệm, nhà thuốc hoặc đơn vị cung ứng khác) gửi đến bên chi trả (chương trình bảo hiểm hoặc chương trình của chính phủ). Yêu cầu thanh toán ghi lại dịch vụ nào đã được thực hiện, cho ai, bởi ai, vì lý do gì (chẩn đoán) và với chi phí bao nhiêu. Mã hóa và nộp đúng cách là điều thiết yếu để được thanh toán kịp thời và tuân thủ các quy định của chương trình.</p>
+
+    <p>Tài liệu tham khảo này giải thích các biểu mẫu, bộ mã, tiêu chuẩn và quy trình làm việc chi phối yêu cầu thanh toán trong Medicare, Medicaid, Medicare Advantage và Thị trường Bảo hiểm Sức khỏe Marketplace. Quy trình này được quản lý và chuẩn hóa chặt chẽ — các sai lệch có thể dẫn đến từ chối, chậm trễ hoặc thu hồi khoản thanh toán vượt mức.</p>
+
+    <h2>Biểu mẫu Yêu cầu Thanh toán &amp; Phương thức Nộp</h2>
+
+    <h3>Yêu cầu Thanh toán Chuyên môn (CMS-1500)</h3>
+    <p>Biểu mẫu <strong>CMS-1500</strong> là mẫu yêu cầu thanh toán bằng giấy tiêu chuẩn dùng cho các dịch vụ bác sĩ tại phòng khám, phẫu thuật ngoại trú, chẩn đoán và các dịch vụ chuyên môn khác. Dù yêu cầu thanh toán bằng giấy hiện nay rất hiếm, cấu trúc CMS-1500 vẫn là nền tảng cho các yêu cầu thanh toán chuyên môn điện tử. Biểu mẫu này ghi nhận:</p>
+    <ul>
+      <li>Thông tin nhân khẩu học của bệnh nhân và thông tin bảo hiểm</li>
+      <li>Chi tiết về nhà cung cấp và nhà cung cấp lập hóa đơn (NPI, mã phân loại)</li>
+      <li>Ngày cung cấp dịch vụ, nơi cung cấp dịch vụ (POS) và mã thủ thuật (CPT/HCPCS)</li>
+      <li>Mã chẩn đoán (ICD-10-CM) và các chỉ báo tình trạng</li>
+      <li>Mã bổ nghĩa (mô tả các hoàn cảnh ảnh hưởng đến mã hóa hoặc hoàn trả)</li>
+      <li>Chi phí và số đơn vị dịch vụ</li>
+    </ul>
+
+    <h3>Yêu cầu Thanh toán của Cơ sở (UB-04 &amp; 837I)</h3>
+    <p><strong>UB-04</strong> (hay CMS-1450) là mẫu yêu cầu thanh toán bằng giấy dành cho dịch vụ nội trú và ngoại trú của bệnh viện, cơ sở điều dưỡng chuyên môn (Cơ sở điều dưỡng chuyên môn, SNF) và dịch vụ phục hồi chức năng. Phiên bản điện tử là giao dịch <strong>837I (Cơ sở)</strong>. Các trường chính bao gồm:</p>
+    <ul>
+      <li>Ngày nhập viện và xuất viện</li>
+      <li>Tình trạng nhập viện và xuất viện (ví dụ: thông thường, chuyển viện, chăm sóc tại nhà)</li>
+      <li>Mã doanh thu (cho từng khoa hoặc dòng dịch vụ)</li>
+      <li>Mã tình trạng, mã sự kiện và mã giá trị</li>
+      <li>Mã chẩn đoán (ICD-10-CM) và mã thủ thuật (ICD-10-PCS)</li>
+      <li>Chi phí được sắp xếp theo trung tâm doanh thu</li>
+    </ul>
+
+    <h3>Yêu cầu Thanh toán Nha khoa &amp; Nhà thuốc</h3>
+    <p>Yêu cầu thanh toán nha khoa sử dụng mã CDT (Bộ mã Thủ thuật và Danh pháp Nha khoa) và thường theo một định dạng tinh gọn. Yêu cầu thanh toán nhà thuốc thường được nộp điện tử theo thời gian thực qua hệ thống POS (Điểm bán hàng) tại quầy nhà thuốc, sử dụng Mã Thuốc Quốc gia (NDC). Các luồng này tách biệt với các lộ trình chuyên môn và cơ sở.</p>
+
+    <h2>Các Bộ mã &amp; Mục đích của Chúng</h2>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Bộ mã</th>
+            <th>Đó là gì</th>
+            <th>Dùng để</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ICD-10-CM</strong></td>
+            <td>Phân loại Bệnh tật Quốc tế, Bản sửa đổi lần thứ 10, Phiên bản Lâm sàng. Khoảng 70,000 mã chẩn đoán.</td>
+            <td>Ghi lại tình trạng, triệu chứng và lý do khám của bệnh nhân. Bắt buộc trên mọi yêu cầu thanh toán. Chẩn đoán chính gắn với tính cần thiết về mặt y tế (Cần thiết về mặt y tế). Các chẩn đoán phụ giải thích bệnh đi kèm hoặc biến chứng.</td>
+          </tr>
+          <tr>
+            <td><strong>CPT</strong></td>
+            <td>Thuật ngữ Thủ thuật Hiện hành (thuộc sở hữu của AMA). Khoảng 10,000 mã cho thủ thuật, dịch vụ và tư vấn tại phòng khám/ngoại trú.</td>
+            <td>Yêu cầu thanh toán chuyên môn. Mô tả dịch vụ nào đã được thực hiện. Được sửa đổi hàng năm (tháng Một).</td>
+          </tr>
+          <tr>
+            <td><strong>HCPCS Cấp II</strong></td>
+            <td>Hệ thống Mã hóa Thủ thuật Chung trong Chăm sóc Sức khỏe. Khoảng 3,000 mã chữ-số (tiền tố chữ cái J, E, G, K, v.v.) cho thiết bị y tế lâu bền, vật tư và các dịch vụ không có trong CPT.</td>
+            <td>Yêu cầu thanh toán chuyên môn. Bao gồm Thiết bị y tế lâu bền (DME: xe lăn, oxy), dụng cụ chỉnh hình, một số loại thuốc và các dịch vụ mà CMS coi là không tiêu chuẩn.</td>
+          </tr>
+          <tr>
+            <td><strong>ICD-10-PCS</strong></td>
+            <td>Hệ thống Mã hóa Thủ thuật ICD-10. Khoảng 72,000 mã thủ thuật chỉ dùng trong cơ sở (nội trú).</td>
+            <td>Chỉ dùng cho yêu cầu thanh toán của cơ sở. Mô tả các thủ thuật và phẫu thuật nội trú được thực hiện trong thời gian nằm viện.</td>
+          </tr>
+          <tr>
+            <td><strong>Mã Doanh thu</strong></td>
+            <td>Mã bốn chữ số (ví dụ: 0100 = phòng và ăn uống; 0340 = vật lý trị liệu) dùng trên yêu cầu thanh toán của cơ sở để sắp xếp chi phí theo dòng dịch vụ.</td>
+            <td>Bắt buộc trên yêu cầu thanh toán UB-04/837I. Nhóm các chi phí lại và cho phép xem xét và định giá tập trung.</td>
+          </tr>
+          <tr>
+            <td><strong>NDC (Mã Thuốc Quốc gia)</strong></td>
+            <td>Mã định danh 11 chữ số cho từng công thức thuốc, hàm lượng và quy cách đóng gói.</td>
+            <td>Yêu cầu thanh toán nhà thuốc và danh sách thuốc trên yêu cầu thanh toán của cơ sở/chuyên môn khi thuốc được tính là vật tư hoặc dịch vụ được thực hiện (ví dụ: trung tâm truyền dịch).</td>
+          </tr>
+          <tr>
+            <td><strong>Nơi Cung cấp Dịch vụ (POS)</strong></td>
+            <td>Mã hai chữ số cho biết dịch vụ được thực hiện ở đâu (ví dụ: 11 = phòng khám, 21 = bệnh viện nội trú, 57 = trung tâm phẫu thuật lưu động).</td>
+            <td>Yêu cầu thanh toán chuyên môn. Ảnh hưởng đến quy tắc mã hóa, quyền lập hóa đơn và mức hoàn trả.</td>
+          </tr>
+          <tr>
+            <td><strong>Mã bổ nghĩa</strong></td>
+            <td>Hậu tố bằng chữ hoặc số được gắn thêm vào mã thủ thuật (ví dụ: -25 = dịch vụ riêng biệt; -59 = dịch vụ khác biệt; -RT = bên phải; -LT = bên trái).</td>
+            <td>Yêu cầu thanh toán chuyên môn. Làm rõ các hoàn cảnh làm thay đổi việc gộp mã, quy tắc lập hóa đơn hoặc hoàn trả (ví dụ: khám và thủ thuật được thực hiện cùng ngày).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Giao dịch Điện tử &amp; Tiêu chuẩn</h2>
+
+    <p>Hầu hết yêu cầu thanh toán ngày nay được nộp điện tử qua các trung tâm trung chuyển, sử dụng các định dạng giao dịch tiêu chuẩn do HIPAA và CMS quy định:</p>
+
+    <h3>Giao dịch Yêu cầu Thanh toán &amp; Thanh toán</h3>
+    <ul>
+      <li><strong>837-P (Chuyên môn)</strong> — Phiên bản điện tử của CMS-1500. Bao gồm dữ liệu chẩn đoán, thủ thuật, mã bổ nghĩa và chi phí.</li>
+      <li><strong>837-I (Cơ sở)</strong> — Phiên bản điện tử của UB-04. Bao gồm mã doanh thu, mã tình trạng và các trường dành riêng cho nội trú.</li>
+      <li><strong>837-D (Nha khoa)</strong> — Dành cho yêu cầu thanh toán nha khoa và chỉnh nha.</li>
+      <li><strong>835 (ERA – Thông báo Chi trả Điện tử)</strong> — Phản hồi của bên chi trả; cho biết khoản nào được chấp thuận, được trả, bị từ chối hoặc bị kháng nghị cho từng dòng yêu cầu thanh toán. Gắn với một EOB (Giải thích Quyền lợi).</li>
+    </ul>
+
+    <h3>Giao dịch Tính đủ điều kiện &amp; Trạng thái</h3>
+    <ul>
+      <li><strong>270/271</strong> — Truy vấn tính đủ điều kiện theo thời gian thực (270) và phản hồi (271). Dùng trước hoặc tại thời điểm cung cấp dịch vụ để xác minh bảo hiểm của bệnh nhân, khoản đồng thanh toán (Đồng thanh toán), khoản khấu trừ (Khoản khấu trừ) và tình trạng chi phí tự trả.</li>
+      <li><strong>276/277</strong> — Truy vấn trạng thái yêu cầu thanh toán (276) và phản hồi (277). Dùng để theo dõi tiến trình xét duyệt của một yêu cầu thanh toán đang chờ xử lý.</li>
+    </ul>
+
+    <h3>Trung tâm Trung chuyển</h3>
+    <p><strong>Trung tâm trung chuyển</strong> là một nhà cung cấp dịch vụ tiếp nhận yêu cầu thanh toán từ các nhà cung cấp, kiểm tra chúng theo quy định của CMS và của từng bên chi trả, chuyển đổi chúng sang định dạng HIPAA tiêu chuẩn và định tuyến chúng đến đúng bên chi trả. Trung tâm trung chuyển cũng chuyển thông báo chi trả về cho nhà cung cấp. Họ bảo đảm yêu cầu thanh toán đáp ứng các tiêu chuẩn kỹ thuật trước khi đến bên chi trả, giảm số lần bị trả lại do lỗi định dạng.</p>
+
+    <h2>Vòng đời của một Yêu cầu Thanh toán Hợp lệ</h2>
+
+    <ol class="steps">
+      <li><strong>Xác minh &amp; Phê duyệt trước</strong> — Nhà cung cấp kiểm tra tính đủ điều kiện của bệnh nhân (270/271) và nộp yêu cầu phê duyệt trước (Phê duyệt trước) khi được yêu cầu. Bước này xác nhận dịch vụ được bảo hiểm và xác lập tính cần thiết về mặt y tế. Xem <a href="/vi/providers.html">Nhà cung cấp &amp; Lập hóa đơn</a> và <a href="/vi/operations.html">Vận hành Chương trình Y tế</a> để biết chi tiết.</li>
+      <li><strong>Cung cấp Dịch vụ &amp; Ghi chép</strong> — Nhà cung cấp thực hiện dịch vụ và ghi chép vào hồ sơ bệnh án, ghi nhận chẩn đoán (lý do), thủ thuật (nội dung), ngày, giờ, nhà cung cấp và nơi cung cấp dịch vụ.</li>
+      <li><strong>Mã hóa</strong> — Nhân viên mã hóa y tế chuyển ghi chép thành mã ICD-10-CM (chẩn đoán) và CPT/HCPCS (thủ thuật), áp dụng mã bổ nghĩa nếu cần, và gán nơi cung cấp dịch vụ cùng nhà cung cấp lập hóa đơn.</li>
+      <li><strong>Lập &amp; Kiểm tra Yêu cầu Thanh toán</strong> — Hệ thống lập hóa đơn lập 837-P hoặc 837-I, chạy các kiểm tra nội bộ (chẩn đoán gắn với thủ thuật, mã bổ nghĩa phù hợp, chi phí hợp lý) và nộp cho trung tâm trung chuyển hoặc trực tiếp cho bên chi trả.</li>
+      <li><strong>Kiểm tra tại Trung tâm Trung chuyển</strong> — Trung tâm trung chuyển kiểm tra việc tuân thủ HIPAA, các trường bắt buộc và các quy tắc chỉnh sửa riêng của bên chi trả. Trả lại yêu cầu thanh toán không hợp lệ hoặc chuyển yêu cầu thanh toán hợp lệ (Yêu cầu thanh toán hợp lệ) đến bên chi trả.</li>
+      <li><strong>Xét duyệt của Bên chi trả</strong> — Hệ thống của bên chi trả kiểm tra tính đủ điều kiện tại thời điểm cung cấp dịch vụ, áp dụng chương trình quyền lợi của bệnh nhân, xác minh việc tuân thủ phê duyệt trước, kiểm tra trùng lặp hoặc dấu hiệu gian lận, và xác định số tiền được chấp thuận (Số tiền được chấp thuận). Quy tắc khác nhau tùy chương trình (Medicare, Medicaid, MA, Marketplace).</li>
+      <li><strong>Thanh toán &amp; Thông báo Chi trả</strong> — Bên chi trả hoặc trả tiền cho nhà cung cấp (séc hoặc chuyển khoản điện tử), từ chối yêu cầu thanh toán, hoặc yêu cầu thêm thông tin. Thông báo chi trả (835/ERA) được gửi đến nhà cung cấp và trung tâm trung chuyển.</li>
+      <li><strong>Ghi nhận &amp; Công nợ Phải thu</strong> — Nhân viên lập hóa đơn của nhà cung cấp ghi nhận khoản thanh toán vào tài khoản của bệnh nhân, ghi nhận doanh thu và cập nhật báo cáo tuổi nợ.</li>
+      <li><strong>Lập hóa đơn cho Bệnh nhân</strong> — Nhà cung cấp lập hóa đơn cho bệnh nhân phần số dư còn lại (đồng thanh toán, đồng bảo hiểm (Đồng bảo hiểm), khoản khấu trừ hoặc các dịch vụ không được bảo hiểm).</li>
+    </ol>
+
+    <h2>Các Lý do Từ chối Thường gặp</h2>
+
+    <p>Yêu cầu thanh toán bị từ chối (Từ chối yêu cầu thanh toán) hoặc bị giảm vì nhiều lý do. Các dạng thường gặp bao gồm:</p>
+
+    <ul>
+      <li><strong>Tính đủ điều kiện</strong> — Bệnh nhân chưa ghi danh vào ngày cung cấp dịch vụ, hoặc bảo hiểm bị tạm ngưng do không đóng phí.</li>
+      <li><strong>Thiếu Phê duyệt trước</strong> — Dịch vụ cần được phê duyệt trước nhưng chưa được cấp hoặc đã hết hạn.</li>
+      <li><strong>Lỗi Mã hóa</strong> — Mã chẩn đoán không hỗ trợ cho thủ thuật (thiếu tính cần thiết về mặt y tế), hoặc mã thủ thuật được gắn sai với nơi cung cấp dịch vụ.</li>
+      <li><strong>Vi phạm Thời hạn Nộp</strong> — Yêu cầu thanh toán được nộp sau thời hạn (thường là 180 ngày đối với Medicare; các chương trình Medicaid của tiểu bang có quy định khác nhau).</li>
+      <li><strong>Yêu cầu Thanh toán Trùng lặp</strong> — Một yêu cầu thanh toán cho cùng ngày cung cấp dịch vụ và cùng mã đã được trả hoặc đang chờ xử lý.</li>
+      <li><strong>Phối hợp quyền lợi (COB)</strong> — Bệnh nhân có bảo hiểm khác; phản hồi của bên chi trả chính chưa được tính đến đúng cách.</li>
+      <li><strong>Dịch vụ Không được Bảo hiểm</strong> — Dịch vụ bị loại trừ theo chương trình của bệnh nhân hoặc không phải là quyền lợi được bảo hiểm theo chương trình.</li>
+      <li><strong>Tình trạng Mạng lưới của Nhà cung cấp</strong> — Nhà cung cấp không ở trong mạng lưới (Trong mạng lưới) tại thời điểm cung cấp dịch vụ, hoặc hợp đồng mạng lưới nhà cung cấp (Mạng lưới nhà cung cấp) đã chấm dứt.</li>
+      <li><strong>Thông tin Thiếu hoặc Không hợp lệ</strong> — Các trường bắt buộc (NPI, nơi cung cấp dịch vụ, mã bổ nghĩa hoặc mã bệnh nhân) không đầy đủ hoặc không hợp lệ.</li>
+    </ul>
+
+    <p>Các yêu cầu thanh toán bị từ chối thường có thể được kháng nghị (Kháng nghị), đặc biệt khi việc từ chối dựa trên chính sách y tế hoặc hồ sơ ghi chép. Xem <a href="/vi/appeals-timelines.html">Thời hạn Kháng nghị</a> để biết quy trình và khung thời gian.</p>
+
+    <h2>Mối liên hệ với Phê duyệt trước &amp; Kháng nghị của Hội viên</h2>
+
+    <p>Yêu cầu thanh toán không tồn tại một cách riêng lẻ. Phê duyệt trước (chấp thuận trước một dịch vụ trước khi dịch vụ đó được cung cấp) thường là bắt buộc, và yêu cầu thanh toán phải dẫn chiếu số phê duyệt để tránh bị từ chối. Nếu yêu cầu thanh toán bị từ chối, bệnh nhân có quyền kháng nghị. Các quyết định về bảo hiểm có thể được kháng nghị với lý do bất đồng về chính sách y tế, thanh toán sai, hoặc xác định tính đủ điều kiện sai — quy trình và khung thời gian khác nhau tùy chương trình.</p>
+
+    <p>Để biết thêm về các mối liên hệ này, xem:</p>
+    <ul>
+      <li><a href="/vi/providers.html">Nhà cung cấp &amp; Lập hóa đơn</a> — Quy trình và yêu cầu phê duyệt trước</li>
+      <li><a href="/vi/operations.html">Vận hành Chương trình Y tế</a> — Cách các chương trình xem xét và thanh toán yêu cầu thanh toán</li>
+      <li><a href="/vi/appeals-timelines.html">Thời hạn Kháng nghị</a> — Quyền kháng nghị và thời hạn dành cho hội viên và nhà cung cấp</li>
+      <li><a href="/vi/risk-adjustment.html">Điều chỉnh Rủi ro</a> — Cách mã hóa chẩn đoán ảnh hưởng đến khoản thanh toán cho chương trình và các chỉ số chất lượng</li>
+    </ul>
+
+    <h2>Những Điểm Chính</h2>
+
+    <ul>
+      <li>Yêu cầu thanh toán là những tài liệu có cấu trúc, được chuẩn hóa, đi qua một quy trình xác định từ nhà cung cấp đến trung tâm trung chuyển, đến bên chi trả, rồi đến thanh toán.</li>
+      <li>Độ chính xác trong mã hóa (ICD-10-CM, CPT, HCPCS, mã bổ nghĩa) và tính đầy đủ của các trường bắt buộc là yếu tố then chốt để tránh bị từ chối và chậm trễ.</li>
+      <li>Nộp điện tử qua các định dạng chuẩn HIPAA (837-P, 837-I, 835) bảo đảm tính nhất quán và cho phép xét duyệt tự động.</li>
+      <li>Phê duyệt trước, xác minh tính đủ điều kiện và kháng nghị có liên hệ chặt chẽ với quy trình yêu cầu thanh toán.</li>
+      <li>Bên chi trả áp dụng các quy tắc riêng của từng chương trình (Medicare, Medicaid, MA, Marketplace) trong quá trình xét duyệt; một định dạng yêu cầu thanh toán không có nghĩa là một quy tắc quyết định duy nhất.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh tại nguồn.</strong> Trang này giải thích cách yêu cầu thanh toán và mã hóa hoạt động về mặt lý thuyết. Các quy tắc cụ thể, thời hạn và thủ tục kháng nghị khác nhau tùy bên chi trả, tiểu bang (đối với Medicaid) và chương trình. Hãy tham khảo hướng dẫn lập hóa đơn của bên chi trả, sổ tay nhà cung cấp và tiêu chuẩn nộp yêu cầu thanh toán theo HIPAA để biết các yêu cầu hiện hành. Đối với các câu hỏi về quy định, hãy tham khảo CMS.gov và hướng dẫn chính thức của chương trình.
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Các chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a></li>
+          <li><a href="/vi/turning-65.html">Bước sang tuổi 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở Bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả nguồn trợ giúp</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào hay bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được kiểm tra lại với tài liệu chính thức của chương trình và của chương trình bảo hiểm. Không có nội dung nào ở đây là lời khuyên y tế, pháp lý hay tài chính, và không có trang nào khuyến nghị một chương trình bảo hiểm cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Tuyên bố miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

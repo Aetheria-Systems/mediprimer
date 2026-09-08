@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ước tính thu nhập để nhận Trợ cấp Thị trường Bảo hiểm Sức khỏe Marketplace — MediPrimer</title>
+<meta name="description" content="Cách ước tính thu nhập để nhận tín dụng thuế phí bảo hiểm của Thị trường Bảo hiểm Sức khỏe Marketplace, những gì được tính là thu nhập, và điều gì xảy ra vào mùa khai thuế nếu bạn ước tính quá thấp hoặc quá cao.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/marketplace-income-estimate.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Estimating Income for Marketplace Subsidies — MediPrimer">
+<meta property="og:description" content="How to estimate income for Marketplace premium tax credits, what counts as income, and what happens at tax time if your estimate was too low or too high.">
+<meta property="og:url" content="https://mediprimer.org/marketplace-income-estimate.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Estimating Income for Marketplace Subsidies — MediPrimer">
+<meta name="twitter:description" content="How to estimate income for Marketplace premium tax credits, what counts as income, and what happens at tax time if your estimate was too low or too high.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Which year's income do I use?", "acceptedAnswer": {"@type": "Answer", "text": "The year you want coverage. Savings are based on your expected income for that year, not on last year's return. Last year's AGI is just the starting point for the estimate."}}, {"@type": "Question", "name": "I underestimated my income. How much will I owe?", "acceptedAnswer": {"@type": "Answer", "text": "The difference between the advance credit paid to your insurer and the credit you qualify for on your final income. For tax years after 2025 there's no cap, so the full excess is subtracted from your refund or added to your balance due. Form 8962 does the math. Many people who owe simply see a smaller refund."}}, {"@type": "Question", "name": "I overestimated. Do I get money back?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you used less credit than you qualified for, you claim the difference on Form 8962. It lowers your tax or increases your refund."}}, {"@type": "Question", "name": "Do I count my spouse's income if they have their own insurance?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The Marketplace counts income for everyone in your tax household, including a spouse or dependent who has coverage through a job, Medicare, or Medicaid. You'll say on the application which people need coverage."}}, {"@type": "Question", "name": "Does Social Security count as income?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, the full amount before deductions, whether or not it's taxable, including SSDI. SSI does not count."}}, {"@type": "Question", "name": "What if my income turns out to be too low for a Marketplace credit?", "acceptedAnswer": {"@type": "Answer", "text": "If your income drops, report it. You may qualify for a bigger credit, or for Medicaid or CHIP instead. The Marketplace may also ask for documents when its data shows income below the poverty level, so keep records of what you earn. See Medicaid eligibility ."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/marketplace-income-estimate.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/marketplace-income-estimate.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Estimating Income for Marketplace Subsidies", "description": "How to estimate income for Marketplace premium tax credits, what counts as income, and what happens at tax time if your estimate was too low or too high.", "url": "https://mediprimer.org/marketplace-income-estimate.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-06", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Estimating Income for Marketplace Subsidies", "item": "https://mediprimer.org/marketplace-income-estimate.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Bước sang tuổi 65: bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên hỏi</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Các chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị trường Bảo hiểm Sức khỏe (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở Bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả nguồn trợ giúp</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chính danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho chuyên gia</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Dành cho chuyên gia">▾</button>
+        <div class="dropdown">
+        <a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: các cấp và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Thành viên &amp; Người chăm sóc</p>
+    <h1>Ước tính thu nhập để nhận Trợ cấp Thị trường Bảo hiểm Sức khỏe Marketplace (và điều gì xảy ra nếu bạn ước tính sai)</h1>
+    <p>Tín dụng thuế phí bảo hiểm của bạn dựa trên một dự đoán về thu nhập của năm tới. Dưới đây là cách đưa ra một dự đoán tốt, những gì được tính, và mùa khai thuế sẽ ra sao nếu dự đoán không chính xác.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Đây là câu trả lời ngắn gọn.</strong> Khoản tiết kiệm từ Thị trường Bảo hiểm Sức khỏe Marketplace dựa trên <strong>thu nhập hộ gia đình dự kiến của bạn cho năm bạn muốn có bảo hiểm</strong>, chứ không phải thu nhập của năm ngoái. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> Hãy đưa ra ước tính tốt nhất của bạn, rồi cập nhật bất cứ khi nào thu nhập hoặc hộ gia đình của bạn thay đổi. <!-- src: https://www.healthcare.gov/income-and-household-information/income/ --> Vào mùa khai thuế, bạn "đối chiếu": bạn so sánh khoản tín dụng đã dùng trong năm với khoản tín dụng bạn thực sự đủ điều kiện nhận dựa trên thu nhập cuối cùng. <!-- src: https://www.healthcare.gov/taxes-reconciling/ --> Nếu bạn ước tính quá thấp và đã dùng quá nhiều tín dụng, bạn phải trả lại phần chênh lệch cùng với thuế của mình. Nếu bạn ước tính quá cao, bạn được nhận lại phần chênh lệch dưới dạng tín dụng hoặc tiền hoàn thuế. <!-- src: https://www.healthcare.gov/taxes/ --> Rủi ro đã tăng lên vào năm 2026. Đối với các năm thuế sau 2025, <strong>không còn giới hạn trả lại</strong>: bạn phải trả lại toàn bộ số tiền mà khoản tín dụng ứng trước vượt quá khoản tín dụng bạn được hưởng. <!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --></p>
+
+    <div class="note">
+      <strong>Nếu bạn lo lắng về việc phải trả lại tiền,</strong> bạn có thể chọn chỉ dùng một phần tín dụng mỗi tháng, hoặc không dùng phần nào, và nhận phần còn lại vào mùa khai thuế. HealthCare.gov cho phép bạn cài đặt điều này ở mục "Decide how much to lower your monthly premium" (Quyết định mức giảm phí bảo hiểm hàng tháng) khi bạn cập nhật đơn đăng ký. <!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ -->
+    </div>
+
+    <h2>Những gì được tính là thu nhập</h2>
+    <p>Thị trường Bảo hiểm Sức khỏe Marketplace dùng một con số gọi là <strong>tổng thu nhập đã điều chỉnh sửa đổi (MAGI)</strong>. Với hầu hết mọi người, con số này giống hoặc rất gần với tổng thu nhập đã điều chỉnh (AGI) trên tờ khai thuế. MAGI là AGI của bạn cộng với thu nhập nước ngoài không chịu thuế, quyền lợi An sinh Xã hội không chịu thuế, và tiền lãi được miễn thuế. Thu nhập An sinh Bổ sung (SSI) không được cộng vào. <!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Tính những khoản này</th>
+            <th>Không tính những khoản này</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tiền lương (tiền lương chịu thuế liên bang trên phiếu lương của bạn), tiền boa, thu nhập tự kinh doanh sau khi trừ chi phí</td>
+            <td>Thu nhập An sinh Bổ sung (SSI)</td>
+          </tr>
+          <tr>
+            <td>Quyền lợi An sinh Xã hội, cả chịu thuế và không chịu thuế, bao gồm SSDI</td>
+            <td>Tiền cấp dưỡng nuôi con, và các khoản thanh toán Tín dụng Thuế Trẻ em bạn nhận từ IRS</td>
+          </tr>
+          <tr>
+            <td>Trợ cấp thất nghiệp</td>
+            <td>Tiền trợ cấp khuyết tật cho cựu chiến binh và tiền bồi thường tai nạn lao động</td>
+          </tr>
+          <tr>
+            <td>Thu nhập hưu trí và lương hưu, bao gồm hầu hết các khoản rút từ IRA và 401(k)</td>
+            <td>Các khoản rút đủ điều kiện từ tài khoản Roth</td>
+          </tr>
+          <tr>
+            <td>Tiền lãi, cổ tức (bao gồm tiền lãi được miễn thuế), lãi vốn, thu nhập ròng từ cho thuê</td>
+            <td>Quà tặng, và tiền từ các khoản vay</td>
+          </tr>
+          <tr>
+            <td>Tiền cấp dưỡng từ các vụ ly hôn hoàn tất trước ngày 1 tháng 1 năm 2019</td>
+            <td>Tiền cấp dưỡng từ các vụ ly hôn hoàn tất vào hoặc sau ngày 1 tháng 1 năm 2019</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Bảng này theo danh sách của HealthCare.gov về những gì cần đưa vào. <!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+    <p><strong>Thu nhập của ai được tính.</strong> Hộ gia đình của bạn gồm người khai thuế, vợ/chồng của họ, và những người phụ thuộc về thuế của họ, kể cả những người không cần bảo hiểm. Thị trường Bảo hiểm Sức khỏe Marketplace tính thu nhập dự kiến của tất cả mọi người, kể cả những người được bảo hiểm qua chương trình của nơi làm việc, Medicare, hoặc Medicaid. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> Thu nhập của người phụ thuộc từ một công việc mùa hè chỉ được tính nếu họ bắt buộc phải nộp tờ khai thuế. <!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+
+    <h2>Cách ước tính, từng bước một</h2>
+    <ol class="steps">
+      <li><strong>Bắt đầu với AGI của năm ngoái.</strong> Con số này nằm ở Mẫu IRS 1040, dòng 11. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>Cộng thêm các khoản MAGI.</strong> Thu nhập nước ngoài được miễn thuế, An sinh Xã hội được miễn thuế (bao gồm hưu trí đường sắt bậc 1), và tiền lãi được miễn thuế. Đừng cộng SSI. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>Điều chỉnh theo những gì bạn dự kiến sẽ thay đổi.</strong> Tăng lương, công việc mới hoặc ít giờ làm hơn, thay đổi trong thu nhập tự kinh doanh hoặc đầu tư, và có thêm hoặc mất đi một người phụ thuộc. Những thay đổi về hộ gia đình có thể ảnh hưởng lớn đến khoản tiết kiệm của bạn. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>Không có tờ khai thuế gần đây?</strong> Lấy tiền lương chịu thuế liên bang từ phiếu lương của mỗi người có thu nhập (hoặc tổng lương trừ đi những gì chủ lao động khấu trừ cho bảo hiểm sức khỏe, chăm sóc trẻ em, và hưu trí), nhân với số kỳ lương trong năm, rồi cộng các thu nhập khác. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>Thu nhập không đều?</strong> Nếu bạn tự kinh doanh, hưởng hoa hồng, làm theo mùa, hoặc thất nghiệp, hãy dựa ước tính vào kinh nghiệm trước đây, xu hướng gần đây, và những gì bạn biết về các thay đổi ở nơi làm việc. Với một ngành nghề mới, hãy hỏi những người trong cùng lĩnh vực. HealthCare.gov có công cụ tính thu nhập. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+    </ol>
+    <p>Thị trường Bảo hiểm Sức khỏe Marketplace có thể yêu cầu bạn tải lên phiếu lương hoặc các giấy tờ khác để xác minh thu nhập. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> Hãy phản hồi đúng hạn. Theo quy định liên bang năm 2025, bạn có 90 ngày để giải quyết sự không khớp về thu nhập, và khoảng gia hạn tự động 60 ngày trước đây đã bị bãi bỏ. <!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> <a href="/vi/marketplace.html">Hướng dẫn về Thị trường Bảo hiểm Sức khỏe Marketplace</a> của chúng tôi giải thích tổng quan cách hoạt động của đơn đăng ký và các khoản tiết kiệm.</p>
+
+    <h2>Điều gì xảy ra vào mùa khai thuế</h2>
+    <p>Nếu bạn đã dùng tín dụng thuế phí bảo hiểm ứng trước trong năm, bạn phải nộp tờ khai thuế liên bang và đối chiếu, ngay cả khi bạn thường không nộp. <!-- src: https://www.healthcare.gov/taxes/ --> Đây là trình tự: <!-- src: https://www.healthcare.gov/taxes-reconciling/ --></p>
+    <ol class="steps">
+      <li><strong>Nhận Mẫu 1095-A.</strong> Thị trường Bảo hiểm Sức khỏe Marketplace gửi mẫu này vào giữa tháng Hai, và thường có sẵn sớm hơn trong tài khoản trực tuyến của bạn. Mẫu này cho thấy phí bảo hiểm của bạn, phí bảo hiểm của chương trình Bạc chuẩn, và khoản tín dụng ứng trước đã trả cho công ty bảo hiểm của bạn mỗi tháng.</li>
+      <li><strong>Điền Mẫu IRS 8962.</strong> Bạn chuyển các con số từ Mẫu 1095-A sang Mẫu 8962 để tính khoản tín dụng bạn thực sự đủ điều kiện nhận dựa trên thu nhập cuối cùng.</li>
+      <li><strong>So sánh.</strong> Dòng 26 cho biết bạn đã dùng nhiều hơn hay ít hơn khoản tín dụng bạn đủ điều kiện nhận.</li>
+      <li><strong>Đính kèm Mẫu 8962 vào tờ khai của bạn.</strong> Tờ khai nộp mà không có mẫu này có thể bị từ chối. <!-- src: https://www.healthcare.gov/taxes/ --></li>
+    </ol>
+    <p><strong>Nếu bạn ước tính quá thấp</strong> (thu nhập thực tế cao hơn), bạn đã dùng nhiều tín dụng hơn mức được hưởng. Phần vượt quá sẽ bị trừ vào tiền hoàn thuế hoặc cộng vào số tiền bạn nợ. <!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> <strong>Nếu bạn ước tính quá cao</strong> (thu nhập thực tế thấp hơn), bạn nhận được phần tín dụng chưa dùng dưới dạng tiền hoàn thuế hoặc hóa đơn thuế thấp hơn. <!-- src: https://www.healthcare.gov/taxes/ --></p>
+
+    <h3>Giới hạn trả lại đã không còn</h3>
+    <p>Đối với các năm thuế trước 2026, một giới hạn trả lại đã hạn chế số tiền tín dụng vượt quá mà bạn phải trả lại nếu thu nhập hộ gia đình của bạn dưới 400% mức nghèo liên bang. Giới hạn đó không còn tồn tại. Đối với các năm thuế sau 2025, bạn phải trả lại <strong>toàn bộ số tiền</strong> mà các khoản tín dụng ứng trước vượt quá tín dụng thuế phí bảo hiểm của bạn. <!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> Vì các khoản tín dụng bổ sung tạm thời từ thời đại dịch cũng đã kết thúc sau 2025, một bất ngờ về thu nhập giờ đây có thể khiến bạn mất tiền thật. <!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ --> Xem <a href="/vi/marketplace-premium-increase.html">vì sao phí bảo hiểm Thị trường Bảo hiểm Sức khỏe Marketplace tăng</a> để hiểu phần đó của câu chuyện.</p>
+
+    <h3>Nếu bạn không nộp tờ khai và đối chiếu</h3>
+    <p>Bỏ qua việc đối chiếu có hình phạt riêng. Theo một quy định liên bang năm 2025, Thị trường Bảo hiểm Sức khỏe Marketplace phải xác định bạn không đủ điều kiện nhận tín dụng thuế phí bảo hiểm ứng trước nếu bạn (hoặc người khai thuế của bạn) đã nhận tín dụng ứng trước cho một năm trước đó mà không nộp tờ khai và đối chiếu cho năm đó. <!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> Nếu bạn đã bỏ lỡ, bạn có thể nhận được thư từ Thị trường Bảo hiểm Sức khỏe Marketplace hoặc "Letter 12C" của IRS yêu cầu nộp mẫu. <!-- src: https://www.healthcare.gov/taxes-reconciling/ --></p>
+
+    <h2>Bốn cách để giảm rủi ro phải trả lại một khoản lớn</h2>
+    <ul>
+      <li><strong>Báo cáo thay đổi ngay lập tức.</strong> Nếu thu nhập của bạn tăng hoặc bạn mất đi một thành viên trong hộ gia đình, bạn có thể sẽ đủ điều kiện nhận ít tín dụng hơn. Cập nhật đơn đăng ký sẽ giảm khoản tín dụng trong thời gian tới, nên phần phải trả lại sẽ tích lũy ít hơn. Nếu thu nhập của bạn giảm hoặc bạn có thêm một thành viên trong hộ gia đình, bạn có thể đủ điều kiện nhận nhiều tín dụng hơn, hoặc thậm chí đủ điều kiện nhận Medicaid hoặc CHIP. <!-- src: https://www.healthcare.gov/reporting-changes/ --></li>
+      <li><strong>Dùng ít hơn toàn bộ tín dụng mỗi tháng.</strong> Bạn có thể nhận toàn bộ, một phần, hoặc không nhận phần nào của tín dụng ứng trước và nhận phần còn lại trên tờ khai thuế. <!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ --></li>
+      <li><strong>Cập nhật vào kỳ Ghi danh Mở, chứ không chỉ tự động gia hạn.</strong> Nếu bạn không cập nhật thông tin thu nhập và hộ gia đình, bạn có thể nhận ít tiết kiệm hơn mức đủ điều kiện, hoặc nhiều hơn, và phải trả lại phần chênh lệch. HealthCare.gov yêu cầu bạn cập nhật trước ngày 15 tháng 12 để có bảo hiểm từ ngày 1 tháng 1. <!-- src: https://www.healthcare.gov/keep-or-change-plan/ --></li>
+      <li><strong>Chú ý đến loại bảo hiểm chấm dứt tín dụng.</strong> Bắt đầu Medicare hoặc nhận được đề nghị bảo hiểm từ nơi làm việc có thể buộc bạn phải hủy chương trình Thị trường Bảo hiểm Sức khỏe Marketplace. <!-- src: https://www.healthcare.gov/reporting-changes/ --> Các khoản tín dụng được trả sau thời điểm bạn lẽ ra phải hủy có thể phải trả lại. Xem <a href="/vi/turning-65.html">Bước sang tuổi 65</a>.</li>
+    </ul>
+
+    <h2>Các câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Tôi dùng thu nhập của năm nào?</summary>
+      <div>
+        <p>Năm bạn muốn có bảo hiểm. Khoản tiết kiệm dựa trên thu nhập dự kiến của bạn cho năm đó, chứ không dựa trên tờ khai của năm ngoái. AGI của năm ngoái chỉ là điểm khởi đầu cho ước tính. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi đã ước tính thu nhập quá thấp. Tôi sẽ nợ bao nhiêu?</summary>
+      <div>
+        <p>Phần chênh lệch giữa khoản tín dụng ứng trước đã trả cho công ty bảo hiểm của bạn và khoản tín dụng bạn đủ điều kiện nhận dựa trên thu nhập cuối cùng. Đối với các năm thuế sau 2025 không có giới hạn, nên toàn bộ phần vượt quá sẽ bị trừ vào tiền hoàn thuế hoặc cộng vào số dư bạn nợ. Mẫu 8962 sẽ tính toán việc này. <!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> Nhiều người phải trả chỉ đơn giản thấy tiền hoàn thuế nhỏ hơn. <!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi đã ước tính quá cao. Tôi có được nhận lại tiền không?</summary>
+      <div>
+        <p>Có. Nếu bạn đã dùng ít tín dụng hơn mức đủ điều kiện, bạn kê khai phần chênh lệch trên Mẫu 8962. Khoản này làm giảm thuế hoặc tăng tiền hoàn thuế của bạn. <!-- src: https://www.healthcare.gov/taxes/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi có tính thu nhập của vợ/chồng nếu họ có bảo hiểm riêng không?</summary>
+      <div>
+        <p>Có. Thị trường Bảo hiểm Sức khỏe Marketplace tính thu nhập của tất cả mọi người trong hộ gia đình khai thuế của bạn, bao gồm vợ/chồng hoặc người phụ thuộc có bảo hiểm qua nơi làm việc, Medicare, hoặc Medicaid. Bạn sẽ cho biết trên đơn đăng ký những ai cần bảo hiểm. <!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>An sinh Xã hội có được tính là thu nhập không?</summary>
+      <div>
+        <p>Có, toàn bộ số tiền trước khi khấu trừ, dù có chịu thuế hay không, bao gồm SSDI. SSI không được tính. <!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Nếu thu nhập của tôi hóa ra quá thấp để nhận tín dụng Thị trường Bảo hiểm Sức khỏe Marketplace thì sao?</summary>
+      <div>
+        <p>Nếu thu nhập của bạn giảm, hãy báo cáo. Bạn có thể đủ điều kiện nhận tín dụng lớn hơn, hoặc thay vào đó là Medicaid hoặc CHIP. <!-- src: https://www.healthcare.gov/reporting-changes/ --> Thị trường Bảo hiểm Sức khỏe Marketplace cũng có thể yêu cầu giấy tờ khi dữ liệu của họ cho thấy thu nhập dưới mức nghèo, vì vậy hãy lưu giữ hồ sơ về những gì bạn kiếm được. <!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> Xem <a href="/vi/medicaid-eligibility.html">điều kiện hưởng Medicaid</a>.</p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.healthcare.gov/income-and-household-information/how-to-report/" rel="noopener">HealthCare.gov: Cách ước tính thu nhập dự kiến của bạn</a></li>
+      <li><a href="https://www.healthcare.gov/income-and-household-information/income/" rel="noopener">HealthCare.gov: Những gì cần đưa vào thu nhập</a></li>
+      <li><a href="https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/" rel="noopener">HealthCare.gov: Tín dụng thuế phí bảo hiểm</a></li>
+      <li><a href="https://www.healthcare.gov/taxes-reconciling/" rel="noopener">HealthCare.gov: Cách đối chiếu tín dụng thuế phí bảo hiểm của bạn</a></li>
+      <li><a href="https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit" rel="noopener">IRS: Hỏi đáp về tín dụng thuế phí bảo hiểm (giới hạn trả lại)</a></li>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule" rel="noopener">CMS.gov: Quy định Cuối cùng năm 2025 về Tính toàn vẹn và Khả năng chi trả của Marketplace</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục chung và không liên kết với bất kỳ cơ quan hay công ty bảo hiểm nào. Không có nội dung nào ở đây là tư vấn thuế. Tín dụng của bạn phụ thuộc vào thu nhập, hộ gia đình, và quận nơi bạn ở, và Quốc hội có thể thay đổi các quy định. Hãy kiểm tra HealthCare.gov hoặc thị trường bảo hiểm của tiểu bang bạn, và trao đổi với chuyên gia thuế hoặc một Navigator miễn phí về các con số của riêng bạn.
+    </div>
+  </div>
+</main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Các chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a></li>
+          <li><a href="/vi/turning-65.html">Bước sang tuổi 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở Bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả nguồn trợ giúp</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào hay bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được kiểm tra lại với tài liệu chính thức của chương trình và của chương trình bảo hiểm. Không có nội dung nào ở đây là lời khuyên y tế, pháp lý hay tài chính, và không có trang nào khuyến nghị một chương trình bảo hiểm cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Tuyên bố miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
