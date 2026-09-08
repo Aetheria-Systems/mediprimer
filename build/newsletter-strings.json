@@ -1,0 +1,27 @@
+{
+ "_doc": "Strings for build/newsletter_block.py, keyed by language code. A language with no entry falls back to English. Keep it short and plain — this sits at the end of every page.",
+ "en": {
+  "aria": "Get MediPrimer updates by email",
+  "head": "Rules change. We'll tell you when.",
+  "blurb": "A short email when something changes that affects your coverage — deadlines, new rules, and what to do about them. No ads, no plan sales, and we never share your address.",
+  "placeholder": "Your email address",
+  "button": "Keep me posted",
+  "fine": "One email at most per week. Unsubscribe in one click, any time."
+ },
+ "es": {
+  "aria": "Reciba novedades de MediPrimer por correo electrónico",
+  "head": "Las reglas cambian. Le avisamos cuándo.",
+  "blurb": "Un correo breve cuando algo cambie y afecte su cobertura: fechas límite, reglas nuevas y qué hacer al respecto. Sin anuncios, sin venta de planes, y nunca compartimos su dirección.",
+  "placeholder": "Su correo electrónico",
+  "button": "Manténganme informado",
+  "fine": "Como máximo un correo por semana. Cancele la suscripción con un clic, cuando quiera."
+ },
+ "zh-Hant": {
+  "aria": "以電子郵件接收 MediPrimer 最新消息",
+  "head": "規定會改變，我們會通知您。",
+  "blurb": "當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。",
+  "placeholder": "您的電子郵件地址",
+  "button": "通知我",
+  "fine": "每週最多一封。隨時可一鍵取消訂閱。"
+ }
+}
