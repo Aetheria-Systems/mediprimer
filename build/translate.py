@@ -449,7 +449,6 @@ def acquire_single_instance_lock():
 
 
 def main():
-    _lock = acquire_single_instance_lock()  # noqa: F841
     parser = argparse.ArgumentParser(description="Translate MediPrimer pages to target language")
     parser.add_argument("--lang", required=True, help="Target language code (e.g., es, zh)")
     parser.add_argument("--page", help="Specific page to translate (e.g., disclaimer.html)")
@@ -458,6 +457,12 @@ def main():
     parser.add_argument("--check-only", action="store_true", help="List stale pages without translating")
 
     args = parser.parse_args()
+    # --check-only only reads state, so it must NOT take the lock: the
+    # language rollout uses it to measure the backlog, and blocking it while
+    # a sync runs made it report "0 stale" (exit 3, no stdout) — which would
+    # green-light launching a new language mid-sync.
+    if not args.check_only:
+        _lock = acquire_single_instance_lock()  # noqa: F841
 
     # Validate language
     lang_codes = [lang.get("code") for lang in LANGUAGES.get("languages", [])]
