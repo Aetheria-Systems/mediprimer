@@ -469,7 +469,13 @@ def main():
             print(f"\n{len(failures)} failures:", file=sys.stderr)
             for msg in failures:
                 print(f"  {msg}", file=sys.stderr)
-            sys.exit(1)
+            # Exit 2 = PARTIAL: per-page QA rejected some pages, but the ones
+            # that passed are written and are safe to publish. Exit 1 is
+            # reserved for "the run could not proceed at all". Before this
+            # split (2026-09-07/08) a single page failing its numeric-facts
+            # gate made the nightly sync abort, discard every page that DID
+            # translate, and skip the remaining languages entirely.
+            sys.exit(2)
         return
 
     # Handle single page
