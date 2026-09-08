@@ -318,3 +318,21 @@ class TestRetitle:
         # Ampersands must appear literally in both title and description
         assert "<title>New & Improved</title>" in result
         assert 'content="Medicare & Medicaid coverage"' in result
+
+
+def test_adjacent_numeric_cells_do_not_glue_into_phantom_facts():
+    """<td>$86.38</td><td>80%...</td> must not become '$86.3880%'.
+
+    Stripping tags to an empty string produced phantom facts
+    (dollar 863880, percent 880%) that never appear on either side of a
+    real translation, so the zero-tolerance numeric gate rejected correct
+    pages. Regression guard for the 2026-09-08 fix.
+    """
+    import re
+    import i18n_qa
+    html = '<td>$86.38</td><td>80% of the approved amount</td>'
+    facts = i18n_qa._extract_facts(re.sub(r'<[^>]+>', ' ', html))
+    assert ('dollar', '86.38') in facts
+    assert ('percent', '80%') in facts
+    assert ('dollar', '863880') not in facts
+    assert ('percent', '880%') not in facts

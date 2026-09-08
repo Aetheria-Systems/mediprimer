@@ -424,7 +424,32 @@ def get_stale_pages(code):
     return stale
 
 
+TRANSLATE_LOCK = "/tmp/mediprimer-translate.lock"
+
+
+def acquire_single_instance_lock():
+    """Only one translate.py may run at a time.
+
+    The 21:00 language rollout can run for hours and overlap the 03:00
+    nightly sync; both mutate build/translation-state.json, and a lost
+    update there silently drops completed-page records (cost 29 entries
+    once before). Fail fast and loud rather than corrupt state — the
+    caller retries on its next scheduled run.
+    """
+    import fcntl
+    fh = open(TRANSLATE_LOCK, "w")
+    try:
+        fcntl.flock(fh, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        print("translate.py: another translation run holds the lock — "
+              "exiting without changes (retry on next scheduled run)",
+              file=sys.stderr)
+        sys.exit(3)
+    return fh   # keep referenced for process lifetime
+
+
 def main():
+    _lock = acquire_single_instance_lock()  # noqa: F841
     parser = argparse.ArgumentParser(description="Translate MediPrimer pages to target language")
     parser.add_argument("--lang", required=True, help="Target language code (e.g., es, zh)")
     parser.add_argument("--page", help="Specific page to translate (e.g., disclaimer.html)")
