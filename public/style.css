@@ -464,3 +464,9 @@ body:has(.lang-banner) { padding-top: 2.8rem; }
 .mp-chatbot-news-btn { padding: 0.3rem 0.6rem; border: none; border-radius: 4px; background: #1f4e79; color: #fff; cursor: pointer; font-size: 0.8rem; }
 .mp-chatbot-input { flex: 1; background: var(--surface, #fff); color: var(--ink, #111); border: 1px solid var(--border, #ccc); }
 .mp-chatbot-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.hot-topics { margin: 1.5rem 0 0.5rem; }
+.hot-topics h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1px; color: #1f4e79; margin-bottom: 0.6rem; }
+a.card.hot-topic { display: block; text-decoration: none; color: inherit; border-left: 4px solid #1f4e79; }
+a.card.hot-topic h3 { margin-top: 0; font-size: 1.05rem; color: #1f4e79; }
+a.card.hot-topic:hover { box-shadow: 0 2px 8px rgba(31,78,121,0.25); }
