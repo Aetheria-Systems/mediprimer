@@ -263,7 +263,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     </details>
 
   </div>
-</main>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>Las reglas cambian. Le avisamos cuándo.</h2>
+      <p>Un correo breve cuando algo cambie y afecte su cobertura: fechas límite, reglas nuevas y qué hacer al respecto. Sin anuncios, sin venta de planes, y nunca compartimos su dirección.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Manténganme informado</button>
+      </form>
+      <p class="newsletter-fine">Como máximo un correo por semana. Cancele la suscripción con un clic, cuando quiera.</p>
+    </aside>
+    <!--/newsletter-->
+  </main>
 
 <div class="note">
   <strong>Verifique antes de actuar.</strong> Esta página explica conceptos generales sobre la autorización y las responsabilidades de los cuidadores. Los documentos legales como el poder notarial requieren ayuda legal calificada en su estado. Las reglas de los planes de salud y de Medicare tienen excepciones y detalles que no se cubren aquí. Siempre verifique la cobertura, los plazos y los procedimientos con el plan, Medicare o la oficina de Medicaid de su estado. MediPrimer no está afiliado a CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. Nada de lo aquí expuesto es asesoramiento legal, médico o financiero.
@@ -341,6 +353,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>

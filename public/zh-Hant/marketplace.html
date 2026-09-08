@@ -322,7 +322,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     <p class="note"><strong>請以官方來源為準：</strong>醫療保險市場的規定和截止日期可能變更，並由美國醫療保險和醫療補助服務中心（CMS）制定。本頁面僅供教育用途，內容截至今日為最新。如需最新詳情，請瀏覽<a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a>或<a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>。MediPrimer是獨立網站，與CMS、Medicare、Medicaid、任何州或任何保險公司均無關聯。</p>
 
   </div>
-</main>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>規定會改變，我們會通知您。</h2>
+      <p>當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">通知我</button>
+      </form>
+      <p class="newsletter-fine">每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footcols">
@@ -397,6 +409,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>

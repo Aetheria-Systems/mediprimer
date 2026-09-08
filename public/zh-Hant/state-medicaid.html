@@ -184,7 +184,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     <h2>聯邦資源</h2>
     <p>如需了解所有州計劃共同遵循的聯邦框架，請參閱 <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a> 以及由美國醫療保險和醫療補助服務中心（CMS）維護的<a href="https://www.medicaid.gov/state-overviews/index.html" rel="noopener">各州概覽</a>。兒童承保資訊請見 <a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a>。</p>
   </div>
-</main><footer class="site-footer">
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>規定會改變，我們會通知您。</h2>
+      <p>當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">通知我</button>
+      </form>
+      <p class="newsletter-fine">每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main><footer class="site-footer">
   <div class="wrap">
     <div class="footcols">
       <div>
@@ -257,6 +269,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 </footer>
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>

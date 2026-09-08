@@ -285,7 +285,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <strong>行動前請先核實。</strong> MediPrimer提供的是一般性教育資訊，與任何政府機構或保險公司無關，本頁也不是針對您具體情況的建議。規則、費用和合格承保的認定各有不同，也會變動。在做決定之前，請向社會安全局、Medicare、VA（關於VA醫療）、您的計劃以及免費的SHIP輔導員確認具體細節。
     </div>
   </div>
-</main><footer class="site-footer">
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>規定會改變，我們會通知您。</h2>
+      <p>當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">通知我</button>
+      </form>
+      <p class="newsletter-fine">每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main><footer class="site-footer">
   <div class="wrap">
     <div class="footcols">
       <div>
@@ -412,6 +424,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
   });
 })();
 </script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>

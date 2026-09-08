@@ -474,3 +474,13 @@ a.card.hot-topic:hover { box-shadow: 0 2px 8px rgba(31,78,121,0.25); }
 figure.diagram { margin: 1.5rem 0; }
 figure.diagram img { width: 100%; height: auto; border: 1px solid #dfe4ea; border-radius: 8px; }
 figure.diagram figcaption { font-size: 0.85rem; color: #4a5568; margin-top: 0.4rem; font-style: italic; }
+
+aside.newsletter { margin: 2.5rem 0 1rem; padding: 1.25rem 1.4rem; background: #eef5fb; border-left: 4px solid #1f4e79; border-radius: 6px; }
+aside.newsletter h2 { margin: 0 0 0.4rem; font-size: 1.1rem; color: #1f4e79; }
+aside.newsletter p { margin: 0 0 0.75rem; font-size: 0.95rem; }
+.newsletter-form { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+.newsletter-form input { flex: 1 1 16rem; min-width: 0; padding: 0.6rem 0.7rem; border: 1px solid #b9c6d4; border-radius: 5px; font-size: 1rem; }
+.newsletter-form button { padding: 0.6rem 1.1rem; border: none; border-radius: 5px; background: #1f4e79; color: #fff; font-size: 1rem; cursor: pointer; min-height: 44px; }
+.newsletter-form button:hover { background: #163a5c; }
+.newsletter-fine { font-size: 0.8rem !important; color: #4a5568; margin: 0.6rem 0 0 !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

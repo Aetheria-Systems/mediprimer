@@ -343,7 +343,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     </div>
 <!--/P:free-help-->
   </div>
-</main>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Rules change. We'll tell you when.</h2>
+      <p>A short email when something changes that affects your coverage — deadlines, new rules, and what to do about them. No ads, no plan sales, and we never share your address.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Keep me posted</button>
+      </form>
+      <p class="newsletter-fine">One email at most per week. Unsubscribe in one click, any time.</p>
+    </aside>
+    <!--/newsletter-->
+  </main>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -412,6 +424,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>
