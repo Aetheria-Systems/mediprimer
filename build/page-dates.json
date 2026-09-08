@@ -52,7 +52,7 @@
   "hash": "8cacb1a60019cce10ceff96cd4a9c1cc"
  },
  "costs.html": {
-  "date": "2026-09-06",
+  "date": "2026-09-08",
   "hash": "652cc5fc86dd376f1039fcc46ce2945c"
  },
  "coverage-basics.html": {
@@ -100,7 +100,7 @@
   "hash": "3c35508697e2b1589905b4f8a6d58716"
  },
  "getting-help.html": {
-  "date": "2026-09-02",
+  "date": "2026-09-08",
   "hash": "fb8e0d5e2c4199aa99a2e62d1e96186d"
  },
  "glossary.html": {
@@ -152,7 +152,7 @@
   "hash": "933487bc93eef0d96fef7db3dce52936"
  },
  "medicaid-eligibility.html": {
-  "date": "2026-09-06",
+  "date": "2026-09-08",
   "hash": "5860919e34c46df8f8a3a6223bff9f12"
  },
  "medicaid-estate-recovery.html": {
@@ -264,7 +264,7 @@
   "hash": "a37f17c450f7e60435ba1c78d34c6180"
  },
  "medicare-part-a.html": {
-  "date": "2026-09-06",
+  "date": "2026-09-08",
   "hash": "1710b7a1fe81d257f4834b235ead4fdf"
  },
  "medicare-part-b-giveback.html": {
@@ -276,7 +276,7 @@
   "hash": "52629a226c1966b4f5c98eca55ea96ef"
  },
  "medicare-part-d.html": {
-  "date": "2026-09-06",
+  "date": "2026-09-08",
   "hash": "2c5bd156a371274943694a3ee1a3da1a"
  },
  "medicare-physical-therapy.html": {
@@ -340,8 +340,8 @@
   "hash": "95bdc99320ca22ca730bfb081f74e505"
  },
  "medigap.html": {
-  "date": "2026-07-28",
-  "hash": "2fc5cfb99b400d1467bdc7a6423b9ad9"
+  "date": "2026-09-08",
+  "hash": "951c91f6b9a64da7f9d4659e6ccc5017"
  },
  "member-journey.html": {
   "date": "2026-07-22",
