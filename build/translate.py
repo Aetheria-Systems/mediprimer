@@ -140,7 +140,7 @@ Main HTML to translate:
     try:
         # Call headless claude
         result = subprocess.run(
-            ["/home/deltaprism/.local/bin/claude", "-p", prompt, "--allowedTools", ""],
+            ["/home/deltaprism/.local/bin/claude", "--model", "sonnet", "-p", prompt, "--allowedTools", ""],
             capture_output=True,
             text=True,
             timeout=600
@@ -205,7 +205,7 @@ HTML to back-translate:
 
     try:
         result = subprocess.run(
-            ["/home/deltaprism/.local/bin/claude", "-p", prompt, "--allowedTools", ""],
+            ["/home/deltaprism/.local/bin/claude", "--model", "sonnet", "-p", prompt, "--allowedTools", ""],
             capture_output=True,
             text=True,
             timeout=600

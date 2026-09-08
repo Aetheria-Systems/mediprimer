@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Điều chỉnh Rủi ro & Mã hóa HCC — MediPrimer</title>
+<meta name="description" content="Cách Medicare Advantage và các chương trình chịu rủi ro khác điều chỉnh khoản thanh toán theo tình trạng sức khỏe của hội viên thông qua mã hóa chẩn đoán và điểm rủi ro.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/risk-adjustment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Risk Adjustment & HCC Coding — MediPrimer">
+<meta property="og:description" content="How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.">
+<meta property="og:url" content="https://mediprimer.org/risk-adjustment.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Risk Adjustment & HCC Coding — MediPrimer">
+<meta name="twitter:description" content="How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Risk Adjustment & HCC Coding", "description": "How Medicare Advantage and other risk-bearing plans adjust payment for member health status through diagnosis coding and risk scores.", "url": "https://mediprimer.org/risk-adjustment.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Risk Adjustment & HCC Coding", "item": "https://mediprimer.org/risk-adjustment.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/risk-adjustment.html" lang="en">English</a>
+    <a href="/es/risk-adjustment.html" lang="es">Español</a>
+    <a href="/zh-Hant/risk-adjustment.html" lang="zh-Hant">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Bước sang tuổi 65: bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên hỏi</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Các chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị trường Bảo hiểm Sức khỏe (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở Bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả nguồn trợ giúp</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chính danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop active">Dành cho chuyên gia</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Dành cho chuyên gia">▾</button>
+        <div class="dropdown">
+        <a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: các cấp và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Chuyên gia</p>
+    <h1>Điều chỉnh Rủi ro & Mã hóa HCC</h1>
+    <p>Cách các chương trình được thanh toán dựa trên tình trạng sức khỏe của hội viên, và vai trò của việc ghi chép chẩn đoán chính xác.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Mục đích của Điều chỉnh Rủi ro</h2>
+    <p>Điều chỉnh rủi ro là một cơ chế thanh toán giải quyết một thách thức cơ bản trong bảo hiểm theo đầu người: nếu các chương trình được trả cùng một số tiền bất kể sức khỏe của hội viên, họ sẽ có động cơ tài chính để tránh ghi danh hoặc giữ lại những hội viên bệnh nặng hơn. Điều chỉnh rủi ro ngăn chặn điều này bằng cách tăng khoản thanh toán cho chương trình đối với những hội viên mắc bệnh mãn tính và có nhu cầu y tế phức tạp.</p>
+    <p>Trong <a href="/vi/medicare-advantage.html">Medicare Advantage</a>, <a href="/vi/marketplace.html">các chương trình Thị trường Bảo hiểm Sức khỏe Marketplace theo ACA</a>, và các chương trình chăm sóc có quản lý của Medicaid, Thanh toán theo đầu người có nghĩa là chương trình nhận một khoản thanh toán cố định cho mỗi hội viên mỗi tháng, chấp nhận toàn bộ rủi ro tài chính cho việc chăm sóc hội viên đó. Nếu không có điều chỉnh, khoản thanh toán cố định đó sẽ không đủ để chi trả chi phí cho những nhóm dân số bệnh nặng hơn—nhưng các chương trình vẫn có thể thu lợi bằng cách chỉ thu hút những người ghi danh khỏe mạnh nhất. Điều chỉnh rủi ro hướng khoản thanh toán về phía nhu cầu y tế, tạo ra một sân chơi bình đẳng.</p>
+
+    <h2>Mô hình CMS-HCC: Từ Chẩn đoán đến Điểm Rủi ro</h2>
+    <p>Trung tâm Dịch vụ Medicare &amp; Medicaid (CMS) sử dụng <strong>mô hình Nhóm Tình trạng Phân cấp (Hierarchical Condition Category, HCC)</strong> để đo lường tình trạng sức khỏe của hội viên và tính <strong>điểm Hệ số Điều chỉnh Rủi ro (Risk Adjustment Factor, RAF)</strong>. Cách hoạt động như sau:</p>
+    <ol class="steps">
+      <li><strong>Thu thập chẩn đoán.</strong> Nhà cung cấp gửi các yêu cầu thanh toán và hồ sơ lượt khám có chứa mã chẩn đoán ICD-10 cho mỗi hội viên trong Năm quyền lợi (thường là năm dương lịch đối với Medicare Advantage).
+      <li><strong>Ánh xạ HCC.</strong> CMS ánh xạ các mã chẩn đoán đó vào các HCC—những nhóm có ý nghĩa lâm sàng giúp dự đoán chi phí chăm sóc sức khỏe trong tương lai. Một mã chẩn đoán có thể ánh xạ vào một HCC; nhiều mã có thể ánh xạ vào cùng một HCC.
+      <li><strong>Áp dụng phân cấp.</strong> Mô hình áp dụng các phân cấp: nếu một hội viên có cả dạng ít nghiêm trọng và dạng nghiêm trọng hơn của một tình trạng bệnh, chỉ HCC nghiêm trọng hơn được tính. Ví dụ, chẩn đoán ít nghiêm trọng hơn là tiểu đường không có biến chứng sẽ được gộp vào chẩn đoán nghiêm trọng hơn là tiểu đường có biến chứng nếu cả hai đều có mặt; chỉ HCC nghiêm trọng hơn được tính. (Các số HCC cụ thể được gán lại mỗi khi CMS hiệu chỉnh lại mô hình, vì vậy trang này mô tả khái niệm thay vì gắn với các mã định danh theo phiên bản cụ thể.)
+      <li><strong>Tính RAF.</strong> CMS gán một trọng số rủi ro cho mỗi HCC áp dụng (ví dụ, suy tim sung huyết có thể có trọng số 0.45, nghĩa là nó cộng thêm 45% vào khoản thanh toán cơ bản của hội viên). RAF là tổng của tất cả các trọng số áp dụng cộng với một hệ số nhân khẩu học. RAF bằng 1.0 đại diện cho rủi ro trung bình; 0.8 đại diện cho thấp hơn trung bình 20%; 1.2 đại diện cho cao hơn trung bình 20%.
+      <li><strong>Điều chỉnh thanh toán.</strong> Khoản thanh toán theo đầu người của chương trình được nhân với RAF. Một hội viên có RAF 1.2 tạo ra khoản thanh toán cao hơn 20% so với hội viên có RAF 1.0, phản ánh chi phí dự kiến cao hơn.
+    </ol>
+    <p>Mô hình HCC được CMS hiệu chỉnh lại hàng năm dựa trên dữ liệu yêu cầu thanh toán và lượt khám, và các mã chẩn đoán được ghi nhận sẽ quyết định RAF. Do đó, việc ghi nhận chẩn đoán chính xác và kịp thời là yếu tố trung tâm cho khoản thanh toán phù hợp và tính bền vững của chương trình.</p>
+
+    <h2>Ghi chép và Tuân thủ: MEAT/TAMPER ở Cấp độ Khái niệm</h2>
+    <p>Để đảm bảo mã hóa HCC chính xác, nhà cung cấp và chương trình tuân theo các tiêu chuẩn ghi chép thường được viết tắt là MEAT (cho ghi chép của bác sĩ lâm sàng) và TAMPER (cho việc xác minh của kiểm toán viên và chương trình). Mặc dù các từ viết tắt này là danh sách kiểm tra, nguyên tắc cơ bản rất đơn giản:</p>
+    <ul>
+      <li><strong>Hồ sơ y tế hỗ trợ.</strong> Mọi chẩn đoán được mã hóa phải được ghi chép rõ ràng trong hồ sơ y tế của hội viên—ghi chú lượt khám, kết quả xét nghiệm, báo cáo hình ảnh, danh sách thuốc, hoặc tóm tắt đánh giá—do nhà cung cấp điều trị tạo ra trong hoặc ngay sau lượt khám lâm sàng.
+      <li><strong>Tính cụ thể.</strong> Ghi chép nên hỗ trợ chẩn đoán cụ thể và chính xác nhất. Tính cụ thể quan trọng vì các chẩn đoán cụ thể hơn thường ánh xạ vào các HCC chính xác hơn. Ví dụ, "Tiểu đường loại 2 với bệnh thận mãn tính giai đoạn 2" cụ thể hơn và có thể ánh xạ vào một HCC khác so với "tiểu đường không xác định."
+      <li><strong>Thời điểm lượt khám.</strong> Chẩn đoán phải được ghi chép trong năm quyền lợi đang xét. Một chẩn đoán được ghi chép vào ngày 5 tháng 1 năm 2024 được tính cho khoản thanh toán năm 2024; một chẩn đoán được ghi chép vào ngày 2 tháng 1 năm 2025 được tính cho năm 2025. Dữ liệu lượt khám (yêu cầu thanh toán và các lượt khám trực tiếp) ghi nhận các chẩn đoán này.
+      <li><strong>Tính hợp lệ lâm sàng.</strong> Mã hóa nên phản ánh tình trạng lâm sàng thực tế của hội viên. Một chẩn đoán phải đang được quản lý tích cực, được đề cập trong phần đánh giá hoặc kế hoạch, hoặc được hỗ trợ bởi các phát hiện khách quan—không được liệt kê một cách suy đoán hoặc chỉ từ tiền sử bệnh trước đây.
+    </ul>
+    <p>Dữ liệu lượt khám—cả yêu cầu thanh toán (của cơ sở và của chuyên gia) và tài liệu bổ sung—đều cung cấp cho mô hình HCC. Lượt khám chính xác đảm bảo HCC chính xác và tính RAF phù hợp.</p>
+
+    <h2>Mô hình Thanh toán và Đối soát Hàng năm</h2>
+    <p>CMS tính điểm RAF và xác định khoản thanh toán cho chương trình từ trước, dựa trên các chẩn đoán được ghi nhận trong yêu cầu thanh toán của năm trước. Ví dụ, các chẩn đoán được gửi trong năm 2023 quyết định khoản thanh toán năm 2024. Trong năm quyền lợi, chương trình và nhà cung cấp tiếp tục ghi chép; các chẩn đoán năm 2024 này sẽ quyết định khoản thanh toán năm 2025.</p>
+    <p>Cấu trúc này tạo ra một số động lực quan trọng:</p>
+    <ul>
+      <li><strong>Độ trễ và đối soát.</strong> Chương trình nhận khoản thanh toán theo dự kiến dựa trên hồ sơ rủi ro của năm trước, sau đó gửi dữ liệu lượt khám của năm hiện tại với hiểu biết rằng nó sẽ ảnh hưởng đến khoản thanh toán của những năm sau. CMS có thể đối soát lại các khoản thanh toán của năm trước nếu kiểm toán dữ liệu phát hiện lỗi mã hóa.
+      <li><strong>Sự đồng thuận về động cơ và rủi ro.</strong> Việc ghi nhận chẩn đoán chính xác, đầy đủ có lợi cho cả chương trình (thông qua RAF phù hợp) và nhà cung cấp (thông qua khoản thanh toán phản ánh mức độ phức tạp thực tế của ca bệnh). Chương trình và nhà cung cấp có động cơ đồng thuận để đảm bảo các chẩn đoán được ghi chép kỹ lưỡng và chính xác trong mỗi lượt khám.
+      <li><strong>Tính đầy đủ của lượt khám.</strong> Không phải mọi lượt khám đều được ghi nhận trên yêu cầu thanh toán. Chương trình có thể bổ sung bằng tài liệu lượt khám thêm để phản ánh bức tranh lâm sàng đầy đủ. CMS phân biệt giữa yêu cầu thanh toán và lượt khám bổ sung; cả hai đều cung cấp cho mô hình HCC trong một số chương trình.
+    </ul>
+
+    <h2>Kiểm toán RADV và Rủi ro Tuân thủ</h2>
+    <p><strong>Kiểm toán Xác thực Dữ liệu Điều chỉnh Rủi ro (Risk Adjustment Data Validation, RADV)</strong> là các cuộc rà soát tuân thủ định kỳ do CMS, các cơ quan tiểu bang, hoặc kiểm toán viên được ký hợp đồng thực hiện. Trong một cuộc kiểm toán RADV, kiểm toán viên lấy mẫu ngẫu nhiên một phần hồ sơ y tế của hội viên cho một năm quyền lợi nhất định và xác minh rằng các chẩn đoán được gửi để mã hóa HCC thực sự được hồ sơ y tế hỗ trợ và được ghi chép theo tiêu chuẩn lâm sàng.</p>
+    <p>Kiểm toán RADV có thể xác định một số loại phát hiện:</p>
+    <ul>
+      <li><strong>Chẩn đoán không được hỗ trợ:</strong> Một chẩn đoán đã được mã hóa nhưng hồ sơ y tế không cho thấy bằng chứng lâm sàng về tình trạng đó.
+      <li><strong>Chẩn đoán được xác định không chính xác:</strong> Đã sử dụng sai mã ICD-10, hoặc sử dụng mã ít cụ thể hơn khi cần một mã cụ thể hơn.
+      <li><strong>Lỗi về thời điểm hoặc ghi chép:</strong> Chẩn đoán đã được ghi lại nhưng không phải trong một lượt khám thực tế trong năm quyền lợi, hoặc ghi chép quá mơ hồ để hỗ trợ kết luận lâm sàng.
+      <li><strong>Dấu hiệu gian lận:</strong> Các mẫu hình cho thấy việc mã hóa quá mức có chủ ý hoặc có hệ thống, chẳng hạn như các chẩn đoán giống hệt nhau xuất hiện ở nhiều hội viên mà không có cơ sở lâm sàng.
+    </ul>
+    <p>Nếu các phát hiện RADV cho thấy lỗi hệ thống hoặc mã hóa quá mức, CMS có thể điều chỉnh hồi tố khoản thanh toán cho chương trình hoặc áp dụng hình phạt. Do đó, các chương trình đầu tư vào <strong>kiểm toán mã hóa đồng thời</strong> và <strong>chương trình ghi nhận lượt khám</strong> để phát hiện và sửa lỗi trước khi có kiểm toán bên ngoài, và vào <strong>đào tạo nhà cung cấp</strong> để đảm bảo thực hành ghi chép chính xác. Xem <a href="/vi/policy-changes.html">Thay đổi Chính sách</a> để biết các sáng kiến RADV hiện tại của CMS.</p>
+
+    <h2>Ranh giới Đạo đức: Tính cụ thể so với Mã hóa nâng mức</h2>
+    <p>Ranh giới giữa mã hóa chính xác và mã hóa nâng mức không đúng có thể rất tinh tế. Đây là cách các tổ chức chú trọng tuân thủ xử lý vấn đề này:</p>
+    <ul>
+      <li><strong>Phù hợp:</strong> Một nhà cung cấp ghi chép "Tiểu đường loại 2 với bệnh thận mãn tính giai đoạn 2" dựa trên xét nghiệm hiện tại và đánh giá lâm sàng; người mã hóa chọn HCC cụ thể phản ánh tình trạng đã được ghi chép này. Hồ sơ y tế hỗ trợ tính cụ thể được khẳng định.
+      <li><strong>Phù hợp:</strong> Một chương trình nhận thấy rằng nhiều lượt khám ghi chép một chẩn đoán trong phần đánh giá nhưng không có trong trường chẩn đoán được mã hóa, và bổ sung một cách có hệ thống các chẩn đoán đã ghi chép còn thiếu vào hồ sơ lượt khám, được hỗ trợ bởi tài liệu lâm sàng cùng thời điểm của nhà cung cấp.
+      <li><strong>Đáng nghi ngờ:</strong> Một nhà cung cấp mã hóa các chẩn đoán một cách có hệ thống ở phiên bản có mức độ nghiêm trọng cao nhất (ví dụ, luôn chọn các biến thể "có biến chứng") mà không có tài liệu lâm sàng rõ ràng hỗ trợ mức độ nghiêm trọng đó.
+      <li><strong>Không đúng:</strong> Một người mã hóa suy diễn ra một chẩn đoán không được nhà cung cấp ghi chép, hoặc gán một chẩn đoán chỉ được ghi chép trong tiền sử trước đây mà không có bằng chứng tích cực cho thấy nó đang được quản lý trong năm hiện tại.
+    </ul>
+    <p>Hướng dẫn quy định và các án lệ đã làm rõ rằng mã hóa phải phản ánh các chẩn đoán hiện tại, đang được quản lý tích cực và được hồ sơ y tế hỗ trợ. Tính cụ thể và phân cấp phù hợp là điều được mong đợi; nâng mức có hệ thống mà không có cơ sở lâm sàng thì không. Chương trình và nhà cung cấp hoạt động theo một tư thế tuân thủ nhấn mạnh tính chính xác và minh bạch với kiểm toán viên, thay vì tối đa hóa RAF.</p>
+
+    <h2>Điều chỉnh Rủi ro trong Các Chương trình Khác</h2>
+    <p><strong>Medicare Advantage</strong> sử dụng mô hình HCC như mô tả ở trên. Phiên bản CMS-HCC 28 (và các phiên bản đang phát triển) được áp dụng.</p>
+    <p><strong>Các chương trình Thị trường Bảo hiểm Sức khỏe Marketplace theo ACA</strong> cũng sử dụng cơ chế điều chỉnh rủi ro, được tài trợ thông qua chương trình điều chỉnh rủi ro của ACA. Các chương trình có người ghi danh bệnh nặng hơn mức trung bình nhận được các khoản chuyển từ chương trình trung tâm; các chương trình có người ghi danh khỏe mạnh hơn mức trung bình đóng góp vào đó. Mô hình và ánh xạ HCC khác một chút so với Medicare Advantage nhưng phục vụ cùng một mục đích: cân bằng sân chơi thanh toán theo rủi ro sức khỏe.</p>
+    <p>Điều chỉnh rủi ro trong <strong>chăm sóc có quản lý của Medicaid</strong> khác nhau theo tiểu bang và chương trình. Một số tiểu bang sử dụng mô hình dựa trên HCC; các tiểu bang khác sử dụng các hệ số nhân khẩu học đơn giản hơn hoặc các nhóm dựa trên tình trạng bệnh. Các cơ quan Medicaid tiểu bang xác định phương pháp điều chỉnh rủi ro trong hợp đồng chăm sóc có quản lý của họ.</p>
+    <p><strong>Các chương trình thương mại</strong> không chịu cùng khuôn khổ điều chỉnh rủi ro của CMS, mặc dù các công ty bảo hiểm sử dụng mô hình rủi ro nội bộ riêng để định giá và quản lý dân số.</p>
+
+    <h2>Chủ đề Liên quan</h2>
+    <p>Điều chỉnh rủi ro giao thoa với nhiều chức năng chuyên môn. Xem thêm:</p>
+    <ul>
+      <li><a href="/vi/operations.html">Vận hành Chương trình Sức khỏe</a> — Cách các chương trình tổ chức chức năng lâm sàng và tài chính.
+      <li><a href="/vi/providers.html">Nhà cung cấp &amp; Thanh toán</a> — Cách nhà cung cấp gửi lượt khám và yêu cầu thanh toán.
+      <li><a href="/vi/star-ratings.html">Xếp hạng sao & Đo lường Chất lượng</a> — Các chỉ số CMS liên quan và nguồn dữ liệu của chúng.
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">Chương trình RADV của CMS</a> — Khuôn khổ quy định chính thức và thủ tục kiểm toán.
+    </ul>
+
+    <h2>Bảng thuật ngữ</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Thuật ngữ</th>
+            <th>Định nghĩa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HCC (Hierarchical Condition Category — Nhóm Tình trạng Phân cấp)</strong></td>
+            <td>Một nhóm chẩn đoán có ý nghĩa lâm sàng được CMS sử dụng để đo lường tình trạng sức khỏe và dự đoán chi phí. Mỗi HCC có một trọng số rủi ro được gán.</td>
+          </tr>
+          <tr>
+            <td><strong>RAF (Risk Adjustment Factor — Hệ số Điều chỉnh Rủi ro)</strong></td>
+            <td>Điểm rủi ro cá nhân của một hội viên, được tính bằng tổng các trọng số HCC áp dụng cộng với các hệ số nhân khẩu học. RAF &gt; 1.0 cho thấy rủi ro cao hơn trung bình; RAF &lt; 1.0 cho thấy rủi ro thấp hơn trung bình. Được dùng để điều chỉnh khoản thanh toán theo đầu người cho chương trình.</td>
+          </tr>
+          <tr>
+            <td><strong>RADV (Risk Adjustment Data Validation — Xác thực Dữ liệu Điều chỉnh Rủi ro)</strong></td>
+            <td>Quy trình kiểm toán do CMS bắt buộc nhằm xác thực tính chính xác của các chẩn đoán được chương trình gửi để mã hóa HCC và thanh toán. Kiểm toán viên xem xét hồ sơ y tế để xác nhận các chẩn đoán được ghi chép và có cơ sở lâm sàng.</td>
+          </tr>
+          <tr>
+            <td><strong>MEAT</strong></td>
+            <td>Từ viết tắt cho các tiêu chuẩn ghi chép: <strong>M</strong>edical record support (hồ sơ y tế hỗ trợ), <strong>E</strong>ncounter date during benefit year (ngày lượt khám trong năm quyền lợi), <strong>A</strong>ctive management (quản lý tích cực), <strong>T</strong>herapy/specificity (liệu pháp/tính cụ thể). Nhà cung cấp dùng MEAT để hướng dẫn ghi chép lâm sàng chính xác.</td>
+          </tr>
+          <tr>
+            <td><strong>TAMPER</strong></td>
+            <td>Từ viết tắt cho các tiêu chuẩn kiểm toán: <strong>T</strong>emporality (tính thời điểm — lượt khám trong năm quyền lợi), <strong>A</strong>ccuracy of code selection (tính chính xác khi chọn mã), <strong>M</strong>edical record support (hồ sơ y tế hỗ trợ), <strong>P</strong>roper hierarchy application (áp dụng phân cấp đúng), <strong>E</strong>ncounter type validation (xác thực loại lượt khám), <strong>R</strong>easonableness of diagnosis (tính hợp lý của chẩn đoán). Kiểm toán viên dùng TAMPER để đánh giá tính hợp lệ của mã hóa.</td>
+          </tr>
+          <tr>
+            <td><strong>Dữ liệu lượt khám</strong></td>
+            <td>Yêu cầu thanh toán và hồ sơ lâm sàng do nhà cung cấp gửi, ghi chép các lượt khám, dịch vụ, chẩn đoán và thủ thuật cho một hội viên. Dữ liệu lượt khám cung cấp cho mô hình HCC.</td>
+          </tr>
+          <tr>
+            <td><strong>Thanh toán theo đầu người</strong></td>
+            <td>Một khoản thanh toán cố định cho mỗi hội viên mỗi tháng được trả cho chương trình bất kể dịch vụ đã sử dụng. Chương trình chịu rủi ro tài chính cho tất cả các dịch vụ được bảo hiểm. Điều chỉnh rủi ro thay đổi khoản thanh toán theo đầu người dựa trên tình trạng sức khỏe của hội viên.</td>
+          </tr>
+          <tr>
+            <td><strong>Phân cấp</strong></td>
+            <td>Trong các mô hình HCC, một quy tắc quy định rằng nếu một hội viên đủ điều kiện cho nhiều HCC liên quan đến cùng một tình trạng bệnh, chỉ HCC nghiêm trọng nhất được tính. Phân cấp ngăn việc tính trùng và đảm bảo tính chính xác của HCC.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>Kiểm chứng tại nguồn:</strong> Trang này mô tả cách điều chỉnh rủi ro hoạt động ở mức tổng quát. Để biết các phiên bản mô hình HCC hiện tại, chi tiết tính RAF, thủ tục RADV và hướng dẫn tuân thủ, hãy tham khảo <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov (RADV)</a>, chính sách tuân thủ của chương trình của bạn, và các quy định về chăm sóc có quản lý của tiểu bang bạn. Nội dung này mang tính giáo dục và không cấu thành tư vấn pháp lý hoặc tư vấn tuân thủ.
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Các chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a></li>
+          <li><a href="/vi/turning-65.html">Bước sang tuổi 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở Bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả nguồn trợ giúp</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào hay bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được kiểm tra lại với tài liệu chính thức của chương trình và của chương trình bảo hiểm. Không có nội dung nào ở đây là lời khuyên y tế, pháp lý hay tài chính, và không có trang nào khuyến nghị một chương trình bảo hiểm cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Tuyên bố miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

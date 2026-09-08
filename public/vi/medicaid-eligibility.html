@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Điều kiện Medicaid, Miễn trừ & Chăm sóc Dài hạn — MediPrimer</title>
+<meta name="description" content="Cách điều kiện hưởng Medicaid hoạt động: các lộ trình MAGI và không MAGI, sự khác biệt giữa các tiểu bang, và cách Medicaid chi trả cho chăm sóc dài hạn thông qua các chương trình miễn trừ.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicaid-eligibility.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicaid Eligibility, Waivers & Long-Term Care — MediPrimer">
+<meta property="og:description" content="How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.">
+<meta property="og:url" content="https://mediprimer.org/medicaid-eligibility.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicaid Eligibility, Waivers & Long-Term Care — MediPrimer">
+<meta name="twitter:description" content="How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicaid-eligibility.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicaid-eligibility.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicaid-eligibility.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicaid-eligibility.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicaid Eligibility, Waivers & Long-Term Care", "description": "How Medicaid eligibility works: MAGI and non-MAGI pathways, state variation, and how Medicaid pays for long-term care through waivers.", "url": "https://mediprimer.org/medicaid-eligibility.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-06", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicaid Eligibility, Waivers & Long-Term Care", "item": "https://mediprimer.org/medicaid-eligibility.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicaid-eligibility.html" lang="en">English</a>
+    <a href="/es/medicaid-eligibility.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicaid-eligibility.html" lang="zh-Hant">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Bước sang tuổi 65: bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên hỏi</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop active">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Các chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị trường Bảo hiểm Sức khỏe (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Tìm trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở Bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả nguồn trợ giúp</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chính danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho chuyên gia</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu Dành cho chuyên gia">▾</button>
+        <div class="dropdown">
+        <a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: các cấp và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Kiến thức Cơ bản</p>
+    <h1>Điều kiện Medicaid, Miễn trừ & Chăm sóc Dài hạn</h1>
+    <p>Medicaid bảo hiểm cho người có thu nhập thấp. Mỗi tiểu bang tự đặt ra quy tắc về điều kiện hưởng. Hướng dẫn này giải thích cách Medicaid hoạt động và cách Medicaid chi trả cho chăm sóc dài hạn.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Ai Đủ điều kiện hưởng Medicaid: Khung Cơ bản</h2>
+    <p>Mỗi tiểu bang tự đặt ra giới hạn thu nhập và tài sản. Một người đủ điều kiện ở tiểu bang này có thể không đủ điều kiện ở tiểu bang khác, ngay cả khi có cùng mức thu nhập.</p>
+    <p>Medicaid bảo hiểm cho nhiều nhóm người:</p>
+    <ul>
+      <li><strong>Các nhóm dựa trên MAGI</strong> — người trong độ tuổi lao động và gia đình, được đánh giá theo thu nhập giống như trên tờ khai thuế.</li>
+      <li><strong>Các nhóm không dựa trên MAGI</strong> — người cao tuổi và người khuyết tật, với các quy tắc về tài sản và thu nhập phức tạp hơn.</li>
+    </ul>
+    <p>Giới hạn thu nhập và tài sản khác nhau tùy theo tiểu bang và thay đổi hằng năm. Chúng tôi giải thích cách điều kiện hưởng hoạt động và chỉ cho quý vị nơi tìm giới hạn hiện hành của tiểu bang mình.</p>
+
+    <h2>Các Lộ trình Đủ điều kiện Dựa trên MAGI</h2>
+    <p>Hầu hết thành viên Medicaid thuộc các nhóm dựa trên MAGI. Với các nhóm này, tiểu bang dùng một phép kiểm tra thu nhập đơn giản. Phép kiểm tra này dựa gần đúng trên những gì tờ khai thuế của quý vị cho thấy.</p>
+
+    <h3>Trẻ em</h3>
+    <p>Medicaid bảo hiểm cho trẻ em trong các gia đình có thu nhập thấp. Giới hạn thu nhập khác nhau tùy theo tiểu bang. Xem <a href="/vi/chip.html">CHIP</a> để biết về bảo hiểm nằm giữa Medicaid và bảo hiểm tư nhân.</p>
+
+    <h3>Người Mang thai và Người Sau sinh</h3>
+    <p>Người mang thai và người sau khi sinh đủ điều kiện dựa trên giới hạn thu nhập của tiểu bang. Bảo hiểm bao gồm chăm sóc trước sinh và hỗ trợ sau sinh. Hướng dẫn đầy đủ: <a href="/vi/medicaid-pregnancy.html">Medicaid cho thai kỳ: giới hạn thu nhập, chi phí và bảo hiểm sau khi sinh</a>.</p>
+
+    <h3>Cha mẹ và Người chăm sóc</h3>
+    <p>Cha mẹ và người chăm sóc có thể đủ điều kiện hưởng Medicaid. Nhưng giới hạn thu nhập của họ thường thấp hơn giới hạn dành cho trẻ em. Quy tắc về điều kiện hưởng khác nhau tùy theo tiểu bang.</p>
+
+    <h3>Người lớn thuộc Diện Mở rộng theo ACA</h3>
+    <p>Đạo luật Chăm sóc Giá cả Phải chăng (Affordable Care Act, ACA) cho phép các tiểu bang mở rộng Medicaid cho người lớn không có con. Hầu hết các tiểu bang đã mở rộng, nhưng không phải tất cả. Hãy kiểm tra chương trình của tiểu bang quý vị để xem tiểu bang đó đã mở rộng hay chưa.</p>
+    <p>Điểm mới cho nhóm này: một quy tắc làm việc của liên bang. Nhiều người lớn thuộc diện mở rộng sẽ sớm phải chứng minh 80 giờ mỗi tháng làm việc hoặc các hoạt động khác. Nhiều người được miễn. Xem <a href="/vi/medicaid-work-requirements.html">Yêu cầu làm việc của Medicaid</a> để biết ai phải tuân thủ và ai được miễn.</p>
+
+    <h2>Các Lộ trình Đủ điều kiện Không dựa trên MAGI</h2>
+    <p>Các nhóm không dựa trên MAGI chủ yếu là người cao tuổi và người khuyết tật. Họ có các quy tắc phức tạp hơn về cả thu nhập lẫn tài sản (tài sản là những thứ quý vị sở hữu, như tiền bạc hoặc bất động sản).</p>
+
+    <h3>Người Cao tuổi, Người Mù và Người Khuyết tật (Liên quan đến SSI)</h3>
+    <p>Người từ 65 tuổi trở lên, mù theo quy định pháp luật, hoặc khuyết tật thường đủ điều kiện. Quý vị phải đáp ứng cả giới hạn thu nhập lẫn giới hạn tài sản. Tài sản bao gồm tài khoản ngân hàng, bất động sản và xe cộ.</p>
+
+    <h3>Người Khuyết tật Đang Làm việc</h3>
+    <p>Một số tiểu bang có chương trình khuyến khích làm việc. Các chương trình này cho phép người khuyết tật giữ Medicaid ngay cả khi họ kiếm được nhiều hơn. Quy tắc khác nhau ở mỗi tiểu bang.</p>
+
+    <h2>Hiểu về Sự Khác biệt giữa Các Tiểu bang trong Việc Mở rộng Medicaid</h2>
+    <p>Sau ACA, mỗi tiểu bang chọn con đường riêng của mình:</p>
+    <ul>
+      <li><strong>Các tiểu bang mở rộng</strong> đã mở rộng Medicaid cho người lớn không có con. Những người lớn này thường có thu nhập lên đến khoảng 138% mức nghèo liên bang.</li>
+      <li><strong>Các tiểu bang không mở rộng</strong> đã không mở rộng Medicaid. Họ giới hạn bảo hiểm cho người lớn trong các nhóm hẹp hơn, chủ yếu là cha mẹ và người chăm sóc trẻ em.</li>
+    </ul>
+    <p>Điều này tạo ra khoảng trống bảo hiểm ở các tiểu bang không mở rộng. Người lớn trong độ tuổi lao động không có con không thể nhận Medicaid ở đó. Các tiểu bang có thể thay đổi lựa chọn này theo thời gian. Để biết chính sách hiện hành của tiểu bang quý vị, hãy truy cập <a href="/vi/state-medicaid.html">Danh bạ Medicaid theo Tiểu bang</a> hoặc <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>.</p>
+
+    <h2>Tóm lược Các Lộ trình Đủ điều kiện hưởng Medicaid</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Lộ trình</th>
+            <th>Ai Đủ điều kiện</th>
+            <th>Cơ sở Thu nhập</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Trẻ em</td>
+            <td>Trẻ vị thành niên trong gia đình có thu nhập thấp</td>
+            <td>MAGI (ngưỡng do tiểu bang đặt, thường cao hơn mức nghèo)</td>
+          </tr>
+          <tr>
+            <td>Mang thai & Sau sinh</td>
+            <td>Người mang thai và người trong giai đoạn bảo hiểm sau sinh</td>
+            <td>MAGI (do tiểu bang đặt, thường cao hơn so với người lớn khác)</td>
+          </tr>
+          <tr>
+            <td>Cha mẹ/Người chăm sóc</td>
+            <td>Người giám hộ của trẻ em phụ thuộc</td>
+            <td>MAGI (do tiểu bang đặt, thấp hơn ngưỡng của trẻ em)</td>
+          </tr>
+          <tr>
+            <td>Người lớn thuộc Diện Mở rộng theo ACA</td>
+            <td>Người lớn không phải cha mẹ từ 19–64 tuổi (chỉ ở các tiểu bang mở rộng)</td>
+            <td>MAGI (≤138% mức nghèo liên bang, khác nhau theo tiểu bang)</td>
+          </tr>
+          <tr>
+            <td>Cao tuổi (65+)</td>
+            <td>Công dân cao tuổi</td>
+            <td>Không MAGI (giới hạn thu nhập + tài sản khác nhau theo tiểu bang)</td>
+          </tr>
+          <tr>
+            <td>Mù</td>
+            <td>Người mù theo quy định pháp luật ở mọi lứa tuổi</td>
+            <td>Không MAGI (giới hạn thu nhập + tài sản khác nhau theo tiểu bang)</td>
+          </tr>
+          <tr>
+            <td>Khuyết tật (Liên quan đến SSI)</td>
+            <td>Người nhận SSDI hoặc SSI, hoặc được Sở An sinh Xã hội xác định là khuyết tật</td>
+            <td>Không MAGI (giới hạn thu nhập + tài sản khác nhau theo tiểu bang)</td>
+          </tr>
+          <tr>
+            <td>Người Khuyết tật Đang Làm việc</td>
+            <td>Người khuyết tật đang làm việc (chương trình khuyến khích làm việc của tiểu bang)</td>
+            <td>Không MAGI (do tiểu bang quy định; có thể cho phép thu nhập cao hơn)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Chăm sóc Dài hạn và Medicaid</h2>
+    <p>Medicare chi trả cho chăm sóc y tế, nhưng không chi trả cho chăm sóc <em>hỗ trợ sinh hoạt</em> dài hạn — sự giúp đỡ liên tục với các hoạt động hằng ngày như tắm rửa và mặc quần áo. Medicaid là chương trình chính chi trả cho loại chăm sóc đó, tại cơ sở hoặc tại nhà. Những gì Medicaid chi trả tại nhà khác nhau tùy theo tiểu bang và điều kiện hưởng, và nhìn chung Medicaid không trả tiền phòng và ăn ở tại cơ sở hỗ trợ sinh hoạt.</p>
+
+    <h3>Medicaid tại Cơ sở: Cơ sở Điều dưỡng</h3>
+    <p>Medicaid chi trả cho chăm sóc dài hạn tại cơ sở điều dưỡng (Cơ sở điều dưỡng chuyên môn, SNF) khi các nhu cầu y tế được đáp ứng. Để đủ điều kiện, cư dân phải tiêu bớt tài sản xuống đến giới hạn Medicaid của tiểu bang mình. Khi đã đạt đến giới hạn đó, Medicaid chi trả toàn bộ chi phí. Hầu hết bảo hiểm tư nhân thì không.</p>
+
+    <h3>Miễn trừ Dịch vụ Tại nhà và Dựa vào Cộng đồng (HCBS)</h3>
+    <p>Các tiểu bang cung cấp <strong>miễn trừ Dịch vụ Tại nhà và Dựa vào Cộng đồng (HCBS)</strong>. Các miễn trừ này cho phép Medicaid chi trả cho hỗ trợ tại nhà, chương trình ban ngày và cơ sở hỗ trợ sinh hoạt. Chúng thường tốn kém ít hơn viện dưỡng lão.</p>
+    <p>Miễn trừ HCBS là tùy chọn. Mỗi tiểu bang tự thiết kế chương trình của mình với các dịch vụ và quy tắc điều kiện hưởng khác nhau. Một số tiểu bang có danh sách chờ dài. Để tìm hiểu về HCBS ở tiểu bang quý vị, hãy liên hệ văn phòng Medicaid của tiểu bang hoặc truy cập <a href="/vi/state-medicaid.html">Danh bạ Medicaid theo Tiểu bang</a>. Để biết cách miễn trừ hoạt động, vì sao có danh sách chờ, và cách một thành viên gia đình có thể được trả công làm người chăm sóc, xem <a href="/vi/medicaid-home-care-hcbs-waivers.html">Chăm sóc Tại nhà của Medicaid: Miễn trừ HCBS</a>.</p>
+
+    <h3>Miễn trừ Thử nghiệm và Sự Linh hoạt của Chương trình</h3>
+    <p>Các tiểu bang cũng có thể vận hành <strong>miễn trừ theo Mục 1115</strong>. Các miễn trừ này cho phép tiểu bang thử nghiệm những cách mới để vận hành Medicaid. Một số tạo ra các chương trình đặc biệt cho những nhóm nhất định. Hãy hỏi văn phòng Medicaid của tiểu bang xem tiểu bang quý vị làm gì.</p>
+
+    <h2>Giới hạn Tài sản, Tiêu bớt Tài sản, và Điều kiện Medicaid cho Chăm sóc Dài hạn</h2>
+    <p>Các nhóm dựa trên MAGI tập trung vào thu nhập. Nhưng các nhóm không dựa trên MAGI—đặc biệt là người cao tuổi và người khuyết tật cần chăm sóc tại cơ sở—cũng phải đáp ứng giới hạn tài sản. Tài sản bao gồm tài khoản ngân hàng, xe cộ, khoản đầu tư và bất động sản.</p>
+
+    <h3>Những gì Được tính là Tài sản?</h3>
+    <p>Hầu hết các nguồn lực tài chính đều được tính vào giới hạn tài sản của quý vị. Nhưng một số khoản mục được <strong>miễn</strong> (không tính). Những khoản này thường bao gồm ngôi nhà chính của quý vị (đến một giá trị do tiểu bang đặt), một chiếc xe và một số vật dụng cá nhân. Ngôi nhà của quý vị thường không bị tính nếu vợ/chồng hoặc con phụ thuộc sống ở đó. Khi một người trong cặp vợ chồng cần chăm sóc tại viện dưỡng lão, <a href="/vi/medicaid-spousal-impoverishment.html">quy tắc chống bần cùng hóa vợ/chồng</a> cũng bảo vệ một phần tiền tiết kiệm và thu nhập của cặp vợ chồng cho người ở nhà.</p>
+
+    <h3>Quá trình Tiêu bớt Tài sản</h3>
+    <p>Để đủ điều kiện hưởng chăm sóc dài hạn của Medicaid, quý vị có thể cần tiêu bớt (giảm) tài sản xuống đến giới hạn Medicaid. Quý vị có thể chi tiền cho hóa đơn y tế, chi phí mai táng và chi tiêu cá nhân. Giới hạn tiêu bớt tài sản khác nhau ở mỗi tiểu bang.</p>
+
+    <h3>Lập kế hoạch Trước</h3>
+    <p>Quy tắc tiêu bớt tài sản phức tạp và khác nhau ở mỗi tiểu bang. Nhiều gia đình tham khảo ý kiến luật sư chuyên về người cao tuổi hoặc cố vấn tài chính. Hãy cẩn thận: chuyển nhượng hoặc tặng tài sản không đúng cách có thể gây ra Thời gian chờ Medicaid (hình phạt "nhìn lại"). Hướng dẫn từ chuyên gia rất quan trọng. Hướng dẫn đầy đủ: <a href="/vi/medicaid-spend-down-look-back.html">Quy tắc Tiêu bớt Tài sản và Nhìn lại của Medicaid cho Chăm sóc Dài hạn</a>.</p>
+
+    <h2>Thu hồi Di sản của Medicaid</h2>
+    <p>Khi Medicaid chi trả chăm sóc dài hạn cho người từ 55 tuổi trở lên, tiểu bang có thể tìm cách thu hồi (đòi hoàn trả) những chi phí đó từ di sản của họ sau khi qua đời. Điều này thường diễn ra thông qua việc bán ngôi nhà. Nhưng việc thu hồi có thể không xảy ra nếu vợ/chồng còn sống, con chưa thành niên, con khuyết tật, hoặc anh chị em sống trong ngôi nhà và đã giúp duy trì nó. Quy tắc khác nhau ở mỗi tiểu bang.</p>
+    <p>Đây là lý do vì sao việc lập kế hoạch di sản và chăm sóc dài hạn với luật sư được khuyến nghị cho người lớn tuổi và gia đình. Hướng dẫn đầy đủ: <a href="/vi/medicaid-estate-recovery.html">Thu hồi di sản của Medicaid — Medicaid có thể lấy nhà của tôi không?</a></p>
+
+    <h2>Đủ điều kiện kép: Medicare và Medicaid Cùng nhau</h2>
+    <p>Một số người đủ điều kiện hưởng cả Medicare lẫn Medicaid. Quý vị có thể thuộc diện <strong>đủ điều kiện kép</strong> nếu quý vị từ 65 tuổi trở lên, nhận trợ cấp khuyết tật, và có thu nhập thấp. Với cả hai chương trình, quý vị nhận được bảo hiểm từ mỗi chương trình. Medicaid thường chi trả cho các dịch vụ mà Medicare không bao gồm, như chăm sóc dài hạn và thời gian lưu trú kéo dài tại viện dưỡng lão.</p>
+    <p>Người đủ điều kiện kép có các lựa chọn Ghi danh đặc biệt. Quý vị có thể đủ điều kiện cho các mô hình bảo hiểm chuyên biệt. Xem <a href="/vi/dual-eligible.html">Đủ điều kiện kép: Medicare và Medicaid</a> để biết thêm.</p>
+
+    <h2>Giữ Bảo hiểm của Quý vị: Xác định lại và Gia hạn</h2>
+    <p>Bảo hiểm Medicaid của quý vị không phải là vĩnh viễn. Các tiểu bang thường xuyên kiểm tra xem quý vị còn đủ điều kiện hay không. Việc Xác định lại có thể xảy ra vì:</p>
+    <ul>
+      <li>Thay đổi về thu nhập, số người trong hộ gia đình, hoặc tình trạng gia đình.</li>
+      <li>Kỳ gia hạn định kỳ do tiểu bang quý vị đặt ra — mỗi năm một lần đối với hầu hết mọi người. Bắt đầu với các kỳ gia hạn được lên lịch vào hoặc sau ngày 1 tháng 1 năm 2027, người lớn được bảo hiểm qua nhóm mở rộng theo ACA sẽ được kiểm tra 6 tháng một lần thay vì như trước (xem <a href="/vi/policy-changes.html">Thay đổi Chính sách</a>).</li>
+      <li>Quý vị báo cáo một thay đổi cho văn phòng Medicaid của tiểu bang.</li>
+    </ul>
+    <p>Để giữ bảo hiểm, hãy báo cáo thay đổi nhanh chóng và trả lời các thông báo gia hạn. Bỏ lỡ thời hạn hoặc không trả lời có thể khiến quý vị mất bảo hiểm, ngay cả khi quý vị vẫn đủ điều kiện. Nếu điều đó đã xảy ra, xem <a href="/vi/lost-medicaid-what-now.html">phải làm gì sau khi mất Medicaid</a>, bao gồm khoảng thời gian 90 ngày của Thị trường Bảo hiểm Sức khỏe Marketplace. Xem <a href="/vi/enrollment.html">Ghi danh & Thời hạn</a> và <a href="/vi/policy-changes.html">Thay đổi trong Cuộc sống & Medicaid</a> để biết chi tiết về cách báo cáo thay đổi và gia hạn bảo hiểm.</p>
+
+    <h2>Tìm Thêm Thông tin</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="/vi/state-medicaid.html">Danh bạ Medicaid theo Tiểu bang</a></h3>
+        <p>Tìm văn phòng Medicaid của tiểu bang quý vị, cách liên hệ, ai đủ điều kiện ở đó, và các liên kết đến chương trình của tiểu bang.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/vi/chip.html">CHIP (Chương trình Bảo hiểm Sức khỏe Trẻ em)</a></h3>
+        <p>Tìm hiểu cách CHIP bảo hiểm cho trẻ em trong các gia đình đi làm có thu nhập quá cao so với Medicaid.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/vi/dual-eligible.html">Đủ điều kiện kép: Medicare và Medicaid</a></h3>
+        <p>Hiểu các lựa chọn bảo hiểm khi quý vị đủ điều kiện hưởng cả Medicare lẫn Medicaid.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/vi/getting-help.html">Nhận Trợ giúp Chi trả Bảo hiểm</a></h3>
+        <p>Khám phá các chương trình hỗ trợ và nguồn lực giúp quý vị chi trả bảo hiểm sức khỏe và chăm sóc.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/vi/enrollment.html">Ghi danh & Thời hạn</a></h3>
+        <p>Tìm hiểu cách nộp đơn xin Medicaid và giữ bảo hiểm của quý vị luôn cập nhật.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></h3>
+        <p>Thông tin chính thức về chương trình Medicaid, bao gồm điều kiện hưởng và liên kết ghi danh theo từng tiểu bang.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>Kiểm chứng tại nguồn:</strong> Quy tắc Medicaid phức tạp, thay đổi thường xuyên, và khác nhau rất nhiều giữa các tiểu bang. Giới hạn thu nhập, giới hạn tài sản và các dịch vụ được bảo hiểm không giống nhau ở mọi nơi. Trước khi đưa ra lựa chọn về chăm sóc dài hạn hoặc nộp đơn, hãy kiểm tra quy tắc hiện hành với văn phòng Medicaid của tiểu bang quý vị, <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>, hoặc luật sư chuyên về người cao tuổi. Trang này chỉ nhằm mục đích giáo dục; đây không phải là tư vấn pháp lý hay tài chính.
+    </div>
+
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Các chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi về chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu rõ chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp chi trả</a></li>
+          <li><a href="/vi/turning-65.html">Bước sang tuổi 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình bảo hiểm sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý ca bệnh và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở Bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả nguồn trợ giúp</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào hay bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được kiểm tra lại với tài liệu chính thức của chương trình và của chương trình bảo hiểm. Không có nội dung nào ở đây là lời khuyên y tế, pháp lý hay tài chính, và không có trang nào khuyến nghị một chương trình bảo hiểm cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Tuyên bố miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
