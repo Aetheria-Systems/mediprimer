@@ -183,7 +183,19 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <strong>Verifique antes de decidir.</strong> Estas situaciones son complejas y las reglas cambian. Esta es información educativa general. No estamos afiliados a ninguna agencia ni compañía de seguros. Esto no es un consejo sobre su situación personal. Confirme con Medicare, el Seguro Social, su plan y un consejero gratuito de <a href="/es/ship-directory.html">SHIP</a> antes de decidir.
     </div>
   </div>
-</main><footer class="site-footer">
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>Las reglas cambian. Le avisamos cuándo.</h2>
+      <p>Un correo breve cuando algo cambie y afecte su cobertura: fechas límite, reglas nuevas y qué hacer al respecto. Sin anuncios, sin venta de planes, y nunca compartimos su dirección.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Manténganme informado</button>
+      </form>
+      <p class="newsletter-fine">Como máximo un correo por semana. Cancele la suscripción con un clic, cuando quiera.</p>
+    </aside>
+    <!--/newsletter-->
+  </main><footer class="site-footer">
   <div class="wrap">
     <div class="footcols">
       <div>
@@ -256,6 +268,7 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 </footer>
 <script src="/glossary-tooltips.js"></script>
 <script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
 <script src="/chatbot.js" defer></script>
 </body>
 </html>
