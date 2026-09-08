@@ -507,7 +507,15 @@ def run_gates(en_html, tr_html, back_text, terms):
     # Gate 2: Facts - ZERO tolerance for numeric facts, smart entity matching
     # Extract English text from main content (if present) for comparison
     en_main_match = re.search(r'<main[^>]*>.*?</main>', en_html, re.DOTALL)
-    en_text = re.sub(r'<[^>]+>', '', en_main_match.group(0)) if en_main_match else re.sub(r'<[^>]+>', '', en_html)
+    # Tags must become a SPACE, not nothing: '<td>$86.38</td><td>80%' would
+    # otherwise glue into '$86.3880%', which the extractors read as the
+    # phantom facts dollar 863880 / percent 880%. The back-translated side
+    # is plain prose with real spacing, so the two sides disagreed and the
+    # zero-tolerance numeric gate rejected correct translations. This broke
+    # every page with adjacent numeric table cells (found 2026-09-08 on
+    # medicare-summary-notice.html).
+    _strip = lambda h: re.sub(r'<[^>]+>', ' ', h)
+    en_text = _strip(en_main_match.group(0)) if en_main_match else _strip(en_html)
 
     numeric_diffs, entity_diffs = facts_diff(en_text, back_text)
 
