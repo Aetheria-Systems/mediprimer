@@ -103,6 +103,22 @@ def translate_block(code):
     return True
 
 
+def safe_h2_offset(html):
+    """Offset of the first <h2> that is NOT inside a <noscript> block.
+
+    turning-65.html opens with a JS navigator whose <noscript> fallback
+    contains an <h2>; inserting a figure "before the first h2" buried the
+    diagram where only users with JavaScript disabled could see it. Any
+    future automated placement must use this.
+    """
+    import re
+    for m in re.finditer(r'\n(\s*)<h2[ >]', html):
+        pre = html[:m.start()]
+        if pre.rfind('<noscript') <= pre.rfind('</noscript>'):
+            return m.start()
+    return None
+
+
 def localize_img_srcs():
     """Point each translated page at its own language's diagrams.
 
