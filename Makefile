@@ -10,7 +10,7 @@ LIVE  := /var/www/mediprimer/public
 .PHONY: build check deploy
 
 build:
-	cd $(PUB) && python3 ../build/normalize.py && python3 ../build/assemble.py && python3 ../build/seo.py $(DATE)
+	cd $(PUB) && python3 ../build/normalize.py && python3 ../build/assemble.py && python3 ../build/hot_topics.py && python3 ../build/seo.py $(DATE)
 
 check: build
 	@set -e; for f in $(PUB)/*.js; do node --check $$f; done
