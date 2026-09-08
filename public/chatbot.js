@@ -3,8 +3,6 @@
 
   var history = [];
 
-
-
   function el(tag, className, text) {
     var e = document.createElement(tag);
     if (className) e.className = className;
@@ -59,7 +57,28 @@
     panel.appendChild(log);
     panel.appendChild(privacyNote);
     panel.appendChild(form);
+    root.appendChild(panel);
+    root.appendChild(toggle);
+    document.body.appendChild(root);
 
+    toggle.addEventListener("click", function () {
+      var isOpen = panel.style.display !== "none";
+      panel.style.display = isOpen ? "none" : "flex";
+      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      evt.preventDefault();
+      if (submit.disabled) return; // request already in flight
+      var question = input.value.trim();
+      if (!question) return;
+      input.value = "";
+      appendMessage(log, "you", question);
+      submit.disabled = true;
+      askBot(question, log, function () {
+        submit.disabled = false;
+      });
+    });
   }
 
   function appendMessage(log, role, text) {
