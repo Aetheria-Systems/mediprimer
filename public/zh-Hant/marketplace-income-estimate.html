@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>估算醫療保險市場補貼的收入 — MediPrimer</title>
+<meta name="description" content="如何估算醫療保險市場保費稅收抵免所需的收入、哪些算作收入，以及如果您的估算過低或過高，報稅時會發生什麼情況。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/marketplace-income-estimate.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="估算醫療保險市場補貼的收入 — MediPrimer">
+<meta property="og:description" content="如何估算醫療保險市場保費稅收抵免所需的收入、哪些算作收入，以及如果您的估算過低或過高，報稅時會發生什麼情況。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/marketplace-income-estimate.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="估算醫療保險市場補貼的收入 — MediPrimer">
+<meta name="twitter:description" content="如何估算醫療保險市場保費稅收抵免所需的收入、哪些算作收入，以及如果您的估算過低或過高，報稅時會發生什麼情況。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我應該使用哪一年的收入？", "acceptedAnswer": {"@type": "Answer", "text": "是您希望獲得承保的那一年。省錢額度是根據您那一年的預期收入計算，而不是去年的報稅紀錄。去年的AGI只是估算的起點。"}}, {"@type": "Question", "name": "我低估了我的收入，我需要補繳多少？", "acceptedAnswer": {"@type": "Answer", "text": "就是支付給保險公司的預付抵免額，與根據您最終收入所符合資格的抵免額之間的差額。2025年以後的報稅年度沒有上限，因此超出的全部金額會從您的退稅中扣除，或加到您應繳的餘額中。8962表格會幫您計算。 許多需要補繳的人，實際上只是看到退稅金額變少而已。"}}, {"@type": "Question", "name": "我高估了收入，能拿回錢嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。如果您使用的抵免額低於您實際符合資格的金額，您可以在8962表格上申請差額。這會降低您的稅款，或增加您的退稅金額。"}}, {"@type": "Question", "name": "如果配偶有自己的保險，我還需要計入他們的收入嗎？", "acceptedAnswer": {"@type": "Answer", "text": "需要。醫療保險市場會計入您報稅家庭中每個人的收入，包括已透過雇主、Medicare或Medicaid獲得承保的配偶或受扶養人。您會在申請表中說明哪些人需要投保。"}}, {"@type": "Question", "name": "社會安全福利算收入嗎？", "acceptedAnswer": {"@type": "Answer", "text": "算，是扣除前的全額，不論是否應稅，包括SSDI在內。SSI則不計入。"}}, {"@type": "Question", "name": "如果我的收入低到不符合醫療保險市場抵免資格怎麼辦？", "acceptedAnswer": {"@type": "Answer", "text": "如果您的收入下降，請回報這項變化。您可能會符合更高抵免額的資格，或轉而符合Medicaid或CHIP的資格。 當醫療保險市場的資料顯示收入低於貧窮線時，也可能會要求您提供文件，因此請保留您的收入紀錄。 請參閱 Medicaid資格 。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "估算醫療保險市場補貼的收入", "description": "如何估算醫療保險市場保費稅收抵免所需的收入、哪些算作收入，以及如果您的估算過低或過高，報稅時會發生什麼情況。", "url": "https://mediprimer.org/zh-Hant/marketplace-income-estimate.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-09-08", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/marketplace-income-estimate.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/marketplace-income-estimate.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/marketplace-income-estimate.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/marketplace-income-estimate.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "估算醫療保險市場補貼的收入", "item": "https://mediprimer.org/zh-Hant/marketplace-income-estimate.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/marketplace-income-estimate.html" lang="en">English</a>
+    <a href="/es/marketplace-income-estimate.html" lang="es">Español</a>
+    <a href="/zh-Hant/marketplace-income-estimate.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照顧者</p>
+    <h1>估算醫療保險市場補貼的收入（以及估算錯誤時會發生什麼）</h1>
+    <p>您的保費稅收抵免是根據您對明年收入的估算而定。以下說明如何做出準確的估算、哪些項目算作收入，以及如果估算有誤，報稅時會是什麼情況。</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案是這樣的。</strong>醫療保險市場的省錢額度是根據您<strong>希望投保那一年的預期家庭收入</strong>來計算，而不是去年的收入。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> 請盡量做出最準確的估算，並在收入或家庭狀況有變動時隨時更新。<!-- src: https://www.healthcare.gov/income-and-household-information/income/ --> 報稅時您需要「核對」：比較您這一年已使用的抵免額，與根據您最終收入實際符合資格的抵免額。<!-- src: https://www.healthcare.gov/taxes-reconciling/ --> 如果您的估算過低、使用了過多的抵免額，就必須在報稅時補繳差額。如果您的估算過高，則會以抵免額或退稅的形式拿回差額。<!-- src: https://www.healthcare.gov/taxes/ --> 2026年風險提高了。2025年以後的報稅年度<strong>不再有償還上限</strong>：您必須全額償還預付抵免額超出您實際符合資格金額的部分。<!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --></p>
+
+    <div class="note">
+      <strong>如果您擔心需要退還金額，</strong>您可以選擇每月只使用部分抵免額，或完全不使用，並在報稅時再申請剩餘的部分。當您更新申請時，HealthCare.gov 會在「決定要降低多少每月保費」的選項中讓您設定這一點。<!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ -->
+    </div>
+
+    <h2>哪些算作收入</h2>
+    <p>醫療保險市場使用一個叫做<strong>修正後調整總收入（MAGI）</strong>的數字。對大多數人來說，這與報稅表上的調整後總收入（AGI）相同，或非常接近。MAGI 是您的 AGI 加上任何未課稅的國外收入、免稅的社會安全福利，以及免稅利息。補充安全收入（SSI）不計入其中。<!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>這些算作收入</th>
+            <th>這些不算作收入</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>工資（薪資單上的聯邦應稅工資）、小費、扣除費用後的自僱收入</td>
+            <td>補充安全收入（SSI）</td>
+          </tr>
+          <tr>
+            <td>社會安全福利，無論應稅或免稅，包括SSDI（社會安全失能保險）</td>
+            <td>兒童撫養費，以及您從國稅局（IRS）收到的兒童稅收抵免款項</td>
+          </tr>
+          <tr>
+            <td>失業補償金</td>
+            <td>退伍軍人失能給付與工傷賠償</td>
+          </tr>
+          <tr>
+            <td>退休金與養老金收入，包括大多數的IRA與401(k)提領</td>
+            <td>從Roth帳戶提取的合格款項</td>
+          </tr>
+          <tr>
+            <td>利息、股息（包括免稅利息）、資本利得、淨租金收入</td>
+            <td>禮金，以及貸款所得的款項</td>
+          </tr>
+          <tr>
+            <td>2019年1月1日之前完成的離婚所產生的贍養費</td>
+            <td>2019年1月1日或之後完成的離婚所產生的贍養費</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>本表格根據 HealthCare.gov 列出的應計入項目清單製作。<!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+    <p><strong>誰的收入算數。</strong>您的家庭成員包括報稅人、其配偶，以及其報稅受扶養人，即使這些人不需要投保也算在內。醫療保險市場會計入每個人的預期收入，即使有人已透過雇主計劃、Medicare 或 Medicaid 獲得承保。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> 受扶養人暑期打工的收入，只有在他們被要求申報稅表時才會計入。<!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+
+    <h2>如何一步步做出估算</h2>
+    <ol class="steps">
+      <li><strong>從去年的AGI開始。</strong>這個數字在國稅局1040表格的第11行。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>加上MAGI項目。</strong>免稅的國外收入、免稅的社會安全福利（包括第一級鐵路退休金），以及免稅利息。不要加上SSI。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>依預期的變化做調整。</strong>加薪、換新工作或減少工時、自僱或投資收入的變動，以及增加或減少受扶養人。家庭狀況的變動可能會大幅影響您的省錢額度。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>沒有近期的報稅紀錄？</strong>從每位收入者的薪資單取得聯邦應稅工資（或以總薪資減去雇主為健康保險、托兒服務與退休金所扣除的部分），乘以該年度的發薪次數，再加上其他收入。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+      <li><strong>收入不穩定？</strong>如果您是自僱人士、靠佣金維生、從事季節性工作，或目前失業，可根據過去的經驗、近期趨勢，以及您對工作變化的了解來估算。若是從事新的行業，可以請教同行的人。HealthCare.gov 也提供收入計算工具。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></li>
+    </ol>
+    <p>醫療保險市場可能會要求您上傳薪資單或其他文件來驗證收入。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --> 請務必按時回覆。根據2025年的聯邦規定，您有90天的時間來解決收入不符的問題，而過去自動延長的60天期限已被取消。<!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> 我們的<a href="/zh-Hant/marketplace.html">醫療保險市場指南</a>說明了整體申請與省錢流程如何運作。</p>
+
+    <h2>報稅時會發生什麼</h2>
+    <p>如果您在這一年中預先使用了保費稅收抵免，即使您平常不需要報稅，也必須申報聯邦稅表並進行核對。<!-- src: https://www.healthcare.gov/taxes/ --> 流程如下：<!-- src: https://www.healthcare.gov/taxes-reconciling/ --></p>
+    <ol class="steps">
+      <li><strong>取得1095-A表格。</strong>醫療保險市場會在二月中旬前寄出，通常會更早出現在您的線上帳戶中。表格顯示您的保費、基準銀級計劃保費，以及每月支付給保險公司的預付抵免額。</li>
+      <li><strong>填寫國稅局8962表格。</strong>您需要把1095-A表格上的數字填入8962表格，以根據您的最終收入計算出您實際符合資格的抵免額。</li>
+      <li><strong>比較。</strong>第26行會顯示您使用的抵免額是超過還是低於您實際符合資格的金額。</li>
+      <li><strong>將8962表格附在您的報稅表上。</strong>沒有附上這份表格的報稅表可能會被拒收。<!-- src: https://www.healthcare.gov/taxes/ --></li>
+    </ol>
+    <p><strong>如果您的估算過低</strong>（實際收入較高），表示您使用的抵免額超過您應得的部分。超出的金額會從您的退稅中扣除，或加到您應繳的稅款中。<!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> <strong>如果您的估算過高</strong>（實際收入較低），您會以退稅或降低稅款的方式拿回未使用的抵免額。<!-- src: https://www.healthcare.gov/taxes/ --></p>
+
+    <h3>償還上限已經取消</h3>
+    <p>在2026年以前的報稅年度，如果您的家庭收入低於聯邦貧窮線的400%，償還上限會限制您需要退還的超額抵免金額。這項上限現在已經取消。2025年以後的報稅年度，您必須<strong>全額償還</strong>預付抵免款項超出您保費稅收抵免的部分。<!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> 由於疫情期間的臨時額外抵免也在2025年後終止，收入估算失準現在可能會讓您付出實際的金錢代價。<!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ --> 關於這部分的來龍去脈，請參閱<a href="/zh-Hant/marketplace-premium-increase.html">醫療保險市場保費為何上漲</a>。</p>
+
+    <h3>如果您沒有報稅並核對</h3>
+    <p>跳過核對程序也有相應的處罰。根據2025年的聯邦規定，如果您（或您的報稅人）在前一年獲得了預付保費稅收抵免，卻沒有為那一年申報稅表並進行核對，醫療保險市場必須判定您不符合預付保費稅收抵免的資格。<!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> 如果您錯過了這個程序，您可能會收到醫療保險市場的信件，或是國稅局的「12C號信函」，要求您提供該表格。<!-- src: https://www.healthcare.gov/taxes-reconciling/ --></p>
+
+    <h2>四種降低鉅額償還風險的方法</h2>
+    <ul>
+      <li><strong>立即回報變化。</strong>如果您的收入增加，或家庭成員人數減少，您符合資格的抵免額可能會降低。更新您的申請會減少未來的抵免額，這樣累積下來需要償還的金額也會較少。如果您的收入減少，或家庭成員人數增加，您可能符合資格獲得更多抵免額，甚至符合Medicaid或CHIP的資格。<!-- src: https://www.healthcare.gov/reporting-changes/ --></li>
+      <li><strong>每月不要使用全部的抵免額。</strong>您可以選擇預先領取全部、部分，或完全不領取抵免額，剩餘部分則在報稅時申請。<!-- src: https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/ --></li>
+      <li><strong>在公開註冊期更新資料，不要只依賴自動續保。</strong>如果您沒有更新收入與家庭資訊，您獲得的省錢額度可能會低於或高於您實際符合的資格，導致您必須補繳差額。HealthCare.gov 要求您在12月15日前完成更新，才能從1月1日開始生效的承保。<!-- src: https://www.healthcare.gov/keep-or-change-plan/ --></li>
+      <li><strong>留意會終止抵免資格的承保。</strong>開始使用Medicare或獲得雇主提供的保險方案，可能會要求您取消醫療保險市場的計劃。<!-- src: https://www.healthcare.gov/reporting-changes/ --> 若在應該取消之後仍支付了抵免額，可能需要償還。請參閱<a href="/zh-Hant/turning-65.html">年滿65歲</a>。</li>
+    </ul>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>我應該使用哪一年的收入？</summary>
+      <div>
+        <p>是您希望獲得承保的那一年。省錢額度是根據您那一年的預期收入計算，而不是去年的報稅紀錄。去年的AGI只是估算的起點。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我低估了我的收入，我需要補繳多少？</summary>
+      <div>
+        <p>就是支付給保險公司的預付抵免額，與根據您最終收入所符合資格的抵免額之間的差額。2025年以後的報稅年度沒有上限，因此超出的全部金額會從您的退稅中扣除，或加到您應繳的餘額中。8962表格會幫您計算。<!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --> 許多需要補繳的人，實際上只是看到退稅金額變少而已。<!-- src: https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我高估了收入，能拿回錢嗎？</summary>
+      <div>
+        <p>可以。如果您使用的抵免額低於您實際符合資格的金額，您可以在8962表格上申請差額。這會降低您的稅款，或增加您的退稅金額。<!-- src: https://www.healthcare.gov/taxes/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果配偶有自己的保險，我還需要計入他們的收入嗎？</summary>
+      <div>
+        <p>需要。醫療保險市場會計入您報稅家庭中每個人的收入，包括已透過雇主、Medicare或Medicaid獲得承保的配偶或受扶養人。您會在申請表中說明哪些人需要投保。<!-- src: https://www.healthcare.gov/income-and-household-information/how-to-report/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>社會安全福利算收入嗎？</summary>
+      <div>
+        <p>算，是扣除前的全額，不論是否應稅，包括SSDI在內。SSI則不計入。<!-- src: https://www.healthcare.gov/income-and-household-information/income/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我的收入低到不符合醫療保險市場抵免資格怎麼辦？</summary>
+      <div>
+        <p>如果您的收入下降，請回報這項變化。您可能會符合更高抵免額的資格，或轉而符合Medicaid或CHIP的資格。<!-- src: https://www.healthcare.gov/reporting-changes/ --> 當醫療保險市場的資料顯示收入低於貧窮線時，也可能會要求您提供文件，因此請保留您的收入紀錄。<!-- src: https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule --> 請參閱<a href="/zh-Hant/medicaid-eligibility.html">Medicaid資格</a>。</p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.healthcare.gov/income-and-household-information/how-to-report/" rel="noopener">HealthCare.gov：如何估算您的預期收入</a></li>
+      <li><a href="https://www.healthcare.gov/income-and-household-information/income/" rel="noopener">HealthCare.gov：哪些應計入收入</a></li>
+      <li><a href="https://www.healthcare.gov/lower-costs/save-on-monthly-premiums/" rel="noopener">HealthCare.gov：保費稅收抵免</a></li>
+      <li><a href="https://www.healthcare.gov/taxes-reconciling/" rel="noopener">HealthCare.gov：如何核對您的保費稅收抵免</a></li>
+      <li><a href="https://www.irs.gov/affordable-care-act/individuals-and-families/questions-and-answers-on-the-premium-tax-credit" rel="noopener">國稅局：關於保費稅收抵免的問答（償還上限）</a></li>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2025-marketplace-integrity-and-affordability-final-rule" rel="noopener">CMS.gov：2025年醫療保險市場誠信與可負擔性最終規則</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先確認。</strong>MediPrimer 提供一般性的教育資訊，並未與任何機構或保險公司有關聯。本文內容並非稅務建議。您的抵免額取決於您的收入、家庭狀況與所在郡，且國會可能會修改相關規定。請查閱 HealthCare.gov 或您所在州的醫療保險市場，並與稅務專業人士或免費的Navigator顧問討論您個人的具體數字。
+    </div>
+  </div>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>規定會改變，我們會通知您。</h2>
+      <p>當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">通知我</button>
+      </form>
+      <p class="newsletter-fine">每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/marketplace-income-estimate.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
