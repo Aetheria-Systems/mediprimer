@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HSA與Medicare：6個月A部分回溯陷阱 — MediPrimer</title>
+<meta name="description" content="HSA提撥金與Medicare的關係：為何A部分會回溯6個月、何時該停止提撥、誰可以延後加入Medicare以保留HSA，以及如何補救失誤。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/hsa-and-medicare.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="HSA與Medicare：6個月A部分回溯陷阱 — MediPrimer">
+<meta property="og:description" content="HSA提撥金與Medicare的關係：為何A部分會回溯6個月、何時該停止提撥、誰可以延後加入Medicare以保留HSA，以及如何補救失誤。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/hsa-and-medicare.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HSA與Medicare：6個月A部分回溯陷阱 — MediPrimer">
+<meta name="twitter:description" content="HSA提撥金與Medicare的關係：為何A部分會回溯6個月、何時該停止提撥、誰可以延後加入Medicare以保留HSA，以及如何補救失誤。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我已經在回溯月份裡提撥了資金，現在該怎麼辦？", "acceptedAnswer": {"@type": "Answer", "text": "請立即聯繫你的HSA管理機構和稅務專業人士。超額提撥通常可以領出以減輕影響，但相關細節與期限屬於稅務規定，而非Medicare規定。不要置之不理，這個問題不會自動消失。"}}, {"@type": "Question", "name": "如果我在65歲的初始註冊期就申請，6個月規則適用嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不適用。醫療保險A部分不會早於你滿65歲的那個月開始生效。 回溯規則只有在你晚於這個時間點申請時才會發生作用。你的HSA提撥只需要在A部分開始生效時停止即可。"}}, {"@type": "Question", "name": "我可以只加入醫療保險B部分、不申請A部分，來保護我的HSA嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不行。只要加入Medicare的任何一部分，你的HSA資格就會終止。 想繼續提撥，你就必須把整個Medicare都延後申請，而這只有在擁有較大雇主的在職保險時才安全。"}}, {"@type": "Question", "name": "我的配偶已經在用Medicare，我還能提撥自己的HSA嗎？", "acceptedAnswer": {"@type": "Answer", "text": "只要你自己擁有符合資格的高自付額計劃、且本人尚未加入Medicare，配偶加入Medicare並不會影響你自己的提撥資格。關於一方加入如何影響另一方的保險，請參見 夫妻的Medicare 。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "HSA與Medicare：6個月A部分回溯陷阱", "description": "HSA提撥金與Medicare的關係：為何A部分會回溯6個月、何時該停止提撥、誰可以延後加入Medicare以保留HSA，以及如何補救失誤。", "url": "https://mediprimer.org/zh-Hant/hsa-and-medicare.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-09-08", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/hsa-and-medicare.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/hsa-and-medicare.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/hsa-and-medicare.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/hsa-and-medicare.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "HSA與Medicare：6個月A部分回溯陷阱", "item": "https://mediprimer.org/zh-Hant/hsa-and-medicare.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/hsa-and-medicare.html" lang="en">English</a>
+    <a href="/es/hsa-and-medicare.html" lang="es">Español</a>
+    <a href="/zh-Hant/hsa-and-medicare.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop active">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給受益人與照顧者</p>
+    <h1>HSA提撥金與Medicare：6個月回溯的A部分陷阱</h1>
+    <p>年過65仍在工作，並持續提撥健康儲蓄帳戶（HSA）嗎？醫療保險A部分的承保可能在你申請前<em>6個月</em>就開始生效，而這會悄悄把你近期的HSA提撥金變成一個稅務問題。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案是這樣的。</strong>一旦你加入了Medicare的任何一部分，就不能再往健康儲蓄帳戶（HSA）裡提撥新的資金。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 陷阱在於時機。如果你在65歲以後才申請免保費的醫療保險A部分，你的承保會回溯到申請當月往前<strong>最多6個月</strong>（但絕不會早於你滿65歲的那個月）。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start --> 你在那些回溯月份裡提撥到HSA的任何資金都會超過限額，可能招致稅務罰款。Medicare的建議是：在申請Medicare或社會安全退休金<strong>前6個月就停止HSA提撥</strong>。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65 --> 帳戶裡已有的資金你仍然可以繼續使用。</p>
+
+    <h2>為什麼Medicare和HSA提撥金合不來</h2>
+    <p>HSA是一種享有稅務優惠的帳戶，只有擁有高自付額健康計劃的人才能提撥。它和彈性支出帳戶（FSA）或健康報銷帳戶（HRA）不同。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> Medicare被視為另一種健康保險。所以一旦你加入醫療保險A部分、醫療保險B部分，或兩者皆有，你就不再符合提撥資格。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 你的雇主也不能替你提撥。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65 --></p>
+    <p>即使你繼續工作、繼續留在高自付額計劃中，這項規定依然適用。重點在於你是否已加入Medicare，而不是你是否已經退休。</p>
+
+    <h2>6個月回溯的A部分規則</h2>
+    <p>大多數人因為工作期間繳過Medicare稅，可以免費獲得醫療保險A部分。如果你把這項免費的A部分延後到65歲以後才申請，Medicare會將你的承保回溯生效。醫療保險A部分會在你申請當月的前6個月開始，或是你申請社會安全金或鐵路退休金當月的前6個月開始，但絕不會早於你滿65歲的那個月。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start --></p>
+    <p>回溯承保通常是件好事，因為這代表Medicare可以支付那幾個月的住院帳單。但就HSA而言，即使你當時並不知情，你在那6個月裡其實已經「加入了Medicare」。在那段期間內所做的提撥，會被視為你當時本就不具提撥資格。</p>
+    <div class="note">
+      <strong>與社會安全金的關聯。</strong>65歲或以後申請社會安全退休金，會自動讓你加入醫療保險A部分。因此，6個月的回溯期不只是從你申請Medicare那一刻起算，申請社會安全金同樣會啟動這個時鐘。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 如果你想繼續提撥HSA，就必須把兩者都延後申請。
+    </div>
+
+    <h2>這個陷阱在現實中長什麼樣子</h2>
+    <p>想像有個人在3月滿65歲，繼續工作，也持續提撥HSA。隔年10月，他們決定退休，並申請社會安全金和Medicare。醫療保險A部分回溯6個月生效，也就是回到4月。從4月到10月，不論是他們自己還是雇主提撥到HSA的每一塊錢，現在都算是超額提撥。他們得把這筆錢領出來，否則就得為此繳稅，而且可能要到報稅時才會發現這個問題。</p>
+    <p>如果提前規劃，解決方法很簡單：在你打算申請的那個月往前推6個月就停止提撥。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65 --></p>
+
+    <h2>如果你想繼續提撥，有哪些選擇</h2>
+    <p>你能否安全地延後加入Medicare，要看你目前擁有的保險而定。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>你65歲時的狀況</th><th>能否延後A部分並保留HSA？</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>來自你本人或配偶<em>目前</em>雇主（員工人數20人以上）的職場保險</strong></td>
+            <td>可以。你可以同時延後醫療保險A部分和醫療保險B部分，並繼續提撥。等到這份工作或保險結束時，你會獲得8個月的特殊註冊期（SEP），且不會有遲交罰款。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --></td>
+          </tr>
+          <tr>
+            <td><strong>目前雇主員工人數少於20人</strong></td>
+            <td>通常不行。這種情況下Medicare會優先給付，所以你應該在65歲時就加入醫療保險A部分和醫療保險B部分，HSA提撥必須停止。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --></td>
+          </tr>
+          <tr>
+            <td><strong>COBRA或退休人員保險</strong></td>
+            <td>不行。這些不算是目前在職的雇主保險。應在65歲時加入，以避免出現空窗期和罰款。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 參見<a href="/zh-Hant/cobra-and-medicare.html">COBRA與Medicare</a>。</td>
+          </tr>
+          <tr>
+            <td><strong>已經在領取社會安全金</strong></td>
+            <td>不行。你會自動加入醫療保險A部分，因此提撥必須停止。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>延後加入醫療保險A部分是個人的決定。醫療保險A部分對大多數人來說是免費的，延後等於放棄了原本不花一毛錢就能得到的住院保障。請和你雇主的福利部門及稅務專業人士討論，看HSA的稅務優惠是否值得這樣做。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 我們的<a href="/zh-Hant/working-past-65.html">65歲後繼續工作</a>指南涵蓋了這項決定中關於醫療保險B部分的部分。</p>
+
+    <h2>加入Medicare後，HSA還能做什麼</h2>
+    <p>加入Medicare只會停止<em>新的</em>提撥。帳戶裡已有的資金仍然屬於你。你可以繼續用它支付合格的醫療費用，包括許多Medicare相關費用。哪些費用符合資格，請諮詢稅務專業人士。你在工作期間累積的HSA，未來多年仍能幫你支付Medicare的相關費用。</p>
+
+    <h2>申請前的檢查清單</h2>
+    <ol class="steps">
+      <li><strong>選定申請月份</strong>——決定你打算申請Medicare或社會安全金的月份。</li>
+      <li><strong>往前推算6個月。</strong>在那個月之前，停止你自己的HSA提撥，也請雇主停止他們的提撥。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65 --></li>
+      <li><strong>確認雇主規模與保險類型。</strong>只有來自員工人數20人以上雇主的目前在職保險，才能讓你安全地延後加入。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --></li>
+      <li><strong>核對當年的提撥總額。</strong>請稅務專業人士確認你在加入Medicare那一年最多能提撥多少。</li>
+      <li><strong>保存好所有文件。</strong>保留雇主保險證明和申請日期，以備日後查詢。</li>
+    </ol>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>我已經在回溯月份裡提撥了資金，現在該怎麼辦？</summary>
+      <div>
+        <p>請立即聯繫你的HSA管理機構和稅務專業人士。超額提撥通常可以領出以減輕影響，但相關細節與期限屬於稅務規定，而非Medicare規定。不要置之不理，這個問題不會自動消失。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我在65歲的初始註冊期就申請，6個月規則適用嗎？</summary>
+      <div>
+        <p>不適用。醫療保險A部分不會早於你滿65歲的那個月開始生效。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start --> 回溯規則只有在你晚於這個時間點申請時才會發生作用。你的HSA提撥只需要在A部分開始生效時停止即可。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我可以只加入醫療保險B部分、不申請A部分，來保護我的HSA嗎？</summary>
+      <div>
+        <p>不行。只要加入Medicare的任何一部分，你的HSA資格就會終止。<!-- src: https://www.cms.gov/sites/default/files/repo-new/10/FS3_Deciding%20Whether%20to%20Enroll%20in%20Medicare%20Part%20A%20and%20Part%20B%20When%20You%20Tu....pdf --> 想繼續提撥，你就必須把整個Medicare都延後申請，而這只有在擁有較大雇主的在職保險時才安全。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我的配偶已經在用Medicare，我還能提撥自己的HSA嗎？</summary>
+      <div>
+        <p>只要你自己擁有符合資格的高自付額計劃、且本人尚未加入Medicare，配偶加入Medicare並不會影響你自己的提撥資格。關於一方加入如何影響另一方的保險，請參見<a href="/zh-Hant/planning-for-two.html">夫妻的Medicare</a>。</p>
+      </div>
+    </details>
+
+    <h2>相關指南</h2>
+    <ul>
+      <li><a href="/zh-Hant/working-past-65.html">65歲後繼續工作：Medicare與雇主保險</a></li>
+      <li><a href="/zh-Hant/turning-65.html">滿65歲：從這裡開始</a></li>
+      <li><a href="/zh-Hant/enrollment.html">註冊與期限</a></li>
+      <li><a href="/zh-Hant/common-mistakes.html">常見的Medicare錯誤</a></li>
+      <li>官方資料：<a href="https://www.medicare.gov/basics/get-started-with-medicare/medicare-basics/working-past-65" rel="noopener">Medicare.gov：65歲後繼續工作</a></li>
+      <li>官方資料：<a href="https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-does-medicare-coverage-start" rel="noopener">Medicare.gov：Medicare承保何時開始？</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先核實。</strong>MediPrimer提供的是一般性的教育資訊，並未隸屬於任何政府機構或保險公司。HSA的提撥限額與罰則屬於稅務規定，每年都會變動。在延後或申請Medicare之前，請向雇主的福利部門、社會安全局（1-800-772-1213）以及稅務專業人士確認你的個人狀況。
+    </div>
+
+  </div>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>規定會改變，我們會通知您。</h2>
+      <p>當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">通知我</button>
+      </form>
+      <p class="newsletter-fine">每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/hsa-and-medicare.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
