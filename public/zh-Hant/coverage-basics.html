@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>承保基礎知識 — MediPrimer</title>
-<meta name="description" content="Medicare（醫療保險）、Medicaid（醫療補助）、Medicare Advantage（優勢計劃）、醫療保險市場和 CHIP（兒童健康保險計劃）詳解：每個計劃是什麼、由誰管理、誰符合資格。">
+<meta name="description" content="Medicare、Medicaid、Medicare Advantage、醫療保險市場與CHIP詳解：每個計劃是什麼、由誰管理，以及誰符合資格。">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
@@ -26,13 +26,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
 <meta property="og:title" content="承保基礎知識 — MediPrimer">
-<meta property="og:description" content="Medicare（醫療保險）、Medicaid（醫療補助）、Medicare Advantage（優勢計劃）、醫療保險市場和 CHIP（兒童健康保險計劃）詳解：每個計劃是什麼、由誰管理、誰符合資格。">
+<meta property="og:description" content="Medicare、Medicaid、Medicare Advantage、醫療保險市場與CHIP詳解：每個計劃是什麼、由誰管理，以及誰符合資格。">
 <meta property="og:url" content="https://mediprimer.org/zh-Hant/coverage-basics.html">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="承保基礎知識 — MediPrimer">
-<meta name="twitter:description" content="Medicare（醫療保險）、Medicaid（醫療補助）、Medicare Advantage（優勢計劃）、醫療保險市場和 CHIP（兒童健康保險計劃）詳解：每個計劃是什麼、由誰管理、誰符合資格。">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "承保基礎知識", "description": "Medicare（醫療保險）、Medicaid（醫療補助）、Medicare Advantage（優勢計劃）、醫療保險市場和 CHIP（兒童健康保險計劃）詳解：每個計劃是什麼、由誰管理、誰符合資格。", "url": "https://mediprimer.org/zh-Hant/coverage-basics.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<meta name="twitter:description" content="Medicare、Medicaid、Medicare Advantage、醫療保險市場與CHIP詳解：每個計劃是什麼、由誰管理，以及誰符合資格。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "承保基礎知識", "description": "Medicare、Medicaid、Medicare Advantage、醫療保險市場與CHIP詳解：每個計劃是什麼、由誰管理，以及誰符合資格。", "url": "https://mediprimer.org/zh-Hant/coverage-basics.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-09-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/coverage-basics.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/coverage-basics.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/coverage-basics.html">
@@ -115,123 +115,128 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 </header><section class="hero">
   <div class="wrap">
     <h1>承保基礎知識</h1>
-    <p>美國大部分的健康保險由五個政府計劃提供。</p>
+    <p>五個政府計劃提供了美國大部分的醫療保險承保範圍。</p>
   </div>
 </section>
 <main>
   <div class="wrap">
     <h2>了解任何計劃的三個問題</h2>
-    <p>想了解任何健康保險計劃，請問這三件事：</p>
+    <p>想了解任何健康保險計劃，可以問這三個問題：</p>
     <ul>
-      <li><strong>誰付錢？</strong>是聯邦資金、州資金，還是兩者都有？資金來自稅收，還是來自人們繳納的保費？</li>
-      <li><strong>誰負責營運？</strong>是聯邦政府直接營運嗎？是各州在聯邦規則下管理嗎？還是私人公司代表政府管理？</li>
-      <li><strong>誰提供福利？</strong>是政府直接提供照護，還是由私人保險公司和醫生提供？</li>
+      <li><strong>誰付費？</strong>是聯邦資金、州資金，還是兩者都有？資金來自稅收，還是來自民眾繳交的保費？</li>
+      <li><strong>誰負責運作？</strong>是聯邦政府直接運作嗎？各州是否依聯邦規定自行管理？還是由私人公司代表政府管理？</li>
+      <li><strong>誰提供福利？</strong>是政府直接提供醫療照護，還是由私人保險公司和醫生提供？</li>
     </ul>
-    <p>這些問題可以解釋 Medicare（醫療保險）、Medicaid（醫療補助）、Medicare Advantage（優勢計劃）、醫療保險市場和 CHIP（兒童健康保險計劃）之間的差異。</p>
+    <p>這些問題可以說明Medicare、Medicaid、Medicare Advantage、醫療保險市場與CHIP之間的差異。</p>
 
     <h2>Medicare</h2>
-    <p>Medicare 是由美國醫療保險和醫療補助服務中心（CMS）營運的聯邦健康保險計劃。</p>
-    <p>誰符合資格？主要是65歲及以上的人。它也承保一些患有殘疾或末期腎臟病（ESRD，即永久性腎衰竭）的較年輕人士。</p>
-    <p>誰付錢？Medicare 的資金來自工資稅（來自您的工作年間）、每月保費和一般稅收。</p>
-    <p>誰要註冊？大多數人不需要申請。如果您工作過並繳納了 Medicare 稅，您在65歲時就自動符合資格。</p>
-    <p>Medicare 分為四個部分：</p>
+    <p>Medicare是由美國醫療保險和醫療補助服務中心（CMS）管理的聯邦健康保險計劃。</p>
+    <figure class="diagram">
+      <img src="/img/zh-Hant/medicare-parts-explained.png" width="1200" height="620" loading="lazy" alt="A部分承保住院照護。B部分承保門診醫生看診。D部分承保處方藥。C部分（Medicare Advantage）是把這些整合在一起的私人計劃。">
+      <figcaption>Medicare各部分及其承保內容</figcaption>
+    </figure>
+
+    <p>誰符合資格？主要是65歲以上的長者。也涵蓋部分有身心障礙或末期腎病（ESRD，即永久性腎衰竭）的較年輕人士。</p>
+    <p>誰付費？由薪資稅（來自你工作期間繳交的稅款）、每月保費，以及一般稅收共同資助Medicare。</p>
+    <p>誰需要註冊？大多數人不必主動申請。如果你曾工作並繳交過Medicare稅，你在65歲時會自動符合資格。</p>
+    <p>Medicare分為四個部分：</p>
     <ul>
-      <li><strong>醫療保險A部分（醫院保險）</strong>承保住院、護理照護、善終服務和家庭醫療照護服務。</li>
-      <li><strong>醫療保險B部分（醫療保險）</strong>承保看診、門診照護、醫療設備和其他服務。</li>
-      <li><strong>醫療保險C部分（Medicare Advantage）</strong>是一種替代性的私人計劃，將所有 Medicare 福利合併在一起。（詳見下文。）</li>
-      <li><strong>醫療保險D部分（處方藥承保）</strong>承保處方藥物。</li>
+      <li><strong>A部分（醫院保險，即醫療保險A部分）</strong>承保住院、專業護理、善終服務與家庭醫療照護服務。</li>
+      <li><strong>B部分（醫療保險，即醫療保險B部分）</strong>承保門診醫生看診、門診照護、醫療器材及其他服務。</li>
+      <li><strong>C部分（Medicare Advantage，即醫療保險C部分）</strong>是整合所有Medicare福利的另一種私人計劃選擇。（詳見下文。）</li>
+      <li><strong>D部分（處方藥承保，即醫療保險D部分）</strong>承保處方藥物。</li>
     </ul>
-    <p>大多數人選擇原始醫療保險（A和B部分）。政府透過由醫生和醫院組成的網絡直接營運這個計劃。</p>
-    <p>其他人則選擇 Medicare Advantage（優勢計劃，C部分），這是一個將所有福利合併在一起的單一私人計劃。</p>
-    <p>如需了解更多，請瀏覽 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>。</p>
+    <p>大多數人選擇原始醫療保險（A部分與B部分）。政府透過醫生與醫院組成的網絡直接運作此計劃。</p>
+    <p>其他人則選擇Medicare Advantage（C部分），這是把所有福利整合在一起的單一私人計劃。</p>
+    <p>詳情請參閱<a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>。</p>
 
     <h2>Medicaid</h2>
-    <p>Medicaid 是由聯邦政府和各州共同營運的計劃，為低收入人士和家庭提供健康保險。</p>
-    <p>與 Medicare 不同（Medicare 完全是聯邦計劃），每個州在聯邦規則下自行營運 Medicaid。這表示每個州的規則都不一樣。資格、承保服務和註冊方式因州而異。</p>
-    <p>誰付錢？聯邦政府和州政府按照一個稱為聯邦醫療援助百分比（FMAP）的公式分攤費用。</p>
-    <p>誰符合資格？傳統上，孕婦、兒童、父母、年長者和殘疾人士可以獲得 Medicaid。但收入限額和具體規則因州而異。有些州在《平價醫療法案》之後擴大了 Medicaid，有些州則沒有。</p>
-    <p>如何獲得照護？在大多數州，私人保險公司（稱為管理式醫療機構（MCO））與州政府簽約提供福利。在有些州，州政府直接向醫生和醫院支付照護費用。</p>
-    <p>如需了解更多，請瀏覽 <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>，或聯絡您的<a href="/zh-Hant/state-medicaid.html">州 Medicaid 機構</a>。</p>
+    <p>Medicaid是由聯邦政府與各州共同運作的計劃，為低收入人士與家庭提供健康保險。</p>
+    <p>與完全由聯邦負責的Medicare不同，各州依聯邦規定各自運作Medicaid，因此規則因州而異。資格條件、承保的服務項目，以及註冊方式都會因州而不同。</p>
+    <p>誰付費？聯邦政府與州政府依一套稱為「聯邦醫療補助配比比例」（FMAP）的公式分攤費用。</p>
+    <p>誰符合資格？傳統上，孕婦、兒童、家長、長者及身心障礙人士都可以獲得Medicaid，但收入限制與具體規定因州而異。有些州在《平價醫療法案》通過後擴大了Medicaid的承保範圍，有些州則沒有。</p>
+    <p>如何獲得照護？在大多數州，私人保險公司（稱為管理式醫療機構，即MCO）會與州政府簽約提供福利。在部分州，則由州政府直接支付醫生與醫院的費用。</p>
+    <p>詳情請參閱<a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>，以及你所在的<a href="/zh-Hant/state-medicaid.html">州Medicaid機構</a>。</p>
 
-    <h2>Medicare Advantage（優勢計劃，C部分）</h2>
-    <p>Medicare Advantage 並不是一個新計劃，而是獲得您的 Medicare 福利的另一種方式。</p>
-    <p>您可以加入一個私人計劃，來取代原始醫療保險（A和B部分）。這個計劃與 Medicare（CMS）簽約，為您提供所有A和B部分的福利，外加額外福利。</p>
-    <p>這些是什麼類型的計劃？通常是健康維護組織（HMO）或優選提供者組織（PPO）。許多計劃在一個計劃中就包含了D部分（處方藥承保）。它們也可能提供額外福利，例如牙科、視力、聽力或健身計劃。</p>
-    <p>您要付什麼費用？您要繳納每月保費（有時為零）和費用分擔金額（共付額、共同保險、自付額），不過這些金額可能與原始醫療保險不同。除緊急情況外，您必須使用計劃網絡內的醫生和醫院。</p>
-    <p>它是如何運作的？Medicare 每月按人向私人計劃支付固定金額。如果您的照護費用超過該金額，由計劃承擔財務風險。</p>
-    <p>如需了解更多，請瀏覽 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>，特別是 Medicare Advantage 的相關頁面。</p>
+    <h2>Medicare Advantage（醫療保險C部分）</h2>
+    <p>Medicare Advantage並不是一個全新的計劃，而是取得Medicare福利的另一種方式。</p>
+    <p>你可以選擇加入私人計劃，而不使用原始醫療保險（A部分與B部分）。這類計劃與Medicare（CMS）簽約，提供你所有A部分與B部分的福利，再加上額外的福利。</p>
+    <p>這類計劃是什麼類型？通常是健康維護組織（HMO）或優選提供者組織（PPO）。許多計劃會把D部分（處方藥承保）整合在同一個計劃內，也可能提供牙科、視力、聽力或健身計劃等額外的補充福利。</p>
+    <p>你需要支付什麼？你需要支付每月保費（有時為零）以及費用分擔金額（共付額、共同保險、自付額），這些金額可能與原始醫療保險不同。除了緊急情況外，你必須使用計劃網絡內的醫生與醫院。</p>
+    <p>運作方式為何？Medicare每月向這些私人計劃支付固定的人頭費用。如果你的照護費用超過這個金額，計劃本身就要承擔財務風險。</p>
+    <p>詳情請參閱<a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>，特別是Medicare Advantage相關頁面。</p>
 
     <h2>醫療保險市場（ACA／交易所）</h2>
-    <p>醫療保險市場是您可以選購和購買私人健康保險的地方。它是由《平價醫療法案》創立的。</p>
-    <p>每個州都有一個醫療保險市場。有的由州營運，有的由聯邦政府營運，有的則由雙方合作營運。</p>
-    <p>市場上出售什麼樣的計劃？計劃由私人保險公司提供。政府不營運這些計劃，但會審查它們，確保符合特定標準。</p>
-    <p>誰可以獲得付費協助？如果您的收入低於特定水平，您可能可以獲得財務協助。您可以獲得補貼（幫助付費的錢）來支付每月保費。您也可以獲得補貼，來降低您的自付額、共付額和共同保險（您分擔的帳單部分）。</p>
-    <p>什麼是「金屬等級」？計劃分為四個等級：Bronze（銅）、Silver（銀）、Gold（金）和 Platinum（白金）。銅級的保費最低，但您需要照護時要付得比較多。白金級的保費最高，但您需要照護時付得比較少。銀級和金級介於兩者之間。金屬等級可以幫助您比較計劃，但與品質好壞無關。</p>
-    <p>您什麼時候可以註冊？您可以在每年的公開註冊期（通常在秋季和冬季）註冊。如果您遇到生活事件，例如失去保險、結婚或生孩子，您也可以隨時註冊。</p>
-    <p>如需了解更多，請瀏覽 <a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a>。</p>
+    <p>醫療保險市場是一個讓你選購並購買私人健康保險的地方，由《平價醫療法案》所設立。</p>
+    <p>每個州都有自己的醫療保險市場。可能由該州自行運作、由聯邦政府運作，或由雙方共同運作。</p>
+    <p>販售的是哪種計劃？計劃由私人保險公司提供。政府並不直接運作這些計劃，但會加以審查，確保符合特定標準。</p>
+    <p>誰能獲得補助？如果你的收入低於一定水準，就可能獲得財務協助。你可以獲得補貼（協助支付費用的金錢）來支付每月保費，也可以獲得補貼來降低你的自付額、共付額與共同保險（也就是你需要自行負擔的部分）。</p>
+    <p>什麼是「金屬等級」？計劃分為四個等級：銅級、銀級、金級與白金級。銅級的保費最低，但需要照護時你要自付的金額較高；白金級的保費最高，但需要照護時你自付的金額較低。銀級與金級介於兩者之間。金屬等級可以幫助你比較各計劃，但並不代表計劃的品質。</p>
+    <p>什麼時候可以註冊？你可以在每年的公開註冊期（通常在秋季與冬季）註冊。如果你遇到人生大事，例如失去承保、結婚，或生了孩子，也可以隨時註冊。</p>
+    <p>詳情請參閱<a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a>。</p>
 
     <h2>CHIP（兒童健康保險計劃）</h2>
-    <p>CHIP 是由聯邦政府和各州共同營運的計劃。它承保沒有保險的兒童——他們的家庭收入超過 Medicaid 的標準，但仍需要負擔得起的保險。</p>
-    <p>與 Medicaid 一樣，每個州在聯邦規則內營運 CHIP。資格和福利因州而異。有些州將 CHIP 作為獨立計劃營運，有些州則將它與 Medicaid 合併。</p>
-    <p>費用是多少？對符合資格的家庭來說，CHIP 通常是免費或費用非常低。</p>
-    <p>它承保什麼？預防照護、基層醫療、住院、緊急服務、牙科、視力和心理健康服務。</p>
-    <p>什麼時候註冊？每個州自行設定收入限額和續保日期。註冊通常全年開放，或在每年的特定時段進行。</p>
-    <p>如需了解更多，請瀏覽 <a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a>，或聯絡您的<a href="/zh-Hant/state-medicaid.html">州 Medicaid／CHIP 機構</a>。</p>
+    <p>CHIP是由聯邦政府與各州共同運作的計劃，為那些收入超過Medicaid資格上限、卻仍需要負擔得起的承保保障的家庭中未受保的兒童提供保障。</p>
+    <p>與Medicaid類似，各州在聯邦規定範圍內自行運作CHIP，資格條件與福利因州而異。有些州將CHIP作為獨立計劃運作，有些州則把它與Medicaid合併。</p>
+    <p>費用如何？對符合資格的家庭而言，CHIP通常是免費或費用非常低廉的。</p>
+    <p>承保哪些項目？預防性照護、初級照護、住院、急診服務、牙科、視力與心理健康服務。</p>
+    <p>何時可以註冊？各州自行訂定收入限制與續保日期，註冊通常是全年開放，或在特定時段進行。</p>
+    <p>詳情請參閱<a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a>，或你所在的<a href="/zh-Hant/state-medicaid.html">州Medicaid／CHIP機構</a>。</p>
 
-    <h2>一覽比較</h2>
+    <h2>一覽比較表</h2>
     <div class="table-scroll">
       <table>
         <thead>
           <tr>
             <th>計劃</th>
-            <th>誰負責管理</th>
-            <th>一般符合資格者</th>
-            <th>福利如何提供</th>
+            <th>由誰管理</th>
+            <th>一般資格條件</th>
+            <th>福利提供方式</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>Medicare</strong></td>
             <td>聯邦（CMS）</td>
-            <td>65歲及以上；某些患有殘疾或ESRD的較年輕人士</td>
-            <td>原始醫療保險：透過CMS按服務收費；Medicare Advantage：簽約的私人計劃</td>
+            <td>65歲以上；部分有身心障礙或末期腎病（ESRD）的較年輕人士</td>
+            <td>原始醫療保險：透過CMS按服務收費；Medicare Advantage：由簽約的私人計劃提供</td>
           </tr>
           <tr>
             <td><strong>Medicaid</strong></td>
-            <td>各州（在聯邦規則內）</td>
-            <td>低收入個人和家庭；資格因州而異</td>
-            <td>主要為管理式醫療（私人MCO）；有些州也提供按服務收費</td>
+            <td>各州（依聯邦規定）</td>
+            <td>低收入個人與家庭；資格條件因州而異</td>
+            <td>主要為管理式照護（私人MCO）；部分州也提供按服務收費模式</td>
           </tr>
           <tr>
             <td><strong>Medicare Advantage</strong></td>
             <td>與CMS簽約的私人計劃</td>
-            <td>符合 Medicare 資格的人士（65歲及以上，或患有殘疾／ESRD的較年輕人士）</td>
-            <td>私人計劃提供所有A和B部分的福利；計劃通常合併D部分和額外福利</td>
+            <td>符合Medicare資格者（65歲以上，或有身心障礙／ESRD的較年輕人士）</td>
+            <td>由私人計劃提供所有A部分與B部分福利；計劃通常整合D部分及額外福利</td>
           </tr>
           <tr>
             <td><strong>醫療保險市場</strong></td>
-            <td>聯邦和／或州交易所；計劃由私人保險公司提供</td>
-            <td>沒有雇主保險或其他合資格保險的任何人；符合收入資格的人士可獲得補貼</td>
-            <td>私人保險計劃；受益人可能獲得保費和費用分擔補貼</td>
+            <td>聯邦及／或州交易所；由私人保險公司提供計劃</td>
+            <td>沒有雇主或其他合格承保的任何人；符合收入資格者可獲得補貼</td>
+            <td>私人保險計劃；受益人可獲得保費與費用分擔補貼</td>
           </tr>
           <tr>
             <td><strong>CHIP</strong></td>
-            <td>各州（在聯邦規則內）</td>
-            <td>沒有保險的兒童，其家庭收入高於 Medicaid 門檻但低於 CHIP 限額；因州而異</td>
-            <td>有些州使用管理式醫療；有些州使用按服務收費或混合方式</td>
+            <td>各州（依聯邦規定）</td>
+            <td>家庭收入高於Medicaid門檻、但低於CHIP上限的未受保兒童；因州而異</td>
+            <td>部分州採用管理式照護；其他州採用按服務收費或混合模式</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div class="note">
-      <p><strong>重要提示：</strong>規則會隨時間改變，並因州而異。本頁面僅提供一般資訊。請務必查看官方網站以獲得最新詳情：</p>
+      <p><strong>重要提醒：</strong>相關規定會隨時間改變，也因州而異。本頁僅提供一般資訊，最新詳情請務必查閱官方網站：</p>
       <ul>
-        <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — Medicare 相關問題</li>
-        <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a> — 聯邦 Medicaid 資訊及各州機構連結</li>
-        <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 法規和計劃更新</li>
-        <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a> — 醫療保險市場和補貼資訊</li>
-        <li><a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a> — CHIP 資格和註冊</li>
+        <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>，查詢Medicare相關問題</li>
+        <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>，查詢聯邦Medicaid資訊及各州機構連結</li>
+        <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>，查詢法規與計劃更新</li>
+        <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a>，查詢醫療保險市場與補貼資訊</li>
+        <li><a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a>，查詢CHIP資格與註冊資訊</li>
       </ul>
     </div>
 

@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>風險調整與HCC編碼 — MediPrimer</title>
-<meta name="description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
+<meta name="description" content="Medicare Advantage及其他承擔風險的計劃如何透過診斷編碼與風險評分，依會員健康狀況調整給付。">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
@@ -26,13 +26,13 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
 <meta property="og:title" content="風險調整與HCC編碼 — MediPrimer">
-<meta property="og:description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
+<meta property="og:description" content="Medicare Advantage及其他承擔風險的計劃如何透過診斷編碼與風險評分，依會員健康狀況調整給付。">
 <meta property="og:url" content="https://mediprimer.org/zh-Hant/risk-adjustment.html">
 <meta property="og:locale" content="zh_TW">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="風險調整與HCC編碼 — MediPrimer">
-<meta name="twitter:description" content="Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "風險調整與HCC編碼", "description": "Medicare Advantage 及其他承擔風險的計劃如何透過診斷編碼與風險分數，依據會員健康狀況調整付款。", "url": "https://mediprimer.org/zh-Hant/risk-adjustment.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-07-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<meta name="twitter:description" content="Medicare Advantage及其他承擔風險的計劃如何透過診斷編碼與風險評分，依會員健康狀況調整給付。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "風險調整與HCC編碼", "description": "Medicare Advantage及其他承擔風險的計劃如何透過診斷編碼與風險評分，依會員健康狀況調整給付。", "url": "https://mediprimer.org/zh-Hant/risk-adjustment.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-09-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
@@ -113,12 +113,11 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
     </div>
   </div>
 </header>
-
 <section class="hero">
   <div class="wrap">
     <p class="kicker">專業人士專區</p>
     <h1>風險調整與HCC編碼</h1>
-    <p>計劃如何依據會員的健康狀況獲得付款，以及準確診斷記錄所扮演的角色。</p>
+    <p>計劃如何依會員的健康狀況獲得給付，以及準確診斷紀錄所扮演的角色。</p>
   </div>
 </section>
 
@@ -126,73 +125,73 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
   <div class="wrap">
 
     <h2>風險調整的目的</h2>
-    <p>風險調整是一種付款機制，用來解決按人頭付費保險中的一項根本難題：如果無論會員健康狀況如何，計劃收到的付款都相同，計劃就有財務誘因去迴避註冊或留住病情較重的會員。風險調整透過提高患有慢性疾病和複雜醫療需求會員的計劃付款，來防止這種情況。</p>
-    <p>在 <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage</a>、<a href="/zh-Hant/marketplace.html">ACA 醫療保險市場計劃</a>以及 Medicaid 管理式醫療項目中，按人頭付費意味著計劃每月為每位會員收取固定金額的付款，並為該會員的照護承擔全部財務風險。若不加以調整，這筆固定付款將不足以支應病情較重族群的費用——而計劃仍可能藉由只吸引最健康的註冊者來獲利。風險調整讓付款向醫療需求傾斜，創造公平的競爭環境。</p>
+    <p>風險調整是一種給付機制，用來解決按人頭付費保險中的一個根本難題：如果計劃無論會員健康狀況如何都獲得相同金額的給付，它們就會有經濟誘因去避免招收或留住較不健康的會員。風險調整藉由提高罹患慢性病與有複雜醫療需求會員的計劃給付，來防止這種情況發生。</p>
+    <p>在<a href="/zh-Hant/medicare-advantage.html">Medicare Advantage</a>、<a href="/zh-Hant/marketplace.html">醫療保險市場計劃</a>與Medicaid管理式照護計劃中，按人頭付費代表計劃每月按每位會員收取固定金額的給付，並承擔該會員照護的全部財務風險。若沒有調整，這筆固定給付將不足以支應較不健康族群的成本——但計劃仍可能藉由只招收最健康的會員來獲利。風險調整讓給付更貼近醫療需求，創造公平的競爭環境。</p>
 
-    <h2>CMS-HCC 模型：從診斷到風險分數</h2>
-    <p>美國醫療保險和醫療補助服務中心（CMS）使用<strong>階層式病況分類（HCC）模型</strong>來衡量會員健康狀況，並計算<strong>風險調整因子（RAF）分數</strong>。其運作方式如下：</p>
+    <h2>CMS-HCC模型：從診斷到風險評分</h2>
+    <p>美國醫療保險和醫療補助服務中心（CMS）使用<strong>階層式病況類別（HCC）模型</strong>來衡量會員的健康狀況，並計算<strong>風險調整因子（RAF）評分</strong>。運作方式如下：</p>
     <ol class="steps">
-      <li><strong>診斷收集。</strong>醫療服務提供者在福利年度內（Medicare Advantage 通常以曆年計）為每位會員提交包含 ICD-10 診斷代碼的理賠申請和就診記錄。
-      <li><strong>HCC 對應。</strong>CMS 將這些診斷代碼對應到各個 HCC——即能預測未來醫療費用、具臨床意義的分組。一個診斷代碼可能對應到一個 HCC；多個代碼也可能對應到同一個 HCC。
-      <li><strong>套用階層規則。</strong>模型執行階層規則：如果會員同時患有某疾病較輕和較重的形式，只計算較嚴重的 HCC。例如，若同時存在「無併發症的糖尿病」這一較輕診斷和「有併發症的糖尿病」這一較重診斷，前者會併入後者；只有較嚴重的 HCC 被計入。（CMS 每次重新校準模型時都會重新指派具體的 HCC 編號，因此本頁描述的是概念，而非鎖定特定版本的編號。）
-      <li><strong>RAF 計算。</strong>CMS 為每個適用的 HCC 指定一個風險權重（例如，充血性心臟衰竭的權重可能是 0.45，表示會員的基本付款會因此增加 45%）。RAF 是所有適用權重的總和再加上人口統計因子。RAF 為 1.0 代表平均風險；0.8 代表低於平均 20%；1.2 代表高於平均 20%。
-      <li><strong>付款調整。</strong>計劃的按人頭付費金額會乘以 RAF。RAF 為 1.2 的會員產生的付款比 RAF 為 1.0 的會員高 20%，反映其較高的預期費用。
+      <li><strong>診斷收集。</strong>醫療服務提供者在福利年度期間（Medicare Advantage通常為日曆年）提交含有ICD-10診斷代碼的理賠申請與就診紀錄。
+      <li><strong>HCC對應。</strong>CMS將這些診斷代碼對應至HCC——一種具有臨床意義、可預測未來醫療成本的分組。一個診斷代碼可能對應到一個HCC；多個代碼也可能對應到同一個HCC。
+      <li><strong>套用層級規則。</strong>此模型會套用層級規則：如果會員同時患有同一病況的較輕與較重形式，只會計入較嚴重的那個HCC。舉例來說，若同時存在無併發症糖尿病（較輕）與有併發症糖尿病（較重）的診斷，較輕的診斷會併入較重的診斷；只有較嚴重的HCC會被計入。（每次CMS重新校準模型時，特定的HCC編號都會重新分配，因此本頁描述的是概念，而非鎖定特定版本的編號。）
+      <li><strong>RAF計算。</strong>CMS會為每個適用的HCC指定一個風險權重（例如，鬱血性心臟衰竭的權重可能是0.45，代表會為該會員的基本給付增加45%）。RAF是所有適用權重加上一項人口統計因子的總和。RAF為1.0代表平均風險；0.8代表低於平均值20%；1.2代表高於平均值20%。
+      <li><strong>給付調整。</strong>計劃的按人頭付費給付會乘以RAF。RAF為1.2的會員所產生的給付會比RAF為1.0的會員高出20%，反映出較高的預期成本。
     </ol>
-    <p>CMS 每年根據理賠申請和就診資料重新校準 HCC 模型，而所擷取的診斷代碼決定了 RAF。因此，準確、及時地擷取診斷，對於合理付款和計劃的永續經營至關重要。</p>
+    <p>CMS每年會依據理賠與就診資料重新校準HCC模型，而所擷取的診斷代碼會決定RAF。因此，準確且及時地擷取診斷，對於適當的給付與計劃的永續經營至關重要。</p>
 
-    <h2>記錄與合規：從概念層面理解 MEAT/TAMPER</h2>
-    <p>為確保 HCC 編碼準確，醫療服務提供者和計劃遵循的記錄標準常縮寫為 MEAT（供臨床醫師記錄使用）和 TAMPER（供稽核人員和計劃驗證使用）。這些縮寫雖是核對清單，但背後的原則很簡單：</p>
+    <h2>文件紀錄與合規：概念層面的MEAT/TAMPER</h2>
+    <p>為確保HCC編碼準確，醫療服務提供者與計劃會遵循常以MEAT（供臨床醫師記錄使用）與TAMPER（供稽核人員與計劃驗證使用）縮寫代稱的文件標準。雖然這些縮寫是檢查清單，但其背後的原則很簡單：</p>
     <ul>
-      <li><strong>病歷支持。</strong>每個編碼的診斷都必須在會員的病歷中有清楚記錄——包括就診筆記、檢驗結果、影像報告、用藥清單或評估摘要——由主治的醫療服務提供者在臨床就診期間或之後不久建立。
-      <li><strong>具體性。</strong>記錄應支持最具體、最準確的診斷。具體性之所以重要，是因為更具體的診斷往往對應到更準確的 HCC。例如，「第2型糖尿病合併第2期慢性腎臟病」更為具體，可能對應到與「未特定糖尿病」不同的 HCC。
-      <li><strong>就診時間。</strong>診斷必須在相關福利年度內記錄。2024年1月5日記錄的診斷計入 2024 年的付款；2025年1月2日記錄的則計入 2025 年。就診資料（理賠申請和面對面就診）擷取這些診斷。
-      <li><strong>臨床有效性。</strong>編碼應反映會員實際的臨床狀況。診斷必須正在被積極管理、在評估或治療計劃中被提及，或有客觀發現支持——不能是臆測性列出，也不能僅憑過往病史。
+      <li><strong>病歷佐證。</strong>每一個編碼的診斷都必須清楚記錄在會員的病歷中——包括就診紀錄、檢驗結果、影像報告、用藥清單，或由主治醫療服務提供者在臨床就診期間或之後不久所作的評估摘要。
+      <li><strong>明確性。</strong>紀錄應支持最明確、最準確的診斷。明確性之所以重要，是因為較明確的診斷通常對應到更準確的HCC。例如，「第2型糖尿病併第2期慢性腎臟病」比「糖尿病，未特定」更明確，且可能對應到不同的HCC。
+      <li><strong>就診時間點。</strong>診斷必須是在該福利年度內記錄的。2024年1月5日記錄的診斷計入2024年的給付；2025年1月2日記錄的診斷則計入2025年的給付。就診資料（理賠申請與面對面就診）會擷取這些診斷。
+      <li><strong>臨床有效性。</strong>編碼應反映會員實際的臨床狀況。診斷必須是正在積極處理中、在評估或治療計劃中有提及，或有客觀檢查結果佐證——而不能只是臆測性列出，或僅憑過去病史記載。
     </ul>
-    <p>就診資料——包括理賠申請（機構和專業）以及補充記錄——輸入 HCC 模型。準確的就診資料確保準確的 HCC 和合理的 RAF 計算。</p>
+    <p>就診資料——包括理賠申請（機構與專業）與補充文件——會提供給HCC模型。準確的就診紀錄能確保HCC準確，並使RAF計算得當。</p>
 
-    <h2>付款模式與年度核算</h2>
-    <p>CMS 根據前一年理賠申請中擷取的診斷，預先計算 RAF 分數並決定計劃付款。例如，2023 年提交的診斷決定 2024 年的付款。在福利年度期間，計劃和醫療服務提供者持續記錄；這些 2024 年的診斷將決定 2025 年的付款。</p>
-    <p>這種結構產生了幾個重要的動態：</p>
+    <h2>給付模型與年度對帳</h2>
+    <p>CMS會依據前一年理賠申請中擷取的診斷，提前計算RAF評分並決定計劃給付。舉例來說，2023年提交的診斷會用於決定2024年的給付。在福利年度期間，計劃與醫療服務提供者會持續記錄診斷；這些2024年的診斷將用於決定2025年的給付。</p>
+    <p>這種結構會產生幾項重要的動態：</p>
     <ul>
-      <li><strong>時間差與核算。</strong>計劃根據前一年的風險概況收取前瞻性付款，然後提交本年度的就診資料，並知道這些資料將影響未來年度的付款。如果資料稽核發現編碼錯誤，CMS 可能會對前一年的付款進行核算調整。
-      <li><strong>誘因一致與風險。</strong>準確、完整地擷取診斷，對計劃（透過合理的 RAF）和醫療服務提供者（透過反映實際病例複雜度的付款）都有利。計劃和醫療服務提供者有一致的誘因，確保每次就診時診斷都被詳盡、準確地記錄。
-      <li><strong>就診資料完整性。</strong>並非所有就診都會出現在理賠申請上。計劃可以用額外的就診記錄作補充，以反映完整的臨床全貌。CMS 區分理賠申請和補充就診記錄；在某些項目中，兩者都會輸入 HCC 模型。
+      <li><strong>時間落差與對帳。</strong>計劃根據前一年的風險概況收到前瞻性給付，之後再提交當年度的就診資料，並知道這些資料會影響未來年度的給付。若資料稽核發現編碼錯誤，CMS可能會對前一年度的給付進行對帳調整。
+      <li><strong>誘因一致與風險。</strong>準確、完整地擷取診斷，對計劃（透過適當的RAF）與醫療服務提供者（透過反映實際病例複雜度的給付）都有益處。計劃與醫療服務提供者在確保每次就診時診斷都被完整且準確地記錄這件事上，有一致的誘因。
+      <li><strong>就診資料的完整性。</strong>並非所有就診都會呈現在理賠申請上。計劃可能會以額外的就診紀錄補充，以反映完整的臨床全貌。CMS會區分理賠申請與補充性就診資料；在某些方案中，兩者都會提供給HCC模型。
     </ul>
 
-    <h2>RADV 稽核與合規風險</h2>
-    <p><strong>風險調整資料驗證（RADV）稽核</strong>是由 CMS、州政府機構或受委託的稽核人員進行的定期合規審查。在 RADV 稽核中，稽核人員會隨機抽樣某一福利年度部分會員的病歷，驗證為 HCC 編碼提交的診斷確實有病歷支持，並且是依照臨床標準記錄的。</p>
-    <p>RADV 稽核可能發現以下幾類問題：</p>
+    <h2>RADV稽核與合規風險</h2>
+    <p><strong>風險調整資料驗證（RADV）稽核</strong>是由CMS、州政府機構或委託的稽核人員定期進行的合規審查。在RADV稽核中，稽核人員會針對某個福利年度，隨機抽樣一部分會員的病歷，並驗證提交作HCC編碼用途的診斷，是否確實有病歷佐證，且依照臨床標準記錄。</p>
+    <p>RADV稽核可能會發現以下幾種問題：</p>
     <ul>
-      <li><strong>缺乏支持的診斷：</strong>診斷被編碼了，但病歷中沒有該病況的臨床證據。
-      <li><strong>指定不正確的診斷：</strong>使用了錯誤的 ICD-10 代碼，或在應使用更具體代碼時使用了較不具體的代碼。
-      <li><strong>時間或記錄缺陷：</strong>診斷有被記錄，但並非在福利年度內的實際就診中記錄，或記錄過於含糊，無法支持該臨床結論。
-      <li><strong>詐欺跡象：</strong>顯示蓄意或系統性過度編碼的模式，例如相同的診斷在許多會員身上出現卻沒有臨床依據。
+      <li><strong>無佐證的診斷：</strong>已編碼某項診斷，但病歷中並無該病況的臨床證據。
+      <li><strong>診斷代碼不正確：</strong>使用了錯誤的ICD-10代碼，或在應使用更明確代碼時，卻使用了較不明確的代碼。
+      <li><strong>時間點或文件缺失：</strong>診斷雖有記錄，但並非發生在該福利年度內的實際就診中，或文件內容過於模糊，不足以支持該臨床結論。
+      <li><strong>詐欺跡象：</strong>顯示出蓄意或系統性過度編碼的模式，例如許多會員身上出現相同診斷，卻毫無臨床依據。
     </ul>
-    <p>如果 RADV 的發現顯示系統性錯誤或過度編碼，CMS 可能會追溯調整計劃付款或處以罰則。因此，計劃會投資於<strong>同步編碼稽核</strong>和<strong>就診資料擷取項目</strong>，在外部稽核之前發現並更正錯誤，並投資於<strong>醫療服務提供者培訓</strong>以確保準確的記錄實務。有關 CMS 目前的 RADV 措施，請參閱<a href="/zh-Hant/policy-changes.html">政策變更</a>。</p>
+    <p>若RADV稽核結果顯示存在系統性錯誤或過度編碼，CMS可能會追溯調整計劃給付或施加罰則。因此，計劃會投入資源於<strong>同步編碼稽核</strong>與<strong>就診資料擷取方案</strong>，以便在外部稽核之前發現並更正錯誤，並投入<strong>醫療服務提供者培訓</strong>，以確保準確的紀錄實務。有關CMS目前的RADV相關措施，請參閱<a href="/zh-Hant/policy-changes.html">政策變化</a>。</p>
 
-    <h2>道德界線：具體性 vs. 過度編碼</h2>
-    <p>準確編碼與不當過度編碼之間的界線可能相當微妙。重視合規的機構是這樣把握分寸的：</p>
+    <h2>倫理界線：明確性與過度編碼</h2>
+    <p>準確編碼與不當過度編碼之間的界線可能相當細微。以下是重視合規的機構如何拿捏分寸：</p>
     <ul>
-      <li><strong>恰當：</strong>醫療服務提供者根據當前檢驗結果和臨床評估記錄「第2型糖尿病合併第2期慢性腎臟病」；編碼人員選擇反映此記錄狀態的具體 HCC。病歷支持所聲稱的具體程度。
-      <li><strong>恰當：</strong>計劃發現許多就診記錄在評估欄中記載了某項診斷，但未填入診斷編碼欄位，於是有系統地將這些遺漏但已記錄的診斷補入就診記錄，並以醫療服務提供者當時的臨床記錄為依據。
-      <li><strong>有疑慮：</strong>醫療服務提供者在沒有明確臨床記錄支持嚴重程度的情況下，系統性地將診斷編碼為最嚴重的版本（例如，總是選擇「合併併發症」的變體）。
-      <li><strong>不當：</strong>編碼人員推斷出醫療服務提供者未記錄的診斷，或指派一個僅出現在過往病史中、卻沒有本年度正在管理的積極證據的診斷。
+      <li><strong>適當做法：</strong>醫療服務提供者根據目前的檢驗結果與臨床評估，記錄「第2型糖尿病併第2期慢性腎臟病」；編碼人員選擇能反映此已記錄狀況的特定HCC。病歷佐證了所主張的明確性。
+      <li><strong>適當做法：</strong>計劃發現許多就診紀錄在評估內容中提及某項診斷，卻未列入編碼診斷欄位，因此依據醫療服務提供者同時期的臨床紀錄，系統性地將遺漏但已記錄的診斷補入就診紀錄中。
+      <li><strong>值得存疑：</strong>醫療服務提供者系統性地將診斷編碼為嚴重程度最高的版本（例如，總是選擇「併發症」變體），卻沒有清楚的臨床紀錄佐證該嚴重程度。
+      <li><strong>不當做法：</strong>編碼人員推斷出醫療服務提供者未曾記錄的診斷，或指定一項僅出現在過去病史中、卻無積極證據顯示當年度仍在處理中的診斷。
     </ul>
-    <p>監管指引和法院判例已明確指出，編碼必須反映當前、正在積極管理且有病歷支持的診斷。具體性和恰當的階層應用是被期待的；沒有臨床依據的系統性升級則不被允許。計劃和醫療服務提供者的合規立場強調準確性以及對稽核人員的透明度，而非追求 RAF 最大化。</p>
+    <p>監管指引與法院判例已澄清，編碼必須反映病歷所佐證的、目前正積極處理中的診斷。明確性與適當的層級規則是被期待的做法；沒有臨床依據的系統性上調則不然。計劃與醫療服務提供者所秉持的合規立場，是強調對稽核人員的準確與透明，而非追求RAF最大化。</p>
 
-    <h2>其他項目中的風險調整</h2>
-    <p><strong>Medicare Advantage</strong> 使用上文所述的 HCC 模型。適用的是 CMS-HCC 第 28 版（及後續演進版本）。</p>
-    <p><strong>ACA 醫療保險市場計劃</strong>也使用風險調整機制，經費來自 ACA 的風險調整項目。註冊者病情比平均嚴重的計劃可從中央項目獲得移轉款項；註冊者比平均健康的計劃則向其繳款。其模型和 HCC 對應方式與 Medicare Advantage 略有不同，但目的相同：在不同健康風險之間拉平付款水準。</p>
-    <p><strong>Medicaid 管理式醫療</strong>的風險調整因州和項目而異。有些州使用基於 HCC 的模型；有些州則使用較簡單的人口統計因子或基於病況的分類。州 Medicaid 機構在其管理式醫療合約中定義風險調整方法。</p>
-    <p><strong>商業保險計劃</strong>不受同一套 CMS 風險調整框架的約束，不過保險公司會使用自己的內部風險模型進行定價和族群管理。</p>
+    <h2>其他方案中的風險調整</h2>
+    <p><strong>Medicare Advantage</strong>採用上述的HCC模型。目前適用的是CMS-HCC第28版（以及持續演進的版本）。</p>
+    <p><strong>ACA醫療保險市場計劃</strong>也採用一套風險調整機制，資金來自ACA的風險調整方案。會員健康狀況低於平均值（較不健康）的計劃會從中央方案獲得資金移轉；會員健康狀況高於平均值的計劃則須向該方案提撥資金。其模型與HCC對應方式與Medicare Advantage略有不同，但目的相同：讓給付在不同健康風險之間趨於公平。</p>
+    <p><strong>Medicaid管理式照護</strong>的風險調整方式因州、因方案而異。有些州採用以HCC為基礎的模型；有些則採用較簡單的人口統計因子或病況分類。各州Medicaid機構會在其管理式照護合約中訂明風險調整方法。</p>
+    <p><strong>商業保險計劃</strong>不受相同的CMS風險調整架構規範，不過保險公司會使用自己內部的風險模型來進行定價與族群管理。</p>
 
     <h2>相關主題</h2>
-    <p>風險調整與多項專業職能相互交織。另請參閱：</p>
+    <p>風險調整與多項專業職能息息相關。另請參閱：</p>
     <ul>
-      <li><a href="/zh-Hant/operations.html">健康計劃營運</a> — 計劃如何組織臨床和財務職能。
-      <li><a href="/zh-Hant/providers.html">醫療服務提供者與帳務</a> — 醫療服務提供者如何提交就診資料和理賠申請。
-      <li><a href="/zh-Hant/star-ratings.html">星級評定與品質衡量</a> — 相關的 CMS 指標及其資料來源。
-      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS RADV 項目</a> — 官方監管框架和稽核程序。
+      <li><a href="/zh-Hant/operations.html">健康計劃營運</a> — 計劃如何組織臨床與財務職能。
+      <li><a href="/zh-Hant/providers.html">醫療服務提供者與計費</a> — 醫療服務提供者如何提交就診與理賠申請。
+      <li><a href="/zh-Hant/star-ratings.html">星級評定與品質衡量</a> — 相關的CMS指標及其資料來源。
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS RADV方案</a> — 官方監管架構與稽核程序。
     </ul>
 
     <h2>詞彙表</h2>
@@ -200,50 +199,49 @@ else if (printMq.addListener) { printMq.addListener(onPrintChange); }
       <table>
         <thead>
           <tr>
-            <th>術語</th>
+            <th>詞彙</th>
             <th>定義</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>HCC（階層式病況分類）</strong></td>
-            <td>CMS 用來衡量健康狀況和預測費用、具臨床意義的診斷分組。每個 HCC 都有指定的風險權重。</td>
+            <td><strong>HCC（階層式病況類別）</strong></td>
+            <td>CMS用來衡量健康狀況並預測成本的一種具臨床意義的診斷分組。每個HCC都有指定的風險權重。</td>
           </tr>
           <tr>
             <td><strong>RAF（風險調整因子）</strong></td>
-            <td>會員的個人風險分數，計算方式為適用 HCC 權重的總和加上人口統計因子。RAF &gt; 1.0 表示風險高於平均；RAF &lt; 1.0 表示風險低於平均。用於調整計劃的按人頭付費金額。</td>
+            <td>會員個人的風險評分，計算方式為所有適用HCC權重加上人口統計因子的總和。RAF大於1.0代表風險高於平均值；RAF小於1.0代表風險低於平均值。用於調整計劃的按人頭付費給付。</td>
           </tr>
           <tr>
             <td><strong>RADV（風險調整資料驗證）</strong></td>
-            <td>CMS 規定的稽核流程，驗證計劃為 HCC 編碼和付款所提交診斷的準確性。稽核人員審查病歷，確認診斷有記錄且有臨床支持。</td>
+            <td>CMS要求進行的稽核程序，用來驗證計劃為HCC編碼與給付目的所提交診斷的準確性。稽核人員會審查病歷，以確認診斷已被記錄且有臨床佐證。</td>
           </tr>
           <tr>
             <td><strong>MEAT</strong></td>
-            <td>記錄標準的縮寫：<strong>M</strong>edical record support（病歷支持）、<strong>E</strong>ncounter date during benefit year（福利年度內的就診日期）、<strong>A</strong>ctive management（積極管理）、<strong>T</strong>herapy/specificity（治療／具體性）。醫療服務提供者以 MEAT 為指引，做出準確的臨床記錄。</td>
+            <td>文件標準的縮寫：<strong>M</strong>病歷佐證、<strong>E</strong>就診日期須在福利年度內、<strong>A</strong>積極處理中、<strong>T</strong>療法／明確性。醫療服務提供者以MEAT作為準確臨床紀錄的指引。</td>
           </tr>
           <tr>
             <td><strong>TAMPER</strong></td>
-            <td>稽核標準的縮寫：<strong>T</strong>emporality（時間性，即就診發生在福利年度內）、<strong>A</strong>ccuracy of code selection（代碼選擇的準確性）、<strong>M</strong>edical record support（病歷支持）、<strong>P</strong>roper hierarchy application（正確套用階層規則）、<strong>E</strong>ncounter type validation（就診類型驗證）、<strong>R</strong>easonableness of diagnosis（診斷的合理性）。稽核人員以 TAMPER 評估編碼的有效性。</td>
+            <td>稽核標準的縮寫：<strong>T</strong>時間性（就診須在福利年度內）、<strong>A</strong>代碼選擇的準確性、<strong>M</strong>病歷佐證、<strong>P</strong>層級規則的正確套用、<strong>E</strong>就診類型驗證、<strong>R</strong>診斷的合理性。稽核人員以TAMPER評估編碼的有效性。</td>
           </tr>
           <tr>
             <td><strong>就診資料</strong></td>
-            <td>由醫療服務提供者提交的理賠申請和臨床記錄，記載會員的就診、服務、診斷和處置。就診資料輸入 HCC 模型。</td>
+            <td>由醫療服務提供者提交、記錄會員就診、服務項目、診斷與處置的理賠申請與臨床紀錄。就診資料會提供給HCC模型。</td>
           </tr>
           <tr>
             <td><strong>按人頭付費</strong></td>
-            <td>無論使用多少服務，每月按每位會員支付給計劃的固定款項。計劃為所有承保服務承擔財務風險。風險調整依據會員健康狀況修正按人頭付費金額。</td>
+            <td>無論實際使用多少服務，計劃每月按每位會員收取的固定給付。計劃承擔所有承保服務的財務風險。風險調整會依會員健康狀況修正按人頭付費的金額。</td>
           </tr>
           <tr>
-            <td><strong>階層規則</strong></td>
-            <td>在 HCC 模型中的一項規則：如果會員符合同一病況相關的多個 HCC，只計算最嚴重的那一個。階層規則防止重複計算，確保 HCC 的準確性。</td>
+            <td><strong>層級規則</strong></td>
+            <td>在HCC模型中，若會員符合多個與同一病況相關的HCC資格，只計入其中最嚴重的一項。層級規則可避免重複計算，並確保HCC的準確性。</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div class="note">
-      <strong>請向原始來源查證：</strong>本頁概略描述風險調整的運作方式。有關當前 HCC 模型版本、RAF 計算細節、RADV 程序和合規指引，請參閱 <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov（RADV）</a>、您所屬計劃的合規政策，以及您所在州的管理式醫療法規。本內容僅供教育用途，不構成法律或合規建議。
-    </div>
+      <strong>請以原始來源為準：</strong>本頁僅概略描述風險調整的運作方式。若需目前的HCC模型版本、RAF計算細節、RADV程序與合規指引，請參閱<a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov（RADV）</a>、您所屬計劃的合規政策，以及您所在州的管理式照護法規。本內容僅供教育用途，不構成法律或合規建議。</div>
 
   </div>
 <!--newsletter-->
