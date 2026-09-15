@@ -52,8 +52,8 @@
   "hash": "cde2c05195b22ebbaba1a171c894361e"
  },
  "costs.html": {
-  "date": "2026-09-08",
-  "hash": "cd23d5b97bf586500901649b38d9ceaa"
+  "date": "2026-09-15",
+  "hash": "24d91c894f3209ab56fedfc563820e29"
  },
  "coverage-basics.html": {
   "date": "2026-09-08",
@@ -113,7 +113,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-15",
-  "hash": "f12136f3d8dbded52f8a050d583bdeb0"
+  "hash": "7c37bd4966762d43221a4a9f09fbeb7c"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-08",
@@ -200,8 +200,8 @@
   "hash": "4f66e038e74dd7e5254e0822c1e26148"
  },
  "medicare-advantage.html": {
-  "date": "2026-09-08",
-  "hash": "1e31500cc26a139ba2e4d411f825a6ec"
+  "date": "2026-09-15",
+  "hash": "f571993f1e8b257b8f3a3cc032469dfa"
  },
  "medicare-ambulance-emergency-room.html": {
   "date": "2026-09-08",
@@ -272,8 +272,8 @@
   "hash": "1352f1a406240d969cd5a460e3d1f45a"
  },
  "medicare-open-enrollment-2027.html": {
-  "date": "2026-09-08",
-  "hash": "e3233de034f6a36c546cd268c4d43dc0"
+  "date": "2026-09-15",
+  "hash": "1e108a93df24c1836408a2e440719391"
  },
  "medicare-part-a.html": {
   "date": "2026-09-08",
@@ -288,8 +288,8 @@
   "hash": "aa08dcb3f9466cfab7543fd3e37c8c74"
  },
  "medicare-part-d.html": {
-  "date": "2026-09-08",
-  "hash": "33b05a6c2b36d26ad5bf305c07e91ce3"
+  "date": "2026-09-15",
+  "hash": "adcbabfe901b45a3227418cd35479f4e"
  },
  "medicare-physical-therapy.html": {
   "date": "2026-09-10",
@@ -458,6 +458,14 @@
  "switching-back-to-original-medicare.html": {
   "date": "2026-07-28",
   "hash": "cfcf0155325973a741d046e587980d67"
+ },
+ "switching-medicare-advantage-plans.html": {
+  "date": "2026-09-15",
+  "hash": "b872a37759aa617e29287a7dd3918a99"
+ },
+ "switching-medicare-part-d-formulary-check.html": {
+  "date": "2026-09-15",
+  "hash": "529a0a90156a0efaa26cb33a3660f661"
  },
  "terms-of-use.html": {
   "date": "2026-09-08",
