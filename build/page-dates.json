@@ -57,7 +57,7 @@
  },
  "coverage-basics.html": {
   "date": "2026-09-15",
-  "hash": "a0837db9809454d271e655c298b0099c"
+  "hash": "24e569788e79df21280f63e7061e12f6"
  },
  "directories.html": {
   "date": "2026-09-15",
@@ -105,7 +105,11 @@
  },
  "glossary.html": {
   "date": "2026-09-15",
-  "hash": "06b60c17dd645976bba7081763f516a1"
+  "hash": "a1b1156e20ce48c714ae853335334839"
+ },
+ "health-insurance-terms-chinese-english.html": {
+  "date": "2026-09-15",
+  "hash": "0719b4eb43420c75a4388a422e83e148"
  },
  "hospital-observation-status.html": {
   "date": "2026-09-15",
@@ -113,7 +117,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-15",
-  "hash": "d5e308e0618c0ae865c5dff17ef54381"
+  "hash": "f744e4dc15f5b4fe91208c8f6356ab94"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-15",
@@ -162,6 +166,10 @@
  "medicaid-home-care-hcbs-waivers.html": {
   "date": "2026-09-15",
   "hash": "d51bbe4fce0e101fdf1830953a6242e9"
+ },
+ "medicaid-medicare-chinese-nicknames.html": {
+  "date": "2026-09-15",
+  "hash": "6b93d087274fe42208a782fbf125b9ef"
  },
  "medicaid-pregnancy.html": {
   "date": "2026-09-15",
@@ -263,6 +271,10 @@
   "date": "2026-09-15",
   "hash": "8c5833ead2d18f527b7092246d42d194"
  },
+ "medicare-medicaid-chinese.html": {
+  "date": "2026-09-15",
+  "hash": "d7f0e607dbeb5bc06e80e02ee4b55185"
+ },
  "medicare-medical-equipment-dme.html": {
   "date": "2026-09-15",
   "hash": "785bf4a9fa5fdc1cf33e9a8a300105c0"
@@ -353,7 +365,7 @@
  },
  "medicare-vs-medicaid.html": {
   "date": "2026-09-15",
-  "hash": "f2af07ffa7b0c9df0789899f89e7ad23"
+  "hash": "aa3424d1082fa4b210c5bb59dcbd5d2a"
  },
  "medicare-weight-loss-drugs.html": {
   "date": "2026-09-15",
@@ -379,6 +391,10 @@
   "date": "2026-09-15",
   "hash": "9aed301e626703234020798d58e24a95"
  },
+ "multigenerational-household-coverage.html": {
+  "date": "2026-09-15",
+  "hash": "d6ea7caf23413ec12a25c3663fe1c231"
+ },
  "navigators.html": {
   "date": "2026-09-15",
   "hash": "969459fc28f4da0895c6742bcae9dc58"
@@ -397,7 +413,7 @@
  },
  "planning-for-two.html": {
   "date": "2026-09-15",
-  "hash": "cede14187cd4f40c54fa100660e78512"
+  "hash": "357edd1d5b27e1c01b966d5e9fb3b0e3"
  },
  "policy-changes.html": {
   "date": "2026-09-15",
