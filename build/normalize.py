@@ -70,6 +70,7 @@ def _esc(s):
     return s.replace("&", "&amp;")
 
 ACTIVE = {
+    "annual-review-workbook.html": "members",
     "medicare-enrollment-calculator.html": "members",
     "index.html": "home",
     # The Basics + program deep-dives
@@ -114,6 +115,9 @@ ACTIVE = {
     # Content-gap pages (2026-09-15)
     "medicare-savings-programs.html": "members", "medicaid-renewal.html": "members",
     "medical-interpreter-rights.html": "members", "medicare-vs-medicaid.html": "basics",
+    "medicare-card-replacement.html": "members",
+    "medigap-plan-g-vs-plan-n.html": "basics",
+    "medicare-five-star-special-enrollment-period.html": "members",
     # Content-gap pages (2026-09-15, AEP seasonal cluster)
     "medicare-plan-comparison-2027.html": "members", "medicare-costs-2027.html": "members",
     "switching-medicare-advantage-plans.html": "members",
