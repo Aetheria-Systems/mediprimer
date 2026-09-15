@@ -118,6 +118,7 @@ ACTIVE = {
     "medicare-card-replacement.html": "members",
     "medigap-plan-g-vs-plan-n.html": "basics",
     "medicare-five-star-special-enrollment-period.html": "members",
+    "medicaid-sponsor-deeming.html": "members",
     # Content-gap pages (2026-09-15, AEP seasonal cluster)
     "medicare-plan-comparison-2027.html": "members", "medicare-costs-2027.html": "members",
     "switching-medicare-advantage-plans.html": "members",
