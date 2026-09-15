@@ -12,8 +12,8 @@
   "hash": "343d4a700b2a860c16d8acd3b6bece29"
  },
  "basics.html": {
-  "date": "2026-09-08",
-  "hash": "9b03de51166c76b9e161ea8c3aece2c6"
+  "date": "2026-09-15",
+  "hash": "8dbf83b0b5e0cf11e48f1c7c10d25cef"
  },
  "brokers.html": {
   "date": "2026-09-08",
@@ -100,8 +100,8 @@
   "hash": "94967c2719ff9c85f5c7b044e35badb9"
  },
  "getting-help.html": {
-  "date": "2026-09-08",
-  "hash": "9df980cde5ba6881f64051e31ea99347"
+  "date": "2026-09-15",
+  "hash": "e0ea751495df45b263d5f30b01f65560"
  },
  "glossary.html": {
   "date": "2026-09-08",
@@ -112,8 +112,8 @@
   "hash": "c519614dafc6c00f4a460bb0f9e605fd"
  },
  "how-do-i.html": {
-  "date": "2026-09-10",
-  "hash": "b75935fa8ccf00d45a815b2f4f736f95"
+  "date": "2026-09-15",
+  "hash": "f12136f3d8dbded52f8a050d583bdeb0"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-08",
@@ -152,8 +152,8 @@
   "hash": "6f9467892066d3c569be0488d8f80100"
  },
  "medicaid-eligibility.html": {
-  "date": "2026-09-08",
-  "hash": "2d5ed8819048609946fa66d5a6288e63"
+  "date": "2026-09-15",
+  "hash": "ad1830c37d6621ebd777de0d0e090484"
  },
  "medicaid-estate-recovery.html": {
   "date": "2026-09-08",
@@ -166,6 +166,10 @@
  "medicaid-pregnancy.html": {
   "date": "2026-09-08",
   "hash": "bc1458e7a6e55cf1f3ab78ba4b2fc31b"
+ },
+ "medicaid-renewal.html": {
+  "date": "2026-09-15",
+  "hash": "3077081ff4bf01d516731fc824b304db"
  },
  "medicaid-spend-down-look-back.html": {
   "date": "2026-09-08",
@@ -182,6 +186,10 @@
  "medicaid-work-requirements.html": {
   "date": "2026-09-08",
   "hash": "5928053498e2e411790563e68192eb55"
+ },
+ "medical-interpreter-rights.html": {
+  "date": "2026-09-15",
+  "hash": "da6122ec82b9d8d247a2864b0704fe8c"
  },
  "medicare-advantage-prior-authorization.html": {
   "date": "2026-09-08",
@@ -291,6 +299,10 @@
   "date": "2026-09-10",
   "hash": "4762222cbc1521785fb175a39c0128da"
  },
+ "medicare-savings-programs.html": {
+  "date": "2026-09-15",
+  "hash": "38db68bc6fd9e611aac0bfa9593e6444"
+ },
  "medicare-scams.html": {
   "date": "2026-09-08",
   "hash": "ece1cd74599a290ea07746d34926f694"
@@ -330,6 +342,10 @@
  "medicare-vaccines.html": {
   "date": "2026-09-08",
   "hash": "ae5ac709a63bf396a6198722aebca341"
+ },
+ "medicare-vs-medicaid.html": {
+  "date": "2026-09-15",
+  "hash": "45b94f375ed6f31c1f63deec495107cf"
  },
  "medicare-weight-loss-drugs.html": {
   "date": "2026-09-08",
@@ -404,8 +420,8 @@
   "hash": "eaebb58a022a2d3d01d984213b90edb9"
  },
  "rights.html": {
-  "date": "2026-09-08",
-  "hash": "446fc94e4ac8f70a7ed62b31cea94dba"
+  "date": "2026-09-15",
+  "hash": "aebdcfef09e9804f2c1f3f8e8f6923c9"
  },
  "risk-adjustment.html": {
   "date": "2026-09-08",
