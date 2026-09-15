@@ -68,12 +68,27 @@ def apply_to(path, s, lang):
     return False
 
 
+def seasonal_for(data, lang, base):
+    """Overlay the current month's seasonal copy, if any.
+
+    Open enrollment (Oct 15 - Dec 7) is the one period this audience is
+    actively looking; a concrete offer then converts far better than the
+    evergreen 'rules change' line."""
+    import datetime
+    month = str(datetime.date.today().month)
+    for months, langs in (data.get("seasonal") or {}).items():
+        if month in months.split(","):
+            over = langs.get(lang) or langs.get("en") or {}
+            return {**base, **over}
+    return base
+
+
 def main():
     data = json.loads(STRINGS.read_text(encoding="utf-8"))
     en = data["en"]
     changed = 0
     for lang in ["en"] + launched():
-        s = data.get(lang, en)
+        s = seasonal_for(data, lang, data.get(lang, en))
         d = PUB if lang == "en" else PUB / lang
         if not d.is_dir():
             continue
