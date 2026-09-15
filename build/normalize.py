@@ -70,6 +70,7 @@ def _esc(s):
     return s.replace("&", "&amp;")
 
 ACTIVE = {
+    "medicare-enrollment-calculator.html": "members",
     "index.html": "home",
     # The Basics + program deep-dives
     "basics.html": "basics", "coverage-basics.html": "basics", "plan-types.html": "basics",
