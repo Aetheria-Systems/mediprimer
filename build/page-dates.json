@@ -97,7 +97,7 @@
  },
  "enrollment-calendar.html": {
   "date": "2026-09-15",
-  "hash": "ea4ed193002523d6957ae11f12107743"
+  "hash": "3532c4dbec54edc25c23b477205424f5"
  },
  "enrollment.html": {
   "date": "2026-09-15",
@@ -121,7 +121,7 @@
  },
  "how-do-i.html": {
   "date": "2026-09-15",
-  "hash": "f744e4dc15f5b4fe91208c8f6356ab94"
+  "hash": "bd8d4e5e391bc968932b2481dc695c90"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-15",
@@ -186,6 +186,10 @@
  "medicaid-spend-down-look-back.html": {
   "date": "2026-09-15",
   "hash": "c8c7f2552f3acf52d16f44ef888043f8"
+ },
+ "medicaid-sponsor-deeming.html": {
+  "date": "2026-09-15",
+  "hash": "410638ba3d3854c76573989764d3af74"
  },
  "medicaid-spousal-impoverishment.html": {
   "date": "2026-09-15",
@@ -281,7 +285,7 @@
  },
  "medicare-immigrants.html": {
   "date": "2026-09-15",
-  "hash": "0b8c7f032815e91a8adfed7c40f29fd6"
+  "hash": "e73be9389beb37b98f9d4c07813102bf"
  },
  "medicare-long-term-care.html": {
   "date": "2026-09-15",
@@ -397,7 +401,7 @@
  },
  "medigap.html": {
   "date": "2026-09-15",
-  "hash": "1afce64b41b9f932e85d7029bada5dc6"
+  "hash": "3c77976d63b3c41edcb9b8c426aa852a"
  },
  "member-journey.html": {
   "date": "2026-09-15",
@@ -481,7 +485,7 @@
  },
  "star-ratings.html": {
   "date": "2026-09-15",
-  "hash": "7fe423f798c955917437ff317745e683"
+  "hash": "b7a0087e10d8dcf282ed8468c7c15e7f"
  },
  "state-medicaid.html": {
   "date": "2026-09-15",
