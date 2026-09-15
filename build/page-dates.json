@@ -231,6 +231,10 @@
   "date": "2026-09-08",
   "hash": "2b0a3f9f6a46ab06cfad364ebc504e82"
  },
+ "medicare-costs-2027.html": {
+  "date": "2026-09-15",
+  "hash": "055c3b37af7bf03c8b7e328dc9d068a7"
+ },
  "medicare-dental-vision-hearing.html": {
   "date": "2026-09-08",
   "hash": "1d698e9c204d05ea353c45773481c1dc"
@@ -290,6 +294,10 @@
  "medicare-physical-therapy.html": {
   "date": "2026-09-10",
   "hash": "2964cc250cff59de705c1c595c9d2017"
+ },
+ "medicare-plan-comparison-2027.html": {
+  "date": "2026-09-15",
+  "hash": "a829a663459370b47558b60d1ea71bb2"
  },
  "medicare-prescription-payment-plan.html": {
   "date": "2026-09-08",
