@@ -7,6 +7,10 @@
   "date": "2026-09-15",
   "hash": "7765c574a6ba6e3413f0aba0c38f2dd5"
  },
+ "annual-review-workbook.html": {
+  "date": "2026-09-15",
+  "hash": "dc56a17f1a515a09a10c5851704ea485"
+ },
  "appeals-timelines.html": {
   "date": "2026-09-15",
   "hash": "4767616b6c2e45db8d55f200ffd10473"
@@ -25,7 +29,7 @@
  },
  "checklists.html": {
   "date": "2026-09-15",
-  "hash": "53d853fc8544e8ac955d963925a73944"
+  "hash": "82b9d6654e384ec13242ab082173ded2"
  },
  "chip.html": {
   "date": "2026-09-15",
@@ -217,7 +221,7 @@
  },
  "medicare-annual-notice-of-change.html": {
   "date": "2026-09-15",
-  "hash": "ad77310da04049a58f9d1a1af8316a86"
+  "hash": "62c5eb6231a9575fa13aac24dd9bff26"
  },
  "medicare-assignment-excess-charges.html": {
   "date": "2026-09-06",
@@ -230,6 +234,10 @@
  "medicare-cancer-treatment.html": {
   "date": "2026-09-15",
   "hash": "ded453b541f4eb367877743bda2da86e"
+ },
+ "medicare-card-replacement.html": {
+  "date": "2026-09-15",
+  "hash": "10da0537131622e6537a043d62ca05de"
  },
  "medicare-cataract-surgery.html": {
   "date": "2026-09-15",
@@ -258,6 +266,10 @@
  "medicare-esrd-kidney-failure.html": {
   "date": "2026-09-15",
   "hash": "4bf1996a6a609e43428a33abb1389eaf"
+ },
+ "medicare-five-star-special-enrollment-period.html": {
+  "date": "2026-09-15",
+  "hash": "f422ee7cc4ad33b6a0e2bc7b7dabcae8"
  },
  "medicare-flex-card.html": {
   "date": "2026-09-15",
@@ -289,7 +301,7 @@
  },
  "medicare-open-enrollment-2027.html": {
   "date": "2026-09-15",
-  "hash": "24d7a0d0f6bd5732d91f37f446c206af"
+  "hash": "bdb4c3854b82ba42ba3c03c59a95f13f"
  },
  "medicare-part-a.html": {
   "date": "2026-09-15",
@@ -378,6 +390,10 @@
  "medicare-wellness-visit-vs-physical.html": {
   "date": "2026-09-15",
   "hash": "cab33f1aaf022bf3ea4d416306554d64"
+ },
+ "medigap-plan-g-vs-plan-n.html": {
+  "date": "2026-09-15",
+  "hash": "e0fd36f30ab273aed149cbfb3b05778a"
  },
  "medigap.html": {
   "date": "2026-09-15",
@@ -501,7 +517,7 @@
  },
  "using-plan-finder.html": {
   "date": "2026-09-15",
-  "hash": "a27aa789103270e40c3871671538c376"
+  "hash": "f64e4ce17c2ec5f3b8a9147743994389"
  },
  "veterans-medicare.html": {
   "date": "2026-09-15",

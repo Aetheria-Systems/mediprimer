@@ -502,3 +502,26 @@ aside.newsletter p { margin: 0 0 0.75rem; font-size: 0.95rem; }
 .calc-disclaimer { margin-top: 1.5rem; color: #4a5568; }
 
 .tool-callout { background: #eef5fb; border-left: 4px solid #1f4e79; padding: 0.7rem 0.9rem; border-radius: 6px; }
+
+.workbook { margin: 1.5rem 0; }
+.wb-section { border: 1px solid #dfe4ea; border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 1.2rem; }
+.wb-section h2 { margin-top: 0; color: #1f4e79; font-size: 1.15rem; }
+.wb-hint { font-size: 0.9rem; color: #4a5568; margin-top: -0.3rem; }
+.wb-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.wb-field { flex: 1 1 14rem; display: flex; flex-direction: column; }
+.wb-field.wb-wide { flex: 1 1 100%; }
+.wb-field label { font-size: 0.85rem; font-weight: 600; margin-bottom: 0.2rem; }
+.wb-field input, .wb-table input { padding: 0.5rem; border: 1px solid #b9c6d4; border-radius: 4px; font-size: 1rem; width: 100%; min-height: 44px; }
+.wb-table { width: 100%; border-collapse: collapse; }
+.wb-table th { text-align: left; font-size: 0.85rem; padding: 0.4rem; border-bottom: 2px solid #1f4e79; }
+.wb-table td { padding: 0.25rem; border-bottom: 1px solid #eef1f4; }
+.wb-deadline { font-weight: 700; color: #c9a227; margin-bottom: 0; }
+.wb-actions { display: flex; gap: 0.6rem; flex-wrap: wrap; align-items: center; margin-top: 1rem; }
+.wb-print, .wb-clear { padding: 0.6rem 1.1rem; border-radius: 5px; font-size: 1rem; cursor: pointer; min-height: 44px; border: none; }
+.wb-print { background: #1f4e79; color: #fff; }
+.wb-clear { background: #eef1f4; color: #1f4e79; border: 1px solid #b9c6d4; }
+@media print {
+  .site-header, .mp-chatbot, .wb-actions, aside.newsletter, .site-footer { display: none !important; }
+  .wb-section { break-inside: avoid; border-color: #999; }
+  .wb-field input, .wb-table input { border: none; border-bottom: 1px solid #333; border-radius: 0; }
+}
