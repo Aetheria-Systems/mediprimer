@@ -1,4 +1,8 @@
 {
+ "_costcard-fragment.html": {
+  "date": "2026-09-15",
+  "hash": "c3e27b8c822425a7f94ade44768b7d77"
+ },
  "about.html": {
   "date": "2026-09-15",
   "hash": "daaa36aa83b0e6e839bcb6315f4a8f93"
@@ -9,7 +13,7 @@
  },
  "annual-review-workbook.html": {
   "date": "2026-09-15",
-  "hash": "dc56a17f1a515a09a10c5851704ea485"
+  "hash": "fd3f75074591514bf995a3390e39f847"
  },
  "appeals-timelines.html": {
   "date": "2026-09-15",
@@ -253,7 +257,11 @@
  },
  "medicare-costs-2027.html": {
   "date": "2026-09-15",
-  "hash": "dee66085e968921a894633a686953342"
+  "hash": "97080948910d0b3b9c3d456ca99f8109"
+ },
+ "medicare-costs-card.html": {
+  "date": "2026-09-15",
+  "hash": "082ff910721fa5a8cadaf52c672fc7bf"
  },
  "medicare-dental-vision-hearing.html": {
   "date": "2026-09-15",
