@@ -110,6 +110,9 @@ ACTIVE = {
     "emergency-medicaid.html": "members", "does-my-doctor-accept-medicare.html": "members",
     "medicare-annual-notice-of-change.html": "members", "medicare-physical-therapy.html": "members",
     "medicare-preventive-screening-costs.html": "members",
+    # Content-gap pages (2026-09-15)
+    "medicare-savings-programs.html": "members", "medicaid-renewal.html": "members",
+    "medical-interpreter-rights.html": "members", "medicare-vs-medicaid.html": "basics",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
