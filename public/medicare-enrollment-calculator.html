@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare Sign-Up Date Calculator — MediPrimer</title>
+<meta name="description" content="Enter your birthday to see your exact 7-month Medicare sign-up window, when coverage starts for each choice, and what waiting could cost you for life.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-enrollment-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Sign-Up Date Calculator — MediPrimer">
+<meta property="og:description" content="Enter your birthday to see your exact 7-month Medicare sign-up window, when coverage starts for each choice, and what waiting could cost you for life.">
+<meta property="og:url" content="https://mediprimer.org/medicare-enrollment-calculator.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicare Sign-Up Date Calculator — MediPrimer">
+<meta name="twitter:description" content="Enter your birthday to see your exact 7-month Medicare sign-up window, when coverage starts for each choice, and what waiting could cost you for life.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-enrollment-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-enrollment-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Sign-Up Date Calculator", "description": "Enter your birthday to see your exact 7-month Medicare sign-up window, when coverage starts for each choice, and what waiting could cost you for life.", "url": "https://mediprimer.org/medicare-enrollment-calculator.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-15", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Sign-Up Date Calculator", "item": "https://mediprimer.org/medicare-enrollment-calculator.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Professionals</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Professionals menu">▾</button>
+        <div class="dropdown">
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">Free Tool</p>
+    <h1>When can I sign up for Medicare?</h1>
+    <p>Enter your date of birth. You'll get your exact sign-up window, when coverage starts depending on when you act, and what waiting could cost you.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Medicare gives you a seven-month window built around your 65th birthday. Sign up in the right part of it and coverage starts on time with no penalty; sign up late and you can pay more every month for the rest of your life. This works it out for you.</p>
+
+    <div id="enrollment-calculator" class="calculator"></div>
+
+    <h2>How the window works</h2>
+    <p>Your Initial Enrollment Period runs for seven months: the three months before the month you turn 65, your birthday month, and the three months after. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/how-do-i-sign-up-for-medicare -->  If you sign up in the first three months, coverage starts the first day of the month you turn 65. If you wait until your birthday month or later, coverage starts the first day of the following month — which can leave you uncovered for weeks.</p>
+    <p>One quirk catches people out: if you were born on the first of a month, Medicare treats you as turning 65 in the <em>previous</em> month, so your whole window shifts a month earlier.</p>
+
+    <h2>What waiting costs</h2>
+    <p>If you miss the window entirely and don't have other creditable coverage, Part B adds <strong>10% for each full year</strong> you could have had it, and that increase lasts as long as you have Medicare. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Part D adds <strong>1% of the national base beneficiary premium for each month</strong> you went without drug coverage, also for as long as you have it.</p>
+    <p>These penalties are the single most expensive avoidable mistake in Medicare, and they are permanent. That is why the window matters more than almost anything else on this site.</p>
+
+    <h2>When the normal rules don't apply</h2>
+    <ul>
+      <li><strong>Still working past 65</strong> with coverage from an employer with 20 or more employees? You may be able to delay Part B without any penalty — see <a href="/working-past-65.html">Working Past 65</a>.</li>
+      <li><strong>Lost other coverage?</strong> A Special Enrollment Period may open outside these dates — see <a href="/enrollment.html">Enrollment &amp; Deadlines</a>.</li>
+      <li><strong>Missed everything?</strong> General Enrollment runs January 1 to March 31 each year.</li>
+    </ul>
+
+    <h2>Next steps</h2>
+    <p>Once you know your dates, the <a href="/turning-65.html">Turning 65 walkthrough</a> covers the decisions you'll actually make, and <a href="/getting-help.html">Getting Help Paying</a> explains the programs that cover premiums if your income is limited. Free one-on-one help is available from your <a href="/ship-directory.html">SHIP counselor</a>.</p>
+
+    <p class="calc-disclaimer"><small>This tool does the date arithmetic from the rules published by Medicare. It is general information, not advice about your situation, and it cannot see your work history or other coverage. Always confirm with Medicare or your SHIP before acting.</small></p>
+  </div>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+  </main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/medicare-enrollment-calculator.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
