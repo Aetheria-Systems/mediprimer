@@ -1,0 +1,23 @@
+{
+ "_doc": "Figures for the printable Medicare cost reference card. EVERY value must be verified against medicare.gov and carry its source. CMS publishes next year's numbers in late Oct/early Nov — update 'year', the values, and 'verified' then, and the card becomes the new edition automatically. Do NOT pre-fill a future year with estimates.",
+ "year": 2026,
+ "verified": "2026-09-15",
+ "sources": [
+  "https://www.medicare.gov/basics/costs/medicare-costs",
+  "https://www.medicare.gov/drug-coverage-part-d/costs-for-medicare-drug-coverage"
+ ],
+ "rows": {
+  "partA_premium": "$0 for most people",
+  "partA_premium_buyin": "$311 or $565 a month if you have to buy it",
+  "partA_deductible": "$1,736 per benefit period",
+  "partA_days61_90": "$434 a day",
+  "partA_lifetime": "$868 a day",
+  "partA_snf": "$217 a day (days 21–100)",
+  "partB_premium": "$202.90 a month (more if your income is higher)",
+  "partB_deductible": "$283 a year",
+  "partB_coinsurance": "Usually 20% of the approved amount",
+  "partD_cap": "$2,100 a year, then you pay nothing more for covered drugs",
+  "partD_deductible_max": "No plan may charge more than $615",
+  "partD_base_premium": "$38.99 a month (used to figure late penalties)"
+ }
+}
