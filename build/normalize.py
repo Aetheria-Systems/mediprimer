@@ -117,6 +117,10 @@ ACTIVE = {
     "medicare-plan-comparison-2027.html": "members", "medicare-costs-2027.html": "members",
     "switching-medicare-advantage-plans.html": "members",
     "switching-medicare-part-d-formulary-check.html": "members",
+    # Content-gap pages (2026-09-15, ZH-cluster)
+    "medicare-medicaid-chinese.html": "basics", "medicaid-medicare-chinese-nicknames.html": "basics",
+    "health-insurance-terms-chinese-english.html": "glossary",
+    "multigenerational-household-coverage.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
