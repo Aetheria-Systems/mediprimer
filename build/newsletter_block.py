@@ -57,11 +57,23 @@ def apply_to(path, s, lang):
         new = re.sub(re.escape(START) + r".*?" + re.escape(END),
                      lambda m: block, html, count=1, flags=re.DOTALL)
     else:
-        # Insert at the end of the page's own content, just before </main>.
-        i = html.rfind("</main>")
-        if i < 0:
-            return False
-        new = html[:i] + block + "\n  " + html[i:]
+        # Place it after the SECOND section heading, not at the very end.
+        # Nine days at the bottom of the page produced zero signups from
+        # ~500 sessions (2026-09-17): on a reference site most visitors get
+        # their answer and leave long before the footer. After two sections
+        # the reader has had the answer and is still on the page.
+        import re as _re
+        heads = [m for m in _re.finditer(r"\n(\s*)<h2[ >]", html)
+                 if html[:m.start()].rfind("<noscript") <= html[:m.start()].rfind("</noscript>")]
+        if len(heads) >= 3:
+            at = heads[2].start()          # before the third heading
+        elif heads:
+            at = heads[-1].start()
+        else:
+            at = html.rfind("</main>")
+            if at < 0:
+                return False
+        new = html[:at] + "\n" + block + "\n" + html[at:]
     if new != html:
         path.write_text(new, encoding="utf-8")
         return True
