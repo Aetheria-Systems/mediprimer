@@ -688,6 +688,12 @@ class TestGlossaryWholeWord:
         ok, missing = glossary_ok(en_html, tr_html, {"Claim": "Reclamación", "Network": "Red de Proveedores"})
         assert ok, missing
 
+    def test_underscore_joined_token_does_not_trigger_headword(self):
+        en_html = "<html><body><main><p>See the Claim_Status field.</p></main></body></html>"
+        tr_html = "<html><body><main><p>Vea el campo Claim_Status.</p></main></body></html>"
+        ok, missing = glossary_ok(en_html, tr_html, {"Claim": "Reclamación"})
+        assert ok, missing
+
     def test_whole_word_headword_still_enforced(self):
         en_html = "<html><body><main><p>File an Appeal today.</p></main></body></html>"
         tr_html = "<html><body><main><p>Presente una queja hoy.</p></main></body></html>"

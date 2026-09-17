@@ -479,7 +479,7 @@ def glossary_ok(en_html, tr_html, terms):
 
     for en_term, tr_term in terms.items():
         # Only check if term actually appears as a whole word in English prose
-        if not re.search(r'(?<![A-Za-z0-9])' + re.escape(en_term) + r'(?![A-Za-z0-9])', en_visible):
+        if not re.search(r'(?<!\w)' + re.escape(en_term) + r'(?!\w)', en_visible):
             continue
 
         # Verify translation appears in translated HTML. Case-insensitive:
