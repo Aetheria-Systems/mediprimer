@@ -18,10 +18,17 @@ LOG="$SEO/log/translate-$D.log"
 export LOG
 mkdir -p "$SEO/log"
 exec > >(tee -a "$LOG") 2>&1
+TEE_PID=$!
+# Before a failure email reads the log tail, wait for tee to flush what has
+# been written so far, then log synchronously to the file for the remainder.
+flush_log() {
+  exec >>"$LOG" 2>&1
+  wait "$TEE_PID" 2>/dev/null
+}
 log() { echo "[$(date +%H:%M:%S)] $*"; }
 
 log "=== MediPrimer translation sync start ($D) ==="
-cd "$BASE"
+cd "$BASE" || { log "FATAL: cannot cd to $BASE"; exit 1; }
 
 # --- 1. Parse launched languages from build/languages.json ----------------------
 LAUNCHED_LANGS=$(python3 -c "
@@ -75,7 +82,7 @@ for LANG in $LAUNCHED_LANGS; do
     echo "$TRANS_OUT" | tail -40
     log "--- end translate.py output ---"
     # Email failure and bail out
-    python3 - <<'PYMAIL'
+    flush_log; python3 - <<'PYMAIL'
 import smtplib, pathlib, datetime, os
 LOG = os.environ["LOG"]
 from email.message import EmailMessage
@@ -113,7 +120,7 @@ fi
 
 # --- 4. Rebuild (re-normalize, SEO gates) ----------------------------------------
 log "Running make build (re-normalize)..."
-make -C "$BASE" build >/dev/null || { log "FATAL: make build failed"; python3 - <<'PYMAIL'
+make -C "$BASE" build >/dev/null || { log "FATAL: make build failed"; flush_log; python3 - <<'PYMAIL'
 import smtplib, pathlib, datetime, os
 LOG = os.environ["LOG"]
 from email.message import EmailMessage
@@ -131,7 +138,7 @@ exit 1; }
 
 # --- 5. Validation gates --------------------------------------------------------
 log "Running validation..."
-python3 "$BASE/update/validate.py" || { log "FATAL: validate.py failed"; python3 - <<'PYMAIL'
+python3 "$BASE/update/validate.py" || { log "FATAL: validate.py failed"; flush_log; python3 - <<'PYMAIL'
 import smtplib, pathlib, datetime, os
 LOG = os.environ["LOG"]
 from email.message import EmailMessage
@@ -183,7 +190,7 @@ PYMAIL
 
 else
   log "FATAL: deploy failed; source holds translations, live unchanged."
-  python3 - <<'PYMAIL'
+  flush_log; python3 - <<'PYMAIL'
 import smtplib, pathlib, datetime, os
 LOG = os.environ["LOG"]
 from email.message import EmailMessage
@@ -192,7 +199,7 @@ msg = EmailMessage()
 msg["From"] = "Kurt Hamm <editor@mediprimer.org>"
 msg["To"] = "kurt@hamm.me"
 msg["Subject"] = f"MediPrimer translation sync {datetime.date.today()}: FAILED"
-msg.set_content("Deploy failed (rsync/chown/reload). Source tree holds translations but live site unchanged. Check logs.\n")
+msg.set_content("Deploy failed (rsync/chown/reload). Source tree holds translations but live site unchanged. Check logs.\n" + "\nLast 40 log lines (" + LOG + "):\n\n" + "".join(open(LOG, encoding="utf-8", errors="replace").readlines()[-40:]))
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, timeout=30) as s:
   s.login("kurt@hamm.me", pw_file.read_text(encoding="utf-8").strip())
   s.send_message(msg)
