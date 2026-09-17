@@ -514,7 +514,9 @@ def _translated_region(en_html):
 
 def _visible_text(html):
     """Prose only: drop comments (which carry source URLs) and tags (hrefs, alts)."""
-    return re.sub(r'<[^>]+>', ' ', re.sub(r'<!--.*?-->', ' ', html, flags=re.DOTALL))
+    text = re.sub(r'<!--.*?-->', ' ', html, flags=re.DOTALL)
+    text = re.sub(r'<[^>]+>', ' ', text)
+    return re.sub(r'\s+', ' ', text).strip()
 
 
 def run_gates(en_html, tr_html, back_text, terms):

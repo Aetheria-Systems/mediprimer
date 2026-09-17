@@ -60,7 +60,7 @@
   "hash": "50d39046bd616c6c5376473195abb44a"
  },
  "costs.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "0f75110258b596dc43c0e7b92f0e7b2c"
  },
  "coverage-basics.html": {
@@ -72,7 +72,7 @@
   "hash": "42b07c62c128e8fc8ea323339fdfd8cc"
  },
  "disability-medicare.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "dda0aa4c8f4fd1efcd98c42a65ac331e"
  },
  "disclaimer.html": {
@@ -84,7 +84,7 @@
   "hash": "c57b773f5f7ffe4bcbf08960b5c5fb8e"
  },
  "dual-eligible.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "e83e19434a5b52597cc6d31db6a7676d"
  },
  "edge-cases.html": {
@@ -104,12 +104,12 @@
   "hash": "3532c4dbec54edc25c23b477205424f5"
  },
  "enrollment.html": {
-  "date": "2026-09-15",
-  "hash": "db455a9d1cc23bf3a393cee6aed41e6a"
+  "date": "2026-09-17",
+  "hash": "d3e905696a9c54635d5583af93a9ef82"
  },
  "getting-help.html": {
-  "date": "2026-09-15",
-  "hash": "3f64aa9534a328dd41b2d0f8221890e9"
+  "date": "2026-09-17",
+  "hash": "6eabaaaf324d5df7d28739512d542844"
  },
  "glossary.html": {
   "date": "2026-09-15",
@@ -156,7 +156,7 @@
   "hash": "c7664a829c100fb1124b68ef4126ea4d"
  },
  "marketplace.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "b77b78cc22148ed10ada4efc3496ac3b"
  },
  "medicaid-dental-adults.html": {
@@ -164,7 +164,7 @@
   "hash": "598eddaf5cb6435769911e92409a56c9"
  },
  "medicaid-eligibility.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "ee0552c757a9050205f9df371f94bccd"
  },
  "medicaid-estate-recovery.html": {
@@ -264,7 +264,7 @@
   "hash": "082ff910721fa5a8cadaf52c672fc7bf"
  },
  "medicare-dental-vision-hearing.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "194cc4697e2252ef21bb5c377bec68a9"
  },
  "medicare-diabetes-coverage.html": {
@@ -284,8 +284,8 @@
   "hash": "f422ee7cc4ad33b6a0e2bc7b7dabcae8"
  },
  "medicare-flex-card.html": {
-  "date": "2026-09-15",
-  "hash": "f5f5e0d7193bfe5c839c75a67249c83f"
+  "date": "2026-09-17",
+  "hash": "1d8283c80a86701960d4d761df89b028"
  },
  "medicare-hospice-home-health.html": {
   "date": "2026-09-15",
@@ -312,7 +312,7 @@
   "hash": "6513c6f4dee22965495a9c23b66458b7"
  },
  "medicare-open-enrollment-2027.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "bdb4c3854b82ba42ba3c03c59a95f13f"
  },
  "medicare-part-a.html": {
@@ -372,7 +372,7 @@
   "hash": "7eb58d907358ef6256ec1b34496a8cef"
  },
  "medicare-star-ratings.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "4315f6ca1338ddd0c2e1aad2da9a7f4c"
  },
  "medicare-summary-notice.html": {
@@ -428,7 +428,7 @@
   "hash": "d6ea7caf23413ec12a25c3663fe1c231"
  },
  "navigators.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "969459fc28f4da0895c6742bcae9dc58"
  },
  "operations.html": {
@@ -460,7 +460,7 @@
   "hash": "8ca590817b867e3897a244b9e288b087"
  },
  "providers.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "70f6832521342bbb072b0469abe0b82d"
  },
  "questions-to-ask.html": {
@@ -492,7 +492,7 @@
   "hash": "b66a4f1424fa18f806d04a6e8fc7c816"
  },
  "star-ratings.html": {
-  "date": "2026-09-15",
+  "date": "2026-09-17",
   "hash": "b7a0087e10d8dcf282ed8468c7c15e7f"
  },
  "state-medicaid.html": {
