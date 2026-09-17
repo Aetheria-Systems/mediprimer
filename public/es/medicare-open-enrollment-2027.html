@@ -7,18 +7,42 @@
 <meta name="description" content="La Inscripción Abierta de Medicare para 2027 va del 15 de octubre al 7 de diciembre de 2026. Qué puede cambiar, qué no puede cambiar, cuándo comienza la nueva cobertura y cómo prepararse.">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
 <script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
-gtag("js", new Date());
-gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
-var printMq = window.matchMedia("print");
-function onPrintChange(e) {
-  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
-}
-if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
-else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
 </script>
 <!--/P:analytics-->
 <!--seo-->
