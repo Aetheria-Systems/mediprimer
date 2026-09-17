@@ -627,3 +627,70 @@ class TestRunGates:
         ok, failures = run_gates(en_html, tr_html, back_text, terms)
         assert not ok, "Orphaned vault token should fail"
         assert any("orphan" in f.lower() or "vault" in f.lower() or "⟦P" in " ".join(failures) for f in failures)
+
+
+class TestGateRegionParity:
+    """The facts gate must judge the same region translate.py sends for
+    translation: everything between </header> and <footer class="site-footer">
+    (i18n_lib.split_page), not just <main>. A promo strip before <main>
+    containing "$50" made index.html fail every night as "Extra: dollar '50'"
+    (found 2026-09-17; same for medicare-prescription-payment-plan.html "$0"
+    and annual-review-workbook.html "2027")."""
+
+    PAGE = """<html><head><title>T</title></head><body>
+<header class="site-header"><a href="/">Home</a></header>
+<div><!--seo--></div>
+<section class="promo"><p>Wegovy for $50 a month, if you qualify.</p></section>
+<main><p>Medicare covers hospital care.</p></main>
+<!--P:analytics-->
+<footer class="site-footer"><p>Footer</p></footer>
+</body></html>"""
+
+    TR = """<html><head><title>T</title></head><body>
+<header class="site-header"><a href="/">Inicio</a></header>
+<div><!--seo--></div>
+<section class="promo"><p>Wegovy por $50 al mes, si califica.</p></section>
+<main><p>Medicare cubre la atención hospitalaria.</p></main>
+<!--P:analytics-->
+<footer class="site-footer"><p>Pie</p></footer>
+</body></html>"""
+
+    def test_facts_outside_main_but_inside_translated_region_are_not_extra(self):
+        back_text = "Wegovy for $50 a month, if you qualify. Medicare covers hospital care."
+        ok, failures = run_gates(self.PAGE, self.TR, back_text, {})
+        assert ok, f"$50 is in the translated region, not an extra fact: {failures}"
+
+    def test_facts_dropped_from_pre_main_region_are_still_caught(self):
+        back_text = "Wegovy for a month, if you qualify. Medicare covers hospital care."
+        ok, failures = run_gates(self.PAGE, self.TR, back_text, {})
+        assert not ok
+        assert any("dollar" in f for f in failures), failures
+
+
+class TestGlossaryWholeWord:
+    """Glossary headwords must match as whole words in visible text.
+    Substring matching fired on 'Appealing' (costs.html), 'Networks'
+    (choosing-coverage.html) and on 'iClaim' inside an <!-- src: URL -->
+    comment (medicare-spouse-work-record.html), then demanded the exact
+    headword translation that correct prose never contains — every night."""
+
+    def test_inflected_form_does_not_trigger_headword(self):
+        en_html = "<html><body><main><p>Appealing IRMAA takes one form.</p></main></body></html>"
+        tr_html = "<html><body><main><p>Apelar el IRMAA requiere un formulario.</p></main></body></html>"
+        ok, missing = glossary_ok(en_html, tr_html, {"Appeal": "Apelación"})
+        assert ok, missing
+
+    def test_term_inside_html_comment_or_attribute_is_ignored(self):
+        en_html = ('<html><body><main><p>Your record. <!-- src: https://www.ssa.gov/help/iClaim_marriagePrior.html -->'
+                   '<a href="/network.html">link</a></p></main></body></html>')
+        tr_html = ('<html><body><main><p>Su registro. <!-- src: https://www.ssa.gov/help/iClaim_marriagePrior.html -->'
+                   '<a href="/network.html">enlace</a></p></main></body></html>')
+        ok, missing = glossary_ok(en_html, tr_html, {"Claim": "Reclamación", "Network": "Red de Proveedores"})
+        assert ok, missing
+
+    def test_whole_word_headword_still_enforced(self):
+        en_html = "<html><body><main><p>File an Appeal today.</p></main></body></html>"
+        tr_html = "<html><body><main><p>Presente una queja hoy.</p></main></body></html>"
+        ok, missing = glossary_ok(en_html, tr_html, {"Appeal": "Apelación"})
+        assert not ok
+        assert "Appeal" in missing
