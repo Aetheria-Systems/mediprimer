@@ -74,12 +74,11 @@ FAQ = {
 # Per-language translations of FAQ, keyed by lang_code then page name (same
 # keys as FAQ). Used for FAQPage JSON-LD on translated pages so structured
 # data matches each page's declared inLanguage.
-FAQ_TRANSLATIONS = {}
 
 # Auto-derived FAQ schema: 31 pages carry <details class="qa"> Q&A sections
 # but only the 4 hardcoded FAQ entries above emitted FAQPage JSON-LD. Extract
 # pairs from the page markup itself — translated pages contain their own
-# translated Q&As, so no FAQ_TRANSLATIONS entry is needed for auto pairs.
+# translated Q&As, so no i18n/<code>/faq.json entry is needed for auto pairs.
 QA_RE = re.compile(
     r'<details class="qa">\s*<summary>(.*?)</summary>\s*<div>(.*?)</div>\s*</details>',
     re.DOTALL)
@@ -96,66 +95,28 @@ def extract_faq_pairs(page_html):
             pairs.append((q_text, a_text))
     return pairs
 
-FAQ_TRANSLATIONS["es"] = {
-    "turning-65.html": [
-        ("¿Cuándo puedo inscribirme en Medicare?",
-         "Su Período de Inscripción Inicial es una ventana de 7 meses alrededor de su cumpleaños número 65: los 3 meses antes del mes de su cumpleaños, el mes de su cumpleaños, y los 3 meses después. Inscribirse dentro de esta ventana evita las penalizaciones por inscripción tardía."),
-        ("¿Tengo que inscribirme en Medicare a los 65 años si todavía estoy trabajando?",
-         "No siempre. Si tiene cobertura de un empleador actual con 20 o más empleados, es posible que pueda retrasar la Parte B sin penalización. La cobertura de jubilado, COBRA y los beneficios del VA no le permiten retrasar la Parte B de forma segura."),
-        ("¿Es Medicare un plan familiar?",
-         "No. Medicare es individual. Usted y su cónyuge reciben cada uno su propio Medicare según sus propios plazos."),
-    ],
-    "choosing-coverage.html": [
-        ("¿Cuál es la diferencia entre la Cobertura Original de Medicare y Medicare Advantage?",
-         "Ambas cubren los mismos beneficios principales. La Cobertura Original de Medicare le permite consultar a cualquier proveedor que acepte Medicare, con poca preaprobación. Medicare Advantage usa redes y autorización previa, pero a menudo añade beneficios adicionales y un límite anual de gastos de bolsillo."),
-        ("¿Puedo cambiar de Medicare Advantage de vuelta a la Cobertura Original de Medicare más adelante?",
-         "Puede cambiar durante ciertas ventanas establecidas, pero comprar un suplemento Medigap después puede requerir suscripción médica, y le pueden negar la cobertura. Esta 'puerta de un solo sentido' es lo más importante que debe considerar antes de elegir."),
-    ],
-    "planning-for-two.html": [
-        ("¿Medicare cubre a mi cónyuge?",
-         "No. Medicare no tiene cobertura familiar ni de cónyuge. Cada cónyuge recibe su propio Medicare en su propio cumpleaños número 65, paga sus propias primas y elige sus propios planes. Un cónyuge más joven necesita otra cobertura hasta que comience su propio Medicare."),
-        ("¿El ingreso de mi cónyuge afecta mi prima de Medicare?",
-         "Puede que sí. Si presenta impuestos de forma conjunta, el Seguro Social usa su ingreso combinado de hace dos años para fijar el cargo adicional por ingresos (IRMAA) en las primas de la Parte B y la Parte D de cada cónyuge. Si su ingreso bajó después de jubilarse, puede pedirle al Seguro Social que lo reduzca usando el formulario SSA-44."),
-    ],
-    "veterans-medicare.html": [
-        ("Si tengo atención médica del VA, ¿todavía necesito la Parte B de Medicare?",
-         "La atención médica del VA no le permite retrasar la Parte B sin una penalización de por vida, y la Parte B es lo que cubre la atención fuera del VA. Muchos veteranos se inscriben en la Parte B a los 65 años para mantener esa opción; algunos la omiten deliberadamente. Decida a propósito durante su ventana de inscripción."),
-        ("¿Puedo usar la farmacia del VA en lugar de la Parte D de Medicare?",
-         "Sí. La cobertura de medicamentos del VA cuenta como acreditable, por lo que generalmente puede omitir la Parte D sin penalización mientras use la farmacia del VA."),
-    ],
-}
+# Per-language chrome/FAQ strings live in build/i18n/<code>/ (written by the
+# language-rollout prep step), not in Python tables: hard-coded es/zh-Hant
+# dicts here blocked the automatic Vietnamese launch (2026-09-17).
+I18N_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "i18n")
 
-FAQ_TRANSLATIONS["zh-Hant"] = {
-    "turning-65.html": [
-        ("我什麼時候可以申請Medicare？",
-         "您的初始註冊期是圍繞您65歲生日的7個月期間：生日月份前的3個月、生日當月，以及之後的3個月。在此期間內申請可避免遲交註冊罰款。"),
-        ("如果我65歲時仍在工作，是否必須加入Medicare？",
-         "不一定。如果您有20名或以上員工的現職雇主提供的保險，您或許可以延遲加入B部分而不受罰款。退休人員保險、COBRA和VA福利都不能讓您安全地延遲加入B部分。"),
-        ("Medicare是家庭計劃嗎？",
-         "不是。Medicare是個人保險。您與配偶各自按照自己的時間表獲得各自的Medicare。"),
-    ],
-    "choosing-coverage.html": [
-        ("原始Medicare與Medicare Advantage有什麼區別？",
-         "兩者涵蓋相同的核心福利。原始Medicare讓您可以在幾乎無需事先核准的情況下就診任何接受Medicare的醫療提供者。Medicare Advantage使用網絡和預先授權，但通常會增加額外福利和每年自付費用上限。"),
-        ("我以後可以從Medicare Advantage轉回原始Medicare嗎？",
-         "您可以在特定期間內轉換，但之後購買Medigap補充保險可能需要醫療核保，並可能被拒保。這個「單向門」是您選擇前必須考慮的最重要因素。"),
-    ],
-    "planning-for-two.html": [
-        ("Medicare是否涵蓋我的配偶？",
-         "不。Medicare沒有家庭或配偶保險。每位配偶在自己65歲生日時獲得各自的Medicare，支付各自的保費，並選擇各自的計劃。較年輕的配偶在自己的Medicare開始之前需要其他保險。"),
-        ("配偶的收入是否會影響我的Medicare保費？",
-         "有可能。如果您與配偶合併報稅，社會安全局會使用您們兩年前的合併收入來設定每位配偶B部分和D部分保費的收入附加費（IRMAA）。如果您退休後收入下降，可以使用SSA-44表格要求社會安全局降低費用。"),
-    ],
-    "veterans-medicare.html": [
-        ("如果我有VA醫療保健，是否仍需要Medicare B部分？",
-         "VA醫療保健無法讓您在不受終身罰款的情況下延遲加入B部分，而B部分涵蓋VA以外的醫療照護。許多退伍軍人在65歲時加入B部分以保留此選擇；有些人則刻意跳過。請在您的註冊期間內審慎決定。"),
-        ("我可以使用VA藥房代替Medicare D部分嗎？",
-         "可以。VA藥物保險被視為合格承保，因此在使用VA藥房期間，您通常可以跳過D部分而不受罰款。"),
-    ],
-}
+def _i18n_json(lang_code, fname):
+    path = os.path.join(I18N_DIR, lang_code, fname)
+    if not os.path.exists(path):
+        raise SystemExit(f"seo.py: missing {path} for launched language {lang_code}")
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
 
-# Translated "Home" breadcrumb label per language, for BreadcrumbList JSON-LD.
-BREADCRUMB_HOME = {"es": "Inicio", "zh-Hant": "首頁"}
+def faq_translations(lang_code):
+    """{page: [(q, a), ...]} for a launched non-English language."""
+    return {k: [tuple(p) for p in v] for k, v in _i18n_json(lang_code, "faq.json").items()}
+
+def breadcrumb_home(lang_code):
+    """Translated "Home" label for BreadcrumbList JSON-LD — same string the nav uses."""
+    home = _i18n_json(lang_code, "chrome.json")["nav"].get("Home", "").strip()
+    if not home:
+        raise SystemExit(f"seo.py: chrome.json for {lang_code} has no nav.Home")
+    return home
 
 def field(html, pat):
     m = re.search(pat, html, re.DOTALL)
@@ -249,9 +210,10 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
     faq_pairs = None
     if name in FAQ:
         if lang_code and lang_code != "en":
-            if lang_code not in FAQ_TRANSLATIONS or name not in FAQ_TRANSLATIONS[lang_code]:
-                raise SystemExit(f"seo.py: missing FAQ translation for {name} (lang={lang_code})")
-            faq_pairs = FAQ_TRANSLATIONS[lang_code][name]
+            translated = faq_translations(lang_code)
+            if name not in translated:
+                raise SystemExit(f"seo.py: missing FAQ translation for {name} (lang={lang_code}) in i18n/{lang_code}/faq.json")
+            faq_pairs = translated[name]
         else:
             faq_pairs = FAQ[name]
     else:
@@ -292,9 +254,7 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
 
     if name != "index.html":
         if lang_code and lang_code != "en":
-            if lang_code not in BREADCRUMB_HOME:
-                raise SystemExit(f"seo.py: missing BREADCRUMB_HOME translation for lang={lang_code}")
-            home_name = BREADCRUMB_HOME[lang_code]
+            home_name = breadcrumb_home(lang_code)
             home_url = BASE + "/" + lang_code + "/"
         else:
             home_name = "Home"
