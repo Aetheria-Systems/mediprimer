@@ -13,6 +13,9 @@ import re
 from collections import Counter
 from html.parser import HTMLParser
 
+SITE_HEADER = '<header class="site-header">'
+SITE_FOOTER = '<footer class="site-footer">'
+
 _LANGUAGES_PATH = os.path.join(os.path.dirname(__file__), "languages.json")
 _LANGUAGES = json.load(open(_LANGUAGES_PATH, encoding="utf-8"))
 _LOCALE_CODES = [lang["code"] for lang in _LANGUAGES.get("languages", [])]
@@ -464,9 +467,19 @@ def glossary_ok(en_html, tr_html, terms):
     def _normalize_parens(s):
         return s.replace("（", "(").replace("）", ")")
 
+    # Match the headword as a whole word in visible prose only. A raw
+    # substring test fired on inflections ("Appealing", "Networks", "Special
+    # Enrollment Periods") and on URLs inside <!-- src --> comments
+    # ("iClaim_marriagePrior"), then demanded the exact headword translation
+    # that a correct rendering of the inflected form never contains — so
+    # costs.html, medicare-spouse-work-record.html and choosing-coverage.html
+    # were rejected every night (2026-09-17).
+    en_visible = _visible_text(en_text)
+    tr_text = _visible_text(tr_text)
+
     for en_term, tr_term in terms.items():
-        # Only check if term actually appears in English source
-        if en_term not in en_text:
+        # Only check if term actually appears as a whole word in English prose
+        if not re.search(r'(?<!\w)' + re.escape(en_term) + r'(?!\w)', en_visible):
             continue
 
         # Verify translation appears in translated HTML. Case-insensitive:
@@ -481,6 +494,27 @@ def glossary_ok(en_html, tr_html, terms):
         return (False, "; ".join(missing))
 
     return (True, "")
+
+
+class _Region:
+    """Minimal stand-in for a regex match: only .group(0) is used."""
+    def __init__(self, text):
+        self._text = text
+    def group(self, _i=0):
+        return self._text
+
+
+def _translated_region(en_html):
+    """Return the region translate.py translates, or None to use the whole page."""
+    if SITE_HEADER in en_html and SITE_FOOTER in en_html:
+        from i18n_lib import split_page
+        return _Region(split_page(en_html)["main"])
+    return re.search(r'<main[^>]*>.*?</main>', en_html, re.DOTALL)
+
+
+def _visible_text(html):
+    """Prose only: drop comments (which carry source URLs) and tags (hrefs, alts)."""
+    return re.sub(r'<[^>]+>', ' ', re.sub(r'<!--.*?-->', ' ', html, flags=re.DOTALL))
 
 
 def run_gates(en_html, tr_html, back_text, terms):
@@ -505,8 +539,15 @@ def run_gates(en_html, tr_html, back_text, terms):
         failures.append(f"Structure: {reason}")
 
     # Gate 2: Facts - ZERO tolerance for numeric facts, smart entity matching
-    # Extract English text from main content (if present) for comparison
-    en_main_match = re.search(r'<main[^>]*>.*?</main>', en_html, re.DOTALL)
+    # Compare against the SAME region translate.py sends for translation —
+    # i18n_lib.split_page()['main'], i.e. everything between </header> and
+    # <footer class="site-footer">, which includes promo strips that sit
+    # before <main>. Judging only <main> turned a "$50" promo on index.html
+    # into a phantom "Extra: dollar '50'" every night (2026-09-17; same for
+    # "$0" on medicare-prescription-payment-plan.html and "2027" on
+    # annual-review-workbook.html). Pages without the site markers (unit
+    # tests) still use <main>, then the whole document.
+    en_main_match = _translated_region(en_html)
     # Tags must become a SPACE, not nothing: '<td>$86.38</td><td>80%' would
     # otherwise glue into '$86.3880%', which the extractors read as the
     # phantom facts dollar 863880 / percent 880%. The back-translated side

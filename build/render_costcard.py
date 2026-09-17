@@ -35,8 +35,11 @@ def launched():
 def card_html(conf, s, lang):
     r = conf["rows"]
     year = conf["year"]
+    # validate.py only accepts a $ figure with an official citation within
+    # 600 chars, so every row carries the source rather than the card foot.
+    src = "".join(f'<!-- src: {u} -->' for u in conf["sources"])
     def row(label, value):
-        return f'<tr><th scope="row">{label}</th><td>{value}</td></tr>'
+        return f'<tr><th scope="row">{label}</th><td>{value} {src}</td></tr>'
     body = "\n".join([
         f'<h2>{s["partA"]}</h2>',
         '<table class="cc-table"><tbody>',
@@ -60,14 +63,12 @@ def card_html(conf, s, lang):
         row(s["basePrem"], r["partD_base_premium"]),
         '</tbody></table>',
     ])
-    src = "".join(f'<!-- src: {u} -->' for u in conf["sources"])
     return f'''<div class="costcard" lang="{lang}">
   <div class="cc-head">
     <h1>{s["title"].format(year=year)}</h1>
     <p class="cc-sub">{s["sub"]}</p>
   </div>
   {body}
-  {src}
   <p class="cc-foot">{s["foot"].format(year=year)}</p>
   <p class="cc-brand">mediprimer.org</p>
 </div>'''
