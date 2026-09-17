@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare 註冊日期計算器 — MediPrimer</title>
+<meta name="description" content="輸入您的生日，即可查看您確切的7個月Medicare註冊窗口、各項選擇的承保開始時間，以及等待可能讓您付出的終身代價。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag("js", new Date());
+gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+var printMq = window.matchMedia("print");
+function onPrintChange(e) {
+  if (e.matches) { gtag("event", "print_page", { page_path: location.pathname }); }
+}
+if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare 註冊日期計算器 — MediPrimer">
+<meta property="og:description" content="輸入您的生日，即可查看您確切的7個月Medicare註冊窗口、各項選擇的承保開始時間，以及等待可能讓您付出的終身代價。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicare 註冊日期計算器 — MediPrimer">
+<meta name="twitter:description" content="輸入您的生日，即可查看您確切的7個月Medicare註冊窗口、各項選擇的承保開始時間，以及等待可能讓您付出的終身代價。">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare 註冊日期計算器", "description": "輸入您的生日，即可查看您確切的7個月Medicare註冊窗口、各項選擇的承保開始時間，以及等待可能讓您付出的終身代價。", "url": "https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-09-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-enrollment-calculator.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-enrollment-calculator.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-enrollment-calculator.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "Medicare 註冊日期計算器", "item": "https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-enrollment-calculator.html" lang="en">English</a>
+    <a href="/es/medicare-enrollment-calculator.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-enrollment-calculator.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">免費工具</p>
+    <h1>我什麼時候可以註冊Medicare？</h1>
+    <p>輸入您的出生日期。您將獲得確切的註冊窗口、依據您行動時間而定的承保開始時間，以及等待可能讓您付出的代價。</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+    <p class="lead">Medicare會圍繞您65歲生日給您一個七個月的窗口期。在正確的時間內註冊，承保會準時開始且沒有罰款；晚註冊則可能讓您此後每個月都要多付費，終身如此。這個工具會替您算出來。</p>
+
+    <div id="enrollment-calculator" class="calculator"></div>
+
+    <h2>這個窗口是如何運作的</h2>
+    <p>您的初始註冊期為期七個月：您滿65歲當月之前的三個月、您的生日當月，以及之後的三個月。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/how-do-i-sign-up-for-medicare --> 如果您在前三個月內註冊，承保會從您滿65歲那個月的第一天開始。如果您等到生日當月或之後才註冊，承保則會從次月第一天開始——這可能讓您有好幾週的時間沒有承保。</p>
+    <p>有一個小細節常讓人措手不及：如果您出生在某月的第一天，Medicare會將您視為在<em>前一個</em>月滿65歲，因此您整個窗口期都會提前一個月。</p>
+
+    <h2>等待的代價</h2>
+    <p>如果您完全錯過這個窗口，且沒有其他合格承保，醫療保險B部分會針對您原本可以擁有承保卻沒有的<strong>每整年加收10%</strong>，而且只要您持有Medicare，這項加收就會持續下去。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> 醫療保險D部分則會針對您沒有藥品承保的<strong>每個月加收全國基本受益人保費的1%</strong>，同樣只要您持有該項承保就會持續加收。</p>
+    <p>這些罰款是Medicare中最昂貴、卻本可避免的單一錯誤，而且是永久性的。這正是為什麼這個窗口期比本網站上幾乎所有其他事情都更重要。</p>
+
+    <h2>正常規則不適用的情況</h2>
+    <ul>
+      <li><strong>65歲後仍在工作</strong>，並擁有員工人數達20人或以上雇主提供的承保？您或許可以延後註冊醫療保險B部分而不受罰款——請參閱<a href="/zh-Hant/working-past-65.html">65歲後仍在工作</a>。</li>
+      <li><strong>失去了其他承保？</strong>特殊註冊期可能會在這些日期之外開啟——請參閱<a href="/zh-Hant/enrollment.html">註冊與截止日期</a>。</li>
+      <li><strong>全部錯過了？</strong>一般註冊期每年為1月1日至3月31日。</li>
+    </ul>
+
+    <h2>下一步</h2>
+    <p>一旦您知道自己的日期，<a href="/zh-Hant/turning-65.html">65歲導覽</a>會說明您實際需要做的決定，而<a href="/zh-Hant/getting-help.html">獲得付費協助</a>則說明了在收入有限時可協助支付保費的計劃。您的<a href="/zh-Hant/ship-directory.html">SHIP顧問</a>也提供免費的一對一協助。</p>
+
+    <p class="calc-disclaimer"><small>此工具依據Medicare公佈的規則進行日期計算。這是一般資訊，並非針對您個人情況的建議，也無法得知您的工作經歷或其他承保情況。請務必在採取行動前向Medicare或您的SHIP顧問確認。</small></p>
+  </div>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/medicare-enrollment-calculator.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/medicare-enrollment-calculator.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
