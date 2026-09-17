@@ -91,6 +91,28 @@ def load_qa_exceptions(code, page_name):
     return set(data.get(page_name, {}).keys())
 
 
+_SECTION_RE = re.compile(
+    r'<<<TITLE>>>\s*\n(?P<title>.*?)\n\s*<<<DESCRIPTION>>>\s*\n(?P<desc>.*?)\n\s*'
+    r'<<<MAIN_HTML>>>\s*\n(?P<main>.*?)\n\s*<<<END>>>', re.DOTALL)
+
+
+def parse_translation_response(output):
+    """Parse the delimited reply into (main_html, title, description), or None.
+
+    The reply used to be a JSON object with the translated HTML inside a
+    string; ~14 KB of HTML with quotes broke json.loads on many pages
+    ("Expecting ',' delimiter"), surfacing as "Translation API failed".
+    Plain markers cannot be broken by quotes, braces or newlines in the HTML.
+    """
+    m = _SECTION_RE.search(output)
+    if not m:
+        return None
+    main = m.group("main").strip()
+    if not main:
+        return None  # empty body: let the caller re-ask rather than fail the structure gate
+    return (main, m.group("title").strip(), m.group("desc").strip())
+
+
 def call_claude_translate(protected_main, title, desc, code, glossary):
     """Call Claude API to translate protected main + title/description.
 
@@ -128,8 +150,15 @@ between English and Spanish; only merge two <strong>-wrapped terms into one
 when they are genuine synonyms with no distinct Spanish equivalent (e.g.
 English bolds both "copay" and "copayment" for the same concept).
 
-Return ONLY a JSON object with three fields:
-{{"title": "<translated title>", "description": "<translated description>", "main_html": "<translated HTML>"}}
+Return ONLY these four marker lines with the content between them — no JSON,
+no code fences, no commentary. Each marker on its own line, exactly as shown:
+<<<TITLE>>>
+<translated title>
+<<<DESCRIPTION>>>
+<translated description>
+<<<MAIN_HTML>>>
+<translated HTML>
+<<<END>>>
 
 Title: {title}
 Description: {desc}
@@ -138,47 +167,25 @@ Main HTML to translate:
 {protected_main}"""
 
     try:
-        # Call headless claude
-        result = subprocess.run(
-            ["/home/deltaprism/.local/bin/claude", "--model", "sonnet", "-p", prompt, "--allowedTools", ""],
-            capture_output=True,
-            text=True,
-            timeout=600
-        )
-
-        if result.returncode != 0:
-            print(f"Claude API error: {result.stderr}", file=sys.stderr)
-            return None
-
-        # Parse JSON from stdout (one retry on parse failure)
-        output = result.stdout.strip()
-
+        # Call headless claude. One real retry: a malformed reply (missing
+        # marker) re-asks the model — the old loop re-parsed the same string.
         for attempt in range(2):
-            # Try to extract JSON from output (handle markdown fences like ```json...```)
-            # First try to find fenced JSON
-            fenced_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', output, re.DOTALL)
-            if fenced_match:
-                json_str = fenced_match.group(1)
-            else:
-                # Fall back to finding bare JSON object
-                json_match = re.search(r'\{.*\}', output, re.DOTALL)
-                if not json_match:
-                    if attempt == 0:
-                        print(f"No JSON found in Claude response, retrying...", file=sys.stderr)
-                        continue
-                    print(f"No JSON found in Claude response after retry", file=sys.stderr)
-                    return None
-                json_str = json_match.group(0)
+            result = subprocess.run(
+                ["/home/deltaprism/.local/bin/claude", "--model", "sonnet", "-p", prompt, "--allowedTools", ""],
+                capture_output=True,
+                text=True,
+                timeout=600
+            )
 
-            try:
-                data = json.loads(json_str)
-                return (data.get("main_html", ""), data.get("title", ""), data.get("description", ""))
-            except json.JSONDecodeError as e:
-                if attempt == 0:
-                    print(f"JSON parse attempt 1 failed, retrying: {e}", file=sys.stderr)
-                    continue
-                print(f"Failed to parse Claude JSON after retry: {e}", file=sys.stderr)
+            if result.returncode != 0:
+                print(f"Claude API error: {result.stderr}", file=sys.stderr)
                 return None
+
+            parsed = parse_translation_response(result.stdout)
+            if parsed:
+                return parsed
+            print(f"Malformed translation reply (attempt {attempt + 1}): markers missing; "
+                  f"reply starts: {result.stdout.strip()[:120]!r}", file=sys.stderr)
 
         return None
 
