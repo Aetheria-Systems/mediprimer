@@ -33,3 +33,7 @@ def test_missing_section_returns_none():
 
 def test_missing_end_marker_returns_none():
     assert parse_translation_response('<<<TITLE>>>\nx\n<<<DESCRIPTION>>>\nd\n<<<MAIN_HTML>>>\n<p>y</p>') is None
+
+
+def test_empty_main_returns_none():
+    assert parse_translation_response('<<<TITLE>>>\nx\n<<<DESCRIPTION>>>\nd\n<<<MAIN_HTML>>>\n   \n<<<END>>>') is None

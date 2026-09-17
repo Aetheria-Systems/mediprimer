@@ -107,7 +107,10 @@ def parse_translation_response(output):
     m = _SECTION_RE.search(output)
     if not m:
         return None
-    return (m.group("main").strip(), m.group("title").strip(), m.group("desc").strip())
+    main = m.group("main").strip()
+    if not main:
+        return None  # empty body: let the caller re-ask rather than fail the structure gate
+    return (main, m.group("title").strip(), m.group("desc").strip())
 
 
 def call_claude_translate(protected_main, title, desc, code, glossary):
