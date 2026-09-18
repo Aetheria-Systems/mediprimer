@@ -26,10 +26,16 @@ DATES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "page-date
 LANGUAGES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "languages.json")
 ANALYTICS_RE = re.compile(r'\n?<!--P:analytics-->.*?<!--/P:analytics-->', re.DOTALL)
 SWITCHER_RE = re.compile(r'\n?<!--switcher-->.*?<!--/switcher-->', re.DOTALL)
+# Site chrome is generated per language by i18n_chrome.py and is never what
+# translate.py translates (it works on <main>). Including it in the content
+# hash meant a single nav label change — "For Professionals" to "For Partners
+# & Pros" on 2026-09-18 — marked all 390 translations stale and blocked the
+# next language launch for days. Chrome changes are not content changes.
+CHROME_RE = re.compile(r'\n?<(header|footer)\b.*?</\1>', re.DOTALL | re.IGNORECASE)
 MP_LANGS_RE = re.compile(r'\n?<!--mp-langs-->.*?<!--/mp-langs-->', re.DOTALL)
 
 def content_hash(html):
-    core = SEO_RE.sub("", ANALYTICS_RE.sub("", SWITCHER_RE.sub("", MP_LANGS_RE.sub("", html))))
+    core = CHROME_RE.sub("", SEO_RE.sub("", ANALYTICS_RE.sub("", SWITCHER_RE.sub("", MP_LANGS_RE.sub("", html)))))
     text = re.sub(r"<[^>]+>", " ", core)
     return hashlib.md5(re.sub(r"\s+", " ", text).strip().encode()).hexdigest()
 
