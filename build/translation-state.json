@@ -523,8 +523,8 @@
   },
   "zh-Hant": {
     "disclaimer.html": {
-      "hash": "bf0a91d541fc2378a1205ddaa28d5e29",
-      "date": "2026-07-22"
+      "hash": "88e59f5cd2f89c0a82260a587299d0c5",
+      "date": "2026-09-18"
     },
     "about.html": {
       "hash": "5c62de5e11f0c5e0ca9fa9ce675c296e",
@@ -567,8 +567,8 @@
       "date": "2026-09-16"
     },
     "editorial-standards.html": {
-      "hash": "909c9adcf96791c3f63d32b24cba033c",
-      "date": "2026-07-22"
+      "hash": "e5db33dd28518693f5afe9bae8b619ad",
+      "date": "2026-09-18"
     },
     "enrollment-calendar.html": {
       "hash": "bc146d95326233a5d7164d1f495c0e59",
@@ -631,8 +631,8 @@
       "date": "2026-09-18"
     },
     "privacy.html": {
-      "hash": "cd33cee63e74e238744ec2768627d4f8",
-      "date": "2026-07-22"
+      "hash": "7a64101809626af51910a15bcc819c1c",
+      "date": "2026-09-18"
     },
     "questions-to-ask.html": {
       "hash": "324cb63d4120c63875f3b3896675c5b6",
@@ -655,8 +655,8 @@
       "date": "2026-09-18"
     },
     "support.html": {
-      "hash": "d864e619e5a7d44d4b9368de7469a260",
-      "date": "2026-07-22"
+      "hash": "caf008ceabcc6da1e5552fa12d9320a6",
+      "date": "2026-09-18"
     },
     "terms-of-use.html": {
       "hash": "6ff3468c722eb993d3ba53c03e6c3cb4",
@@ -675,8 +675,8 @@
       "date": "2026-09-18"
     },
     "caregivers.html": {
-      "hash": "b0e8b1450244ddcc7fcbd8c9a8ae7bb8",
-      "date": "2026-09-03"
+      "hash": "19a13c4ef610b389420d238e5f9f3fd5",
+      "date": "2026-09-18"
     },
     "checklists.html": {
       "hash": "1ca05d32ebf3753c521d9d026af6863c",
@@ -727,8 +727,8 @@
       "date": "2026-09-18"
     },
     "site-map.html": {
-      "hash": "b66a4f1424fa18f806d04a6e8fc7c816",
-      "date": "2026-09-10"
+      "hash": "0a7e9bbf24c59fc89342408f65fd76ce",
+      "date": "2026-09-18"
     },
     "star-ratings.html": {
       "hash": "eb72f935cf5d483e6ca72964ce28290d",
@@ -939,8 +939,8 @@
       "date": "2026-09-16"
     },
     "medicare-esrd-kidney-failure.html": {
-      "hash": "58bd687340543f5c569d4c12935c9231",
-      "date": "2026-09-09"
+      "hash": "282eeea92e8b8aa74e8d04b70a96e3cd",
+      "date": "2026-09-18"
     },
     "medicare-summary-notice.html": {
       "hash": "db121a1bed091f0ef1a36a7a72d1165b",
@@ -1033,6 +1033,14 @@
     "medicare-spouse-work-record.html": {
       "hash": "0dd1a5925c5ac4d22757ac882c76acb4",
       "date": "2026-09-18"
+    },
+    "medicare-vs-medicaid.html": {
+      "hash": "29582332d01b7ef75a3d92bdbeafe769",
+      "date": "2026-09-18"
+    },
+    "partner-materials.html": {
+      "hash": "c55ba79ec6449b46a817eddb5a94cd27",
+      "date": "2026-09-18"
     }
   },
   "vi": {
@@ -1085,8 +1093,8 @@
       "date": "2026-09-18"
     },
     "costs.html": {
-      "hash": "652cc5fc86dd376f1039fcc46ce2945c",
-      "date": "2026-09-06"
+      "hash": "c48e93891cf5ac933b263ae330ea5e54",
+      "date": "2026-09-18"
     },
     "coverage-basics.html": {
       "hash": "eaaf6fe9b5cf9f0179c00ecb97b1a350",
@@ -1101,8 +1109,8 @@
       "date": "2026-09-15"
     },
     "disclaimer.html": {
-      "hash": "bf0a91d541fc2378a1205ddaa28d5e29",
-      "date": "2026-09-06"
+      "hash": "88e59f5cd2f89c0a82260a587299d0c5",
+      "date": "2026-09-18"
     },
     "does-my-doctor-accept-medicare.html": {
       "hash": "5f058b7bf199ab714509b21459ea80fa",
@@ -1117,8 +1125,8 @@
       "date": "2026-09-18"
     },
     "editorial-standards.html": {
-      "hash": "909c9adcf96791c3f63d32b24cba033c",
-      "date": "2026-09-06"
+      "hash": "e5db33dd28518693f5afe9bae8b619ad",
+      "date": "2026-09-18"
     },
     "emergency-medicaid.html": {
       "hash": "079e96f5185780e6d46ffb1d47711e9c",
@@ -1373,8 +1381,8 @@
       "date": "2026-09-17"
     },
     "privacy.html": {
-      "hash": "cd33cee63e74e238744ec2768627d4f8",
-      "date": "2026-09-07"
+      "hash": "7a64101809626af51910a15bcc819c1c",
+      "date": "2026-09-18"
     },
     "providers.html": {
       "hash": "15c9b41a197590d5125e6243521a6ce5",
@@ -1405,8 +1413,8 @@
       "date": "2026-09-18"
     },
     "site-map.html": {
-      "hash": "b66a4f1424fa18f806d04a6e8fc7c816",
-      "date": "2026-09-07"
+      "hash": "0a7e9bbf24c59fc89342408f65fd76ce",
+      "date": "2026-09-18"
     },
     "star-ratings.html": {
       "hash": "eb72f935cf5d483e6ca72964ce28290d",
@@ -1417,8 +1425,8 @@
       "date": "2026-09-18"
     },
     "support.html": {
-      "hash": "d864e619e5a7d44d4b9368de7469a260",
-      "date": "2026-09-07"
+      "hash": "caf008ceabcc6da1e5552fa12d9320a6",
+      "date": "2026-09-18"
     },
     "terms-of-use.html": {
       "hash": "6ff3468c722eb993d3ba53c03e6c3cb4",
