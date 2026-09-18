@@ -12,15 +12,17 @@ PUB = os.path.join(os.path.dirname(BUILD_DIR), "public")
 LANGUAGES = json.load(open(os.path.join(BUILD_DIR, "languages.json"), encoding="utf-8"))
 
 # (href, label, active-key, menu-key or None)
-# Members-first: the member journey leads; "For Professionals" is a secondary
-# door near the end. "Start Here" (the Turning 65 walkthrough) is the front door.
+# Members-first: the member journey leads; "For Partners & Pros" is a secondary
+# door near the end. Renamed 2026-09-18: libraries, Area Agencies on Aging and
+# SHIP counsellors are partners helping constituents, not industry insiders,
+# and "For Professionals" read as though it excluded them. "Start Here" (the Turning 65 walkthrough) is the front door.
 NAV = [
     ("/", "Home", "home", None),
     ("/turning-65.html", "Start Here", "members", "members"),
     ("/basics.html", "Learn the Basics", "basics", "basics"),
     ("/directories.html", "Find Help", "directories", "dirs"),
     ("/glossary.html", "Glossary", "glossary", None),
-    ("/professionals.html", "For Professionals", "professionals", "pros"),
+    ("/professionals.html", "For Partners & Pros", "professionals", "pros"),
     ("/about.html", "About", "about", None),
 ]
 
@@ -48,6 +50,7 @@ MENUS = {
         ("/members.html", "All Member guides →", False),
     ],
     "pros": [
+        ("/partner-materials.html", "★ Free Materials to Hand Out", True),
         ("/operations.html", "Health-Plan Operations", False),
         ("/providers.html", "Providers & Billing", False),
         ("/brokers.html", "Brokers & Advisors", False),
