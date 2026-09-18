@@ -56,14 +56,18 @@ for code in live:
     if not d.is_dir():
         continue
     tr = json.loads((BASE / "build" / "i18n" / code / "chrome.json").read_text(encoding="utf-8"))
-    want = {tr["nav"][label] for _, label, _, _ in normalize.NAV if label in tr.get("nav", {})}
+    from html import unescape as _un0
+    want = {_un0(tr["nav"][label]) for _, label, _, _ in normalize.NAV
+            if label in tr.get("nav", {})}
     stale = []
     for page in list(d.glob("*.html"))[:400]:
         html = page.read_text(encoding="utf-8", errors="replace")
         m = _re.search(r'<nav class="main">(.*?)</nav>', html, _re.S)
         if not m:
             continue
-        have = {_re.sub(r"<[^>]+>", "", x).strip()
+        # compare unescaped: a label containing "&" renders as "&amp;"
+        from html import unescape as _un
+        have = {_un(_re.sub(r"<[^>]+>", "", x)).strip()
                 for x in _re.findall(r'class="navtop[^"]*">([^<]*)<', m.group(1))}
         if want - have:
             stale.append(page.name)
