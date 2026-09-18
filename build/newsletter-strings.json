@@ -6,7 +6,7 @@
   "blurb": "A short email when something changes that affects your coverage — deadlines, new rules, and what to do about them. No ads, no plan sales, and we never share your address.",
   "placeholder": "Your email address",
   "button": "Keep me posted",
-  "fine": "One email at most per week. Unsubscribe in one click, any time."
+  "fine": "We'll email you once to confirm — you're not subscribed until you click it. One email at most per week. Unsubscribe in one click, any time."
  },
  "es": {
   "aria": "Reciba novedades de MediPrimer por correo electrónico",
@@ -14,7 +14,7 @@
   "blurb": "Un correo breve cuando algo cambie y afecte su cobertura: fechas límite, reglas nuevas y qué hacer al respecto. Sin anuncios, sin venta de planes, y nunca compartimos su dirección.",
   "placeholder": "Su correo electrónico",
   "button": "Manténganme informado",
-  "fine": "Como máximo un correo por semana. Cancele la suscripción con un clic, cuando quiera."
+  "fine": "Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Como máximo un correo por semana. Cancele la suscripción con un clic, cuando quiera."
  },
  "zh-Hant": {
   "aria": "以電子郵件接收 MediPrimer 最新消息",
@@ -22,7 +22,7 @@
   "blurb": "當有影響您保險的變動時，我們會寄一封簡短的電子郵件：截止日期、新規定，以及您該怎麼做。沒有廣告，不推銷保險計畫，也絕不分享您的電子郵件地址。",
   "placeholder": "您的電子郵件地址",
   "button": "通知我",
-  "fine": "每週最多一封。隨時可一鍵取消訂閱。"
+  "fine": "我們會寄一封確認信；您點擊確認後才算完成訂閱。 每週最多一封。隨時可一鍵取消訂閱。"
  },
  "_seasonal_doc": "Months 9-12 use the open-enrollment offer: a concrete trade (checklist + deadline reminder) at the one time of year this audience is actively looking. Other months fall back to the base copy above.",
  "seasonal": {
@@ -31,19 +31,19 @@
     "head": "Open enrollment ends December 7. We'll remind you.",
     "blurb": "Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.",
     "button": "Send me the checklist",
-    "fine": "A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click."
+    "fine": "We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click."
    },
    "es": {
     "head": "La inscripción abierta termina el 7 de diciembre. Le avisamos.",
     "blurb": "Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.",
     "button": "Envíenme la lista",
-    "fine": "Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic."
+    "fine": "Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic."
    },
    "zh-Hant": {
     "head": "公開報名 12 月 7 日截止，我們會提醒您。",
     "blurb": "取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。",
     "button": "寄給我檢查清單",
-    "fine": "截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。"
+    "fine": "我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。"
    }
   }
  }
