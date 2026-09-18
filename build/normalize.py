@@ -73,6 +73,35 @@ def _esc(s):
     return s.replace("&", "&amp;")
 
 ACTIVE = {
+    # Added 2026-09-18: these were printing "NOT IN MAP" in every build,
+    # which meant normalize.py SKIPPED them — so they never received nav,
+    # header or footer updates and were still showing the old "For
+    # Professionals" label days after it was renamed. A page missing here
+    # is silently frozen; the build now has zero skips.
+    "cobra-and-medicare.html": "members",
+    "hsa-and-medicare.html": "members",
+    "irmaa-appeal-ssa-44.html": "members",
+    "medicaid-dental-adults.html": "members",
+    "medicaid-home-care-hcbs-waivers.html": "members",
+    "medicaid-pregnancy.html": "members",
+    "medicaid-spousal-impoverishment.html": "members",
+    "medicare-ambulance-emergency-room.html": "members",
+    "medicare-cancer-treatment.html": "members",
+    "medicare-cataract-surgery.html": "members",
+    "medicare-chiropractic-acupuncture.html": "members",
+    "medicare-diabetes-coverage.html": "members",
+    "medicare-flex-card.html": "members",
+    "medicare-medical-equipment-dme.html": "members",
+    "medicare-part-b-giveback.html": "members",
+    "medicare-prescription-payment-plan.html": "members",
+    "medicare-spouse-work-record.html": "members",
+    "medicare-star-ratings.html": "professionals",
+    "medicare-summary-notice.html": "members",
+    "medicare-telehealth.html": "members",
+    "medicare-vaccines.html": "members",
+    "part-d-formulary-exception-appeal.html": "members",
+    "turning-26-health-insurance.html": "members",
+
     "partner-materials.html": "directories",
     "medicare-costs-card.html": "members",
     "annual-review-workbook.html": "members",
@@ -289,7 +318,7 @@ def main():
     for path in sorted(glob.glob(os.path.join(PUB, "*.html"))):
         name = os.path.basename(path)
         if name not in ACTIVE:
-            skipped.append(name + " (NOT IN MAP)"); continue
+            skipped.append(name + " (NOT IN MAP)"); continue   # fails the build below
         src = open(path, encoding="utf-8").read()
         if not HEADER_RE.search(src) or not FOOTER_RE.search(src):
             skipped.append(name + " (missing header/footer)"); continue
@@ -312,6 +341,16 @@ def main():
     if skipped:
         print("SKIPPED/PROBLEM:")
         for s in skipped: print("  ", s)
+        # A page missing from ACTIVE is silently frozen: it stops receiving nav,
+        # header and footer updates and drifts out of sync with the rest of the
+        # site. 23 pages sat like that until 2026-09-18, still showing a nav
+        # label renamed days earlier, because this only ever printed a line.
+        # Fail the build instead so it cannot be read past again.
+        if any("NOT IN MAP" in s for s in skipped):
+            import sys as _sys
+            print("FATAL: page(s) missing from normalize.ACTIVE — add them "
+                  "or they will never receive chrome updates.", file=_sys.stderr)
+            _sys.exit(1)
 
 if __name__ == "__main__":
     main()
