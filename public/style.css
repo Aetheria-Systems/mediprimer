@@ -540,3 +540,6 @@ aside.newsletter p { margin: 0 0 0.75rem; font-size: 0.95rem; }
   .site-header, .mp-chatbot, .cc-actions, aside.newsletter, .site-footer, .hero, .lead { display: none !important; }
   .costcard { border-width: 1px; page-break-inside: avoid; }
 }
+
+.kit-grid .card { border-left: 4px solid #1f4e79; }
+.kit-single { font-size: 0.88rem; line-height: 1.8; }
