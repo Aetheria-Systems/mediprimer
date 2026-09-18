@@ -45,4 +45,35 @@ if missing:
     print("\nAdd these to build/i18n/<code>/chrome.json. Until then every "
           "translated page fails to build.", file=sys.stderr)
     sys.exit(1)
-print(f"check_chrome_labels: PASSED — all nav/menu labels translated in {', '.join(live)}")
+# Labels being translated is not enough: the translated PAGES bake their
+# chrome in at translate time, so a rename only reaches pages that happen to
+# be retranslated. On 2026-09-18 exactly 8 pages got the new label and ~120
+# kept the old one. Detect that drift here.
+import re as _re
+drift = []
+for code in live:
+    d = BASE / "public" / code
+    if not d.is_dir():
+        continue
+    tr = json.loads((BASE / "build" / "i18n" / code / "chrome.json").read_text(encoding="utf-8"))
+    want = {tr["nav"][label] for _, label, _, _ in normalize.NAV if label in tr.get("nav", {})}
+    stale = []
+    for page in list(d.glob("*.html"))[:400]:
+        html = page.read_text(encoding="utf-8", errors="replace")
+        m = _re.search(r'<nav class="main">(.*?)</nav>', html, _re.S)
+        if not m:
+            continue
+        have = {_re.sub(r"<[^>]+>", "", x).strip()
+                for x in _re.findall(r'class="navtop[^"]*">([^<]*)<', m.group(1))}
+        if want - have:
+            stale.append(page.name)
+    if stale:
+        drift.append(f"{code}: {len(stale)} page(s) still carry an old nav label "
+                     f"(e.g. {stale[0]}) — run: python3 build/refresh_chrome.py {code}")
+if drift:
+    print("check_chrome_labels: FAILED — translated pages have stale chrome", file=sys.stderr)
+    for d_ in drift:
+        print("  " + d_, file=sys.stderr)
+    sys.exit(1)
+
+print(f"check_chrome_labels: PASSED — all nav/menu labels translated and applied in {', '.join(live)}")
