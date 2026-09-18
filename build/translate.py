@@ -113,12 +113,30 @@ def parse_translation_response(output):
     return (main, m.group("title").strip(), m.group("desc").strip())
 
 
-def call_claude_translate(protected_main, title, desc, code, glossary):
+def call_claude_translate(protected_main, title, desc, code, glossary, correction=None):
     """Call Claude API to translate protected main + title/description.
 
     Returns: (translated_main, translated_title, translated_desc) or None on failure.
     """
     native_name = get_language_native_name(code)
+
+    # A previous attempt at THIS page failed a specific QA gate. Tell the
+    # model exactly what went wrong so it can correct it, instead of
+    # producing the same output and failing identically forever. (2026-09-18:
+    # 25 pages across three languages had been failing the same gates every
+    # night for weeks because nothing fed the failure back.)
+    correction_section = ""
+    if correction:
+        correction_section = (
+            "\n\nIMPORTANT — your previous attempt at this exact page was REJECTED "
+            "by an automated quality gate:\n\n  " + correction + "\n\n"
+            "Produce a corrected translation that fixes precisely that problem. "
+            "Structure failures mean your HTML tag sequence must match the English "
+            "source exactly — same tags, same count, same order. Glossary failures "
+            "mean you must use the official term given in the glossary above, not a "
+            "synonym. Numeric-fact failures mean every number, percentage, date and "
+            "dollar amount must appear exactly as in the source. Completeness "
+            "failures mean too much English was left untranslated.\n")
 
     # Build glossary section for prompt
     glossary_section = ""
@@ -150,6 +168,7 @@ between English and Spanish; only merge two <strong>-wrapped terms into one
 when they are genuine synonyms with no distinct Spanish equivalent (e.g.
 English bolds both "copay" and "copayment" for the same concept).
 
+{correction_section}
 Return ONLY these four marker lines with the content between them — no JSON,
 no code fences, no commentary. Each marker on its own line, exactly as shown:
 <<<TITLE>>>
@@ -240,7 +259,7 @@ def get_rtl_attribute(code):
     return False
 
 
-def translate_page(page_name, code, force=False):
+def translate_page(page_name, code, force=False, _retrying=False):
     """Translate a single page.
 
     Returns: (success: bool, message: str)
@@ -376,9 +395,42 @@ def translate_page(page_name, code, force=False):
         )
         if not is_costs_strong_count_exception:
             failure_msg = "; ".join(failures)
-            with open(f"/tmp/failed-{page_name}", "w", encoding="utf-8") as f:
-                f.write(tr_main)
-            return (False, f"QA gates failed: {failure_msg}")
+            # SELF-HEAL: retry this page once, telling the model exactly which
+            # gate rejected it. Without this the same pages failed identically
+            # every night indefinitely — detecting a fault and doing nothing
+            # about it is not a system, it is a log file.
+            if not _retrying:
+                print(f"  ↻ {page_name}: {failure_msg[:80]} — retrying with correction",
+                      flush=True)
+                retry = call_claude_translate(protected_main, title, desc, code,
+                                              glossary, correction=failure_msg)
+                if retry:
+                    r_main, r_title, r_desc = retry
+                    # assemble exactly as the first pass did
+                    r_restored = restore(r_main, vault)
+                    r_head = tr_head
+                    if r_title:
+                        r_head = re.sub(r'<title>[^<]*</title>',
+                                        f'<title>{r_title}</title>', r_head, count=1)
+                    if r_desc:
+                        r_head = re.sub(r'(<meta\s+name="description"\s+content=")[^"]*"',
+                                        lambda m: m.group(1) + r_desc + '"', r_head, count=1)
+                    r_html = r_head + tr_header + r_restored + tr_footer
+                    r_back = call_claude_back_translate(r_main, code)
+                    if r_back:
+                        ok2, fail2 = run_gates(en_html, r_html, r_back, qa_glossary)
+                        if ok2:
+                            print(f"  ✓ {page_name}: corrected on retry", flush=True)
+                            tr_html, tr_main_restored = r_html, r_restored
+                            tr_main, tr_title, tr_desc = r_main, r_title, r_desc
+                            tr_head = r_head
+                            passed, failures = True, []
+                        else:
+                            failure_msg = "; ".join(fail2) + " (after corrective retry)"
+            if not passed:
+                with open(f"/tmp/failed-{page_name}", "w", encoding="utf-8") as f:
+                    f.write(tr_main)
+                return (False, f"QA gates failed: {failure_msg}")
 
     # Step 9: Write to output
     out_dir = os.path.join(PUB, code)
