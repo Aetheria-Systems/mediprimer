@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어닷가브(Medicare.gov) 플랜 파인더 사용법</title>
+<meta name="description" content="메디케어 플랜 파인더 사용법: 계정 만들기, 복용 약과 약국 입력하기, 플랜 비교하기, 결과 읽는 법을 안내합니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/ko/using-plan-finder.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="메디케어닷가브(Medicare.gov) 플랜 파인더 사용법">
+<meta property="og:description" content="메디케어 플랜 파인더 사용법: 계정 만들기, 복용 약과 약국 입력하기, 플랜 비교하기, 결과 읽는 법을 안내합니다.">
+<meta property="og:url" content="https://mediprimer.org/ko/using-plan-finder.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="메디케어닷가브(Medicare.gov) 플랜 파인더 사용법">
+<meta name="twitter:description" content="메디케어 플랜 파인더 사용법: 계정 만들기, 복용 약과 약국 입력하기, 플랜 비교하기, 결과 읽는 법을 안내합니다.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "메디케어닷가브(Medicare.gov) 플랜 파인더 사용법", "description": "메디케어 플랜 파인더 사용법: 계정 만들기, 복용 약과 약국 입력하기, 플랜 비교하기, 결과 읽는 법을 안내합니다.", "url": "https://mediprimer.org/ko/using-plan-finder.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/using-plan-finder.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/using-plan-finder.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/using-plan-finder.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/using-plan-finder.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/using-plan-finder.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/using-plan-finder.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "메디케어닷가브(Medicare.gov) 플랜 파인더 사용법", "item": "https://mediprimer.org/ko/using-plan-finder.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/using-plan-finder.html" lang="en">English</a>
+    <a href="/es/using-plan-finder.html" lang="es">Español</a>
+    <a href="/zh-Hant/using-plan-finder.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/using-plan-finder.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">수혜자 및 보호자를 위한 안내</p>
+    <h1>메디케어닷가브(Medicare.gov) 플랜 파인더 사용법</h1>
+    <p>메디케어 어드밴티지와 파트 D 플랜을 비교하는 플랜 파인더 도구를 단계별로 안내합니다. 약물 보장에 중점을 두고, 그 다음에 무엇을 해야 하는지도 알려드립니다.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">메디케어닷가브(Medicare.gov)의 플랜 파인더는 거주 지역에서 이용 가능한 플랜을 비교할 수 있는 무료 도구입니다. 이 안내서는 가장 중요한 부분인 처방약에 초점을 맞춰 각 단계를 안내합니다. 끝까지 따라오시면 더 자세히 살펴볼 만한 플랜 2~3개로 선택지를 좁힐 수 있습니다.</p>
+    <p class="tool-callout">플랜을 비교하기 전에 <a href="/ko/annual-review-workbook.html">연간 검토 워크북</a>을 사용하면 복용 중인 약, 담당 의사, 현재 비용을 한 곳에 정리할 수 있습니다.</p>
+
+    <div class="note info">
+      <strong>플랜 파인더는 언제 사용하나요:</strong> 매년 가을, 10월 15일부터 12월 7일까지인 메디케어의 공개 가입 기간 동안 사용합니다. 이미 메디케어 어드밴티지 플랜에 가입되어 있다면, 1월 1일부터 3월 31일까지 두 번째 기간이 주어지며, 이때 다른 어드밴티지 플랜으로 바꾸거나 오리지널 메디케어로 돌아갈 수 있습니다. 언제든 둘러볼 수는 있지만, 가입은 이 기간(또는 생활 변화로 인한 특별 가입 기간) 동안에만 가능합니다.
+    </div>
+
+    <h2>1단계: 로그인하거나 익명으로 검색하기</h2>
+    <p><a href="https://www.medicare.gov/" rel="noopener">메디케어닷가브(Medicare.gov)</a>에 접속해서 "플랜 파인더" 또는 "플랜 비교"를 클릭하세요.</p>
+    <p>두 가지 방법이 있습니다:</p>
+    <ul>
+      <li><strong>메디케어 계정에 로그인하기</strong> — 이 방법이 가장 좋습니다. 메디케어가 회원님의 정보와 현재 플랜을 기억해 두어 결과가 더 정확하고 맞춤화됩니다. 계정이 없다면 무료로 만드세요.</li>
+      <li><strong>로그인 없이 검색하기(익명)</strong> — 이 방법도 가능하지만, 매번 정보를 다시 입력해야 합니다. 간단히 살펴보고 싶을 때 적합합니다.</li>
+    </ul>
+    <p>둘 다 잘 작동합니다. 로그인해 두면 나중에 다시 방문할 때 더 빠를 뿐입니다.</p>
+
+    <h2>2단계: 우편번호 입력하기</h2>
+    <p>도구를 시작하면 거주지를 물어봅니다. 우편번호를 입력하세요. 한 우편번호에서 이용 가능한 플랜이 다른 우편번호에서는 이용할 수 없을 수 있으므로 이 단계는 매우 중요합니다. 메디케어는 이 정보를 이용해 거주 지역의 플랜만 보여줍니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="ko">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>3단계: 플랜 유형 선택하기</h2>
+    <p>다음 선택지가 표시됩니다:</p>
+    <ul>
+      <li><strong>파트 D 플랜만</strong> — 이미 오리지널 메디케어와 보충보험이 있고 약물 플랜만 비교하고 싶은 경우.</li>
+      <li><strong>메디케어 어드밴티지와 파트 D</strong> — 오리지널 메디케어와 어드밴티지 중에서 선택하거나 어드밴티지 플랜을 바꾸려는 경우.</li>
+      <li><strong>메디케어 어드밴티지만</strong> — 어드밴티지 플랜만 보고 싶은 경우. 대부분의 어드밴티지 플랜에는 약물 보장이 포함되지만, 전부 그런 것은 아닙니다(일부 행위별 수가제나 의료 저축 계좌 플랜은 포함하지 않습니다) — 항상 확인하세요.</li>
+    </ul>
+    <p>대부분의 사람들은 전체 비교를 원하기 때문에 "메디케어 어드밴티지와 파트 D"를 선택합니다.</p>
+
+    <h2>4단계: 처방약 추가하기(가장 중요한 단계)</h2>
+    <p><strong>대부분의 사람들이 너무 일찍 멈추는 지점이 바로 여기입니다. 멈추지 마세요.</strong></p>
+    <p>도구에서 복용 중인 약을 나열하라고 요청할 것입니다. 복용량("리시노프릴 20mg" 등)을 포함해 복용 중인 모든 처방약을 입력하세요. 가능하다면 영양제도 추가하세요 — 모든 플랜이 이를 보장하는 것은 아닙니다.</p>
+    <p><strong>이것이 중요한 이유:</strong> 본인 부담 약물 비용 총액이 플랜 간 가장 큰 차이가 나는 부분인 경우가 많습니다. 두 플랜의 보험료가 같더라도, 한 곳은 월 약물 비용이 200달러이고 다른 곳은 600달러일 수 있습니다. 이 단계에서 그 차이를 확인할 수 있습니다.</p>
+    <p>복용하는 약이 많다면 몇 분 정도 걸릴 수 있지만 그만한 가치가 있습니다. 일부 약국에서는 복용 약 목록을 인쇄해 주기도 하니, 전화해서 요청하면 시간을 절약할 수 있습니다.</p>
+
+    <div class="note tip">
+      <strong>정확한 복용량을 모르시나요?</strong> 처방약 병, 약국 영수증, 또는 담당 의사 병원에서 확인할 수 있습니다. 전화 한 통이면 됩니다. 정확히 확인할 가치가 있습니다 — 같은 약이라도 복용량이 다르면 다른 보장 등급에 속해 비용이 더 들 수 있습니다.
+    </div>
+
+    <h2>5단계: 약국 선택하기</h2>
+    <p>플랜은 약을 조제하는 장소에 따라 비용이 다르게 적용됩니다. 대부분의 플랜은 대형 체인점(CVS, Walgreens, Walmart)이나 슈퍼마켓 내 약국에서 비용이 더 저렴합니다. 일부 전문 약국은 특정 고가 약물에 대해 더 저렴한 경우도 있습니다.</p>
+    <p>선호하거나 이용해야 하는 약국이 있다면(근처에 유일한 약국이거나, 알레르기 정보를 알고 있는 곳이라면) 지금 추가하세요. 유연하게 선택할 수 있다면 이 단계는 건너뛰어도 되지만, 상위 후보로 좁힌 뒤 다시 돌아와 확인하세요.</p>
+
+    <h2>6단계: 결과 확인하기</h2>
+    <p>도구가 이제 예상 총비용 순으로 정렬된 플랜 목록을 보여줍니다. <strong>이것이 핵심 숫자입니다: 예상 총비용에는 보험료, 공제액(디덕터블), 공동부담금(코페이먼트), 공동보험금(코인슈런스)이 1년치로 모두 합산되어 있습니다.</strong> 이는 단순히 보험료로 내는 금액이 아닙니다.</p>
+    <p>맨 위에 있는 가장 저렴한 플랜이 연간 수백 달러를 절약해 줄 수도 있습니다. 하지만 첫 번째 것을 무조건 선택하지 마세요. 결정하기 전에 다음 단계를 먼저 읽어보세요.</p>
+
+    <h2>7단계: 보고 있는 내용 이해하기</h2>
+
+    <h3>예상 총비용</h3>
+    <p>이 숫자는 1년 동안 아마 지불하게 될 모든 비용 — 보험료, 공제액(디덕터블), 진료 방문 공동부담금(코페이먼트), 약물 비용 — 을 합산한 것입니다. 비교할 때 가장 중요한 숫자입니다.</p>
+
+    <h3>보험료</h3>
+    <p>이는 공동부담금(코페이먼트)이나 약물 비용과는 별개로, 플랜에 대해 매달 내는 비용입니다. 보험료가 낮다고 해서 총비용이 낮은 것은 아닙니다 — 진료 방문과 약물에 더 많이 지불하게 될 수도 있습니다.</p>
+
+    <h3>약품 등급과 약제 목록(처방집)</h3>
+    <p>각 플랜에는 약제 목록(처방집)이라고 부르는 보장 약물 목록이 있습니다. 복용 중인 약은 "등급"으로 분류됩니다 — 1등급은 비용이 더 적고, 2등급은 더 많으며, 3등급이나 4등급이 가장 비쌉니다. 플랜 파인더는 복용 약이 어느 등급에 속하는지 보여줍니다. 한두 개가 아니라 복용하는 모든 약을 확인하세요.</p>
+
+    <div class="note">
+      <strong>주의:</strong> 복용 약이 약제 목록(처방집)에 있더라도, 비용은 연중에 바뀔 수 있습니다. 플랜은 약을 더 높은 등급으로 옮기거나 목록에서 제외할 수 있습니다. 흔한 일은 아니지만 가능합니다. 상위 2~3개 플랜으로 좁힌 후에는 전화해서 복용 약 목록이 정확하고 바뀌지 않을지 확인하세요.
+    </div>
+
+    <h3>스타 등급(별점 평가)</h3>
+    <p>플랜은 고객 만족도, 품질, 서비스에 따라 1점에서 5점까지의 스타 등급(별점 평가)을 받습니다. 높을수록 좋습니다. 5점 플랜이 가장 높은 품질입니다. 이것이 회원님께 맞는 플랜인지를 예측해 주지는 않습니다 — 가장 좋은 플랜은 복용 약을 합리적인 비용으로 보장하는 플랜입니다 — 하지만 두 플랜의 비용이 비슷할 때 스타 등급(별점 평가)이 결정을 좌우할 수 있습니다.</p>
+
+    <h2>8단계: 담당 의사의 네트워크 확인하기</h2>
+    <p><strong>많은 사람들이 놓치는 함정입니다.</strong> 플랜 파인더는 의사가 네트워크 내에 있는지 보여줍니다. 하지만 이 도구가 항상 최신 정보를 가지고 있는 것은 아닙니다. 담당 의사가 네트워크 내에 있다고 표시되어 있다고 해서 여전히 그런 것도, 여전히 새 환자를 받고 있다는 것도 아닙니다.</p>
+    <p>다음을 실행하세요:</p>
+    <ol class="steps">
+      <li>계속 다니고 싶은 의사 목록을 만드세요: 주치의, 전문의, 그리고 중요하다면 안과 의사나 치과 의사까지 포함하세요.</li>
+      <li>상위 플랜으로 좁힌 후, 각 플랜 웹사이트에 들어가 네트워크 디렉터리에서 담당 의사를 찾아보세요.</li>
+      <li>담당 의사 병원에 전화해서 확인하세요: "XYZ 플랜을 고려하고 있는데요. 이 플랜 네트워크에 포함되어 있나요? 새 환자를 받고 계신가요?"</li>
+    </ol>
+    <p><strong>이 전화 한 통은 10분을 투자할 가치가 있습니다.</strong> 담당 의사가 네트워크에 없는 플랜에 묶이면 훨씬 더 많은 비용을 내야 할 수 있습니다. 최악의 경우 새 의사를 찾아야 할 수도 있습니다.</p>
+
+    <h2>9단계: 상위 2~3개로 좁히기</h2>
+    <p>지금까지 총비용을 비교하고, 약품 등급을 확인했으며, 담당 의사가 네트워크 내에 있는지 확인했습니다. 이제 상위 2~3개 플랜을 선택하세요.</p>
+    <p>각 플랜에 대해 스스로 물어보세요:</p>
+    <ul>
+      <li>총비용이 합리적인가?</li>
+      <li>주요 복용 약이 낮은 등급에 속해 있는가?</li>
+      <li>담당 의사가 네트워크 내에 있는가?</li>
+      <li>보험료와 공동부담금(코페이먼트)을 감당할 수 있는가?</li>
+    </ul>
+
+    <h2>10단계: 가입 전에 어려운 질문 하기</h2>
+    <p>플랜을 선택하기 전에 전화해서 다음 질문들을 하세요. 전체 목록은 <a href="/ko/questions-to-ask.html">물어볼 질문들</a>을 참고하시고, 핵심 질문은 다음과 같습니다:</p>
+    <ul>
+      <li>"제 담당 의사가 네트워크 내에 있다고 나오는데요. 새 환자를 받고 있는지 확인해 주시겠어요?"</li>
+      <li>"저는 이 세 가지 약을 복용하고 있어요. 이 등급에 속하는지, 연중에 바뀌지 않을지 확인해 주시겠어요?"</li>
+      <li>"응급 진료 공동부담금(코페이먼트)은 얼마인가요? 응급실 방문은요?"</li>
+      <li>"전문의를 만나려면 의뢰서가 필요한가요?"</li>
+    </ul>
+
+    <h2>무료 도움받기</h2>
+    <p>혼자 하실 필요 없습니다. 다음 서비스들은 무료이며 플랜을 판매하지 않습니다:</p>
+    <ul>
+      <li><strong>SHIP(주 건강보험 지원 프로그램)</strong> — <a href="https://www.shiphelp.org/" rel="noopener">shiphelp.org</a>에 전화해서 거주 주의 연락처를 확인하세요. 상담사가 플랜 파인더를 함께 살펴보며 선택지를 이해하도록 도와드립니다. 30분을 이보다 더 잘 쓸 방법은 없을 것입니다.</li>
+      <li><strong>1-800-MEDICARE</strong> — 특정 플랜에 대한 질문은 1-800-633-4227로 전화하세요.</li>
+      <li><strong>플랜 후원 상담사</strong> — 많은 메디케어 플랜이 자사 플랜을 이해하도록 돕는 무료 상담을 제공합니다.</li>
+    </ul>
+
+    <h2>플랜 파인더의 중요한 한계</h2>
+    <p><strong>플랜 파인더는 훌륭한 출발점이지만, 전부를 보여주지는 않습니다.</strong> 다음은 알려주지 않는 정보입니다:</p>
+    <ul>
+      <li><strong>연중 네트워크 변경:</strong> 네트워크 내에 있다고 표시된 의사가 플랜을 떠날 수도 있습니다. 항상 의사에게 직접 확인하세요.</li>
+      <li><strong>약제 목록(처방집) 변경:</strong> 약물 목록은 바뀔 수 있습니다. 바뀌지 않을지 플랜에 전화해서 확인하세요.</li>
+      <li><strong>사전 승인:</strong> 일부 플랜은 특정 약물을 보장받기 전에 승인을 받아야 합니다. 이 도구는 이를 알려주지 않습니다.</li>
+      <li><strong>고객 서비스 품질:</strong> 일부 플랜은 고객 서비스가 좋지 않은 것으로 알려져 있습니다. 최근 후기를 읽고 SHIP 상담사에게 물어보세요.</li>
+      <li><strong>전문 네트워크:</strong> 암 치료나 투석을 위해 특정 병원 시스템을 이용한다면, 플랜 파인더는 그 시스템이 네트워크 내에 있는지 보여주지 않을 수 있습니다. 전화해서 확인하세요.</li>
+    </ul>
+
+    <h2>플랜 파인더를 다시 사용해야 할 때</h2>
+    <p>플랜은 매년 바뀝니다. 복용 약 비용, 플랜 네트워크, 약제 목록(처방집)이 모두 1월 1일에 바뀔 수 있습니다. <strong>매년 10월 공개 가입 기간 동안 플랜 파인더를 다시 확인하세요</strong>. 작년에 만족했더라도, 올해는 더 저렴한 새 플랜이 있거나 현재 플랜이 가격을 올렸을 수 있습니다.</p>
+
+    <h2>최종 선택하기</h2>
+    <p>플랜 파인더를 사용한 후, 비용을 비교하고 선택지를 좁혔습니다. 이제:</p>
+    <ol class="steps">
+      <li>상위 플랜에 전화해서 어려운 질문들을 하세요(10단계 참고).</li>
+      <li>담당 의사 병원에 전화해서 네트워크 내에 있고 새 환자를 받고 있는지 확인하세요.</li>
+      <li>플랜의 혜택 요약서를 읽으세요(요청하면 플랜에서 보내주거나, 웹사이트에서 확인할 수 있습니다).</li>
+      <li>가입 기간 — 가을 공개 가입 기간(10월 15일 – 12월 7일), 또는 메디케어 어드밴티지 플랜에서 전환하는 경우 1월 1일 – 3월 31일 — 동안 온라인, 전화, 또는 상담사를 통해 가입하세요.</li>
+    </ol>
+
+    <div class="note">
+      <strong>출처에서 확인하세요:</strong> 플랜 파인더 정보는 자주 바뀝니다. 네트워크가 바뀌고, 약제 목록(처방집)이 바뀌고, 비용이 바뀝니다. 항상 플랜과 담당 의사에게 직접 최신 정보를 확인하세요. 이 페이지는 도구 사용법을 설명하는 것이지, 직접 확인하는 과정을 대신하는 것이 아닙니다. 확신이 서지 않으면 SHIP이나 <a href="https://www.medicare.gov/" rel="noopener">메디케어닷가브(Medicare.gov)</a>에 전화하세요.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
