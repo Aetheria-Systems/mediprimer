@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어 스타 등급(별점 평가) 및 품질 측정 지표 — MediPrimer</title>
+<meta name="description" content="CMS 스타 등급(별점 평가) 설명: 메디케어 어드밴티지 및 파트 D 플랜에 적용되는 1~5점 품질 척도, 측정 항목, 품질 보너스 지급 방식을 다룹니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/ko/star-ratings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="메디케어 스타 등급(별점 평가) 및 품질 측정 지표 — MediPrimer">
+<meta property="og:description" content="CMS 스타 등급(별점 평가) 설명: 메디케어 어드밴티지 및 파트 D 플랜에 적용되는 1~5점 품질 척도, 측정 항목, 품질 보너스 지급 방식을 다룹니다.">
+<meta property="og:url" content="https://mediprimer.org/ko/star-ratings.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="메디케어 스타 등급(별점 평가) 및 품질 측정 지표 — MediPrimer">
+<meta name="twitter:description" content="CMS 스타 등급(별점 평가) 설명: 메디케어 어드밴티지 및 파트 D 플랜에 적용되는 1~5점 품질 척도, 측정 항목, 품질 보너스 지급 방식을 다룹니다.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "메디케어 스타 등급(별점 평가) 및 품질 측정 지표", "description": "CMS 스타 등급(별점 평가) 설명: 메디케어 어드밴티지 및 파트 D 플랜에 적용되는 1~5점 품질 척도, 측정 항목, 품질 보너스 지급 방식을 다룹니다.", "url": "https://mediprimer.org/ko/star-ratings.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/star-ratings.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/star-ratings.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/star-ratings.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/star-ratings.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/star-ratings.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/star-ratings.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "메디케어 스타 등급(별점 평가) 및 품질 측정 지표", "item": "https://mediprimer.org/ko/star-ratings.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="언어: 한국어"><span class="lang-switch-current">한국어</span> ▾</button>
+    <div class="dropdown">
+    <a href="/star-ratings.html" lang="en">English</a>
+    <a href="/es/star-ratings.html" lang="es">Español</a>
+    <a href="/zh-Hant/star-ratings.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/star-ratings.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/star-ratings.html" lang="ko" aria-current="page">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop active">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">전문가용</p>
+    <h1>메디케어 스타 등급(별점 평가) 및 품질 측정 지표</h1>
+    <p>스타 측정 항목이 무엇인지, 메디케어 어드밴티지 및 파트 D 플랜에 대한 CMS의 1~5점 등급 체계로 어떻게 합산되는지, 그리고 등급이 보너스 지급, 리베이트, 회원 선택에 어떤 영향을 미치는지 설명합니다.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>스타 등급(별점 평가)이란?</h2>
+    <p>메디케어 스타 등급(별점 평가)은 CMS가 메디케어 어드밴티지(MA)와 파트 D 처방약 플랜에 대해 매년 발표하는 종합 품질 지표입니다. 1~5점 척도로, 스타 등급은 수십 개의 임상, 운영, 회원 경험 관련 측정 항목의 성과를 종합하여 플랜들을 단일 표준화된 지표로 비교할 수 있게 합니다. 5점 등급 체계는 회원들에게 눈에 띄는 차별화를 제공하고, 플랜 선택 행동에 영향을 미치며, 플랜이 <strong>품질 보너스 지급</strong>(리베이트) 자격을 얻는지 여부를 결정합니다.</p>
+    <p>CMS는 매년 가을 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 스타 등급을 발표하며, 대개 그다음 플랜 연도부터 등급이 적용됩니다. 등급은 상세한 기술 문서와 공개 데이터셋을 통해 업계 전문가들도 확인할 수 있습니다.</p>
+    <p><em>이 페이지는 전문가용 참고 자료입니다. 회원으로서 플랜을 비교하고 계신다면, 쉬운 언어로 쓴 안내서를 참고하세요: <a href="/ko/medicare-star-ratings.html">메디케어 스타 등급: 별점이 의미하는 것</a>.</em></p>
+
+    <h2>스타 측정 항목이란?</h2>
+    <p><strong>스타 측정 항목</strong>은 계약의 전체 스타 등급으로 합산되는 개별 품질 및 성과 지표입니다. 각 측정 항목은 CMS가 정한 기준선인 <strong>절단점(cut points)</strong>에 따라 1점에서 5점까지 점수가 매겨지며, 이 절단점은 측정 기간 동안의 성과를 바탕으로 매년 다시 계산됩니다. 그런 다음 측정 항목별 점수에 가중치를 부여하여 영역별 등급과 전체 등급으로 결합합니다. 2026년 스타 등급 기준, MA-PD 계약은 최대 43개의 고유 측정 항목으로, 파트 D가 없는 MA 단독 계약은 최대 33개로, 단독 PDP 계약은 최대 12개로 평가됩니다. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>이 측정 항목들은 HEDIS 임상 데이터, CAHPS 회원 경험 설문조사, 건강 결과 설문조사(HOS), CMS 행정 및 불만 데이터라는 네 가지 표준화된 데이터 원천을 활용하며, 아래에 자세히 설명된 다섯 개 영역으로 분류됩니다. 공식 측정 항목 목록, 가중치, 절단점은 <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">CMS.gov의 파트 C·D 성과 데이터 페이지</a>에 매년 발표되는 파트 C·D 스타 등급 기술 노트에서 확인할 수 있습니다. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="이메일로 MediPrimer 소식 받기">
+      <h2>가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.</h2>
+      <p>가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 외엔 없습니다. 광고 없음, 플랜 판매 없음.</p>
+      <form class="newsletter-form" data-lang="ko">
+        <label class="sr-only" for="nl-email">이메일 주소를 입력하세요</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소를 입력하세요">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 마감 전 알림 한 통, 그 후엔 평소처럼 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>등급 척도 및 계산 방식</h2>
+    <p>1~5점 척도는 다음과 같이 작동합니다.</p>
+    <ul>
+      <li><strong>5점:</strong> 최상위권 성과</li>
+      <li><strong>4~4.5점:</strong> 평균 이상</li>
+      <li><strong>3~3.5점:</strong> 평균</li>
+      <li><strong>2~2.5점:</strong> 평균 이하</li>
+      <li><strong>1점:</strong> 최하위권 성과</li>
+    </ul>
+    <p>각 플랜은 전체 스타 등급(영역별 등급의 가중 평균)과 함께 각 품질 영역에 대한 별도 등급을 받습니다. 등급은 전년도 데이터를 사용해 계산되며, 전국 플랜 단위 등급, 지역별 차이, 측정 항목별 성과 등 여러 수준에서 확인할 수 있습니다.</p>
+
+    <h2>측정 영역</h2>
+    <p>스타 등급은 플랜 품질과 성과의 다섯 가지 핵심 영역을 측정합니다.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>영역</th>
+            <th>측정 내용</th>
+            <th>주요 데이터 출처</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>건강 유지/예방 관리</strong></td>
+            <td>검진율(암, 심혈관, 당뇨), 예방접종, 연례 웰니스 방문, 예방 서비스 이용</td>
+            <td>HEDIS, 행정 청구 데이터</td>
+          </tr>
+          <tr>
+            <td><strong>만성 질환 관리</strong></td>
+            <td>당뇨, 고혈압, 관상동맥질환(CAD), 만성폐쇄성폐질환(COPD), 우울증에 대한 질환 관리 품질, 약물 순응도, 적절한 검사/모니터링</td>
+            <td>HEDIS, HOS, 행정 청구 데이터</td>
+          </tr>
+          <tr>
+            <td><strong>회원 경험 및 만족도</strong></td>
+            <td>플랜의 대응성, 고객 서비스, 치료 조정, 진료 및 보장에 대한 전반적 만족도</td>
+            <td>CAHPS 설문조사(파트 C 및 파트 D)</td>
+          </tr>
+          <tr>
+            <td><strong>불만 제기 및 고객 서비스</strong></td>
+            <td>회원 불만 제기율, 이의신청 및 불만 처리, 회원 우려사항에 대한 플랜의 대응성</td>
+            <td>CMS 불만 데이터베이스, 이의신청 데이터</td>
+          </tr>
+          <tr>
+            <td><strong>약물 안전성 및 가격 정확성</strong></td>
+            <td>약물 가격 정확성, 약제 목록(처방집)에 대한 회원 만족도, 약물 부작용 모니터링, 약국 접근성</td>
+            <td>파트 D 행정 데이터, CAHPS 파트 D 설문조사</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>기반이 되는 측정 항목 세트</h2>
+    <p>스타 등급은 플랜 성과의 다양한 측면을 포착하는 여러 표준화된 측정 항목 세트를 기반으로 구성됩니다.</p>
+
+    <h3>HEDIS(의료 효과성 데이터 및 정보 세트)</h3>
+    <p>HEDIS는 미국 품질보증위원회(NCQA)가 개발한 근거 기반 임상 품질 측정 항목 세트입니다. HEDIS 측정 항목은 행정 청구 데이터를 기반으로 하며, 예방 서비스(암 검진, 예방접종) 비율, 만성 질환 관리(당뇨 조절, 혈압 관리), 약물 사용 관련 지표를 포함합니다. 플랜은 매년 HEDIS 데이터를 보고하며, 이 측정 항목들은 "건강 유지"와 "만성 질환 관리" 영역의 스타 등급 계산에서 큰 비중을 차지합니다.</p>
+
+    <h3>CAHPS(의료 제공자 및 시스템에 대한 소비자 평가)</h3>
+    <p>CAHPS는 제3자 기관이 실시하는 플랜 회원 대상 표준화 설문조사입니다. 파트 C CAHPS와 파트 D CAHPS는 회원들에게 플랜 고객 서비스 경험, 진료 접근의 용이성, 제공자 품질, 전반적 만족도에 대해 질문합니다. 그 결과는 스타 등급의 "회원 경험" 및 "약물 안전성" 영역에 직접 반영됩니다.</p>
+
+    <h3>HOS(건강 결과 설문조사)</h3>
+    <p>HOS는 메디케어 어드밴티지 회원을 대상으로 신체적·정신적 건강 결과, 기능 상태, 치료 조정 경험에 대해 매년 설문조사를 실시합니다. 주요 HOS 측정 항목에는 약물 조정, 증상 모니터링, 신체적/정신적 건강 상태 변화가 포함되며, 이는 "만성 질환 관리" 영역에 기여합니다.</p>
+
+    <h3>CMS 행정 데이터 및 불만 사항</h3>
+    <p>CMS는 플랜 제출 자료와 CMS 감독 시스템을 통해 불만 제기율, 이의신청/불만 데이터, 회원 이의신청 결과를 직접 취합합니다. 이는 "불만 제기 및 고객 서비스" 영역에 반영됩니다.</p>
+
+    <p>CMS는 매년 측정 항목 세트를 조정하거나, 영역별 가중치를 업데이트하거나, 계산 방법론을 개선할 수 있습니다. 스타 등급 업데이트에 관한 CMS 발표는 <a href="/ko/policy-changes.html">정책 변경 사항</a>을 참고하시고, 현재 기술 사양은 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>에서 확인하세요.</p>
+
+    <h2>품질 보너스 지급</h2>
+    <p>4점 이상을 받은 메디케어 어드밴티지 조직은 MA 시장의 핵심적인 재정 인센티브인 <strong>품질 보너스 지급</strong> 자격을 얻습니다. (이는 MA 플랜에 적용되며, 단독 파트 D 플랜은 품질 보너스 지급 대상이 아닙니다.) CMS는 플랜의 카운티 요율 계산에 사용되는 적용 비율에 표준 5퍼센트포인트를 추가하며, 이는 다시 부가 혜택, 보험료 인하, 비용 분담 축소 형태로 플랜(그리고 간접적으로 회원)에게 돌아가는 리베이트를 증가시킵니다.</p>
+    <ul>
+      <li><strong>4점, 4.5점, 5점 플랜</strong> 모두 적용 비율에 동일한 표준 5퍼센트포인트 증가를 받습니다</li>
+      <li><strong>5점 플랜</strong>은 회원들에게 특별 가입 기간도 함께 열어줍니다(아래 참조)</li>
+    </ul>
+    <p>실제 리베이트 금액은 플랜의 (이제 더 높아진) 카운티 요율 대비 실제 절감액에 따라 달라지므로, 같은 등급의 두 플랜이라도 리베이트 금액은 다를 수 있습니다. 이러한 인센티브 구조는 플랜들이 품질 개선에 투자하도록 유도하며, 스타 등급을 플랜 전략과 경쟁적 포지셔닝의 주요 요소로 만듭니다. 상세한 리베이트 계산 방식은 CMS 지침에 발표되어 있으며, 운영상의 시사점은 <a href="/ko/operations.html">건강보험 플랜 운영</a>을 참고하세요.</p>
+
+    <h2>특별 가입 기간(5점 SEP)</h2>
+    <p>5점 등급을 받은 메디케어 어드밴티지 플랜의 회원들은 12월 8일부터 그다음 해 11월 30일까지 <strong>한 번</strong> 사용할 수 있는 특별 가입 기간을 얻어, 일반 연례 가입 기간이 아닌 시점에도 5점 플랜으로 전환할 수 있습니다. 이는 플랜 자체가 받는 혜택이 아니라 수혜자의 권리이며, 회원의 가입 결정에 중요한 영향을 미치는 요소입니다. 회원용 전체 안내는 <a href="/ko/medicare-five-star-special-enrollment-period.html">5점 특별 가입 기간: AEP 외 시점에 최상위 등급 플랜으로 전환하기</a>를 참고하시고, 플랜 전환 전반에 대해서는 <a href="/ko/enrollment.html">가입 및 마감일</a>과 <a href="/ko/choosing-coverage.html">보장 선택하기</a>를 참고하세요.</p>
+
+    <h2>위험 조정과 스타 등급의 상호작용</h2>
+    <p>스타 등급은 원자료(조정되지 않은) 비율로 발표됩니다. 다만 품질 측정 항목의 성과는 플랜의 위험 프로필이라는 더 넓은 맥락 안에서 평가됩니다. 더 아픈 인구 집단을 담당하는 플랜은 원자료 HEDIS 비율이 낮을 수 있지만, 그럼에도 위험 대비로는 우수한 품질 관리 능력을 보일 수 있습니다. 정확한 비교 분석을 위해서는 위험 조정, 케이스 믹스, 스타 등급 해석 간의 관계를 이해하는 것이 중요합니다. 자세한 내용은 <a href="/ko/risk-adjustment.html">위험 조정</a>을 참고하세요.</p>
+
+    <h2>플랜 노출도와 회원 의사결정</h2>
+    <p>스타 등급은 가입 기간 동안 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 눈에 띄게 표시되며, 회원들이 등급별로 플랜을 필터링하고 비교할 수 있는 인터랙티브 도구도 함께 제공됩니다. 5점 등급 지정은 회원들에게 큰 매력 요소로 작용합니다. 5점 플랜은 대개 가입률이 높은 반면, 1~2점 플랜은 이탈률로 어려움을 겪을 수 있습니다. 이러한 노출도로 인해 스타 등급은 플랜의 시장 포지셔닝에 있어 가장 중요한 품질 지표 중 하나가 됩니다.</p>
+
+    <h2>지속적인 변경 사항 및 방법론 업데이트</h2>
+    <p>CMS는 주기적으로 스타 등급 방법론을 업데이트하고, 새로운 측정 항목을 추가하며, 영역별 가중치를 조정하고, 데이터 수집 또는 제출 요건을 변경합니다. 예를 들어, 새로운 임상 근거, 보장 혜택의 변화, 수혜자 옹호 단체 및 업계 이해관계자들의 피드백에 대응해 측정 항목이 추가되거나 개선되어 왔습니다.</p>
+    <p>2026년 스타 등급은 한 주기 안에서 얼마나 많은 것이 바뀔 수 있는지를 잘 보여줍니다. 환자 경험/불만 및 접근성 측정 항목의 가중치가 4에서 2로 줄었고, 당뇨병 환자를 위한 새로운 신장 건강 평가 측정 항목이 추가되었으며, 두 개의 건강 결과 측정 항목(신체 건강 개선 또는 유지, 정신 건강 개선 또는 유지)이 사양 변경을 거쳐 가중치 1로 복귀했다가 2027년 스타 등급부터 가중치 3으로 오를 예정입니다. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>전문가들은 연례 스타 등급 업데이트, 기술 사양, 측정 항목 정의를 확인하기 위해 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>와 <a href="/ko/policy-changes.html">정책 변경 사항</a>을 계속 살펴보아야 합니다. 변경 사항은 대개 10월 1일부터 시행되며, 플랜이 보고 및 운영을 조정할 시간을 가질 수 있도록 몇 달 전에 미리 발표됩니다.</p>
+
+    <h2>전문가 참고 자료</h2>
+    <p>상세한 스타 등급 문서, 데이터 파일, 기술 지침은 다음을 참고하세요.</p>
+    <ul>
+      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 기술 사양, 측정 항목 정의, 계산 방법론</li>
+      <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — 공개 스타 등급, 플랜 비교 도구, 회원 자료</li>
+      <li>NCQA — HEDIS 측정 항목 정의 및 업데이트</li>
+      <li>플랜 제출 시스템 — 상세 성과 데이터, 측정 항목별 결과, 추세 분석</li>
+    </ul>
+
+    <div class="note">
+      <strong>출처에서 반드시 확인하세요:</strong> 스타 등급 방법론, 가중치, 측정 항목은 매년 변경됩니다. 등급 계산, 구체적인 측정 항목 정의, 보고 요건에 대한 최종 지침은 항상 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>의 최신 연도 CMS 기술 문서와 공식 Medicare.gov 자료를 참고하세요.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+    <div class="note">
+      <p>영어 원문 번역본입니다.</p>
+      <p>
+        <a href="/star-ratings.html">영어 원문 보기</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">메디케어 공식 한국어 자료</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
