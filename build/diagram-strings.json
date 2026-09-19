@@ -76,6 +76,25 @@
    "late_b": "Vẫn được phép, nhưng bảo hiểm bắt đầu ngày đầu tháng KẾ TIẾP — nên có thể có một thời gian không có bảo hiểm.",
    "foot1": "Bỏ lỡ cả 7 tháng, bạn có thể phải trả phí phạt đăng ký muộn suốt thời gian có Medicare.",
    "foot2": "Quy tắc khác áp dụng nếu bạn vẫn đi làm và có bảo hiểm từ chủ lao động lớn."
+  },
+  "ko": {
+   "title": "메디케어 가입 기간은 7개월입니다",
+   "desc": "7개월의 가입 기간입니다. 65세 생일 달 전 3개월이 가입하기 가장 좋은 시기이며, 65세가 되는 달부터 보장이 시작됩니다. 생일 달과 그 후 3개월에도 가입할 수 있지만, 보장 시작이 늦어집니다.",
+   "sub": "65세가 되는 달의 3개월 전부터 열리며, 언제 가입하느냐에 따라 보장 시작일이 달라집니다.",
+   "before": "3개월 전",
+   "before_sub": "생일 달 기준",
+   "bday1": "생일",
+   "bday2": "달",
+   "age65": "65세",
+   "after": "3개월 후",
+   "after_sub": "생일 달 기준",
+   "good_h": "이 3개월 안에 가입하면",
+   "good_b": "65세가 되는 달 1일부터 보장 시작 — 공백도 벌금도 없습니다.",
+   "good_tag": "가장 좋은 시기입니다.",
+   "late_h": "생일 달이나 그 후에 가입하면",
+   "late_b": "가입은 가능하지만 보장은 다음 달 1일부터 시작되어, 한동안 보장이 없을 수 있습니다.",
+   "foot1": "7개월을 모두 놓치면 메디케어 가입 기간 내내 late-enrollment 벌금을 낼 수 있습니다.",
+   "foot2": "현재 직장에 다니며 대규모 고용주 보험이 있다면 규칙이 다릅니다."
   }
  },
  "medicare-parts-explained": {
@@ -134,6 +153,20 @@
    "c_h": "PHẦN C — Medicare Advantage",
    "c_b": "Gói tư nhân thay thế Medicare Gốc. Phải bao gồm mọi thứ Phần A và B chi trả, thường có Phần D, và thêm nhiều lợi ích khác. Đổi lại, bạn dùng mạng lưới bác sĩ của gói và theo quy tắc phê duyệt của họ.",
    "foot": "Medicare không trả cho chăm sóc dài hạn dạng custodial, và Medicare Gốc không có mức trần chi phí hàng năm."
+  },
+  "ko": {
+   "title": "메디케어의 파트별 보장 내용",
+   "desc": "Part A는 병원 치료, Part B는 의사 진료와 외래 치료, Part D는 처방약을 보장합니다. Part C(Medicare Advantage)는 이를 묶은 민간 플랜입니다.",
+   "sub": "Original Medicare는 Part A와 B입니다. Part D는 약을 위해 추가하고, Part C는 다른 방식으로 전부 받는 방법입니다.",
+   "a_h": "PART A — 병원",
+   "a_b": "입원 치료. 입원 후 전문 간호. 호스피스 케어. 일부 재택 의료.",
+   "b_h": "PART B — 진료",
+   "b_b": "의사 방문. 외래 치료. 예방 검진. 검사. 의료 장비.",
+   "d_h": "PART D — 처방약",
+   "d_b": "약국에서 받는 처방약. 민간 플랜에서 판매. 플랜마다 보장 목록이 다릅니다.",
+   "c_h": "PART C — Medicare Advantage",
+   "c_b": "Original Medicare를 대체하는 민간 플랜입니다. Part A·B 보장을 모두 포함해야 하고, 보통 Part D도 포함되며 추가 혜택이 있습니다. 대신 플랜의 네트워크와 승인 규칙을 따라야 합니다.",
+   "foot": "메디케어는 장기 요양 돌봄을 보장하지 않으며, Original Medicare는 연간 지출 한도가 없습니다."
   }
  },
  "medicare-medicaid-which-program": {
@@ -196,6 +229,21 @@
    "dual_q": "Bạn đủ điều kiện cho cả hai",
    "dual_b": "Medicare trả trước, Medicaid bù phần thiếu. Phí bảo hiểm, đồng chi trả và chăm sóc dài hạn có thể được chi trả. Hỗ trợ nhiều nhất.",
    "foot_b": "Nếu bạn có Medicare và thu nhập thấp, hãy kiểm tra Medicaid và Medicare Savings Programs. Nhiều người đủ điều kiện chưa từng nộp đơn."
+  },
+  "ko": {
+   "title": "메디케어, 메디케이드, 아니면 둘 다?",
+   "desc": "메디케어는 나이나 장애 기준, 메디케이드는 소득 기준입니다. 많은 사람이 둘 다 해당되며(dual eligible), 이 경우 가장 많은 혜택을 받습니다.",
+   "sub": "두 프로그램은 규칙이 다르며, 둘 다 해당되는 경우도 흔합니다.",
+   "mcare_h": "메디케어",
+   "mcare_q": "나이나 장애 기준",
+   "mcare_b": "65세 이상이거나, 장애 급여를 24개월 받았거나, ESRD나 ALS가 있는 경우입니다. 소득은 상관없습니다.",
+   "mcaid_h": "메디케이드",
+   "mcaid_q": "소득 기준",
+   "mcaid_b": "소득과 자산이 주 기준 이하인 경우입니다. 규칙과 명칭은 주마다 다르며, 나이 제한은 없습니다.",
+   "dual_h": "둘 다 — DUAL ELIGIBLE",
+   "dual_q": "둘 다 해당되는 경우",
+   "dual_b": "메디케어가 먼저 지불하고 메디케이드가 나머지를 보완합니다. 보험료, 본인부담금, 장기요양까지 보장될 수 있어 가장 많은 혜택을 받습니다.",
+   "foot_b": "메디케어가 있고 소득이 낮다면 메디케이드와 Medicare Savings Programs를 확인하세요. 해당되는데도 신청하지 않는 사람이 많습니다."
   }
  },
  "medicare-enrollment-calendar": {
@@ -250,6 +298,19 @@
    "gep_h": "General Enrollment — 1/1 đến 31/3",
    "gep_n": "Dành cho người đã bỏ lỡ lần đăng ký đầu tiên",
    "foot_b": "Sự kiện đời sống như chuyển nhà, mất bảo hiểm khác, hoặc đủ điều kiện Extra Help có thể mở Special Enrollment Period vào bất kỳ lúc nào trong năm."
+  },
+  "ko": {
+   "title": "메디케어 연중 가입 기간 안내",
+   "desc": "Open Enrollment는 10월 15일부터 12월 7일까지입니다. Medicare Advantage Open Enrollment와 General Enrollment는 모두 1월 1일부터 3월 31일까지입니다.",
+   "sub": "이 기간들은 매년 반복됩니다. 기간 외에는 보통 보장 내용을 바꿀 수 없습니다.",
+   "months": "1월,2월,3월,4월,5월,6월,7월,8월,9월,10월,11월,12월",
+   "aep_h": "Open Enrollment — 10월 15일~12월 7일",
+   "aep_n": "내년 플랜 가입, 변경, 해지 가능",
+   "oep_h": "Medicare Advantage Open Enrollment — 1월 1일~3월 31일",
+   "oep_n": "이미 Advantage 플랜에 있다면 한 번 변경 가능",
+   "gep_h": "General Enrollment — 1월 1일~3월 31일",
+   "gep_n": "첫 가입 기회를 놓친 분들을 위한 기간",
+   "foot_b": "이사, 다른 보험 상실, Extra Help 자격 취득 등 인생의 변화가 있으면 연중 언제든 Special Enrollment Period가 열릴 수 있습니다."
   }
  }
 }

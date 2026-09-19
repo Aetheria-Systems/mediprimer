@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>위험 조정 및 HCC 코딩 — MediPrimer</title>
+<meta name="description" content="메디케어 어드밴티지 및 기타 위험 부담 플랜이 진단 코딩과 위험 점수를 통해 회원의 건강 상태에 따라 지급액을 조정하는 방법.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/ko/risk-adjustment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="위험 조정 및 HCC 코딩 — MediPrimer">
+<meta property="og:description" content="메디케어 어드밴티지 및 기타 위험 부담 플랜이 진단 코딩과 위험 점수를 통해 회원의 건강 상태에 따라 지급액을 조정하는 방법.">
+<meta property="og:url" content="https://mediprimer.org/ko/risk-adjustment.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="위험 조정 및 HCC 코딩 — MediPrimer">
+<meta name="twitter:description" content="메디케어 어드밴티지 및 기타 위험 부담 플랜이 진단 코딩과 위험 점수를 통해 회원의 건강 상태에 따라 지급액을 조정하는 방법.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "위험 조정 및 HCC 코딩", "description": "메디케어 어드밴티지 및 기타 위험 부담 플랜이 진단 코딩과 위험 점수를 통해 회원의 건강 상태에 따라 지급액을 조정하는 방법.", "url": "https://mediprimer.org/ko/risk-adjustment.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/risk-adjustment.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/risk-adjustment.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "위험 조정 및 HCC 코딩", "item": "https://mediprimer.org/ko/risk-adjustment.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/risk-adjustment.html" lang="en">English</a>
+    <a href="/es/risk-adjustment.html" lang="es">Español</a>
+    <a href="/zh-Hant/risk-adjustment.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/risk-adjustment.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop active">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">전문가를 위한 정보</p>
+    <h1>위험 조정 및 HCC 코딩</h1>
+    <p>플랜이 회원의 건강 상태에 따라 어떻게 지급받는지, 그리고 정확한 진단 문서화가 하는 역할.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>위험 조정의 목적</h2>
+    <p>위험 조정은 인두제 보험의 근본적인 문제를 해결하는 지급 메커니즘입니다. 만약 플랜이 회원의 건강 상태와 관계없이 동일한 금액을 지급받는다면, 더 아픈 회원을 가입시키거나 유지하는 것을 피하려는 재정적 유인이 생깁니다. 위험 조정은 만성질환과 복합적인 의료 필요를 가진 회원에 대한 플랜 지급액을 늘림으로써 이를 방지합니다.</p>
+    <p><a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>, <a href="/ko/marketplace.html">ACA 마켓플레이스(보험 거래소)</a> 플랜, 그리고 메디케이드 관리형 케어 프로그램에서 인두제란 플랜이 회원 1인당 매월 고정된 금액을 지급받고 해당 회원의 진료에 대한 재정적 위험을 전부 부담하는 것을 의미합니다. 조정이 없다면 그 고정 지급액은 더 아픈 집단의 비용을 충분히 감당하지 못할 것이며, 그럼에도 플랜은 가장 건강한 가입자만 유치함으로써 이익을 낼 수 있습니다. 위험 조정은 지급액을 의료적 필요 쪽으로 기울여 공정한 경쟁의 장을 만듭니다.</p>
+
+    <h2>CMS-HCC 모델: 진단에서 위험 점수까지</h2>
+    <p>메디케어·메디케이드 서비스 센터(CMS)는 회원의 건강 상태를 측정하고 <strong>위험 조정 계수(RAF) 점수</strong>를 계산하기 위해 <strong>계층적 상태 범주(HCC) 모델</strong>을 사용합니다. 그 작동 방식은 다음과 같습니다.</p>
+    <ol class="steps">
+      <li><strong>진단 수집.</strong> 제공자는 혜택 연도(메디케어 어드밴티지의 경우 일반적으로 달력 연도) 동안 각 회원에 대한 ICD-10 진단 코드가 담긴 청구 및 진료 기록을 제출합니다.
+      <li><strong>HCC 매핑.</strong> CMS는 그 진단 코드를 HCC로 매핑합니다. HCC는 향후 의료비를 예측하는 임상적으로 의미 있는 분류입니다. 하나의 진단 코드가 하나의 HCC로 매핑될 수도 있고, 여러 코드가 동일한 HCC로 매핑될 수도 있습니다.
+      <li><strong>계층 적용.</strong> 모델은 계층 구조를 적용합니다. 회원이 어떤 상태의 덜 심각한 형태와 더 심각한 형태를 모두 가지고 있다면, 더 심각한 HCC만 계산됩니다. 예를 들어 합병증이 없는 당뇨병이라는 덜 심각한 진단은, 합병증이 있는 당뇨병이라는 더 심각한 진단이 함께 있으면 그쪽으로 합쳐지며, 더 심각한 HCC만 계산됩니다. (구체적인 HCC 번호는 CMS가 모델을 재보정할 때마다 재배정되므로, 이 페이지는 버전별 ID에 고정하지 않고 개념을 설명합니다.)
+      <li><strong>RAF 계산.</strong> CMS는 해당되는 각 HCC에 위험 가중치를 부여합니다(예: 울혈성 심부전은 가중치 0.45를 가질 수 있으며, 이는 회원의 기본 지급액에 45%를 더한다는 의미입니다). RAF는 해당되는 모든 가중치의 합에 인구통계학적 요소를 더한 값입니다. RAF 1.0은 평균 위험을 나타내고, 0.8은 평균보다 20% 낮음을, 1.2는 평균보다 20% 높음을 나타냅니다.
+      <li><strong>지급액 조정.</strong> 플랜의 인두제 지급액에 RAF를 곱합니다. RAF 1.2인 회원은 RAF 1.0인 회원보다 20% 높은 지급액을 발생시키며, 이는 더 높은 예상 비용을 반영합니다.
+    </ol>
+    <p>HCC 모델은 CMS가 청구 및 진료 데이터를 바탕으로 매년 재보정하며, 포착된 진단 코드가 RAF를 좌우합니다. 따라서 정확하고 시기적절한 진단 포착은 적절한 지급과 플랜의 지속 가능성에 핵심적입니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="ko">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>문서화 및 컴플라이언스: 개념 수준의 MEAT/TAMPER</h2>
+    <p>HCC 코딩의 정확성을 보장하기 위해 제공자와 플랜은 흔히 MEAT(임상의 문서화용)와 TAMPER(감사인 및 플랜 검증용)로 약칭되는 문서화 기준을 따릅니다. 이 약어들은 체크리스트이지만 근본 원칙은 단순합니다.</p>
+    <ul>
+      <li><strong>진료 기록 뒷받침.</strong> 코딩된 모든 진단은 회원의 진료 기록—진료 노트, 검사 결과, 영상 판독, 약물 목록, 평가 요약—에 명확히 문서화되어야 하며, 이는 임상 진료 중 또는 직후에 담당 제공자가 작성해야 합니다.
+      <li><strong>구체성.</strong> 문서화는 가장 구체적이고 정확한 진단을 뒷받침해야 합니다. 구체성이 중요한 이유는 더 구체적인 진단이 흔히 더 정확한 HCC로 매핑되기 때문입니다. 예를 들어 "2형 당뇨병 및 2단계 만성 신장질환"은 "당뇨병 불명확"보다 더 구체적이며 다른 HCC로 매핑될 수 있습니다.
+      <li><strong>진료 시점.</strong> 진단은 해당 혜택 연도 중에 문서화되어야 합니다. 2024년 1월 5일에 문서화된 진단은 2024년 지급에 계산되고, 2025년 1월 2일에 문서화된 진단은 2025년에 계산됩니다. 진료 데이터(청구 및 대면 진료)가 이러한 진단을 포착합니다.
+      <li><strong>임상적 타당성.</strong> 코딩은 회원의 실제 임상 상태를 반영해야 합니다. 진단은 적극적으로 관리되거나, 평가 또는 계획에 언급되거나, 객관적 소견으로 뒷받침되어야 하며, 단순 추측이나 과거 병력만으로 나열되어서는 안 됩니다.
+    </ul>
+    <p>청구(기관 및 전문가) 및 보충 문서화를 포함한 진료 데이터가 HCC 모델에 반영됩니다. 정확한 진료 기록은 정확한 HCC와 적절한 RAF 계산을 보장합니다.</p>
+
+    <h2>지급 모델 및 연간 정산</h2>
+    <p>CMS는 전년도 청구에서 포착된 진단을 바탕으로 RAF 점수를 계산하고 플랜 지급액을 사전에 결정합니다. 예를 들어 2023년에 제출된 진단은 2024년 지급에 반영됩니다. 혜택 연도 동안 플랜과 제공자는 계속 문서화를 진행하며, 이 2024년 진단은 2025년 지급에 반영됩니다.</p>
+    <p>이 구조는 몇 가지 중요한 역학을 만듭니다.</p>
+    <ul>
+      <li><strong>시차와 정산.</strong> 플랜은 전년도 위험 프로필을 바탕으로 사전 지급을 받은 뒤, 향후 연도 지급에 영향을 미칠 것을 알면서 당해 연도 진료 데이터를 제출합니다. 데이터 감사에서 코딩 오류가 드러나면 CMS는 전년도 지급을 정산할 수 있습니다.
+      <li><strong>유인 정합성과 위험.</strong> 진단의 정확하고 완전한 포착은 플랜(적절한 RAF를 통해)과 제공자(실제 사례 복잡성을 반영하는 지급을 통해) 모두에게 이익이 됩니다. 플랜과 제공자는 각 진료 시마다 진단이 철저하고 정확하게 문서화되도록 하는 데 정합된 유인을 가집니다.
+      <li><strong>진료 완전성.</strong> 모든 진료가 청구에 포착되는 것은 아닙니다. 플랜은 완전한 임상적 상황을 반영하기 위해 추가 진료 문서로 보완할 수 있습니다. CMS는 청구와 보충 진료를 구분하며, 일부 프로그램에서는 둘 다 HCC 모델에 반영됩니다.
+    </ul>
+
+    <h2>RADV 감사와 컴플라이언스 위험</h2>
+    <p><strong>위험 조정 데이터 검증(RADV) 감사</strong>는 CMS, 주 기관, 또는 계약된 감사인이 실시하는 정기적인 컴플라이언스 검토입니다. RADV 감사에서 감사인은 특정 혜택 연도의 회원 진료 기록 표본을 무작위로 추출하여 HCC 코딩을 위해 제출된 진단이 실제로 진료 기록으로 뒷받침되고 임상 기준에 따라 문서화되었는지 확인합니다.</p>
+    <p>RADV 감사는 여러 유형의 문제를 발견할 수 있습니다.</p>
+    <ul>
+      <li><strong>뒷받침되지 않은 진단:</strong> 진단이 코딩되었지만 진료 기록에 해당 상태에 대한 임상적 근거가 없는 경우.
+      <li><strong>잘못 명시된 진단:</strong> 잘못된 ICD-10 코드가 사용되었거나, 더 구체적인 코드가 필요한데 덜 구체적인 코드가 사용된 경우.
+      <li><strong>시점 또는 문서화 결함:</strong> 진단이 기록되었지만 혜택 연도 중 실제 진료에서 이루어진 것이 아니거나, 문서화가 임상적 결론을 뒷받침하기에 너무 모호한 경우.
+      <li><strong>부정 징후:</strong> 임상적 근거 없이 많은 회원에게 동일한 진단이 나타나는 등, 의도적이거나 체계적인 과다 코딩을 시사하는 패턴.
+    </ul>
+    <p>RADV 결과가 체계적 오류나 과다 코딩을 나타내면, CMS는 플랜 지급을 소급 조정하거나 벌칙을 부과할 수 있습니다. 따라서 플랜은 외부 감사 전에 오류를 발견하고 수정하기 위해 <strong>동시 코딩 감사</strong>와 <strong>진료 포착 프로그램</strong>에 투자하며, 정확한 문서화 관행을 보장하기 위해 <strong>제공자 교육</strong>에도 투자합니다. 현재 CMS RADV 이니셔티브는 <a href="/ko/policy-changes.html">정책 변경</a>을 참조하세요.</p>
+
+    <h2>윤리적 경계선: 구체성 대 상향 코딩</h2>
+    <p>정확한 코딩과 부적절한 상향 코딩 사이의 경계는 미묘할 수 있습니다. 컴플라이언스를 중시하는 조직이 이를 다루는 방식은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>적절함:</strong> 제공자가 현재 검사 결과와 임상 평가를 바탕으로 "2형 당뇨병 및 2단계 만성 신장질환"을 문서화하고, 코더는 이 문서화된 상태를 반영하는 구체적인 HCC를 선택합니다. 진료 기록이 주장된 구체성을 뒷받침합니다.
+      <li><strong>적절함:</strong> 플랜이 많은 진료가 평가에는 진단을 문서화했지만 코딩된 진단 항목에는 반영되지 않았음을 발견하고, 제공자의 동시대 임상 문서화로 뒷받침되는 누락된 문서화 진단을 진료 기록에 체계적으로 추가합니다.
+      <li><strong>의심스러움:</strong> 제공자가 심각도 수준을 뒷받침하는 명확한 임상 문서화 없이 항상 최고 심각도 버전("합병증 동반" 변형 등)을 체계적으로 코딩합니다.
+      <li><strong>부적절함:</strong> 코더가 제공자가 문서화하지 않은 진단을 추정하거나, 당해 연도에 적극적으로 관리되고 있다는 근거 없이 과거 병력에서만 문서화된 진단을 부여합니다.
+    </ul>
+    <p>규제 지침과 판례는 코딩이 진료 기록으로 뒷받침되는 현재 진행 중인 적극적 관리 진단을 반영해야 한다는 점을 명확히 해왔습니다. 구체성과 적절한 계층 적용은 기대되는 것이지만, 임상적 근거 없는 체계적 상향은 그렇지 않습니다. 플랜과 제공자는 RAF 극대화가 아니라 감사인에 대한 정확성과 투명성을 강조하는 컴플라이언스 자세로 운영됩니다.</p>
+
+    <h2>다른 프로그램에서의 위험 조정</h2>
+    <p><strong>메디케어 어드밴티지</strong>는 위에서 설명한 HCC 모델을 사용합니다. CMS-HCC 버전 28(및 계속 진화하는 버전)이 적용됩니다.</p>
+    <p><strong>ACA 마켓플레이스(보험 거래소)</strong> 플랜도 ACA의 위험 조정 프로그램을 통해 자금이 조달되는 위험 조정 메커니즘을 사용합니다. 평균보다 더 아픈 가입자를 둔 플랜은 중앙 프로그램으로부터 이전금을 받고, 평균보다 더 건강한 가입자를 둔 플랜은 그 프로그램에 기여합니다. 모델과 HCC 매핑은 메디케어 어드밴티지와 약간 다르지만 동일한 목적을 수행합니다. 즉, 건강 위험에 따른 지급 여건을 평평하게 만드는 것입니다.</p>
+    <p><strong>메디케이드 관리형 케어</strong>의 위험 조정은 주와 프로그램에 따라 다릅니다. 일부 주는 HCC 기반 모델을 사용하고, 다른 주는 더 단순한 인구통계학적 요소나 상태 기반 범주를 사용합니다. 주 메디케이드 기관은 관리형 케어 계약에서 위험 조정 방법론을 정의합니다.</p>
+    <p><strong>상업 보험 플랜</strong>은 동일한 CMS 위험 조정 체계를 적용받지 않지만, 보험사는 가격 책정과 인구 관리를 위해 자체 내부 위험 모델을 사용합니다.</p>
+
+    <h2>관련 주제</h2>
+    <p>위험 조정은 여러 전문 직무와 관련이 있습니다. 다음도 참조하세요.</p>
+    <ul>
+      <li><a href="/ko/operations.html">건강보험 운영</a> — 플랜이 임상 및 재정 기능을 조직하는 방법.
+      <li><a href="/ko/providers.html">제공자 및 청구</a> — 제공자가 진료 및 청구를 제출하는 방법.
+      <li><a href="/ko/star-ratings.html">스타 등급(별점 평가) 및 품질 측정</a> — 관련 CMS 지표와 그 데이터 출처.
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS RADV 프로그램</a> — 공식 규제 체계 및 감사 절차.
+    </ul>
+
+    <h2>용어집</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>용어</th>
+            <th>정의</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HCC(계층적 상태 범주)</strong></td>
+            <td>CMS가 건강 상태를 측정하고 비용을 예측하기 위해 사용하는 임상적으로 의미 있는 진단 분류. 각 HCC에는 지정된 위험 가중치가 있습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>RAF(위험 조정 계수)</strong></td>
+            <td>회원 개인의 위험 점수로, 해당되는 HCC 가중치의 합에 인구통계학적 요소를 더하여 계산됩니다. RAF가 1.0보다 크면 평균 이상 위험을, 1.0보다 작으면 평균 이하 위험을 나타냅니다. 플랜의 인두제 지급을 조정하는 데 사용됩니다.</td>
+          </tr>
+          <tr>
+            <td><strong>RADV(위험 조정 데이터 검증)</strong></td>
+            <td>플랜이 HCC 코딩 및 지급을 위해 제출한 진단의 정확성을 검증하는 CMS 의무 감사 절차. 감사인은 진료 기록을 검토하여 진단이 문서화되고 임상적으로 뒷받침되는지 확인합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>MEAT</strong></td>
+            <td>문서화 기준의 약어: <strong>M</strong>edical record support(진료 기록 뒷받침), <strong>E</strong>ncounter date during benefit year(혜택 연도 중 진료 일자), <strong>A</strong>ctive management(적극적 관리), <strong>T</strong>herapy/specificity(치료/구체성). 제공자는 정확한 임상 문서화를 위해 MEAT를 활용합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>TAMPER</strong></td>
+            <td>감사 기준의 약어: <strong>T</strong>emporality(혜택 연도 중 진료), <strong>A</strong>ccuracy(코드 선택의 정확성), <strong>M</strong>edical record support(진료 기록 뒷받침), <strong>P</strong>roper hierarchy application(적절한 계층 적용), <strong>E</strong>ncounter type validation(진료 유형 검증), <strong>R</strong>easonableness(진단의 합리성). 감사인은 TAMPER를 사용해 코딩의 타당성을 평가합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>진료 데이터</strong></td>
+            <td>제공자가 회원의 진료 방문, 서비스, 진단, 시술을 문서화하여 제출하는 청구 및 임상 기록. 진료 데이터는 HCC 모델에 반영됩니다.</td>
+          </tr>
+          <tr>
+            <td><strong>인두제</strong></td>
+            <td>이용된 서비스와 관계없이 플랜에 지급되는 고정된 회원 1인당 매월 지급액. 플랜은 모든 보장 서비스에 대한 재정적 위험을 부담합니다. 위험 조정은 회원의 건강 상태에 따라 인두제 지급을 수정합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>계층 구조</strong></td>
+            <td>HCC 모델에서, 회원이 동일한 상태와 관련된 여러 HCC에 해당되는 경우 가장 심각한 것만 계산한다는 규칙. 계층 구조는 이중 계산을 방지하고 HCC 정확성을 보장합니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>출처에서 확인하세요:</strong> 이 페이지는 위험 조정의 작동 방식을 개괄적으로 설명합니다. 현재 HCC 모델 버전, RAF 계산 세부 사항, RADV 절차, 컴플라이언스 지침은 <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov(RADV)</a>, 소속 플랜의 컴플라이언스 정책, 그리고 해당 주의 관리형 케어 규정을 참조하세요. 이 내용은 교육 목적이며 법률 또는 컴플라이언스 자문에 해당하지 않습니다.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

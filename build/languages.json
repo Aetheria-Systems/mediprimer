@@ -63,9 +63,17 @@
    "native": "\ud55c\uad6d\uc5b4",
    "tier": 2,
    "rtl": false,
-   "launched": false,
+   "launched": true,
    "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
-   "ui": {},
+   "ui": {
+    "switcher_label": "\uc5b8\uc5b4",
+    "note": "\uc601\uc5b4 \uc6d0\ubb38 \ubc88\uc5ed\ubcf8\uc785\ub2c8\ub2e4.",
+    "note_english_link": "\uc601\uc5b4 \uc6d0\ubb38 \ubcf4\uae30",
+    "note_official": "\uba54\ub514\ucf00\uc5b4 \uacf5\uc2dd \ud55c\uad6d\uc5b4 \uc790\ub8cc",
+    "tool_english": "\uc774 \ub3c4\uad6c\ub294 \uc601\uc5b4\ub85c\ub9cc \uc81c\uacf5\ub429\ub2c8\ub2e4.",
+    "last_updated": "\ub9c8\uc9c0\ub9c9 \uc5c5\ub370\uc774\ud2b8",
+    "banner": "\uc774 \ud398\uc774\uc9c0\ub97c \ud55c\uad6d\uc5b4\ub85c \ubcf4\uc2dc\uaca0\uc2b5\ub2c8\uae4c?"
+   },
    "og_locale": "ko_KR"
   },
   {
