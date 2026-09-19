@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어 파트 B 기브백: 보험료 환급은 실제로 어떻게 작동하나 — MediPrimer</title>
+<meta name="description" content="파트 B 기브백 플랜은 파트 B 보험료의 일부 또는 전부를 대신 납부해줍니다. 이 감면이 어떻게 작동하는지, 왜 사회보장 수표 금액이 늘어나는지, 그리고 그 대가로 무엇을 포기하게 되는지 알아보세요.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-part-b-giveback.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Part B Giveback: How It Really Works — MediPrimer">
+<meta property="og:description" content="Part B giveback plans pay part or all of your Part B premium. See how the reduction works, why your Social Security check goes up, and what you trade for it.">
+<meta property="og:url" content="https://mediprimer.org/medicare-part-b-giveback.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicare Part B Giveback: How It Really Works — MediPrimer">
+<meta name="twitter:description" content="Part B giveback plans pay part or all of your Part B premium. See how the reduction works, why your Social Security check goes up, and what you trade for it.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the Part B giveback a scam?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a real Medicare Advantage benefit that Medicare calls a \"Part B premium reduction.\" The scams are the calls and ads that use it as bait to get your Medicare Number or a quick sign-up. Verify any plan in Plan Finder or with your SHIP."}}, {"@type": "Question", "name": "Does Medicare send me a check?", "acceptedAnswer": {"@type": "Answer", "text": "No. Most people have the Part B premium deducted from Social Security. The reduction shrinks that deduction, so your Social Security payment goes up. If Medicare bills you instead, the bill goes down."}}, {"@type": "Question", "name": "Can I get a giveback with Original Medicare or Medigap?", "acceptedAnswer": {"@type": "Answer", "text": "No. The premium reduction is a Medicare Advantage plan benefit. With Original Medicare and Medigap, you pay the full Part B premium. If you have limited income, your state may help pay it instead. See Getting Help Paying ."}}, {"@type": "Question", "name": "Is a giveback plan a good deal?", "acceptedAnswer": {"@type": "Answer", "text": "That depends on the whole plan and on you. The giveback is funded from the same extra-benefit money as dental, vision, and lower copays. If you rarely use care and don't need the extras, it may save you money. If you see specialists often or need dental work, a plan with lower copays or richer extras may cost you less over a year. This site doesn't recommend plans. Compare the yearly total, then decide."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-part-b-giveback.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-part-b-giveback.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-part-b-giveback.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-part-b-giveback.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-part-b-giveback.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Part B Giveback: How It Really Works", "description": "Part B giveback plans pay part or all of your Part B premium. See how the reduction works, why your Social Security check goes up, and what you trade for it.", "url": "https://mediprimer.org/medicare-part-b-giveback.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Part B Giveback: How It Really Works", "item": "https://mediprimer.org/medicare-part-b-giveback.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-part-b-giveback.html" lang="en">English</a>
+    <a href="/es/medicare-part-b-giveback.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-part-b-giveback.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-part-b-giveback.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">회원 및 보호자를 위한 정보</p>
+    <h1>메디케어 파트 B 기브백: 보험료 감면은 실제로 어떻게 작동하나</h1>
+    <p>광고에서는 "사회보장 수표로 돈을 돌려받는다"고 약속합니다. 이 혜택이 무엇인지, 그 돈은 어디서 오는지, 그리고 그것을 받기 위해 무엇을 포기하는지 알려드립니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>짧게 요약하면 이렇습니다.</strong> "파트 B 기브백"은 일부 메디케어 어드밴티지(파트 C) 플랜이 제공하는 혜택입니다. 플랜이 매달 내는 파트 B 보험료의 전부 또는 일부를 대신 부담해 줍니다. 메디케어 공식 명칭은 <strong>"메디케어 파트 B 보험료 감면"</strong>입니다. 모든 지역에서 제공되는 것은 아닙니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --> 이것은 실제로 존재하며 합법입니다. 하지만 공짜 돈은 아닙니다. 이는 치과, 안과 혜택, 낮은 공동부담금(코페이먼트)을 지원하는 것과 같은 재원에서 지급되는 하나의 플랜 혜택일 뿐입니다. 이를 제대로 판단하려면 기브백만이 아니라 플랜 전체를 봐야 합니다.</p>
+
+    <h2>파트 B 기브백이란 무엇인가</h2>
+    <p>메디케어에 가입한 모든 사람은 진료와 외래 진료를 보장하는 <a href="/ko/medicare-part-b.html">메디케어 파트 B</a>에 대해 매달 보험료를 냅니다. 2026년 기준 표준 파트 B 보험료는 월 $202.90입니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> 소득이 높은 사람은 더 많이 냅니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <p><a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a> 플랜에 가입하면 플랜을 유지하기 위해 파트 B를 계속 유지하고 그 보험료를 계속 납부해야 합니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> 일부 플랜은 이 보험료의 전부 또는 일부를 대신 납부해 줍니다. 이것이 기브백입니다. 메디케어는 이 혜택이 "모든 지역에서 제공되는 것은 아니"라고 명시하며, 자세한 내용은 플랜에 문의하라고 안내합니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --></p>
+    <p>금액은 플랜마다 다릅니다. 일부 플랜은 보험료의 일부만 부담합니다. 일부는 전액을 부담합니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --> 플랜의 혜택 및 보장 요약서(SBC)에 정확한 월 금액이 나와 있습니다.</p>
+
+    <h2>광고가 사회보장 수표를 언급하는 이유</h2>
+    <p>대부분의 사람은 파트 B 보험료가 사회보장 지급액에서 자동으로 공제됩니다. <!-- src: https://www.medicare.gov/basics/costs/pay-premiums --> 플랜이 보험료의 일부를 대신 내주면, 공제되는 금액이 줄어듭니다. 그 결과 매달 받는 사회보장 지급액이 그만큼 늘어납니다. 이것이 광고에서 말하는 "수표로 돌려받는 돈"입니다. 누구도 수표를 따로 보내주지 않습니다. 공제 금액이 줄어들 뿐입니다.</p>
+    <p>사회보장 지급을 받지 않는 경우, 메디케어는 대신 파트 B 요금을 청구서로 보냅니다. <!-- src: https://www.medicare.gov/basics/costs/pay-premiums --> 이 경우 감면은 청구 금액을 줄여줍니다. 정확한 금액을 기대하기 전에 그 감면이 어떤 방식으로 반영되는지 플랜에 문의하세요.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>그 돈은 어디서 오는가</h2>
+    <p>메디케어는 메디케어 어드밴티지 플랜을 운영하는 민간 보험사에 비용을 지급합니다. 플랜은 그 돈의 일부를 사용해 오리지널 메디케어가 보장하지 않는 추가 혜택 비용을 충당합니다. CMS 규정은 이 돈을 "리베이트 달러"라고 부르며, 이것이 플랜의 추가 혜택 재원이 됩니다. <!-- src: https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/mc86c04.pdf --> CMS가 <a href="/ko/medicare-advantage.html">메디케어 어드밴티지 플랜에 어떻게 비용을 지급하는지</a> 설명하는 저희 페이지에서 이 구조를 확인할 수 있습니다.</p>
+    <p>이것이 기브백을 판단하는 핵심입니다. 플랜은 추가 혜택에 쓸 수 있는 재원이 정해져 있습니다. 이 돈을 보험료 감면에 쓸 수도 있고, 치과·안과 혜택, 낮은 공동부담금(코페이먼트), 연간 본인 부담 비용 최대 한도 인하, 또는 약제 보장에 쓸 수도 있습니다. 기브백에 들어가는 1달러는 다른 곳에 쓰이지 못하는 1달러입니다. 기브백은 플랜에 덤으로 얹어지는 보너스가 아닙니다. 플랜이 자신의 추가 재원을 어떻게 쓸지에 대한 선택일 뿐입니다.</p>
+
+    <h2>그 대가로 포기할 수도 있는 것</h2>
+    <p>플랜마다 다르므로, 고려 중인 플랜의 세부 내용을 반드시 확인하세요. 같은 지역의 다른 플랜과 기브백 플랜 사이에서 흔히 차이가 나는 부분은 다음과 같습니다.</p>
+    <ul>
+      <li><strong>공동부담금(코페이먼트)과 공동보험금(코인슈런스).</strong> 메디케어 어드밴티지 플랜은 일부 서비스에 대해 오리지널 메디케어보다 더 많은 비용을 청구할 수 있습니다. 보험료를 대신 내주는 플랜은 실제로 진료를 받을 때 더 많은 비용을 청구할 수 있습니다. 입원, 전문의 진료, 외래 수술에 대한 공동부담금을 비교해 보세요.</li>
+      <li><strong>연간 본인 부담 비용 최대 한도.</strong> 모든 플랜에는 연간 보장 의료비 본인 부담액의 상한선이 있습니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> 아프게 되면 이 상한선이 높을수록 한 해 동안 기브백으로 절약한 금액이 상쇄될 수 있습니다. <a href="/ko/medicare-advantage.html">본인 부담 비용 최대 한도</a> 페이지를 참고하세요.</li>
+      <li><strong>추가 혜택.</strong> 기브백 플랜에서는 치과, 안과, 청력, 피트니스 혜택이 더 적을 수 있습니다. 틀니나 보청기가 필요하다면 비용을 미리 확인하세요. <a href="/ko/medicare-dental-vision-hearing.html">치과, 안과, 청력 보장</a> 가이드에서 확인할 사항을 안내합니다.</li>
+      <li><strong>약제 보장.</strong> 일부 플랜은 파트 D를 함께 묶어 제공합니다. 복용 중인 약이 플랜의 약제 목록(처방집)에 있는지, 어느 등급에 속하는지 확인하세요.</li>
+      <li><strong>네트워크와 승인.</strong> 담당 의사가 네트워크 밖에 있다면 기브백은 아무 도움이 되지 않습니다. <a href="/ko/medicare-advantage-prior-authorization.html">사전 승인</a> 규정도 확인하세요.</li>
+    </ul>
+    <p>플랜은 기브백 금액을 포함해 이 모든 것을 매년 바꿀 수 있습니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --> 올해 보험료 전액을 내주는 플랜이 내년에는 더 적게 낼 수도 있습니다. 매년 가을 플랜을 검토하세요.</p>
+
+    <h2>간단한 비교 방법</h2>
+    <p>보험료 항목 하나만이 아니라, 한 해 동안 플랜이 실제로 부담시킬 비용 전체를 더해보세요. 대략적인 방법은 다음과 같습니다.</p>
+    <ol class="steps">
+      <li>지금 내고 있는 파트 B 보험료에서 시작합니다. 플랜의 월별 기브백 금액을 뺍니다. 여기에 12를 곱합니다.</li>
+      <li>플랜 자체의 월 보험료(있는 경우)에 12를 곱한 금액을 더합니다.</li>
+      <li>평소 받는 진료에 대해 예상되는 공동부담금을 더합니다: 진료, 전문의 진료, 검사, 약값.</li>
+      <li>플랜의 연간 본인 부담 비용 최대 한도를 확인하세요. 이것이 의료비에 대한 최악의 경우입니다.</li>
+      <li>다른 플랜 한두 개, 그리고 <a href="/ko/choosing-coverage.html">메디케어 보충보험(메디갭)을 결합한 오리지널 메디케어</a>에 대해서도 같은 방식으로 계산해 보세요.</li>
+    </ol>
+    <p>메디케어의 플랜 파인더는 보험료, 공동부담금, 추가 혜택, <a href="/ko/medicare-star-ratings.html">스타 등급(별점 평가)</a>을 나란히 보여줍니다. <a href="/ko/using-plan-finder.html">플랜 파인더 사용법</a> 가이드를 참고하세요. <a href="/ko/ship-directory.html">SHIP</a>은 플랜 비교에 대해 무료로 공정한 도움을 제공합니다.</p>
+
+    <h2>기브백이 도움이 되지 않을 수도 있는 경우</h2>
+    <ul>
+      <li><strong>거주 주(state)가 파트 B 보험료를 대신 내주는 경우.</strong> 소득과 자산이 제한된 사람은 주로부터 메디케어 보험료 지원을 받을 수 있습니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> 이미 보험료가 지원되고 있다면, 전환하기 전에 기브백이 본인에게 어떻게 적용될지 SHIP에 문의하세요. <a href="/ko/getting-help.html">비용 지원 받기</a> 페이지에서 메디케어 절감 프로그램을 설명합니다.</li>
+      <li><strong>거주 지역에서 제공되지 않는 경우.</strong> 기브백은 모든 지역에서 제공되지 않습니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --></li>
+      <li><strong>담당 의사를 잃게 되는 경우.</strong> 매달 몇 달러로는 신뢰하는 전문의를 잃는 손실을 거의 메울 수 없습니다.</li>
+      <li><strong>나중에 오리지널 메디케어로 돌아갈 계획이 있는 경우.</strong> 메디케어 어드밴티지를 탈퇴한 후 메디케어 보충보험(메디갭)에 가입하기는 어려울 수 있습니다. <a href="/ko/medicare-advantage-to-original-medicare.html">오리지널 메디케어로 돌아가기</a>를 참고하세요.</li>
+    </ul>
+
+    <h2>기브백 광고와 사기 전화</h2>
+    <p>기브백 광고는 사기의 표적이 되기 쉽습니다. 메디케어는 이런 광고를 운영하지 않습니다. 메디케어는 무언가를 팔기 위해 전화하거나 집으로 방문하는 일이 절대 없습니다. <!-- src: https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse --> 본인이 먼저 전화해 도움을 요청한 경우가 아니라면, 전화로 메디케어 건강 플랜이나 약제 플랜에 가입하지 마세요. <!-- src: https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse --> "돈을 돌려준다"며 전화를 건 사람에게 메디케어 번호를 절대 알려주지 마세요. <!-- src: https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse --></p>
+    <p>진짜 기브백 플랜인지는 플랜 파인더나 SHIP을 통해 확인할 수 있습니다. 전화한 사람이 오늘 당장 가입하라고 재촉한다면 전화를 끊으세요. <a href="/ko/medicare-scams.html">메디케어 사기 가이드</a>에서 그 패턴과 신고 방법을 확인하세요.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <details class="qa">
+      <summary>파트 B 기브백은 사기인가요?</summary>
+      <div>
+        <p>아닙니다. 메디케어가 "파트 B 보험료 감면"이라고 부르는 실제 메디케어 어드밴티지 혜택입니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --> 사기는 이 혜택을 미끼로 메디케어 번호를 알아내거나 빠른 가입을 유도하는 전화와 광고입니다. 어떤 플랜이든 플랜 파인더나 SHIP을 통해 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>메디케어가 제게 수표를 보내주나요?</summary>
+      <div>
+        <p>아닙니다. 대부분의 사람은 파트 B 보험료가 사회보장에서 공제됩니다. <!-- src: https://www.medicare.gov/basics/costs/pay-premiums --> 감면은 이 공제액을 줄여주므로 사회보장 지급액이 늘어납니다. 메디케어가 대신 청구서를 보내는 경우라면 청구 금액이 줄어듭니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>오리지널 메디케어나 메디케어 보충보험(메디갭)으로도 기브백을 받을 수 있나요?</summary>
+      <div>
+        <p>아닙니다. 보험료 감면은 메디케어 어드밴티지 플랜의 혜택입니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/costs --> 오리지널 메디케어와 메디케어 보충보험(메디갭)에서는 파트 B 보험료 전액을 본인이 납부합니다. 소득이 제한적이라면 대신 거주 주에서 지원을 받을 수 있습니다. <a href="/ko/getting-help.html">비용 지원 받기</a>를 참고하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>기브백 플랜은 좋은 선택인가요?</summary>
+      <div>
+        <p>이는 플랜 전체와 본인 상황에 따라 다릅니다. 기브백은 치과, 안과 혜택, 낮은 공동부담금(코페이먼트)과 같은 추가 혜택 재원에서 지급됩니다. <!-- src: https://www.cms.gov/regulations-and-guidance/guidance/manuals/downloads/mc86c04.pdf --> 진료를 거의 받지 않고 추가 혜택이 필요 없다면 비용을 절약할 수 있습니다. 전문의를 자주 만나거나 치과 치료가 필요하다면, 공동부담금이 낮거나 추가 혜택이 풍부한 플랜이 한 해 동안 더 적은 비용이 들 수 있습니다. 이 사이트는 특정 플랜을 추천하지 않습니다. 연간 총비용을 비교한 뒤 결정하세요.</p>
+      </div>
+    </details>
+
+    <h2>관련 페이지</h2>
+    <ul>
+      <li><a href="/ko/medicare-advantage.html">메디케어 어드밴티지: 작동 방식</a></li>
+      <li><a href="/ko/costs.html">비용 이해하기</a></li>
+      <li><a href="/ko/medicare-scams.html">메디케어 사기: 알아채고 신고하는 방법</a></li>
+      <li><a href="/ko/medicare-star-ratings.html">메디케어 스타 등급(별점 평가): 별의 의미</a></li>
+      <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/health-plans/costs" rel="noopener">Medicare.gov: 건강 플랜 비용 이해하기</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>행동하기 전에 확인하세요.</strong> MediPrimer는 일반적인 교육 정보를 제공하며, 어떤 기관이나 보험사와도 제휴하지 않습니다. 플랜 혜택, 보험료, 기브백 금액은 매년, 그리고 카운티마다 달라집니다. 플랜 자체 자료, <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, 또는 <a href="/ko/ship-directory.html">SHIP</a>을 통해 세부 내용을 확인하세요. 이 사이트의 어떤 페이지도 특정 플랜을 추천하지 않습니다.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

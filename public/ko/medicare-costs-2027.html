@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027년 메디케어 비용, 무엇이 달라지나 — MediPrimer</title>
+<meta name="description" content="2027년 메디케어 보험료, 공제액, 처방약 비용: 확정된 것, 아직 미확정인 것, CMS가 새 수치를 발표하면 어디서 확인할 수 있는지 안내합니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-costs-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="What's Changing in Medicare Costs for 2027 — MediPrimer">
+<meta property="og:description" content="2027 Medicare premiums, deductibles, and drug costs: what's confirmed, what's still pending, and where to check once CMS publishes the new figures.">
+<meta property="og:url" content="https://mediprimer.org/medicare-costs-2027.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="What's Changing in Medicare Costs for 2027 — MediPrimer">
+<meta name="twitter:description" content="2027 Medicare premiums, deductibles, and drug costs: what's confirmed, what's still pending, and where to check once CMS publishes the new figures.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Has Medicare announced the 2027 Part B premium yet?", "acceptedAnswer": {"@type": "Answer", "text": "Not as of this page's last check. CMS typically announces the coming year's Part B premium and deductible in the fall, usually around November, after this page's dateModified. Check Medicare.gov or your \"Medicare & You\" handbook for the confirmed 2027 number."}}, {"@type": "Question", "name": "Why does my premium or drug cost change every January?", "acceptedAnswer": {"@type": "Answer", "text": "Medicare updates Part A and Part B premiums and deductibles, and the Part D deductible cap and out-of-pocket limit, every year. Medicare Advantage and Part D plans can also change their own premiums, drug lists, and networks each January."}}, {"@type": "Question", "name": "Where will I see my plan's actual 2027 costs?", "acceptedAnswer": {"@type": "Answer", "text": "In your plan's Annual Notice of Change, mailed by September 30, and in the Evidence of Coverage that follows by October 15."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-costs-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-costs-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-costs-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-costs-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-costs-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "What's Changing in Medicare Costs for 2027", "description": "2027 Medicare premiums, deductibles, and drug costs: what's confirmed, what's still pending, and where to check once CMS publishes the new figures.", "url": "https://mediprimer.org/medicare-costs-2027.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "What's Changing in Medicare Costs for 2027", "item": "https://mediprimer.org/medicare-costs-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-costs-2027.html" lang="en">English</a>
+    <a href="/es/medicare-costs-2027.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-costs-2027.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-costs-2027.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">회원 및 보호자를 위한 안내</p>
+    <h1>2027년 메디케어 비용, 무엇이 달라지나</h1>
+    <p>보험료, 공제액, 처방약 비용 한도, 그리고 메디케어가 2027년 확정 수치를 발표하면 어디서 확인할 수 있는지 안내합니다.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>짧게 답하자면 이렇습니다.</strong> 이 페이지가 마지막으로 업데이트된 시점까지, 메디케어는 2027년 파트 B 보험료 및 공제액, 그리고 2027년 파트 D 공제액 상한과 본인 부담 비용 한도를 아직 발표하지 않았습니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> CMS는 보통 가을에 이 수치들을 발표하며, 이는 여러분의 <a href="/ko/medicare-annual-notice-of-change.html">연례 변경 통지</a>, "Medicare & You" 안내서, 그리고 Medicare.gov에서 확인할 수 있습니다. 이 페이지에서는 매년 바뀌는 비용의 종류, 2026년 기준 수치, 그리고 2027년 수치가 나오면 정확히 어디서 확인해야 하는지 설명합니다.</p>
+    <p class="tool-callout">표준 수치를 한 장의 인쇄용 페이지로 정리했습니다: <a href="/ko/medicare-costs-card.html">메디케어 비용 카드</a>.</p>
+
+    <div class="note">
+      <strong>2027년 수치가 나올 때까지 기다리지 말고 지금부터 플랜을 비교하세요.</strong> CMS가 정부 차원의 파트 A/B 수치를 확정하는 시기와 관계없이, 여러분 플랜의 2027년 보험료, 공제액, 처방약 등급은 9월 30일까지 연례 변경 통지를 통해 전달됩니다. <a href="/ko/medicare-plan-comparison-2027.html">2027년 메디케어 플랜 비교 방법</a>을 참고하세요.
+    </div>
+
+    <h2>매년 1월마다 바뀌는 것, 그리고 그 이유</h2>
+    <p>메디케어 비용 중 네 가지는 매년 다시 계산됩니다:</p>
+    <ul>
+      <li><strong>파트 A 보험료 및 공제액</strong> — 대부분은 파트 A 보험료를 내지 않지만, 입원 공제액은 매년 새로 정해집니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>파트 B 보험료 및 공제액</strong> — 표준 월 보험료와 연간 공제액, 그리고 소득 관련 월 조정 금액(IRMAA) 추가 부담금의 소득 구간이 포함됩니다. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>파트 D 공제액 상한과 본인 부담 비용 한도</strong> — 모든 처방약 플랜이 부과할 수 있는 최대 공제액, 그리고 재난적 보장이 시작되는 연간 본인 부담 지출 수준입니다. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></li>
+      <li><strong>여러분이 가입한 개별 플랜의 보험료, 처방약 목록, 네트워크</strong> — CMS가 아니라 여러분이 가입한 특정 메디케어 어드밴티지 또는 파트 D 플랜이 정하며, 정부 차원의 수치와는 별개로 바뀔 수 있습니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+    </ul>
+
+    <h2>2026년 기준 수치 (2027년 업데이트 전까지의 현재 수치)</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>비용 항목</th>
+            <th>2026년 금액</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>파트 B 표준 월 보험료</td>
+            <td>$202.90(소득에 따라 IRMAA가 적용되면 더 높음) <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td>
+          </tr>
+          <tr>
+            <td>파트 B 연간 공제액</td>
+            <td>$283 <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td>
+          </tr>
+          <tr>
+            <td>파트 A 입원 공제액</td>
+            <td>혜택 기간당 $1,736 <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td>
+          </tr>
+          <tr>
+            <td>모든 플랜이 부과할 수 있는 파트 D 최대 공제액</td>
+            <td>$615 <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></td>
+          </tr>
+          <tr>
+            <td>파트 D 본인 부담 지출 상한(재난적 보장 시작 기준)</td>
+            <td>$2,100 <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p>이 수치는 Medicare.gov에서 직접 확인한 2026년 수치입니다. 지금 적용되고 있는 수치일 뿐, 2027년 수치가 아닙니다 — 위에 표시된 이 페이지의 dateModified 기준으로 메디케어는 아직 2027년 버전을 발표하지 않았습니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>공개 가입 기간은 12월 7일에 마감됩니다. 저희가 알려드릴게요.</h2>
+      <p>가을 점검 체크리스트 — 마감일 전에 플랜에서 확인해야 할 짧은 항목 목록 — 와 12월 7일 이전 알림 이메일 한 통을 받아보세요. 그 외에는 아무것도, 광고도, 플랜 판매도 없습니다.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">이메일 주소</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭하시기 전에는 구독이 완료되지 않습니다. 마감일 전 알림 한 번, 이후에는 평소처럼 최대 주 1회 이메일을 보내드립니다. 클릭 한 번으로 구독 취소 가능합니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>2027년 수치는 어디에, 언제 나타날까요</h2>
+    <ol class="steps">
+      <li><strong>여러분 플랜의 연례 변경 통지(ANOC).</strong> 2026년 9월 30일까지 우편으로 발송되는 이 안내문에는 정부 차원의 수치가 확정되기도 전에 여러분 플랜의 구체적인 2027년 보험료, 공제액, 처방약 등급이 담겨 있습니다. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> <a href="/ko/medicare-annual-notice-of-change.html">연례 변경 통지 읽는 법</a>을 참고하세요.</li>
+      <li><strong>새로운 "Medicare & You" 안내서.</strong> 9월 말에 모든 메디케어 가입 가구로 발송됩니다. <!-- src: https://www.medicare.gov/medicare-and-you --></li>
+      <li><strong>Medicare.gov의 비용 안내 페이지.</strong> CMS가 파트 A와 파트 B 수치를 확정하면(보통 가을에 발표) 업데이트됩니다.</li>
+      <li><strong>MediPrimer의 <a href="/ko/costs.html">비용 이해하기</a> 페이지.</strong> 공식 2027년 수치가 발표되는 즉시 업데이트합니다.</li>
+    </ol>
+
+    <h2>이것이 공개 가입 기간 결정에 미치는 영향</h2>
+    <p><a href="/ko/medicare-open-enrollment-2027.html">공개 가입 기간</a>(2026년 10월 15일 – 12월 7일) 동안 플랜을 비교하는 데 2027년 정부 확정 파트 A/B 수치가 꼭 필요한 것은 아닙니다. 실제로 여러분이 부담할 금액을 결정하는 것은 연례 변경 통지에 담긴 각 플랜별 2027년 비용입니다. <a href="/ko/using-plan-finder.html">메디케어 플랜 파인더</a>를 이용해 플랜별 수치로 비교해 보시고, 순서대로 확인해야 할 네 가지 항목은 <a href="/ko/medicare-plan-comparison-2027.html">2027년 플랜 비교 방법</a>에서 확인하세요.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <details class="qa">
+      <summary>메디케어가 2027년 파트 B 보험료를 이미 발표했나요?</summary>
+      <div>
+        <p>이 페이지를 마지막으로 확인한 시점까지는 아닙니다. CMS는 보통 다음 해의 파트 B 보험료와 공제액을 가을, 대개 이 페이지의 dateModified 이후인 11월경에 발표합니다. 확정된 2027년 수치는 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>나 "Medicare & You" 안내서에서 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>왜 제 보험료나 처방약 비용은 매년 1월마다 바뀌나요?</summary>
+      <div>
+        <p>메디케어는 파트 A와 파트 B의 보험료 및 공제액, 그리고 파트 D 공제액 상한과 본인 부담 비용 한도를 매년 업데이트합니다. 메디케어 어드밴티지와 파트 D 플랜도 매년 1월마다 자체 보험료, 처방약 목록, 네트워크를 변경할 수 있습니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>제 플랜의 실제 2027년 비용은 어디서 확인할 수 있나요?</summary>
+      <div>
+        <p>9월 30일까지 발송되는 플랜의 연례 변경 통지, 그리고 이어서 10월 15일까지 발송되는 보장 내역서(Evidence of Coverage)에서 확인할 수 있습니다. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <h2>공식 출처</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: 메디케어 비용</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: 메디케어 처방약 보장 비용은 얼마인가요?</a></li>
+      <li><a href="https://www.medicare.gov/medicare-and-you" rel="noopener">Medicare.gov: "Medicare & You" 안내서</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare & You (PDF)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>행동에 옮기기 전에 반드시 확인하세요.</strong> MediPrimer는 일반적인 교육 정보를 제공하며 특정 기관이나 보험사와 제휴 관계가 없습니다. 이 페이지의 수치는 dateModified 기준으로 Medicare.gov와 대조하여 확인한 것이며, 메디케어가 2027년 금액을 발표하면 더 이상 최신 정보가 아니게 됩니다 — 항상 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>나 플랜 문서에서 현재 수치를 확인하세요.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

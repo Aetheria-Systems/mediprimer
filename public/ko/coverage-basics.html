@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>보장 기본 정보 — MediPrimer</title>
+<meta name="description" content="메디케어, 메디케이드, 메디케어 어드밴티지, 마켓플레이스, CHIP 설명: 각 프로그램이 무엇인지, 누가 운영하는지, 누가 대상인지 알아봅니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/coverage-basics.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Coverage Basics — MediPrimer">
+<meta property="og:description" content="Medicare, Medicaid, Medicare Advantage, the Marketplace, and CHIP explained: what each program is, who administers it, and who is eligible.">
+<meta property="og:url" content="https://mediprimer.org/coverage-basics.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Coverage Basics — MediPrimer">
+<meta name="twitter:description" content="Medicare, Medicaid, Medicare Advantage, the Marketplace, and CHIP explained: what each program is, who administers it, and who is eligible.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/coverage-basics.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/coverage-basics.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/coverage-basics.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/coverage-basics.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/coverage-basics.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Coverage Basics", "description": "Medicare, Medicaid, Medicare Advantage, the Marketplace, and CHIP explained: what each program is, who administers it, and who is eligible.", "url": "https://mediprimer.org/coverage-basics.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Coverage Basics", "item": "https://mediprimer.org/coverage-basics.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/coverage-basics.html" lang="en">English</a>
+    <a href="/es/coverage-basics.html" lang="es">Español</a>
+    <a href="/zh-Hant/coverage-basics.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/coverage-basics.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop active">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <h1>보장 기본 정보</h1>
+    <p>다섯 개의 정부 프로그램이 미국에서 이용 가능한 대부분의 건강보험 보장을 제공합니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <h2>모든 프로그램을 이해하기 위한 세 가지 질문</h2>
+    <p>어떤 건강보험 프로그램에 대해 알아보려면 다음 세 가지를 물어보세요.</p>
+    <ul>
+      <li><strong>누가 비용을 지불하는가?</strong> 연방 자금인가요, 주 자금인가요, 아니면 둘 다인가요? 세금에서 나오는 건가요, 사람들이 내는 보험료에서 나오는 건가요?</li>
+      <li><strong>누가 운영하는가?</strong> 연방정부가 직접 운영하나요? 주정부가 연방 규정에 따라 관리하나요? 민간 기업이 정부를 대신해 관리하나요?</li>
+      <li><strong>누가 혜택을 전달하는가?</strong> 정부가 직접 진료를 제공하나요, 아니면 민간 보험회사와 의사들이 하나요?</li>
+    </ul>
+    <p>이 세 가지 질문은 메디케어, 메디케이드, 메디케어 어드밴티지, 마켓플레이스(보험 거래소), CHIP 사이의 차이를 설명해줍니다.</p>
+
+    <h2>메디케어</h2>
+    <p>메디케어는 메디케어·메디케이드 서비스 센터(CMS)가 운영하는 연방 건강보험 프로그램입니다.</p>
+    <figure class="diagram">
+      <img src="/img/medicare-parts-explained.png" width="1200" height="620" loading="lazy" alt="Part A covers hospital care. Part B covers doctors and outpatient care. Part D covers prescription drugs. Part C, Medicare Advantage, is a private plan that bundles them together.">
+      <figcaption>메디케어의 각 파트와 그것이 보장하는 내용</figcaption>
+    </figure>
+
+    <p>누가 대상인가요? 주로 65세 이상인 사람들입니다. 장애가 있거나 말기 신부전(ESRD, 영구적인 신장 기능 상실을 의미)이 있는 일부 젊은 사람들도 포함됩니다.</p>
+    <p>누가 비용을 지불하나요? 급여세(일하는 동안 납부한 세금), 매달 내는 보험료, 그리고 일반 세금이 메디케어의 재원이 됩니다.</p>
+    <p>누가 가입 신청을 하나요? 대부분의 사람은 따로 신청할 필요가 없습니다. 일을 하며 메디케어 세금을 냈다면 65세가 되면 자동으로 자격을 얻습니다.</p>
+    <p>메디케어는 네 개의 파트로 구성됩니다.</p>
+    <ul>
+      <li><strong>메디케어 파트 A(입원보험)</strong>는 입원, 요양 간호, 호스피스, 재가 간호 서비스를 보장합니다.</li>
+      <li><strong>메디케어 파트 B(의료보험)</strong>는 진료, 외래 진료, 의료 장비 및 기타 서비스를 보장합니다.</li>
+      <li><strong>메디케어 파트 C(메디케어 어드밴티지)</strong>는 모든 메디케어 혜택을 결합한 대안적인 민간 플랜입니다. (아래 자세한 내용 참고.)</li>
+      <li><strong>메디케어 파트 D(처방약 보장)</strong>는 처방 약물을 보장합니다.</li>
+    </ul>
+    <p>대부분의 사람은 오리지널 메디케어(파트 A와 B)를 선택합니다. 정부가 의사와 병원 네트워크를 통해 이 플랜을 직접 운영합니다.</p>
+    <p>다른 사람들은 모든 혜택을 하나로 묶은 단일 민간 플랜인 메디케어 어드밴티지(파트 C)를 선택합니다.</p>
+    <p>자세한 내용은 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에서 확인하세요.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>메디케이드</h2>
+    <p>메디케이드는 연방정부와 각 주가 공동으로 운영하는 프로그램입니다. 저소득층 개인과 가족에게 건강보험 보장을 제공합니다.</p>
+    <p>(전적으로 연방 프로그램인) 메디케어와 달리, 각 주는 연방 규정 아래 메디케이드를 운영합니다. 이는 규정이 주마다 다르다는 뜻입니다. 자격 요건, 보장되는 서비스, 가입 방법이 주마다 다릅니다.</p>
+    <p>누가 비용을 지불하나요? 연방정부와 주정부가 연방 의료 지원 비율(FMAP)이라는 공식을 이용해 비용을 나눕니다.</p>
+    <p>누가 대상인가요? 전통적으로 임산부, 아동, 부모, 고령자, 장애가 있는 사람들이 메디케이드를 받을 수 있었습니다. 하지만 소득 기준과 세부 규정은 주마다 다릅니다. 일부 주는 부담적정보험법(Affordable Care Act) 이후 메디케이드를 확대했고, 그렇지 않은 주도 있습니다.</p>
+    <p>어떻게 진료를 받나요? 대부분의 주에서는 관리 의료 기구(MCO)라 불리는 민간 보험회사가 주와 계약을 맺고 혜택을 제공합니다. 일부 주에서는 주정부가 의사와 병원에 직접 진료비를 지불합니다.</p>
+    <p>자세한 내용은 <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>와 <a href="/ko/state-medicaid.html">주 메디케이드 기관</a>에서 확인하세요. 중국어가 더 편하시다면 <a href="/ko/medicare-medicaid-chinese.html">중국어로 설명하는 메디케어와 메디케이드</a>를 참고하세요. 이 자료는 지역사회에서 쓰이는 별칭인 白卡와 紅藍卡도 풀어서 설명합니다.</p>
+
+    <h2>메디케어 어드밴티지(메디케어 파트 C)</h2>
+    <p>메디케어 어드밴티지는 새로운 프로그램이 아닙니다. 메디케어 혜택을 받는 다른 방식일 뿐입니다.</p>
+    <p>오리지널 메디케어(파트 A와 B) 대신 민간 플랜에 가입할 수 있습니다. 이 플랜은 메디케어(CMS)와 계약을 맺고 파트 A와 B의 모든 혜택과 추가 혜택을 제공합니다.</p>
+    <p>어떤 유형의 플랜인가요? 대개 건강관리기구(HMO)나 선호 제공자 기구(PPO)입니다. 많은 플랜이 파트 D(처방약 보장)를 하나의 플랜에 포함합니다. 치과, 시력, 청력, 피트니스 프로그램 같은 추가 혜택을 제공하기도 합니다.</p>
+    <p>얼마를 내야 하나요? 매달 보험료(보험료가 없는 경우도 있음)와 공동부담금, 공동보험금(코인슈런스), 공제액(디덕터블) 같은 비용 분담 금액을 내야 하며, 이 금액은 오리지널 메디케어와 다를 수 있습니다. 응급 상황이 아니면 플랜의 제공자 네트워크 안에 있는 의사와 병원을 이용해야 합니다.</p>
+    <p>어떻게 운영되나요? 메디케어는 민간 플랜에 매달 1인당 정해진 금액을 지불합니다. 진료 비용이 그 금액을 넘으면 플랜이 재정적 위험을 부담합니다.</p>
+    <p>자세한 내용은 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, 특히 메디케어 어드밴티지 관련 페이지에서 확인하세요.</p>
+
+    <h2>건강보험 마켓플레이스(ACA / 익스체인지)</h2>
+    <p>건강보험 마켓플레이스는 민간 건강보험을 둘러보고 구매할 수 있는 곳입니다. 부담적정보험법(Affordable Care Act)에 의해 만들어졌습니다.</p>
+    <p>모든 주에 마켓플레이스가 있습니다. 각 주가 직접 운영하거나, 연방정부가 운영하거나, 함께 운영합니다.</p>
+    <p>어떤 종류의 플랜이 판매되나요? 민간 보험회사가 플랜을 제공합니다. 정부가 직접 운영하지는 않지만, 특정 기준을 충족하는지 확인합니다.</p>
+    <p>누가 비용 지원을 받을 수 있나요? 소득이 일정 수준 이하라면 재정 지원을 받을 수 있습니다. 매달 내는 보험료를 위한 보조금(지불을 돕는 돈)을 받을 수 있습니다. 공제액(디덕터블), 공동부담금, 공동보험금(청구 금액 중 본인 부담분)을 낮추는 보조금도 받을 수 있습니다.</p>
+    <p>"메탈 등급"이란 무엇인가요? 플랜은 브론즈, 실버, 골드, 플래티넘 네 단계로 나뉩니다. 브론즈는 보험료가 가장 낮지만 진료가 필요할 때 더 많이 냅니다. 플래티넘은 보험료가 가장 높지만 진료가 필요할 때 덜 냅니다. 실버와 골드는 그 중간입니다. 메탈 등급(플랜 등급)은 플랜을 비교하는 데 도움을 주지만, 품질을 의미하지는 않습니다.</p>
+    <p>언제 가입할 수 있나요? 매년 열리는 공개 가입 기간(보통 가을과 겨울)에 가입할 수 있습니다. 보장을 잃거나 결혼하거나 아이가 태어나는 등 생활 이벤트가 있으면 언제든 가입할 수도 있습니다.</p>
+    <p>자세한 내용은 <a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a>에서 확인하세요.</p>
+
+    <h2>CHIP(아동 건강보험 프로그램)</h2>
+    <p>CHIP은 연방정부와 주정부가 함께 운영하는 프로그램입니다. 메디케이드를 받기에는 소득이 너무 많지만 여전히 저렴한 보장이 필요한 가정의 무보험 아동을 보장합니다.</p>
+    <p>메디케이드와 마찬가지로, 각 주는 연방 규정 안에서 CHIP을 운영합니다. 자격 요건과 혜택은 주마다 다릅니다. 일부 주는 CHIP을 별도 프로그램으로 운영하고, 다른 주는 메디케이드와 합쳐서 운영합니다.</p>
+    <p>비용은 얼마인가요? CHIP은 대상 가정에게 보통 무료이거나 매우 저렴합니다.</p>
+    <p>무엇을 보장하나요? 예방 진료, 일차 진료, 입원, 응급 서비스, 치과, 시력, 정신건강 서비스입니다.</p>
+    <p>언제 가입하나요? 각 주는 자체적으로 소득 기준과 갱신 시기를 정합니다. 가입은 보통 상시 가능하거나 연중 특정 시기에 이루어집니다.</p>
+    <p>자세한 내용은 <a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a> 또는 <a href="/ko/state-medicaid.html">주 메디케이드/CHIP 기관</a>에서 확인하세요.</p>
+
+    <h2>한눈에 보는 비교</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>프로그램</th>
+            <th>운영 주체</th>
+            <th>일반적인 대상</th>
+            <th>혜택 전달 방식</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>메디케어</strong></td>
+            <td>연방(CMS)</td>
+            <td>65세 이상; 장애나 ESRD가 있는 일부 젊은 사람</td>
+            <td>오리지널 메디케어: CMS를 통한 행위별 수가제; 메디케어 어드밴티지: 계약을 맺은 민간 플랜</td>
+          </tr>
+          <tr>
+            <td><strong>메디케이드</strong></td>
+            <td>주(연방 규정 안에서)</td>
+            <td>저소득 개인 및 가족; 자격 요건은 주마다 다름</td>
+            <td>주로 관리 의료(민간 MCO); 일부 주는 행위별 수가제도 제공</td>
+          </tr>
+          <tr>
+            <td><strong>메디케어 어드밴티지</strong></td>
+            <td>CMS와 계약한 민간 플랜</td>
+            <td>메디케어 대상자(65세 이상 또는 장애/ESRD가 있는 더 젊은 사람)</td>
+            <td>민간 플랜이 모든 파트 A와 B 혜택을 제공; 플랜은 파트 D와 추가 혜택을 함께 묶는 경우가 많음</td>
+          </tr>
+          <tr>
+            <td><strong>건강보험 마켓플레이스</strong></td>
+            <td>연방 및/또는 주 익스체인지; 민간 보험사가 제공하는 플랜</td>
+            <td>고용주 보장 등 다른 적격 보장이 없는 사람 누구나; 소득 기준을 충족하는 개인에게 보조금 제공</td>
+            <td>민간 보험 플랜; 수혜자는 보험료 및 비용 분담 보조금을 받을 수 있음</td>
+          </tr>
+          <tr>
+            <td><strong>CHIP</strong></td>
+            <td>주(연방 규정 안에서)</td>
+            <td>메디케이드 기준보다 소득이 많지만 CHIP 기준보다는 적은 가정의 무보험 아동; 주마다 다름</td>
+            <td>일부 주는 관리 의료를 이용; 다른 주는 행위별 수가제나 혼합 방식을 사용</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <p><strong>중요:</strong> 규정은 시간이 지나면서 바뀌고 주마다 다릅니다. 이 페이지는 일반적인 정보만 제공합니다. 최신 세부 정보는 항상 공식 웹사이트에서 확인하세요.</p>
+      <ul>
+        <li>메디케어 관련 질문은 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+        <li>연방 메디케이드 정보와 주 기관 링크는 <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+        <li>규정 및 프로그램 업데이트는 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+        <li>마켓플레이스와 보조금 정보는 <a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        <li>CHIP 자격 요건과 가입은 <a href="https://www.insurekidsnow.gov/" rel="noopener">InsureKidsNow.gov</a></li>
+      </ul>
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>접근성 — MediPrimer</title>
+<meta name="description" content="MediPrimer의 접근성에 대한 약속: 저희는 공인된 접근성 표준을 충족하는 것을 목표로 하며, 장벽에 대한 신고를 환영합니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/accessibility.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Accessibility — MediPrimer">
+<meta property="og:description" content="MediPrimer's commitment to accessibility: we aim to meet recognized accessibility standards and welcome reports of barriers.">
+<meta property="og:url" content="https://mediprimer.org/accessibility.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Accessibility — MediPrimer">
+<meta name="twitter:description" content="MediPrimer's commitment to accessibility: we aim to meet recognized accessibility standards and welcome reports of barriers.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/accessibility.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/accessibility.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/accessibility.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/accessibility.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/accessibility.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Accessibility", "description": "MediPrimer's commitment to accessibility: we aim to meet recognized accessibility standards and welcome reports of barriers.", "url": "https://mediprimer.org/accessibility.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Accessibility", "item": "https://mediprimer.org/accessibility.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/accessibility.html" lang="en">English</a>
+    <a href="/es/accessibility.html" lang="es">Español</a>
+    <a href="/zh-Hant/accessibility.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/accessibility.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">법적 고지</p>
+    <h1>접근성</h1>
+    <p>보조 기술을 사용하는 분들을 포함하여, 모든 사람이 이 정보를 이용할 수 있기를 바랍니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p><em>최종 업데이트: 2026년 7월.</em></p>
+
+    <h2>저희의 약속</h2>
+    <p>MediPrimer는 능력이나 기술과 관계없이 가능한 한 많은 사람들이 콘텐츠를 이용할 수 있도록 만드는 데 최선을 다하고 있습니다. 저희는 텍스트 기반 교육 사이트의 실용적인 목표로서, 웹 콘텐츠 접근성 지침(WCAG)의 AA 수준을 포함한 공인된 접근성 지침을 따르는 것을 목표로 합니다.</p>
+
+    <h2>저희가 하고 있는 일</h2>
+    <ul>
+      <li>명확하고 쉬운 언어와 논리적인 제목 구조를 사용하여 화면 낭독기로 페이지를 쉽게 탐색할 수 있도록 합니다.</li>
+      <li>충분한 색상 대비로 가독성을 고려해 설계하고, 기기의 밝은 모드 또는 어두운 모드를 지원합니다.</li>
+      <li>휴대전화, 태블릿, 데스크톱에서 그리고 텍스트를 확대했을 때도 재배열되어 계속 사용할 수 있는 페이지를 만듭니다.</li>
+      <li>대화형 기능을 단순하게 유지합니다. 사이트의 핵심 콘텐츠는 JavaScript 없이도 완전히 읽을 수 있습니다.</li>
+      <li>설명적인 링크를 제공하고, 의미를 전달하는 데 색상에만 의존하지 않습니다.</li>
+    </ul>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>공개 가입 기간은 12월 7일에 종료됩니다. 저희가 알려드리겠습니다.</h2>
+      <p>가을철 점검 체크리스트 — 마감일 전에 플랜에서 확인해야 할 짧은 목록 — 와 12월 7일 전에 보내드리는 알림 이메일 한 통을 받아보세요. 그 외에는 아무것도 없습니다. 광고도, 플랜 판매도 없습니다.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">이메일 주소</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭하기 전까지는 구독이 완료되지 않습니다. 마감일 전 알림 한 통, 이후에는 평소처럼 최대 주 1회 이메일만 보내드립니다. 클릭 한 번으로 구독을 취소할 수 있습니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>지속적인 노력</h2>
+    <p>접근성은 일회성 작업이 아니라 지속적인 노력입니다. 저희는 주기적으로 사이트를 점검하고 발견되는 장벽을 해결하기 위해 노력합니다. 저희가 링크하는 일부 제3자 사이트는 저희의 통제 밖에 있으며 동일한 표준을 충족하지 못할 수 있습니다.</p>
+
+    <h2>장벽 신고하기</h2>
+    <p>보조 기술로 사용하기 어려운 페이지나 기능을 발견하시면, 개선할 수 있도록 저희에게 알려주시기 바랍니다. 그동안 이곳에서 특정 정보를 이용할 수 없는 경우, 공식 정부 출처인 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, <a href="https://www.medicaid.gov/" rel="noopener">메디케이드.gov</a>, 그리고 <a href="/ko/state-medicaid.html">주(state) 메디케이드 기관</a>에서 접근성 형식과 전화를 통해 동일한 프로그램 정보를 제공합니다.</p>
+
+    <div class="note info">
+      <strong>누군가와 상담이 필요하신가요?</strong> 메디케어에 대해서는 1-800-MEDICARE(1-800-633-4227)로 연중무휴 24시간 전화하실 수 있습니다. TTY 이용자는 1-877-486-2048로 전화하실 수 있습니다.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
