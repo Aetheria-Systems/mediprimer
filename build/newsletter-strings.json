@@ -44,7 +44,35 @@
     "blurb": "取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。",
     "button": "寄給我檢查清單",
     "fine": "我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。"
+   },
+   "vi": {
+    "head": "Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.",
+    "blurb": "Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.",
+    "button": "Gửi cho tôi danh sách kiểm tra",
+    "fine": "Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp."
+   },
+   "ko": {
+    "head": "가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.",
+    "blurb": "가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 외엔 없습니다. 광고 없음, 플랜 판매 없음.",
+    "button": "체크리스트 받기",
+    "fine": "확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 마감 전 알림 한 통, 그 후엔 평소처럼 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다."
    }
   }
+ },
+ "vi": {
+  "aria": "Nhận cập nhật từ MediPrimer qua email",
+  "head": "Quy định thay đổi. Chúng tôi sẽ báo cho bạn.",
+  "blurb": "Một email ngắn khi có thay đổi ảnh hưởng đến quyền lợi bảo hiểm của bạn — thời hạn, quy định mới và việc cần làm. Không quảng cáo, không bán gói bảo hiểm, và chúng tôi không bao giờ chia sẻ địa chỉ email của bạn.",
+  "placeholder": "Địa chỉ email của bạn",
+  "button": "Giữ liên lạc với tôi",
+  "fine": "Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Tối đa một email mỗi tuần. Hủy đăng ký chỉ với một cú nhấp, bất cứ lúc nào."
+ },
+ "ko": {
+  "aria": "이메일로 MediPrimer 소식 받기",
+  "head": "규정이 바뀌면 저희가 알려드립니다.",
+  "blurb": "보장에 영향을 주는 변경 사항이 생기면 짧은 이메일로 알려드립니다 — 마감일, 새 규정, 그리고 해야 할 일까지. 광고 없음, 플랜 판매 없음, 이메일 주소는 절대 공유하지 않습니다.",
+  "placeholder": "이메일 주소를 입력하세요",
+  "button": "소식 받기",
+  "fine": "확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 이메일은 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다."
  }
 }
