@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어 요약 통지서(MSN) 읽는 법 — MediPrimer</title>
+<meta name="description" content="이것은 청구서가 아닙니다. 메디케어 요약 통지서의 각 항목이 무엇을 뜻하는지, 청구 오류와 사기를 어떻게 알아차리는지, 거부된 청구에 대해 어떻게 이의신청을 하는지 알아보세요.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-summary-notice.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="How to Read Your Medicare Summary Notice (MSN) — MediPrimer">
+<meta property="og:description" content="It's not a bill. Learn what each column on your Medicare Summary Notice means, how to spot billing errors and fraud, and how to appeal a denied claim.">
+<meta property="og:url" content="https://mediprimer.org/medicare-summary-notice.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Read Your Medicare Summary Notice (MSN) — MediPrimer">
+<meta name="twitter:description" content="It's not a bill. Learn what each column on your Medicare Summary Notice means, how to spot billing errors and fraud, and how to appeal a denied claim.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to pay the amount on my Medicare Summary Notice?", "acceptedAnswer": {"@type": "Answer", "text": "No. The MSN is not a bill. It shows the most a provider is allowed to bill you. Pay only when you get an actual bill from the provider, and check that the bill does not go over the \"Maximum You May Be Billed\" amount on your notice."}}, {"@type": "Question", "name": "Why haven't I gotten a Medicare Summary Notice?", "acceptedAnswer": {"@type": "Answer", "text": "MSNs go out every 6 months, and only for periods when you got services or supplies. If you had no claims, you get no notice. If you signed up for electronic MSNs, look for an email instead of paper. If you have a Medicare Advantage plan, you get an Explanation of Benefits from the plan instead. If your address changed, contact Social Security so notices reach you."}}, {"@type": "Question", "name": "How long do I have to appeal a denied claim on my MSN?", "acceptedAnswer": {"@type": "Answer", "text": "Medicare's claims office must receive your written appeal within 120 days from the date you get the notice. The exact deadline is printed on the last page of the MSN."}}, {"@type": "Question", "name": "What's the difference between an MSN and an EOB?", "acceptedAnswer": {"@type": "Answer", "text": "An MSN comes from Medicare and covers Original Medicare Part A and Part B claims. An Explanation of Benefits (EOB) comes from a private Medicare Advantage or Part D plan and covers that plan's claims. They serve the same purpose: showing what was billed, what was paid, and what you may owe."}}, {"@type": "Question", "name": "Can someone else review my MSN for me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can appoint a family member or friend as your representative in the appeals process. With your Medicare account, you can also download your claims and share them with someone you trust. See our caregivers guide for how authorized representatives work."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-summary-notice.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-summary-notice.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-summary-notice.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-summary-notice.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-summary-notice.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "How to Read Your Medicare Summary Notice (MSN)", "description": "It's not a bill. Learn what each column on your Medicare Summary Notice means, how to spot billing errors and fraud, and how to appeal a denied claim.", "url": "https://mediprimer.org/medicare-summary-notice.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "How to Read Your Medicare Summary Notice (MSN)", "item": "https://mediprimer.org/medicare-summary-notice.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-summary-notice.html" lang="en">English</a>
+    <a href="/es/medicare-summary-notice.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-summary-notice.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-summary-notice.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">회원을 위한 정보</p>
+    <h1>메디케어 요약 통지서(MSN) 읽는 법</h1>
+    <p>이것은 청구서가 아닙니다. 통지서의 각 부분이 무엇을 뜻하는지, 청구 오류를 어떻게 알아차리는지, 메디케어가 서비스를 거부했을 때 어떻게 해야 하는지 알려드립니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>요약부터 말씀드리면 이렇습니다.</strong> 메디케어 요약 통지서(MSN)는 <strong>청구서가 아닙니다</strong>. 오리지널 메디케어에 가입한 사람들이 우편으로 받는 명세서입니다. 제공자가 메디케어에 청구한 모든 서비스나 용품, 메디케어가 지급한 금액, 제공자가 귀하에게 청구할 수 있는 최대 금액을 나열합니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 최소 연 2회 받게 되며, 청구가 있었던 기간에 대해서만 발송됩니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 이를 확인할 때는 세 가지를 점검하세요. 각 제공자와 날짜가 실제인지, "서비스 승인 여부" 항목이 "예"로 되어 있는지, "귀하가 청구받을 수 있는 최대 금액"이 실제로 받은 청구서와 일치하는지입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 문제가 있으면 먼저 제공자에게 연락하세요. 메디케어가 서비스를 거부했고 이에 동의하지 않는다면 이의신청을 할 수 있습니다. 이의신청은 통지서를 받은 날로부터 120일 이내에 메디케어에 접수되어야 합니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></p>
+
+    <h2>메디케어 요약 통지서란</h2>
+    <p><a href="/ko/coverage-basics.html">오리지널 메디케어</a>(파트 A 및 파트 B)에 가입되어 있다면, 메디케어는 메디케어 파트 A 및 메디케어 파트 B 서비스에 대한 MSN을 보내드립니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 이 통지서에는 해당 기간 동안 제공자와 공급업체가 메디케어에 청구한 모든 서비스나 용품, 메디케어가 지급한 금액, 귀하가 제공자에게 부담할 수 있는 최대 금액이 표시됩니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> "이것은 청구서가 아닙니다"라는 문구가 앞면에 인쇄되어 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> MSN 자체로는 아무것도 지불하지 않습니다. 청구서는 의사나 공급업체로부터 별도로 옵니다.</p>
+    <p><a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a> 플랜이나 파트 D 약제 플랜에 가입되어 있다면 MSN을 받지 않습니다. 대신 처방약을 조제하거나, 제공자를 방문하거나, 청구를 제출한 달마다 플랜에서 혜택 설명서(EOB)를 우편으로 보내드립니다. <!-- src: https://www.medicare.gov/claims-appeals/check-the-status-of-a-claim --> 저희 <a href="/ko/how-do-i.html">How Do I…</a> 가이드에서 EOB 읽는 법을 안내합니다.</p>
+
+    <h2>언제 도착하는지, 더 빨리 받는 법</h2>
+    <p>해당 기간에 서비스나 의료 용품을 이용했다면 6개월마다 MSN을 받습니다. 서비스를 이용하지 않았다면 MSN을 받지 않습니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 전자 MSN을 선택할 수도 있습니다. 그러면 종이 통지서를 기다리는 대신, 처리된 청구가 있는 달마다 MSN 링크가 담긴 이메일을 받게 됩니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 신청하려면 안전한 메디케어 계정에 로그인해서 "내 계정 설정"으로 이동한 후 MSN 수신 방법을 "전자적으로"로 변경하세요. <!-- src: https://www.medicare.gov/go-digital --> 필요하다면 큰 활자체나 점자 버전도 이용할 수 있습니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --></p>
+    <p>통지서를 기다릴 필요가 전혀 없습니다. 안전한 Medicare.gov 계정이 있으면 메디케어가 청구를 처리한 후 보통 24시간 이내에 확인할 수 있습니다. <!-- src: https://www.medicare.gov/claims-appeals/check-the-status-of-a-claim --> 문제를 가장 빨리 발견하는 방법입니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>공개 가입 기간은 12월 7일에 끝납니다. 저희가 알려드릴게요.</h2>
+      <p>마감일 전에 플랜을 점검할 때 확인해야 할 간단한 항목만 담은 가을 점검 체크리스트를 받아보세요. 12월 7일 전에 알림 이메일도 한 번 보내드립니다. 그 외에는 광고도, 플랜 판매도 없습니다.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">이메일 주소</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭하기 전까지는 구독되지 않습니다. 마감일 전 알림 한 번, 이후에는 평소처럼 일주일에 최대 한 통만 보내드립니다. 클릭 한 번으로 구독을 취소할 수 있습니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>MSN 읽는 법, 페이지별로</h2>
+    <p>메디케어의 파트 B 샘플 통지서는 정해진 구성을 따릅니다. 각 부분이 무엇을 알려주는지 살펴보겠습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></p>
+    <ol class="steps">
+      <li><strong>1페이지: 한눈에 보기.</strong> 요약 부분입니다. 메디케어 번호, 통지서 날짜, 처리된 청구 날짜가 표시됩니다. "모든 서비스가 승인되었습니까?"라는 질문에 예 또는 아니요로 답하고, 거부된 서비스 수를 보여줍니다. 또한 귀하가 청구받을 수 있는 총액과 올해 파트 B 공제액(디덕터블)을 얼마나 충족했는지도 보여줍니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>2페이지: 통지서 확인 방법.</strong> 메디케어 자체 체크리스트입니다. 각 의사나 제공자를 알고 계신가요? 그 날짜에 진료 예약이 있었나요? 나열된 서비스를 받으셨나요? 이미 지불했다면 올바른 금액을 지불하셨나요? <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 이 페이지에는 사기 신고 전화번호와 메디케어의 메시지도 실려 있습니다.</li>
+      <li><strong>3페이지 이후: 귀하의 청구 내역.</strong> 각 방문 내역은 제공자의 이름과 주소, 서비스 날짜와 함께 표시되며, 서비스마다 한 줄씩 나열됩니다. 각 줄에는 아래에 설명된 항목들이 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 거부된 서비스는 "서비스 승인 여부" 항목에 <strong>아니요</strong>로 표시됩니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>마지막 페이지: 거부된 청구와 이의신청.</strong> 이의신청 방법에 대한 단계별 안내, 보낼 주소, 이의신청이 접수되어야 하는 날짜가 나와 있습니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+    </ol>
+
+    <h2>각 항목이 의미하는 것</h2>
+    <p>청구 페이지는 모든 서비스에 동일한 항목을 사용합니다. 메디케어는 이를 다음과 같이 정의합니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></p>
+    <ul>
+      <li><strong>서비스 승인 여부.</strong> 메디케어가 이 서비스를 보장했는지 여부입니다. 예 또는 아니요입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>제공자 청구 금액.</strong> 제공자가 해당 서비스에 매긴 요금입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 이것이 귀하가 부담할 금액은 아닙니다.</li>
+      <li><strong>메디케어 승인 금액.</strong> 메디케어 서비스에 대해 제공자가 지급받을 수 있는 금액입니다. 제공자가 청구한 금액보다 적을 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 귀하의 제공자가 <a href="/ko/medicare-part-b.html">양도(Assignment)</a>를 받아들인 경우, 이 금액을 전액 지불로 받기로 동의한 것입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>메디케어 지급 금액.</strong> 메디케어가 제공자에게 지급한 금액입니다. 보통 메디케어 승인 금액의 80%입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>귀하가 청구받을 수 있는 최대 금액.</strong> 제공자가 귀하에게 청구할 수 있는 총액입니다. 여기에는 공제액(디덕터블), 공동보험금(코인슈런스), 메디케어가 보장하지 않은 비용이 포함될 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> <a href="/ko/medigap.html">메디케어 보충보험(메디갭)</a>이나 다른 보험이 있다면 이 금액의 전부 또는 일부를 지불해 줄 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>아래 참고 사항 확인.</strong> 청구 아래에 있는 짧은 메모를 가리키는 문자입니다. 메모에는 서비스가 거부된 이유나 청구가 메디갭 플랜으로 전달되었다는 내용이 적혀 있을 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+    </ul>
+    <p><em>메디케어 자체 샘플 통지서에서 가져온 예시입니다(실제 청구 금액이 아님):</em> <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>항목</th><th>예시 금액</th><th>의미</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>제공자 청구 금액</td><td>$143.00</td><td>의사의 요금</td></tr>
+          <tr><td>메디케어 승인 금액</td><td>$107.97</td><td>메디케어가 해당 서비스에 대해 허용하는 금액</td></tr>
+          <tr><td>메디케어 지급 금액</td><td>$86.38</td><td>승인 금액의 80%</td></tr>
+          <tr><td>귀하가 청구받을 수 있는 최대 금액</td><td>$21.59</td><td>귀하의 20% 부담분</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>제공자가 양도(Assignment)를 받아들이는 경우, 제공자의 청구 금액은 귀하에게 중요하지 않다는 점에 유의하세요. 귀하의 부담분은 청구 금액이 아니라 승인 금액에서 나옵니다. 저희 <a href="/ko/costs.html">비용 가이드</a>에서 공제액(디덕터블)과 공동보험금(코인슈런스)을 쉽게 설명해 드립니다.</p>
+
+    <h2>청구 오류와 사기 알아차리는 법</h2>
+    <p>메디케어는 영수증과 청구서를 보관하고 MSN과 대조해 볼 것을 권합니다. 나열된 모든 서비스, 용품, 장비를 실제로 받으셨는지 확인하세요. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 한 줄씩 살펴보며 다음을 물어보세요.</p>
+    <ul>
+      <li><strong>이 제공자를 알고 있나요?</strong> 낯선 이름이 첫 번째 경고 신호입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></li>
+      <li><strong>그날 그곳에 있었나요?</strong> 통지서에 적힌 날짜와 서비스를 본인의 일정과 대조해 보세요. <!-- src: https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse --></li>
+      <li><strong>정확히 이 서비스를 받았나요?</strong> 중복 청구된 항목, 받은 적 없는 검사, 도착한 적 없는 장비를 주의하세요.</li>
+      <li><strong>이미 지불했다면 올바른 금액을 지불했나요?</strong> 청구서를 "귀하가 청구받을 수 있는 최대 금액"과 비교하세요. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --></li>
+      <li><strong>다른 보험이 지불했나요?</strong> 다른 보장이 있다면 메디케어가 보장하지 않은 부분을 그 보험이 보장하는지 확인하세요. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --></li>
+    </ul>
+    <p>이상한 청구 항목이 하나 있다면 먼저 제공자의 사무실에 전화하세요. 청구 오류는 흔하며 사무실에서 바로잡을 수 있습니다. 청구 내용이 명확하지 않다면 항목별 명세서를 요청하세요. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 서비스가 거부되었다면 제공자가 메디케어에 올바른 정보를 보냈는지 확인하기 위해 전화하세요. 그렇지 않았다면 청구를 다시 제출할 수 있습니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --></p>
+    <p>받지 않은 서비스에 대해 청구되었거나, 모르는 사람이 귀하의 이름으로 청구하고 있다면 사기일 수 있습니다. <strong>1-800-MEDICARE(1-800-633-4227)</strong>로 전화하세요. <!-- src: https://www.medicare.gov/basics/reporting-medicare-fraud-and-abuse --> 저희 <a href="/ko/medicare-scams.html">메디케어 사기 가이드</a>에서 주의해야 할 수법과 신고할 수 있는 모든 곳을 다룹니다.</p>
+
+    <h2>메디케어가 서비스를 거부했다면: 이의신청 방법</h2>
+    <p>통지서에 있는 보장이나 지급 결정에 대해 이의신청을 할 권리가 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> MSN이 오리지널 메디케어의 1단계 이의신청이 시작되는 곳입니다. 이를 재심사라고 합니다. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --> 이의신청은 서면으로 해야 하며, 메디케어 청구 사무소는 통지서를 받은 날로부터 120일 이내에 이를 접수해야 합니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 정확한 날짜는 마지막 페이지의 상자 안에 인쇄되어 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --></p>
+    <ol class="steps">
+      <li>MSN 사본에서 <strong>이의를 제기하는 서비스나 청구에 동그라미를 치세요.</strong> <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --></li>
+      <li><strong>이의를 제기하는 이유를 서면으로 설명하세요.</strong> 통지서에 직접 쓰거나 별도의 페이지를 첨부하세요. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --></li>
+      <li><strong>이름, 전화번호, 메디케어 번호를 기재하세요.</strong> <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --> 의사의 소견서 등 도움이 될 만한 자료를 포함하세요. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --></li>
+      <li>MSN <strong>마지막 페이지에 적힌 메디케어 청구 사무소 주소로 우편을 보내세요.</strong> <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --> 원한다면 재심사 신청서(Redetermination Request Form)를 대신 사용할 수 있습니다. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --></li>
+    </ol>
+    <p>일반적으로 청구 담당 기관이 이의신청을 접수한 후 60일 이내에 결정이 나옵니다. 메디케어가 서비스 보장에 동의하면 다음 MSN에 반영됩니다. 그렇지 않다면 서면 결정 통지서를 받고 다음 단계로 넘어갈 수 있습니다. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --> 질병 등 정당한 사유로 기한을 놓쳤다면 여전히 신청할 수 있을 수도 있습니다. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --> <strong>1-800-MEDICARE</strong>나 <a href="/ko/ship-directory.html">주 건강보험 지원 프로그램(SHIP)</a>에서 대리인을 지정하는 도움을 포함해 무료로 도움을 받을 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 저희 <a href="/ko/rights.html">Your Rights</a> 페이지와 <a href="/ko/how-do-i.html">How Do I…</a> 가이드에서 이의신청에 대해 더 자세히 다룹니다.</p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <details class="qa">
+      <summary>메디케어 요약 통지서에 적힌 금액을 지불해야 하나요?</summary>
+      <div>
+        <p>아닙니다. MSN은 청구서가 아닙니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 제공자가 귀하에게 청구할 수 있는 최대 금액을 보여줄 뿐입니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 제공자로부터 실제 청구서를 받았을 때만 지불하시고, 청구서 금액이 통지서의 "귀하가 청구받을 수 있는 최대 금액"을 넘지 않는지 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>왜 메디케어 요약 통지서를 받지 못했나요?</summary>
+      <div>
+        <p>MSN은 6개월마다 발송되며, 서비스나 용품을 이용한 기간에 대해서만 발송됩니다. 청구가 없었다면 통지서를 받지 않습니다. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 전자 MSN을 신청했다면 종이 대신 이메일을 확인하세요. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --> 메디케어 어드밴티지 플랜에 가입되어 있다면 대신 플랜에서 혜택 설명서를 받습니다. <!-- src: https://www.medicare.gov/claims-appeals/check-the-status-of-a-claim --> 주소가 바뀌었다면 통지서가 제대로 전달되도록 사회보장국(Social Security)에 연락하세요. <!-- src: https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>MSN에서 거부된 청구에 이의신청할 수 있는 기한은 얼마나 되나요?</summary>
+      <div>
+        <p>메디케어 청구 사무소는 통지서를 받은 날로부터 120일 이내에 서면 이의신청을 접수해야 합니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 정확한 마감일은 MSN 마지막 페이지에 인쇄되어 있습니다. <!-- src: https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>MSN과 EOB의 차이는 무엇인가요?</summary>
+      <div>
+        <p>MSN은 메디케어에서 발송되며 오리지널 메디케어 파트 A 및 파트 B 청구를 다룹니다. 혜택 설명서(EOB)는 민간 메디케어 어드밴티지나 파트 D 플랜에서 발송되며 해당 플랜의 청구를 다룹니다. <!-- src: https://www.medicare.gov/claims-appeals/check-the-status-of-a-claim --> 둘 다 청구된 내용, 지급된 금액, 귀하가 부담할 수 있는 금액을 보여준다는 같은 목적을 가지고 있습니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>다른 사람이 제 MSN을 대신 확인해줄 수 있나요?</summary>
+      <div>
+        <p>네. 이의신청 절차에서 가족이나 친구를 대리인으로 지정할 수 있습니다. <!-- src: https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf --> 메디케어 계정이 있으면 청구 내역을 다운로드해서 신뢰하는 사람과 공유할 수도 있습니다. <!-- src: https://www.medicare.gov/claims-appeals/how-do-i-file-a-claim --> 공인 대리인이 어떻게 작동하는지는 저희 <a href="/ko/caregivers.html">보호자 가이드</a>를 참고하세요.</p>
+      </div>
+    </details>
+
+    <h2>관련 페이지</h2>
+    <ul>
+      <li><a href="/ko/how-do-i.html">How Do I…</a> — 플랜의 혜택 설명서를 읽는 법과 이의신청 방법을 포함한 단계별 가이드입니다.</li>
+      <li><a href="/ko/medicare-scams.html">메디케어 사기: 알아차리고 신고하는 법</a> — 현재 유행 중인 수법과 신고할 곳입니다.</li>
+      <li><a href="/ko/rights.html">Your Rights</a> — 이의신청 권리, 예상치 못한 청구서에 대한 보호, 불만 제기 방법입니다.</li>
+      <li><a href="/ko/costs.html">본인 비용 이해하기</a> — 공제액(디덕터블), 공동보험금(코인슈런스), 양도(Assignment)를 설명합니다.</li>
+      <li><a href="/ko/claims-coding.html">청구 및 코딩</a> — 전문가를 위한, 청구가 제공자에서 지급자로 전달되는 과정입니다.</li>
+    </ul>
+    <p>공식 출처: <a href="https://www.medicare.gov/basics/forms-publications-mailings/mailings/costs-and-coverage/medicare-summary-notice" rel="noopener">Medicare.gov: 메디케어 요약 통지서</a>, <a href="https://www.cms.gov/medicare/medicare-general-information/msn/downloads/sample-part-b-medicare-summary-notice.pdf" rel="noopener">CMS: 파트 B 메디케어 요약 통지서 샘플(PDF)</a>, <a href="https://www.medicare.gov/providers-services/claims-appeals-complaints/appeals/original-medicare" rel="noopener">Medicare.gov: 오리지널 메디케어의 이의신청</a>, <a href="https://www.medicare.gov/claims-appeals/check-the-status-of-a-claim" rel="noopener">Medicare.gov: 청구 상태 확인하기</a>, <a href="https://www.medicare.gov/go-digital" rel="noopener">Medicare.gov: 디지털로 전환하기</a>.</p>
+
+    <div class="note">
+      <strong>출처에서 직접 확인하세요.</strong> 위 구성과 규칙은 이 글을 작성할 당시 메디케어가 발표한 샘플 통지서와 이의신청 안내를 바탕으로 합니다. 실제로는 본인의 통지서가 기준이 됩니다. 통지서에 인쇄된 마감일과 주소를 사용하세요. <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에서 확인하거나 1-800-MEDICARE로 전화하고, <a href="/ko/ship-directory.html">SHIP</a>에서 무료 도움을 받으세요.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

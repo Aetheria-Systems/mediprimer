@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>흔한 메디케어 및 메디케이드 실수 — MediPrimer</title>
+<meta name="description" content="메디케어와 메디케이드의 가입, 보장, 갱신 과정에서 사람들이 흔히 저지르는 가장 비용이 큰 실수들을 한눈에 볼 수 있는 가이드 — 그리고 이를 피하는 방법.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/common-mistakes.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Common Medicare &amp; Medicaid Mistakes — MediPrimer">
+<meta property="og:description" content="Scannable guide to the most common and costly mistakes people make with Medicare and Medicaid enrollment, coverage, and renewals — and how to avoid them.">
+<meta property="og:url" content="https://mediprimer.org/common-mistakes.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Common Medicare &amp; Medicaid Mistakes — MediPrimer">
+<meta name="twitter:description" content="Scannable guide to the most common and costly mistakes people make with Medicare and Medicaid enrollment, coverage, and renewals — and how to avoid them.">
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/common-mistakes.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/common-mistakes.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/common-mistakes.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/common-mistakes.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/common-mistakes.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Common Medicare & Medicaid Mistakes", "description": "Scannable guide to the most common and costly mistakes people make with Medicare and Medicaid enrollment, coverage, and renewals — and how to avoid them.", "url": "https://mediprimer.org/common-mistakes.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Common Medicare & Medicaid Mistakes", "item": "https://mediprimer.org/common-mistakes.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/common-mistakes.html" lang="en">English</a>
+    <a href="/es/common-mistakes.html" lang="es">Español</a>
+    <a href="/zh-Hant/common-mistakes.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/common-mistakes.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">수혜자 및 보호자를 위한 정보</p>
+    <h1>흔한 메디케어 및 메디케이드 실수</h1>
+    <p>사람들이 가장 자주 저지르고 가장 비용이 큰 실수들 — 그리고 이를 피하는 방법.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">작은 가입 실수 하나가 수년에 걸쳐 수천 달러의 손해로 이어질 수 있습니다. 이 페이지는 가장 흔한 실수들을 정리했습니다. 각 항목에는 사람들이 어떤 실수를 하는지, 왜 손해를 보는지, 그리고 어떻게 피할 수 있는지가 담겨 있습니다. 가입 전에 그리고 매년 공개 가입 기간마다 점검 목록으로 활용하세요.</p>
+
+    <h2>가입 기간을 놓치는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>메디케어에 아무 때나 가입할 수 있다고 착각하거나, 바쁘다는 이유로 마감일을 며칠 놓치거나, 오지 않는 우편물을 기다리거나, 전화 상담원이 알려준 날짜가 틀렸다고 생각합니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>메디케어의 7개월 최초 가입 기간을 놓치면 파트 B 보험료에 영구적인 가입 지연 벌금(보통 연 10%씩 평생)이 붙습니다. 또한 보장 공백도 생깁니다. 보장이 시작됐어야 할 그날 심장마비를 겪었다면, 전액을 본인이 부담해야 합니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p><a href="/ko/turning-65.html">7개월의 가입 기간을 실물 달력에 적어두세요</a>. 몇 달 전부터 미리 해두는 것이 좋습니다. 휴대폰 알림을 설정하세요. 지금 바로 <a href="https://www.ssa.gov/" rel="noopener">SSA.gov</a>와 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> 계정을 만드세요. 우편물이 제때 올 것이라고 믿지 마세요. 1-800-MEDICARE(1-800-633-4227)에 전화해 본인의 가입 기간 날짜를 확인하세요.</p>
+
+    <h2>고용주나 은퇴자 보장이 있으면 벌금 없이 파트 B를 미룰 수 있다고 착각하는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>고용주 보장, 은퇴자 보장, COBRA, 재향군인(VA) 보장 등 어떤 건강보험이든 있으면 벌금 없이 메디케어 파트 B를 미룰 수 있다고 생각합니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>메디케어 파트 B의 경우, 본인(또는 배우자)의 <strong>현재 직장</strong>에서 나오는 보장만이 안전하게 가입을 미룰 수 있게 해줍니다 — 그리고 대부분의 경우 고용주의 직원 수가 20명 이상이어야 합니다. 은퇴자 혜택, COBRA, VA 의료 서비스는 파트 B 벌금으로부터 보호해주지 않습니다. ("신뢰할 만한 보장"은 다른 기준입니다 — 이는 처방약 보장과 파트 D 벌금에 관한 것이지, 파트 B와는 무관합니다.) 잘못된 근거로 가입을 미루면 파트 B 보험료에 평생 벌금이 붙게 됩니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>고용주의 인사부나 복리후생 담당 부서에 다음 두 가지 질문을 각각 하고, 답변을 서면으로 받아두세요. "제 보장이 현재 직장 보장으로 인정되어 메디케어 파트 B 가입을 미룰 수 있나요?"와 "제 처방약 보장이 파트 D 기준으로 신뢰할 만한 보장인가요?" VA 보장이 있다면 VA 복리후생 상담사에게 문의하세요. COBRA를 이용 중이라면 먼저 <a href="/ko/cobra-and-medicare.html">COBRA와 메디케어</a>를 읽어보세요. 본인 상황에 맞는 정보는 <a href="/ko/working-past-65.html">65세 이후에도 계속 근무하는 경우</a>와 <a href="/ko/retiring-losing-coverage.html">퇴직하거나 보장을 잃는 경우</a>를 참고하세요. 확신이 서지 않으면 가입을 미루기 전에 <a href="/ko/ship-directory.html">담당 SHIP 상담사</a>에게 전화해 검토를 받으세요.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>공개 가입 기간은 12월 7일에 마감됩니다. 저희가 알려드릴게요.</h2>
+      <p>마감일 전에 플랜을 점검할 항목만 간단히 정리한 가을철 점검 목록과, 12월 7일 전 리마인더 이메일 한 통을 받아보세요. 그 외에는 아무것도 없습니다. 광고도, 플랜 판매도 없습니다.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">이메일 주소</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소">
+        <button type="submit">점검 목록 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 이메일을 한 번 보내드립니다 — 클릭하기 전까지는 구독이 완료되지 않습니다. 마감일 전 리마인더 한 통, 이후에는 평소처럼 최대 주 1회 이메일만 보내드립니다. 클릭 한 번으로 구독을 취소할 수 있습니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>메디갭 공개 가입 기간을 놓치는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>오리지널 메디케어를 선택한 경우, 의료 질문에 답하지 않고 메디케어 보충보험(메디갭)을 구매할 수 있는 기간이 6개월(본인의 메디갭 공개 가입 기간)뿐이라는 사실을 모르는 경우가 많습니다. 이 기간을 넘겨버리면 보충보험을 구매할 수 없거나, 보험 인수 심사를 통과해야 하고 거절당할 수도 있습니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>6개월의 가입 기간이 끝나면, 보험사는 건강 상태를 물어볼 수 있고 건강 문제가 있으면 가입을 거절하거나 보험료를 더 높게 매길 수 있습니다. 원하는 의사나 전문의를 자유롭게 선택할 권리를 잃을 수도 있습니다. 또는 메디갭 보조 보장 없이 오리지널 메디케어에서 더 높은 본인 부담 비용을 지불하게 됩니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>오리지널 메디케어를 선택한다면, 65세가 되고 파트 B에 가입한 날로부터 6개월 이내에 메디갭 플랜을 구매하세요. 선택 가능한 옵션은 <a href="/ko/medigap.html">메디갭 플랜</a>을 참고하세요. 5개월째까지 기다리지 말고 미리 행동하세요. 이 기간은 한 번 닫히면 특별한 생활 이벤트가 없는 한 다시 열리지 않습니다.</p>
+
+    <h2>록인(전환 제한)을 이해하지 못한 채 메디케어 어드밴티지를 선택하는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>메디케어 어드밴티지 플랜을 선택하면서, 나중에 오리지널 메디케어로 돌아가 메디갭 보충보험을 구매하려 할 때 보험 인수 심사를 받아야 하거나 아예 거절당할 수 있다는 사실을 모르는 경우가 많습니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>메디케어 어드밴티지는 일방통행 문과 같습니다. 어드밴티지 플랜은 매년 바꿀 수 있지만, 오리지널 메디케어와 메디갭으로 돌아가는 것은 어렵습니다. 어드밴티지를 선택한 후 새로운 건강 문제가 생기면 메디갭 보충보험 가입 자격을 얻지 못할 수도 있습니다. 그러면 어드밴티지에 갇히거나, 보충보험 없이 오리지널 메디케어에 머물게 됩니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>어드밴티지를 선택하기 전에 이 록인(전환 제한)을 이해하세요. 나중에 오리지널 메디케어로 돌아가고 싶을 수도 있다고 생각한다면 신중하게 판단하세요. <a href="/ko/choosing-coverage.html">보장 선택하기</a>를 읽고 오리지널과 어드밴티지를 신중하게 비교해 보세요. 어드밴티지를 선택했다면 매년 검토하고, 건강 상태나 상황이 바뀌면 공개 가입 기간에 다시 전환하는 것을 고려하세요.</p>
+
+    <h2>파트 A 가입 후에도 HSA에 계속 납입하는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>메디케어 파트 A에 가입한 후에도 건강 저축 계좌(HSA)에 계속 납입을 하는데, 이것이 허용되지 않으며 세금 문제를 일으킨다는 사실을 모르는 경우가 많습니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>파트 A에 가입하면 더 이상 HSA에 납입할 수 없습니다 — 규정 위반입니다. 납입을 계속하면 국세청(IRS)은 이를 실수로 간주하며, 세금과 벌금을 물어야 할 수도 있습니다. 이듬해 세금 신고를 할 때까지 이 사실을 모르는 사람도 많습니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>미리 계획하세요 — 가입한 달에 납입을 중단하는 것으로는 이미 늦을 수 있습니다. 최초 가입 기간 이후에 파트 A에 가입하면, 파트 A는 <strong>최대 6개월 전으로 소급 적용</strong>될 수 있습니다. 즉, 보통 신청서를 제출하기(또는 파트 A를 자동으로 발동시키는 사회보장연금 신청을 하기) <em>6개월 전</em>에는 HSA 납입을 중단해야 합니다. 고용주의 복리후생 담당 부서에 알리세요. 전체 규정, 누가 가입을 미룰 수 있는지, 이미 실수했다면 어떻게 해야 하는지는 <a href="/ko/hsa-and-medicare.html">HSA 납입과 메디케어: 6개월 파트 A 함정</a>을 참고하세요.</p>
+
+    <h2>매년 플랜을 재검토하지 않는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>같은 메디케어 어드밴티지나 파트 D 플랜이 여전히 자신에게 맞는지 확인하지 않고 해마다 그대로 유지합니다. 네트워크가 바뀌고, 약제 목록이 바뀌고, 보험료도 오릅니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>작년에 완벽했던 플랜이 올해는 담당 의사를 다르게 보장할 수 있습니다. 2등급에 있던 약이 4등급으로 옮겨질 수도 있습니다. 보험료가 한 달에 50달러 오를 수도 있습니다. 더 저렴한 플랜이 나와 있을 수도 있습니다. 공개 가입 기간에 전환할 기회를 놓치면 1년 내내 더 많은 돈을 내게 됩니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>매년 10월 공개 가입 기간 동안 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov 플랜 파인더</a>에 다시 들어가거나 담당 SHIP에 전화하세요. 30분을 들여 플랜을 비교하세요. 담당 의사가 여전히 네트워크 안에 있는지 확인하세요. 복용 중인 약이 여전히 같은 등급에 있는지 확인하세요. 돈을 아끼거나 더 나은 보장을 받을 수 있다면 전환하세요. 이 과정은 무료이며 병원 예약 한 번보다 시간이 덜 걸립니다.</p>
+
+    <h2>플랜 파인더의 의사 목록이 완전하다고 생각하는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>Medicare 플랜 파인더에서 담당 의사가 네트워크 내로 표시된 것을 보고 안심하며 가입합니다. 그런 다음 진료 예약을 위해 전화하면 그 의사가 이미 플랜을 떠났거나 신규 환자를 받지 않는다는 사실을 알게 됩니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>네트워크 밖 의사는 비용이 훨씬 많이 듭니다. 결국 의사를 바꾸거나, 진료의 연속성을 잃거나, 예상치 못한 청구서로 수천 달러를 내야 할 수도 있습니다. 플랜의 네트워크 정보가 항상 최신은 아닙니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>플랜 파인더는 시작점이지 최종 답이 아닙니다. 플랜을 하나로 좁힌 후에는 담당 의사 병원에 전화해서 물어보세요. "[플랜 이름]과 네트워크 계약이 되어 있나요? 신규 환자를 받고 있나요?" 그런 다음 플랜 측에도 전화해서 같은 내용을 확인하세요. 전체 확인 절차는 <a href="/ko/using-plan-finder.html">Medicare.gov 플랜 파인더 사용법</a>을 참고하세요.</p>
+
+    <h2>메디케이드 갱신 통지를 무시하는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>메디케이드가 갱신 서류를 보내거나 온라인으로 정보를 업데이트하라고 요청합니다. 마감일을 놓치거나, 응답을 잊거나, 이미 승인됐으니 아무것도 할 필요가 없다고 짐작합니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>마감일까지 응답하지 않으면 메디케이드에서 탈락합니다. 여전히 자격이 있어도 보장을 잃게 됩니다. 재신청해서 복구되기까지 몇 주가 걸릴 수 있습니다. 그 사이에 병원 진료, 처방약, 입원 비용으로 수천 달러가 나갈 수 있습니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>메디케이드 우편물을 무시하지 마세요. 열어보고, 마감일을 읽고, 응답하세요. 거주 주에 온라인 갱신 절차가 있다면 즉시 진행하세요. 주소가 바뀌면 메디케이드에 계속 업데이트해서 우편물을 놓치지 않도록 하세요. 갱신 날짜를 달력에 표시해두세요. 이미 보장이 종료됐다면 <a href="/ko/lost-medicaid-what-now.html">메디케이드 상실 후 해야 할 일</a>을 참고하세요.</p>
+
+    <h2>비용 지원 자격이 있는지 확인하지 않는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>무료 프로그램이 존재한다는 사실을 모른 채 보험료와 약값 부담에 시달립니다. 소득이 "너무 많다"고 생각하거나, 사회보장연금을 받고 있으니 자격이 없다고 생각합니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>메디케어 절감 프로그램, 추가 도움(저소득 보조금), 메디케이드는 보험료를 대신 내주고 약값을 0달러나 5달러까지 낮춰줄 수 있습니다. 많은 사람이 신청하지 않아서 수천 달러를 그냥 놓쳐버립니다. 소득 한도는 사람들이 생각하는 것보다 높은 경우가 많습니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p>형편이 어렵다면 자격이 있을 수도 있다고 가정하세요. <a href="https://www.healthcare.gov/" rel="noopener">Healthcare.gov</a>에 접속하거나, 1-800-MEDICARE에 전화하거나, <a href="/ko/state-medicaid.html">주 메디케이드 사무소</a>를 방문하세요. 도움이 되는 프로그램에 대해 문의하세요. 신청에는 15분이면 충분합니다. 전체 목록은 <a href="/ko/getting-help.html">비용 지원 받기</a>를 참고하세요.</p>
+
+    <h2>공개 가입 기간에 파트 D 플랜을 비교하지 않는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>같은 파트 D 플랜을 계속 유지하거나, 본인이 복용하는 약을 확인하지 않고 가장 저렴한 플랜이 최선이라고 짐작합니다. 총 예상 비용 대신 보험료만 비교합니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>보험료가 똑같이 35달러인 파트 D 플랜 두 개도 약값은 크게 다를 수 있습니다. 한쪽은 주요 약값으로 5달러를 청구하고, 다른 쪽은 50달러를 청구할 수 있습니다. 1년이면 540달러 차이가 납니다. 보험료가 싸다고 본인에게 유리한 보장이라는 뜻은 아닙니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p><a href="https://www.medicare.gov/" rel="noopener">플랜 파인더</a>를 이용해 복용 중인 약을 모두 입력하세요. 보험료뿐 아니라 총 예상 비용을 비교하세요. 도움이 필요하면 담당 SHIP에 전화하세요. 단계별 안내는 <a href="/ko/using-plan-finder.html">Medicare.gov 플랜 파인더 사용법</a>을 참고하세요.</p>
+
+    <h2>무료 상담사에게 전화하는 대신 혼자 해결하려는 것</h2>
+    <h3>사람들이 저지르는 실수</h3>
+    <p>혼자서 메디케어를 조사하느라 몇 시간을 보냅니다. 도움을 요청하는 것을 부끄러워합니다. 무료이고 전문적이며 공정한 도움이 존재한다는 사실을 모릅니다.</p>
+
+    <h3>왜 손해를 보는가</h3>
+    <p>전문가의 안내 없이는 가입 실수를 저지르고, 비싼 플랜에 계속 머물고, 마감일을 놓치거나, 자격이 있는 프로그램을 건너뛰게 됩니다. 이런 실수는 수년에 걸쳐 수천 달러의 손해로 이어집니다.</p>
+
+    <h3>피하는 방법</h3>
+    <p><a href="https://www.shiphelp.org/" rel="noopener">shiphelp.org</a>에서 담당 SHIP(주 건강보험 지원 프로그램)에 전화하세요. 또는 1-800-MEDICARE(1-800-633-4227)에 전화하세요. 이 상담사들은 무료이고 공정하며 훈련받은 전문가입니다. 이런 질문에 수천 번 답해온 사람들입니다. 30분을 가장 값지게 쓰는 방법입니다.</p>
+
+    <div class="note">
+      <strong>행동하기 전에 확인하세요.</strong> 각 상황은 저마다 다릅니다. 이것들은 흔한 실수이지만, 본인의 구체적인 상황이 중요합니다. 파트 B 가입을 미룰지, 어떤 플랜을 선택할지, 보장에 대해 어떻게 할지 등 중요한 결정을 내리기 전에 담당 SHIP, <a href="https://www.healthcare.gov/" rel="noopener">Healthcare.gov</a>의 무료 상담사, 또는 플랜 측에 문의하세요. 이 페이지는 교육 목적이며 전문가의 안내를 대신할 수 없습니다.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

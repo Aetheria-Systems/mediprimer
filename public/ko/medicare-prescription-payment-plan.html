@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어 처방약 결제 플랜: 월별 약값 청구서</title>
+<meta name="description" content="메디케어 처방약 결제 플랜 설명: 약국에서 $0을 내고 파트 D 약값을 월별 청구서로 나눠 냅니다. 누구에게 도움이 되는지, 청구서 계산 방식, 갱신 방법까지 알아보세요.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-prescription-payment-plan.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Prescription Payment Plan: Monthly Drug Bills">
+<meta property="og:description" content="Medicare Prescription Payment Plan explained: pay $0 at the pharmacy and spread Part D costs into monthly bills. Who it helps, how bills work, and renewal.">
+<meta property="og:url" content="https://mediprimer.org/medicare-prescription-payment-plan.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicare Prescription Payment Plan: Monthly Drug Bills">
+<meta name="twitter:description" content="Medicare Prescription Payment Plan explained: pay $0 at the pharmacy and spread Part D costs into monthly bills. Who it helps, how bills work, and renewal.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does the Medicare Prescription Payment Plan reduce what I pay for drugs?", "acceptedAnswer": {"@type": "Answer", "text": "No. It spreads the same total over more months. Your yearly total is the same with or without it. To actually lower drug costs, look at Extra Help and other programs ."}}, {"@type": "Question", "name": "Why did my monthly bill go up?", "acceptedAnswer": {"@type": "Answer", "text": "You probably filled a new prescription or a refill. New costs get added to your balance, and there are fewer months left in the year to spread them over, so the monthly amount rises. Your yearly total still can't exceed the Part D cap or what you'd have paid at the pharmacy."}}, {"@type": "Question", "name": "I have Extra Help. Should I use this?", "acceptedAnswer": {"@type": "Answer", "text": "Probably not. Medicare lists getting Extra Help as a reason the payment plan may not be a good fit, because your costs are already low."}}, {"@type": "Question", "name": "Is there a deadline to sign up?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can join at any point in the year. But Medicare notes that joining after September leaves few months to spread costs, so it may not help much. Joining in January gives the most room."}}, {"@type": "Question", "name": "Does this apply to Part B drugs, like infusions at a clinic?", "acceptedAnswer": {"@type": "Answer", "text": "No. It covers only drugs paid under your Part D drug coverage. Drugs billed under Part B follow normal Part B cost-sharing."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-prescription-payment-plan.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-prescription-payment-plan.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-prescription-payment-plan.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-prescription-payment-plan.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-prescription-payment-plan.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Prescription Payment Plan: Monthly Drug Bills", "description": "Medicare Prescription Payment Plan explained: pay $0 at the pharmacy and spread Part D costs into monthly bills. Who it helps, how bills work, and renewal.", "url": "https://mediprimer.org/medicare-prescription-payment-plan.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Prescription Payment Plan: Monthly Drug Bills", "item": "https://mediprimer.org/medicare-prescription-payment-plan.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-prescription-payment-plan.html" lang="en">English</a>
+    <a href="/es/medicare-prescription-payment-plan.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-prescription-payment-plan.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-prescription-payment-plan.html" lang="vi">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">회원 및 보호자를 위한 정보</p>
+    <h1>메디케어 처방약 결제 플랜: 약값을 매달 나눠 내기</h1>
+    <p>1월에 한꺼번에 나오는 큰 약국 청구서는 감당하기 어려울 수 있습니다. 이 선택형 프로그램을 이용하면 계산대에서 $0을 내고, 대신 플랜에서 매달 청구서를 받게 됩니다. 비용 자체를 낮춰주지는 않지만, 부담을 고르게 나눠줄 수 있습니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>간단히 답하자면 이렇습니다.</strong> <strong>메디케어 처방약 결제 플랜</strong>을 이용하면 메디케어 약제 보장이 있는 모든 사람이 본인 부담 약값을 한 해 동안 나눠 낼 수 있습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan --> 약국에서는 아무것도 내지 않습니다. 대신 플랜에서 매달 청구서를 보냅니다. <!-- src: https://www.medicare.gov/prescription-payment-plan --> 가입 비용도, 이자도, 수수료도 없습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --> 하지만 <strong>돈을 절약해주거나 약값을 낮춰주지는 않으며</strong>, 단지 납부 시점만 바꿔줄 뿐입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan --> 연초에 약값이 많이 드는 경우 가장 도움이 됩니다. 약값이 적고 매달 비슷하다면 큰 도움이 되지 않으며, 추가 도움(저소득 보조금)을 받고 있다면 적합하지 않습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 가입하려면 본인의 파트 D 플랜 또는 메디케어 어드밴티지 플랜에 문의하세요. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --></p>
+
+    <h2>작동 방식</h2>
+    <p>모든 메디케어 약제 플랜과 약제 보장이 포함된 모든 메디케어 어드밴티지 플랜은 이 옵션을 제공해야 합니다. 가입은 자율적입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan --> 일단 가입하면: <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --></p>
+    <ul>
+      <li>보장되는 처방약을 조제할 때, 플랜이 약국에 회원님이 이 프로그램에 가입되어 있음을 알립니다. 우편 주문 약국과 전문 약국을 포함해 약국에서는 아무것도 내지 않습니다.</li>
+      <li>매달 플랜에서 처방약에 대해 납부해야 할 금액을 청구서로 보내며, 납부 기한과 납부 방법도 함께 안내합니다.</li>
+      <li>월별 플랜 보험료가 있다면 이는 별도의 청구서로 계속 받습니다. 약제 보장을 잃지 않도록 보험료를 먼저 납부하세요.</li>
+    </ul>
+    <p>약값 전액에 대한 책임은 여전히 회원님에게 있습니다. 바뀌는 것은 납부 시점뿐입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 약을 받기 전에 비용이 얼마인지 알고 싶다면 약사에게 물어보거나 플랜에 전화하세요.</p>
+
+    <h2>월별 청구서 계산 방법</h2>
+    <p>모든 플랜은 같은 공식을 사용합니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 첫 달 청구서는 연간 본인 부담 비용 최대 한도를 남은 개월 수로 나눈 금액을 상한으로 합니다. 그 이후에는 매번 청구서가 남은 잔액에 새로 발생한 약값을 더한 뒤, 남은 개월 수로 나눈 금액이 됩니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/examples --></p>
+    <p>두 가지 한도가 회원님을 보호합니다. 한 해(달력 연도) 동안에는 원래 약국에서 냈을 금액보다 더 내는 일이 없으며, 파트 D의 연간 본인 부담 비용 상한을 넘는 일도 없습니다. 이 상한은 이 결제 옵션을 이용하든 안 하든, 메디케어 약제 보장이 있는 모든 사람에게 <strong>2026년 기준 $2,100</strong>입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --></p>
+    <div class="note info">
+      <strong>예시(Medicare.gov 제공).</strong> 매달 약값이 $525인 사람이 2026년 1월에 가입합니다. 첫 청구서는 $175입니다. 이후 청구서는 새로 발생한 비용이 더해지며 오르다가, $2,100 상한에 도달한 4월부터는 매달 약 $190 선에서 유지됩니다. 어느 쪽이든 연간 총액은 $2,100입니다. 이 프로그램이 없었다면 넉 달 동안 매달 $525를 내고 이후에는 내지 않았을 것입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/examples -->
+    </div>
+    <p>많은 사람들이 놀라는 점 하나는, 납부액이 <em>매달 달라질</em> 수 있고 한 해가 지날수록 종종 <em>늘어난다</em>는 것입니다. 새 처방이 추가될 때마다 비용이 늘어나는 반면, 이를 나눠 낼 남은 개월 수는 줄어들기 때문입니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 그래서 정확한 청구 금액을 미리 알기는 어렵습니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>공개 가입 기간은 12월 7일에 마감됩니다. 저희가 알려드릴게요.</h2>
+      <p>마감일 전에 플랜에서 확인해야 할 항목을 간단히 정리한 가을 점검 체크리스트와, 12월 7일 전 리마인더 이메일 한 통을 받아보세요. 그 외에는 아무것도 없습니다. 광고도, 플랜 판매도 없습니다.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">이메일 주소</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 이메일을 한 번 보내드립니다. 클릭하기 전까지는 구독이 완료되지 않습니다. 마감일 전 리마인더 이후에는 평소처럼 주 1회 이하로 이메일을 보내드립니다. 클릭 한 번으로 구독을 취소할 수 있습니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>누구에게 도움이 되고, 누구에게는 아닌가</h2>
+    <p>메디케어에 따르면 연초에 약값이 많이 드는 경우 가장 도움이 될 가능성이 큽니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 여기에는 몇 달 안에 연간 상한에 도달할 정도로 비싼 약을 복용하는 사람들, 그리고 한 번에 큰 금액을 내야 한다는 이유로 약 복용을 미뤄온 사람들이 포함됩니다.</p>
+    <p>다음의 경우에는 적합하지 <strong>않을</strong> 수 있습니다: <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --></p>
+    <ul>
+      <li>연간 약값이 적은 경우.</li>
+      <li>약값이 매달 거의 비슷하고 부담할 수 있는 경우.</li>
+      <li>연말(9월 이후)에 가입을 고려하는 경우. 비용을 나눠 낼 남은 개월 수가 적습니다.</li>
+      <li>메디케어나 메디케어 절감 프로그램을 통해 <a href="/ko/getting-help.html">추가 도움(저소득 보조금)</a>을 받고 있거나 받을 수 있는 경우.</li>
+      <li>주 약제 지원 프로그램, 쿠폰 프로그램, 또는 다른 보장을 통해 약값 지원을 받고 있는 경우.</li>
+      <li>약값 납부 방식을 바꾸고 싶지 않은 경우.</li>
+    </ul>
+    <p>소득이 제한적이라면, 비용을 단순히 나눠 내는 프로그램을 선택하기 전에 <a href="/ko/getting-help.html">실제로 약값을 낮춰주는 프로그램</a>을 먼저 확인하세요. Medicare.gov에는 <a href="https://www.medicare.gov/prescription-payment-plan/will-this-help-me" rel="noopener">"이 결제 옵션이 저에게 도움이 될까요?"</a>라는 짧은 퀴즈가 있습니다.</p>
+
+    <h2>가입, 갱신, 탈퇴</h2>
+    <ul>
+      <li><strong>연중 언제든 가입</strong>할 수 있으며, 플랜에 전화하거나 웹사이트를 방문하면 됩니다. 플랜에서 가입을 확인하는 안내서를 보내드립니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --></li>
+      <li><strong>자동으로 갱신됩니다.</strong> 플랜을 변경하거나 직접 탈퇴 의사를 밝히지 않는 한, 플랜은 매년 참여를 자동으로 갱신합니다. <!-- src: https://www.medicare.gov/publications/12211-whats-the-medicare-prescription-payment-plan.pdf --> 다음 해에는 이용하고 싶지 않다면 플랜에 알리세요.</li>
+      <li><strong>플랜을 변경하면 종료됩니다.</strong> 다른 약제 플랜이나 메디케어 어드밴티지 플랜으로 변경하면 참여가 종료됩니다. 다시 가입하고 싶다면 새 플랜에 문의하세요. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --></li>
+      <li><strong>언제든 탈퇴</strong>할 수 있으며, 플랜에 문의하면 됩니다. 탈퇴해도 약제 보장에는 영향이 없습니다. 남은 잔액은 여전히 내야 하며, 한 번에 내거나 계속 매달 나눠 낼 수 있습니다. 이후 새로 발생하는 약값은 다시 약국에서 바로 내는 방식으로 돌아갑니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --></li>
+    </ul>
+
+    <h2>납부를 놓친 경우</h2>
+    <p>플랜에서 알림을 보내드립니다. 그 알림에 적힌 기한까지 납부하지 않으면 결제 플랜에서 제외됩니다. 잔액은 여전히 내야 하지만, 이자나 연체료는 부과되지 않습니다. 어느 경우든 메디케어 약제 보장은 그대로 유지됩니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --> 플랜이 청구 실수를 했다고 생각되면 플랜에 전화하세요. 플랜의 보장 내용 설명서(Evidence of Coverage)에 나와 있는 절차에 따라 불만 제기를 할 권리가 있습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --></p>
+
+    <h2>자주 묻는 질문</h2>
+
+    <details class="qa">
+      <summary>메디케어 처방약 결제 플랜을 이용하면 약값이 줄어드나요?</summary>
+      <div>
+        <p>아닙니다. 같은 총액을 더 많은 달에 걸쳐 나눌 뿐입니다. 이용하든 안 하든 연간 총액은 같습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/examples --> 실제로 약값을 낮추려면 <a href="/ko/getting-help.html">추가 도움(저소득 보조금) 및 기타 프로그램</a>을 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>왜 월별 청구 금액이 올랐나요?</summary>
+      <div>
+        <p>새 처방약을 조제했거나 재조제를 받았을 가능성이 큽니다. 새로 발생한 비용이 잔액에 더해지고, 이를 나눠 낼 남은 개월 수는 줄어들기 때문에 월별 금액이 늘어납니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 그래도 연간 총액은 파트 D 상한이나 약국에서 냈을 금액을 넘지 않습니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>저는 추가 도움을 받고 있는데, 이걸 이용해야 하나요?</summary>
+      <div>
+        <p>아마 그럴 필요는 없습니다. 메디케어는 이미 비용이 낮기 때문에 추가 도움(저소득 보조금)을 받고 있는 경우 이 결제 플랜이 적합하지 않을 수 있는 이유로 꼽습니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>가입 마감일이 있나요?</summary>
+      <div>
+        <p>없습니다. 한 해 중 어느 시점에든 가입할 수 있습니다. 다만 메디케어는 9월 이후에 가입하면 비용을 나눠 낼 개월 수가 적어 큰 도움이 되지 않을 수 있다고 안내합니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/before-payment-option --> 1월에 가입하면 가장 여유가 많습니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>클리닉에서 맞는 주사제 같은 파트 B 약에도 적용되나요?</summary>
+      <div>
+        <p>아닙니다. 파트 D 약제 보장으로 처리되는 약에만 적용됩니다. <!-- src: https://www.medicare.gov/prescription-payment-plan/using-payment-option --> 파트 B로 청구되는 약은 일반적인 파트 B 비용 분담 방식을 따릅니다.</p>
+      </div>
+    </details>
+
+    <h2>관련 가이드</h2>
+    <ul>
+      <li><a href="/ko/medicare-part-d.html">메디케어 파트 D: 처방약 보장</a></li>
+      <li><a href="/ko/costs.html">본인 부담 비용 이해하기</a></li>
+      <li><a href="/ko/getting-help.html">비용 지원 받기: 추가 도움(저소득 보조금) 및 기타</a></li>
+      <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+      <li>공식 자료: <a href="https://www.medicare.gov/prescription-payment-plan" rel="noopener">Medicare.gov: 메디케어 처방약 결제 플랜이란?</a></li>
+      <li>공식 자료: <a href="https://www.medicare.gov/prescription-payment-plan/examples" rel="noopener">Medicare.gov: 이 결제 옵션의 예시</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>행동하기 전에 확인하세요.</strong> MediPrimer는 일반적인 교육 정보를 제공하며, 어떤 기관이나 보험사와도 제휴하지 않습니다. 파트 D 본인 부담 비용 상한은 매년 바뀌며, 구체적인 청구 내용은 플랜에서 정합니다. 가입하기 전에 플랜 또는 1-800-MEDICARE에 문의해 세부 사항을 확인하세요.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
