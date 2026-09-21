@@ -95,6 +95,25 @@
    "late_b": "가입은 가능하지만 보장은 다음 달 1일부터 시작되어, 한동안 보장이 없을 수 있습니다.",
    "foot1": "7개월을 모두 놓치면 메디케어 가입 기간 내내 late-enrollment 벌금을 낼 수 있습니다.",
    "foot2": "현재 직장에 다니며 대규모 고용주 보험이 있다면 규칙이 다릅니다."
+  },
+  "tl": {
+   "title": "7 buwan ang bintana mo para mag-sign up sa Medicare",
+   "desc": "Isang pitong-buwang timeline. Ang tatlong buwan bago ang buwan ng ika-65 kaarawan mo ang pinakamainam na oras para mag-sign up, dahil magsisimula ang coverage sa buwan na maging 65 ka. Puwede pa rin ang buwan ng kaarawan mo at ang tatlong buwan pagkatapos nito, pero mas matagal magsimula ang coverage.",
+   "sub": "Nagbubukas ito 3 buwan bago ang buwan ng ika-65 kaarawan mo — at ang oras ng sign-up ay nakakaapekto kung kailan magsisimula ang coverage.",
+   "before": "3 buwan BAGO",
+   "before_sub": "ang buwan ng kaarawan mo",
+   "bday1": "BUWAN NG",
+   "bday2": "KAARAWAN",
+   "age65": "ika-65",
+   "after": "3 buwan PAGKATAPOS",
+   "after_sub": "ng buwan ng kaarawan mo",
+   "good_h": "Mag-sign up sa 3 buwang ito",
+   "good_b": "Magsisimula ang coverage sa unang araw ng buwan na maging 65 ka — walang gap, walang penalty.",
+   "good_tag": "Ito ang pinakamainam na oras.",
+   "late_h": "Mag-sign up sa buwan ng kaarawan mo o pagkatapos",
+   "late_b": "Puwede pa rin, pero magsisimula ang coverage sa unang araw ng SUSUNOD na buwan — kaya maaaring walang coverage sa ilang panahon.",
+   "foot1": "Kung mismisin lahat ng 7 buwan, maaaring magbayad ka ng late-enrollment penalty habang mayroon kang Medicare.",
+   "foot2": "May ibang tuntunin kung nagtatrabaho ka pa at may coverage mula sa plano ng malaking employer."
   }
  },
  "medicare-parts-explained": {
@@ -167,6 +186,20 @@
    "c_h": "PART C — Medicare Advantage",
    "c_b": "Original Medicare를 대체하는 민간 플랜입니다. Part A·B 보장을 모두 포함해야 하고, 보통 Part D도 포함되며 추가 혜택이 있습니다. 대신 플랜의 네트워크와 승인 규칙을 따라야 합니다.",
    "foot": "메디케어는 장기 요양 돌봄을 보장하지 않으며, Original Medicare는 연간 지출 한도가 없습니다."
+  },
+  "tl": {
+   "title": "Ang mga parte ng Medicare, at ang binabayaran ng bawat isa",
+   "desc": "Ang Part A ay sumasaklaw sa pag-ospital. Ang Part B ay sumasaklaw sa doktor at outpatient care. Ang Part D ay sumasaklaw sa reseta. Ang Part C, Medicare Advantage, ay pribadong plano na pinagsasama ang lahat.",
+   "sub": "Ang Original Medicare ay Part A at Part B. Idinadagdag ang Part D para sa gamot. Ang Part C ay ibang paraan para makuha lahat.",
+   "a_h": "PART A — Ospital",
+   "a_b": "Inpatient na pagpapaospital. Skilled nursing matapos ang pagkakaospital. Hospice care. Ilang home health care.",
+   "b_h": "PART B — Medikal",
+   "b_b": "Pagbisita sa doktor. Outpatient care. Preventive screenings. Lab tests. Durable medical equipment.",
+   "d_h": "PART D — Gamot",
+   "d_b": "Reseta na kinukuha sa parmasya. Ibinebenta ng pribadong plano. May sariling listahan ng gamot ang bawat plano.",
+   "c_h": "PART C — Medicare Advantage",
+   "c_b": "Pribadong plano na pumapalit sa Original Medicare. Dapat saklawin nito lahat ng saklaw ng Parts A at B, kadalasang may kasamang Part D, at madalas may dagdag pang benepisyo. Kapalit nito, gagamitin mo ang network ng doktor ng plano at susundin ang mga patakaran nito sa pag-apruba.",
+   "foot": "Hindi binabayaran ng Medicare ang pangmatagalang custodial care, at walang taunang limit ang Original Medicare sa babayaran mo."
   }
  },
  "medicare-medicaid-which-program": {
@@ -244,6 +277,21 @@
    "dual_q": "둘 다 해당되는 경우",
    "dual_b": "메디케어가 먼저 지불하고 메디케이드가 나머지를 보완합니다. 보험료, 본인부담금, 장기요양까지 보장될 수 있어 가장 많은 혜택을 받습니다.",
    "foot_b": "메디케어가 있고 소득이 낮다면 메디케이드와 Medicare Savings Programs를 확인하세요. 해당되는데도 신청하지 않는 사람이 많습니다."
+  },
+  "tl": {
+   "title": "Medicare, Medicaid, o pareho?",
+   "desc": "Ang Medicare ay batay sa edad o kapansanan. Ang Medicaid ay batay sa kita. Marami ang kwalipikado sa pareho, tinatawag na dual eligible at ito ang may pinakamaraming tulong.",
+   "sub": "Magkaibang programa ito na may magkaibang tuntunin — at karaniwan lang na magkaroon ng pareho.",
+   "mcare_h": "MEDICARE",
+   "mcare_q": "Batay sa edad o kapansanan",
+   "mcare_b": "65 taong gulang ka na o mas matanda, o may 24 buwan ka nang disability benefits, o may ESRD o ALS ka. Hindi mahalaga ang kita mo.",
+   "mcaid_h": "MEDICAID",
+   "mcaid_q": "Batay sa kita",
+   "mcaid_b": "Ang kita at ari-arian mo ay nasa ilalim ng limit ng estado mo. Iba-iba ang tuntunin at pangalan sa bawat estado. Kahit anong edad.",
+   "dual_h": "PAREHO — DUAL ELIGIBLE",
+   "dual_q": "Kwalipikado ka sa pareho",
+   "dual_b": "Ang Medicare ang unang magbabayad, pupunan ng Medicaid ang gaps. Maaaring saklawin ang premiums, copays, at long-term care. Pinakamaraming tulong na available.",
+   "foot_b": "Kung may Medicare ka at mababa ang kita, tingnan ang Medicaid at ang Medicare Savings Programs. Marami sa mga kwalipikado ang hindi nag-aaplay."
   }
  },
  "medicare-enrollment-calendar": {
@@ -311,6 +359,19 @@
    "gep_h": "General Enrollment — 1월 1일~3월 31일",
    "gep_n": "첫 가입 기회를 놓친 분들을 위한 기간",
    "foot_b": "이사, 다른 보험 상실, Extra Help 자격 취득 등 인생의 변화가 있으면 연중 언제든 Special Enrollment Period가 열릴 수 있습니다."
+  },
+  "tl": {
+   "title": "Ang taon ng Medicare: aling bintana ang bukas kailan",
+   "desc": "Ang Open Enrollment ay mula Oktubre 15 hanggang Disyembre 7. Ang Medicare Advantage Open Enrollment Period at ang General Enrollment Period ay pareho mula Enero 1 hanggang Marso 31.",
+   "sub": "Ang mga bintanang ito ay paulit-ulit bawat taon. Sa labas nito, kadalasan hindi mo mapapalitan ang coverage mo.",
+   "months": "Ene,Peb,Mar,Abr,May,Hun,Hul,Ago,Set,Okt,Nob,Dis",
+   "aep_h": "Open Enrollment — Okt 15 hanggang Dis 7",
+   "aep_n": "Sumali, magpalit, o mag-drop ng plano para sa susunod na taon",
+   "oep_h": "Medicare Advantage Open Enrollment — Ene 1 hanggang Mar 31",
+   "oep_n": "Isang pagbabago kung nasa Advantage plan ka na",
+   "gep_h": "General Enrollment — Ene 1 hanggang Mar 31",
+   "gep_n": "Para sa mga nakaligtaan ang unang pagkakataong mag-sign up",
+   "foot_b": "Ang life event tulad ng paglipat, pagkawala ng ibang coverage, o pagiging kwalipikado sa Extra Help ay maaaring magbukas ng Special Enrollment Period anumang oras ng taon."
   }
  }
 }

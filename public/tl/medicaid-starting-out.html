@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicaid: Pagsisimula — MediPrimer</title>
+<meta name="description" content="Isang simpleng paliwanag tungkol sa Medicaid: ano ito, paano ito naiiba sa Medicare, sino ang kwalipikado, paano mag-apply, at ang susunod na hakbang pagkatapos maaprubahan.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/medicaid-starting-out.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicaid: Pagsisimula — MediPrimer">
+<meta property="og:description" content="Isang simpleng paliwanag tungkol sa Medicaid: ano ito, paano ito naiiba sa Medicare, sino ang kwalipikado, paano mag-apply, at ang susunod na hakbang pagkatapos maaprubahan.">
+<meta property="og:url" content="https://mediprimer.org/tl/medicaid-starting-out.html">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Medicaid: Pagsisimula — MediPrimer">
+<meta name="twitter:description" content="Isang simpleng paliwanag tungkol sa Medicaid: ano ito, paano ito naiiba sa Medicare, sino ang kwalipikado, paano mag-apply, at ang susunod na hakbang pagkatapos maaprubahan.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicaid: Pagsisimula", "description": "Isang simpleng paliwanag tungkol sa Medicaid: ano ito, paano ito naiiba sa Medicare, sino ang kwalipikado, paano mag-apply, at ang susunod na hakbang pagkatapos maaprubahan.", "url": "https://mediprimer.org/tl/medicaid-starting-out.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicaid-starting-out.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicaid-starting-out.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicaid-starting-out.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicaid-starting-out.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicaid-starting-out.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicaid-starting-out.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicaid-starting-out.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Medicaid: Pagsisimula", "item": "https://mediprimer.org/tl/medicaid-starting-out.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicaid-starting-out.html" lang="en">English</a>
+    <a href="/es/medicaid-starting-out.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicaid-starting-out.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicaid-starting-out.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/medicaid-starting-out.html" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Medicaid: Pagsisimula</h1>
+    <p>Bago sa Medicaid? Narito ang kailangan mong malaman tungkol sa kung paano ito gumagana, sino ang saklaw nito, at kung paano mag-apply.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead">Ang Medicaid ay seguro sa kalusugan na pinapatakbo ng mga pamahalaan ng estado. Sinasaklaw nito ang mga tao at pamilyang may mababang kita. Hindi tulad ng Medicare (na para sa mga taong 65 taong gulang pataas), maaaring saklawin ng Medicaid ang kahit sino — mga bata, matatanda, senior citizen, at mga taong may kapansanan. Ipapaliwanag ng gabay na ito kung ano ang Medicaid, paano ito naiiba sa Medicare, sino ang kwalipikado, at ano ang mangyayari kapag nag-apply ka.</p>
+
+    <h2>Ano ang Medicaid?</h2>
+    <p>Ang Medicaid ay isang programa ng seguro sa kalusugan na pinopondohan ng parehong pamahalaang pederal at ng mga estado. Binabayaran nito ang pangangalaga sa ospital, mga pagbisita sa doktor, mga inireresetang gamot, at iba pang serbisyo. Ngunit narito ang pinakamahalagang bagay: <strong>ang bawat estado ay may sariling Medicaid program na may sariling mga patakaran.</strong></p>
+    <p>Ibig sabihin nito, maaaring kwalipikado ang isang tao para sa Medicaid sa isang estado ngunit hindi sa ibang estado kahit magkapareho ang kita. Maaari ring magkaiba ang mga benepisyo — maaaring sinasaklaw ng isang estado ang pangangalaga sa ngipin, samantalang hindi naman sa iba. Kaya kapag iniisip mo ang Medicaid, kailangan mong suriin ang programa ng sarili mong estado.</p>
+
+    <h2>Medicaid kumpara sa Medicare: Magkaiba Sila</h2>
+    <p>Maraming tao ang nalilito sa pagitan ng Medicaid at Medicare dahil magkatunog ang mga pangalan. <strong>Ganap silang magkaibang programa.</strong></p>
+    <p><strong>Ang Medicare</strong> ay para sa mga taong 65 taong gulang pataas (at ilang mas batang tao na may kapansanan o end-stage kidney disease). Nakukuha mo ito sa pamamagitan ng pagbabayad ng buwis para sa Medicare habang nagtatrabaho. Pinapatakbo ito ng pamahalaang pederal.</p>
+    <p><strong>Ang Medicaid</strong> ay para sa mga tao at pamilyang may mababang kita. Hindi mo kailangang kitain ito o magbayad ng buwis — nag-a-apply ka batay sa iyong kita at bilang ng sambahayan. Pinapatakbo ito ng bawat estado.</p>
+    <p>Mahalaga: maaari kang magkaroon ng parehong programa. Kapag ganito ang nangyari, tinatawag itong "May Doble na Pagiging Karapat-dapat." Sinasaklaw ng iyong Medicare ang ilang serbisyo, at pinupunan ng iyong Medicaid ang mga puwang at binabayaran ang mga bagay na hindi sinasaklaw ng Medicare. Tingnan ang <a href="/tl/dual-eligible.html">May Doble na Pagiging Karapat-dapat: Medicare at Medicaid</a> para sa higit pa tungkol sa kung paano magkasamang gumagana ang dalawang programa.</p>
+
+    <div class="note info">
+      <strong>Nalilito kung aling programa?</strong> Kung ikaw ay 65 taong gulang pataas, awtomatiko kang nakakuha ng Medicare noong ikaw ay naging 65 (maliban kung ipinagpaliban mo ito). Ang Medicaid ay hiwalay — kailangan mong mag-apply kung sa palagay mo ay kwalipikado ka batay sa kita. Kung ikaw ay wala pang 65 taong gulang at kwalipikado para sa Medicaid batay sa iyong kita o kapansanan, malamang na ang Medicaid ang iyong pangunahing saklaw.
+    </div>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Sino ang Kwalipikado para sa Medicaid?</h2>
+    <p>Sinasaklaw ng Medicaid ang ilang grupo ng mga tao. Mahalaga ang iyong kita, edad, laki ng pamilya, at kung mayroon kang kapansanan. Ngunit tandaan: <strong>ang bawat estado ay nagtatakda ng sarili nitong limitasyon sa kita.</strong></p>
+
+    <h3>Mga Bata at Pamilya</h3>
+    <p>Sinasaklaw ng mga estado ang mga bata sa mga pamilyang may mababang kita. Naiiba ang limitasyon sa kita sa bawat estado — madalas itong mas mataas kaysa sa inaasahan mo. Maraming pamilyang full-time nagtatrabaho ang kwalipikado pa rin. Mayroon ding programang tinatawag na CHIP (Children's Health Insurance Program) na sumasaklaw sa mga batang ang pamilya ay kumikita ng masyadong marami para sa Medicaid ngunit hindi sapat para sa pribadong seguro.</p>
+
+    <h3>Mga Buntis at Saklaw Pagkapanganak</h3>
+    <p>Kung ikaw ay buntis o kararanganak lang, maaari kang mag-apply para sa Medicaid batay sa kita. Maraming estado ang may mas mataas na limitasyon sa kita para sa mga buntis kumpara sa ibang matatanda. Kadalasang kasama sa saklaw ang prenatal care, panganganak, pananatili sa ospital, at pangangalaga sa mga buwan pagkatapos manganak.</p>
+
+    <h3>Mga May Mababang Kita na Matanda</h3>
+    <p>Sa mga estadong nag-expand ng Medicaid (karamihan sa mga estado ay ginawa ito), maaaring maging kwalipikado ang mga matandang walang anak kung sapat kababa ang kanilang kita. Sa mga estadong hindi nag-expand, mas mahigpit ang limitasyon sa kita para sa mga matandang walang anak. Suriin ang programa ng iyong estado para malaman kung kwalipikado ka.</p>
+
+    <h3>Mga Senior Citizen at Taong May Kapansanan</h3>
+    <p>Kung ikaw ay 65 taong gulang pataas, o tumatanggap ka ng bayad dahil sa kapansanan, maaari kang maging kwalipikado para sa Medicaid batay sa iyong kita at mga ari-arian (pera at mga bagay na pagmamay-ari mo). Ang bawat estado ay may sariling limitasyon. At tandaan: maaari kang magkaroon nang sabay ng Medicare at Medicaid.</p>
+
+    <h2>Sinasaklaw ng Medicaid ang mga Sumusunod na Serbisyo</h2>
+    <p>Sinasaklaw ng Medicaid ang mga pangunahing pangangailangan:</p>
+    <ul>
+      <li>Pangangalaga sa ospital (emergency at non-emergency na pananatili)</li>
+      <li>Mga pagbisita sa doktor (pangunahing pangangalaga, mga espesyalista)</li>
+      <li>Mga inireresetang gamot</li>
+      <li>Mga X-ray at pagsusuri sa laboratoryo</li>
+      <li>Paggamot sa kalusugan ng isip at pag-abuso sa substansiya</li>
+      <li>Preventive care (mga checkup, bakuna, screening)</li>
+    </ul>
+    <p><strong>Ngunit naiiba ang ilang serbisyo sa bawat estado.</strong> Ang pangangalaga sa ngipin, paningin, hearing aid, at pangmatagalang pangangalaga (nursing home o serbisyong Pangangalagang Pangkalusugan sa Tahanan) ay maaaring saklawin o hindi depende sa kung saan ka nakatira. Palaging suriin ang Medicaid program ng iyong estado para malaman kung ano ang kasama.</p>
+
+    <h2>Paano Mag-apply para sa Medicaid</h2>
+    <p>Libre ang pag-apply at karaniwang ilang minuto lang ang tatagal.</p>
+
+    <h3>Tatlong Paraan para Mag-apply</h3>
+    <ol class="steps">
+      <li><strong>Mag-apply nang direkta sa opisina ng Medicaid ng iyong estado.</strong> Pumunta sa <a href="/tl/state-medicaid.html">aming Direktoryo ng Medicaid sa Estado</a> para hanapin ang website at numero ng telepono ng iyong estado. Maaari kang mag-apply online, sa telepono, sa koreo, o nang personal.</li>
+      <li><strong>Mag-apply sa pamamagitan ng Healthcare.gov (ang pederal na Marketplace).</strong> Pumunta sa <a href="https://www.healthcare.gov/" rel="noopener">Healthcare.gov</a>, ilagay ang iyong ZIP code, at mag-apply. Awtomatikong ididirekta ka ng site sa Medicaid program ng iyong estado kung kwalipikado ka. Hindi mo na kailangang gumawa ng bagong account kung mayroon ka nang isa.</li>
+      <li><strong>Pumunta nang personal sa lokal na opisina ng mga benepisyo.</strong> Karamihan sa mga county ay may opisina ng social services o benepisyo kung saan maaari kang mag-apply nang harapan at makakuha ng tulong sa pagsagot ng mga form.</li>
+    </ol>
+
+    <h3>Ano ang Kakailanganin Mo para Mag-apply</h3>
+    <p>Ihanda ang mga sumusunod kapag nag-apply ka:</p>
+    <ul>
+      <li>Mga Social Security number ng lahat sa iyong sambahayan</li>
+      <li>Patunay ng kita (kamakailang mga pay stub, tax return, o sulat mula sa iyong employer)</li>
+      <li>Patunay ng kung saan ka nakatira (lease, utility bill, o mortgage statement)</li>
+      <li>Impormasyon tungkol sa anumang ibang saklaw sa kalusugan na mayroon ka</li>
+      <li>Impormasyon tungkol sa katayuan ng pagkamamamayan o imigrasyon</li>
+    </ul>
+
+    <h3>Mag-apply Anumang Oras (Walang Deadline)</h3>
+    <p>Hindi tulad ng Medicare, na may mga panahon ng pagpapatala, maaari kang mag-apply para sa Medicaid anumang oras. Walang deadline. Kung maaprubahan ka, karaniwang agad nagsisimula ang saklaw o sa unang araw ng susunod na buwan.</p>
+
+    <div class="note tip">
+      <strong>Kailangan ng tulong habang nag-aapply?</strong> Libre ito. Pumunta sa <a href="/tl/state-medicaid.html">opisina ng Medicaid ng iyong estado</a>, tumawag sa 1-800-MEDICARE (1-800-633-4227), o humanap ng lokal na navigator sa <a href="https://www.healthcare.gov/" rel="noopener">Healthcare.gov</a>. Ang mga serbisyong ito ay hindi nagbebenta ng anumang bagay — tumutulong lamang sila sa iyo na maunawaan ang iyong mga opsyon.
+    </div>
+
+    <h2>Ano ang Mangyayari Pagkatapos Mag-apply</h2>
+
+    <h3>Ang Sulat ng Desisyon</h3>
+    <p>Makakatanggap ka ng sulat na nagsasabi kung ikaw ay naaprubahan o tinanggihan. Kung naaprubahan, sasabihin nito kung kailan magsisimula ang iyong saklaw at kung anong plano ka napasama (kung gumagamit ang iyong estado ng managed care). <strong>Itago ang sulat na ito.</strong> Maaaring kailanganin mo itong ipakita sa mga doktor, botika, o iyong employer.</p>
+
+    <h3>Pagkuha ng Iyong Medicaid Card</h3>
+    <p>Kung naaprubahan, makakatanggap ka ng Medicaid card sa koreo. Ang card na ito ay may numero ng miyembro. Ang ilang estado ay agad na nagpapadala ng card; ang iba ay ilang linggo. Maaari kang gumamit ng pansamantalang numero para sa mga inireresetang gamot at appointment habang hinihintay mo ang pisikal na card.</p>
+
+    <h3>Pagpili ng Plano o Provider (Naiiba sa Bawat Estado)</h3>
+    <p>Sa maraming estado, sinasaklaw ka ng Medicaid sa pamamagitan ng managed-care plan (isang kumpanya ng seguro sa kalusugan na kasosyo ng Medicaid). Maaaring awtomatikong italaga sa iyo ng iyong estado ang isang plano, o maaari kang pumili. Maaaring kailanganin mo ring pumili ng Provider ng Pangunahing Pangangalaga. Suriin ang iyong sulat ng pag-apruba o tumawag sa opisina ng Medicaid ng iyong estado para malaman kung ano ang ginagawa ng iyong estado.</p>
+
+    <h3>Pag-uulat ng mga Pagbabago</h3>
+    <p>Mananatili ang iyong saklaw sa Medicaid hangga't ikaw ay kwalipikado pa rin. Ngunit kung magbago ang iyong sitwasyon — tumaas o bumaba ang iyong kita, lumipat ka ng tirahan, o nagbago ang laki ng iyong sambahayan — kailangan mo itong iulat sa Medicaid. Ang ilang pagbabago ay maaaring iulat anumang oras; ang iba ay may deadline. Iulat agad ang mga pagbabago para mapanatiling aktibo ang iyong saklaw.</p>
+
+    <h2>Pag-renew: Pagpapanatili ng Iyong Saklaw</h2>
+    <p>Hindi magtatagal magpakailanman ang iyong Medicaid. Hihingin sa iyo ng iyong estado nang regular (karaniwang isang beses sa isang taon) na kumpirmahin na kwalipikado ka pa rin. Ito ay tinatawag na renewal. Magpapadala sa iyo ang Medicaid ng mga papeles o hihilingin sa iyong i-update ang iyong impormasyon online. <strong>Dapat kang sumagot bago ang deadline na ibinigay nila, o matatapos ang iyong saklaw.</strong></p>
+    <p>Siguraduhing mayroon ang Medicaid ng iyong kasalukuyang address at numero ng telepono para hindi mo mapalampas ang abiso ng renewal. Kung nawala ang iyong saklaw dahil napalampas mo ang deadline, karaniwan mong maaaring mag-apply muli agad.</p>
+
+    <h2>Kung Tinanggihan Ka</h2>
+    <p>Kung tinanggihan ang iyong aplikasyon, makakatanggap ka ng sulat na nagpapaliwanag kung bakit. May karapatan kang mag-apela. Para mag-apela:</p>
+    <ol class="steps">
+      <li>Basahing mabuti ang sulat ng pagtanggi — sinasabi nito ang dahilan, ang deadline ng iyong apela, at eksaktong aling paraan ng apela ang naaangkop sa iyo.</li>
+      <li>Sundin ang paraan na nasa sulat. Kung tinanggihan ng managed-care plan ang pangangalaga, karaniwan kang mag-aapela muna sa plano. Kung tinanggihan ng estado ang iyong aplikasyon o saklaw, maaari kang humingi ng <strong>state fair hearing</strong> — isang pagsusuri ng taong hindi gumawa ng unang desisyon.</li>
+      <li>Itago ang mga kopya ng lahat at tandaan ang bawat deadline. Maaari kang humingi ng libreng tulong sa bawat hakbang.</li>
+    </ol>
+    <p>Dapat magpasya ang iyong estado sa iyong apela sa loob ng isang tiyak na yugto ng panahon. Para sa tulong, tumawag sa opisina ng Medicaid ng iyong estado o sa lokal na opisina ng legal-aid.</p>
+
+    <h2>Mga Managed Care Plan ng Medicaid</h2>
+    <p>Sa karamihan ng mga estado, nakukuha ng mga miyembro ng Medicaid ang saklaw sa pamamagitan ng managed-care plan. Ang plano ay kumikilos bilang tagapamagitan sa pagitan mo, ng mga doktor, at ng estado. Makakakuha ka ng ID card mula sa plano at maaaring kailanganin mong pumili ng Provider ng Pangunahing Pangangalaga. Ikinokoordina ng plano ang iyong pangangalaga at binabayaran ang mga doktor.</p>
+    <p>Maaaring magkaiba ang mga doktor, ospital, at listahan ng gamot ng iba't ibang plano. Kung gusto mong lumipat ng plano, karaniwan mong magagawa ito isang beses sa isang taon. Tanungin ang iyong estado tungkol sa Bukas na Pagpapatala o kung kailan ka maaaring gumawa ng mga pagbabago.</p>
+
+    <h2>Mayroon ka bang Parehong Medicare at Medicaid?</h2>
+    <p>Kung ikaw ay 65 taong gulang pataas, may kapansanan, o may end-stage kidney disease, maaari kang maging kwalipikado para sa pareho. Kapag mayroon ka ng pareho, ang Medicare ang iyong pangunahing seguro (ito ang unang nagbabayad), at pinupunan ng Medicaid ang mga puwang. Makakatulong ang Medicaid na bayaran ang iyong mga Premium ng Medicare at sinasaklaw ang mga serbisyong hindi sinasaklaw ng Medicare, tulad ng pangmatagalang pangangalaga.</p>
+    <p>May mga espesyal na opsyon ang mga taong May Doble na Pagiging Karapat-dapat. Tingnan ang <a href="/tl/dual-eligible.html">May Doble na Pagiging Karapat-dapat: Medicare at Medicaid</a> para sa mga detalye at programang maaari mong maging kwalipikado.</p>
+
+    <h2>Paghingi ng Tulong</h2>
+    <div class="grid">
+      <div class="card">
+        <h3><a href="/tl/state-medicaid.html">Opisina ng Medicaid ng Iyong Estado</a></h3>
+        <p>Makipag-ugnayan sa iyong estado nang direkta para sa mga patakaran sa pagiging kwalipikado, tulong sa pag-apply, at para iulat ang mga pagbabago.</p>
+      </div>
+      <div class="card">
+        <h3><a href="https://www.healthcare.gov/" rel="noopener">Healthcare.gov</a></h3>
+        <p>Mag-apply o alamin kung kwalipikado ka. Makakahanap ka rin ng mga lokal na navigator at counselor na tumutulong nang libre.</p>
+      </div>
+      <div class="card">
+        <h3><a href="/tl/medicaid-eligibility.html">Malalim na Pagsusuri sa Pagiging Kwalipikado sa Medicaid</a></h3>
+        <p>Matuto pa tungkol sa kung paano binibilang ang kita at ari-arian, pagkakaiba-iba ng estado, at pangmatagalang pangangalaga.</p>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>I-verify sa pinagmulan:</strong> Ang mga patakaran ng Medicaid ay kumplikado at naiiba sa bawat estado. Ang mga limitasyon sa kita, benepisyo, proseso ng pagpapatala, at mga kinakailangan sa renewal ay nag-iiba. Palaging suriin ang opisina ng Medicaid ng iyong estado o <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a> para sa pinakabagong impormasyon. Ang pahinang ito ay pangkalahatang impormasyong pang-edukasyon, hindi legal o payong pinansyal.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

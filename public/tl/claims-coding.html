@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanggunian sa mga Claim at Coding — MediPrimer</title>
+<meta name="description" content="Kung paano binubuo, kino-code, isinusumite, at pinoproseso ang mga claim sa pangangalagang pangkalusugan sa mga programang pangkalusugan ng gobyerno ng U.S.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/claims-coding.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Sanggunian sa mga Claim at Coding — MediPrimer">
+<meta property="og:description" content="Kung paano binubuo, kino-code, isinusumite, at pinoproseso ang mga claim sa pangangalagang pangkalusugan sa mga programang pangkalusugan ng gobyerno ng U.S.">
+<meta property="og:url" content="https://mediprimer.org/tl/claims-coding.html">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sanggunian sa mga Claim at Coding — MediPrimer">
+<meta name="twitter:description" content="Kung paano binubuo, kino-code, isinusumite, at pinoproseso ang mga claim sa pangangalagang pangkalusugan sa mga programang pangkalusugan ng gobyerno ng U.S.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Sanggunian sa mga Claim at Coding", "description": "Kung paano binubuo, kino-code, isinusumite, at pinoproseso ang mga claim sa pangangalagang pangkalusugan sa mga programang pangkalusugan ng gobyerno ng U.S.", "url": "https://mediprimer.org/tl/claims-coding.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-19", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/claims-coding.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/claims-coding.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/claims-coding.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/claims-coding.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/claims-coding.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/claims-coding.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/claims-coding.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Sanggunian sa mga Claim at Coding", "item": "https://mediprimer.org/tl/claims-coding.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/claims-coding.html" lang="en">English</a>
+    <a href="/es/claims-coding.html" lang="es">Español</a>
+    <a href="/zh-Hant/claims-coding.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/claims-coding.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/claims-coding.html" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop active">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Propesyonal</p>
+    <h1>Sanggunian sa mga Claim at Coding</h1>
+    <p>Isang praktikal na gabay kung paano binubuo, kino-code, isinusumite, at pinoproseso ang mga claim sa pangangalagang pangkalusugan sa seguro ng gobyerno at pribadong segurong pangkalusugan ng U.S.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Pangkalahatang-ideya</h2>
+    <p>Ang isang claim sa pangangalagang pangkalusugan ay kumakatawan sa isang kahilingan para sa bayad mula sa isang provider (doktor, ospital, laboratoryo, botika, o iba pang supplier) patungo sa isang nagbabayad (planong seguro o programa ng gobyerno). Idinodokumento ng claim kung anong serbisyo ang ibinigay, kanino, ng kanino, bakit (diagnosis), at magkano ang gastos. Ang tamang coding at pagsusumite ay mahalaga para sa napapanahong bayad at pagsunod sa mga alituntunin ng programa.</p>
+
+    <p>Ipinapaliwanag ng sanggunian na ito ang mga porma, hanay ng code, pamantayan, at daloy ng trabaho na namamahala sa mga claim sa Medicare, Medicaid, Medicare Advantage, at Marketplace. Mahigpit na kinokontrol at standardized ang proseso — ang mga paglihis ay maaaring magresulta sa pagtanggi, pagkaantala, o pagbawi ng sobrang bayad.</p>
+
+    <h2>Mga Porma ng Claim at Paraan ng Pagsusumite</h2>
+
+    <h3>Mga Propesyonal na Claim (CMS-1500)</h3>
+    <p>Ang porma na <strong>CMS-1500</strong> ay ang karaniwang claim na papel na ginagamit para sa mga serbisyo ng doktor sa opisina, outpatient na operasyon, diagnostics, at iba pang propesyonal na serbisyo. Bagaman bihira na ang mga claim na papel ngayon, ang istruktura ng CMS-1500 ay nananatiling batayan ng mga elektronikong propesyonal na claim. Sinasaklaw nito:</p>
+    <ul>
+      <li>Demograpiko ng pasyente at impormasyon ng seguro</li>
+      <li>Mga detalye ng provider at billing provider (NPI, taxonomy code)</li>
+      <li>Mga petsa ng serbisyo, lugar ng serbisyo (POS), at mga code ng pamamaraan (CPT/HCPCS)</li>
+      <li>Mga code ng diagnosis (ICD-10-CM) at mga indicator ng kondisyon</li>
+      <li>Mga Modifier (naglalarawan ng mga sitwasyong nakaaapekto sa coding o reimbursement)</li>
+      <li>Mga singil at yunit ng serbisyo</li>
+    </ul>
+
+    <h3>Mga Institutional na Claim (UB-04 at 837I)</h3>
+    <p>Ang <strong>UB-04</strong> (o CMS-1450) ay ang porma ng claim na papel para sa inpatient at outpatient ng ospital, Pasilidad ng Bihasang Pangangalaga ng Nurse (SNF), at mga serbisyo sa rehabilitasyon. Ang elektronikong bersyon ay ang transaksyong <strong>837I (Institutional)</strong>. Kasama sa mga pangunahing field ang:</p>
+    <ul>
+      <li>Mga petsa ng pagpasok at pag-alis</li>
+      <li>Katayuan ng pagpasok at pag-alis (hal., regular, paglipat, pangangalaga sa bahay)</li>
+      <li>Mga Revenue Code (para sa bawat departamento o linya ng serbisyo)</li>
+      <li>Mga condition code, occurrence code, at value code</li>
+      <li>Mga code ng diagnosis (ICD-10-CM) at mga code ng pamamaraan (ICD-10-PCS)</li>
+      <li>Mga singil na nakaayos ayon sa revenue center</li>
+    </ul>
+
+    <h3>Mga Claim sa Ngipin at Parmasya</h3>
+    <p>Gumagamit ang mga claim sa ngipin ng mga code na CDT (Code on Dental Procedures and Nomenclature) at kadalasang sumusunod sa pinasimpleng format. Karaniwang isinusumite ang mga claim sa parmasya nang elektroniko at real-time sa pamamagitan ng mga sistemang POS (Point of Sale) sa cash register ng botika, gamit ang National Drug Codes (NDC). Ang mga daloy na ito ay hiwalay sa mga propesyonal at institutional na landas.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Mga Hanay ng Code at ang Kanilang Layunin</h2>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Hanay ng Code</th>
+            <th>Ano Ito</th>
+            <th>Ginagamit Para Sa</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>ICD-10-CM</strong></td>
+            <td>International Classification of Diseases, 10th Revision, Clinical Modification. Humigit-kumulang 70,000 code ng diagnosis.</td>
+            <td>Pagdodokumento sa mga kondisyon, sintomas, at dahilan ng pagbisita ng pasyente. Kinakailangan sa lahat ng claim. Ang pangunahing diagnosis ay konektado sa Medikal na Kinakailangan. Ipinapaliwanag ng mga karagdagang diagnosis ang mga comorbidity o komplikasyon.</td>
+          </tr>
+          <tr>
+            <td><strong>CPT</strong></td>
+            <td>Current Procedural Terminology (pag-aari ng AMA). ~10,000 code para sa mga pamamaraan, serbisyo, at konsultasyon sa opisina/outpatient na setting.</td>
+            <td>Mga propesyonal na claim. Naglalarawan kung anong serbisyo ang isinagawa. Binabago taun-taon (Enero).</td>
+          </tr>
+          <tr>
+            <td><strong>HCPCS Level II</strong></td>
+            <td>Healthcare Common Procedure Coding System. ~3,000 alphanumeric na code (mga unang letrang J, E, G, K, atbp.) para sa Matibay na Kagamitang Medikal (DME), mga suplay, at mga serbisyong wala sa CPT.</td>
+            <td>Mga propesyonal na claim. Sinasaklaw ang DME (wheelchair, oxygen), mga orthotic, ilang gamot, at mga serbisyong itinuturing ng CMS na hindi karaniwan.</td>
+          </tr>
+          <tr>
+            <td><strong>ICD-10-PCS</strong></td>
+            <td>ICD-10 Procedure Coding System. ~72,000 code ng pamamaraan na ginagamit lamang sa institutional (inpatient) na setting.</td>
+            <td>Mga institutional na claim lamang. Naglalarawan ng mga pamamaraan at operasyon sa inpatient na isinagawa sa panahon ng pananatili sa ospital.</td>
+          </tr>
+          <tr>
+            <td><strong>Mga Revenue Code</strong></td>
+            <td>Apat na digit na code (hal., 0100 = silid at pagkain; 0340 = physical therapy) na ginagamit sa mga institutional na claim para ayusin ang mga singil ayon sa linya ng serbisyo.</td>
+            <td>Kinakailangan sa mga claim na UB-04/837I. Pinagsasama-sama ang mga singil at nagbibigay-daan sa nakatuong pagsusuri at pagpepresyo.</td>
+          </tr>
+          <tr>
+            <td><strong>NDC (National Drug Code)</strong></td>
+            <td>11-digit na identifier para sa bawat pormulasyon ng gamot, lakas, at sukat ng pakete.</td>
+            <td>Mga claim sa parmasya at listahan ng gamot sa mga institutional/propesyonal na claim kapag ang mga gamot ay sinisingil bilang suplay o ibinigay na serbisyo (hal., infusion center).</td>
+          </tr>
+          <tr>
+            <td><strong>Place of Service (POS)</strong></td>
+            <td>Dalawang-digit na code na nagpapahiwatig kung saan ibinigay ang serbisyo (hal., 11 = opisina, 21 = inpatient na ospital, 57 = ambulatory surgery center).</td>
+            <td>Mga propesyonal na claim. Nakaaapekto sa mga alituntunin ng coding, pahintulot sa billing, at rate ng reimbursement.</td>
+          </tr>
+          <tr>
+            <td><strong>Modifiers</strong></td>
+            <td>Mga alpabeto o numerikong suffix na idinaragdag sa mga code ng pamamaraan (hal., -25 = hiwalay na serbisyo; -59 = natatanging serbisyo; -RT = kanang bahagi; -LT = kaliwang bahagi).</td>
+            <td>Mga propesyonal na claim. Nililinaw ang mga sitwasyong nagbabago sa bundling, mga alituntunin ng billing, o reimbursement (hal., isang eksaminasyon at pamamaraan na isinagawa sa parehong araw).</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Mga Elektronikong Transaksyon at Pamantayan</h2>
+
+    <p>Karamihan sa mga claim ngayon ay isinusumite nang elektroniko sa pamamagitan ng mga clearinghouse, gamit ang mga karaniwang format ng transaksyon na itinakda ng HIPAA at CMS:</p>
+
+    <h3>Mga Transaksyon ng Claim at Bayad</h3>
+    <ul>
+      <li><strong>837-P (Propesyonal)</strong> — Elektronikong bersyon ng CMS-1500. Kasama ang datos ng diagnosis, pamamaraan, modifier, at singil.</li>
+      <li><strong>837-I (Institutional)</strong> — Elektronikong bersyon ng UB-04. Kasama ang mga revenue code, condition code, at mga field na tukoy sa inpatient.</li>
+      <li><strong>837-D (Ngipin)</strong> — Para sa mga claim sa ngipin at ortodontiko.</li>
+      <li><strong>835 (ERA – Electronic Remittance Advice)</strong> — Ang tugon ng nagbabayad; ipinapakita kung ano ang pinahintulutan, binayaran, tinanggihan, o inapela para sa bawat linya ng claim. Konektado sa isang Paliwanag ng mga Benepisyo (EOB).</li>
+    </ul>
+
+    <h3>Mga Transaksyon ng Pagiging Kwalipikado at Katayuan</h3>
+    <ul>
+      <li><strong>270/271</strong> — Real-time na pagtatanong sa pagiging kwalipikado (270) at tugon (271). Ginagamit bago o sa oras ng serbisyo upang i-verify ang saklaw ng pasyente, mga copay, deductible, at katayuan sa sariling bulsa.</li>
+      <li><strong>276/277</strong> — Pagtatanong sa katayuan ng claim (276) at tugon (277). Ginagamit upang subaybayan ang progreso ng adjudication ng isang nakabinbing claim.</li>
+    </ul>
+
+    <h3>Mga Clearinghouse</h3>
+    <p>Ang isang <strong>clearinghouse</strong> ay isang vendor na tumatanggap ng mga claim mula sa mga provider, nagpapatunay ng mga ito laban sa mga alituntunin ng CMS at tukoy sa nagbabayad, isinasalin ang mga ito sa mga karaniwang format ng HIPAA, at inihahatid ang mga ito sa tamang nagbabayad. Naghahatid din ang mga clearinghouse ng mga remittance pabalik sa mga provider. Tinitiyak nila na natutugunan ng mga claim ang mga teknikal na pamantayan bago makarating sa nagbabayad, na binabawasan ang mga rejection dahil sa mga error sa pag-format.</p>
+
+    <h2>Ang Ikot ng Buhay ng isang Malinis na Claim</h2>
+
+    <ol class="steps">
+      <li><strong>Pag-verify at Paunang Awtorisasyon</strong> — Sinusuri ng provider ang pagiging kwalipikado ng pasyente (270/271) at nagsusumite ng mga kahilingan para sa Paunang Awtorisasyon kung kinakailangan. Kinukumpirma ng hakbang na ito na saklaw ang serbisyo at itinatatag ang Medikal na Kinakailangan. Tingnan ang <a href="/tl/providers.html">Mga Provider at Billing</a> at <a href="/tl/operations.html">Mga Operasyon ng Planong Pangkalusugan</a> para sa mga detalye.</li>
+      <li><strong>Paghahatid ng Serbisyo at Dokumentasyon</strong> — Inihahatid ng provider ang serbisyo at idinodokumento ito sa medical record, na kinukuha ang diagnosis (bakit), pamamaraan (ano), petsa, oras, provider, at lugar ng serbisyo.</li>
+      <li><strong>Coding</strong> — Isinasalin ng medical coder ang dokumentasyon sa mga code na ICD-10-CM (diagnosis) at CPT/HCPCS (pamamaraan), naglalapat ng mga modifier kung kinakailangan, at nagtatalaga ng lugar ng serbisyo at billing provider.</li>
+      <li><strong>Pagbuo at Pagpapatunay ng Claim</strong> — Binubuo ng billing system ang 837-P o 837-I, nagsasagawa ng mga internal na pagsusuri (mga diagnosis na naka-link sa mga pamamaraan, angkop na mga modifier, makatwirang mga singil), at isinusumite sa clearinghouse o diretso sa nagbabayad.</li>
+      <li><strong>Pagpapatunay ng Clearinghouse</strong> — Sinusuri ng clearinghouse ang pagsunod sa HIPAA, mga kinakailangang field, at mga edit na tukoy sa nagbabayad. Tinatanggihan ang mga hindi wastong claim o ipinapasa ang mga wasto sa nagbabayad.</li>
+      <li><strong>Adjudication ng Nagbabayad</strong> — Sinusuri ng sistema ng nagbabayad ang pagiging kwalipikado sa oras ng serbisyo, inilalapat ang planong benepisyo ng pasyente, vine-verify ang pagsunod sa Paunang Awtorisasyon, sinusuri ang mga duplicate o senyales ng panloloko, at tinutukoy ang Pinapahintulutang Halaga. Nag-iiba-iba ang mga alituntunin ayon sa programa (Medicare, Medicaid, MA, Marketplace).</li>
+      <li><strong>Bayad at Remittance</strong> — Binabayaran ng nagbabayad ang provider (tseke o EFT), tinatanggihan ang claim, o humihiling ng karagdagang impormasyon. Ipinapadala ang remittance (835/ERA) sa provider at clearinghouse.</li>
+      <li><strong>Pag-post at Accounts Receivable</strong> — Ipinopost ng billing staff ng provider ang bayad sa account ng pasyente, kinikilala ang revenue, at ina-update ang mga aging report.</li>
+      <li><strong>Billing sa Pasyente</strong> — Sinisingil ng provider ang pasyente para sa anumang natitirang balanse (copay, coinsurance, deductible, o mga hindi saklaw na serbisyo).</li>
+    </ol>
+
+    <h2>Mga Karaniwang Dahilan ng Pagtanggi</h2>
+
+    <p>Tinatanggihan o binabawasan ang mga claim sa maraming kadahilanan. Kabilang sa mga karaniwang pattern ang:</p>
+
+    <ul>
+      <li><strong>Pagiging Kwalipikado</strong> — Hindi naka-enroll ang pasyente sa petsa ng serbisyo, o na-suspend ang saklaw dahil sa hindi pagbabayad.</li>
+      <li><strong>Kulang na Paunang Awtorisasyon</strong> — Nangangailangan ang serbisyo ng paunang pag-apruba, na hindi nakuha o nag-expire na.</li>
+      <li><strong>Error sa Coding</strong> — Hindi sinusuportahan ng code ng diagnosis ang pamamaraan (kawalan ng Medikal na Kinakailangan), o mali ang pagkakalink ng code ng pamamaraan sa lugar ng serbisyo.</li>
+      <li><strong>Paglabag sa Napapanahong Paghahain</strong> — Isinumite ang claim pagkatapos ng deadline (karaniwang 180 araw para sa Medicare; nag-iiba-iba ang mga programang Medicaid ng estado).</li>
+      <li><strong>Duplicate na Claim</strong> — May claim na para sa parehong petsa ng serbisyo at code na nabayaran na o nakabinbin pa.</li>
+      <li><strong>Koordinasyon ng mga Benepisyo (COB)</strong> — May ibang seguro ang pasyente; hindi wastong naisaalang-alang ang tugon ng pangunahing nagbabayad.</li>
+      <li><strong>Hindi Saklaw na Serbisyo</strong> — Hindi kasama ang serbisyo sa plano ng pasyente o hindi ito saklaw na benepisyo sa ilalim ng programa.</li>
+      <li><strong>Katayuan sa Network ng mga Provider</strong> — Wala sa network ang provider sa oras ng serbisyo, o natapos na ang kontrata sa network.</li>
+      <li><strong>Kulang o Hindi Wastong Impormasyon</strong> — Hindi kumpleto o hindi wasto ang mga kinakailangang field (NPI, lugar ng serbisyo, modifier, o ID ng pasyente).</li>
+    </ul>
+
+    <p>Kadalasang maaaring i-apela ang mga tinanggihang claim, lalo na kung nakabatay ang pagtanggi sa medikal na patakaran o dokumentasyon. Tingnan ang <a href="/tl/appeals-timelines.html">Mga Timeline ng Apela</a> para sa proseso at mga takdang panahon.</p>
+
+    <h2>Koneksyon sa Paunang Awtorisasyon at mga Apela ng Miyembro</h2>
+
+    <p>Hindi nag-iisa ang mga claim. Kadalasang kinakailangan ang Paunang Awtorisasyon (paunang pag-apruba ng isang serbisyo bago ito ibigay), at dapat isama ng claim ang numero ng awtorisasyon upang maiwasan ang pagtanggi. Kung tatanggihan ang isang claim, may karapatan ang pasyente na mag-apela. Maaaring i-apela ang mga desisyon sa saklaw batay sa hindi pagkakasundo sa medikal na patakaran, maling bayad, o maling pagtukoy sa pagiging kwalipikado — nag-iiba-iba ang proseso at mga takdang panahon ayon sa programa.</p>
+
+    <p>Para sa karagdagang impormasyon tungkol sa mga relasyong ito, tingnan ang:</p>
+    <ul>
+      <li><a href="/tl/providers.html">Mga Provider at Billing</a> — Proseso at mga kinakailangan ng Paunang Awtorisasyon</li>
+      <li><a href="/tl/operations.html">Mga Operasyon ng Planong Pangkalusugan</a> — Kung paano sinusuri at binabayaran ng mga plano ang mga claim</li>
+      <li><a href="/tl/appeals-timelines.html">Mga Timeline ng Apela</a> — Mga karapatan at deadline sa apela ng miyembro at provider</li>
+      <li><a href="/tl/risk-adjustment.html">Risk Adjustment</a> — Kung paano naaapektuhan ng coding ng diagnosis ang bayad ng plano at mga sukatan ng kalidad</li>
+    </ul>
+
+    <h2>Mga Pangunahing Punto</h2>
+
+    <ul>
+      <li>Ang mga claim ay structured at standardized na mga dokumento na dumadaan sa isang tiyak na daloy ng trabaho mula sa provider tungo sa clearinghouse tungo sa nagbabayad tungo sa bayad.</li>
+      <li>Ang katumpakan sa coding (ICD-10-CM, CPT, HCPCS, mga modifier) at ang pagiging kumpleto ng mga kinakailangang field ay kritikal upang maiwasan ang pagtanggi at pagkaantala.</li>
+      <li>Tinitiyak ng elektronikong pagsusumite sa pamamagitan ng mga format na pamantayan ng HIPAA (837-P, 837-I, 835) ang pagkakapare-pareho at nagbibigay-daan sa automated na adjudication.</li>
+      <li>Ang Paunang Awtorisasyon, pag-verify ng pagiging kwalipikado, at mga apela ay magkakaugnay sa proseso ng claim.</li>
+      <li>Inilalapat ng mga nagbabayad ang mga alituntuning tukoy sa programa (Medicare, Medicaid, MA, Marketplace) sa panahon ng adjudication; ang iisang format ng claim ay hindi nangangahulugang iisa ring alituntunin sa desisyon.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Beripikahin sa pinagmulan.</strong> Ipinapaliwanag ng pahinang ito kung paano gumagana ang mga claim at coding sa teorya. Nag-iiba-iba ang mga tiyak na alituntunin, timeline, at pamamaraan ng apela ayon sa nagbabayad, estado (para sa Medicaid), at programa. Kumonsulta sa mga tagubilin sa billing ng iyong nagbabayad, provider manual, at mga pamantayan sa pagsusumite ng claim ng HIPAA para sa kasalukuyang mga kinakailangan. Para sa mga tanong sa regulasyon, sumangguni sa CMS.gov at opisyal na gabay ng programa.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
