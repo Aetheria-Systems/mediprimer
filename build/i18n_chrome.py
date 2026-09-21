@@ -18,15 +18,42 @@ def _esc_attr(s):
     return s.replace("&", "&amp;").replace('"', "&quot;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+_PUB = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "public")
+_translated_pages = {}
+
+
+def _has_translation(code, page):
+    """True if public/<code>/<page> exists. Listing is cached per language."""
+    if code not in _translated_pages:
+        d = os.path.join(_PUB, code)
+        try:
+            _translated_pages[code] = set(os.listdir(d))
+        except OSError:
+            _translated_pages[code] = set()
+    return page in _translated_pages[code]
+
+
 def _prefix_href(href, code):
-    """Prefix internal href with language code if not English."""
+    """Prefix internal href with language code if not English.
+
+    A language launches at 90% completeness and the QA gates reject any page
+    whose translation drops or invents a fact, so a handful of pages legitimately
+    have no translation. Prefixing those anyway pointed every nav link at a file
+    that was never written: /ko/costs.html was linked from 126 Korean pages and
+    served a 404 (found 2026-09-21). Fall back to the English page instead —
+    a working English page beats a dead end, and update/validate.py now fails
+    the build if any dead link survives.
+    """
     if code == "en":
         return href
     if href.startswith("/"):
         # Home link: / → /es/
         if href == "/":
             return f"/{code}/"
-        # Other internal links: /foo.html → /es/foo.html
+        page = href.lstrip("/")
+        # Only fall back for real page links; leave asset paths alone.
+        if "/" not in page and page.endswith(".html") and not _has_translation(code, page):
+            return href
         return f"/{code}{href}"
     # External links: return as-is
     return href

@@ -1274,7 +1274,7 @@
     },
     "medicare-hospice-home-health.html": {
       "hash": "1798da343e011a3cac6239908ca999ad",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-immigrants.html": {
       "hash": "66cb5c509f368f9190b3be6139c40c94",
@@ -1286,7 +1286,7 @@
     },
     "medicare-medical-equipment-dme.html": {
       "hash": "631c1673a2a284706bdef5201f382790",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-mental-health.html": {
       "hash": "0df313d418a311cda3b190e23756ef70",
@@ -1322,7 +1322,7 @@
     },
     "medicare-telehealth.html": {
       "hash": "4e0881f75782308242d5008e7c93c37a",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-travel.html": {
       "hash": "62eb5a13630e8f48bf8099e1d11c00cc",
@@ -1330,11 +1330,11 @@
     },
     "medicare-vaccines.html": {
       "hash": "2322892559073b6b534ba429cac6e6a3",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-weight-loss-drugs.html": {
       "hash": "fab403b5009dcb8399264bd501943ff8",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-wellness-visit-vs-physical.html": {
       "hash": "75fe03a2d4d64e28700023127c6454f6",
@@ -1362,7 +1362,7 @@
     },
     "operations.html": {
       "hash": "a95876042fa50d48ab5d5de56feb0c6c",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "part-d-formulary-exception-appeal.html": {
       "hash": "e91c3f4c699a83f55967e64d197b3a98",
@@ -1410,7 +1410,7 @@
     },
     "ship-directory.html": {
       "hash": "d94695ed77701b95cae6a28ecc6447b8",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "site-map.html": {
       "hash": "0a7e9bbf24c59fc89342408f65fd76ce",
@@ -1490,7 +1490,7 @@
     },
     "medicare-card-replacement.html": {
       "hash": "3208bdac70fc7df95fa10019dd89b2d9",
-      "date": "2026-09-18"
+      "date": "2026-09-21"
     },
     "medicare-costs-2027.html": {
       "hash": "8a0a8d4d702953501edf7b81c6878621",
@@ -1559,6 +1559,10 @@
     "partner-materials.html": {
       "hash": "c55ba79ec6449b46a817eddb5a94cd27",
       "date": "2026-09-18"
+    },
+    "brokers.html": {
+      "hash": "553d94d8dfeb5afc62d6f33878280684",
+      "date": "2026-09-21"
     }
   },
   "ko": {
@@ -2065,6 +2069,14 @@
     "star-ratings.html": {
       "hash": "eb72f935cf5d483e6ca72964ce28290d",
       "date": "2026-09-19"
+    },
+    "insurance-departments.html": {
+      "hash": "d63e4b19ecab3ecc6e87082245dee19b",
+      "date": "2026-09-21"
+    },
+    "costs.html": {
+      "hash": "c48e93891cf5ac933b263ae330ea5e54",
+      "date": "2026-09-21"
     }
   },
   "tl": {
