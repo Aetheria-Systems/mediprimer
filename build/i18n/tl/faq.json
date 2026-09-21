@@ -1,0 +1,46 @@
+{
+ "turning-65.html": [
+  [
+   "Kailan ako puwedeng magpatala sa Medicare?",
+   "Ang inyong Initial Enrollment Period ay isang 7 buwang bintana sa paligid ng inyong ika-65 kaarawan: ang 3 buwan bago ang buwan ng inyong kaarawan, ang buwan ng inyong kaarawan, at ang 3 buwan pagkatapos. Ang pagpapatala sa loob ng bintanang ito ay nakaiiwas sa mga multa dahil sa huling pagpapatala."
+  ],
+  [
+   "Kailangan ko ba kumuha ng Medicare sa edad na 65 kahit nagtatrabaho pa ako?",
+   "Hindi laging kailangan. Kung mayroon kayong saklaw mula sa kasalukuyang employer na may 20 o higit pang empleyado, maaari ninyong maipagpaliban ang Part B nang walang multa. Ang saklaw ng retiradong empleyado, COBRA, at mga benepisyo ng VA ay hindi ligtas na dahilan para maipagpaliban ang Part B."
+  ],
+  [
+   "Family plan ba ang Medicare?",
+   "Hindi. Indibidwal ang Medicare. Kayo at ang inyong asawa ay bawat isa ay may sariling Medicare batay sa inyo-inyong takdang panahon."
+  ]
+ ],
+ "choosing-coverage.html": [
+  [
+   "Ano ang pagkakaiba ng Orihinal na Medicare at Medicare Advantage?",
+   "Pareho silang sumasaklaw sa parehong pangunahing mga benepisyo. Sa Orihinal na Medicare, puwede kayong magpatingin sa kahit sinong provider na tumatanggap ng Medicare, nang kaunti lamang na paunang pag-apruba. Gumagamit naman ang Medicare Advantage ng network at prior authorization, ngunit kadalasang may dagdag na benepisyo at taunang limitasyon sa gastos mula sa sariling bulsa."
+  ],
+  [
+   "Puwede ba akong lumipat pabalik sa Orihinal na Medicare mula sa Medicare Advantage sa hinaharap?",
+   "Puwede kayong lumipat sa mga takdang panahon, ngunit ang pagbili ng Medigap pagkatapos nito ay maaaring mangailangan ng medical underwriting, at maaari kayong tanggihan. Ang 'isang-daan lamang' na katangiang ito ang pinakamahalagang isaalang-alang bago pumili."
+  ]
+ ],
+ "planning-for-two.html": [
+  [
+   "Sinasaklaw ba ng Medicare ang aking asawa?",
+   "Hindi. Walang family o spouse coverage ang Medicare. Ang bawat asawa ay may sariling Medicare sa kani-kanilang ika-65 kaarawan, nagbabayad ng sariling premium, at pumipili ng sariling plano. Kailangan ng ibang saklaw ng mas batang asawa hanggang magsimula ang kanilang sariling Medicare."
+  ],
+  [
+   "Naaapektuhan ba ng kita ng aking asawa ang aking premium sa Medicare?",
+   "Maaaring oo. Kung magkasamang nagsasampa ng buwis, ginagamit ng Social Security ang inyong kombinadong kita mula dalawang taon na ang nakalipas upang itakda ang income surcharge (IRMAA) sa premium ng Part B at Part D ng bawat asawa. Kung bumaba ang inyong kita pagkatapos mag-retiro, puwede ninyong hilingin sa Social Security na ibaba ito gamit ang form na SSA-44."
+  ]
+ ],
+ "veterans-medicare.html": [
+  [
+   "Kung may pangangalagang pangkalusugan ako mula sa VA, kailangan ko pa rin ba ang Medicare Part B?",
+   "Ang pangangalagang pangkalusugan ng VA ay hindi nagpapahintulot sa inyo na maipagpaliban ang Part B nang walang habambuhay na multa, at ang Part B ang sumasaklaw sa pangangalagang labas sa VA. Maraming beterano ang nagpapatala sa Part B sa edad na 65 upang mapanatili ang opsyong iyon; may ilan namang sadyang nilalaktawan ito. Magpasya nang sinasadya sa panahon ng inyong enrollment window."
+  ],
+  [
+   "Puwede ko bang gamitin ang parmasya ng VA sa halip ng Medicare Part D?",
+   "Oo. Ang saklaw sa gamot ng VA ay itinuturing na creditable coverage, kaya karaniwang puwede ninyong laktawan ang Part D nang walang multa habang ginagamit ninyo ang parmasya ng VA."
+  ]
+ ]
+}

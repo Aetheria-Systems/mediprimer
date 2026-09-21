@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paglalakbay ng Miyembro — MediPrimer</title>
+<meta name="description" content="Kung paano dumadaan ang isang miyembro sa managed care: pagpapatala, ID card, pagpili ng pangunahing pangangalaga, pagtanggap ng pangangalaga, mga claim, at mga apela.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/member-journey.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Paglalakbay ng Miyembro — MediPrimer">
+<meta property="og:description" content="Kung paano dumadaan ang isang miyembro sa managed care: pagpapatala, ID card, pagpili ng pangunahing pangangalaga, pagtanggap ng pangangalaga, mga claim, at mga apela.">
+<meta property="og:url" content="https://mediprimer.org/tl/member-journey.html">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Paglalakbay ng Miyembro — MediPrimer">
+<meta name="twitter:description" content="Kung paano dumadaan ang isang miyembro sa managed care: pagpapatala, ID card, pagpili ng pangunahing pangangalaga, pagtanggap ng pangangalaga, mga claim, at mga apela.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Paglalakbay ng Miyembro", "description": "Kung paano dumadaan ang isang miyembro sa managed care: pagpapatala, ID card, pagpili ng pangunahing pangangalaga, pagtanggap ng pangangalaga, mga claim, at mga apela.", "url": "https://mediprimer.org/tl/member-journey.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/member-journey.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/member-journey.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/member-journey.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/member-journey.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/member-journey.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/member-journey.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/member-journey.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Paglalakbay ng Miyembro", "item": "https://mediprimer.org/tl/member-journey.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/member-journey.html" lang="en">English</a>
+    <a href="/es/member-journey.html" lang="es">Español</a>
+    <a href="/zh-Hant/member-journey.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/member-journey.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/member-journey.html" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <h1>Ang Paglalakbay ng Miyembro</h1>
+    <p>Kung paano dumadaan ang isang tao mula sa pagpapatala hanggang sa pangangalaga at, kung kinakailangan, sa mga apela.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+<h2>Pangkalahatang-ideya</h2>
+<p>Ang iyong paglalakbay sa isang planong managed care ay sumusunod sa isang malinaw na landas. Nagiging kwalipikado ka, nagpapatala, nakukuha ang iyong ID card, pumipili ng Provider ng Pangunahing Pangangalaga, naghahanap ng pangangalaga, tumatanggap ng paliwanag sa bayarin, at—kung kinakailangan—naghahain ng karaingan o apela. Ang pag-unawa sa bawat yugto ay tumutulong sa iyo na malaman kung ano ang aasahan at ma-navigate ang iyong mga benepisyo.</p>
+
+<h2>Pagiging Karapat-dapat at Pagpapatala</h2>
+<p>Upang sumali sa isang plano, dapat ka munang maging kwalipikado. Ang mga patakaran ay depende sa kung anong programa ka kabilang:</p>
+<ul>
+<li><strong>Medicare:</strong> Karaniwang nagsisimula sa edad na 65, o mas maaga kung may kapansanan ka o end-stage renal disease. Karaniwan kang nagpapatala sa panahon ng iyong <em>Paunang Panahon ng Pagpapatala</em> (IEP). Sa ibang pagkakataon, maaari kang magpatala sa taunang <em>Panahon ng Pagpapatala</em> o sa <em>Espesyal na Panahon ng Pagpapatala</em> kapag may naganap na kwalipikadong pangyayari sa buhay.</li>
+<li><strong>Medicaid:</strong> Nakabatay sa kita, laki ng pamilya, pagkamamamayan, at kung saan ka nakatira. Bukas ang pagpapatala sa Medicaid sa buong taon sa karamihan ng mga estado. Maaari kang maging kwalipikado anumang oras basta't matugunan mo ang mga patakaran. May mga estadong may mga kinakailangan sa trabaho o iba pang kondisyon.</li>
+<li><strong>Mga plano sa Marketplace:</strong> Available sa panahon ng taunang <em>Bukas na Pagpapatala</em> at Espesyal na Panahon ng Pagpapatala (kapag nawalan ka ng trabaho, lumipat, nanganak, ikinasal, atbp.).</li>
+</ul>
+<p>Kapag nagpatala ka, pumipili ka ng partikular na plano mula sa iyong programa at lokasyon. Nagkakaiba ang mga plano sa gastos, network, at kung ano ang saklaw nila. Ikumpara ang mga plano bago magpatala. Para sa eksaktong mga petsa at deadline, bisitahin ang <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>, o ang website ng Medicaid ng iyong estado.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+<h2>Ang Member ID Card at Pagsisimula</h2>
+<p>Pagkatapos kang magpatala, ipapadala ng iyong plano ang isang ID card. Naglalaman ito ng mahahalagang impormasyon:</p>
+<ul>
+<li>Pangalan ng miyembro at numero ng ID</li>
+<li>Numero ng grupo (kung naaangkop)</li>
+<li>Petsa ng pagsisimula ng saklaw</li>
+<li>Numero ng telepono ng customer service</li>
+<li>Mga halaga ng copay para sa mga pagbisita sa opisina, serbisyong pang-emergency, at iba pang serbisyo</li>
+<li>Deductible at pinakamataas na limitasyon mula sa sariling bulsa (kung naaangkop)</li>
+</ul>
+<p>Dalhin ang iyong ID card kapag humihingi ka ng pangangalaga. Maraming plano ang may online portal. Maaari mong tingnan ang mga dokumento ng plano, suriin ang mga claim, hanapin ang mga provider na nasa network, at pamahalaan ang mga benepisyo. Karaniwang tumatanggap ang mga bagong miyembro ng welcome packet at maaaring makipag-ugnayan sa iyo ang plano para tulungan kang magsimula. Ito ay pagkakataon para suriin ang iyong pagiging karapat-dapat at magtanong tungkol sa saklaw.</p>
+
+<h2>Pagpili ng Provider ng Pangunahing Pangangalaga</h2>
+<p>Sa maraming planong managed care—lalo na sa mga HMO at planong Medicaid—kailangan mong pumili ng Provider ng Pangunahing Pangangalaga (PCP). Ang PCP ay karaniwang isang doktor ng pamilya o internist na siyang iyong pangunahing kontak sa pangangalagang pangkalusugan.</p>
+<p><strong>Papel ng PCP:</strong> Pinamamahalaan ng iyong PCP ang iyong kabuuang kalusugan, ikinokoordina ang pangangalaga kasama ng mga espesyalista, nagre-refer sa iyo sa mga espesyalista kung kinakailangan, at tumutulong maiwasan ang duplicate na mga serbisyo. Ang koordinasyong ito ay nagpapanatili ng mataas na kalidad ng pangangalaga at makatwirang gastos.</p>
+<p><strong>Paano pumili:</strong> Sa pagpapatala, makakakuha ka ng listahan ng mga PCP na nasa network at pipili ka ng isa. Maaaring awtomatikong italaga ng plano ang isang PCP kung hindi ka pipili. Karaniwan mong mapapalitan ang PCP sa ilang partikular na panahon—sa taunang pag-renew, sa panahon ng bukas na pagpapatala, o kapag lumipat ka. Para makahanap ng PCP na nasa network, maghanap sa direktoryo ng provider ng plano online, tumawag sa customer service ng plano, o itanong sa iyong gustong doktor kung kasapi sila sa iyong plano.</p>
+<p>Ang ilang plano (PPO, indemnity) ay hindi nangangailangan ng PCP. Maaari kang magpatingin sa anumang provider na nasa network nang walang referral. Tingnan ang <a href="/tl/plan-types.html">Mga Uri ng Plano</a> para sa mga detalye.</p>
+
+<h2>Pagtanggap ng Pangangalaga</h2>
+<p>Kapag napili mo na (o naitalaga sa iyo) ang isang PCP, maaari ka nang magsimulang humingi ng pangangalaga. Narito ang dapat mong malaman:</p>
+
+<h3>Nasa Network kumpara sa Wala sa Network</h3>
+<p>May mga network ang mga plano ng mga doktor, ospital, botika, at iba pang provider. Sumasang-ayon silang alagaan ang mga miyembro ng plano sa nakatakdang mga presyo. Ang paggamit ng mga provider na nasa network ay karaniwang mas mura—mas mababang copay o coinsurance (ang iyong bahagi ng bayarin). Ang pangangalaga na wala sa network ay maaaring magastos nang mas malaki o—sa ilang plano—maaaring hindi saklaw maliban sa mga emergency. Tingnan kung ang isang provider ay nasa iyong network sa pamamagitan ng paghahanap sa online na direktoryo ng plano o pagtawag sa customer service.</p>
+
+<h3>Mga Referral at Paunang Awtorisasyon</h3>
+<p>Sa mga planong managed care, ang ilang serbisyo ay nangangailangan ng referral mula sa iyong PCP bago ka magpatingin sa isang espesyalista o kumuha ng isang serbisyo. Ang ibang mga serbisyo ay nangangailangan ng paunang awtorisasyon—dapat aprubahan ito ng plano bago ka makatanggap ng pangangalaga. Ang paunang awtorisasyon ay tumutulong sa plano na kumpirmahin na ang serbisyo ay medikal na kinakailangan at saklaw. Tingnan ang <a href="/tl/operations.html">Mga Operasyon</a> para sa mga detalye kung paano ginagawa ng plano ang mga desisyong ito.</p>
+
+<h3>Botika at Pormularyo</h3>
+<p>Nagpapanatili ang mga plano ng pormularyo—isang listahan ng mga saklaw na inireresetang gamot na may iba't ibang antas ng gastos. Halimbawa, ang mga generic na gamot ay maaaring may mas mababang copay kaysa sa mga brand-name na gamot. Hilingin sa iyong doktor na magreseta ng mga gamot na nasa pormularyo kung maaari, o humiling ng eksepsiyon kung kailangan mo ng gamot na wala sa pormularyo. Maraming plano ang nagbibigay-daan sa iyong tingnan ang pormularyo online o kumuha ng nakalimbag na kopya.</p>
+
+<h2>Mga Claim at Paliwanag ng mga Benepisyo</h2>
+<p>Pagkatapos kang makatanggap ng pangangalaga, magpapadala ang iyong provider ng claim sa iyong plano. Sinusuri ng plano kung ikaw ay kwalipikado, ang provider ay nasa network, at ang serbisyo ay saklaw. Kung tama ang lahat, babayaran ng plano ang kanilang bahagi at magpapadala sa iyo ng Paliwanag ng mga Benepisyo (EOB).</p>
+
+<h3>Pagbabahagi ng Gastos</h3>
+<p>Ipinapakita ng EOB kung magkano ang utang mo. Gumagamit ang mga plano ng tatlong pangunahing kasangkapan sa pagbabahagi ng gastos:</p>
+<ul>
+<li><strong>Copayment:</strong> Isang nakatakdang halaga na babayaran mo para sa isang pagbisita o serbisyo—halimbawa, $25 para sa isang pagbisita sa opisina.</li>
+<li><strong>Coinsurance:</strong> Isang porsyento ng gastos na babayaran mo pagkatapos matugunan ang deductible—halimbawa, 20% ng bayarin sa ospital.</li>
+<li><strong>Deductible (Nababawas):</strong> Ang pinakamababang halaga na dapat mong bayaran mula sa sariling bulsa bago magbayad ang plano. Kapag nabayaran mo na ang deductible, karaniwan kang magbabayad ng copay o coinsurance.</li>
+</ul>
+<p>Nagtatakda rin ang mga plano ng pinakamataas na limitasyon mula sa sariling bulsa—isang taunang limitasyon sa kung magkano ang babayaran mo. Kapag naabot mo na ang limitasyong ito, babayaran ng plano ang 100% para sa mga saklaw na serbisyo sa natitirang bahagi ng taon.</p>
+
+<h2>Mga Karaingan at Apela</h2>
+<p>May karapatan kang maghain ng karaingan o apela. Ang karaingan ay isang reklamo tungkol sa plano, network ng provider, o serbisyo. Hinahamon ng apela ang isang partikular na desisyon sa saklaw o bayad. Magkaiba ang mga prosesong ito:</p>
+
+<h3>Mga Karaingan</h3>
+<p>Maghain ng karaingan kapag may reklamo ka ngunit hindi mo hinahamon ang isang partikular na pagtanggi sa saklaw. Mga halimbawa: hindi ka masaya sa access sa provider, kalidad ng pangangalaga, o komunikasyon ng plano. Karaniwang may 30 araw ang plano para tumugon nang nakasulat.</p>
+
+<h3>Mga Apela</h3>
+<p>Maghain ng apela para hamunin ang isang partikular na desisyon ng plano—tulad ng pagtanggi sa saklaw, bahagyang bayad sa claim, o pagtanggi na aprubahan ang paunang awtorisasyon. May maraming antas ang mga apela:</p>
+<ul>
+<li><strong>Antas 1 (Internal na Apela):</strong> Hihilingin mo sa plano na muling pag-isipan. Susuriin ng ibang reviewer ang iyong kaso. Karaniwang tumatagal ito ng 30 araw; ang mga urgent na kaso ay maaaring tumagal ng 72 oras.</li>
+<li><strong>Antas 2 (External na Pagsusuri):</strong> Kung hindi ka sang-ayon sa Antas 1, maaari kang humiling ng independiyenteng pagsusuri ng isang ikatlong partido na hindi kawani ng iyong plano. Sinusuri ng reviewer ang isyu at gumagawa ng nagbubuklod na desisyon.</li>
+</ul>
+<p>Maaari mo ring ma-access ang mga proseso ng karaingan at apela sa antas ng estado at mga programa ng ombudsman. Para sa mga detalye, tingnan ang <a href="/tl/operations.html">Mga Operasyon</a> o makipag-ugnayan sa opisina ng insurance commissioner ng iyong estado o ahensya ng Medicaid ng estado.</p>
+
+<h2>Ang Paglalakbay sa Isang Sulyap</h2>
+<div class="table-scroll">
+<table>
+<thead>
+<tr>
+<th>Yugto</th>
+<th>Ano ang Nangyayari</th>
+<th>Sino ang Kasangkot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pagiging Karapat-dapat at Pagpapatala</td>
+<td>Nagiging kwalipikado ang tao para sa isang programa (Medicare, Medicaid, Marketplace) at pumipili ng plano sa panahon ng pagpapatala.</td>
+<td>Miyembro, plano, administrator ng programa (Mga Sentro para sa mga Serbisyo ng Medicare at Medicaid (CMS), ahensya ng estado, atbp.)</td>
+</tr>
+<tr>
+<td>Nagsisimula ang Saklaw</td>
+<td>Naglalabas ang plano ng ID card ng miyembro at mga welcome material; nagse-set up ang miyembro ng online portal kung nais.</td>
+<td>Plano, miyembro</td>
+</tr>
+<tr>
+<td>Pagpili ng PCP</td>
+<td>Pumipili o naitalaga sa miyembro ang isang provider ng pangunahing pangangalaga (kung kinakailangan ng uri ng plano).</td>
+<td>Miyembro, plano, PCP</td>
+</tr>
+<tr>
+<td>Paghingi ng Pangangalaga</td>
+<td>Nakikipag-ugnayan ang miyembro sa PCP para sa regular na pangangalaga; kumukuha ng mga referral o paunang awtorisasyon para sa mga espesyalista o ilang serbisyo.</td>
+<td>Miyembro, PCP, mga espesyalista kung kinakailangan</td>
+</tr>
+<tr>
+<td>Pagtanggap ng Serbisyo</td>
+<td>Nagbibigay ang provider ng pangangalaga, kinukumpirma ang pagiging karapat-dapat at saklaw ng miyembro sa oras ng pagbisita, kinokolekta ang copay o deductible kung kailangan.</td>
+<td>Miyembro, provider, plano</td>
+</tr>
+<tr>
+<td>Pagsusumite ng Claim</td>
+<td>Nagsusumite ang provider ng claim sa plano; tinitiyak ng plano ang pagiging karapat-dapat, saklaw, at status ng network.</td>
+<td>Provider, plano</td>
+</tr>
+<tr>
+<td>EOB at Bayad</td>
+<td>Binabayaran ng plano ang kanilang bahagi; tumatanggap ang miyembro ng EOB na nagpapakita ng copay/coinsurance na dapat bayaran at bayad ng plano.</td>
+<td>Plano, miyembro, provider</td>
+</tr>
+<tr>
+<td>Karaingan o Apela (kung kinakailangan)</td>
+<td>Nakikipag-ugnayan ang miyembro sa plano kung may reklamo, tanong, o nais hamunin ang isang desisyon; tumutugon ang plano sa loob ng itinakdang panahon.</td>
+<td>Miyembro, plano, external reviewer kung ni-escalate</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="note">
+<h3>Mahahalagang Pagkakaiba</h3>
+<p><strong>Ang mga petsa ng pagpapatala, gastos, takdang panahon ng apela, at network ng provider ay nagkakaiba depende sa programa, plano, estado, at indibidwal na plano.</strong> Laging suriin ang iyong opisyal na mga dokumento ng plano, Buod ng mga Benepisyo at Saklaw (SBC), o tumawag sa plano para kumpirmahin ang mga partikular na detalye. Magkaiba ang mga patakaran ng Medicare, Medicaid, at Marketplace; makipag-ugnayan sa <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, ahensya ng Medicaid ng iyong estado, o <a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a> para sa mga detalye. Kung may alinlangan, tanungin nang direkta ang iyong plano o healthcare provider—mayroon silang tumpak at personalisadong impormasyon para sa iyo.</p>
+</div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

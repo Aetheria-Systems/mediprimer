@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patakaran sa Privacy — MediPrimer</title>
+<meta name="description" content="Ang patakaran sa privacy ng MediPrimer: walang account, walang mga form na nangongolekta ng personal na impormasyon, walang pagbebenta ng data. Gumagamit kami ng Google Analytics para malaman kung aling mga pahina ang nakakatulong sa mga tao.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Patakaran sa Privacy — MediPrimer">
+<meta property="og:description" content="Ang patakaran sa privacy ng MediPrimer: walang account, walang mga form na nangongolekta ng personal na impormasyon, walang pagbebenta ng data. Gumagamit kami ng Google Analytics para malaman kung aling mga pahina ang nakakatulong sa mga tao.">
+<meta property="og:url" content="https://mediprimer.org/tl/privacy.html">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Patakaran sa Privacy — MediPrimer">
+<meta name="twitter:description" content="Ang patakaran sa privacy ng MediPrimer: walang account, walang mga form na nangongolekta ng personal na impormasyon, walang pagbebenta ng data. Gumagamit kami ng Google Analytics para malaman kung aling mga pahina ang nakakatulong sa mga tao.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Patakaran sa Privacy", "description": "Ang patakaran sa privacy ng MediPrimer: walang account, walang mga form na nangongolekta ng personal na impormasyon, walang pagbebenta ng data. Gumagamit kami ng Google Analytics para malaman kung aling mga pahina ang nakakatulong sa mga tao.", "url": "https://mediprimer.org/tl/privacy.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/privacy.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/privacy.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/privacy.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/privacy.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/privacy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/privacy.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/privacy.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Patakaran sa Privacy", "item": "https://mediprimer.org/tl/privacy.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/privacy.html" lang="en">English</a>
+    <a href="/es/privacy.html" lang="es">Español</a>
+    <a href="/zh-Hant/privacy.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/privacy.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/privacy.html" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Legal</p>
+    <h1>Patakaran sa Privacy</h1>
+    <p>Kung paano hinahawakan ng site na ito ang impormasyon. Sa madaling salita: kokonti lang ang kinokolekta nito at wala itong ibinebentang anuman.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p><em>Huling na-update: Hulyo 13, 2026.</em></p>
+
+    <div class="note info">
+      <strong>Sa simpleng salita:</strong> Ang MediPrimer ay isang educational na site na para lang basahin. Walang mga account, walang pagpapatala, at walang mga form na humihingi ng iyong personal o pangkalusugang impormasyon. Hindi kami nagbebenta ng data. Gumagamit kami ng Google Analytics para makita kung aling mga pahina ang binabasa ng mga tao, para mapabuti namin ang site.
+    </div>
+
+    <h2>Impormasyong hindi namin kinokolekta</h2>
+    <p>Hindi ka namin hinihiling na gumawa ng account o mag-log in. Wala kaming mga contact form, survey, o aplikasyon na nangongolekta ng iyong pangalan, mga detalye ng contact, impormasyong pangkalusugan, mga numero ng Medicare o Medicaid, o iba pang personal na impormasyon. Mangyaring huwag magpadala sa amin ng sensitibong personal o pangkalusugang impormasyon; walang secure na channel dito para tanggapin ito, at dapat mo lang ibahagi ang mga detalyeng ito sa iyong plano o sa naaangkop na opisyal na ahensya.</p>
+
+    <h2>Impormasyong awtomatikong nakokolekta</h2>
+    <p>Tulad ng halos lahat ng website, awtomatikong nirerecord ng aming web server ang karaniwang teknikal na impormasyon kapag bumisita ka — tulad ng iyong IP address, uri ng browser, mga pahinang hiniling mo, at ang petsa at oras. Ginagamit lang ang impormasyong ito upang patakbuhin ang site, panatilihin itong secure, sirain ang mga problema, at maunawaan ang pangkalahatang paggamit. Hindi ito ginagamit upang tukuyin ka nang personal at hindi ito pinagsasama sa anumang profile na pang-marketing.</p>
+
+    <h2>Mga cookie at pagsubaybay</h2>
+    <p>Gumagamit kami ng Google Analytics para maunawaan kung paano ginagamit ang site. Nirerecord nito ang mga pahinang tinitingnan mo, kung paano ka dumating, ang tinatayang lokasyon mo (antas ng lungsod), at pangkalahatang impormasyon ng device at browser. Pinoproseso ng Google ang datos na ito para sa amin; pinatay namin ang mga feature ng ads personalization. Ginagamit lang namin ito upang malaman kung aling content ang nakakatulong sa mga tao at upang pahusayin ang site.</p>
+    <p>Nirerecord din ng Analytics ang paggamit ng mga tool sa pahina, tulad ng mga glossary search at ang Medicare navigator, para makita namin kung aling mga tool ang kapaki-pakinabang. Naglalarawan ang mga signal na ito ng kung paano ginagamit ang mga tool; hindi ito nakatali sa iyong pagkakakilanlan.</p>
+    <p>Kung mas gusto mong hindi mabilang, maaari mong i-install ang libreng <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">Analytics opt-out browser add-on</a> ng Google, o gumamit ng browser o extension na humaharang sa analytics. Gumagana pa rin nang lubusan ang site sa alinman sa dalawa.</p>
+
+    <h2>Ang MediBot chat feature (limitadong pagsubok)</h2>
+    <p>Kung gagamitin mo ang opsyonal na chat widget, ipinapadala ang tekstong ini-type mo sa aming server at pagkatapos ay sa Anthropic (ang kompanyang gumawa ng Claude, ang AI model na sumusulat ng mga sagot) upang makabuo ito ng tugon. Hindi namin iniimbak ang iyong mga tanong o ang usapan kahit saan sa amin. Hindi namin independiyenteng na-verify ang sariling mga kasanayan sa pag-iimbak ng datos ng Anthropic para sa API na ito lampas sa kanilang inilalathala — tingnan ang <a href="https://www.anthropic.com/legal/privacy" rel="noopener">patakaran sa privacy ng Anthropic</a> bago magbahagi ng anumang sensitibo, at mangyaring huwag maglagay ng personal o pangkalusugang detalye sa chat kahit anuman ang mangyari. Ang feature na ito ay kasalukuyang limitado sa internal na pagsubok at hindi bahagi ng normal na karanasan sa site.</p>
+
+    <h2>Paano ginagamit at ibinabahagi ang impormasyon</h2>
+    <p>Hindi namin ibinebenta, ibinabahagi para sa upa, o ipinagpapalit ang anumang impormasyon. Maaaring ibahagi ang karaniwang mga log ng server sa aming mga provider ng hosting o seguridad lang kung kinakailangan upang patakbuhin at protektahan ang site, o kung hinihiling ng batas. Ang datos ng Analytics ay pinoproseso ng Google gaya ng inilarawan sa itaas. Hindi namin ibinabahagi ang impormasyon sa mga advertiser o data broker.</p>
+
+    <h2>Mga third-party na website</h2>
+    <p>Ang site na ito ay naglilink sa mga third-party na website, kabilang ang mga site ng gobyerno. Sa sandaling sundan mo ang isang link, sasailalim ka sa sariling mga kasanayan sa privacy ng site na iyon, na hindi namin kontrolado. Hinihikayat namin kayong suriin ang patakaran sa privacy ng anumang site na binibisita ninyo.</p>
+
+    <h2>Privacy ng mga bata</h2>
+    <p>Ang site na ito ay nilayon para sa pangkalahatang adult audience at hindi nakadirekta sa mga batang wala pang 13 taong gulang. Hindi namin sinasadyang kinokolekta ang personal na impormasyon mula sa mga bata.</p>
+
+    <h2>Ang iyong mga pagpipilian</h2>
+    <p>Dahil hindi kami nangongolekta ng personal na impormasyon sa pamamagitan ng site, walang anumang kailangan mong i-update o i-delete sa amin. Maaari mong kontrolin ang mga cookie at data sa pagba-browse sa pamamagitan ng mga setting ng iyong sariling browser, i-block ang analytics gamit ang opt-out add-on sa itaas, at ihinto ang paggamit ng site anumang oras.</p>
+
+    <h2>Mga pagbabago sa patakarang ito</h2>
+    <p>Maaari naming i-update ang Patakaran sa Privacy na ito paminsan-minsan. Ang mga makabuluhang pagbabago ay makikita rito na may na-update na petsa ng "huling na-update". Ang iyong patuloy na paggamit ng site pagkatapos magkabisa ang mga pagbabago ay bumubuo ng pagtanggap sa binagong patakaran.</p>
+
+    <div class="note">
+      <strong>Kaugnay:</strong> tingnan ang aming <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a> at <a href="/tl/disclaimer.html">Disclaimer</a> para sa mga tuntunin at limitasyon na namamahala sa paggamit ng site na ito.
+    </div>
+  </div>
+</main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

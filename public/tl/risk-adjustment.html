@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pagsasaayos sa Panganib at HCC Coding — MediPrimer</title>
+<meta name="description" content="Kung paano isinasaayos ng Medicare Advantage at iba pang mga planong nagdadala ng panganib ang bayad batay sa katayuang pangkalusugan ng miyembro sa pamamagitan ng diagnosis coding at risk score.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/risk-adjustment.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Pagsasaayos sa Panganib at HCC Coding — MediPrimer">
+<meta property="og:description" content="Kung paano isinasaayos ng Medicare Advantage at iba pang mga planong nagdadala ng panganib ang bayad batay sa katayuang pangkalusugan ng miyembro sa pamamagitan ng diagnosis coding at risk score.">
+<meta property="og:url" content="https://mediprimer.org/tl/risk-adjustment.html">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Pagsasaayos sa Panganib at HCC Coding — MediPrimer">
+<meta name="twitter:description" content="Kung paano isinasaayos ng Medicare Advantage at iba pang mga planong nagdadala ng panganib ang bayad batay sa katayuang pangkalusugan ng miyembro sa pamamagitan ng diagnosis coding at risk score.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Pagsasaayos sa Panganib at HCC Coding", "description": "Kung paano isinasaayos ng Medicare Advantage at iba pang mga planong nagdadala ng panganib ang bayad batay sa katayuang pangkalusugan ng miyembro sa pamamagitan ng diagnosis coding at risk score.", "url": "https://mediprimer.org/tl/risk-adjustment.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/risk-adjustment.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/risk-adjustment.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/risk-adjustment.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/risk-adjustment.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/risk-adjustment.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Pagsasaayos sa Panganib at HCC Coding", "item": "https://mediprimer.org/tl/risk-adjustment.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/risk-adjustment.html" lang="en">English</a>
+    <a href="/es/risk-adjustment.html" lang="es">Español</a>
+    <a href="/zh-Hant/risk-adjustment.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/risk-adjustment.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/risk-adjustment.html" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop active">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Propesyonal</p>
+    <h1>Pagsasaayos sa Panganib at HCC Coding</h1>
+    <p>Kung paano binabayaran ang mga plano batay sa katayuang pangkalusugan ng kanilang mga miyembro, at ang papel ng tumpak na dokumentasyon ng diagnosis.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>Ang Layunin ng Pagsasaayos sa Panganib</h2>
+    <p>Ang risk adjustment ay isang mekanismo ng pagbabayad na tumutugon sa isang pangunahing hamon sa capitated insurance: kung babayaran ang mga plano ng parehong halaga anuman ang kalusugan ng miyembro, may insentibong pinansyal sila na iwasan ang pagpapatala o pagpapanatili ng mas may-sakit na mga miyembro. Pinipigilan ito ng risk adjustment sa pamamagitan ng pagtaas ng bayad sa plano para sa mga miyembrong may malalang karamdaman at komplikadong pangangailangang medikal.</p>
+    <p>Sa <a href="/tl/medicare-advantage.html">Medicare Advantage</a>, mga <a href="/tl/marketplace.html">plano sa ACA Marketplace</a>, at mga programa ng pinamamahalaang pangangalaga ng Medicaid, ang Kapitasyon ay nangangahulugang tumatanggap ang plano ng nakapirming bayad bawat miyembro kada buwan, at tinatanggap nito ang buong panganib pinansyal para sa pangangalaga ng miyembrong iyon. Kung walang pagsasaayos, ang nakapirming bayad na iyon ay hindi sasapat para sakupin ang gastos ng mas may-sakit na populasyon—gayunpaman maaari pa ring kumita ang mga plano sa pamamagitan lamang ng pag-akit sa pinakamalusog na mga enrollee. Iniiba ng risk adjustment ang bayad tungo sa pangangailangang medikal, na lumilikha ng patas na larangan ng laro sa pagbabayad.</p>
+
+    <h2>Ang Modelo ng CMS-HCC: Mula sa Diagnosis Patungo sa Risk Score</h2>
+    <p>Ginagamit ng Mga Sentro para sa mga Serbisyo ng Medicare at Medicaid (CMS) ang <strong>Hierarchical Condition Category (HCC) model</strong> upang sukatin ang katayuang pangkalusugan ng miyembro at kalkulahin ang <strong>Risk Adjustment Factor (RAF) score</strong>. Narito kung paano ito gumagana:</p>
+    <ol class="steps">
+      <li><strong>Pagkolekta ng diagnosis.</strong> Nagsusumite ang mga provider ng mga claim at rekord ng engkwentro na naglalaman ng mga ICD-10 diagnosis code para sa bawat miyembro sa loob ng taon ng benepisyo (karaniwang calendar year para sa Medicare Advantage).
+      <li><strong>Pagmamapa sa HCC.</strong> Ina-map ng CMS ang mga diagnosis code na iyon sa mga HCC—mga klinikal na makabuluhang pangkat na humuhula ng mga gastos sa pangangalagang pangkalusugan sa hinaharap. Ang isang diagnosis code ay maaaring mag-map sa isang HCC; maaaring mag-map ang maraming code sa parehong HCC.
+      <li><strong>Inilalapat ang mga hierarchy.</strong> Ipinapatupad ng modelo ang mga hierarchy: kung ang isang miyembro ay may parehong mas magaan at mas malalang anyo ng isang kondisyon, ang mas malalang HCC lamang ang bibilangin. Halimbawa, ang isang mas magaang diagnosis ng diabetes na walang komplikasyon ay isasama sa isang mas malalang diagnosis ng diabetes na may komplikasyon kung parehong naroroon ang mga ito; ang mas malalang HCC lamang ang bibilangin. (Ang mga partikular na numero ng HCC ay muling itinatalaga tuwing rekalibrahin ng CMS ang modelo, kaya inilalarawan ng pahinang ito ang konsepto sa halip na itali ito sa mga partikular na ID ng bersyon.)
+      <li><strong>Kalkulasyon ng RAF.</strong> Nagtatalaga ang CMS ng risk weight sa bawat naaangkop na HCC (hal., ang pagpalya ng puso ay maaaring may weight na 0.45, ibig sabihin dinadagdagan nito ng 45% ang batayang bayad ng miyembro). Ang RAF ay ang kabuuan ng lahat ng naaangkop na weight kasama ang isang demographic factor. Ang RAF na 1.0 ay kumakatawan sa karaniwang panganib; 0.8 ay 20% na mas mababa sa karaniwan; 1.2 ay 20% na mas mataas sa karaniwan.
+      <li><strong>Pagsasaayos sa bayad.</strong> Pinararami ang bayad na Kapitasyon ng plano sa RAF. Ang miyembrong may RAF na 1.2 ay lumilikha ng 20% na mas mataas na bayad kumpara sa miyembrong may RAF na 1.0, na sumasalamin sa mas mataas na inaasahang gastos.
+    </ol>
+    <p>Rekalibrahin taun-taon ng CMS ang modelong HCC batay sa datos ng claims at engkwentro, at ang mga diagnosis code na nakuha ang nagtutulak sa RAF. Kaya naman, ang tumpak at napapanahong pagkuha ng mga diagnosis ay sentro sa naaangkop na bayad at kakayahang manatili ng plano.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Dokumentasyon at Pagsunod: MEAT/TAMPER sa Antas ng Konsepto</h2>
+    <p>Upang matiyak na tumpak ang HCC coding, sumusunod ang mga provider at plano sa mga pamantayan sa dokumentasyon na kadalasang pinaikli bilang MEAT (para sa dokumentasyon ng klinisyan) at TAMPER (para sa pag-verify ng auditor at plano). Bagaman mga checklist ang mga acronym na ito, simple ang pangunahing prinsipyo:</p>
+    <ul>
+      <li><strong>Suporta ng medikal na rekord.</strong> Ang bawat diagnosis na na-code ay dapat malinaw na naidokumento sa medikal na rekord ng miyembro—mga tala ng pagbisita, resulta ng pagsusuri, ulat ng imaging, listahan ng gamot, o buod ng assessment—na ginawa ng provider na naggamot sa panahon o kaagad pagkatapos ng klinikal na engkwentro.
+      <li><strong>Espesipisidad.</strong> Dapat suportahan ng dokumentasyon ang pinaka-espesipiko at tumpak na diagnosis. Mahalaga ang espesipisidad dahil ang mas espesipikong diagnosis ay kadalasang mas tumpak na nagma-map sa mga HCC. Halimbawa, mas espesipiko ang "Type 2 diabetes na may stage 2 na malalang sakit sa bato" at maaaring mag-map sa ibang HCC kaysa sa "diabetes na hindi tinukoy."
+      <li><strong>Oras ng engkwentro.</strong> Ang diagnosis ay dapat naidokumento sa loob ng taon ng benepisyo na pinag-uusapan. Ang diagnosis na naidokumento noong Enero 5, 2024, ay bibilangin para sa bayad ng 2024; ang naidokumento noong Enero 2, 2025, ay bibilangin para sa 2025. Kinukuha ng datos ng engkwentro (mga claim at harapang pagbisita) ang mga diagnosis na ito.
+      <li><strong>Klinikal na bisa.</strong> Dapat sumasalamin ang coding sa aktwal na katayuang klinikal ng miyembro. Ang diagnosis ay dapat aktibong pinamamahalaan, nabanggit sa assessment o plano, o suportado ng obhetibong natuklasan—hindi lamang nakalista nang haka-haka o mula sa nakaraang kasaysayan lamang.
+    </ul>
+    <p>Ang datos ng engkwentro—kapwa mga claim (institutional at professional) at karagdagang dokumentasyon—ang nagpapakain sa modelong HCC. Ang tumpak na mga engkwentro ay nagsisiguro ng tumpak na mga HCC at naaangkop na kalkulasyon ng RAF.</p>
+
+    <h2>Mga Modelo ng Pagbabayad at Taunang Reconciliation</h2>
+    <p>Kinakalkula ng CMS ang mga RAF score at tinutukoy ang mga bayad sa plano nang maaga, batay sa mga diagnosis na nakuha sa mga claim noong nakaraang taon. Halimbawa, ang mga diagnosis na isinumite noong 2023 ay nagbibigay-impormasyon sa bayad ng 2024. Sa loob ng taon ng benepisyo, patuloy na nagdodokumento ang mga plano at provider; ang mga diagnosis na ito ng 2024 ay magbibigay-impormasyon sa bayad ng 2025.</p>
+    <p>Lumilikha ang estrukturang ito ng ilang mahalagang dinamiko:</p>
+    <ul>
+      <li><strong>Pagkaantala at reconciliation.</strong> Tumatanggap ang mga plano ng prospective na bayad batay sa mga profile ng panganib noong nakaraang taon, pagkatapos ay nagsusumite ng datos ng engkwentro ng kasalukuyang taon na alam nilang makakaapekto sa bayad ng mga susunod na taon. Maaaring i-reconcile ng CMS ang mga bayad noong nakaraang taon kung ang mga pag-audit sa datos ay nagpapakita ng mga error sa coding.
+      <li><strong>Pagkakahanay ng insentibo at panganib.</strong> Ang tumpak at kumpletong pagkuha ng mga diagnosis ay nakikinabang sa parehong plano (sa pamamagitan ng naaangkop na RAF) at mga provider (sa pamamagitan ng bayad na sumasalamin sa aktwal na pagkakumplikado ng kaso). Ang mga plano at provider ay may magkatugmang insentibo upang matiyak na ang mga diagnosis ay naidokumento nang lubusan at tumpak sa bawat engkwentro.
+      <li><strong>Kompletong pagkuha ng engkwentro.</strong> Hindi lahat ng engkwentro ay nakukuha sa mga claim. Maaaring dagdagan ng mga plano ang karagdagang dokumentasyon ng pagbisita upang ipakita ang buong larawang klinikal. Nakikilala ng CMS ang pagkakaiba ng mga claim at karagdagang engkwentro; parehong nagpapakain sa mga modelong HCC para sa ilang programa.
+    </ul>
+
+    <h2>Mga RADV Audit at Panganib sa Pagsunod</h2>
+    <p><strong>Risk Adjustment Data Validation (RADV) audits</strong> ay mga pana-panahong pagsusuri sa pagsunod na isinasagawa ng CMS, mga ahensya ng estado, o kontratadong auditor. Sa isang RADV audit, random na sumasampol ang mga auditor ng isang subset ng mga medikal na rekord ng mga miyembro para sa isang partikular na taon ng benepisyo at ini-verify na ang mga diagnosis na isinumite para sa HCC coding ay talagang suportado ng medikal na rekord at naidokumento ayon sa mga klinikal na pamantayan.</p>
+    <p>Maaaring matukoy ng mga RADV audit ang ilang uri ng natuklasan:</p>
+    <ul>
+      <li><strong>Mga hindi suportadong diagnosis:</strong> Na-code ang isang diagnosis ngunit walang klinikal na ebidensya ng kondisyong iyon ang ipinapakita ng medikal na rekord.
+      <li><strong>Mga maling tinukoy na diagnosis:</strong> Nagamit ang maling ICD-10 code, o nagamit ang hindi gaanong espesipikong code kung saan kinakailangan ang mas espesipikong code.
+      <li><strong>Mga depekto sa oras o dokumentasyon:</strong> Naitala ang diagnosis ngunit hindi sa panahon ng aktwal na engkwentro sa taon ng benepisyo, o masyadong malabo ang dokumentasyon para suportahan ang klinikal na konklusyon.
+      <li><strong>Mga tagapagpahiwatig ng panloloko:</strong> Mga pattern na nagpapahiwatig ng sadya o sistematikong overcoding, tulad ng magkaparehong diagnosis na lumalabas sa maraming miyembro na walang klinikal na batayan.
+    </ul>
+    <p>Kung ipinapakita ng mga natuklasan ng RADV ang sistematikong error o overcoding, maaaring isaayos ng CMS ang bayad ng plano nang retroactive o magpataw ng mga parusa. Kaya naman namumuhunan ang mga plano sa <strong>concurrent coding audits</strong> at <strong>encounter capture programs</strong> upang matukoy at itama ang mga error bago ang panlabas na audit, at sa <strong>pagsasanay ng provider</strong> upang matiyak ang tumpak na mga kasanayan sa dokumentasyon. Tingnan ang <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran</a> para sa kasalukuyang mga inisyatiba ng CMS RADV.</p>
+
+    <h2>Ang Etikal na Linya: Espesipisidad Laban sa Upcoding</h2>
+    <p>Maaaring nuanced ang hangganan sa pagitan ng tumpak na coding at hindi wastong upcoding. Narito kung paano ito nina-nabigate ng mga organisasyong may malay sa pagsunod:</p>
+    <ul>
+      <li><strong>Angkop:</strong> Nagdodokumento ang isang provider ng "Type 2 diabetes na may chronic kidney disease stage 2" batay sa kasalukuyang mga lab at klinikal na assessment; pinipili ng coder ang partikular na HCC na sumasalamin sa naidokumentong katayuang ito. Sinusuportahan ng medikal na rekord ang espesipisidad na inaangkin.
+      <li><strong>Angkop:</strong> Natukoy ng isang plano na maraming engkwentro ang nagdodokumento ng diagnosis sa assessment ngunit hindi sa field ng na-code na diagnosis, at sistematikong idinadagdag ang mga nawawalang naidokumentong diagnosis sa rekord ng engkwentro, na sinusuportahan ng kontemporaneong dokumentasyong klinikal ng provider.
+      <li><strong>Mapag-aalinlanganan:</strong> Sistematikong nagko-code ang isang provider ng mga diagnosis sa pinakamataas na antas ng severity (hal., palaging pinipili ang mga variant na "may komplikasyon") nang walang malinaw na dokumentasyong klinikal na sumusuporta sa antas ng severity.
+      <li><strong>Hindi wasto:</strong> Nagpapasya ang isang coder ng diagnosis na hindi naidokumento ng provider, o nagtatalaga ng diagnosis na naidokumento lamang sa nakaraang kasaysayan nang walang aktibong ebidensyang pinamamahalaan ito sa kasalukuyang taon.
+    </ul>
+    <p>Nilinaw ng regulatory guidance at mga kaso sa korte na dapat sumasalamin ang coding sa kasalukuyan, aktibong pinamamahalaang mga diagnosis na suportado ng medikal na rekord. Inaasahan ang espesipisidad at naaangkop na mga hierarchy; hindi inaasahan ang sistematikong pagpapataas nang walang batayang klinikal. Ang mga plano at provider ay gumagana sa ilalim ng isang postura ng pagsunod na nagbibigay-diin sa katumpakan at transparency sa mga auditor, sa halip na pag-maximize ng RAF.</p>
+
+    <h2>Pagsasaayos sa Panganib sa Ibang mga Programa</h2>
+    <p>Ginagamit ng <strong>Medicare Advantage</strong> ang modelong HCC gaya ng inilarawan sa itaas. Ang CMS-HCC bersyon 28 (at umuunlad na mga bersyon) ay naaangkop.</p>
+    <p>Gumagamit din ang <strong>mga plano sa ACA Marketplace</strong> ng mekanismo ng pagsasaayos sa panganib, na pinondohan sa pamamagitan ng programang risk-adjustment ng ACA. Ang mga plano na may mas maysakit-sa-karaniwang mga enrollee ay tumatanggap ng mga paglilipat mula sa sentral na programa; ang mga plano na may mas malusog-sa-karaniwang mga enrollee ay nag-aambag dito. Bahagyang naiiba ang modelo at pagmamapa ng HCC kumpara sa Medicare Advantage ngunit naglilingkod sa parehong layunin: pantay-pantayin ang larangan ng bayad sa buong panganib sa kalusugan.</p>
+    <p>Nag-iiba-iba ang pagsasaayos sa panganib ng <strong>pinamamahalaang pangangalaga ng Medicaid</strong> depende sa estado at programa. Gumagamit ang ilang estado ng mga modelong batay sa HCC; gumagamit ang iba ng mas simpleng demographic factor o kategoryang batay sa kondisyon. Tinutukoy ng mga ahensya ng Medicaid ng estado ang metodolohiya ng risk-adjustment sa kanilang mga kontrata sa managed-care.</p>
+    <p>Ang <strong>mga komersyal na plano</strong> ay hindi napapailalim sa parehong balangkas ng risk-adjustment ng CMS, bagaman gumagamit ang mga insurer ng sarili nilang panloob na mga modelo ng panganib para sa pagpepresyo at pamamahala ng populasyon.</p>
+
+    <h2>Mga Kaugnay na Paksa</h2>
+    <p>Nagsasalubong ang risk adjustment sa ilang function na propesyonal. Tingnan din:</p>
+    <ul>
+      <li><a href="/tl/operations.html">Mga Operasyon ng Health-Plan</a> — Kung paano inaayos ng mga plano ang kanilang mga function na klinikal at pinansyal.
+      <li><a href="/tl/providers.html">Mga Provider at Billing</a> — Kung paano nagsusumite ang mga provider ng mga engkwentro at claim.
+      <li><a href="/tl/star-ratings.html">Mga Rating na Bituin at Pagsukat ng Kalidad</a> — Mga kaugnay na sukatan ng CMS at ang kanilang mga pinagmulan ng datos.
+      <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">Programang CMS RADV</a> — Opisyal na balangkas na regulasyon at mga proseso ng audit.
+    </ul>
+
+    <h2>Glossary</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Termino</th>
+            <th>Kahulugan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>HCC (Hierarchical Condition Category)</strong></td>
+            <td>Isang klinikal na makabuluhang pagpapangkat ng mga diagnosis na ginagamit ng CMS upang sukatin ang katayuang pangkalusugan at hulaan ang mga gastos. Bawat HCC ay may nakatalagang risk weight.</td>
+          </tr>
+          <tr>
+            <td><strong>RAF (Risk Adjustment Factor)</strong></td>
+            <td>Ang indibidwal na risk score ng miyembro, na kinakalkula bilang kabuuan ng mga naaangkop na weight ng HCC kasama ang mga demographic factor. Ang RAF &gt; 1.0 ay nagpapahiwatig ng panganib na higit sa karaniwan; ang RAF &lt; 1.0 ay nagpapahiwatig ng panganib na mas mababa sa karaniwan. Ginagamit upang isaayos ang bayad na Kapitasyon ng plano.</td>
+          </tr>
+          <tr>
+            <td><strong>RADV (Risk Adjustment Data Validation)</strong></td>
+            <td>Prosesong pag-audit na inaatas ng CMS na nagpapatunay ng katumpakan ng mga diagnosis na isinumite ng mga plano para sa HCC coding at bayad. Sinusuri ng mga auditor ang mga medikal na rekord upang kumpirmahin na naidokumento at klinikal na suportado ang mga diagnosis.</td>
+          </tr>
+          <tr>
+            <td><strong>MEAT</strong></td>
+            <td>Acronym para sa mga pamantayan sa dokumentasyon: <strong>M</strong>edikal na suporta ng rekord, <strong>E</strong>ngkwentrong petsa sa loob ng taon ng benepisyo, <strong>A</strong>ktibong pamamahala, <strong>T</strong>iyak na paggamot/espesipisidad. Ginagamit ng mga provider ang MEAT bilang gabay para sa tumpak na dokumentasyong klinikal.</td>
+          </tr>
+          <tr>
+            <td><strong>TAMPER</strong></td>
+            <td>Acronym para sa mga pamantayan sa pag-audit: <strong>T</strong>amang panahon (engkwentro sa taon ng benepisyo), <strong>A</strong>ngkop na pagpili ng code, <strong>M</strong>edikal na suporta ng rekord, <strong>P</strong>agpapatupad ng wastong hierarchy, <strong>E</strong>balwasyon ng uri ng engkwentro, <strong>R</strong>asonableng batayan ng diagnosis. Ginagamit ng mga auditor ang TAMPER upang masuri ang bisa ng coding.</td>
+          </tr>
+          <tr>
+            <td><strong>Datos ng Engkwentro</strong></td>
+            <td>Mga claim at rekord na klinikal na isinumite ng mga provider na nagdodokumento ng mga pagbisita, serbisyo, diagnosis, at pamamaraan para sa isang miyembro. Nagpapakain ang datos ng engkwentro sa modelong HCC.</td>
+          </tr>
+          <tr>
+            <td><strong>Kapitasyon</strong></td>
+            <td>Isang nakapirming bayad kada miyembro kada buwan na ginagawa sa isang plano anuman ang mga serbisyong ginamit. Ang plano ang may pananagutan pinansyal para sa lahat ng saklaw na serbisyo. Binabago ng risk adjustment ang Kapitasyon batay sa katayuang pangkalusugan ng miyembro.</td>
+          </tr>
+          <tr>
+            <td><strong>Hierarkiya</strong></td>
+            <td>Sa mga modelong HCC, isang panuntunan na kung kwalipikado ang isang miyembro para sa maraming HCC na may kaugnayan sa parehong kondisyon, ang pinakamalala lamang ang bibilangin. Pinipigilan ng mga hierarchy ang double-counting at tinitiyak ang katumpakan ng HCC.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note">
+      <strong>I-verify sa pinagmulan:</strong> Inilalarawan ng pahinang ito kung paano gumagana ang risk adjustment sa malawakang paraan. Para sa kasalukuyang mga bersyon ng modelong HCC, mga detalye ng kalkulasyon ng RAF, mga proseso ng RADV, at gabay sa pagsunod, sumangguni sa <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov (RADV)</a>, mga patakaran sa pagsunod ng iyong plano, at mga regulasyon sa managed-care ng iyong estado. Ang nilalamang ito ay pang-edukasyon at hindi bumubuo ng legal o payo sa pagsunod.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediPrimer — Simpleng Gabay sa Medicare at Medicaid</title>
+<meta name="description" content="Simpleng tulong tungkol sa Medicare, Medicaid, at Medicare Advantage para sa mga miyembro at tagapag-alaga — plus isang gumaganang sanggunian para sa mga propesyonal.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="MediPrimer — Simpleng Gabay sa Medicare at Medicaid">
+<meta property="og:description" content="Simpleng tulong tungkol sa Medicare, Medicaid, at Medicare Advantage para sa mga miyembro at tagapag-alaga — plus isang gumaganang sanggunian para sa mga propesyonal.">
+<meta property="og:url" content="https://mediprimer.org/tl/">
+<meta property="og:locale" content="tl_PH">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MediPrimer — Simpleng Gabay sa Medicare at Medicaid">
+<meta name="twitter:description" content="Simpleng tulong tungkol sa Medicare, Medicaid, at Medicare Advantage para sa mga miyembro at tagapag-alaga — plus isang gumaganang sanggunian para sa mga propesyonal.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "MediPrimer", "url": "https://mediprimer.org/", "description": "Independent, plain-language educational resource on Medicare, Medicaid, and managed care. Not affiliated with any agency or insurer."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://mediprimer.org/glossary.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "MediPrimer — Simpleng Gabay sa Medicare at Medicaid", "description": "Simpleng tulong tungkol sa Medicare, Medicaid, at Medicare Advantage para sa mga miyembro at tagapag-alaga — plus isang gumaganang sanggunian para sa mga propesyonal.", "url": "https://mediprimer.org/tl/", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-09-20", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/">
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Language: English"><span class="lang-switch-current">English</span> ▾</button>
+    <div class="dropdown">
+    <a href="/" lang="en">English</a>
+    <a href="/es/" lang="es">Español</a>
+    <a href="/zh-Hant/" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/" lang="vi">Tiếng Việt</a>
+    <a href="/ko/" lang="ko">한국어</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop active">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <h1>Unawain ang Medicare, Medicaid, at pinamamahalaang pangangalaga</h1>
+    <p>Simpleng paliwanag kung paano talaga gumagana ang pinondohan ng gobyerno at subsidized na saklaw sa kalusugan — para sa mga taong umaasa dito, sa mga tumutulong sa kanila, at sa mga nagtatrabaho rito.</p>
+  </div>
+</section>
+
+<div class="wrap">
+<!--hot-topics-->
+    <section class="hot-topics" aria-label="Nangyayari ngayon">
+      <h2>Nangyayari ngayon</h2>
+      <div class="grid">
+      <a class="card hot-topic" href="/tl/medicare-annual-notice-of-change.html">
+        <h3>May sulat na dumating na nagsasabing magbabago ang plano mo next year?</h3>
+        <p>Iyon ang iyong Taunang Abiso ng Pagbabago. Ano ang dapat tingnan bago ang fall enrollment.</p>
+      </a>
+      <a class="card hot-topic" href="/tl/medicare-open-enrollment-2027.html">
+        <h3>Magsisimula ang fall open enrollment sa Oktubre 15.</h3>
+        <p>Ano ang maaari mong baguhin, at paano maghanda ngayon.</p>
+      </a>
+      <a class="card hot-topic" href="/tl/medicare-weight-loss-drugs.html">
+        <h3>Sinasaklaw na ngayon ng Medicare ang ilang gamot sa pagbaba ng timbang — bago this year.</h3>
+        <p>Wegovy at Zepbound sa $50 kada buwan, kung kwalipikado ka. Tingnan ang mga patakaran.</p>
+      </a>
+      </div>
+    </section>
+    <!--/hot-topics-->
+</div>
+
+
+<main>
+  <div class="wrap">
+    <p class="lead">Ang pinondohan-ng-gobyerno na saklaw sa kalusugan ay isang komplikadong sistema ng mga programa, deadline, at akronim. Inaayos ito ng MediPrimer sa malinaw, tapat na materyal na sanggunian. Hindi kami nagbebenta ng insurance, hindi kami kaugnay ng anumang ahensya o plano, at walang pahina rito ang nag-uudyok sa iyo patungo sa isang partikular na produkto — ipinapaliwanag lang namin kung paano ito gumagana para makapag-desisyon ka nang may kumpiyansa.</p>
+
+    <h2>Magsimula rito</h2>
+    <p>Karamihan sa mga tao ay pumupunta rito para maunawaan ang <em>sarili nilang</em> saklaw. Kung ikaw iyon, magsimula sa isa sa mga ito:</p>
+    <div class="routes">
+      <a class="route members" href="/tl/turning-65.html">
+        <span class="kicker">Bago sa Medicare</span>
+        <h3>Malapit na akong mag-65</h3>
+        <p>Isang simpleng gabay na inaakalang wala kang alam at hahakbangin ka nang paisa-isa patungo sa mga partikular na desisyon mo. Mga beterano, mga taong nagtatrabaho pa, at sinumang tumutulong sa asawa ay makakakuha ng landas na angkop.</p>
+      </a>
+      <a class="route members" href="/tl/turning-65.html#planning-ahead">
+        <span class="kicker">Pagpaplano nang Maaga</span>
+        <h3>Nasa unang bahagi ako ng 60s at nagpaplano nang maaga</h3>
+        <p>Hindi pa 65? Mabuti — mahalaga ang mga taon bago iyon. Ano ang dapat ihanda sa edad 62, 63, at 64 para hindi ka biglain ng mga tunay na deadline.</p>
+      </a>
+      <a class="route members" href="/tl/planning-for-two.html">
+        <span class="kicker">Mga Mag-asawa</span>
+        <h3>Nagpaplano ako para sa akin at sa asawa ko</h3>
+        <p>Walang family plan ang Medicare — dalawang premium, dalawang timeline. Ano talaga ang binabayaran ng isang mag-asawa, at ano ang nangyayari kapag mas maaga nag-retire ang isa.</p>
+      </a>
+      <a class="route members" href="/tl/retiring-losing-coverage.html">
+        <span class="kicker">Pagbabago ng Saklaw</span>
+        <h3>Nagre-retire ako o mawawalan ng saklaw mula sa trabaho</h3>
+        <p>Ano ang mangyayari sa iyong health insurance kapag umalis ka sa trabaho. Mga opsyon sa bridge coverage, pagiging kwalipikado sa Medicare, COBRA, ACA marketplace, at mga patakaran sa timing na kailangan mong malaman.</p>
+      </a>
+      <a class="route members" href="/tl/disability-medicare.html">
+        <span class="kicker">Social Security Disability</span>
+        <h3>Nasa disability o SSDI ako</h3>
+        <p>Paano gumagana ang Medicare para sa mga taong nasa Social Security Disability Insurance. Mga panahon ng paghihintay, timing ng saklaw, at kung paano nakaka-apekto ang disability sa mga opsyon mo.</p>
+      </a>
+      <a class="route members" href="/tl/medicaid-starting-out.html">
+        <span class="kicker">Mga Programa ng Estado</span>
+        <h3>Mababa ang kita ko o nasa Medicaid ako</h3>
+        <p>Pag-unawa sa mga programang Medicaid ng estado at kung paano ito konektado sa Medicare. Mga limitasyon sa kita, ano ang saklaw, at paano gumagana ang pagpapatala sa estado mo.</p>
+      </a>
+      <a class="route members" href="/tl/dual-eligible.html">
+        <span class="kicker">Parehong Programa</span>
+        <h3>Mayroon akong Medicare at Medicaid (o sa tingin ko ay mayroon)</h3>
+        <p>Paano magkasamang gumagana ang Medicare at Medicaid kapag kwalipikado ka sa pareho. Mga patakaran sa koordinasyon, puwang sa saklaw, at bakit mahalaga ito para sa mga gastos at opsyon mo.</p>
+      </a>
+      <a class="route members" href="/tl/caregivers.html">
+        <span class="kicker">Tumutulong sa Iba</span>
+        <h3>Tumutulong ako sa magulang, asawa, o kaibigan</h3>
+        <p>Isang gabay para sa mga taong namamahala ng saklaw para sa iba. Ano ang kailangan mong malaman, paano tumulong sa pagpapatala, at saan makakahanap ng libreng counseling.</p>
+      </a>
+      <a class="route members" href="/tl/choosing-coverage.html">
+        <span class="kicker">Pagpili</span>
+        <h3>Pumipili ako sa pagitan ng mga plano</h3>
+        <p>Original Medicare, Medicare Advantage, at Medigap na inihambing nang patas — na may mga tool para itugma ang pagpili sa iyong pinahahalagahan.</p>
+      </a>
+      <a class="route members" href="/tl/appeals-timelines.html">
+        <span class="kicker">Tinanggihan o Umaapela</span>
+        <h3>May tinanggihan o kailangan kong umapela</h3>
+        <p>Ano ang gagawin kapag tinanggihan ang saklaw. Paano gumagana ang mga apela, mga deadline, ang mga karapatan mo, at paano kumuha ng tulong mula sa libreng mga tagapagtaguyod.</p>
+      </a>
+      <a class="route members" href="/tl/getting-help.html">
+        <span class="kicker">Tulong</span>
+        <h3>Kailangan ko ng tulong sa pagbabayad</h3>
+        <p>Libre, walang kinikilingang counseling at mga programa na nagpapababa ng premium, gastos sa gamot, at saklaw — at kung paano ito abutin.</p>
+      </a>
+    </div>
+    <p>Gusto mo munang makita ang malaking larawan? Tingnan ang <a href="/tl/members.html">lahat ng gabay para sa miyembro at tagapag-alaga</a> o <a href="/tl/basics.html">kung paano gumagana ang mga programa</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Pinaka-ginagamit na mga pahina</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="card-tag">Para sa mga Miyembro</span>
+        <h3><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></h3>
+        <p>Ang mga window na nakakalito sa lahat — at ang mga multa sa hindi pagsunod sa mga ito.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Para sa Lahat</span>
+        <h3><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Regulasyon</a></h3>
+        <p>Mga pangunahing pagbabago sa batas at regulasyon na ipinaliwanag nang simple — at ang kahulugan ng bawat isa para sa iyo.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Para sa mga Miyembro</span>
+        <h3><a href="/tl/getting-help.html">Pagkuha ng Tulong sa Pagbabayad</a></h3>
+        <p>Libreng counseling at mga programa na nagpapababa ng premium, gastos sa gamot, at saklaw.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">Sanggunian</span>
+        <h3><a href="/tl/glossary.html">Simpleng Glosaryo</a></h3>
+        <p>Hanapin ang anumang terminong makakasalubong mo, na ipinaliwanag sa pang-araw-araw na wika.</p>
+      </div>
+    </div>
+
+    <h2>Bakit iba ang MediPrimer</h2>
+    <p>Hindi kakaunti ang impormasyon tungkol sa Medicare at Medicaid online. Karamihan dito ay sinusubukan kang magbenta ng plano, nakasulat na parang regulasyon ng pederal na pamahalaan, o nakatago sa site ng isang programa lang sa isang pagkakataon. Ginawa namin ito para maging ang bagay na kulang:</p>
+    <div class="grid">
+      <div class="card"><span class="card-tag">Walang benta</span><h3>Wala kaming ibinebenta</h3><p>Walang mga plano, walang ads, walang lead forms, walang koleksyon ng data. Karamihan sa "libreng tulong" ay isang sales funnel na nag-uudyok sa iyo patungo sa mga partikular na plano. Hindi kami nag-uudyok sa anuman — mga katotohanan lang at ang iyong mga libre, opisyal na opsyon.</p></div>
+      <div class="card"><span class="card-tag">Malinaw</span><h3>Tumpak gaya ng gobyerno, simpleng wika</h3><p>Ang mga opisyal na site ay may awtoridad ngunit masalimuot. Pinapanatili namin ang katumpakan at nagdaragdag ng kalinawan, na naglalayong sa antas ng pagbasa na humigit-kumulang ikawalong baitang.</p></div>
+      <div class="card"><span class="card-tag">Ikaw-ang-una</span><h3>Inayos batay sa sitwasyon mo</h3><p>Beterano na may asawang nagtatrabaho? Maaga nag-re-retire? Nagsisimula kami sa kinaroroonan mo at hinahakbang ka patungo sa mga desisyon — sa halip na paghirapan mong buuin ang sagot mula sa isang dosenang pahina ng programa.</p></div>
+      <div class="card"><span class="card-tag">Buong Larawan</span><h3>Lahat ng programa, at kung paano ito nag-uugnay</h3><p>Medicare, Medicaid, Medicare Advantage, ang Marketplace, CHIP, at VA sa iisang lugar — kasama ang kung paano ito nag-iinteraksyon — hindi isang programa kada website.</p></div>
+      <div class="card"><span class="card-tag">Tapat</span><h3>Sinasabi namin ang mga bitag</h3><p>Ang mga desisyong mahirap baligtarin at ang mga pagkakamaling nagkakahalaga sa mga tao — ang "one-way door" ng Medigap, ang problema sa HSA at Part A, ang multa ng COBRA — na inilalahad nang walang kinikilingan, para makita mo ang mga ito bago pa dumating.</p></div>
+      <div class="card"><span class="card-tag">Libreng tulong</span><h3>Itinuturo namin sa iyo ang tunay na tulong</h3><p>Ang iyong <a href="/tl/ship-directory.html">SHIP counselor</a> at ang iyong <a href="/tl/directories.html">mga ahensya ng estado</a> — libre at walang kinikilingan — hindi isang call center na kumikita ng komisyon.</p></div>
+    </div>
+
+    <h2>Paano magkaugnay ang mga programa</h2>
+    <p>Nakakatulong na tandaan ang tatlong tanong para sa anumang programa sa saklaw: <strong>sino ang nagpopondo nito</strong>, <strong>sino ang namamahala nito</strong>, at <strong>sino ang naghahatid ng mga benepisyo</strong>.</p>
+    <ul>
+      <li>Ang <strong>Medicare</strong> ay pederal, pinopondohan at pinapatakbo ng Mga Sentro para sa mga Serbisyo ng Medicare at Medicaid. Ang mga benepisyo ay direktang galing sa gobyerno (Orihinal na Medicare) o mula sa mga pribadong plano sa ilalim ng kontrata (Medicare Advantage).</li>
+      <li>Ang <strong>Medicaid</strong> ay isang pakikipagsosyo ng pederal at estado: magkasamang pinopondohan, pinapangasiwaan ng bawat estado sa loob ng mga patakarang pederal. Karamihan sa mga estado ay naghahatid ng mga benepisyo sa pamamagitan ng pribadong Organisasyon ng Pinamamahalaang Pangangalaga.</li>
+      <li>Ang <strong>Health Insurance Marketplace</strong> ay nag-aalok ng subsidized na pribadong saklaw sa mga taong walang abot-kayang saklaw sa ibang lugar.</li>
+    </ul>
+    <p>Kadalasan ay parehong mga insurer ang lumalahok sa lahat ng tatlong merkado, kaya naman sobrang magkakapatong ang terminolohiya. Pinapanatiling malinaw ng <a href="/tl/coverage-basics.html">Coverage Basics</a> ang mga hangganan.</p>
+
+    <div class="note info">
+      <strong>Nagtatrabaho sa pinamamahalaang pangangalaga?</strong> Mayroon ding buong seksyon ng sanggunian ang MediPrimer <a href="/tl/professionals.html">para sa mga propesyonal</a> — mga operasyon ng health plan, mga provider at billing, mga broker at advisor, at mga case manager at navigator.
+    </div>
+
+    <div class="note">
+      <strong>I-verify bago kumilos.</strong> Ang MediPrimer ay pangkalahatang edukasyonal na impormasyon. Ang mga patakaran ng programa, pagiging kwalipikado, at gastos ay madalas nagbabago at nag-iiba depende sa estado at plano. Palaging kumpirmahin ang mga detalye laban sa opisyal na materyal ng programa at sa sarili mong mga dokumento ng plano bago umasa sa mga ito.</p>
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/tl/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/tl/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/index.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

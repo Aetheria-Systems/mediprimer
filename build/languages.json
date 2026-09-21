@@ -3,76 +3,76 @@
   {
    "code": "es",
    "name": "Spanish",
-   "native": "Espa\u00f1ol",
+   "native": "Español",
    "tier": 1,
    "rtl": false,
    "launched": true,
    "official_url": "https://www.medicare.gov/es",
    "ui": {
     "switcher_label": "Idioma",
-    "note": "Traducci\u00f3n del original en ingl\u00e9s.",
-    "note_english_link": "Ver la versi\u00f3n original en ingl\u00e9s",
-    "note_official": "Materiales oficiales de Medicare en espa\u00f1ol",
-    "tool_english": "Esta herramienta est\u00e1 disponible en ingl\u00e9s.",
-    "last_updated": "\u00daltima actualizaci\u00f3n",
-    "banner": "\u00bfPrefiere leer esta p\u00e1gina en espa\u00f1ol?"
+    "note": "Traducción del original en inglés.",
+    "note_english_link": "Ver la versión original en inglés",
+    "note_official": "Materiales oficiales de Medicare en español",
+    "tool_english": "Esta herramienta está disponible en inglés.",
+    "last_updated": "Última actualización",
+    "banner": "¿Prefiere leer esta página en español?"
    },
    "og_locale": "es_US"
   },
   {
    "code": "zh-Hant",
    "name": "Chinese (Traditional)",
-   "native": "\u7e41\u9ad4\u4e2d\u6587",
+   "native": "繁體中文",
    "tier": 2,
    "rtl": false,
    "launched": true,
    "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
    "ui": {
-    "switcher_label": "\u8a9e\u8a00",
-    "note": "\u8b6f\u81ea\u82f1\u6587\u539f\u6587\u3002",
-    "note_english_link": "\u67e5\u770b\u82f1\u6587\u539f\u7248",
-    "note_official": "Medicare \u5b98\u65b9\u591a\u8a9e\u8a00\u8cc7\u6599",
-    "tool_english": "\u6b64\u5de5\u5177\u50c5\u63d0\u4f9b\u82f1\u6587\u7248\u672c\u3002",
-    "last_updated": "\u6700\u5f8c\u66f4\u65b0",
-    "banner": "\u60a8\u5e0c\u671b\u95b1\u8b80\u672c\u9801\u7684\u4e2d\u6587\u7248\u672c\u55ce\uff1f"
+    "switcher_label": "語言",
+    "note": "譯自英文原文。",
+    "note_english_link": "查看英文原版",
+    "note_official": "Medicare 官方多語言資料",
+    "tool_english": "此工具僅提供英文版本。",
+    "last_updated": "最後更新",
+    "banner": "您希望閱讀本頁的中文版本嗎？"
    },
    "og_locale": "zh_TW"
   },
   {
    "code": "vi",
    "name": "Vietnamese",
-   "native": "Ti\u1ebfng Vi\u1ec7t",
+   "native": "Tiếng Việt",
    "tier": 2,
    "rtl": false,
    "launched": true,
    "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
    "ui": {
-    "switcher_label": "Ng\u00f4n ng\u1eef",
-    "note": "B\u1ea3n d\u1ecbch t\u1eeb b\u1ea3n g\u1ed1c ti\u1ebfng Anh.",
-    "note_english_link": "Xem b\u1ea3n g\u1ed1c ti\u1ebfng Anh",
-    "note_official": "T\u00e0i li\u1ec7u ch\u00ednh th\u1ee9c c\u1ee7a Medicare b\u1eb1ng ti\u1ebfng Vi\u1ec7t",
-    "tool_english": "C\u00f4ng c\u1ee5 n\u00e0y hi\u1ec7n c\u00f3 b\u1eb1ng ti\u1ebfng Anh.",
-    "last_updated": "C\u1eadp nh\u1eadt l\u1ea7n cu\u1ed1i",
-    "banner": "Qu\u00fd v\u1ecb mu\u1ed1n \u0111\u1ecdc trang n\u00e0y b\u1eb1ng ti\u1ebfng Vi\u1ec7t kh\u00f4ng?"
+    "switcher_label": "Ngôn ngữ",
+    "note": "Bản dịch từ bản gốc tiếng Anh.",
+    "note_english_link": "Xem bản gốc tiếng Anh",
+    "note_official": "Tài liệu chính thức của Medicare bằng tiếng Việt",
+    "tool_english": "Công cụ này hiện có bằng tiếng Anh.",
+    "last_updated": "Cập nhật lần cuối",
+    "banner": "Quý vị muốn đọc trang này bằng tiếng Việt không?"
    },
    "og_locale": "vi_VN"
   },
   {
    "code": "ko",
    "name": "Korean",
-   "native": "\ud55c\uad6d\uc5b4",
+   "native": "한국어",
    "tier": 2,
    "rtl": false,
    "launched": true,
    "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
    "ui": {
-    "switcher_label": "\uc5b8\uc5b4",
-    "note": "\uc601\uc5b4 \uc6d0\ubb38 \ubc88\uc5ed\ubcf8\uc785\ub2c8\ub2e4.",
-    "note_english_link": "\uc601\uc5b4 \uc6d0\ubb38 \ubcf4\uae30",
-    "note_official": "\uba54\ub514\ucf00\uc5b4 \uacf5\uc2dd \ud55c\uad6d\uc5b4 \uc790\ub8cc",
-    "tool_english": "\uc774 \ub3c4\uad6c\ub294 \uc601\uc5b4\ub85c\ub9cc \uc81c\uacf5\ub429\ub2c8\ub2e4.",
-    "last_updated": "\ub9c8\uc9c0\ub9c9 \uc5c5\ub370\uc774\ud2b8",
-    "banner": "\uc774 \ud398\uc774\uc9c0\ub97c \ud55c\uad6d\uc5b4\ub85c \ubcf4\uc2dc\uaca0\uc2b5\ub2c8\uae4c?"
+    "switcher_label": "언어",
+    "note": "영어 원문 번역본입니다.",
+    "note_english_link": "영어 원문 보기",
+    "note_official": "메디케어 공식 한국어 자료",
+    "tool_english": "이 도구는 영어로만 제공됩니다.",
+    "last_updated": "마지막 업데이트",
+    "banner": "이 페이지를 한국어로 보시겠습니까?"
    },
    "og_locale": "ko_KR"
   },
@@ -82,15 +82,23 @@
    "native": "Tagalog",
    "tier": 3,
    "rtl": false,
-   "launched": false,
+   "launched": true,
    "official_url": "https://www.medicare.gov/about-us/information-in-other-languages",
-   "ui": {},
+   "ui": {
+    "switcher_label": "Wika",
+    "note": "Salin mula sa orihinal na Ingles.",
+    "note_english_link": "Tingnan ang orihinal na bersyon sa Ingles",
+    "note_official": "Opisyal na materyal ng Medicare sa Tagalog",
+    "tool_english": "Available lamang ang kagamitang ito sa Ingles.",
+    "last_updated": "Huling na-update",
+    "banner": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"
+   },
    "og_locale": "tl_PH"
   },
   {
    "code": "ru",
    "name": "Russian",
-   "native": "\u0420\u0443\u0441\u0441\u043a\u0438\u0439",
+   "native": "Русский",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -101,7 +109,7 @@
   {
    "code": "ar",
    "name": "Arabic",
-   "native": "\u0627\u0644\u0639\u0631\u0628\u064a\u0629",
+   "native": "العربية",
    "tier": 3,
    "rtl": true,
    "launched": false,
@@ -112,7 +120,7 @@
   {
    "code": "ht",
    "name": "Haitian Creole",
-   "native": "Krey\u00f2l Ayisyen",
+   "native": "Kreyòl Ayisyen",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -123,7 +131,7 @@
   {
    "code": "pt",
    "name": "Portuguese",
-   "native": "Portugu\u00eas",
+   "native": "Português",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -134,7 +142,7 @@
   {
    "code": "fr",
    "name": "French",
-   "native": "Fran\u00e7ais",
+   "native": "Français",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -156,7 +164,7 @@
   {
    "code": "hi",
    "name": "Hindi",
-   "native": "\u0939\u093f\u0928\u094d\u0926\u0940",
+   "native": "हिन्दी",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -167,7 +175,7 @@
   {
    "code": "ja",
    "name": "Japanese",
-   "native": "\u65e5\u672c\u8a9e",
+   "native": "日本語",
    "tier": 3,
    "rtl": false,
    "launched": false,
@@ -178,7 +186,7 @@
   {
    "code": "fa",
    "name": "Farsi",
-   "native": "\u0641\u0627\u0631\u0633\u06cc",
+   "native": "فارسی",
    "tier": 3,
    "rtl": true,
    "launched": false,

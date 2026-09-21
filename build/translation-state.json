@@ -2066,5 +2066,507 @@
       "hash": "eb72f935cf5d483e6ca72964ce28290d",
       "date": "2026-09-19"
     }
+  },
+  "tl": {
+    "about.html": {
+      "hash": "5c62de5e11f0c5e0ca9fa9ce675c296e",
+      "date": "2026-09-19"
+    },
+    "annual-review-workbook.html": {
+      "hash": "3499a6d72acd416be78879561050a383",
+      "date": "2026-09-19"
+    },
+    "appeals-timelines.html": {
+      "hash": "c9e349c0deda49295a5fa3e3be4c263d",
+      "date": "2026-09-19"
+    },
+    "basics.html": {
+      "hash": "219f00183e733d2a709cde172d9925f2",
+      "date": "2026-09-19"
+    },
+    "brokers.html": {
+      "hash": "553d94d8dfeb5afc62d6f33878280684",
+      "date": "2026-09-19"
+    },
+    "caregivers.html": {
+      "hash": "19a13c4ef610b389420d238e5f9f3fd5",
+      "date": "2026-09-19"
+    },
+    "checklists.html": {
+      "hash": "1ca05d32ebf3753c521d9d026af6863c",
+      "date": "2026-09-19"
+    },
+    "chip.html": {
+      "hash": "b6775091ee8b64a62a531a177c1f09e8",
+      "date": "2026-09-19"
+    },
+    "choosing-coverage.html": {
+      "hash": "8493ed74d5880275ec93e5b248e7db9c",
+      "date": "2026-09-19"
+    },
+    "claims-coding.html": {
+      "hash": "33c074a2fea867230f31812371f5e4b4",
+      "date": "2026-09-19"
+    },
+    "cms-updates.html": {
+      "hash": "9df93a6488499e4339a7d77729192c15",
+      "date": "2026-09-19"
+    },
+    "cobra-and-medicare.html": {
+      "hash": "8225b3651ca3352bde5fd80039d44d06",
+      "date": "2026-09-19"
+    },
+    "common-mistakes.html": {
+      "hash": "f06e614a57fc58267a6906ddcacdfc4a",
+      "date": "2026-09-19"
+    },
+    "costs.html": {
+      "hash": "c48e93891cf5ac933b263ae330ea5e54",
+      "date": "2026-09-19"
+    },
+    "coverage-basics.html": {
+      "hash": "eaaf6fe9b5cf9f0179c00ecb97b1a350",
+      "date": "2026-09-19"
+    },
+    "directories.html": {
+      "hash": "7a10246e0e95a50c736759a6d9a72879",
+      "date": "2026-09-19"
+    },
+    "disability-medicare.html": {
+      "hash": "383f3649d9c3f0c0110ce5b10f918081",
+      "date": "2026-09-19"
+    },
+    "does-my-doctor-accept-medicare.html": {
+      "hash": "5f058b7bf199ab714509b21459ea80fa",
+      "date": "2026-09-19"
+    },
+    "dual-eligible.html": {
+      "hash": "c693749246e463f3227edb6cc790f6ce",
+      "date": "2026-09-19"
+    },
+    "edge-cases.html": {
+      "hash": "2d1148cd00f7537fa8c5292330cf1e8a",
+      "date": "2026-09-19"
+    },
+    "editorial-standards.html": {
+      "hash": "e5db33dd28518693f5afe9bae8b619ad",
+      "date": "2026-09-19"
+    },
+    "emergency-medicaid.html": {
+      "hash": "079e96f5185780e6d46ffb1d47711e9c",
+      "date": "2026-09-19"
+    },
+    "enrollment-calendar.html": {
+      "hash": "bc146d95326233a5d7164d1f495c0e59",
+      "date": "2026-09-19"
+    },
+    "getting-help.html": {
+      "hash": "03e5be06a23ca102897c1908c96c6b0d",
+      "date": "2026-09-19"
+    },
+    "glossary.html": {
+      "hash": "c5f063d46cf3a10445fffed26c88f7dd",
+      "date": "2026-09-19"
+    },
+    "health-insurance-terms-chinese-english.html": {
+      "hash": "ce83265a473158a22d4e20f36e4be1dc",
+      "date": "2026-09-19"
+    },
+    "hospital-observation-status.html": {
+      "hash": "9ee44773cff665b0d802a09db84aea73",
+      "date": "2026-09-19"
+    },
+    "how-do-i.html": {
+      "hash": "7d63d0086d0c5a4a89f1d4a40ee7ae28",
+      "date": "2026-09-19"
+    },
+    "irmaa-appeal-ssa-44.html": {
+      "hash": "84a0734e0baf1ef32cb9a4f2932a79f4",
+      "date": "2026-09-19"
+    },
+    "lost-medicaid-what-now.html": {
+      "hash": "50377f24b6078b82806a8393d1616721",
+      "date": "2026-09-19"
+    },
+    "marketplace-income-estimate.html": {
+      "hash": "d6ed18a5ea7760e8eae38233eb4e83ca",
+      "date": "2026-09-19"
+    },
+    "marketplace-premium-increase.html": {
+      "hash": "84ce43f6d57769eac3e0b06533bb08ee",
+      "date": "2026-09-19"
+    },
+    "medicaid-dental-adults.html": {
+      "hash": "b841d8e3a92f7ce91f3b29b14c566fe9",
+      "date": "2026-09-19"
+    },
+    "medicaid-estate-recovery.html": {
+      "hash": "8f830de4fe6ccf41f3b465d7a6629294",
+      "date": "2026-09-19"
+    },
+    "medicaid-home-care-hcbs-waivers.html": {
+      "hash": "44a987085b642be512a1b8a906a504b1",
+      "date": "2026-09-19"
+    },
+    "medicaid-pregnancy.html": {
+      "hash": "00d6df27fa9eeb669779e3299cbc4c84",
+      "date": "2026-09-19"
+    },
+    "medicaid-renewal.html": {
+      "hash": "eecfd146701e235cd0b3e3f5e9cd3cba",
+      "date": "2026-09-19"
+    },
+    "medicaid-spousal-impoverishment.html": {
+      "hash": "b06430e516d8fb3d583784ea813ce597",
+      "date": "2026-09-19"
+    },
+    "medicaid-starting-out.html": {
+      "hash": "534d6bbe9174fee58f5ee2a948b2a112",
+      "date": "2026-09-19"
+    },
+    "medicaid-work-requirements.html": {
+      "hash": "e32a7fda2d01cb9a741b681e21fea768",
+      "date": "2026-09-19"
+    },
+    "medical-interpreter-rights.html": {
+      "hash": "6a17859d77cd118ac29ef2044c6bf70d",
+      "date": "2026-09-19"
+    },
+    "medicare-advantage-prior-authorization.html": {
+      "hash": "f0c536c28cb5e29b1b8efb01e5190f1c",
+      "date": "2026-09-19"
+    },
+    "medicare-advantage-to-original-medicare.html": {
+      "hash": "d20731e284f2ef5bacde2c2fb676c8d3",
+      "date": "2026-09-19"
+    },
+    "medicare-advantage.html": {
+      "hash": "cfa0cd6bb3fd42dff53579c6d053f92b",
+      "date": "2026-09-19"
+    },
+    "medicare-ambulance-emergency-room.html": {
+      "hash": "bd4da1aadac09f869a313b71a9ea94d7",
+      "date": "2026-09-19"
+    },
+    "medicare-annual-notice-of-change.html": {
+      "hash": "fee6c2b91cdc4637a60c928c77e4ab30",
+      "date": "2026-09-20"
+    },
+    "medicare-cancer-treatment.html": {
+      "hash": "d0cf2c6f2209fb9f195ce123972e5347",
+      "date": "2026-09-20"
+    },
+    "medicare-card-replacement.html": {
+      "hash": "3208bdac70fc7df95fa10019dd89b2d9",
+      "date": "2026-09-20"
+    },
+    "medicare-cataract-surgery.html": {
+      "hash": "96a5e2d7b53725dfe6bbb27bf4b1c566",
+      "date": "2026-09-20"
+    },
+    "medicare-chiropractic-acupuncture.html": {
+      "hash": "351be8526b441407f4c415bdf5a7b593",
+      "date": "2026-09-20"
+    },
+    "medicare-costs-2027.html": {
+      "hash": "8a0a8d4d702953501edf7b81c6878621",
+      "date": "2026-09-20"
+    },
+    "medicare-costs-card.html": {
+      "hash": "ab55e4934fc4277a0a15798d9014a841",
+      "date": "2026-09-20"
+    },
+    "medicare-diabetes-coverage.html": {
+      "hash": "1530ec1f9950399411c46e347d8711cd",
+      "date": "2026-09-20"
+    },
+    "medicare-enrollment-calculator.html": {
+      "hash": "caa500f74c555b70f1fb8ac27f081c0d",
+      "date": "2026-09-20"
+    },
+    "medicare-esrd-kidney-failure.html": {
+      "hash": "282eeea92e8b8aa74e8d04b70a96e3cd",
+      "date": "2026-09-20"
+    },
+    "medicare-five-star-special-enrollment-period.html": {
+      "hash": "24fcff7d5e59e2012ed2ca604c43b030",
+      "date": "2026-09-20"
+    },
+    "medicare-flex-card.html": {
+      "hash": "c84cc4a0f41aeb29c1306e58adbcef8e",
+      "date": "2026-09-20"
+    },
+    "medicare-hospice-home-health.html": {
+      "hash": "1798da343e011a3cac6239908ca999ad",
+      "date": "2026-09-20"
+    },
+    "medicare-long-term-care.html": {
+      "hash": "c288be6070b54ff61d9144996a9a1d68",
+      "date": "2026-09-20"
+    },
+    "medicare-medicaid-chinese.html": {
+      "hash": "51735b20a90d337fe7cdcce65e71e5a2",
+      "date": "2026-09-20"
+    },
+    "medicare-medical-equipment-dme.html": {
+      "hash": "631c1673a2a284706bdef5201f382790",
+      "date": "2026-09-20"
+    },
+    "medicare-mental-health.html": {
+      "hash": "0df313d418a311cda3b190e23756ef70",
+      "date": "2026-09-20"
+    },
+    "medicare-open-enrollment-2027.html": {
+      "hash": "8ad01a928dedc7715d8e899727ce027b",
+      "date": "2026-09-20"
+    },
+    "medicare-part-a.html": {
+      "hash": "63864a75ca982836fa370d48825a775c",
+      "date": "2026-09-20"
+    },
+    "medicare-part-b-giveback.html": {
+      "hash": "81a06033e946be5169346b307e53949e",
+      "date": "2026-09-20"
+    },
+    "medicare-part-b.html": {
+      "hash": "571333cc2f86505e812f6dca23172aaa",
+      "date": "2026-09-20"
+    },
+    "medicare-part-d.html": {
+      "hash": "1ccf133bb49614b6a1026c0268f8c320",
+      "date": "2026-09-20"
+    },
+    "medicare-physical-therapy.html": {
+      "hash": "593b9288caa17a0717d25e21543e0455",
+      "date": "2026-09-20"
+    },
+    "medicare-plan-comparison-2027.html": {
+      "hash": "49ce310ff00598b19c536cebdf5c5138",
+      "date": "2026-09-20"
+    },
+    "medicare-prescription-payment-plan.html": {
+      "hash": "39eb93ca79d6feb6306cfca7d494124f",
+      "date": "2026-09-20"
+    },
+    "medicare-preventive-screening-costs.html": {
+      "hash": "e4469413b46ce7d4cd4abffb11e0795b",
+      "date": "2026-09-20"
+    },
+    "medicare-savings-programs.html": {
+      "hash": "4f4ca47446806942900c75dba7345028",
+      "date": "2026-09-20"
+    },
+    "medicare-scams.html": {
+      "hash": "3f66ad525dedf23c97f680c6a4c18e53",
+      "date": "2026-09-20"
+    },
+    "medicare-special-needs-plans.html": {
+      "hash": "e24298edd9327e95611e760cecfbaa4a",
+      "date": "2026-09-20"
+    },
+    "medicare-spouse-work-record.html": {
+      "hash": "0dd1a5925c5ac4d22757ac882c76acb4",
+      "date": "2026-09-20"
+    },
+    "medicare-star-ratings.html": {
+      "hash": "8e6981163b340ece5d1fe3aa771164fc",
+      "date": "2026-09-20"
+    },
+    "medicare-summary-notice.html": {
+      "hash": "db121a1bed091f0ef1a36a7a72d1165b",
+      "date": "2026-09-20"
+    },
+    "medicare-vaccines.html": {
+      "hash": "2322892559073b6b534ba429cac6e6a3",
+      "date": "2026-09-20"
+    },
+    "medicare-wellness-visit-vs-physical.html": {
+      "hash": "75fe03a2d4d64e28700023127c6454f6",
+      "date": "2026-09-20"
+    },
+    "members.html": {
+      "hash": "1f1ec09d8da46d4e3ff85ed622315bb9",
+      "date": "2026-09-20"
+    },
+    "moving-states.html": {
+      "hash": "8695bca3cc23afef135d116280ee4d13",
+      "date": "2026-09-20"
+    },
+    "multigenerational-household-coverage.html": {
+      "hash": "acdc025e73adf9a08aeda1ba2f850b9e",
+      "date": "2026-09-20"
+    },
+    "navigators.html": {
+      "hash": "add3c95f13fd40eaff0851aa2afe0ebb",
+      "date": "2026-09-20"
+    },
+    "part-d-formulary-exception-appeal.html": {
+      "hash": "e91c3f4c699a83f55967e64d197b3a98",
+      "date": "2026-09-20"
+    },
+    "partner-materials.html": {
+      "hash": "c55ba79ec6449b46a817eddb5a94cd27",
+      "date": "2026-09-20"
+    },
+    "plan-types.html": {
+      "hash": "d069d2c363bf40ab315ff1db922d903b",
+      "date": "2026-09-20"
+    },
+    "privacy.html": {
+      "hash": "7a64101809626af51910a15bcc819c1c",
+      "date": "2026-09-20"
+    },
+    "providers.html": {
+      "hash": "15c9b41a197590d5125e6243521a6ce5",
+      "date": "2026-09-20"
+    },
+    "questions-to-ask.html": {
+      "hash": "324cb63d4120c63875f3b3896675c5b6",
+      "date": "2026-09-20"
+    },
+    "resources.html": {
+      "hash": "fb04a9e444abe62865ea00721e209212",
+      "date": "2026-09-20"
+    },
+    "accessibility.html": {
+      "hash": "ae59dbda6d5296c0d27726176888a457",
+      "date": "2026-09-20"
+    },
+    "hsa-and-medicare.html": {
+      "hash": "2a0d92df325ba532de4696f87705e906",
+      "date": "2026-09-20"
+    },
+    "marketplace.html": {
+      "hash": "dbc3ab128ef01e51bd76f58d6aa0aaaa",
+      "date": "2026-09-20"
+    },
+    "medicaid-eligibility.html": {
+      "hash": "9f202e7c1e199663c8f6a1ad82ac5836",
+      "date": "2026-09-20"
+    },
+    "medicaid-medicare-chinese-nicknames.html": {
+      "hash": "8d840a4dee8d5f8ef06b1efe0104fefa",
+      "date": "2026-09-20"
+    },
+    "medicare-dental-vision-hearing.html": {
+      "hash": "640400d0263b0e8a6d791353caed6448",
+      "date": "2026-09-20"
+    },
+    "medicare-immigrants.html": {
+      "hash": "66cb5c509f368f9190b3be6139c40c94",
+      "date": "2026-09-20"
+    },
+    "medicare-telehealth.html": {
+      "hash": "4e0881f75782308242d5008e7c93c37a",
+      "date": "2026-09-20"
+    },
+    "medicare-travel.html": {
+      "hash": "62eb5a13630e8f48bf8099e1d11c00cc",
+      "date": "2026-09-20"
+    },
+    "medicare-vs-medicaid.html": {
+      "hash": "29582332d01b7ef75a3d92bdbeafe769",
+      "date": "2026-09-20"
+    },
+    "medicare-weight-loss-drugs.html": {
+      "hash": "fab403b5009dcb8399264bd501943ff8",
+      "date": "2026-09-20"
+    },
+    "member-journey.html": {
+      "hash": "86e31c7ee107e77715b2a123d2fe38c7",
+      "date": "2026-09-20"
+    },
+    "planning-for-two.html": {
+      "hash": "f98b59ede2fe44fd75995db1194304f2",
+      "date": "2026-09-20"
+    },
+    "policy-changes.html": {
+      "hash": "0fd910c2a17e009714ed10410931a355",
+      "date": "2026-09-20"
+    },
+    "retiring-losing-coverage.html": {
+      "hash": "d9fded0f15c40877f1607ef905990d62",
+      "date": "2026-09-20"
+    },
+    "rights.html": {
+      "hash": "31383705b23b31c0d23a79e842ff0117",
+      "date": "2026-09-20"
+    },
+    "risk-adjustment.html": {
+      "hash": "13565de3f776fe41681a6ffbc169a046",
+      "date": "2026-09-20"
+    },
+    "ship-directory.html": {
+      "hash": "d94695ed77701b95cae6a28ecc6447b8",
+      "date": "2026-09-20"
+    },
+    "site-map.html": {
+      "hash": "0a7e9bbf24c59fc89342408f65fd76ce",
+      "date": "2026-09-20"
+    },
+    "state-medicaid.html": {
+      "hash": "bab4997f0adbac31f3bf2a8128d108d0",
+      "date": "2026-09-20"
+    },
+    "support.html": {
+      "hash": "caf008ceabcc6da1e5552fa12d9320a6",
+      "date": "2026-09-20"
+    },
+    "switching-medicare-advantage-plans.html": {
+      "hash": "9f232faf72b2d3f9bb42a374805498e6",
+      "date": "2026-09-20"
+    },
+    "switching-medicare-part-d-formulary-check.html": {
+      "hash": "0d646bebf52b5d609e1bbf63a2169234",
+      "date": "2026-09-20"
+    },
+    "turning-26-health-insurance.html": {
+      "hash": "59cded26fd20388ad52771b9f95ea9a9",
+      "date": "2026-09-20"
+    },
+    "turning-65.html": {
+      "hash": "48618bee6d75095f86126a51ef71b69d",
+      "date": "2026-09-20"
+    },
+    "using-plan-finder.html": {
+      "hash": "a77be57dd75ef644cb569f508c31e6fc",
+      "date": "2026-09-20"
+    },
+    "veterans-medicare.html": {
+      "hash": "7dc86fe159d3d36c53944fd49d134d18",
+      "date": "2026-09-20"
+    },
+    "working-past-65.html": {
+      "hash": "aa1457c037429e12459e19a314ec613c",
+      "date": "2026-09-20"
+    },
+    "enrollment.html": {
+      "hash": "908b1eef6f2814fdb01075c57d2e7d52",
+      "date": "2026-09-20"
+    },
+    "medigap.html": {
+      "hash": "017c252dd4b3197e6e76cca820843820",
+      "date": "2026-09-20"
+    },
+    "operations.html": {
+      "hash": "a95876042fa50d48ab5d5de56feb0c6c",
+      "date": "2026-09-20"
+    },
+    "index.html": {
+      "hash": "94dd32f5eb3850fdd995bfdc1a7c0839",
+      "date": "2026-09-20"
+    },
+    "medicaid-spend-down-look-back.html": {
+      "hash": "73aedc217dc3f2cdce3d297e76f1ed12",
+      "date": "2026-09-20"
+    },
+    "medicaid-sponsor-deeming.html": {
+      "hash": "688afa63f890524ba07b9f448cdc6db2",
+      "date": "2026-09-20"
+    },
+    "insurance-departments.html": {
+      "hash": "d63e4b19ecab3ecc6e87082245dee19b",
+      "date": "2026-09-20"
+    }
   }
 }

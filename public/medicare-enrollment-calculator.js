@@ -141,7 +141,33 @@
       note: "2026년 기준 수치 사용 (Part B 표준 보험료 $202.90; Part D 전국 기본 보험료 $38.99). 대기업 고용주 보험에 가입된 상태로 계속 근무 중이거나 특별 가입 기간 자격이 있는 경우에는 다른 규정이 적용됩니다.",
       born1: "1일에 태어나셨기 때문에 Medicare는 전달에 만 65세가 되는 것으로 간주하여 가입 가능 기간이 한 달 앞당겨집니다.",
       invalid: "생년월일(월, 일, 년)을 입력해 주세요.",
-      months: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]}
+      months: ["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"]},
+    "tl": {
+      legend: "Ang iyong petsa ng kapanganakan",
+      go: "Ipakita ang aking mga petsa",
+      win: "Ang iyong panahon ng pagpapatala",
+      opens: "Magbubukas",
+      closes: "Magsasara",
+      best: "Pinakamainam na oras para magpatala",
+      bestBody: "Magpatala sa tatlong buwang ito at magsisimula ang iyong coverage sa unang araw ng buwan na ikaw ay magiging 65 — walang puwang at walang multa.",
+      startsIf: "Kailan magsisimula ang coverage",
+      rowSign: "Kung magpapatala ka…",
+      rowStart: "Magsisimula ang coverage…",
+      before: "Sa 3 buwan bago ang buwan ng iyong kaarawan",
+      bmonth: "Sa buwan ng iyong kaarawan",
+      after1: "1 buwan pagkatapos",
+      after2: "2 buwan pagkatapos",
+      after3: "3 buwan pagkatapos",
+      firstDay: "ang unang araw ng",
+      penaltyH: "Ang maaaring ikagastos ng paghihintay",
+      penaltyBody: "Kung hindi mo maabutan ang buong panahon at wala kang ibang creditable coverage, dumaragdag ang Part B ng 10% para sa bawat buong taon na sana'y meron ka na nito — habang ikaw ay may Medicare. Dumaragdag ang Part D ng 1% ng national base premium para sa bawat buwan na wala kang coverage.",
+      pbLabel: "Multa sa Part B kung maghihintay ka ng isang taon",
+      pdLabel: "Multa sa Part D pagkatapos ng 12 buwan na walang drug coverage",
+      perMonth: "/buwan, habambuhay",
+      note: "Mga tantiya gamit ang 2026 figures ($202.90 karaniwang premium sa Part B; $38.99 national base premium sa Part D). Ibang mga patakaran ang naaangkop kung nagtatrabaho ka pa at may coverage mula sa plano ng malaking employer, o kung kwalipikado ka para sa Special Enrollment Period.",
+      born1: "Dahil ipinanganak ka noong ika-1, itinuturing ka ng Medicare na naging 65 anyos sa nakaraang buwan, kaya isang buwan mas maaga ang iyong panahon ng pagpapatala.",
+      invalid: "Pakilagay ang buwan, araw, at taon ng iyong kapanganakan.",
+      months: ["Enero","Pebrero","Marso","Abril","Mayo","Hunyo","Hulyo","Agosto","Setyembre","Oktubre","Nobyembre","Disyembre"]}
   };
 
   function lang() {
