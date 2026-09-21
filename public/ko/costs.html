@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메디케어 코페이먼트, 보험료 및 공제액 설명</title>
+<meta name="description" content="메디케어 코페이(공동부담금)란 무엇인지, 파트 A, B, C, D에서 코페이가 어떻게 다른지, 코페이와 공동보험금(코인슈런스)이 어떻게 비교되는지, 그리고 내 금액을 어떻게 확인하는지 알아보세요. 쉬운 말로 설명하는 안내서입니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics is loaded AFTER first paint, not during it.
+   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
+   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
+   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
+   for bandwidth on a throttled connection before anything had rendered.
+   `async` still downloads immediately; this waits for load (or 3s, or the
+   first interaction, whichever comes first) so the page paints first.
+   Trade-off: sessions that end in the first second may go uncounted. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
+  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
+  setTimeout(startAnalytics, 3000);
+  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/ko/costs.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="메디케어 코페이먼트, 보험료 및 공제액 설명">
+<meta property="og:description" content="메디케어 코페이(공동부담금)란 무엇인지, 파트 A, B, C, D에서 코페이가 어떻게 다른지, 코페이와 공동보험금(코인슈런스)이 어떻게 비교되는지, 그리고 내 금액을 어떻게 확인하는지 알아보세요. 쉬운 말로 설명하는 안내서입니다.">
+<meta property="og:url" content="https://mediprimer.org/ko/costs.html">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="메디케어 코페이먼트, 보험료 및 공제액 설명">
+<meta name="twitter:description" content="메디케어 코페이(공동부담금)란 무엇인지, 파트 A, B, C, D에서 코페이가 어떻게 다른지, 코페이와 공동보험금(코인슈런스)이 어떻게 비교되는지, 그리고 내 금액을 어떻게 확인하는지 알아보세요. 쉬운 말로 설명하는 안내서입니다.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "메디케어 코페이먼트, 보험료 및 공제액 설명", "description": "메디케어 코페이(공동부담금)란 무엇인지, 파트 A, B, C, D에서 코페이가 어떻게 다른지, 코페이와 공동보험금(코인슈런스)이 어떻게 비교되는지, 그리고 내 금액을 어떻게 확인하는지 알아보세요. 쉬운 말로 설명하는 안내서입니다.", "url": "https://mediprimer.org/ko/costs.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-09-21", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/costs.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/costs.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/costs.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/costs.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/costs.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/costs.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/costs.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "메디케어 코페이먼트, 보험료 및 공제액 설명", "item": "https://mediprimer.org/ko/costs.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="언어: 한국어"><span class="lang-switch-current">한국어</span> ▾</button>
+    <div class="dropdown">
+    <a href="/costs.html" lang="en">English</a>
+    <a href="/es/costs.html" lang="es">Español</a>
+    <a href="/zh-Hant/costs.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/costs.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/costs.html" lang="ko" aria-current="page">한국어</a>
+    <a href="/tl/costs.html" lang="tl">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">수혜자 및 보호자를 위한 정보</p>
+    <h1>메디케어 코페이먼트와 그 밖의 비용, 쉽게 알아보기</h1>
+    <p>메디케어 코페이(공동부담금)는 진료비 $30처럼 서비스에 대해 지불하는 고정 금액입니다. 이는 1년 동안 합산되는 다섯 가지 비용 중 하나입니다: 보험료, 공제액(디덕터블), 공동부담금(코페이먼트), 공동보험금(코인슈런스), 그리고 본인 부담 비용 최대 한도입니다. 여기에서는 코페이가 무엇인지, 메디케어의 각 파트에서 코페이가 어디에 적용되는지, 그리고 이 다섯 가지 비용이 어떻게 함께 작용하는지 설명합니다.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <h2>메디케어 코페이란 무엇인가요? 간단한 답변</h2>
+    <p><strong>공동부담금(코페이먼트)</strong>(줄여서 코페이)은 특정 서비스를 받을 때마다 지불하는 정해진 달러 금액입니다. 실제 서비스 비용과 관계없이 금액은 동일하게 유지됩니다. 제공자가 플랜의 네트워크에 속해 있는 한, 나머지는 플랜이 지불합니다.</p>
+    <p>사람들은 종종 공동부담금(코페이먼트)과 <strong>공동보험금(코인슈런스)</strong>을 혼동합니다. 차이는 간단합니다:</p>
+    <ul>
+      <li><strong>공동부담금(코페이먼트)</strong>은 정액 금액입니다: 방문 시 $30, 일반의약품 처방 시 $5.</li>
+      <li><strong>공동보험금(코인슈런스)</strong>은 청구 금액의 비율입니다: 본인이 20%, 플랜이 80%를 지불합니다.</li>
+    </ul>
+    <p>흔히 놀라는 점 하나: 메디케어의 연례 웰니스 방문은 무료지만, 일반 정기 신체검사는 보장되지 않으므로 "무료 검진"이라도 청구서가 나올 수 있습니다. <a href="/ko/medicare-wellness-visit-vs-physical.html">웰니스 방문 vs. 연례 신체검사</a>를 참고하세요.</p>
+
+    <h3>메디케어 각 파트별 코페이 적용 방식</h3>
+    <p>코페이를 지불하는지 공동보험금(코인슈런스)을 지불하는지는 어떤 메디케어 파트, 또는 어떤 플랜을 가지고 있는지에 따라 다릅니다:</p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>보장 범위</th>
+            <th>코페이인가요, 공동보험금인가요?</th>
+            <th>예상되는 내용</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>파트 A</strong> (병원)</td>
+            <td>공제액, 그다음 공동보험금</td>
+            <td>대부분의 사람들은 보험료를 내지 않습니다. 혜택 기간마다 공제액을 지불하고, 장기 입원이나 전문 요양 시설 입소 시 일일 공동보험금을 지불합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>파트 B</strong> (진료, 외래)</td>
+            <td>주로 공동보험금이며, 정액 코페이가 아님</td>
+            <td>연간 공제액을 낸 후, 대부분의 서비스에 대해 일반적으로 메디케어 승인 금액의 20%를 지불합니다.</td>
+          </tr>
+          <tr>
+            <td><strong>파트 C</strong> (메디케어 어드밴티지)</td>
+            <td>코페이와 공동보험금</td>
+            <td>민간 플랜은 진료, 전문의 방문, 입원일에 대해 자체 코페이를 정합니다. 플랜마다 금액이 다르며, 모든 플랜에는 연간 본인 부담 비용 한도가 있습니다.</td>
+          </tr>
+          <tr>
+            <td><strong>파트 D</strong> (처방약)</td>
+            <td>처방전마다 코페이 또는 공동보험금</td>
+            <td>공제액이 있다면 이를 낸 후, 각 약에 대해 코페이 또는 일정 비율을 지불합니다. 금액은 플랜 목록에서 해당 약의 등급에 따라 달라집니다.</td>
+          </tr>
+          <tr>
+            <td><strong>메디케이드</strong></td>
+            <td>거의 없거나 전혀 없음</td>
+            <td>일부 주에서는 특정 서비스에 소액 코페이를 부과합니다. 비용 분담은 메디케어나 민간 보험보다 훨씬 낮습니다.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>내 코페이 확인하는 방법</h3>
+    <ul>
+      <li><strong>오리지널 메디케어:</strong> 확인할 코페이 일정표는 없습니다. 공제액을 낸 후 대부분의 파트 B 서비스에 대해 20% 공동보험금을 예상하고, 올해의 파트 A 및 파트 B 공제액은 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에서 확인하세요.</li>
+      <li><strong>메디케어 어드밴티지 또는 파트 D:</strong> 코페이는 플랜 문서와 보험사 웹사이트에 기재되어 있습니다. 카드에 있는 회원 서비스 번호로 전화할 수도 있습니다. 매년 가을 플랜을 비교할 때, <a href="https://www.medicare.gov/plan-compare/" rel="noopener">Medicare.gov의 플랜 파인더</a>는 각 플랜의 코페이를 나란히 보여줍니다.</li>
+      <li><strong>청구서에서:</strong> 코페이는 보통 플랜이 지불한 금액 옆에 "코페이" 또는 "코페이먼트"라고 표시된 별도의 항목으로 나타납니다.</li>
+    </ul>
+
+    <h3>메디케어 코페이 지불을 위한 도움</h3>
+    <p>소득이 제한적이라면 코페이를 전혀 내지 않아도 될 수 있습니다. 메디케어 절감 프로그램은 메디케어 비용 분담을 대신 지불해줄 수 있고, 추가 도움(저소득 보조금)은 파트 D 약제 코페이를 낮춰주며, 메디케어와 메디케이드를 모두 가진 사람들은 보통 거의 또는 전혀 내지 않습니다. 소득 한도는 많은 사람들이 예상하는 것보다 높습니다. 자격 여부를 확인하려면 <a href="/ko/getting-help.html">도움 받기</a>를 참고하세요.</p>
+
+    <p>이 페이지의 나머지 부분에서는 다섯 가지 비용 유형과 이들이 1년 동안 어떻게 합산되는지 설명합니다.</p>
+
+    <h2>다섯 가지 주요 비용 범주</h2>
+
+    <h3>보험료</h3>
+    <p><strong>보험료</strong>는 건강보장을 받기 위해 매달(또는 때로는 매년) 지불하는 금액입니다. 의료 서비스를 이용하든 안 하든 이 금액을 내야 합니다. 회원권 요금이라고 생각하면 됩니다: 이것 없이는 보험이 없는 것입니다.</p>
+
+    <h3>공제액</h3>
+    <p><strong>공제액(디덕터블)</strong>은 플랜이 자기 몫을 지불하기 시작하기 전에 본인이 직접 내야 하는 금액입니다. 일단 공제액을 다 내고 나면, 플랜이 나머지 비용을 돕기 시작합니다.</p>
+    <p><em>예시:</em> 공제액이 $1,000이고 병원을 방문한다고 가정해봅시다. 방문 비용이 $150이면 전액을 본인이 냅니다. 총 $900에 달하는 세 번의 추가 방문이 있다면 그것도 전액 본인이 내며—이제 총 $1,050을 냈으므로 $1,000 공제액을 충족합니다. 다음 청구부터는 플랜이 비용을 나누어 부담하기 시작합니다.</p>
+
+    <h3>코페이</h3>
+    <p><strong>공동부담금(코페이먼트)</strong>(또는 <strong>코페이</strong>)는 특정 서비스에 대해 지불하는 고정 금액입니다. 실제 서비스 비용과 관계없이 매번 동일합니다.</p>
+    <p><em>예시:</em> 플랜에서 일차 진료의 방문에 $30 코페이, 전문의 방문에 $50 코페이, 일반의약품 처방에 $5 코페이를 부과할 수 있습니다. 정확히 그 금액을 지불하며, 나머지 청구액은 플랜이 지불합니다(제공자가 네트워크 내에 있다고 가정할 때).</p>
+
+    <h3>공동보험금</h3>
+    <p><strong>공동보험금(코인슈런스)</strong>은 본인과 플랜이 나누어 부담하는 비용의 비율입니다. 플랜 문서에 본인 부담 비율(일반적으로 10%, 20%, 또는 30%)이 명시되며, 나머지는 플랜이 부담합니다.</p>
+    <p><em>예시:</em> 플랜의 외래 수술 공동보험금이 20%입니다. 수술 청구액이 $5,000이라고 가정해봅시다. 공제액을 충족한 후, 본인이 그 중 20%($1,000)를 내고, 플랜이 80%($4,000)를 지불합니다.</p>
+
+    <h3>본인 부담 비용 최대 한도</h3>
+    <p><strong>본인 부담 비용 최대 한도</strong>(또는 <strong>본인 부담 한도</strong>)는 본인이 스스로 지출하는 금액에 대한 연간 상한선입니다. 이 한도에 도달하면, 플랜은 그해 남은 기간 동안 모든 보장 서비스에 대해 100%를 지불합니다.</p>
+    <p><em>예시:</em> 본인 부담 비용 최대 한도가 $5,000입니다. 한 해 동안 공제액, 코페이, 공동보험금을 합쳐 $5,000를 냈습니다. 그 이후의 모든 의료비 청구는 플랜이 전액 부담합니다—본인은 $0를 냅니다.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="이메일로 MediPrimer 소식 받기">
+      <h2>가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.</h2>
+      <p>가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 외엔 없습니다. 광고 없음, 플랜 판매 없음.</p>
+      <form class="newsletter-form" data-lang="ko">
+        <label class="sr-only" for="nl-email">이메일 주소를 입력하세요</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소를 입력하세요">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 마감 전 알림 한 통, 그 후엔 평소처럼 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>1년 동안 이 비용들이 함께 작동하는 방식</h2>
+
+    <div class="note info">
+      <strong>예시로 살펴보는 한 해:</strong> 플랜 조건이 다음과 같다고 가정해봅시다: 월 $200 보험료, $1,500 공제액, 진료 방문 시 $30 코페이, 전문의 진료 시 20% 공동보험금, 그리고 $7,500 본인 부담 비용 최대 한도.
+      <br><br>
+      <strong>1월–3월:</strong> $200 보험료를 냅니다. 일차 진료의를 방문하고($30 코페이), $300 청구된 검사를 받고(전액을 공제액에 반영해 지불), $1,500 청구된 전문의 진료를 받습니다(20%인 $300을 지불, 이것도 공제액에 반영). 지금까지 본인 부담으로 $630을 냈으며, $1,500 공제액이 이제 충족되었습니다.
+      <br><br>
+      <strong>4월–8월:</strong> 전문의 방문이 더 있습니다. 매번 플랜이 80%를 부담하고 본인이 20% 공동보험금을 냅니다. 이 기간 동안 공동보험금으로 $3,000을 냅니다. 총 본인 부담 지출은 이제 $630 + $3,000 = $3,630입니다.
+      <br><br>
+      <strong>9월:</strong> $6,000이 청구된 응급 수술이 필요합니다. 20% 공동보험금이면 $1,200을 내야 합니다. 하지만 $1,200 + $3,630 = $4,830으로, 여전히 $7,500 본인 부담 비용 최대 한도 이하입니다. $1,200을 지불합니다.
+      <br><br>
+      <strong>10월–12월:</strong> 입원을 하게 됩니다. 청구액은 $8,000이며, 본인 몫은 $1,600이 됩니다. 하지만 $1,200 + $1,600 = $2,800으로, $7,500 본인 부담 최대 한도를 $1,300 초과합니다. 따라서 본인은 $1,300만 냅니다(총액을 $7,500로 맞춤). 플랜이 나머지 $6,700을 지불합니다. 그해 남은 기간 동안 본인 부담은 $0입니다.
+    </div>
+
+    <h2>메디케어 관련 비용</h2>
+
+    <h3>파트 A와 파트 B</h3>
+    <p>메디케어는 서로 다른 유형의 보장에 대해 별도의 비용을 부과합니다:</p>
+    <ul>
+      <li><strong>파트 A(병원 보험)</strong>는 입원, 전문 요양, 호스피스, 그리고 일부 재가 간호를 보장합니다. 대부분의 사람들은 보험료를 내지 않지만, 입원과 전문 요양 시설에서의 장기 입소에 대해 공제액과 공동보험금을 부담합니다.</li>
+      <li><strong>파트 B(의료 보험)</strong>는 진료 방문, 외래 서비스, 검사를 보장합니다. 월 보험료와 연간 공제액이 있으며, 그 후 대부분의 서비스에 대해 일반적으로 20% 공동보험금을 냅니다.</li>
+    </ul>
+
+    <h3>파트 B 보험료와 IRMAA</h3>
+    <p>파트 B 보험료는 소득에 따라 결정됩니다. 고소득자는 <strong>소득 관련 월 조정 금액(IRMAA)</strong>이라는 추가 부담금을 통해 더 많이 냅니다. 소득 기준과 추가 부담금은 CMS가 매년 정합니다. 사람들이 흔히 놓치는 두 가지가 있습니다:</p>
+    <ul>
+      <li><strong>2년 전 소득을 기준으로 합니다.</strong> 사회보장국은 2년 전 세금 신고서에 나온 소득을 사용합니다. 부부 공동 신고를 하는 경우, 부부 합산 소득이 기준이 되며—추가 부담금은 각 배우자 본인의 보험료에 각각 추가됩니다.</li>
+      <li><strong>생활 변화 후에는 이의신청을 할 수 있습니다.</strong> 은퇴, 근무시간 단축, 결혼, 이혼, 또는 배우자 사별 등으로 그 세금 신고서 이후 소득이 줄었다면, 사회보장국에 더 낮아진 새 소득을 사용해 달라고 요청하세요. <a href="https://www.ssa.gov/medicare/lower-irmaa" rel="noopener">SSA-44 양식</a>을 제출하거나 1-800-772-1213으로 전화하세요. 많은 신규 은퇴자들이 재산정을 요청할 수 있다는 사실을 모른 채 1~2년간 추가 부담금을 냅니다. 전체 안내: <a href="/ko/irmaa-appeal-ssa-44.html">SSA-44 양식으로 IRMAA 이의신청하기, 단계별 안내</a>.</li>
+    </ul>
+    <p>현재 파트 B 보험료와 IRMAA 기준에 대해서는 <a href="https://www.medicare.gov/">Medicare.gov</a>를 방문하세요. 부부의 경우: 가구 단위로 이것이 어떻게 적용되는지는 <a href="/ko/planning-for-two.html">부부를 위한 계획</a>을 참고하세요. 공개 가입 기간을 앞두고: 지금까지 확정된 내용은 <a href="/ko/medicare-costs-2027.html">2027년 메디케어 비용에서 달라지는 점</a>을 참고하세요.</p>
+
+    <h3>파트 C(메디케어 어드밴티지)</h3>
+    <p>메디케어 어드밴티지 플랜은 메디케어와 계약을 맺은 민간 보험사가 제공합니다. 대개 오리지널 메디케어보다 보험료가 낮거나 없지만, 코페이와 공동보험금을 사용합니다. 플랜마다 비용이 다릅니다.</p>
+
+    <h3>파트 D(처방약 보장)</h3>
+    <p>파트 D에는 네 가지 뚜렷한 비용 단계가 있습니다:</p>
+    <ol>
+      <li><strong>공제액 단계:</strong> 플랜의 공제액에 도달할 때까지 처방약 전체 비용을 본인이 부담합니다.</li>
+      <li><strong>초기 보장 단계:</strong> 공제액을 낸 후, 코페이 또는 공동보험금을 내고 나머지는 플랜이 보장합니다.</li>
+      <li><strong>보장 격차(도넛홀):</strong> 총 약값이 일정 금액에 도달하면 도넛홀에 진입합니다. 약값의 더 높은 비율을 본인이 부담하지만, 재난적 보장이 본인 부담 지출을 제한합니다.</li>
+      <li><strong>재난적 보장 단계:</strong> 본인 부담 비용이 연간 한도에 도달하면, 소액 코페이 또는 공동보험금만 내고 나머지는 플랜이 보장합니다.</li>
+    </ol>
+    <p>파트 D 규정은 매년 바뀝니다. 현재 단계와 기준에 대해서는 <a href="https://www.medicare.gov/">Medicare.gov</a>를 참고하세요.</p>
+
+    <h2>ACA 마켓플레이스(보험 거래소) 보조금</h2>
+
+    <p><strong>ACA 마켓플레이스(보험 거래소)</strong>(건강보험 마켓플레이스라고도 함)를 통해 건강보험 플랜에 가입하면, 소득에 따라 재정 지원을 받을 자격이 될 수 있습니다:</p>
+    <ul>
+      <li><strong>보험료 세액 공제</strong>는 월 보험료를 낮춰줍니다. 보험사가 공제액을 받아 매달 본인이 내는 금액을 낮춰줍니다.</li>
+      <li><strong>비용 분담 감면(CSR)</strong>은 실버 등급 플랜을 선택하고 소득 기준에 해당하는 경우 공제액, 코페이, 공동보험금을 낮춰줍니다.</li>
+    </ul>
+    <p>이 보조금들은 소득에 따라 결정되며 매년 바뀝니다. 실제 지불 금액은 연방 빈곤선 대비 가구 소득에 따라 달라집니다. 현재 소득 한도를 확인하고 보조금을 예상해보려면 <a href="https://www.healthcare.gov/">HealthCare.gov</a>를 방문하세요.</p>
+
+    <h2>메디케이드</h2>
+
+    <p><strong>메디케이드</strong>는 주와 연방이 공동으로 운영하는 프로그램으로, 혜택과 비용이 주마다 크게 다릅니다. 일반적으로 메디케이드는 자격이 있는 회원에게 보험료, 공제액, 코페이가 거의 또는 전혀 없습니다. 일부 주에서는 특정 서비스에 소액 코페이를 부과하지만, 비용 분담은 대개 민간 보험이나 메디케어보다 훨씬 낮습니다.</p>
+    <p>거주하는 주의 메디케이드 비용을 알아보려면 <a href="https://www.medicaid.gov/">Medicaid.gov</a>를 통해 해당 주의 메디케이드 웹사이트를 방문하세요.</p>
+
+    <h2>비용 용어 한눈에 보기</h2>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>용어</th>
+            <th>의미</th>
+            <th>지불 시점</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>보험료</strong></td>
+            <td>보장을 위한 월간(또는 연간) 회원권 요금</td>
+            <td>진료 이용 여부와 관계없이 매달</td>
+          </tr>
+          <tr>
+            <td><strong>공제액</strong></td>
+            <td>플랜이 돕기 시작하기 전에 본인이 내야 하는 금액</td>
+            <td>플랜이 비용 분담을 시작하기 전; 매년 초기화</td>
+          </tr>
+          <tr>
+            <td><strong>코페이</strong></td>
+            <td>특정 서비스에 대한 고정 금액</td>
+            <td>서비스를 받을 때(또는 플랜에 따라 공제액 이후)</td>
+          </tr>
+          <tr>
+            <td><strong>공동보험금</strong></td>
+            <td>본인이 부담하는 비율</td>
+            <td>공제액 충족 후; 본인과 플랜이 청구액을 나눔</td>
+          </tr>
+          <tr>
+            <td><strong>본인 부담 비용 최대 한도</strong></td>
+            <td>총 본인 부담 비용에 대한 연간 상한선</td>
+            <td>도달 시, 플랜이 남은 기간 100% 부담</td>
+          </tr>
+          <tr>
+            <td><strong>IRMAA</strong></td>
+            <td>파트 B에 대한 메디케어 소득 관련 추가 부담금</td>
+            <td>소득이 기준을 초과하면 파트 B 보험료에 추가됨</td>
+          </tr>
+          <tr>
+            <td><strong>보험료 세액 공제</strong></td>
+            <td>보험료를 낮춰주는 마켓플레이스(보험 거래소) 보조금</td>
+            <td>보험사에 직접 지급; 매달 청구액을 낮춤</td>
+          </tr>
+          <tr>
+            <td><strong>비용 분담 감면</strong></td>
+            <td>공제액과 코페이를 낮춰주는 마켓플레이스(보험 거래소) 보조금</td>
+            <td>진료를 받을 때 내야 하는 금액을 낮춤</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>핵심 요약</h2>
+
+    <ul>
+      <li><strong>보험료</strong>는 보장을 받기 위해 내는 금액이며, 다른 비용은 진료를 이용할 때 발생합니다.</li>
+      <li><strong>공제액</strong>은 가장 먼저 본인이 내는 금액이며; 이를 충족하면 플랜이 비용 분담을 시작합니다.</li>
+      <li><strong>본인 부담 비용 최대 한도</strong>는 연간 지출 상한선을 정하며; 이 한도에 도달하면 플랜이 100%를 부담합니다.</li>
+      <li>오리지널 메디케어, 메디케어 어드밴티지, 마켓플레이스(보험 거래소) 플랜, 메디케이드 등 서로 다른 프로그램은 비용 구조가 다릅니다.</li>
+      <li>메디케어(IRMAA 조정)와 마켓플레이스(보험 거래소) 플랜(세액 공제 및 비용 분담 감면) 모두 소득 기반 도움을 받을 수 있습니다.</li>
+    </ul>
+
+    <div class="note">
+      <strong>이 비용들을 플랜 및 공식 출처를 통해 확인하세요.</strong> 모든 플랜은 보험료, 공제액, 코페이, 공동보험금이 다릅니다. 플랜 문서, 보험사 웹사이트를 확인하거나 보험 카드 뒷면의 회원 서비스 번호로 전화하세요. 메디케어의 경우 <a href="https://www.medicare.gov/">Medicare.gov</a>를 방문하세요. 마켓플레이스(보험 거래소) 플랜과 보조금은 <a href="https://www.healthcare.gov/">HealthCare.gov</a>로 이동하세요. 메디케이드는 거주하는 주의 메디케이드 기관에 문의하세요. MediPrimer는 독립적인 교육 자료이며 CMS, 메디케어, 메디케이드, 어떠한 주 기관, 또는 어떠한 보험사와도 제휴 관계가 없습니다.
+    </div>
+
+      <!--P:free-help-->
+<div class="note tip">
+      <strong>이 문제에 대해 무료로, 공정한 도움을 받고 싶으신가요?</strong> <a href="/ship-directory.html">SHIP 상담사</a>는 메디케어에 대해 무료로 일대일 안내를 제공하며 아무것도 판매하지 않습니다. 메디케이드에 대해서는 <a href="/state-medicaid.html">주 정부 기관</a>에 문의하세요. 1-800-MEDICARE (1-800-633-4227)로 전화하실 수도 있습니다.
+    </div>
+<!--/P:free-help-->
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+    <div class="note">
+      <p>영어 원문 번역본입니다.</p>
+      <p>
+        <a href="/costs.html">영어 원문 보기</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">메디케어 공식 한국어 자료</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

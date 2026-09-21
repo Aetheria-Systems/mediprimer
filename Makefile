@@ -10,7 +10,7 @@ LIVE  := /var/www/mediprimer/public
 .PHONY: build check deploy
 
 build:
-	cd $(PUB) && python3 ../build/normalize.py && python3 ../build/assemble.py && python3 ../build/render_diagrams.py &&	python3 ../build/hot_topics.py && python3 ../build/newsletter_block.py && python3 ../build/apply_lang_titles.py && python3 ../build/seo.py $(DATE)
+	cd $(PUB) && python3 ../build/normalize.py && python3 ../build/assemble.py && python3 ../build/render_diagrams.py &&	python3 ../build/hot_topics.py && python3 ../build/newsletter_block.py && python3 ../build/apply_lang_titles.py && python3 ../build/seo.py $(DATE) && python3 ../build/relink_missing_translations.py
 
 check: build
 	@set -e; for f in $(PUB)/*.js; do node --check $$f; done
@@ -20,6 +20,7 @@ check: build
 	python3 build/check_language_coverage.py
 	python3 build/check_chrome_labels.py
 	python3 build/check_chatbot_injected.py
+	python3 update/validate.py
 
 deploy: check
 	python3 build/factdiff.py
