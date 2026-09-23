@@ -40,7 +40,10 @@ SCAFFOLD = '''  "use strict";
 '''
 
 # Inline elements whose text content is shown to the reader.
-TAGS = ["span", "h2", "h3", "h4", "button", "legend", "summary", "strong", "em", "label", "option", "p"]
+# `a` and the block tags matter as much as `span`: the first pass omitted them
+# and left 19 strings of link text untranslated in medicare-navigator.js alone.
+TAGS = ["span", "h2", "h3", "h4", "h5", "button", "legend", "summary", "strong",
+        "em", "label", "option", "p", "a", "li", "td", "th", "div", "small"]
 
 
 def wrap(src):
@@ -49,7 +52,13 @@ def wrap(src):
     def repl(m):
         nonlocal n
         open_tag, text, close_tag = m.group(1), m.group(2), m.group(3)
-        if "t(" in text or not re.search(r"[A-Za-z]{3}", text):
+        # Only wrap plain prose. Text containing a quote or a + is a
+        # concatenation boundary, i.e. `"<h3>" + esc(o.name) + "</h3>"`, where
+        # the "text" is a VARIABLE. Wrapping that produced
+        # `"<h3>' + t('" + esc(o.name) + "') + '</h3>"` — valid syntax that
+        # renders raw JavaScript to the reader. It slipped through twice.
+        if ("t(" in text or '"' in text or "+" in text
+                or not re.search(r"[A-Za-z]{3}", text)):
             return m.group(0)
         n += 1
         return f"{open_tag}' + t('{text.replace(chr(39), chr(92) + chr(39))}') + '{close_tag}"
