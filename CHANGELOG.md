@@ -1,5 +1,60 @@
 # Changelog
 
+## 2026-09-21 / 22 — Indexing, Core Web Vitals, cannibalisation, AI-search readiness
+
+**Indexing and crawl.** Google was fetching roughly 7 URLs a day against 774
+pages, and 52 of 130 English pages had gone 28 days with zero impressions —
+none of them linked from the homepage. Added an "Answers to specific questions"
+section linking 25 of them, grouped by what readers ask. Within a day Google's
+verified crawl rate went to 115 requests, every one of those 25 pages was
+crawled, and Special Needs Plans, Medicare Savings Programs and Medigap
+Plan G vs N moved from "Discovered – currently not indexed" to indexed. The
+Spanish Special Needs Plans page indexed the same day.
+
+**Core Web Vitals restored to 100.** The 2026-09-17 analytics deferral fixed
+FCP but broke LCP: its 3-second fallback fired inside the LCP measurement
+window, gtag.js produced 74ms and 50ms long tasks at ~2.7s, and LCP landed at
+3.5-3.9s. It was intermittent (costs.html measured 919ms and 3872ms on
+consecutive runs), which is why a single check missed it for five days.
+Analytics now loads only after LCP is final — first interaction, page hidden,
+or a 15s fallback. Eight runs across four pages: LCP 901-964ms, scores 98-100.
+
+**Keyword cannibalisation.** 39% of impressions were on queries where two or
+three MediPrimer pages competed with each other. Fixed the two real clusters:
+star ratings (54 queries — consumer page was misclassified as "professionals"
+and had 7 inbound links against the technical page's 130) and the Spanish
+eligibility cluster (2,166 impressions). English is now down to 46 impressions
+of brand-typo noise.
+
+**Favicon and share card.** The site had neither. `/favicon.ico` 404'd —
+Googlebot requested it and got the 404 — so search results showed a generic
+globe on a health site, and every shared link rendered as a bare text preview.
+Added a favicon set, a 1200x630 Open Graph card, and a web manifest, all six
+languages on the card.
+
+**AI-search (GEO) readiness.** AI assistants now handle an estimated 12-18% of
+English informational queries and cite specific, self-contained statements near
+the top of a page. 45 pages had no such summary; 37 now do, generated under a
+hard constraint that rejects any summary containing a number absent from the
+source page.
+
+**Dead links.** `/ko/costs.html` was linked from 126 Korean pages and served a
+404; 789 dead-link instances existed in total, because a language launches at
+90% completeness while links are written for 100%. Nav and body links now fall
+back to English when a translation does not exist, and `update/validate.py`
+walks translated pages and runs inside `make check`.
+
+**Vietnamese pages were serving Spanish.** Eight pages carried Spanish
+headings and paragraphs, introduced by concurrent translation runs on
+2026-09-18 before the single-instance lock existed. All eight re-translated
+clean.
+
+**Translation sync no longer skips silently.** The 21:00 language rollout holds
+the translation lock for up to nine hours, straight through the 03:00 sync,
+which logged a SKIP, passed over every launched language and exited 0. The live
+languages quietly stopped being updated on any night a rollout ran. The sync now
+waits for the lock and fails loudly if it never gets it.
+
 ## 2026-09-03 — Content corrections + pipeline git parity
 
 - **Glossary fix**: "redetermination" wrongly described an appeal; now defined
