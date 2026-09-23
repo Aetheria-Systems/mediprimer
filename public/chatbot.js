@@ -1,6 +1,43 @@
 (function () {
   "use strict";
 
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {
+    "es": {
+    "Ask about Medicare or Medicaid…": "Pregunte sobre Medicare o Medicaid…",
+    "Ask MediBot a question": "Hágale una pregunta a MediBot",
+    "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.": "Lo sentimos, ocurrió un error. Inténtelo de nuevo o, mientras tanto, consulte las páginas del sitio."
+},
+    "zh-Hant": {
+    "Ask about Medicare or Medicaid…": "詢問 Medicare 或 Medicaid 的相關問題……",
+    "Ask MediBot a question": "向 MediBot 提問",
+    "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.": "抱歉,發生了一些問題。請再試一次,或先查看網站上的相關頁面。"
+},
+    "vi": {
+    "Ask about Medicare or Medicaid…": "Hỏi về Medicare hoặc Medicaid…",
+    "Ask MediBot a question": "Đặt câu hỏi cho MediBot",
+    "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.": "Xin lỗi, đã có lỗi xảy ra. Vui lòng thử lại, hoặc xem các trang khác của trang web trong lúc chờ."
+},
+    "ko": {
+    "Ask about Medicare or Medicaid…": "Medicare 또는 Medicaid에 대해 물어보세요…",
+    "Ask MediBot a question": "MediBot에게 질문하기",
+    "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.": "죄송합니다. 문제가 발생했습니다. 다시 시도해 주시거나, 그 동안 사이트의 다른 페이지를 확인해 보세요."
+},
+    "tl": {
+    "Ask about Medicare or Medicaid…": "Magtanong tungkol sa Medicare o Medicaid…",
+    "Ask MediBot a question": "Magtanong sa MediBot",
+    "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.": "Paumanhin, may nangyaring mali. Subukan muli, o samantalang naghihintay, tingnan ang mga pahina ng site."
+}
+  };
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
+
   var history = [];
 
   function el(tag, className, text) {
@@ -45,8 +82,8 @@
     var form = el("form", "mp-chatbot-form");
     var input = el("input", "mp-chatbot-input");
     input.type = "text";
-    input.placeholder = "Ask about Medicare or Medicaid…";
-    input.setAttribute("aria-label", "Ask MediBot a question");
+    input.placeholder = t("Ask about Medicare or Medicaid…");
+    input.setAttribute("aria-label", t("Ask MediBot a question"));
     var submit = el("button", "mp-chatbot-submit", "Send");
     submit.type = "submit";
 
@@ -130,7 +167,7 @@
       })
       .catch(function () {
         pending.textContent =
-          "Sorry, something went wrong. Try again, or check the site's own pages in the meantime.";
+          t("Sorry, something went wrong. Try again, or check the site's own pages in the meantime.");
       })
       .then(onDone, onDone); // runs after either branch above, success or failure
   }

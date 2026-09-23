@@ -4,6 +4,48 @@
 (function () {
   "use strict";
 
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {
+    "es": {
+    "a": "a",
+    "p": "p",
+    "No terms match your search.": "No hay resultados para tu búsqueda.",
+    "q": "q"
+},
+    "zh-Hant": {
+    "a": "a",
+    "p": "p",
+    "No terms match your search.": "沒有符合搜尋條件的詞彙。",
+    "q": "q"
+},
+    "vi": {
+    "a": "a",
+    "p": "p",
+    "No terms match your search.": "Không có mục nào khớp với tìm kiếm của bạn.",
+    "q": "q"
+},
+    "ko": {
+    "a": "가",
+    "p": "다",
+    "No terms match your search.": "일치하는 용어가 없습니다.",
+    "q": "검색어"
+},
+    "tl": {
+    "a": "a",
+    "p": "p",
+    "No terms match your search.": "Walang mga terminong tumutugma sa iyong paghahanap.",
+    "q": "q"
+}
+  };
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
+
   var list = document.getElementById("glossary-list");
   var search = document.getElementById("glossary-search");
   var letterNav = document.getElementById("letter-nav");
@@ -43,7 +85,7 @@
   // Empty-state message element.
   var empty = document.createElement("p");
   empty.className = "glossary-empty";
-  empty.textContent = "No terms match your search.";
+  empty.textContent = t("No terms match your search.");
   empty.hidden = true;
   list.parentNode.insertBefore(empty, list.nextSibling);
 
