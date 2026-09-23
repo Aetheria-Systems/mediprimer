@@ -16,14 +16,32 @@ Những câu hỏi giúp bạn nhận được câu trả lời rõ ràng về m
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script>
-/* Analytics is loaded AFTER first paint, not during it.
-   PageSpeed (2026-09-17) measured First Contentful Paint at 2.5s and LCP at
-   3.4s on mobile with a 60ms server response — the only opportunity Lighthouse
-   flagged was 69 KiB of unused JavaScript, almost all of it gtag.js competing
-   for bandwidth on a throttled connection before anything had rendered.
-   `async` still downloads immediately; this waits for load (or 3s, or the
-   first interaction, whichever comes first) so the page paints first.
-   Trade-off: sessions that end in the first second may go uncounted. */
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 (function () {
@@ -38,12 +56,21 @@ function gtag(){dataLayer.push(arguments);}
     gtag("js", new Date());
     gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
   }
-  if (document.readyState === "complete") { setTimeout(startAnalytics, 0); }
-  else { window.addEventListener("load", function () { setTimeout(startAnalytics, 0); }); }
-  setTimeout(startAnalytics, 3000);
-  ["scroll", "pointerdown", "keydown"].forEach(function (evt) {
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
     window.addEventListener(evt, startAnalytics, { once: true, passive: true });
   });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
   var printMq = window.matchMedia("print");
   function onPrintChange(e) {
     if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
