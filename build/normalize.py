@@ -95,7 +95,7 @@ ACTIVE = {
     "medicare-part-b-giveback.html": "members",
     "medicare-prescription-payment-plan.html": "members",
     "medicare-spouse-work-record.html": "members",
-    "medicare-star-ratings.html": "professionals",
+    "medicare-star-ratings.html": "members",
     "medicare-summary-notice.html": "members",
     "medicare-telehealth.html": "members",
     "medicare-vaccines.html": "members",
