@@ -26,6 +26,9 @@ TOOLS = {
     "medicare-navigator.js": "medicare-navigator",
     "priorities.js": "priorities-tool",
     "your-state.js": "your-state",
+    "chatbot.js": "medibot-root",
+    "glossary.js": "glossary-list",
+    "lang-suggest.js": "lang-banner",
 }
 
 HARNESS = r"""
@@ -36,14 +39,29 @@ const fs = require('fs');
 const file = process.argv[2], rootId = process.argv[3], lang = process.argv[4];
 let out = '';
 function mkEl(tag) {
-  return {
-    tagName: tag, children: [], style: {}, classList: {add(){}, contains(){return false}},
+  // Attribute-delivered text counts: chatbot.js sets its placeholder and
+  // aria-label rather than writing markup, so a harness that only captured
+  // innerHTML saw an empty string and reported every language as "identical
+  // to English". Capture the visible attributes too.
+  const el = {
+    tagName: tag, children: [], style: {}, classList: {add(){}, remove(){}, toggle(){}, contains(){return false}},
     set innerHTML(v) { out += v; }, get innerHTML() { return ''; },
     set textContent(v) { out += v; }, get textContent() { return ''; },
-    setAttribute(){}, getAttribute(){ return null; }, appendChild(){}, addEventListener(){},
-    insertAdjacentHTML(_p, h){ out += h; }, querySelector(){ return mkEl('div'); },
-    querySelectorAll(){ return []; }, scrollIntoView(){}, focus(){}, remove(){},
+    set placeholder(v) { out += v; }, get placeholder() { return ''; },
+    set title(v) { out += v; }, get title() { return ''; },
+    set value(v) { out += v; }, get value() { return ''; },
+    setAttribute(k, v){ if (/aria-label|placeholder|title|alt/.test(k)) out += v; },
+    getAttribute(){ return null; }, removeAttribute(){},
+    appendChild(c){ return c; }, insertBefore(c){ return c; }, removeChild(c){ return c; },
+    addEventListener(){}, removeEventListener(){},
+    insertAdjacentHTML(_p, h){ out += h; },
+    querySelector(){ return mkEl('div'); }, querySelectorAll(){ return []; },
+    scrollIntoView(){}, focus(){}, remove(){}, closest(){ return null; }, contains(){ return false; },
+    cloneNode(){ return mkEl(tag); }, getBoundingClientRect(){ return {top:0,left:0,width:0,height:0}; },
   };
+  el.parentNode = { insertBefore(c){ return c; }, removeChild(c){ return c; }, appendChild(c){ return c; } };
+  el.firstChild = null; el.nextElementSibling = null; el.dataset = {};
+  return el;
 }
 global.document = {
   documentElement: { lang, getAttribute: (a) => (a === 'lang' ? lang : null) },

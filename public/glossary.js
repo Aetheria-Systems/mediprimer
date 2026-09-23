@@ -9,6 +9,7 @@
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
   var I18N = {
+    "en": {},   // English is the fallback: the t() key IS the source string
     "es": {
     "a": "a",
     "p": "p",

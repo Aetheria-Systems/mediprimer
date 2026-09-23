@@ -10,6 +10,7 @@
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
   var I18N = {
+    "en": {},   // English is the fallback: the t() key IS the source string
     "es": {
     "Seeing any doctor or hospital that takes Medicare, and keeping my own doctors": "Consultar a cualquier médico u hospital que acepte Medicare, y mantener a mis propios médicos",
     "A lower monthly premium": "Una prima mensual más baja",

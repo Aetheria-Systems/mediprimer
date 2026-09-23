@@ -6,6 +6,7 @@
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
   var I18N = {
+    "en": {},   // English is the fallback: the t() key IS the source string
     "es": {
     "Ask about Medicare or Medicaid…": "Pregunte sobre Medicare o Medicaid…",
     "Ask MediBot a question": "Hágale una pregunta a MediBot",

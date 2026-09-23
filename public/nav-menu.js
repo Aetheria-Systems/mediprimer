@@ -9,7 +9,9 @@
      translation degrades to English rather than breaking the tool.
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
-  var I18N = {};
+  var I18N = {
+    "en": {}   // English is the fallback: the t() key IS the source string
+  };
   var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
   function t(en) {
     var tbl = I18N[MP_LANG];
