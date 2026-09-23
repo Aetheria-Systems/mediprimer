@@ -3,6 +3,58 @@
 (function () {
   "use strict";
 
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {
+    "es": {
+    "-": "-",
+    "/": "/",
+    "div": "div",
+    "button": "botón",
+    "Dismiss": "Cerrar",
+    "a": "a"
+},
+    "zh-Hant": {
+    "-": "-",
+    "/": "/",
+    "div": "div",
+    "button": "按鈕",
+    "Dismiss": "關閉",
+    "a": "a"
+},
+    "vi": {
+    "-": "-",
+    "/": "/",
+    "div": "div",
+    "button": "nút",
+    "Dismiss": "Đóng",
+    "a": "a"
+},
+    "ko": {
+    "-": "-",
+    "/": "/",
+    "div": "div",
+    "button": "button",
+    "Dismiss": "닫기",
+    "a": "a"
+},
+    "tl": {
+    "-": "-",
+    "/": "/",
+    "div": "div",
+    "button": "button",
+    "Dismiss": "Isara",
+    "a": "a"
+}
+  };
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
+
   // MP_LANGS is injected as a global object {code: "banner text", ...} by the header renderer.
   if (typeof window.MP_LANGS === "undefined" || typeof window.MP_LANGS !== "object" || Array.isArray(window.MP_LANGS)) {
     return;
@@ -76,7 +128,7 @@
   var closeBtn = document.createElement("button");
   closeBtn.type = "button";
   closeBtn.className = "lang-banner-close";
-  closeBtn.setAttribute("aria-label", "Dismiss");
+  closeBtn.setAttribute("aria-label", t("Dismiss"));
   closeBtn.textContent = "\xd7"; // × character
 
   // Use localized banner text from MP_LANGS object

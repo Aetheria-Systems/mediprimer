@@ -7,6 +7,17 @@
 (function () {
   "use strict";
 
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {};
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
+
   // Short, plain, tooltip-sized definitions. Longer entries live in /glossary.html.
   // Order longest-first so multi-word terms match before their sub-words.
   var TERMS = [

@@ -4,6 +4,17 @@
    and closing when you click away or focus leaves. */
 (function () {
   "use strict";
+
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {};
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
   var header = document.querySelector(".site-header");
   if (!header) return;
   var nav = header.querySelector("nav.main");
