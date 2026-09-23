@@ -2,6 +2,60 @@
 
 Strategic decisions and pivots, with the reasoning. Newest first.
 
+## 2026-09-21 — Pause new languages; the constraint is authority, not content
+
+New-language rollout is suspended. Ten languages stay frozen (ru, ar, ht, pt,
+fr, pl, hi, ja, fa, de); the six live ones (en, es, zh-Hant, vi, ko, tl) keep
+being maintained.
+
+The reasoning is a measurement, not a preference. Over 28 days the site drew
+14,853 impressions and 45 clicks — a 0.30% click-through rate — and **89% of
+those impressions came from position 21 or worse**, where clicks effectively do
+not exist. Only three queries sat in the winnable 4-20 range with real volume.
+That is not a content problem and not a titles problem: titles only help a page
+already on the first page of results. It is a ranking-authority problem.
+
+Underneath it is a crawl-budget problem. Older English, Spanish and Chinese
+pages are indexed, but the 28 pages published on 2026-09-15 sat at "Discovered
+– currently not indexed" and all of Vietnamese, Korean and Tagalog was "URL is
+unknown to Google". The site had tripled to 774 pages and Google had stopped
+keeping up, fetching about 7 URLs a day. **Each additional language adds ~130
+pages to a queue that is already starved, so adding languages actively makes
+the traffic problem worse.**
+
+Ruled out by measurement, so they should not be re-investigated: thin content
+(median 1,332 words, one page under 300), duplicate content (no page pair above
+58% body-vocabulary overlap), hreflang and canonicals (reciprocal, x-default
+present, self-referencing), robots.txt, and server performance (~23ms).
+
+Enforced in three places, because a commented-out cron only stops the
+scheduler: the crontab line, `seo/ROLLOUT_SUSPENDED` (which
+`seo/language-rollout.sh` checks before doing anything, so a direct invocation
+by a human or an agent is also refused), and `stall-watch.py` reading the
+crontab so a paused job is not reported as a stalled one. Resuming is a
+deliberate act: delete the file, uncomment the line.
+
+## 2026-09-22 — Optimise for AI search, not only for Google
+
+AI assistants now handle an estimated 12-18% of English informational queries,
+up from under 2% a year earlier, and they select what to cite differently from
+how Google ranks. Google gates heavily on domain authority — precisely what a
+site three months old cannot have. AI engines weight specificity, clean
+structure, self-contained factual claims and visible provenance, all of which
+can be built rather than earned.
+
+A small, rigorously structured, six-language site on one narrow topic is close
+to the ideal shape for AI citation and badly disadvantaged for classic search.
+So the site now deliberately carries the signals those engines use: a
+short-answer lead paragraph near the top of every substantial page (121 of
+130), a visible author byline and update date on all 130, inline links to
+primary .gov sources on all 130, FAQ markup on 72, and data tables on 58.
+
+This does not replace the Google work; it is a second channel with a much
+shorter feedback loop, measurable as referral traffic from chatgpt.com,
+perplexity.ai, copilot.com and Gemini.
+
+
 ## 2026-07-13 — Measure usage with Google Analytics
 
 The site launched with a strict no-analytics stance. That left no way to know
