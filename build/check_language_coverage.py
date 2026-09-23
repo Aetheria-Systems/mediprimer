@@ -74,6 +74,9 @@ check_js("public/help-paying.js", "help-paying questionnaire")
 check_js("public/medicare-navigator.js", "coverage navigator")
 check_js("public/priorities.js", "priorities tool")
 check_js("public/your-state.js", "state lookup")
+check_js("public/chatbot.js", "MediBot chat UI")
+check_js("public/glossary.js", "glossary search")
+check_js("public/lang-suggest.js", "language banner")
 
 if problems:
     print("check_language_coverage: FAILED", file=sys.stderr)

@@ -53,8 +53,12 @@ def render(items):
             '      </a>'.format(**it))
     return (
         f"{START}\n"
-        '    <section class="hot-topics" aria-label="Happening right now">\n'
-        '      <h2>Happening right now</h2>\n'
+        # aria-labelledby, not aria-label: the heading is translated on every
+        # language page, a duplicated aria-label was not (screen-reader users
+        # in zh-Hant/vi/ko heard English). Referencing the heading means the
+        # accessible name follows the translation automatically.
+        '    <section class="hot-topics" aria-labelledby="hot-topics-heading">\n'
+        '      <h2 id="hot-topics-heading">Happening right now</h2>\n'
         '      <div class="grid">\n' + "\n".join(cards) + "\n"
         '      </div>\n'
         '    </section>\n'

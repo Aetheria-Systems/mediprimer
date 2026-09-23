@@ -11,6 +11,7 @@
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
   var I18N = {
+    "en": {},   // English is the fallback: the t() key IS the source string
     "es": {
     "Still working — employer has 20+ employees": "Todavía trabajando — el empleador tiene 20 o más empleados",
     "Still working — employer has fewer than 20 employees": "Todavía trabajando — el empleador tiene menos de 20 empleados",
