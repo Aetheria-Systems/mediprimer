@@ -18,6 +18,7 @@ check: build
 	@python3 build/readability.py | grep -q 'Over target (grade > 9.5): 0' \
 		|| { echo 'FAIL: member pages over plain-language target (grade > 9.5)'; exit 1; }
 	python3 build/check_language_coverage.py
+	python3 build/check_tool_render.py
 	python3 build/check_chrome_labels.py
 	python3 build/check_chatbot_injected.py
 	python3 update/validate.py

@@ -9,31 +9,51 @@
      Filled by build/gen_tool_strings.py; enforced by
      build/check_language_coverage.py. */
   var I18N = {
-    "en": {},   // English is the fallback: the t() key is the source string
+    "en": {},   // English is the fallback: the t() key IS the source string
     "es": {
-    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
-    "\" + blurb + \"": "\" + blurb + \"",
-    "option": "opción"
+    "option": "opción",
+    "All Medicaid agencies": "Todas las agencias de Medicaid",
+    "All SHIPs": "Todos los SHIP",
+    "All insurance departments": "Todos los departamentos de seguros",
+    "Medicaid": "Medicaid",
+    "SHIP": "SHIP",
+    "Insurance Departments": "Departamentos de Seguros"
 },
     "zh-Hant": {
-    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
-    "\" + blurb + \"": "\" + blurb + \"",
-    "option": "選項"
+    "option": "選項",
+    "All Medicaid agencies": "所有 Medicaid 機構",
+    "All SHIPs": "所有 SHIP",
+    "All insurance departments": "所有保險部門",
+    "Medicaid": "Medicaid",
+    "SHIP": "SHIP",
+    "Insurance Departments": "保險部門"
 },
     "vi": {
-    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
-    "\" + blurb + \"": "\" + blurb + \"",
-    "option": "tùy chọn"
+    "option": "tùy chọn",
+    "All Medicaid agencies": "Tất cả cơ quan Medicaid",
+    "All SHIPs": "Tất cả SHIP",
+    "All insurance departments": "Tất cả sở bảo hiểm",
+    "Medicaid": "Medicaid",
+    "SHIP": "SHIP",
+    "Insurance Departments": "Sở Bảo Hiểm"
 },
     "ko": {
-    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
-    "\" + blurb + \"": "\" + blurb + \"",
-    "option": "옵션"
+    "option": "옵션",
+    "All Medicaid agencies": "모든 메디케이드 기관",
+    "All SHIPs": "모든 SHIP",
+    "All insurance departments": "모든 보험국",
+    "Medicaid": "메디케이드",
+    "SHIP": "SHIP",
+    "Insurance Departments": "보험국"
 },
     "tl": {
-    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
-    "\" + blurb + \"": "\" + blurb + \"",
-    "option": "opsyon"
+    "option": "pagpipilian",
+    "All Medicaid agencies": "Lahat ng ahensya ng Medicaid",
+    "All SHIPs": "Lahat ng SHIP",
+    "All insurance departments": "Lahat ng departamento ng insurance",
+    "Medicaid": "Medicaid",
+    "SHIP": "SHIP",
+    "Insurance Departments": "Mga Departamento ng Insurance"
 }
   };
   var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
@@ -52,8 +72,8 @@
     var link = o.url ? '<p class="contact"><a href="' + esc(o.url) + '" rel="noopener">' + esc(o.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + "</a></p>" : "";
     var phone = o.phone ? '<p class="contact">' + esc(o.phone) + "</p>" : "";
     return '<div class="resource"><span class="tag">' + tag + "</span>" +
-           "<h3>' + t('" + esc(o.name) + "') + '</h3>" + link + phone +
-           "<p>' + t('" + blurb + "') + '</p></div>";
+           "<h3>" + esc(o.name) + "</h3>" + link + phone +
+           "<p>" + blurb + "</p></div>";
   }
 
   fetch("/data/states.json").then(function (r) { return r.json(); }).then(function (data) {
@@ -71,11 +91,11 @@
         card("Medicaid", s.medicaid, "Apply for Medicaid/CHIP, check eligibility, and complete renewals.") +
         card("Medicare help (SHIP)", s.ship, "Free, unbiased one-on-one Medicare counseling. SHIP does not sell insurance.") +
         card("Insurance department", s.insurance, "Regulates Medigap and handles complaints about insurers and agents.") +
-        '<p class="reflinks"><a href="/state-medicaid.html">All Medicaid agencies</a> · <a href="/ship-directory.html">All SHIPs</a> · <a href="/insurance-departments.html">All insurance departments</a></p>';
+        '<p class="reflinks"><a href="/state-medicaid.html">' + t('All Medicaid agencies') + '</a> · <a href="/ship-directory.html">' + t('All SHIPs') + '</a> · <a href="/insurance-departments.html">' + t('All insurance departments') + '</a></p>';
     });
   }).catch(function () {
     out.innerHTML = '<p class="glossary-empty">Couldn’t load the state list. Use the full directories: ' +
-      '<a href="/state-medicaid.html">Medicaid</a>, <a href="/ship-directory.html">SHIP</a>, ' +
-      '<a href="/insurance-departments.html">Insurance Departments</a>.</p>';
+      '<a href="/state-medicaid.html">' + t('Medicaid') + '</a>, <a href="/ship-directory.html">' + t('SHIP') + '</a>, ' +
+      '<a href="/insurance-departments.html">' + t('Insurance Departments') + '</a>.</p>';
   });
 })();
