@@ -200,10 +200,23 @@ def seo_block(name, url, title, desc, mod_date, lang_code=None, in_language=None
             else:
                 raise SystemExit(f"seo.py: launched language {lang_code} missing og_locale in languages.json")
 
+    # Share card + icons. Until 2026-09-22 the site had neither: every link a
+    # partner organisation posted rendered as a bare text preview, and
+    # /favicon.ico 404'd (Googlebot asked for it and got the 404), so search
+    # results showed a generic globe next to a health site. summary_large_image
+    # needs og:image, so the card and the card type ship together.
     parts.extend([
-             '<meta name="twitter:card" content="summary">',
+             '<meta property="og:image" content="%s/og-image.png">' % BASE,
+             '<meta property="og:image:width" content="1200">',
+             '<meta property="og:image:height" content="630">',
+             '<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">',
+             '<meta name="twitter:card" content="summary_large_image">',
+             '<meta name="twitter:image" content="%s/og-image.png">' % BASE,
              '<meta name="twitter:title" content="%s">' % q(title),
-             '<meta name="twitter:description" content="%s">' % q(desc)])
+             '<meta name="twitter:description" content="%s">' % q(desc),
+             '<link rel="icon" href="/favicon.ico" sizes="any">',
+             '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
+             '<link rel="manifest" href="/site.webmanifest">'])
     if name == "index.html":
         parts.append(ld({"@context": "https://schema.org", "@type": "Organization",
                          "name": "MediPrimer", "url": BASE + "/",
