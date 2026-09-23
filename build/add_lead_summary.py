@@ -80,7 +80,17 @@ def generate(title, text):
                        capture_output=True, text=True, timeout=300)
     out = " ".join(r.stdout.split()).strip().strip('"')
     out = re.sub(r"^(Here'?s? the short answer[:.]?\s*)", "", out, flags=re.I)
-    return out
+    # Models sometimes prefix an answer with a conversational lead-in. One
+    # reached production on costs.html as "Based on the page's own text, here's
+    # the intro paragraph: ..." — strip it, and if a preamble still remains,
+    # reject rather than publish it.
+    out = re.sub(r"^(?:based on|here is|here'?s|sure|certainly|the following|below is)\b[^.:]{0,90}[:.]\s*",
+                 "", out, flags=re.I)
+    return out.strip()
+
+
+PREAMBLE = re.compile(r"^(?:based on|here is|here'?s|sure|certainly|the following|"
+                      r"below is|this page|in this article)\b", re.I)
 
 
 def main():
@@ -104,6 +114,10 @@ def main():
         lead = generate(title, text)
         if not lead or len(lead) < 40:
             print(f"  FAIL {p.name}: model returned nothing usable")
+            failed += 1
+            continue
+        if PREAMBLE.match(lead):
+            print(f"  FAIL {p.name}: lead still starts with a preamble — rejected")
             failed += 1
             continue
         # A summary may never introduce a figure the page does not contain.
