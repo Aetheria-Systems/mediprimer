@@ -3,6 +3,44 @@
    insurance-department tables, so there's a single set of contacts to maintain). */
 (function () {
   "use strict";
+
+  /* Translations. Keys are the English source strings, so a missing
+     translation degrades to English rather than breaking the tool.
+     Filled by build/gen_tool_strings.py; enforced by
+     build/check_language_coverage.py. */
+  var I18N = {
+    "en": {},   // English is the fallback: the t() key is the source string
+    "es": {
+    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
+    "\" + blurb + \"": "\" + blurb + \"",
+    "option": "opción"
+},
+    "zh-Hant": {
+    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
+    "\" + blurb + \"": "\" + blurb + \"",
+    "option": "選項"
+},
+    "vi": {
+    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
+    "\" + blurb + \"": "\" + blurb + \"",
+    "option": "tùy chọn"
+},
+    "ko": {
+    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
+    "\" + blurb + \"": "\" + blurb + \"",
+    "option": "옵션"
+},
+    "tl": {
+    "\" + esc(o.name) + \"": "\" + esc(o.name) + \"",
+    "\" + blurb + \"": "\" + blurb + \"",
+    "option": "opsyon"
+}
+  };
+  var MP_LANG = (document.documentElement.getAttribute("lang") || "en").trim() || "en";
+  function t(en) {
+    var tbl = I18N[MP_LANG];
+    return (tbl && tbl[en]) || en;
+  }
   var sel = document.getElementById("state-picker");
   var out = document.getElementById("state-result");
   if (!sel || !out) return;
@@ -14,8 +52,8 @@
     var link = o.url ? '<p class="contact"><a href="' + esc(o.url) + '" rel="noopener">' + esc(o.url.replace(/^https?:\/\//, "").replace(/\/$/, "")) + "</a></p>" : "";
     var phone = o.phone ? '<p class="contact">' + esc(o.phone) + "</p>" : "";
     return '<div class="resource"><span class="tag">' + tag + "</span>" +
-           "<h3>" + esc(o.name) + "</h3>" + link + phone +
-           "<p>" + blurb + "</p></div>";
+           "<h3>' + t('" + esc(o.name) + "') + '</h3>" + link + phone +
+           "<p>' + t('" + blurb + "') + '</p></div>";
   }
 
   fetch("/data/states.json").then(function (r) { return r.json(); }).then(function (data) {

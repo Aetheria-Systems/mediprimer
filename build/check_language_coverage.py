@@ -65,6 +65,15 @@ check_json_nested("build/diagram-strings.json", "diagrams")
 check_js("public/medicare-enrollment-calculator.js", "enrollment calculator")
 check_js("public/annual-review-workbook.js", "annual review workbook")
 check_js("public/newsletter.js", "newsletter submit")
+# The interactive tools render their own text from JavaScript. They were NOT
+# checked here until 2026-09-23, so the questionnaires stayed in English on
+# every translated page while the prose around them was localised — a partner
+# organisation serving Vietnamese speakers reported it before we noticed, on a
+# site whose whole pitch is the languages. Never remove these four.
+check_js("public/help-paying.js", "help-paying questionnaire")
+check_js("public/medicare-navigator.js", "coverage navigator")
+check_js("public/priorities.js", "priorities tool")
+check_js("public/your-state.js", "state lookup")
 
 if problems:
     print("check_language_coverage: FAILED", file=sys.stderr)
