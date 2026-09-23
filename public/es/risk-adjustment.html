@@ -91,7 +91,7 @@ function gtag(){dataLayer.push(arguments);}
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Ajuste de Riesgo y Codificación HCC", "description": "Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de los miembros mediante la codificación de diagnósticos y los puntajes de riesgo.", "url": "https://mediprimer.org/es/risk-adjustment.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-09-18", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Ajuste de Riesgo y Codificación HCC", "description": "Cómo Medicare Advantage y otros planes que asumen riesgo ajustan el pago según el estado de salud de los miembros mediante la codificación de diagnósticos y los puntajes de riesgo.", "url": "https://mediprimer.org/es/risk-adjustment.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-09-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/risk-adjustment.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/risk-adjustment.html">
 <link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/risk-adjustment.html">
@@ -182,27 +182,28 @@ function gtag(){dataLayer.push(arguments);}
   <div class="wrap">
     <p class="kicker">Para Profesionales</p>
     <h1>Ajuste de Riesgo y Codificación HCC</h1>
-    <p>Cómo se paga a los planes según el estado de salud de sus miembros, y el papel de la documentación precisa de diagnósticos.</p>
+    <p>Cómo se les paga a los planes según el estado de salud de sus miembros, y el papel de la documentación precisa de diagnósticos.</p>
   </div>
 </section>
 
 <main>
   <div class="wrap">
 
-    <h2>El Propósito del Ajuste de Riesgo</h2>
-    <p>El ajuste de riesgo es un mecanismo de pago que aborda un desafío fundamental del seguro con capitación: si se paga a los planes la misma cantidad sin importar la salud de sus miembros, tienen un incentivo financiero para evitar inscribir o retener a los miembros más enfermos. El ajuste de riesgo evita esto al aumentar los pagos a los planes por miembros con condiciones crónicas y necesidades médicas complejas.</p>
-    <p>En <a href="/es/medicare-advantage.html">Medicare Advantage (Parte C)</a>, <a href="/es/marketplace.html">los planes del Mercado de Seguros de la ACA</a>, y los programas de atención administrada de Medicaid, la capitación significa que el plan recibe un pago fijo por miembro por mes, asumiendo el riesgo financiero total por la atención de ese miembro. Sin ajuste, ese pago fijo no cubriría adecuadamente los costos de las poblaciones más enfermas; sin embargo, los planes aún podrían obtener ganancias atrayendo solo a los inscritos más saludables. El ajuste de riesgo inclina el pago hacia la necesidad médica, creando condiciones equitativas.</p>
+    <p class="lead"><strong>Aquí está la respuesta corta.</strong> El ajuste de riesgo determina cuánto se les paga a los planes de Medicare Advantage, del Mercado de Seguros de la ACA y de atención administrada de Medicaid según la salud de los miembros, usando códigos de diagnóstico para calcular un puntaje de riesgo. La documentación precisa de esos diagnósticos —equilibrando la especificidad frente a la codificación indebidamente elevada— mantiene los pagos justos y a los planes responsables.</p>
+<h2>El Propósito del Ajuste de Riesgo</h2>
+    <p>El ajuste de riesgo es un mecanismo de pago que aborda un desafío fundamental del seguro con capitación: si a los planes se les paga la misma cantidad sin importar la salud de los miembros, tienen un incentivo financiero para evitar inscribir o retener a los miembros más enfermos. El ajuste de riesgo evita esto al aumentar los pagos a los planes por los miembros con condiciones crónicas y necesidades médicas complejas.</p>
+    <p>En <a href="/es/medicare-advantage.html">Medicare Advantage</a>, los <a href="/es/marketplace.html">planes del Mercado de Seguros de la ACA</a> y los programas de atención administrada de Medicaid, la capitación significa que el plan recibe un pago fijo por miembro cada mes, aceptando el riesgo financiero total por la atención de ese miembro. Sin ajuste, ese pago fijo cubriría de forma inadecuada los costos de las poblaciones más enfermas, y sin embargo los planes podrían seguir obteniendo ganancias atrayendo solo a los afiliados más sanos. El ajuste de riesgo inclina el pago hacia la necesidad médica, creando condiciones equitativas.</p>
 
     <h2>El Modelo CMS-HCC: Del Diagnóstico al Puntaje de Riesgo</h2>
-    <p>Los Centros de Servicios de Medicare y Medicaid (CMS) usan el <strong>modelo de Categoría de Condición Jerárquica (HCC, por sus siglas en inglés)</strong> para medir el estado de salud del miembro y calcular un <strong>puntaje del Factor de Ajuste de Riesgo (RAF)</strong>. Así es como funciona:</p>
+    <p>Los Centros de Servicios de Medicare y Medicaid (CMS) usan el <strong>modelo de Categoría de Condición Jerárquica (HCC)</strong> para medir el estado de salud de los miembros y calcular un <strong>puntaje del Factor de Ajuste de Riesgo (RAF)</strong>. Así es como funciona:</p>
     <ol class="steps">
       <li><strong>Recopilación de diagnósticos.</strong> Los proveedores envían reclamaciones y registros de encuentros que contienen códigos de diagnóstico ICD-10 para cada miembro durante el año de beneficios (típicamente el año calendario para Medicare Advantage).
-      <li><strong>Mapeo a HCC.</strong> CMS asigna esos códigos de diagnóstico a HCC: agrupaciones clínicamente significativas que predicen costos futuros de atención médica. Un código de diagnóstico puede mapearse a un HCC; varios códigos pueden mapearse al mismo HCC.
-      <li><strong>Se aplican jerarquías.</strong> El modelo impone jerarquías: si un miembro tiene tanto una forma menos grave como una más grave de una condición, solo se cuenta el HCC más grave. Por ejemplo, un diagnóstico menos grave de diabetes sin complicaciones se agrupa en un diagnóstico más grave de diabetes con complicaciones si ambos están presentes; solo cuenta el HCC más grave. (Los números específicos de HCC se reasignan cada vez que CMS recalibra el modelo, por lo que esta página describe el concepto en lugar de fijarlo a identificadores de versiones específicas.)
-      <li><strong>Cálculo del RAF.</strong> CMS asigna un peso de riesgo a cada HCC aplicable (por ejemplo, la insuficiencia cardíaca congestiva podría tener un peso de 0.45, lo que significa que añade un 45% al pago base del miembro). El RAF es la suma de todos los pesos aplicables más un factor demográfico. Un RAF de 1.0 representa un riesgo promedio; 0.8 representa un 20% por debajo del promedio; 1.2 representa un 20% por encima del promedio.
+      <li><strong>Asignación a HCC.</strong> CMS asigna esos códigos de diagnóstico a HCC —agrupaciones clínicamente significativas que predicen costos futuros de atención médica. Un código de diagnóstico puede asignarse a una HCC; varios códigos pueden asignarse a la misma HCC.
+      <li><strong>Se aplican jerarquías.</strong> El modelo impone jerarquías: si un miembro tiene tanto una forma menos grave como una más grave de una condición, solo se cuenta la HCC más grave. Por ejemplo, un diagnóstico menos grave de diabetes sin complicaciones se incorpora a un diagnóstico más grave de diabetes con complicaciones si ambos están presentes; solo cuenta la HCC más grave. (Los números específicos de las HCC se reasignan cada vez que CMS recalibra el modelo, así que esta página describe el concepto en lugar de fijarlo a identificadores propios de una versión específica.)
+      <li><strong>Cálculo del RAF.</strong> CMS asigna un peso de riesgo a cada HCC aplicable (por ejemplo, la insuficiencia cardíaca congestiva podría tener un peso de 0.45, lo que significa que agrega un 45% al pago base del miembro). El RAF es la suma de todos los pesos aplicables más un factor demográfico. Un RAF de 1.0 representa un riesgo promedio; 0.8 representa un 20% por debajo del promedio; 1.2 representa un 20% por encima del promedio.
       <li><strong>Ajuste del pago.</strong> El pago de capitación del plan se multiplica por el RAF. Un miembro con RAF 1.2 genera un pago 20% más alto que un miembro con RAF 1.0, reflejando costos esperados más altos.
     </ol>
-    <p>CMS recalibra el modelo HCC anualmente según los datos de reclamaciones y encuentros, y los códigos de diagnóstico capturados determinan el RAF. Por lo tanto, la captura precisa y oportuna de los diagnósticos es fundamental para un pago adecuado y la sostenibilidad del plan.</p>
+    <p>CMS recalibra el modelo HCC anualmente con base en datos de reclamaciones y encuentros, y los códigos de diagnóstico capturados impulsan el RAF. Por eso, la captura precisa y oportuna de los diagnósticos es fundamental para un pago adecuado y la sostenibilidad del plan.</p>
 <!--newsletter-->
     <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
       <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
@@ -217,57 +218,57 @@ function gtag(){dataLayer.push(arguments);}
     <!--/newsletter-->
 
 
-    <h2>Documentación y Cumplimiento: MEAT/TAMPER a Nivel Conceptual</h2>
+    <h2>Documentación y Cumplimiento: MEAT/TAMPER a Nivel de Concepto</h2>
     <p>Para garantizar que la codificación HCC sea precisa, los proveedores y los planes siguen estándares de documentación a menudo abreviados como MEAT (para la documentación clínica) y TAMPER (para la verificación de auditores y planes). Aunque estos acrónimos son listas de verificación, el principio subyacente es sencillo:</p>
     <ul>
-      <li><strong>Respaldo del expediente médico.</strong> Cada diagnóstico codificado debe estar claramente documentado en el expediente médico del miembro—notas de visita, resultados de pruebas, informes de imágenes, listas de medicamentos o resúmenes de evaluación—creado por el proveedor tratante durante o poco después del encuentro clínico.
-      <li><strong>Especificidad.</strong> La documentación debe respaldar el diagnóstico más específico y preciso. La especificidad importa porque los diagnósticos más específicos a menudo se mapean a HCC más precisos. Por ejemplo, "Diabetes tipo 2 con enfermedad renal crónica en etapa 2" es más específico y puede mapearse a un HCC diferente que "diabetes no especificada".
+      <li><strong>Respaldo del expediente médico.</strong> Cada diagnóstico codificado debe estar claramente documentado en el expediente médico del miembro —notas de visita, resultados de pruebas, informes de imágenes, listas de medicamentos o resúmenes de evaluación— creado por el proveedor tratante durante o poco después del encuentro clínico.
+      <li><strong>Especificidad.</strong> La documentación debe respaldar el diagnóstico más específico y preciso. La especificidad importa porque los diagnósticos más específicos a menudo se asignan a HCC más precisas. Por ejemplo, "diabetes tipo 2 con enfermedad renal crónica en etapa 2" es más específico y puede asignarse a una HCC distinta que "diabetes no especificada".
       <li><strong>Momento del encuentro.</strong> El diagnóstico debe documentarse durante el año de beneficios en cuestión. Un diagnóstico documentado el 5 de enero de 2024 cuenta para el pago de 2024; uno documentado el 2 de enero de 2025 cuenta para 2025. Los datos de encuentros (reclamaciones y visitas presenciales) capturan estos diagnósticos.
-      <li><strong>Validez clínica.</strong> La codificación debe reflejar el estado clínico real del miembro. Un diagnóstico debe ser gestionado activamente, mencionado en la evaluación o el plan, o respaldado por hallazgos objetivos, no listado especulativamente ni basado únicamente en el historial pasado.
+      <li><strong>Validez clínica.</strong> La codificación debe reflejar el estado clínico real del miembro. Un diagnóstico debe estar siendo tratado activamente, mencionado en la evaluación o el plan, o respaldado por hallazgos objetivos, y no listado especulativamente ni proveniente únicamente de la historia clínica pasada.
     </ul>
-    <p>Los datos de encuentros—tanto las reclamaciones (institucionales y profesionales) como la documentación complementaria—alimentan el modelo HCC. Los encuentros precisos garantizan HCC precisos y un cálculo adecuado del RAF.</p>
+    <p>Los datos de encuentros —tanto las reclamaciones (institucionales y profesionales) como la documentación complementaria— alimentan el modelo HCC. Los encuentros precisos garantizan HCC precisas y un cálculo del RAF adecuado.</p>
 
     <h2>Modelos de Pago y Reconciliación Anual</h2>
-    <p>CMS calcula los puntajes RAF y determina los pagos de los planes por adelantado, basándose en los diagnósticos capturados en las reclamaciones del año anterior. Por ejemplo, los diagnósticos enviados en 2023 informan el pago de 2024. Durante el año de beneficios, los planes y proveedores continúan documentando; estos diagnósticos de 2024 informarán el pago de 2025.</p>
-    <p>Esta estructura crea varias dinámicas importantes:</p>
+    <p>CMS calcula los puntajes RAF y determina los pagos a los planes por adelantado, con base en los diagnósticos capturados en las reclamaciones del año anterior. Por ejemplo, los diagnósticos presentados en 2023 informan el pago de 2024. Durante el año de beneficios, los planes y proveedores siguen documentando; estos diagnósticos de 2024 informarán el pago de 2025.</p>
+    <p>Esta estructura genera varias dinámicas importantes:</p>
     <ul>
-      <li><strong>Retraso y reconciliación.</strong> Los planes reciben un pago prospectivo basado en los perfiles de riesgo del año anterior, y luego envían los datos de encuentros del año en curso sabiendo que afectarán el pago de años futuros. CMS puede reconciliar los pagos de años anteriores si las auditorías de datos revelan errores de codificación.
-      <li><strong>Alineación de incentivos y riesgo.</strong> La captura precisa y completa de los diagnósticos beneficia tanto al plan (mediante un RAF adecuado) como a los proveedores (mediante un pago que refleja la complejidad real del caso). Los planes y proveedores tienen incentivos alineados para garantizar que los diagnósticos se documenten de manera exhaustiva y precisa durante cada encuentro.
+      <li><strong>Desfase y reconciliación.</strong> Los planes reciben un pago prospectivo basado en los perfiles de riesgo del año anterior, y luego presentan los datos de encuentros del año en curso sabiendo que afectarán el pago de años futuros. CMS puede reconciliar los pagos de años anteriores si las auditorías de datos revelan errores de codificación.
+      <li><strong>Alineación de incentivos y riesgo.</strong> La captura precisa y completa de los diagnósticos beneficia tanto al plan (mediante un RAF adecuado) como a los proveedores (mediante un pago que refleja la complejidad real del caso). Los planes y los proveedores tienen incentivos alineados para garantizar que los diagnósticos se documenten de forma completa y precisa en cada encuentro.
       <li><strong>Integridad de los encuentros.</strong> No todos los encuentros se capturan en las reclamaciones. Los planes pueden complementar con documentación adicional de visitas para reflejar el panorama clínico completo. CMS distingue entre reclamaciones y encuentros complementarios; ambos alimentan los modelos HCC en algunos programas.
     </ul>
 
     <h2>Auditorías RADV y Riesgo de Cumplimiento</h2>
-    <p>Las <strong>auditorías de Validación de Datos de Ajuste de Riesgo (RADV)</strong> son revisiones periódicas de cumplimiento realizadas por CMS, agencias estatales o auditores contratados. En una auditoría RADV, los auditores toman una muestra aleatoria de expedientes médicos de un subconjunto de miembros para un año de beneficios dado y verifican que los diagnósticos enviados para la codificación HCC estén realmente respaldados por el expediente médico y documentados según los estándares clínicos.</p>
+    <p>Las <strong>auditorías de Validación de Datos de Ajuste de Riesgo (RADV)</strong> son revisiones de cumplimiento periódicas realizadas por CMS, agencias estatales o auditores contratados. En una auditoría RADV, los auditores toman una muestra aleatoria de los expedientes médicos de un subconjunto de miembros para un año de beneficios dado y verifican que los diagnósticos presentados para la codificación HCC estén realmente respaldados por el expediente médico y documentados conforme a los estándares clínicos.</p>
     <p>Las auditorías RADV pueden identificar varios tipos de hallazgos:</p>
     <ul>
-      <li><strong>Diagnósticos no respaldados:</strong> Se codificó un diagnóstico, pero el expediente médico no muestra evidencia clínica de esa condición.
-      <li><strong>Diagnósticos especificados incorrectamente:</strong> Se usó el código ICD-10 equivocado, o se usó un código menos específico cuando se justificaba uno más específico.
-      <li><strong>Defectos de tiempo o documentación:</strong> El diagnóstico se registró, pero no durante un encuentro real dentro del año de beneficios, o la documentación es demasiado vaga para respaldar la conclusión clínica.
-      <li><strong>Indicadores de fraude:</strong> Patrones que sugieren una sobrecodificación intencional o sistemática, como diagnósticos idénticos que aparecen en muchos miembros sin base clínica.
+      <li><strong>Diagnósticos no respaldados:</strong> se codificó un diagnóstico, pero el expediente médico no muestra evidencia clínica de esa condición.
+      <li><strong>Diagnósticos codificados incorrectamente:</strong> se usó el código ICD-10 equivocado, o se usó un código menos específico cuando se justificaba uno más específico.
+      <li><strong>Defectos de tiempo o documentación:</strong> el diagnóstico se registró, pero no durante un encuentro real dentro del año de beneficios, o la documentación es demasiado vaga para respaldar la conclusión clínica.
+      <li><strong>Indicadores de fraude:</strong> patrones que sugieren una sobrecodificación intencional o sistemática, como diagnósticos idénticos que aparecen en muchos miembros sin base clínica.
     </ul>
-    <p>Si los hallazgos de RADV indican un error sistémico o sobrecodificación, CMS puede ajustar el pago del plan de forma retroactiva o imponer sanciones. Por eso, los planes invierten en <strong>auditorías de codificación concurrentes</strong> y <strong>programas de captura de encuentros</strong> para detectar y corregir errores antes de una auditoría externa, y en <strong>capacitación de proveedores</strong> para garantizar prácticas de documentación precisas. Consulta <a href="/es/policy-changes.html">Cambios de Política</a> para conocer las iniciativas actuales de RADV de CMS.</p>
+    <p>Si los hallazgos de la RADV indican un error sistémico o sobrecodificación, CMS puede ajustar retroactivamente el pago al plan o imponer sanciones. Por eso los planes invierten en <strong>auditorías de codificación concurrentes</strong> y <strong>programas de captura de encuentros</strong> para detectar y corregir errores antes de una auditoría externa, y en <strong>capacitación de proveedores</strong> para garantizar prácticas de documentación precisas. Consulte <a href="/es/policy-changes.html">Cambios de Política</a> para conocer las iniciativas actuales de CMS en materia de RADV.</p>
 
-    <h2>La Línea Ética: Especificidad vs. Sobrecodificación</h2>
-    <p>El límite entre la codificación precisa y la sobrecodificación indebida puede ser sutil. Así es como las organizaciones conscientes del cumplimiento lo abordan:</p>
+    <h2>La Línea Ética: Especificidad frente a Codificación Indebidamente Elevada</h2>
+    <p>La frontera entre la codificación precisa y la codificación indebidamente elevada puede ser sutil. Así es como las organizaciones conscientes del cumplimiento la manejan:</p>
     <ul>
-      <li><strong>Apropiado:</strong> Un proveedor documenta "Diabetes tipo 2 con enfermedad renal crónica en etapa 2" basándose en análisis de laboratorio actuales y una evaluación clínica; el codificador selecciona el HCC específico que refleja este estado documentado. El expediente médico respalda la especificidad reclamada.
-      <li><strong>Apropiado:</strong> Un plan identifica que muchos encuentros documentan un diagnóstico en la evaluación pero no en el campo de diagnóstico codificado, y agrega sistemáticamente los diagnósticos documentados faltantes al registro del encuentro, respaldado por la documentación clínica contemporánea del proveedor.
-      <li><strong>Cuestionable:</strong> Un proveedor codifica sistemáticamente los diagnósticos a la versión de mayor gravedad (por ejemplo, seleccionando siempre variantes "con complicaciones") sin documentación clínica clara que respalde el nivel de gravedad.
-      <li><strong>Indebido:</strong> Un codificador infiere un diagnóstico no documentado por el proveedor, o asigna un diagnóstico que solo está documentado en el historial previo sin evidencia activa de que se esté gestionando en el año en curso.
+      <li><strong>Apropiado:</strong> un proveedor documenta "diabetes tipo 2 con enfermedad renal crónica en etapa 2" con base en análisis de laboratorio actuales y una evaluación clínica; el codificador selecciona la HCC específica que refleja este estado documentado. El expediente médico respalda la especificidad reclamada.
+      <li><strong>Apropiado:</strong> un plan identifica que muchos encuentros documentan un diagnóstico en la evaluación pero no en el campo de diagnóstico codificado, y agrega sistemáticamente los diagnósticos documentados faltantes al registro del encuentro, respaldado por la documentación clínica contemporánea del proveedor.
+      <li><strong>Cuestionable:</strong> un proveedor codifica sistemáticamente los diagnósticos a la versión de mayor gravedad (por ejemplo, seleccionando siempre variantes "con complicaciones") sin documentación clínica clara que respalde el nivel de gravedad.
+      <li><strong>Indebido:</strong> un codificador infiere un diagnóstico no documentado por el proveedor, o asigna un diagnóstico que solo está documentado en la historia previa, sin evidencia activa de que se esté tratando en el año en curso.
     </ul>
-    <p>Las guías regulatorias y los casos judiciales han aclarado que la codificación debe reflejar diagnósticos actuales y gestionados activamente, respaldados por el expediente médico. Se espera especificidad y jerarquías apropiadas; no se aceptan mejoras sistemáticas sin base clínica. Los planes y proveedores operan bajo una postura de cumplimiento que enfatiza la precisión y la transparencia con los auditores, en lugar de la maximización del RAF.</p>
+    <p>Las guías regulatorias y los casos judiciales han aclarado que la codificación debe reflejar diagnósticos actuales y tratados activamente, respaldados por el expediente médico. Se espera especificidad y jerarquías apropiadas; no se esperan aumentos sistemáticos sin base clínica. Los planes y proveedores operan bajo una postura de cumplimiento que enfatiza la precisión y la transparencia con los auditores, en lugar de la maximización del RAF.</p>
 
-    <h2>Ajuste de Riesgo en Otros Programas</h2>
-    <p><strong>Medicare Advantage</strong> usa el modelo HCC como se describió anteriormente. Se aplica la versión 28 de CMS-HCC (y versiones en evolución).</p>
-    <p>Los <strong>planes del Mercado de Seguros de la ACA</strong> también usan un mecanismo de ajuste de riesgo, financiado a través del programa de ajuste de riesgo de la ACA. Los planes con inscritos más enfermos que el promedio reciben transferencias del programa central; los planes con inscritos más saludables que el promedio contribuyen a él. El modelo y el mapeo de HCC difieren ligeramente de Medicare Advantage, pero cumplen el mismo propósito: nivelar el terreno de pago según el riesgo de salud.</p>
+    <h2>El Ajuste de Riesgo en Otros Programas</h2>
+    <p><strong>Medicare Advantage</strong> usa el modelo HCC descrito anteriormente. Se aplica la versión 28 del CMS-HCC (y versiones en evolución).</p>
+    <p>Los <strong>planes del Mercado de Seguros de la ACA</strong> también usan un mecanismo de ajuste de riesgo, financiado a través del programa de ajuste de riesgo de la ACA. Los planes con afiliados más enfermos que el promedio reciben transferencias del programa central; los planes con afiliados más sanos que el promedio contribuyen a él. El modelo y la asignación de HCC difieren ligeramente de Medicare Advantage, pero cumplen el mismo propósito: equilibrar el campo de pago según el riesgo de salud.</p>
     <p>El ajuste de riesgo de la <strong>atención administrada de Medicaid</strong> varía según el estado y el programa. Algunos estados usan modelos basados en HCC; otros usan factores demográficos más simples o categorías basadas en condiciones. Las agencias estatales de Medicaid definen la metodología de ajuste de riesgo en sus contratos de atención administrada.</p>
     <p>Los <strong>planes comerciales</strong> no están sujetos al mismo marco de ajuste de riesgo de CMS, aunque las aseguradoras usan sus propios modelos internos de riesgo para la fijación de precios y la gestión de poblaciones.</p>
 
     <h2>Temas Relacionados</h2>
-    <p>El ajuste de riesgo se relaciona con varias funciones profesionales. Consulta también:</p>
+    <p>El ajuste de riesgo se relaciona con varias funciones profesionales. Vea también:</p>
     <ul>
       <li><a href="/es/operations.html">Operaciones de Planes de Salud</a> — Cómo organizan los planes sus funciones clínicas y financieras.
-      <li><a href="/es/providers.html">Proveedores y Facturación</a> — Cómo envían los proveedores encuentros y reclamaciones.
+      <li><a href="/es/providers.html">Proveedores y Facturación</a> — Cómo el proveedor presenta encuentros y reclamaciones.
       <li><a href="/es/star-ratings.html">Clasificación de Estrellas y Medición de Calidad</a> — Métricas relacionadas de CMS y sus fuentes de datos.
       <li><a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">Programa RADV de CMS</a> — Marco regulatorio oficial y procedimientos de auditoría.
     </ul>
@@ -284,7 +285,7 @@ function gtag(){dataLayer.push(arguments);}
         <tbody>
           <tr>
             <td><strong>HCC (Categoría de Condición Jerárquica)</strong></td>
-            <td>Una agrupación clínicamente significativa de diagnósticos usada por CMS para medir el estado de salud y predecir costos. Cada HCC tiene un peso de riesgo asignado.</td>
+            <td>Una agrupación clínicamente significativa de diagnósticos que CMS usa para medir el estado de salud y predecir costos. Cada HCC tiene un peso de riesgo asignado.</td>
           </tr>
           <tr>
             <td><strong>RAF (Factor de Ajuste de Riesgo)</strong></td>
@@ -292,34 +293,34 @@ function gtag(){dataLayer.push(arguments);}
           </tr>
           <tr>
             <td><strong>RADV (Validación de Datos de Ajuste de Riesgo)</strong></td>
-            <td>Proceso de auditoría exigido por CMS que valida la precisión de los diagnósticos enviados por los planes para la codificación HCC y el pago. Los auditores revisan los expedientes médicos para confirmar que los diagnósticos estén documentados y clínicamente respaldados.</td>
+            <td>Proceso de auditoría exigido por CMS que valida la precisión de los diagnósticos presentados por los planes para la codificación HCC y el pago. Los auditores revisan los expedientes médicos para confirmar que los diagnósticos estén documentados y clínicamente respaldados.</td>
           </tr>
           <tr>
             <td><strong>MEAT</strong></td>
-            <td>Acrónimo en inglés de los estándares de documentación: respaldo del <strong>e</strong>xpediente médico, fecha del <strong>e</strong>ncuentro dentro del año de beneficios, gestión <strong>a</strong>ctiva, <strong>t</strong>erapia/especificidad. Los proveedores usan MEAT para guiar una documentación clínica precisa.</td>
+            <td>Acrónimo de los estándares de documentación: respaldo del expediente <strong>m</strong>édico, fecha del <strong>e</strong>ncuentro dentro del año de beneficios, tratamiento <strong>a</strong>ctivo, <strong>t</strong>erapia/especificidad. El proveedor usa MEAT como guía para una documentación clínica precisa.</td>
           </tr>
           <tr>
             <td><strong>TAMPER</strong></td>
-            <td>Acrónimo en inglés de los estándares de auditoría: <strong>t</strong>emporalidad (encuentro dentro del año de beneficios), <strong>a</strong>ctitud de precisión en la selección del código, respaldo del expediente <strong>m</strong>édico, aplicación adecuada de la <strong>p</strong>rioridad jerárquica, validación del tipo de <strong>e</strong>ncuentro, <strong>r</strong>azonabilidad del diagnóstico. Los auditores usan TAMPER para evaluar la validez de la codificación.</td>
+            <td>Acrónimo de los estándares de auditoría: <strong>t</strong>emporalidad (encuentro dentro del año de beneficios), <strong>a</strong>precisión en la selección del código, respaldo del expediente <strong>m</strong>édico, <strong>p</strong>ropia aplicación de la jerarquía, validación del tipo de <strong>e</strong>ncuentro, <strong>r</strong>azonabilidad del diagnóstico. Los auditores usan TAMPER para evaluar la validez de la codificación.</td>
           </tr>
           <tr>
             <td><strong>Datos de encuentros</strong></td>
-            <td>Reclamaciones y registros clínicos enviados por los proveedores que documentan visitas, servicios, diagnósticos y procedimientos de un miembro. Los datos de encuentros alimentan el modelo HCC.</td>
+            <td>Reclamaciones y registros clínicos presentados por el proveedor que documentan visitas, servicios, diagnósticos y procedimientos para un miembro. Los datos de encuentros alimentan el modelo HCC.</td>
           </tr>
           <tr>
             <td><strong>Capitación</strong></td>
-            <td>Un pago fijo, por miembro por mes, hecho a un plan sin importar los servicios utilizados. El plan asume el riesgo financiero de todos los servicios cubiertos. El ajuste de riesgo modifica la capitación según el estado de salud del miembro.</td>
+            <td>Un pago fijo por miembro cada mes que se le hace a un plan sin importar los servicios usados. El plan asume el riesgo financiero de todos los servicios cubiertos. El ajuste de riesgo modifica la capitación según el estado de salud del miembro.</td>
           </tr>
           <tr>
             <td><strong>Jerarquía</strong></td>
-            <td>En los modelos HCC, una regla según la cual, si un miembro califica para múltiples HCC relacionados con la misma condición, solo se cuenta el más grave. Las jerarquías evitan el doble conteo y garantizan la precisión de los HCC.</td>
+            <td>En los modelos HCC, una regla según la cual, si un miembro califica para varias HCC relacionadas con la misma condición, solo se cuenta la más grave. Las jerarquías evitan el doble conteo y garantizan la precisión de las HCC.</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <div class="note">
-      <strong>Verifica en la fuente:</strong> Esta página describe de forma general cómo funciona el ajuste de riesgo. Para conocer las versiones actuales del modelo HCC, los detalles del cálculo del RAF, los procedimientos de RADV y la orientación sobre cumplimiento, consulta <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov (RADV)</a>, las políticas de cumplimiento de tu plan y las regulaciones de atención administrada de tu estado. Este contenido es educativo y no constituye asesoría legal ni de cumplimiento.
+      <strong>Verifique en la fuente:</strong> Esta página describe a grandes rasgos cómo funciona el ajuste de riesgo. Para las versiones actuales del modelo HCC, los detalles del cálculo del RAF, los procedimientos de RADV y la orientación sobre cumplimiento, consulte <a href="https://www.cms.gov/Medicare/Health-Plans/ManagedCareAPI/RADV" rel="noopener">CMS.gov (RADV)</a>, las políticas de cumplimiento de su plan y las regulaciones de atención administrada de su estado. Este contenido es educativo y no constituye asesoría legal ni de cumplimiento.
     </div>
 
   </div>
