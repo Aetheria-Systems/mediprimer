@@ -15,6 +15,7 @@ Run for every launched language.
 """
 import json
 import pathlib
+import re
 import subprocess
 import sys
 
@@ -76,6 +77,23 @@ console.log(out);
 """
 
 
+
+# Program names legitimately stay English ("Medicare Advantage", "Part B"), so
+# only a run of several plain English words counts as untranslated prose.
+RUN = re.compile(r"[A-Za-z][A-Za-z'’,&-]*(?:\s+[A-Za-z][A-Za-z'’,&-]*){3,}")
+KEEP = re.compile(r"^(Medicare|Medicaid|Medigap|MediPrimer|MediBot|Part [ABCD])", re.I)
+
+
+def english_runs(html):
+    text = re.sub(r"<[^>]+>", " ", html)
+    out = set()
+    for m in RUN.finditer(text):
+        run = " ".join(m.group(0).split())
+        if len(run.split()) >= 4 and not KEEP.match(run):
+            out.add(run)
+    return out
+
+
 def launched():
     d = json.loads((BASE / "build" / "languages.json").read_text(encoding="utf-8"))
     codes = [l["code"] for l in d["languages"] if l.get("launched")]
@@ -120,6 +138,18 @@ def main():
             if html.strip() and html == english.get(tool, ""):
                 print(f"  FAIL {tool} [{lang}]: renders identically to English "
                       f"— translation table missing or not applied")
+                bad += 1
+                continue
+            # PARTIAL translation also fails. chatbot.js passed the identity
+            # test above while still rendering "Your Medicare & Medicaid guide"
+            # in every language, because three translated attributes were
+            # enough to make it differ. Any run of 4+ English words that also
+            # appears in the English render is untranslated text.
+            leftovers = english_runs(html) & english_runs(english.get(tool, ""))
+            if leftovers:
+                sample = sorted(leftovers, key=len, reverse=True)[:2]
+                print(f"  FAIL {tool} [{lang}]: still renders English — "
+                      + "; ".join(f'"{x[:60]}"' for x in sample))
                 bad += 1
     h.unlink(missing_ok=True)
     if bad:
