@@ -161,6 +161,9 @@ ACTIVE = {
     "medicare-medicaid-chinese.html": "basics", "medicaid-medicare-chinese-nicknames.html": "basics",
     "health-insurance-terms-chinese-english.html": "glossary",
     "multigenerational-household-coverage.html": "members",
+    # Content-gap pages (2026-09-24)
+    "medicare-late-enrollment-penalties.html": "members", "extra-help-low-income-subsidy.html": "members",
+    "mixed-status-family-marketplace.html": "members", "pace-program-nursing-home-alternative.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
