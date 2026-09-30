@@ -119,6 +119,14 @@ def safe_h2_offset(html):
     return None
 
 
+def esc_attr(v):
+    return v.replace("&", "&amp;").replace('"', "&quot;")
+
+
+DIAGRAM_STRINGS = json.loads((pathlib.Path(__file__).parent / "diagram-strings.json")
+                             .read_text(encoding="utf-8"))
+
+
 def localize_img_srcs():
     """Point each translated page at its own language's diagrams.
 
@@ -145,6 +153,24 @@ def localize_img_srcs():
                 return m.group(0)
 
             new_html = re.sub(r'"/img/([a-z0-9-]+)\.(svg|png)"', fix, html)
+
+            # The alt text must come from diagram-strings.json, not from
+            # whatever translate.py happened to do with the attribute. On
+            # 2026-09-30 tl/dual-eligible.html still carried the ENGLISH alt
+            # even though the Tagalog string existed in the file — and that one
+            # attribute failed check_translated_attrs, which blocked every
+            # deploy (seo-optimize failed three nights running). Setting it
+            # here makes it deterministic for every language.
+            def fix_alt(m):
+                pre, name, ext, mid, alt, post = m.groups()
+                desc = (DIAGRAM_STRINGS.get(name, {}).get(code, {}) or {}).get("desc")
+                if not desc:
+                    return m.group(0)
+                return f'{pre}/img/{code}/{name}.{ext}{mid}{esc_attr(desc)}{post}'
+
+            new_html = re.sub(
+                r'(<img[^>]*src=")/img/' + re.escape(code) + r'/([a-z0-9-]+)\.(svg|png)("[^>]*?alt=")([^"]*)(")',
+                fix_alt, new_html)
             if new_html != html:
                 page.write_text(new_html, encoding="utf-8")
                 changed += 1
