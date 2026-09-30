@@ -46,10 +46,18 @@ def main():
             if not ep.exists():
                 continue
             en, tr = attrs(ep), attrs(tp)
-            for a, v in sorted(tr & en):
+            en_vals = [v for _, v in en if len(v) >= 25]
+            for a, v in sorted(tr):
                 if v in EXEMPT or not re.search(r"[A-Za-z]{3,}\s+[A-Za-z]{2,}", v):
                     continue
-                problems.append(f"{code}/{tp.name}: {a}=\"{v[:60]}\" is still English")
+                # Byte-identical to an English value...
+                identical = (a, v) in en
+                # ...or a substantial verbatim slice of one. Comparing only for
+                # equality let a SHORTENED copy of the English alt through
+                # undetected (proved 2026-09-30), so containment counts too.
+                overlap = any(v[:40] in ev or ev[:40] in v for ev in en_vals) if len(v) >= 25 else False
+                if identical or overlap:
+                    problems.append(f"{code}/{tp.name}: {a}=\"{v[:60]}\" is still English")
     if problems:
         print("check_translated_attrs: FAILED")
         for p in problems[:25]:
