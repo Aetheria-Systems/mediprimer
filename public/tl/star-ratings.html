@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pamamaraan ng Star Ratings: HEDIS, CAHPS &amp; Quality Bonus Payments — MediPrimer</title>
+<meta name="description" content="Teknikal na sanggunian para sa mga propesyonal: kung paano kinakalkula ng CMS ang Mga Rating na Bituin (Star Ratings) — mga hanay ng sukatan ng HEDIS, CAHPS at HOS, mga domain ng rating, cut point, ugnayan sa risk-adjustment at Quality Bonus Payments.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/star-ratings.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Pamamaraan ng Star Ratings: HEDIS, CAHPS &amp; Quality Bonus Payments — MediPrimer">
+<meta property="og:description" content="Teknikal na sanggunian para sa mga propesyonal: kung paano kinakalkula ng CMS ang Mga Rating na Bituin (Star Ratings) — mga hanay ng sukatan ng HEDIS, CAHPS at HOS, mga domain ng rating, cut point, ugnayan sa risk-adjustment at Quality Bonus Payments.">
+<meta property="og:url" content="https://mediprimer.org/tl/star-ratings.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Pamamaraan ng Star Ratings: HEDIS, CAHPS &amp; Quality Bonus Payments — MediPrimer">
+<meta name="twitter:description" content="Teknikal na sanggunian para sa mga propesyonal: kung paano kinakalkula ng CMS ang Mga Rating na Bituin (Star Ratings) — mga hanay ng sukatan ng HEDIS, CAHPS at HOS, mga domain ng rating, cut point, ugnayan sa risk-adjustment at Quality Bonus Payments.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Pamamaraan ng Star Ratings: HEDIS, CAHPS & Quality Bonus Payments", "description": "Teknikal na sanggunian para sa mga propesyonal: kung paano kinakalkula ng CMS ang Mga Rating na Bituin (Star Ratings) — mga hanay ng sukatan ng HEDIS, CAHPS at HOS, mga domain ng rating, cut point, ugnayan sa risk-adjustment at Quality Bonus Payments.", "url": "https://mediprimer.org/tl/star-ratings.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/star-ratings.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/star-ratings.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/star-ratings.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/star-ratings.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/star-ratings.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/star-ratings.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/star-ratings.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Pamamaraan ng Star Ratings: HEDIS, CAHPS & Quality Bonus Payments", "item": "https://mediprimer.org/tl/star-ratings.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/star-ratings.html" lang="en">English</a>
+    <a href="/es/star-ratings.html" lang="es">Español</a>
+    <a href="/zh-Hant/star-ratings.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/star-ratings.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/star-ratings.html" lang="ko">한국어</a>
+    <a href="/tl/star-ratings.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop active">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Propesyonal</p>
+    <h1>Pamamaraan ng Mga Rating na Bituin: Mga Hanay ng Sukatan at Quality Bonus Payments</h1>
+    <p class="lede">Isang teknikal na sanggunian para sa mga kawani ng plano at provider. Kung pumipili ka ng plano para sa iyong sarili o sa isang kapamilya, basahin na lang ang <a href="/tl/medicare-star-ratings.html">paliwanag sa Medicare Mga Rating na Bituin</a>.</p>
+    <p>Kung ano ang mga sukatan ng Star, paano sila nagiging 1–5 na rating ng CMS para sa mga plano ng Medicare Advantage at Medicare Part D, at paano nagtatakda ang mga rating ng mga bonus na bayad, rebate, at pagpili ng miyembro.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Mga Medicare Star Rating ng CMS, para sa mga propesyonal:</strong> isang pinagsamang 1–5 na marka ng kalidad na inilalathala ng CMS taun-taon para sa bawat kontrata ng Medicare Advantage at Medicare Part D, binuo mula sa mga hanay ng sukatan ng HEDIS, CAHPS, at HOS, at batayan ng Quality Bonus Payments at ng paghahambing ng mga plano na nakikita ng mga miyembro sa Medicare.gov.</p>
+<h2>Ano ang Medicare Mga Rating na Bituin ng CMS?</h2>
+    <p>Ang Medicare Mga Rating na Bituin (Star Ratings) ay pinagsamang sukatan ng kalidad na inilalathala taun-taon ng CMS para sa mga plano ng Medicare Advantage (MA) at mga plano ng reseta ng Medicare Part D. Sa sukat na 1–5, pinagsasama ng Mga Rating na Bituin ang performance sa dose-dosenang sukatan ng klinikal na pangangalaga, operasyon, at karanasan ng miyembro, kaya maihahambing ang mga plano gamit ang iisang pamantayang sukatan. Ang sistemang 5-bituin ay lumilikha ng malinaw na pagkakaiba para sa mga miyembro, nakaiimpluwensya sa pagpili ng plano, at nagtatakda kung kwalipikado ang mga plano para sa <strong>Quality Bonus Payments</strong> (mga rebate).</p>
+    <p>Inilalathala ng CMS ang Mga Rating na Bituin tuwing taglagas sa <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>, karaniwan ay may bisa para sa susunod na taon ng plano. Makukuha rin ito ng mga propesyonal sa industriya sa pamamagitan ng detalyadong teknikal na dokumentasyon at mga pampublikong dataset sa pahina ng Part C &amp; D Performance Data ng CMS.</p>
+    <p><em>Ito ang propesyonal na sanggunian kung paano kinakalkula ng CMS ang mga Medicare star rating. Kung ikaw ay miyembrong naghahambing ng mga plano, tingnan ang gabay sa simpleng wika: <a href="/tl/medicare-star-ratings.html">Medicare Mga Rating na Bituin: Ano ang Ibig Sabihin ng mga Bituin</a>.</em></p>
+
+    <h2>Ano ang mga Sukatan ng Star?</h2>
+    <p>Ang <strong>mga sukatan ng Star</strong> ay ang mga indibidwal na tagapagpahiwatig ng kalidad at performance na bumubuo sa kabuuang Star Rating ng isang kontrata. Ang bawat sukatan ay binibigyan ng isa hanggang limang bituin batay sa mga limitasyong itinakda ng CMS na tinatawag na <strong>cut point</strong>, na kinakalkula muli bawat taon batay sa performance sa panahon ng pagsukat; pagkatapos, binibigyan ng timbang at pinagsasama ang mga bituin ng bawat sukatan upang maging mga rating ng domain at ang kabuuang rating. Para sa 2026 Star Ratings, ang mga kontrata ng MA-PD ay nire-rate sa hanggang 43 natatanging sukatan, ang mga kontratang MA-lamang (walang Part D) sa hanggang 33, at ang mga nakahiwalay na kontrata ng PDP sa hanggang 12. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>Kumukuha ang mga sukatan mula sa apat na pamantayang daloy ng datos — klinikal na datos ng HEDIS, mga survey ng karanasan ng miyembro ng CAHPS, ang Health Outcomes Survey (HOS), at administratibong datos at datos ng mga reklamo ng CMS — at nahahati sa limang domain na idinetalye sa ibaba. Ang opisyal na listahan ng mga sukatan, mga timbang, at cut point ay inilalathala taun-taon sa Part C &amp; D Star Ratings Technical Notes sa <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">pahina ng Part C &amp; D Performance Data sa CMS.gov</a>. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Sukat ng Rating at Pagkalkula</h2>
+    <p>Ganito gumagana ang sukat na 1–5 bituin:</p>
+    <ul>
+      <li><strong>5 bituin:</strong> Kabilang sa pinakamahusay ang performance</li>
+      <li><strong>4–4.5 bituin:</strong> Higit sa karaniwan</li>
+      <li><strong>3–3.5 bituin:</strong> Karaniwan</li>
+      <li><strong>2–2.5 bituin:</strong> Mas mababa sa karaniwan</li>
+      <li><strong>1 bituin:</strong> Kabilang sa pinakamababa ang performance</li>
+    </ul>
+    <p>Ang bawat plano ay tumatanggap ng kabuuang star rating (isang weighted average ng mga rating ng domain), pati na rin ng hiwalay na rating para sa bawat domain ng kalidad. Kinakalkula ang mga rating gamit ang datos mula sa nakaraang taon at makukuha sa iba't ibang antas: pambansang rating sa antas ng plano, pagkakaiba-iba ayon sa rehiyon, at performance sa partikular na sukatan.</p>
+
+    <h2>Mga Domain ng Pagsukat</h2>
+    <p>Sinusukat ng Mga Rating na Bituin ang limang pangunahing domain ng kalidad at performance ng plano:</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Domain</th>
+            <th>Ano ang Sinusukat</th>
+            <th>Pangunahing Pinagmumulan ng Datos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Pananatiling Malusog/Pangangalagang Pang-iwas</strong></td>
+            <td>Mga antas ng screening (kanser, puso at ugat, diabetes), mga bakuna, taunang wellness visit, paggamit ng mga serbisyong pang-iwas</td>
+            <td>HEDIS, administratibong Claim</td>
+          </tr>
+          <tr>
+            <td><strong>Pamamahala ng mga Malalang Kondisyon</strong></td>
+            <td>Kalidad ng pamamahala ng sakit para sa diabetes, altapresyon, CAD, COPD, depresyon; pagsunod sa gamot; angkop na pagsusuri/pagsubaybay</td>
+            <td>HEDIS, HOS, administratibong Claim</td>
+          </tr>
+          <tr>
+            <td><strong>Karanasan at Kasiyahan ng Miyembro</strong></td>
+            <td>Pagtugon ng plano, serbisyo sa customer, koordinasyon ng pangangalaga, pangkalahatang kasiyahan sa pangangalaga at saklaw</td>
+            <td>Survey ng CAHPS (Medicare Part C at Medicare Part D)</td>
+          </tr>
+          <tr>
+            <td><strong>Mga Reklamo at Serbisyo sa Customer</strong></td>
+            <td>Mga antas ng reklamo ng miyembro, paghawak sa Apela at Karaingan, pagtugon ng plano sa mga alalahanin ng miyembro</td>
+            <td>Database ng reklamo ng CMS, datos ng Apela</td>
+          </tr>
+          <tr>
+            <td><strong>Kaligtasan ng Gamot at Katumpakan ng Presyo</strong></td>
+            <td>Katumpakan ng presyo ng gamot, kasiyahan ng miyembro sa Pormularyo, pagsubaybay sa mga side effect ng gamot, access sa botika</td>
+            <td>Administratibong datos ng Medicare Part D, survey ng CAHPS Part D</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Mga Pinagbabatayang Hanay ng Sukatan</h2>
+    <p>Binubuo ang Mga Rating na Bituin mula sa maraming pamantayang hanay ng sukatan, na bawat isa ay sumasalamin sa iba't ibang aspeto ng performance ng plano:</p>
+
+    <h3>HEDIS (Healthcare Effectiveness Data and Information Set)</h3>
+    <p>Ang HEDIS ay hanay ng mga sukatan ng klinikal na kalidad na batay sa ebidensya, binuo ng National Committee for Quality Assurance (NCQA). Ang mga sukatan ng HEDIS ay batay sa administratibong datos ng Claim at kasama ang mga antas para sa mga serbisyong pang-iwas (mga screening sa kanser, mga bakuna), pamamahala ng malalang sakit (kontrol sa diabetes, pamamahala ng presyon ng dugo), at paggamit ng gamot. Taun-taong nag-uulat ng datos ng HEDIS ang mga plano, at ang mga sukatang ito ang bumubuo sa malaking bahagi ng kalkulasyon ng Stars para sa mga domain na "Pananatiling Malusog" at "Pamamahala ng mga Malalang Kondisyon."</p>
+
+    <h3>CAHPS (Consumer Assessment of Healthcare Providers and Systems)</h3>
+    <p>Ang CAHPS ay pamantayang survey ng mga miyembro ng plano na pinapatakbo ng ikatlong partido. Sinusurvey ng Part C CAHPS at Part D CAHPS ang mga miyembro tungkol sa kanilang karanasan sa serbisyo sa customer ng plano, kadalian ng pagkuha ng pangangalaga, kalidad ng Provider, at pangkalahatang kasiyahan. Direktang napupunta ang mga resulta sa mga domain na "Karanasan ng Miyembro" at "Kaligtasan ng Gamot" ng Mga Rating na Bituin.</p>
+
+    <h3>HOS (Health Outcomes Survey)</h3>
+    <p>Taun-taong sinusurvey ng HOS ang mga miyembro ng Medicare Advantage tungkol sa mga resulta sa pisikal at mental na kalusugan, katayuang gumaganap, at mga karanasan sa koordinasyon ng pangangalaga. Kabilang sa mga pangunahing sukatan ng HOS ang medication reconciliation, pagsubaybay sa sintomas, at mga pagbabago sa pisikal/mental na kalagayan, na nag-aambag sa domain na "Pamamahala ng mga Malalang Kondisyon."</p>
+
+    <h3>Administratibong Datos at mga Reklamo ng CMS</h3>
+    <p>Direktang kinukuha ng CMS ang mga antas ng reklamo, datos ng Apela/Karaingan, at mga resulta ng apela ng miyembro mula sa mga isinumite ng plano at mga sistema ng pangangasiwa ng CMS. Napupunta ang mga ito sa domain na "Mga Reklamo at Serbisyo sa Customer."</p>
+
+    <p>Bawat taon, maaaring baguhin ng CMS ang hanay ng sukatan, i-update ang timbang ng mga domain, o pinuhin ang mga pamamaraan ng pagkalkula. <a href="/tl/policy-changes.html">Tingnan ang Mga Pagbabago sa Patakaran</a> para sa mga anunsyo ng CMS tungkol sa mga update sa Mga Rating na Bituin, o tingnan ang <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> para sa kasalukuyang teknikal na espesipikasyon.</p>
+
+    <h2>Quality Bonus Payments</h2>
+    <p>Ang mga organisasyon ng Medicare Advantage na may 4 o higit pang bituin ay kwalipikado para sa <strong>Quality Bonus Payments</strong> — isang mahalagang pinansyal na insentibo sa merkado ng MA. (Naaangkop ito sa mga plano ng MA; hindi kwalipikado ang mga nakahiwalay na plano ng Medicare Part D para sa QBP.) Nagdaragdag ang CMS ng karaniwang 5-percentage-point na pagtaas sa naaangkop na porsyento na ginagamit sa pagkalkula ng mga rate ng county ng plano, na nagpapataas naman ng mga rebate pabalik sa plano (at, di-tuwiran, sa mga miyembro) sa anyo ng Karagdagang mga Benepisyo, mas mababang Premium, o nabawasang Pagbabahagi ng Gastos.</p>
+    <ul>
+      <li><strong>Ang mga planong 4, 4.5, at 5-bituin</strong> ay pare-parehong tumatanggap ng iisang karaniwang 5-percentage-point na pagtaas sa kanilang naaangkop na porsyento</li>
+      <li><strong>Ang mga planong 5-bituin</strong> ay nagbubukas din ng espesyal na panahon ng pagpapatala para sa kanilang mga miyembro (tingnan sa ibaba)</li>
+    </ul>
+    <p>Ang resultang halaga ng rebate ay nakadepende sa aktwal na natipid ng plano kumpara sa (ngayon ay mas mataas na) rate ng county nito, kaya ang dalawang plano na may parehong antas ng bituin ay maaari pa ring magkaiba ng rebate. Itinutulak ng istrukturang insentibong ito ang mga plano na mamuhunan sa pagpapabuti ng kalidad at ginagawang pangunahing salik ang Mga Rating na Bituin sa estratehiya ng plano at posisyon sa kompetisyon. Inilalathala sa gabay ng CMS ang detalyadong pagkalkula ng rebate; sumangguni sa <a href="/tl/operations.html">Operasyon ng Health Plan</a> para sa mga implikasyon sa operasyon.</p>
+
+    <h2>Espesyal na Panahon ng Pagpapatala (5-Star SEP)</h2>
+    <p>Ang mga miyembro ng mga planong Medicare Advantage na may 5-bituin ay may Espesyal na Panahon ng Pagpapatala na magagamit nila nang <strong>isang beses</strong> sa pagitan ng Disyembre 8 at Nobyembre 30 ng sumunod na taon, na nagpapahintulot sa kanilang lumipat sa planong 5-bituin sa labas ng karaniwang Annual Enrollment Period. Karapatan ito ng benepisyaryo, hindi benepisyong tinatanggap mismo ng plano, at isa itong pangunahing salik sa mga desisyon sa pagpapatala ng miyembro. Tingnan ang <a href="/tl/medicare-five-star-special-enrollment-period.html">5-Star Espesyal na Panahon ng Pagpapatala: Paglipat sa Pinakamataas ang Rating na Plano sa Labas ng AEP</a> para sa buong gabay para sa miyembro, at ang <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a> at <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a> para sa paglipat ng plano sa pangkalahatan.</p>
+
+    <h2>Risk Adjustment at Ugnayan Nito sa Mga Rating na Bituin</h2>
+    <p>Inilalathala ang Mga Rating na Bituin bilang hilaw (hindi inayos) na mga rate; gayunman, sinusuri ang performance ng sukatan ng kalidad sa mas malawak na konteksto ng mga profile ng panganib ng mga plano. Ang mga planong naglilingkod sa mas maysakit na populasyon ay maaaring may mas mababang hilaw na rate ng HEDIS ngunit nagpapakita pa rin ng mahusay na pamamahala ng kalidad kaugnay ng kanilang panganib. Mahalagang maunawaan ang ugnayan ng risk adjustment, case mix, at interpretasyon ng Star Rating para sa tumpak na paghahambing. Tingnan ang <a href="/tl/risk-adjustment.html">Risk Adjustment</a> para sa mga detalye.</p>
+
+    <h2>Visibility ng Plano at Paggawa ng Desisyon ng Miyembro</h2>
+    <p>Kitang-kita ang Mga Rating na Bituin sa <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> sa panahon ng Pagpapatala, na may mga interaktibong kasangkapan para sa mga miyembro upang i-filter at ihambing ang mga plano ayon sa rating. Malaking atraksyon sa mga miyembro ang 5-bituin; kadalasang mas mataas ang Pagpapatala sa mga planong 5-bituin, habang maaaring mahirapan sa pagkawala ng miyembro ang mga planong 1–2 bituin. Dahil sa visibility na ito, ang Mga Rating na Bituin ay isa sa mga pinakamahalagang sukatan ng kalidad para sa posisyon ng plano sa merkado.</p>
+
+    <h2>Patuloy na Pagbabago at mga Update sa Pamamaraan</h2>
+    <p>Pana-panahong ina-update ng CMS ang pamamaraan ng Mga Rating na Bituin, nagdaragdag ng mga bagong sukatan, inaayos ang mga timbang ng domain, at binabago ang mga kinakailangan sa pangongolekta o pagsusumite ng datos. Halimbawa, nadagdagan o napino ang mga sukatan bilang tugon sa lumilitaw na klinikal na ebidensya, mga pagbabago sa saklaw na benepisyo, o puna mula sa mga tagapagtaguyod ng mga benepisyaryo at mga stakeholder sa industriya.</p>
+    <p>Ipinapakita ng 2026 Star Ratings kung gaano karami ang puwedeng magbago sa isang siklo: bumaba mula apat tungong dalawa ang timbang ng mga sukatan ng karanasan ng pasyente/reklamo at access, nadagdagan ng bagong sukatang Kidney Health Evaluation for Patients with Diabetes, at bumalik ang dalawang sukatan ng resulta sa kalusugan (Improving or Maintaining Physical Health at Improving or Maintaining Mental Health) matapos ang mga pagbabago sa espesipikasyon sa timbang na isa, na tataas sa tatlo simula sa 2027 Star Ratings. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
+    <p>Dapat subaybayan ng mga propesyonal ang <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> at ang <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran</a> para sa taunang mga update sa Mga Rating na Bituin, teknikal na espesipikasyon, at mga depinisyon ng sukatan. Karaniwang nagkakabisa ang mga pagbabago tuwing Oktubre 1 at inaanunsyo buwan nang mas maaga upang magkaroon ng panahon ang mga plano na ayusin ang kanilang pag-uulat at operasyon.</p>
+
+    <h2>Mga Propesyonal na Sanggunian</h2>
+    <p>Para sa detalyadong dokumentasyon ng Mga Rating na Bituin, mga data file, at teknikal na gabay, sumangguni sa:</p>
+    <ul>
+      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — Mga teknikal na espesipikasyon, mga depinisyon ng sukatan, pamamaraan ng pagkalkula</li>
+      <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — Pampublikong Mga Rating na Bituin, mga kasangkapan sa paghahambing ng plano, mga mapagkukunan para sa miyembro</li>
+      <li>NCQA — Mga depinisyon at update ng sukatan ng HEDIS</li>
+      <li>Mga sistema ng pagsusumite ng plano — Detalyadong datos ng performance, mga resulta sa antas ng sukatan, pagsusuri ng trend</li>
+    </ul>
+
+    <div class="note">
+      <strong>Beripikahin sa pinagmulan:</strong> Nagbabago taun-taon ang pamamaraan, timbang, at mga sukatan ng Mga Rating na Bituin. Laging sumangguni sa teknikal na dokumentasyon ng CMS para sa kasalukuyang taon sa <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> at sa mga opisyal na mapagkukunan ng Medicare.gov para sa tiyak na gabay sa pagkalkula ng rating, mga partikular na depinisyon ng sukatan, at mga kinakailangan sa pag-uulat.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/star-ratings.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
