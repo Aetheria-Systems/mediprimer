@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PACE: Program of All-Inclusive Care for the Elderly — MediPrimer</title>
+<meta name="description" content="PACE gives frail older adults Medicare and Medicaid care in one program so many can avoid a nursing home. Who qualifies, what it covers, and cost.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/pace-program-nursing-home-alternative.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="PACE: Program of All-Inclusive Care for the Elderly — MediPrimer">
+<meta property="og:description" content="PACE gives frail older adults Medicare and Medicaid care in one program so many can avoid a nursing home. Who qualifies, what it covers, and cost.">
+<meta property="og:url" content="https://mediprimer.org/pace-program-nursing-home-alternative.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="PACE: Program of All-Inclusive Care for the Elderly — MediPrimer">
+<meta name="twitter:description" content="PACE gives frail older adults Medicare and Medicaid care in one program so many can avoid a nursing home. Who qualifies, what it covers, and cost.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to have Medicaid to join PACE?", "acceptedAnswer": {"@type": "Answer", "text": "No. Most members have both Medicare and Medicaid. People with Medicare only pay a premium. People with neither can pay privately."}}, {"@type": "Question", "name": "Do I have to live in a nursing home?", "acceptedAnswer": {"@type": "Answer", "text": "No. You must be eligible for nursing home care. You must also be able to live safely in the community. For most members, PACE lets them stay in the community instead of going to a nursing home."}}, {"@type": "Question", "name": "Can I keep my own doctor?", "acceptedAnswer": {"@type": "Answer", "text": "Your care comes from the PACE team and its providers. Ask the PACE organization whether your current doctor can work with it before you enroll."}}, {"@type": "Question", "name": "Can I leave PACE?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can leave at any time and for any reason."}}, {"@type": "Question", "name": "Does PACE cover drugs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Prescription drugs are on the list of PACE benefits."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/pace-program-nursing-home-alternative.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/pace-program-nursing-home-alternative.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "PACE: Program of All-Inclusive Care for the Elderly", "description": "PACE gives frail older adults Medicare and Medicaid care in one program so many can avoid a nursing home. Who qualifies, what it covers, and cost.", "url": "https://mediprimer.org/pace-program-nursing-home-alternative.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "PACE: Program of All-Inclusive Care for the Elderly", "item": "https://mediprimer.org/pace-program-nursing-home-alternative.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>PACE: A Nursing Home Alternative for People With Medicare and Medicaid</h1>
+    <p>PACE brings Medicare and Medicaid care together in one program, so many older adults can stay in the community.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Here's the short answer.</strong> PACE stands for Program of All-Inclusive Care for the Elderly. It gives frail older adults their Medicare and Medicaid care through one team. For most members, that lets them stay in the community instead of moving to a nursing home. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --> Most members have both Medicare and Medicaid. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --></p>
+
+    <h2>Who can join PACE</h2>
+    <p>You can join if you meet all four conditions: <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --></p>
+    <ul>
+      <li>You are age 55 or older.</li>
+      <li>You live in the service area of a PACE organization.</li>
+      <li>You are eligible for nursing home care.</li>
+      <li>You can live safely in the community when you enroll.</li>
+    </ul>
+    <p>Joining is voluntary. If you qualify and choose PACE, you sign an enrollment agreement. You can stay as long as you want, no matter how your health changes. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --> You can leave at any time and for any reason. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --> PACE only works where a PACE organization serves your area.</p>
+
+    <h2>What PACE covers</h2>
+    <p>PACE covers all Medicaid and Medicare covered services. It also covers other services your care team decides you need to improve and keep up your health. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --> The list includes: <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+    <ul>
+      <li>Primary care, including doctor and nursing services</li>
+      <li>Hospital care and emergency services</li>
+      <li>Prescription drugs</li>
+      <li>Nursing home care</li>
+      <li>Home care and adult day care</li>
+      <li>Dentistry</li>
+      <li>Physical, occupational, and recreational therapy</li>
+      <li>Meals and nutritional counseling</li>
+      <li>Social services and social work counseling</li>
+      <li>Transportation</li>
+    </ul>
+    <p>PACE programs give services mainly in an adult day health center. Home visits and referrals add to that, based on your needs. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+
+    <h2>Your care team</h2>
+    <p>A team of health professionals checks your needs, makes your care plan, and delivers your care. The team includes at least a primary care provider, a registered nurse, a social worker, therapists, a dietitian, a center manager, a home care coordinator, a personal care attendant, and a driver. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --> The team typically meets daily to talk about how each person is doing. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>What PACE costs</h2>
+    <p>PACE members pay no deductibles, coinsurance, or other Medicare or Medicaid cost-sharing. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --> Premiums depend on your coverage: <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+    <ul>
+      <li><strong>Medicare and Medicaid both:</strong> The two programs pay the PACE provider. See <a href="/dual-eligible.html">Dual Eligibility</a>.</li>
+      <li><strong>Medicare only:</strong> You pay a monthly premium equal to the Medicaid payment amount, plus an amount for Part D drug coverage.</li>
+      <li><strong>Neither:</strong> You can enroll and pay privately.</li>
+    </ul>
+
+    <h2>The big trade-off: PACE replaces your other coverage</h2>
+    <p>PACE becomes the only source of Medicare and Medicaid services for its members. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --> That means you use PACE doctors, the PACE center, and PACE-approved services. If you want hospice, you must leave PACE first. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --> Ask whether your current doctors work with the PACE organization before you decide.</p>
+
+    <h2>How PACE compares with other options</h2>
+    <table>
+      <thead><tr><th>Option</th><th>How it works</th></tr></thead>
+      <tbody>
+        <tr><td>PACE</td><td>One team provides Medicare and Medicaid care. You use PACE providers.</td></tr>
+        <tr><td><a href="/medicaid-home-care-hcbs-waivers.html">Medicaid HCBS waivers</a></td><td>Your state pays for home and community services. Some waivers have waiting lists.</td></tr>
+        <tr><td><a href="/medicare-special-needs-plans.html">Special needs plans (D-SNPs)</a></td><td>Private plans that coordinate Medicare and Medicaid for dual eligibles.</td></tr>
+        <tr><td><a href="/medicare-long-term-care.html">Long-term care coverage</a></td><td>Our long-term care page explains what Medicare and Medicaid each pay for.</td></tr>
+      </tbody>
+    </table>
+    <p>MediPrimer does not recommend one option over another. The right fit depends on your health, your doctors, and where you live.</p>
+
+    <h2>How to find out if PACE is near you</h2>
+    <p>Ask your state Medicaid agency whether it offers PACE and which organizations serve your area. Use our <a href="/state-medicaid.html">State Medicaid Directory</a>. Your local <a href="/ship-directory.html">SHIP</a> can also explain your choices for free. Ask to visit the PACE center before you sign anything.</p>
+
+    <h2>Common questions</h2>
+    <details class="qa">
+      <summary>Do I have to have Medicaid to join PACE?</summary>
+      <div>
+        <p>No. Most members have both Medicare and Medicaid. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --> People with Medicare only pay a premium. People with neither can pay privately. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Do I have to live in a nursing home?</summary>
+      <div>
+        <p>No. You must be eligible for nursing home care. You must also be able to live safely in the community. For most members, PACE lets them stay in the community instead of going to a nursing home. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I keep my own doctor?</summary>
+      <div>
+        <p>Your care comes from the PACE team and its providers. Ask the PACE organization whether your current doctor can work with it before you enroll.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I leave PACE?</summary>
+      <div>
+        <p>Yes. You can leave at any time and for any reason. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does PACE cover drugs?</summary>
+      <div>
+        <p>Yes. Prescription drugs are on the list of PACE benefits. <!-- src: https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits --></p>
+      </div>
+    </details>
+
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/dual-eligible.html">Dual Eligibility: Medicare and Medicaid Together</a></li>
+      <li><a href="/medicaid-home-care-hcbs-waivers.html">Medicaid Home Care and HCBS Waivers</a></li>
+      <li><a href="/medicare-long-term-care.html">Medicare and Long-Term Care</a></li>
+      <li><a href="/medicare-special-needs-plans.html">Special Needs Plans</a></li>
+      <li><a href="/caregivers.html">Caregivers</a></li>
+      <li><a href="/glossary.html">Glossary</a></li>
+      <li><a href="https://www.medicaid.gov/medicaid/long-term-services-supports/program-all-inclusive-care-elderly" rel="noopener">Medicaid.gov: PACE</a></li>
+      <li><a href="https://www.medicaid.gov/medicaid/long-term-services-supports/program-of-all-inclusive-care-for-elderly/programs-of-all-inclusive-care-for-elderly-benefits" rel="noopener">Medicaid.gov: PACE benefits</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. PACE is not available in every state or area. Confirm details with your state Medicaid agency and the PACE organization, and see <a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a>.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
