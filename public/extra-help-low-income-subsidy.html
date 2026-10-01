@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Extra Help for Medicare Drug Costs: Who Qualifies — MediPrimer</title>
+<meta name="description" content="Extra Help lowers Part D drug costs for people with limited income. Who gets it automatically, the 2026 limits, how to apply, and how it differs from MSPs.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Extra Help for Medicare Drug Costs: Who Qualifies — MediPrimer">
+<meta property="og:description" content="Extra Help lowers Part D drug costs for people with limited income. Who gets it automatically, the 2026 limits, how to apply, and how it differs from MSPs.">
+<meta property="og:url" content="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Extra Help for Medicare Drug Costs: Who Qualifies — MediPrimer">
+<meta name="twitter:description" content="Extra Help lowers Part D drug costs for people with limited income. Who gets it automatically, the 2026 limits, how to apply, and how it differs from MSPs.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to apply if I have Medicaid?", "acceptedAnswer": {"@type": "Answer", "text": "Usually not. Full-benefit Medicaid gets you Extra Help automatically. Your state can tell you if your Medicaid is full benefit."}}, {"@type": "Question", "name": "Is Extra Help the same as the Low-Income Subsidy (LIS)?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Extra Help is the common name. Some forms and plans call it the Low-Income Subsidy, or LIS."}}, {"@type": "Question", "name": "Does my home count against the resource limit?", "acceptedAnswer": {"@type": "Answer", "text": "No. Your home and one car do not count."}}, {"@type": "Question", "name": "Can I apply if I do not have a drug plan yet?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can apply before or after you enroll in Part D."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Extra Help for Medicare Drug Costs: Who Qualifies", "description": "Extra Help lowers Part D drug costs for people with limited income. Who gets it automatically, the 2026 limits, how to apply, and how it differs from MSPs.", "url": "https://mediprimer.org/extra-help-low-income-subsidy.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Extra Help for Medicare Drug Costs: Who Qualifies", "item": "https://mediprimer.org/extra-help-low-income-subsidy.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Extra Help (Part D Low-Income Subsidy): Who Qualifies and How to Apply</h1>
+    <p>Extra Help pays part of your Medicare drug plan costs. Here is who gets it automatically, who can apply, and how it differs from the Medicare Savings Programs.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Here's the short answer.</strong> Extra Help is a Medicare program that pays part of your Part D drug costs if your income and resources are low. It helps with premiums, deductibles, and copays. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> Some people get it automatically. Everyone else can apply with Social Security, any time. <!-- src: https://www.ssa.gov/medicare/part-d-extra-help --> It is not the same as a Medicare Savings Program. Those help with other Medicare costs. Extra Help is for drugs.</p>
+
+    <h2>Who gets Extra Help automatically</h2>
+    <p>You get Extra Help with no application if you have any one of these: <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <ul>
+      <li>Full-benefit Medicaid coverage</li>
+      <li>Help from your state paying your Part B premium through a <a href="/medicare-savings-programs.html">Medicare Savings Program</a></li>
+      <li>Supplemental Security Income (SSI) payments from Social Security</li>
+    </ul>
+    <p>You will get a notice in the mail. It tells you what you will pay. It also names your new drug plan if you did not already have one. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> People who have both Medicare and Medicaid are called <a href="/dual-eligible.html">dual eligibles</a>.</p>
+
+    <h2>Who can apply</h2>
+    <p>In most cases you must have income and resources below set limits. The limits may go up each year. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> These are the 2026 limits:</p>
+    <table>
+      <thead><tr><th>Your situation</th><th>Income limit</th><th>Resource limit</th></tr></thead>
+      <tbody>
+        <tr><td>Single</td><td>$23,940</td><td>$18,090</td></tr>
+        <tr><td>Married couple</td><td>$32,460</td><td>$36,100</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> Income limits are higher in Alaska and Hawaii. Medicare.gov lists them separately. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> Extra Help is not offered in Puerto Rico, the U.S. Virgin Islands, Guam, the Northern Mariana Islands, or American Samoa. Other programs help there, so call your State Medical Assistance (Medicaid) office. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>What counts as income:</strong> wages, self-employment earnings, Social Security, pensions, Railroad Retirement benefits, Veterans benefits, alimony, annuities, rental income, and workers' compensation. States do not count things like SNAP, housing help, home energy help, and earned income tax credit payments. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>What counts as resources:</strong> money in checking, savings, or retirement accounts, plus stocks and bonds. Your home, one car, a burial plot, and household items do not count. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>How to apply</h2>
+    <ol class="steps">
+      <li><strong>Gather papers for you and your spouse.</strong> These include bank statements, tax returns, retirement account balances, and statements for pensions, Veterans' benefits, annuities, and Railroad Retirement benefits. <!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>Apply with Social Security.</strong> You can apply online. Or call 1-800-772-1213 (TTY 1-800-325-0778) and ask for an appointment to apply for Part D Extra Help. <!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>Apply any time.</strong> You can apply before or after you join a Part D plan. <!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>Ask for free help if you want it.</strong> Your local <a href="/ship-directory.html">SHIP</a> can help you apply. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+    </ol>
+    <p>You can apply for Extra Help and a Medicare Savings Program at the same time. Social Security sends your information to your state to start the savings program application unless you tell it not to on the Extra Help form. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Extra Help and Medicare Savings Programs: the difference</h2>
+    <table>
+      <thead><tr><th></th><th>Extra Help</th><th>Medicare Savings Programs</th></tr></thead>
+      <tbody>
+        <tr><td>What it pays for</td><td>Part D drug premiums, deductibles, and copays</td><td>Help with Medicare costs such as the Part B premium</td></tr>
+        <tr><td>Automatic?</td><td>Yes, if you have full Medicaid, an MSP, or SSI</td><td>No. You apply through your state</td></tr>
+        <tr><td>Where you apply</td><td>Social Security</td><td>Your state Medicaid agency</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> If you qualify for an MSP, you get Extra Help automatically. Read <a href="/medicare-savings-programs.html">Medicare Savings Programs</a> to see the state rules.</p>
+
+    <h2>What happens after you qualify</h2>
+    <ul>
+      <li>Medicare enrolls you in a drug plan if you do not have one. You can pick a different plan if you want. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>You keep Extra Help through December 31, even if your income changes during the year. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>If you still meet the limits next year, you keep it. You get a letter only if you no longer qualify or your plan changes. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>You do not pay a Part D late enrollment penalty while you get Extra Help. If you had one before, it goes away. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> See <a href="/medicare-late-enrollment-penalties.html">late enrollment penalties</a>.</li>
+      <li>You may be able to change drug plans once a month. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+    </ul>
+    <p>If your Extra Help ends, join a drug plan within 2 months. That helps you avoid the penalty. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> You can apply again any time if your income or resources change. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>If you are paying the wrong amount</h2>
+    <p>Call your drug plan. It may ask for proof that you get Extra Help. Examples are your Medicare Extra Help letter, your SSI award letter, or a Medicaid card. Tell the plan how many days of medicine you have left. You can also call 1-800-MEDICARE (1-800-633-4227, TTY 1-877-486-2048). <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p>If you qualify but are not in a plan yet, the LI NET program gives temporary drug coverage. Call 1-800-783-1307. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>Common questions</h2>
+    <details class="qa">
+      <summary>Do I have to apply if I have Medicaid?</summary>
+      <div>
+        <p>Usually not. Full-benefit Medicaid gets you Extra Help automatically. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> Your state can tell you if your Medicaid is full benefit.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Is Extra Help the same as the Low-Income Subsidy (LIS)?</summary>
+      <div>
+        <p>Yes. Extra Help is the common name. Some forms and plans call it the Low-Income Subsidy, or LIS.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does my home count against the resource limit?</summary>
+      <div>
+        <p>No. Your home and one car do not count. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I apply if I do not have a drug plan yet?</summary>
+      <div>
+        <p>Yes. You can apply before or after you enroll in Part D. <!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></p>
+      </div>
+    </details>
+
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/medicare-savings-programs.html">Medicare Savings Programs</a></li>
+      <li><a href="/getting-help.html">Getting Help Paying</a></li>
+      <li><a href="/medicare-part-d.html">Medicare Part D</a></li>
+      <li><a href="/dual-eligible.html">Dual Eligibility</a></li>
+      <li><a href="/medicare-late-enrollment-penalties.html">Medicare Late Enrollment Penalties</a></li>
+      <li><a href="https://www.ssa.gov/medicare/part-d-extra-help" rel="noopener">SSA: Apply for Extra Help</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/help/drug-costs" rel="noopener">Medicare.gov: Help with drug costs</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. The income and resource limits here are for 2026 and change often. Confirm them at <a href="https://www.medicare.gov/basics/costs/help/drug-costs" rel="noopener">Medicare.gov</a> before you apply. Your <a href="/ship-directory.html">SHIP</a> can help for free.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

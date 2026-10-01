@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare Late Enrollment Penalties: Part B and Part D — MediPrimer</title>
+<meta name="description" content="How Medicare&#x27;s Part B and Part D late enrollment penalties are figured, with 2026 examples, ways to avoid them, and how to ask for a Part D review.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Late Enrollment Penalties: Part B and Part D — MediPrimer">
+<meta property="og:description" content="How Medicare&#x27;s Part B and Part D late enrollment penalties are figured, with 2026 examples, ways to avoid them, and how to ask for a Part D review.">
+<meta property="og:url" content="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare Late Enrollment Penalties: Part B and Part D — MediPrimer">
+<meta name="twitter:description" content="How Medicare&#x27;s Part B and Part D late enrollment penalties are figured, with 2026 examples, ways to avoid them, and how to ask for a Part D review.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the late enrollment penalty a one-time fee?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is added to your monthly premium. For most people it lasts as long as you have that coverage."}}, {"@type": "Question", "name": "I have coverage through my job. Do I owe a penalty?", "acceptedAnswer": {"@type": "Answer", "text": "Not if that coverage is similar in value to Medicare. For Part D, the drug coverage must be creditable. Ask your employer or union for a notice that says so, and keep it."}}, {"@type": "Question", "name": "Does the penalty go up every year?", "acceptedAnswer": {"@type": "Answer", "text": "The Part D base premium may go up each year, so your penalty may too. The Part B penalty is added to the standard Part B premium, which also changes by year."}}, {"@type": "Question", "name": "What counts as a month for Part D?", "acceptedAnswer": {"@type": "Answer", "text": "The penalty uses the number of full, uncovered months you could have joined a drug plan but did not."}}, {"@type": "Question", "name": "Can I get rid of a Part D penalty by switching plans?", "acceptedAnswer": {"@type": "Answer", "text": "No. The penalty follows you if you switch plans."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Late Enrollment Penalties: Part B and Part D", "description": "How Medicare's Part B and Part D late enrollment penalties are figured, with 2026 examples, ways to avoid them, and how to ask for a Part D review.", "url": "https://mediprimer.org/medicare-late-enrollment-penalties.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-01", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Late Enrollment Penalties: Part B and Part D", "item": "https://mediprimer.org/medicare-late-enrollment-penalties.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Medicare Late Enrollment Penalties: How They Are Figured and How to Appeal</h1>
+    <p>Signed up late? Here is how the Part B and Part D penalties work, what they cost, and what you can do about them.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Here's the short answer.</strong> The Part B penalty is 10% of the standard Part B premium for each full 12 months you could have signed up but didn't. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> The Part D penalty is 1% of the national base beneficiary premium for each full month you went without drug coverage. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Both are added to your monthly premium. Neither is a one-time fee. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> You can ask for a review of a Part D penalty. You have 60 days from the date on the letter. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>The Part B late enrollment penalty</h2>
+    <p>You pay an extra 10% for each year you could have signed up for Part B but didn't. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Only full 12-month periods count. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> The penalty is added to your monthly Part B premium. You pay it each month for as long as you have Part B. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare --></p>
+    <p><strong>How to figure it.</strong> Count the full years you waited. Multiply by 10%. Then take that percent of the standard Part B premium. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <p><strong>Example for 2026 (Medicare.gov's own example).</strong> A person waited 2 full years (24 months) and did not qualify for a Special Enrollment Period. The penalty is 20%. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <table>
+      <thead><tr><th>Step</th><th>2026 amount</th></tr></thead>
+      <tbody>
+        <tr><td>Standard Part B premium</td><td>$202.90</td></tr>
+        <tr><td>Plus 20% penalty</td><td>$40.58</td></tr>
+        <tr><td>Total, then rounded to the nearest $0.10</td><td>$243.48, which becomes $243.50</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> People with higher incomes may also pay an income-related surcharge on top. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> That is a separate charge. See <a href="/irmaa-appeal-ssa-44.html">how to ask for a lower IRMAA</a>.</p>
+
+    <h2>When you do not owe a Part B penalty</h2>
+    <ul>
+      <li><strong>You had similar coverage.</strong> Coverage from an employer can count, so you can wait to sign up. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> See <a href="/working-past-65.html">Working Past 65</a>.</li>
+      <li><strong>You qualify for a Special Enrollment Period.</strong> <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>You join a Medicare Savings Program.</strong> <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> See <a href="/medicare-savings-programs.html">Medicare Savings Programs</a>.</li>
+    </ul>
+
+    <h2>The Part D late enrollment penalty</h2>
+    <p>You may owe this penalty if you go 63 days or more in a row without Medicare drug coverage or other creditable drug coverage. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Creditable coverage is drug coverage that is about as good as Part D. It can come from an employer, a union, TRICARE, the VA, or Indian Health Service. <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>How to figure it.</strong> Take 1%. Multiply it by the national base beneficiary premium. Multiply that by the number of full months you went without coverage. Round to the nearest $0.10. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+    <p><strong>Example for 2026 (Medicare.gov's own example).</strong> A person waited 14 months and had no creditable coverage. The penalty is 14%. The national base beneficiary premium in 2026 is $38.99. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <table>
+      <thead><tr><th>Step</th><th>2026 amount</th></tr></thead>
+      <tbody>
+        <tr><td>National base beneficiary premium</td><td>$38.99</td></tr>
+        <tr><td>Times 14%</td><td>$5.46</td></tr>
+        <tr><td>Rounded to the nearest $0.10</td><td>$5.50 a month</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> This is added to your plan's premium. It stays with you as long as you have Part D, even if you switch plans. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> The base premium can rise each year, so the penalty can rise too. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+    <p><strong>Extra Help removes it.</strong> You do not pay a Part D penalty while you get Extra Help. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> See <a href="/extra-help-low-income-subsidy.html">Extra Help for Medicare drug costs</a>.</p>
+
+    <h2>Part B and Part D side by side</h2>
+    <table>
+      <thead><tr><th></th><th>Part B</th><th>Part D</th></tr></thead>
+      <tbody>
+        <tr><td>Rate</td><td>10% for each full 12 months</td><td>1% for each full month</td></tr>
+        <tr><td>Applied to</td><td>The standard Part B premium</td><td>The national base beneficiary premium</td></tr>
+        <tr><td>Starts after</td><td>Your Initial Enrollment Period, with no similar coverage</td><td>63 days or more in a row with no creditable drug coverage</td></tr>
+        <tr><td>How long</td><td>For as long as you have Part B</td><td>For as long as you have Part D</td></tr>
+        <tr><td>Formal review</td><td>See the Part B section below</td><td>Yes, a "reconsideration"</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> The Part A penalty is different. Most people get Part A with no premium and never see it. If you must buy Part A and wait, your premium may go up 10%. You pay it for twice the number of years you waited. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>How to appeal a Part D penalty</h2>
+    <p>You may ask for a "reconsideration." A Medicare contractor that is not connected to your drug plan does the review. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <ol class="steps">
+      <li><strong>Read your plan's letter.</strong> It says you owe a penalty. Your plan will also send you information on how to ask for a review. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Count 60 days from the date on that letter.</strong> That is your deadline. If you send it late, you must explain why. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Fill out the form and send it back.</strong> Use the address or fax number on the form. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Include proof of creditable coverage.</strong> Examples are a copy of your prescription drug card or a notice of creditable coverage from an employer or union plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Wait for the decision.</strong> The contractor usually decides within 90 days. For good cause it may take 14 more days. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+    </ol>
+    <p><strong>Keep paying while you wait.</strong> By law the penalty is part of your premium. You must pay it even if you ask for a review. A plan can disenroll members who do not pay premiums, including the penalty part. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <p>If the contractor finds the penalty wrong, your plan removes or lowers it. The plan will send a letter that shows the right premium and says whether you get a refund. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> If the contractor finds it correct, you keep paying it. Sometimes the contractor will not review a request. For example, it may be late or incomplete. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> You generally do not get another chance to ask if you joined a different plan earlier and were already paying a penalty. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>If you think your Part B penalty is wrong</h2>
+    <p>The Medicare.gov pages we checked describe a formal review only for the Part D penalty. They do not lay out a separate Part B appeal process or deadline. Social Security handles Part B sign-up. <!-- src: https://www.ssa.gov/medicare/sign-up --> If you had coverage that should have counted, or you think the number of years is wrong, start there. Call 1-800-772-1213 (TTY 1-800-325-0778). <!-- src: https://www.ssa.gov/medicare/sign-up --> Have your dates of employer coverage ready. Your <a href="/ship-directory.html">SHIP</a> can help you for free. For the general appeal steps, see <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Common questions</h2>
+    <details class="qa">
+      <summary>Is the late enrollment penalty a one-time fee?</summary>
+      <div>
+        <p>No. It is added to your monthly premium. For most people it lasts as long as you have that coverage. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>I have coverage through my job. Do I owe a penalty?</summary>
+      <div>
+        <p>Not if that coverage is similar in value to Medicare. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> For Part D, the drug coverage must be creditable. Ask your employer or union for a notice that says so, and keep it. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does the penalty go up every year?</summary>
+      <div>
+        <p>The Part D base premium may go up each year, so your penalty may too. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> The Part B penalty is added to the standard Part B premium, which also changes by year. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>What counts as a month for Part D?</summary>
+      <div>
+        <p>The penalty uses the number of full, uncovered months you could have joined a drug plan but did not. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I get rid of a Part D penalty by switching plans?</summary>
+      <div>
+        <p>No. The penalty follows you if you switch plans. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+      </div>
+    </details>
+
+
+    <h2>Related pages</h2>
+    <ul>
+      <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+      <li><a href="/costs.html">Understanding Your Costs</a></li>
+      <li><a href="/medicare-part-d.html">Medicare Part D</a></li>
+      <li><a href="/extra-help-low-income-subsidy.html">Extra Help for Medicare Drug Costs</a></li>
+      <li><a href="/irmaa-appeal-ssa-44.html">Appealing IRMAA With Form SSA-44</a></li>
+      <li><a href="/glossary.html">Glossary</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties" rel="noopener">Medicare.gov: Avoid late enrollment penalties</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Part D costs</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. The dollar amounts here are 2026 examples from Medicare.gov. They change each year. Confirm current figures at <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>. Your <a href="/ship-directory.html">SHIP</a> can check your own dates for free.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
