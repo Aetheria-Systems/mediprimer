@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mga Pamilyang May Magkakaibang Katayuan: Tulong sa Marketplace at Medicaid — MediPrimer</title>
+<meta name="description" content="Puwede bang makakuha ng matitipid sa Marketplace ang isang mamamayan o legal na naninirahang kamag-anak kung ang asawa o magulang ay undocumented? Sino ang tinatanong tungkol sa katayuan, at ang pagbabago sa 2027.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/mixed-status-family-marketplace.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Mga Pamilyang May Magkakaibang Katayuan: Tulong sa Marketplace at Medicaid — MediPrimer">
+<meta property="og:description" content="Puwede bang makakuha ng matitipid sa Marketplace ang isang mamamayan o legal na naninirahang kamag-anak kung ang asawa o magulang ay undocumented? Sino ang tinatanong tungkol sa katayuan, at ang pagbabago sa 2027.">
+<meta property="og:url" content="https://mediprimer.org/tl/mixed-status-family-marketplace.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Mga Pamilyang May Magkakaibang Katayuan: Tulong sa Marketplace at Medicaid — MediPrimer">
+<meta name="twitter:description" content="Puwede bang makakuha ng matitipid sa Marketplace ang isang mamamayan o legal na naninirahang kamag-anak kung ang asawa o magulang ay undocumented? Sino ang tinatanong tungkol sa katayuan, at ang pagbabago sa 2027.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Undocumented ang asawa ko. Makakakuha pa rin ba ako ng tulong sa Marketplace?", "acceptedAnswer": {"@type": "Answer", "text": "Oo, kung kayo ay mamamayan o legal na naninirahan. Nag-a-apply kayo para sa inyong sarili. Hindi tatanungin ang inyong asawa tungkol sa katayuan maliban kung siya ay nag-a-apply."}}, {"@type": "Question", "name": "Makakakuha ba ng saklaw ang mga anak ko kung undocumented ako?", "acceptedAnswer": {"@type": "Answer", "text": "Maaari. Maaaring mag-apply ang mga pamilya para sa Medicaid, CHIP, o matitipid sa Marketplace para sa mga kwalipikadong dependent. Nakadepende ang pagiging kwalipikado sa sariling katayuan ng bawat bata at sa mga patakaran ng inyong estado. Tingnan ang CHIP ."}}, {"@type": "Question", "name": "Tatanungin ba ako tungkol sa katayuan sa imigrasyon ng aking pamilya?", "acceptedAnswer": {"@type": "Answer", "text": "Para lang sa mga taong nag-a-apply ng saklaw. Ang mga miyembro ng sambahayan na hindi nag-a-apply ay hindi tinatanong."}}, {"@type": "Question", "name": "Puwede bang punan ng isang undocumented na magulang ang aplikasyon?", "acceptedAnswer": {"@type": "Answer", "text": "Sinasabi ng HealthCare.gov na ang mga undocumented na imigrante ay maaaring mag-apply para sa mga taong may dokumento."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Mga Pamilyang May Magkakaibang Katayuan: Tulong sa Marketplace at Medicaid", "description": "Puwede bang makakuha ng matitipid sa Marketplace ang isang mamamayan o legal na naninirahang kamag-anak kung ang asawa o magulang ay undocumented? Sino ang tinatanong tungkol sa katayuan, at ang pagbabago sa 2027.", "url": "https://mediprimer.org/tl/mixed-status-family-marketplace.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-02", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Mga Pamilyang May Magkakaibang Katayuan: Tulong sa Marketplace at Medicaid", "item": "https://mediprimer.org/tl/mixed-status-family-marketplace.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/mixed-status-family-marketplace.html" lang="en">English</a>
+    <a href="/es/mixed-status-family-marketplace.html" lang="es">Español</a>
+    <a href="/zh-Hant/mixed-status-family-marketplace.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/mixed-status-family-marketplace.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/mixed-status-family-marketplace.html" lang="ko">한국어</a>
+    <a href="/tl/mixed-status-family-marketplace.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Mga Pamilyang May Magkakaibang Katayuan: Sino ang Puwedeng Makakuha ng Matitipid sa Marketplace</h1>
+    <p>Ang ilang tao sa inyong sambahayan ay maaaring kwalipikado sa saklaw, habang ang iba ay hindi. Narito kung paano tinitingnan ng aplikasyon ang bawat tao.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Sa isang pamilyang "mixed-status," magkakaiba ang katayuan ng mga miyembro sa imigrasyon o pagkamamamayan. Ang isang kamag-anak na mamamayan o legal na naninirahan sa bansa ay maaaring mag-apply para sa saklaw at matitipid sa Marketplace. Totoo ito kahit undocumented ang asawa o magulang. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Ang mga kamag-anak na hindi nag-a-apply ay hindi tinatanong tungkol sa kanilang katayuan. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Ang mga undocumented na imigrante ay hindi makakakuha ng saklaw sa Marketplace para sa kanilang sarili. Maaari silang mag-apply para sa mga kamag-anak na kwalipikado. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+
+    <h2>Sino ang nag-a-apply, at sino ang tinatanong tungkol sa katayuan</h2>
+    <p>Bawat taong nag-a-apply ay sinusuri nang hiwalay. Ang mga miyembro ng pamilya na hindi nag-a-apply ng saklaw para sa kanilang sarili ay hindi tatanungin tungkol sa kanilang katayuan sa imigrasyon. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+    <p>Pinoprotektahan din ng mga patakaran ang mga kwalipikadong miyembro. Hindi maaaring humingi ang Marketplace at ang mga tanggapan ng Medicaid at CHIP ng estado ng mga detalye tungkol sa katayuan para sa mga miyembro ng sambahayan na hindi nag-a-apply. Hindi maaaring tanggihan ng isang estado ang mga benepisyo ng isang aplikante dahil hindi ibinahagi ng isa sa mga miyembrong iyon ang kanilang katayuan. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+
+    <h2>Ano ang magagawa ng isang pamilyang may magkakaibang katayuan</h2>
+    <ul>
+      <li><strong>Mag-apply para sa matitipid para sa mga kwalipikadong dependent.</strong> Maaaring mag-apply ang mga pamilya para sa Kredito sa Buwis ng Premium at karagdagang matitipid sa mga gastos mula sa sariling bulsa. Ito ay para sa mga dependent na kwalipikado sa saklaw ng Marketplace. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Mag-apply para sa Medicaid at CHIP.</strong> Maaaring mag-apply ang mga pamilya para sa saklaw ng Medicaid at CHIP para sa mga kwalipikadong miyembro ng pamilyang dependent. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Ang ilang miyembro ay maaaring kwalipikado sa buong Medicaid o CHIP habang ang iba ay hindi. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Isama ang mga miyembrong nagbabayad ng buwis na hindi makakakuha ng saklaw.</strong> May mga pamilyang may mga nagbabayad ng buwis na hindi makakakuha ng saklaw sa Marketplace. Ang ibang miyembro ng parehong pamilya ay kwalipikado bilang mga mamamayan o legal na naninirahang imigrante. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+    </ul>
+    <p>Maaaring maging mahirap ang pagbilang ng laki ng sambahayan at ng kita sa mga ganitong kaso. Makakatulong ang isang libreng navigator ng Marketplace. Tingnan ang <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>.</p>
+
+    <h2>Sino ang itinuturing na legal na naninirahan</h2>
+    <p>Inililista ng HealthCare.gov ang mga grupong ito na maaaring makakuha ng saklaw sa Marketplace. Hindi ito kumpletong listahan. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <ul>
+      <li>Mga Lawful Permanent Resident (may hawak ng green card)</li>
+      <li>Mga asylee at refugee</li>
+      <li>Mga taong pinahintulutang makapasok sa U.S. sa pamamagitan ng parole</li>
+      <li>Mga taong may dokumento ng awtorisasyon sa pagtatrabaho (work permit)</li>
+      <li>Mga taong may visa para sa manggagawa, estudyante, U-visa, T-visa, at iba pang non-immigrant visa</li>
+      <li>Mga taong may katayuang Deferred Action</li>
+      <li>Mga taong may Temporary Protected Status</li>
+      <li>Mga Cuban o Haitian entrant</li>
+      <li>Mga mamamayan ng Marshall Islands, Micronesia, at Palau na nakatira sa isang estado o teritoryo ng U.S. (mga migranteng COFA)</li>
+    </ul>
+    <p><!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --> Ang mga tumatanggap ng Deferred Action for Childhood Arrivals (DACA) ay hindi kwalipikado sa saklaw ng Marketplace. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+
+    <h2>Isang pagbabago sa batas na darating sa Enero 1, 2027</h2>
+    <p>Nagbababala ang HealthCare.gov tungkol sa isang pagbabago sa batas. Simula Enero 1, 2027, tatlong katayuan lang ang magiging kwalipikado sa matitipid. Ito ay ang Lawful Permanent Resident (may hawak ng green card), Cuban o Haitian entrant, at migranteng Compact of Free Association (COFA). Ang ibang legal na naninirahang tao ay maaari pa ring makakuha ng saklaw sa Marketplace, ngunit walang matitipid. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Kung ang isang kamag-anak ay may katayuang wala sa listahang iyon, alamin kung paano nito babaguhin ang inyong mga gastos bago ang taon ng plano sa 2027. Gamitin ang aming <a href="/tl/marketplace-income-estimate.html">gabay sa pagtantiya ng kita</a>, at makipag-usap sa isang navigator.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Iba pang lugar para makakuha ng pangangalaga</h2>
+    <p>Kung ang isang tao ay hindi kwalipikado sa saklaw ng Marketplace, maaari siyang makakuha ng pangangalaga sa mas mababang halaga sa pamamagitan ng isang community health center. Nag-aalok ang mga health center ng pangunahing pangangalaga na may sliding fee scale batay sa kita. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Para sa mga emergency, tingnan ang <a href="/tl/emergency-medicaid.html">Emergency Medicaid</a>. Kung isang miyembro ng pamilya ang nag-sponsor ng green card, tingnan ang <a href="/tl/medicaid-sponsor-deeming.html">sponsor deeming</a>. Para sa mga tanong tungkol sa Medicare, tingnan ang <a href="/tl/medicare-immigrants.html">Medicare para sa mga Imigrante</a>.</p>
+
+    <h2>Mga karaniwang tanong</h2>
+    <details class="qa">
+      <summary>Undocumented ang asawa ko. Makakakuha pa rin ba ako ng tulong sa Marketplace?</summary>
+      <div>
+        <p>Oo, kung kayo ay mamamayan o legal na naninirahan. Nag-a-apply kayo para sa inyong sarili. Hindi tatanungin ang inyong asawa tungkol sa katayuan maliban kung siya ay nag-a-apply. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Makakakuha ba ng saklaw ang mga anak ko kung undocumented ako?</summary>
+      <div>
+        <p>Maaari. Maaaring mag-apply ang mga pamilya para sa Medicaid, CHIP, o matitipid sa Marketplace para sa mga kwalipikadong dependent. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Nakadepende ang pagiging kwalipikado sa sariling katayuan ng bawat bata at sa mga patakaran ng inyong estado. Tingnan ang <a href="/tl/chip.html">CHIP</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tatanungin ba ako tungkol sa katayuan sa imigrasyon ng aking pamilya?</summary>
+      <div>
+        <p>Para lang sa mga taong nag-a-apply ng saklaw. Ang mga miyembro ng sambahayan na hindi nag-a-apply ay hindi tinatanong. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Puwede bang punan ng isang undocumented na magulang ang aplikasyon?</summary>
+      <div>
+        <p>Sinasabi ng HealthCare.gov na ang mga undocumented na imigrante ay maaaring mag-apply para sa mga taong may dokumento. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+      </div>
+    </details>
+
+
+    <h2>Mga kaugnay na pahina</h2>
+    <ul>
+      <li><a href="/tl/marketplace.html">Ang Health Insurance Marketplace</a></li>
+      <li><a href="/tl/medicare-immigrants.html">Medicare para sa mga Imigrante at May Hawak ng Green Card</a></li>
+      <li><a href="/tl/medicaid-eligibility.html">Pagiging Kwalipikado sa Medicaid</a></li>
+      <li><a href="/tl/chip.html">CHIP</a></li>
+      <li><a href="/tl/multigenerational-household-coverage.html">Pagsasaklaw sa Isang Magulang at Isang Anak sa Iisang Sambahayan</a></li>
+      <li><a href="/tl/state-medicaid.html">Direktoryo ng Medicaid ng Estado</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigrant-families/" rel="noopener">HealthCare.gov: Mga pamilyang imigrante</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigration-status/" rel="noopener">HealthCare.gov: Katayuan sa imigrasyon at ang Marketplace</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Tiyakin bago kumilos.</strong> Ang MediPrimer ay pangkalahatang impormasyong pang-edukasyon at hindi kaanib ng anumang ahensya o insurer. Nagbabago at nag-iiba-iba sa bawat estado ang mga patakaran sa imigrasyon at saklaw. Hindi ito legal na payo. Kumpirmahin ang mga detalye sa <a href="https://www.healthcare.gov/immigrants/" rel="noopener">HealthCare.gov</a> o sa isang libreng navigator o grupo ng legal aid.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/mixed-status-family-marketplace.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>醫療保險藥品費用的額外補助：誰符合資格 — MediPrimer</title>
+<meta name="description" content="額外補助（低收入補貼）可降低收入有限者的醫療保險D部分藥品費用。誰會自動獲得、2026年的限額、如何申請，以及與醫療保險儲蓄計劃（MSP）有何不同。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="醫療保險藥品費用的額外補助：誰符合資格 — MediPrimer">
+<meta property="og:description" content="額外補助（低收入補貼）可降低收入有限者的醫療保險D部分藥品費用。誰會自動獲得、2026年的限額、如何申請，以及與醫療保險儲蓄計劃（MSP）有何不同。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="醫療保險藥品費用的額外補助：誰符合資格 — MediPrimer">
+<meta name="twitter:description" content="額外補助（低收入補貼）可降低收入有限者的醫療保險D部分藥品費用。誰會自動獲得、2026年的限額、如何申請，以及與醫療保險儲蓄計劃（MSP）有何不同。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "如果我有 Medicaid，還需要申請嗎？", "acceptedAnswer": {"@type": "Answer", "text": "通常不需要。完整福利的 Medicaid 會讓您自動獲得額外補助（低收入補貼）。 您所在的州可以告訴您，您的 Medicaid 是否為完整福利。"}}, {"@type": "Question", "name": "額外補助與低收入補貼（LIS）是一樣的嗎？", "acceptedAnswer": {"@type": "Answer", "text": "是的。額外補助是通用的名稱。有些表格和計劃稱之為低收入補貼，或 LIS。"}}, {"@type": "Question", "name": "我的住所會計入資產限額嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。您的住所和一輛汽車不計入。"}}, {"@type": "Question", "name": "如果我還沒有藥品計劃，可以申請嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。您可以在註冊D部分之前或之後申請。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "醫療保險藥品費用的額外補助：誰符合資格", "description": "額外補助（低收入補貼）可降低收入有限者的醫療保險D部分藥品費用。誰會自動獲得、2026年的限額、如何申請，以及與醫療保險儲蓄計劃（MSP）有何不同。", "url": "https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-02", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/extra-help-low-income-subsidy.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "醫療保險藥品費用的額外補助：誰符合資格", "item": "https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/extra-help-low-income-subsidy.html" lang="en">English</a>
+    <a href="/es/extra-help-low-income-subsidy.html" lang="es">Español</a>
+    <a href="/zh-Hant/extra-help-low-income-subsidy.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照護者</p>
+    <h1>額外補助（低收入補貼）（D部分）：誰符合資格以及如何申請</h1>
+    <p>額外補助（低收入補貼）會支付您 Medicare 藥品計劃的一部分費用。以下說明誰會自動獲得、誰可以申請，以及它與醫療保險儲蓄計劃（MSP）有何不同。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>簡單來說：</strong>額外補助（低收入補貼）是 Medicare 的一項計劃。如果您的收入和資產偏低，它會支付您醫療保險D部分的一部分藥品費用。它可以幫助支付保費、自付額和共付額。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 有些人會自動獲得。其他人可以隨時向社會安全局申請。<!-- src: https://www.ssa.gov/medicare/part-d-extra-help --> 它與醫療保險儲蓄計劃（MSP）不同。醫療保險儲蓄計劃幫助支付其他 Medicare 費用。額外補助（低收入補貼）則是用於藥品。</p>
+
+    <h2>誰會自動獲得額外補助（低收入補貼）</h2>
+    <p>如果您符合以下任何一項，就不需要申請，會自動獲得額外補助（低收入補貼）：<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <ul>
+      <li>完整福利的 Medicaid 承保</li>
+      <li>透過<a href="/zh-Hant/medicare-savings-programs.html">醫療保險儲蓄計劃（MSP）</a>，由您所在的州幫助支付您的醫療保險B部分保費</li>
+      <li>從社會安全局領取的補充保障收入（SSI）給付</li>
+    </ul>
+    <p>您會收到一封郵寄通知，告訴您需要支付多少費用。如果您原本沒有藥品計劃，通知中也會告訴您新的藥品計劃名稱。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 同時擁有 Medicare 和 Medicaid 的人稱為<a href="/zh-Hant/dual-eligible.html">雙重資格</a>。</p>
+
+    <h2>誰可以申請</h2>
+    <p>在大多數情況下，您的收入和資產必須低於規定的限額。限額可能每年調高。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 以下是2026年的限額：</p>
+    <table>
+      <thead><tr><th>您的情況</th><th>收入限額</th><th>資產限額</th></tr></thead>
+      <tbody>
+        <tr><td>單身</td><td>$23,940</td><td>$18,090</td></tr>
+        <tr><td>已婚夫妻</td><td>$32,460</td><td>$36,100</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 阿拉斯加州和夏威夷州的收入限額較高。Medicare.gov 另有列出。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 波多黎各、美屬維京群島、關島、北馬里亞納群島和美屬薩摩亞不提供額外補助（低收入補貼）。那裡有其他計劃可提供協助，請致電您所在州的醫療補助（Medicaid）辦公室。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>哪些算作收入：</strong>薪資、自僱收入、社會安全金、退休金、鐵路退休福利、退伍軍人福利、贍養費、年金、租金收入和工傷賠償。各州不計入的項目包括 SNAP、住房補助、家庭能源補助和勞動所得稅抵免給付。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>哪些算作資產：</strong>支票帳戶、儲蓄帳戶或退休帳戶中的存款，以及股票和債券。您的住所、一輛汽車、一塊墓地和家用物品不計入。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>如何申請</h2>
+    <ol class="steps">
+      <li><strong>準備您和配偶的文件。</strong>包括銀行對帳單、報稅表、退休帳戶餘額，以及退休金、退伍軍人福利、年金和鐵路退休福利的對帳單。<!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>向社會安全局申請。</strong>您可以在線上申請。或致電 1-800-772-1213（TTY 1-800-325-0778），預約申請醫療保險D部分的額外補助（低收入補貼）。<!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>隨時申請。</strong>您可以在加入D部分計劃之前或之後申請。<!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></li>
+      <li><strong>如有需要，可請求免費協助。</strong>您當地的 <a href="/zh-Hant/ship-directory.html">SHIP</a> 可以協助您申請。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+    </ol>
+    <p>您可以同時申請額外補助（低收入補貼）和醫療保險儲蓄計劃（MSP）。除非您在額外補助表格上註明不要，否則社會安全局會把您的資料送交您所在的州，以啟動儲蓄計劃的申請。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>額外補助（低收入補貼）與醫療保險儲蓄計劃（MSP）：有何不同</h2>
+    <table>
+      <thead><tr><th></th><th>額外補助（低收入補貼）</th><th>醫療保險儲蓄計劃（MSP）</th></tr></thead>
+      <tbody>
+        <tr><td>支付項目</td><td>D部分藥品的保費、自付額和共付額</td><td>協助支付 Medicare 的費用，例如B部分保費</td></tr>
+        <tr><td>自動獲得嗎？</td><td>是，如果您有完整的 Medicaid、醫療保險儲蓄計劃（MSP）或 SSI</td><td>否。您需要透過所在的州申請</td></tr>
+        <tr><td>在哪裡申請</td><td>社會安全局</td><td>您所在州的 Medicaid 機構</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 如果您符合醫療保險儲蓄計劃（MSP）的資格，就會自動獲得額外補助（低收入補貼）。請閱讀<a href="/zh-Hant/medicare-savings-programs.html">醫療保險儲蓄計劃（MSP）</a>，了解各州的規定。</p>
+
+    <h2>符合資格之後會發生什麼</h2>
+    <ul>
+      <li>如果您沒有藥品計劃，Medicare 會幫您註冊一個。如果您願意，也可以選擇其他計劃。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>即使您的收入在年度中有所變動，額外補助（低收入補貼）也會持續到12月31日。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>如果明年您仍然符合限額，就會繼續享有。只有在您不再符合資格或您的計劃有變動時，才會收到信件。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+      <li>領取額外補助（低收入補貼）期間，您不需要支付D部分遲交註冊罰款。如果您之前有罰款，也會取消。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 請參閱<a href="/zh-Hant/medicare-late-enrollment-penalties.html">遲交註冊罰款</a>。</li>
+      <li>您可能可以每月更換一次藥品計劃。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></li>
+    </ul>
+    <p>如果您的額外補助（低收入補貼）終止，請在2個月內加入藥品計劃，這有助於避免罰款。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 如果您的收入或資產有變動，可以隨時再次申請。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>如果您支付的金額不對</h2>
+    <p>請致電您的藥品計劃。對方可能會要求您提供領取額外補助（低收入補貼）的證明，例如您的 Medicare 額外補助信函、SSI 核定信函或 Medicaid 卡。請告訴計劃您的藥還剩幾天的量。您也可以致電 1-800-MEDICARE（1-800-633-4227，TTY 1-877-486-2048）。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p>如果您符合資格但還沒有加入計劃，LI NET 計劃可提供臨時藥品承保。請致電 1-800-783-1307。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+
+    <h2>常見問題</h2>
+    <details class="qa">
+      <summary>如果我有 Medicaid，還需要申請嗎？</summary>
+      <div>
+        <p>通常不需要。完整福利的 Medicaid 會讓您自動獲得額外補助（低收入補貼）。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --> 您所在的州可以告訴您，您的 Medicaid 是否為完整福利。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>額外補助與低收入補貼（LIS）是一樣的嗎？</summary>
+      <div>
+        <p>是的。額外補助是通用的名稱。有些表格和計劃稱之為低收入補貼，或 LIS。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我的住所會計入資產限額嗎？</summary>
+      <div>
+        <p>不會。您的住所和一輛汽車不計入。<!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我還沒有藥品計劃，可以申請嗎？</summary>
+      <div>
+        <p>可以。您可以在註冊D部分之前或之後申請。<!-- src: https://www.ssa.gov/medicare/part-d-extra-help --></p>
+      </div>
+    </details>
+
+
+    <h2>相關頁面</h2>
+    <ul>
+      <li><a href="/zh-Hant/medicare-savings-programs.html">醫療保險儲蓄計劃（MSP）</a></li>
+      <li><a href="/zh-Hant/getting-help.html">獲得費用協助</a></li>
+      <li><a href="/zh-Hant/medicare-part-d.html">醫療保險D部分</a></li>
+      <li><a href="/zh-Hant/dual-eligible.html">雙重資格</a></li>
+      <li><a href="/zh-Hant/medicare-late-enrollment-penalties.html">Medicare 遲交註冊罰款</a></li>
+      <li><a href="https://www.ssa.gov/medicare/part-d-extra-help" rel="noopener">社會安全局：申請額外補助</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/help/drug-costs" rel="noopener">Medicare.gov：藥品費用協助</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先核實。</strong>MediPrimer 提供一般教育性資訊，與任何機構或保險公司均無關聯。此處的收入和資產限額為2026年的數字，且經常變動。申請前請至 <a href="https://www.medicare.gov/basics/costs/help/drug-costs" rel="noopener">Medicare.gov</a> 確認。您的 <a href="/zh-Hant/ship-directory.html">SHIP</a> 可以免費協助您。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/extra-help-low-income-subsidy.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

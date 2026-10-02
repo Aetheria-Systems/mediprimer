@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Trợ Giúp Thị Trường Bảo Hiểm (Marketplace) và Medicaid — MediPrimer</title>
+<meta name="description" content="Người thân là công dân hoặc đang hiện diện hợp pháp có được hưởng khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) không nếu vợ/chồng hoặc cha mẹ không có giấy tờ? Ai bị hỏi về tình trạng nhập cư, và thay đổi từ năm 2027.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/mixed-status-family-marketplace.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Trợ Giúp Thị Trường Bảo Hiểm (Marketplace) và Medicaid — MediPrimer">
+<meta property="og:description" content="Người thân là công dân hoặc đang hiện diện hợp pháp có được hưởng khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) không nếu vợ/chồng hoặc cha mẹ không có giấy tờ? Ai bị hỏi về tình trạng nhập cư, và thay đổi từ năm 2027.">
+<meta property="og:url" content="https://mediprimer.org/vi/mixed-status-family-marketplace.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Trợ Giúp Thị Trường Bảo Hiểm (Marketplace) và Medicaid — MediPrimer">
+<meta name="twitter:description" content="Người thân là công dân hoặc đang hiện diện hợp pháp có được hưởng khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) không nếu vợ/chồng hoặc cha mẹ không có giấy tờ? Ai bị hỏi về tình trạng nhập cư, và thay đổi từ năm 2027.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Vợ/chồng tôi không có giấy tờ. Tôi vẫn có thể được trợ giúp từ Thị Trường Bảo Hiểm (Marketplace) không?", "acceptedAnswer": {"@type": "Answer", "text": "Có, nếu quý vị là công dân hoặc đang hiện diện hợp pháp. Quý vị đăng ký cho chính mình. Vợ/chồng của quý vị không bị hỏi về tình trạng nhập cư trừ khi họ đăng ký."}}, {"@type": "Question", "name": "Con tôi có thể có bảo hiểm nếu tôi không có giấy tờ không?", "acceptedAnswer": {"@type": "Answer", "text": "Có thể. Các gia đình có thể đăng ký Medicaid, CHIP hoặc các khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) cho những người phụ thuộc đủ điều kiện. Điều kiện hưởng tùy thuộc vào tình trạng nhập cư của chính từng đứa trẻ và quy định của tiểu bang quý vị. Xem CHIP ."}}, {"@type": "Question", "name": "Tôi có bị hỏi về tình trạng nhập cư của gia đình mình không?", "acceptedAnswer": {"@type": "Answer", "text": "Chỉ hỏi những người đang đăng ký bảo hiểm. Các thành viên trong hộ gia đình không đăng ký sẽ không bị hỏi."}}, {"@type": "Question", "name": "Cha hoặc mẹ không có giấy tờ có thể điền đơn đăng ký không?", "acceptedAnswer": {"@type": "Answer", "text": "HealthCare.gov cho biết người nhập cư không có giấy tờ có thể đăng ký thay mặt cho những người có giấy tờ."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Trợ Giúp Thị Trường Bảo Hiểm (Marketplace) và Medicaid", "description": "Người thân là công dân hoặc đang hiện diện hợp pháp có được hưởng khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) không nếu vợ/chồng hoặc cha mẹ không có giấy tờ? Ai bị hỏi về tình trạng nhập cư, và thay đổi từ năm 2027.", "url": "https://mediprimer.org/vi/mixed-status-family-marketplace.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-02", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Trợ Giúp Thị Trường Bảo Hiểm (Marketplace) và Medicaid", "item": "https://mediprimer.org/vi/mixed-status-family-marketplace.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/mixed-status-family-marketplace.html" lang="en">English</a>
+    <a href="/es/mixed-status-family-marketplace.html" lang="es">Español</a>
+    <a href="/zh-Hant/mixed-status-family-marketplace.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/mixed-status-family-marketplace.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Người Thụ Hưởng &amp; Người Chăm Sóc</p>
+    <h1>Gia Đình Có Tình Trạng Nhập Cư Khác Nhau: Ai Có Thể Được Hưởng Khoản Tiết Kiệm Từ Thị Trường Bảo Hiểm (Marketplace)</h1>
+    <p>Một số người trong hộ gia đình của quý vị có thể đủ điều kiện được bảo hiểm, trong khi những người khác thì không. Dưới đây là cách đơn đăng ký xử lý từng người.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Đây là câu trả lời ngắn gọn.</strong> Trong một gia đình "có tình trạng nhập cư khác nhau" (mixed-status), các thành viên có tình trạng nhập cư hoặc quốc tịch khác nhau. Một người thân là công dân hoặc đang hiện diện hợp pháp có thể đăng ký bảo hiểm và các khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace). Điều này đúng ngay cả khi vợ/chồng hoặc cha mẹ không có giấy tờ. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Những người thân không đăng ký sẽ không bị hỏi về tình trạng nhập cư của họ. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Người nhập cư không có giấy tờ không thể tự mình có bảo hiểm của Thị Trường Bảo Hiểm (Marketplace). Họ có thể đăng ký cho những người thân đủ điều kiện. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+
+    <h2>Ai đăng ký, và ai bị hỏi về tình trạng nhập cư</h2>
+    <p>Mỗi người đăng ký được xem xét riêng. Các thành viên gia đình không đăng ký bảo hiểm cho chính mình sẽ không bị hỏi về tình trạng nhập cư. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+    <p>Các quy định cũng bảo vệ những thành viên đủ điều kiện. Thị Trường Bảo Hiểm (Marketplace) cùng các cơ quan Medicaid và CHIP của tiểu bang không được yêu cầu cung cấp thông tin về tình trạng nhập cư của các thành viên trong hộ gia đình không đăng ký. Tiểu bang không được từ chối quyền lợi của người nộp đơn chỉ vì một trong những thành viên đó không chia sẻ tình trạng nhập cư của họ. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+
+    <h2>Gia đình có tình trạng nhập cư khác nhau có thể làm gì</h2>
+    <ul>
+      <li><strong>Đăng ký nhận khoản tiết kiệm cho những người phụ thuộc đủ điều kiện.</strong> Các gia đình có thể đăng ký Khoản Tín Dụng Thuế cho Phí Bảo Hiểm và các khoản tiết kiệm thêm cho chi phí tự trả. Điều này áp dụng cho những người phụ thuộc đủ điều kiện nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace). <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Đăng ký Medicaid và CHIP.</strong> Các gia đình có thể đăng ký bảo hiểm Medicaid và CHIP cho những thành viên phụ thuộc đủ điều kiện. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Một số thành viên có thể đủ điều kiện nhận Medicaid hoặc CHIP đầy đủ, trong khi những người khác thì không. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Đưa vào những thành viên có đóng thuế nhưng không thể nhận bảo hiểm.</strong> Một số gia đình có người đóng thuế không thể nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace). Những thành viên khác trong cùng gia đình đủ điều kiện với tư cách là công dân hoặc người nhập cư hiện diện hợp pháp. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+    </ul>
+    <p>Việc tính số người trong hộ gia đình và thu nhập có thể phức tạp trong những trường hợp này. Một người hướng dẫn miễn phí của Thị Trường Bảo Hiểm (Marketplace) có thể giúp quý vị. Xem <a href="/vi/navigators.html">Người Quản Lý Hồ Sơ &amp; Người Hướng Dẫn</a>.</p>
+
+    <h2>Ai được xem là hiện diện hợp pháp</h2>
+    <p>HealthCare.gov liệt kê các nhóm sau đây có thể được nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace). Đây chỉ là danh sách một phần. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <ul>
+      <li>Thường trú nhân hợp pháp (người có thẻ xanh)</li>
+      <li>Người được tị nạn và người tị nạn</li>
+      <li>Người được cho phép nhập cảnh tạm thời vào Hoa Kỳ (parole)</li>
+      <li>Người có giấy phép làm việc (employment authorization document)</li>
+      <li>Người có thị thực lao động, du học, thị thực U, thị thực T và các thị thực không di dân khác</li>
+      <li>Người có tình trạng Hoãn Truy Cứu Hành Động (Deferred Action)</li>
+      <li>Người có Tình Trạng Bảo Vệ Tạm Thời (Temporary Protected Status)</li>
+      <li>Người nhập cảnh từ Cuba hoặc Haiti</li>
+      <li>Công dân của Quần đảo Marshall, Micronesia và Palau sống tại một tiểu bang hoặc lãnh thổ của Hoa Kỳ (người di cư COFA)</li>
+    </ul>
+    <p><!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --> Những người nhận Hoãn Truy Cứu Hành Động Đối Với Người Đến Hoa Kỳ Khi Còn Nhỏ (DACA) không đủ điều kiện nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace). <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+
+    <h2>Một thay đổi về luật sẽ có hiệu lực từ ngày 1 tháng 1 năm 2027</h2>
+    <p>HealthCare.gov cảnh báo về một thay đổi trong luật. Bắt đầu từ ngày 1 tháng 1 năm 2027, chỉ có ba loại tình trạng nhập cư đủ điều kiện nhận các khoản tiết kiệm. Đó là Thường trú nhân hợp pháp (người có thẻ xanh), người nhập cảnh từ Cuba hoặc Haiti, và người di cư theo Hiệp Ước Liên Kết Tự Do (COFA). Những người hiện diện hợp pháp khác vẫn có thể nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace), nhưng không có các khoản tiết kiệm. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Nếu một người thân có tình trạng nhập cư không nằm trong danh sách đó, hãy kiểm tra xem điều này thay đổi chi phí của quý vị như thế nào trước năm chương trình 2027. Hãy dùng <a href="/vi/marketplace-income-estimate.html">hướng dẫn ước tính thu nhập</a> của chúng tôi và trao đổi với một người hướng dẫn.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Những nơi khác để được chăm sóc</h2>
+    <p>Nếu ai đó không đủ điều kiện nhận bảo hiểm của Thị Trường Bảo Hiểm (Marketplace), họ có thể được chăm sóc với chi phí thấp hơn tại một trung tâm y tế cộng đồng. Các trung tâm y tế cung cấp dịch vụ chăm sóc chính với mức phí thay đổi theo thu nhập. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Đối với trường hợp khẩn cấp, xem <a href="/vi/emergency-medicaid.html">Medicaid Khẩn Cấp</a>. Nếu một thành viên gia đã bảo lãnh cho thẻ xanh, xem <a href="/vi/medicaid-sponsor-deeming.html">tính thu nhập của người bảo lãnh (sponsor deeming)</a>. Đối với các câu hỏi về Medicare, xem <a href="/vi/medicare-immigrants.html">Medicare dành cho Người Nhập Cư</a>.</p>
+
+    <h2>Các câu hỏi thường gặp</h2>
+    <details class="qa">
+      <summary>Vợ/chồng tôi không có giấy tờ. Tôi vẫn có thể được trợ giúp từ Thị Trường Bảo Hiểm (Marketplace) không?</summary>
+      <div>
+        <p>Có, nếu quý vị là công dân hoặc đang hiện diện hợp pháp. Quý vị đăng ký cho chính mình. Vợ/chồng của quý vị không bị hỏi về tình trạng nhập cư trừ khi họ đăng ký. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Con tôi có thể có bảo hiểm nếu tôi không có giấy tờ không?</summary>
+      <div>
+        <p>Có thể. Các gia đình có thể đăng ký Medicaid, CHIP hoặc các khoản tiết kiệm của Thị Trường Bảo Hiểm (Marketplace) cho những người phụ thuộc đủ điều kiện. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Điều kiện hưởng tùy thuộc vào tình trạng nhập cư của chính từng đứa trẻ và quy định của tiểu bang quý vị. Xem <a href="/vi/chip.html">CHIP</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi có bị hỏi về tình trạng nhập cư của gia đình mình không?</summary>
+      <div>
+        <p>Chỉ hỏi những người đang đăng ký bảo hiểm. Các thành viên trong hộ gia đình không đăng ký sẽ không bị hỏi. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Cha hoặc mẹ không có giấy tờ có thể điền đơn đăng ký không?</summary>
+      <div>
+        <p>HealthCare.gov cho biết người nhập cư không có giấy tờ có thể đăng ký thay mặt cho những người có giấy tờ. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+      </div>
+    </details>
+
+
+    <h2>Các trang liên quan</h2>
+    <ul>
+      <li><a href="/vi/marketplace.html">Thị Trường Bảo Hiểm Sức Khỏe (Marketplace)</a></li>
+      <li><a href="/vi/medicare-immigrants.html">Medicare dành cho Người Nhập Cư &amp; Người Có Thẻ Xanh</a></li>
+      <li><a href="/vi/medicaid-eligibility.html">Điều Kiện Hưởng Medicaid</a></li>
+      <li><a href="/vi/chip.html">CHIP</a></li>
+      <li><a href="/vi/multigenerational-household-coverage.html">Bảo Hiểm cho Cha hoặc Mẹ và Con trong Cùng Một Hộ Gia Đình</a></li>
+      <li><a href="/vi/state-medicaid.html">Danh Bạ Medicaid Các Tiểu Bang</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigrant-families/" rel="noopener">HealthCare.gov: Gia đình nhập cư</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigration-status/" rel="noopener">HealthCare.gov: Tình trạng nhập cư và Thị Trường Bảo Hiểm (Marketplace)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục tổng quát và không liên kết với bất kỳ cơ quan hay công ty bảo hiểm nào. Các quy định về nhập cư và bảo hiểm thay đổi theo thời gian và khác nhau tùy tiểu bang. Trang này không phải là tư vấn pháp lý. Hãy xác nhận chi tiết tại <a href="https://www.healthcare.gov/immigrants/" rel="noopener">HealthCare.gov</a> hoặc với một người hướng dẫn miễn phí hay một tổ chức trợ giúp pháp lý.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/mixed-status-family-marketplace.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

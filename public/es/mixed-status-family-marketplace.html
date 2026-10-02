@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Familias de estatus migratorio mixto: ayuda del Mercado de Seguros y Medicaid — MediPrimer</title>
+<meta name="description" content="¿Puede un familiar ciudadano o con presencia legal obtener ahorros en el Mercado de Seguros si su cónyuge o uno de sus padres no tiene documentos? A quién se le pregunta por su estatus y el cambio de 2027.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/mixed-status-family-marketplace.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Familias de estatus migratorio mixto: ayuda del Mercado de Seguros y Medicaid — MediPrimer">
+<meta property="og:description" content="¿Puede un familiar ciudadano o con presencia legal obtener ahorros en el Mercado de Seguros si su cónyuge o uno de sus padres no tiene documentos? A quién se le pregunta por su estatus y el cambio de 2027.">
+<meta property="og:url" content="https://mediprimer.org/es/mixed-status-family-marketplace.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Familias de estatus migratorio mixto: ayuda del Mercado de Seguros y Medicaid — MediPrimer">
+<meta name="twitter:description" content="¿Puede un familiar ciudadano o con presencia legal obtener ahorros en el Mercado de Seguros si su cónyuge o uno de sus padres no tiene documentos? A quién se le pregunta por su estatus y el cambio de 2027.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mi cónyuge no tiene documentos. ¿Puedo recibir ayuda del Mercado de Seguros?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, si usted es ciudadano o tiene presencia legal. Usted solicita cobertura para sí mismo. A su cónyuge no se le pregunta por su estatus, a menos que esté solicitando cobertura."}}, {"@type": "Question", "name": "¿Pueden mis hijos obtener cobertura si yo no tengo documentos?", "acceptedAnswer": {"@type": "Answer", "text": "Es posible. Las familias pueden solicitar Medicaid, CHIP o ahorros del Mercado de Seguros para los dependientes elegibles. La elegibilidad depende del estatus de cada hijo y de las reglas de su estado. Consulte CHIP ."}}, {"@type": "Question", "name": "¿Me preguntarán por el estatus migratorio de mi familia?", "acceptedAnswer": {"@type": "Answer", "text": "Solo en el caso de las personas que están solicitando cobertura. A los miembros del hogar que no la solicitan no se les pregunta."}}, {"@type": "Question", "name": "¿Puede un padre o una madre sin documentos llenar la solicitud?", "acceptedAnswer": {"@type": "Answer", "text": "HealthCare.gov dice que los inmigrantes sin documentos pueden presentar la solicitud en nombre de personas con documentos."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Familias de estatus migratorio mixto: ayuda del Mercado de Seguros y Medicaid", "description": "¿Puede un familiar ciudadano o con presencia legal obtener ahorros en el Mercado de Seguros si su cónyuge o uno de sus padres no tiene documentos? A quién se le pregunta por su estatus y el cambio de 2027.", "url": "https://mediprimer.org/es/mixed-status-family-marketplace.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-02", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/mixed-status-family-marketplace.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/mixed-status-family-marketplace.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Familias de estatus migratorio mixto: ayuda del Mercado de Seguros y Medicaid", "item": "https://mediprimer.org/es/mixed-status-family-marketplace.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/mixed-status-family-marketplace.html" lang="en">English</a>
+    <a href="/es/mixed-status-family-marketplace.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Familias de estatus migratorio mixto: quién puede obtener ahorros en el Mercado de Seguros</h1>
+    <p>Algunas personas de su hogar pueden calificar para cobertura y otras no. Así trata la solicitud a cada persona.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> En una familia de "estatus mixto", los miembros tienen distintos estatus migratorios o de ciudadanía. Un familiar que es ciudadano o que tiene presencia legal puede solicitar cobertura y ahorros en el Mercado de Seguros. Esto es cierto aun cuando el cónyuge o uno de los padres no tenga documentos. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> A los familiares que no están solicitando cobertura no se les pregunta por su estatus. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Los inmigrantes sin documentos no pueden obtener cobertura del Mercado de Seguros para sí mismos. Pueden presentar la solicitud en nombre de familiares que sí sean elegibles. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+
+    <h2>Quién presenta la solicitud y a quién se le pregunta por su estatus</h2>
+    <p>Cada persona que solicita cobertura se evalúa por separado. A los miembros de la familia que no solicitan cobertura para sí mismos no se les preguntará su estatus migratorio. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+    <p>Las reglas también protegen a los miembros elegibles. El Mercado de Seguros y las oficinas estatales de Medicaid y CHIP no pueden exigir datos sobre el estatus de los miembros del hogar que no están solicitando cobertura. Un estado no puede negar beneficios a un solicitante porque alguno de esos miembros no compartió su estatus. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+
+    <h2>Lo que puede hacer una familia de estatus mixto</h2>
+    <ul>
+      <li><strong>Solicitar ahorros para dependientes elegibles.</strong> Las familias pueden solicitar el Crédito Fiscal de Prima y ahorros adicionales en los costos de bolsillo. Esto es para los dependientes que califican para cobertura del Mercado de Seguros. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Solicitar Medicaid y CHIP.</strong> Las familias pueden solicitar cobertura de Medicaid y CHIP para los familiares dependientes que sean elegibles. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> Algunos miembros pueden calificar para Medicaid o CHIP completos, mientras que otros no. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+      <li><strong>Incluir a miembros que pagan impuestos pero no pueden obtener cobertura.</strong> Algunas familias tienen contribuyentes que no pueden obtener cobertura del Mercado de Seguros. Otros miembros de la misma familia califican como ciudadanos o inmigrantes con presencia legal. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></li>
+    </ul>
+    <p>Contar el tamaño del hogar y los ingresos puede ser complicado en estos casos. Un navegador gratuito del Mercado de Seguros puede ayudarle. Consulte <a href="/es/navigators.html">Administradores de casos y navegadores</a>.</p>
+
+    <h2>Quién cuenta como persona con presencia legal</h2>
+    <p>HealthCare.gov enumera estos grupos que podrían obtener cobertura del Mercado de Seguros. Esta es una lista parcial. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <ul>
+      <li>Residentes permanentes legales (titulares de la tarjeta verde)</li>
+      <li>Asilados y refugiados</li>
+      <li>Personas con permiso humanitario de entrada a EE. UU. (parole)</li>
+      <li>Personas con un documento de autorización de empleo (permiso de trabajo)</li>
+      <li>Personas con visas de trabajador, de estudiante, visa U, visa T y otras visas de no inmigrante</li>
+      <li>Personas con estatus de Acción Diferida</li>
+      <li>Personas con Estatus de Protección Temporal</li>
+      <li>Entrantes cubanos o haitianos</li>
+      <li>Ciudadanos de las Islas Marshall, Micronesia y Palaos que viven en un estado o territorio de EE. UU. (migrantes COFA)</li>
+    </ul>
+    <p><!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --> Los beneficiarios de Acción Diferida para los Llegados en la Infancia (DACA) no son elegibles para la cobertura del Mercado de Seguros. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+
+    <h2>Un cambio en la ley a partir del 1 de enero de 2027</h2>
+    <p>HealthCare.gov advierte de un cambio en la ley. A partir del 1 de enero de 2027, solo tres estatus calificarán para ahorros. Son Residente Permanente Legal (titular de la tarjeta verde), entrante cubano o haitiano y migrante del Compacto de Libre Asociación (COFA). Otras personas con presencia legal quizás aún puedan obtener cobertura del Mercado de Seguros, pero sin ahorros. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Si un familiar tiene un estatus que no está en esa lista, revise cómo cambian sus costos antes del año del plan 2027. Use nuestra <a href="/es/marketplace-income-estimate.html">guía para calcular los ingresos</a> y hable con un navegador.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Otros lugares para recibir atención</h2>
+    <p>Si alguien no es elegible para la cobertura del Mercado de Seguros, es posible que pueda recibir atención a menor costo en un centro de salud comunitario. Los centros de salud ofrecen atención primaria con una escala de tarifas variable según los ingresos. <!-- src: https://www.healthcare.gov/immigrants/immigration-status/ --></p>
+    <p>Para emergencias, consulte <a href="/es/emergency-medicaid.html">Medicaid de emergencia</a>. Si un familiar patrocinó una tarjeta verde, consulte <a href="/es/medicaid-sponsor-deeming.html">la atribución de ingresos del patrocinador</a>. Para preguntas sobre Medicare, consulte <a href="/es/medicare-immigrants.html">Medicare para inmigrantes</a>.</p>
+
+    <h2>Preguntas frecuentes</h2>
+    <details class="qa">
+      <summary>Mi cónyuge no tiene documentos. ¿Puedo recibir ayuda del Mercado de Seguros?</summary>
+      <div>
+        <p>Sí, si usted es ciudadano o tiene presencia legal. Usted solicita cobertura para sí mismo. A su cónyuge no se le pregunta por su estatus, a menos que esté solicitando cobertura. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Pueden mis hijos obtener cobertura si yo no tengo documentos?</summary>
+      <div>
+        <p>Es posible. Las familias pueden solicitar Medicaid, CHIP o ahorros del Mercado de Seguros para los dependientes elegibles. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --> La elegibilidad depende del estatus de cada hijo y de las reglas de su estado. Consulte <a href="/es/chip.html">CHIP</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Me preguntarán por el estatus migratorio de mi familia?</summary>
+      <div>
+        <p>Solo en el caso de las personas que están solicitando cobertura. A los miembros del hogar que no la solicitan no se les pregunta. <!-- src: https://www.healthcare.gov/immigrants/immigrant-families/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puede un padre o una madre sin documentos llenar la solicitud?</summary>
+      <div>
+        <p>HealthCare.gov dice que los inmigrantes sin documentos pueden presentar la solicitud en nombre de personas con documentos. <!-- src: https://www.healthcare.gov/immigrants/ --></p>
+      </div>
+    </details>
+
+
+    <h2>Páginas relacionadas</h2>
+    <ul>
+      <li><a href="/es/marketplace.html">El Mercado de Seguros de Salud</a></li>
+      <li><a href="/es/medicare-immigrants.html">Medicare para inmigrantes y titulares de la tarjeta verde</a></li>
+      <li><a href="/es/medicaid-eligibility.html">Elegibilidad para Medicaid</a></li>
+      <li><a href="/es/chip.html">CHIP</a></li>
+      <li><a href="/es/multigenerational-household-coverage.html">Cómo cubrir a un padre o una madre y a un hijo en un mismo hogar</a></li>
+      <li><a href="/es/state-medicaid.html">Directorio estatal de Medicaid</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigrant-families/" rel="noopener">HealthCare.gov: Familias inmigrantes</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/immigration-status/" rel="noopener">HealthCare.gov: Estatus migratorio y el Mercado de Seguros</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer ofrece información educativa general y no está afiliado a ninguna agencia ni aseguradora. Las reglas de inmigración y de cobertura cambian y varían según el estado. Esta página no es asesoría legal. Confirme los detalles en <a href="https://www.healthcare.gov/immigrants/" rel="noopener">HealthCare.gov</a> o con un navegador gratuito o un grupo de asistencia legal.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/mixed-status-family-marketplace.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

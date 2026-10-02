@@ -61,8 +61,8 @@
       "date": "2026-09-18"
     },
     "dual-eligible.html": {
-      "hash": "ad4b6896f578c88f5e14052128f7f086",
-      "date": "2026-09-24"
+      "hash": "97c1613e81f9c3dcb905493024f5c854",
+      "date": "2026-10-02"
     },
     "edge-cases.html": {
       "hash": "2d1148cd00f7537fa8c5292330cf1e8a",
@@ -77,12 +77,12 @@
       "date": "2026-09-23"
     },
     "enrollment.html": {
-      "hash": "3b05bc52701b790422c7424b553a6496",
-      "date": "2026-09-24"
+      "hash": "cdc268b0696b758ca745ebca9d0a06be",
+      "date": "2026-10-02"
     },
     "getting-help.html": {
-      "hash": "89c0362f02f05efcb2cc0a490857b9d3",
-      "date": "2026-09-23"
+      "hash": "1220e2f00ef49959ba2acae70a951e1f",
+      "date": "2026-10-02"
     },
     "glossary.html": {
       "hash": "c5f063d46cf3a10445fffed26c88f7dd",
@@ -93,16 +93,16 @@
       "date": "2026-09-23"
     },
     "index.html": {
-      "hash": "fda27b50479c052ef436f64d59dec7b5",
-      "date": "2026-09-23"
+      "hash": "7cf801d3c4fdc2390f10593a5af8907e",
+      "date": "2026-10-02"
     },
     "insurance-departments.html": {
       "hash": "a29e813968207b40f6a3bebf2c340cf3",
       "date": "2026-09-23"
     },
     "marketplace.html": {
-      "hash": "76555c96520d26dbf6183561cf434f0f",
-      "date": "2026-09-24"
+      "hash": "1d7a5fd9f3163ab12580ec91601cf18e",
+      "date": "2026-10-02"
     },
     "medicaid-eligibility.html": {
       "hash": "fe1714c2714da853a3fb95feb50ae73d",
@@ -519,6 +519,22 @@
     "partner-materials.html": {
       "hash": "c55ba79ec6449b46a817eddb5a94cd27",
       "date": "2026-09-18"
+    },
+    "extra-help-low-income-subsidy.html": {
+      "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6",
+      "date": "2026-10-02"
+    },
+    "medicare-late-enrollment-penalties.html": {
+      "hash": "cfb9050acbc672e0077029a0106530e4",
+      "date": "2026-10-02"
+    },
+    "mixed-status-family-marketplace.html": {
+      "hash": "031978e65d5a9915f2570dd0244ceec8",
+      "date": "2026-10-02"
+    },
+    "pace-program-nursing-home-alternative.html": {
+      "hash": "9a1ed088a0473b88a2b724c3b549a819",
+      "date": "2026-10-02"
     }
   },
   "zh-Hant": {
@@ -563,8 +579,8 @@
       "date": "2026-09-18"
     },
     "dual-eligible.html": {
-      "hash": "ad4b6896f578c88f5e14052128f7f086",
-      "date": "2026-09-24"
+      "hash": "97c1613e81f9c3dcb905493024f5c854",
+      "date": "2026-10-02"
     },
     "editorial-standards.html": {
       "hash": "e5db33dd28518693f5afe9bae8b619ad",
@@ -575,12 +591,12 @@
       "date": "2026-09-23"
     },
     "enrollment.html": {
-      "hash": "3b05bc52701b790422c7424b553a6496",
-      "date": "2026-09-24"
+      "hash": "cdc268b0696b758ca745ebca9d0a06be",
+      "date": "2026-10-02"
     },
     "getting-help.html": {
-      "hash": "89c0362f02f05efcb2cc0a490857b9d3",
-      "date": "2026-09-23"
+      "hash": "1220e2f00ef49959ba2acae70a951e1f",
+      "date": "2026-10-02"
     },
     "glossary.html": {
       "hash": "c5f063d46cf3a10445fffed26c88f7dd",
@@ -591,12 +607,12 @@
       "date": "2026-09-25"
     },
     "index.html": {
-      "hash": "fda27b50479c052ef436f64d59dec7b5",
-      "date": "2026-09-23"
+      "hash": "7cf801d3c4fdc2390f10593a5af8907e",
+      "date": "2026-10-02"
     },
     "marketplace.html": {
-      "hash": "76555c96520d26dbf6183561cf434f0f",
-      "date": "2026-09-24"
+      "hash": "1d7a5fd9f3163ab12580ec91601cf18e",
+      "date": "2026-10-02"
     },
     "medicaid-starting-out.html": {
       "hash": "e43b5a697820040e5297f4bd9e1c1d9a",
@@ -1041,6 +1057,22 @@
     "partner-materials.html": {
       "hash": "c55ba79ec6449b46a817eddb5a94cd27",
       "date": "2026-09-18"
+    },
+    "extra-help-low-income-subsidy.html": {
+      "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6",
+      "date": "2026-10-02"
+    },
+    "medicare-late-enrollment-penalties.html": {
+      "hash": "cfb9050acbc672e0077029a0106530e4",
+      "date": "2026-10-02"
+    },
+    "mixed-status-family-marketplace.html": {
+      "hash": "031978e65d5a9915f2570dd0244ceec8",
+      "date": "2026-10-02"
+    },
+    "pace-program-nursing-home-alternative.html": {
+      "hash": "9a1ed088a0473b88a2b724c3b549a819",
+      "date": "2026-10-02"
     }
   },
   "vi": {
@@ -1117,8 +1149,8 @@
       "date": "2026-09-18"
     },
     "dual-eligible.html": {
-      "hash": "ad4b6896f578c88f5e14052128f7f086",
-      "date": "2026-09-24"
+      "hash": "97c1613e81f9c3dcb905493024f5c854",
+      "date": "2026-10-02"
     },
     "edge-cases.html": {
       "hash": "2d1148cd00f7537fa8c5292330cf1e8a",
@@ -1137,12 +1169,12 @@
       "date": "2026-09-23"
     },
     "enrollment.html": {
-      "hash": "3b05bc52701b790422c7424b553a6496",
-      "date": "2026-09-25"
+      "hash": "cdc268b0696b758ca745ebca9d0a06be",
+      "date": "2026-10-02"
     },
     "getting-help.html": {
-      "hash": "89c0362f02f05efcb2cc0a490857b9d3",
-      "date": "2026-09-23"
+      "hash": "1220e2f00ef49959ba2acae70a951e1f",
+      "date": "2026-10-02"
     },
     "glossary.html": {
       "hash": "c5f063d46cf3a10445fffed26c88f7dd",
@@ -1153,16 +1185,16 @@
       "date": "2026-09-18"
     },
     "how-do-i.html": {
-      "hash": "2c3969c43d7b136255fbe9960319636c",
-      "date": "2026-09-23"
+      "hash": "68a7e17210d61695805cc21b8427ae1b",
+      "date": "2026-10-02"
     },
     "hsa-and-medicare.html": {
       "hash": "2a0d92df325ba532de4696f87705e906",
       "date": "2026-09-18"
     },
     "index.html": {
-      "hash": "fda27b50479c052ef436f64d59dec7b5",
-      "date": "2026-09-23"
+      "hash": "7cf801d3c4fdc2390f10593a5af8907e",
+      "date": "2026-10-02"
     },
     "insurance-departments.html": {
       "hash": "a29e813968207b40f6a3bebf2c340cf3",
@@ -1185,8 +1217,8 @@
       "date": "2026-09-15"
     },
     "marketplace.html": {
-      "hash": "76555c96520d26dbf6183561cf434f0f",
-      "date": "2026-09-24"
+      "hash": "1d7a5fd9f3163ab12580ec91601cf18e",
+      "date": "2026-10-02"
     },
     "medicaid-dental-adults.html": {
       "hash": "b841d8e3a92f7ce91f3b29b14c566fe9",
@@ -1563,6 +1595,22 @@
     "brokers.html": {
       "hash": "f9fd320ea601123b5c94ea4d862bb3d3",
       "date": "2026-09-24"
+    },
+    "extra-help-low-income-subsidy.html": {
+      "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6",
+      "date": "2026-10-02"
+    },
+    "medicare-late-enrollment-penalties.html": {
+      "hash": "cfb9050acbc672e0077029a0106530e4",
+      "date": "2026-10-02"
+    },
+    "mixed-status-family-marketplace.html": {
+      "hash": "031978e65d5a9915f2570dd0244ceec8",
+      "date": "2026-10-02"
+    },
+    "pace-program-nursing-home-alternative.html": {
+      "hash": "9a1ed088a0473b88a2b724c3b549a819",
+      "date": "2026-10-02"
     }
   },
   "ko": {
@@ -1631,8 +1679,8 @@
       "date": "2026-09-18"
     },
     "dual-eligible.html": {
-      "hash": "ad4b6896f578c88f5e14052128f7f086",
-      "date": "2026-09-23"
+      "hash": "97c1613e81f9c3dcb905493024f5c854",
+      "date": "2026-10-02"
     },
     "edge-cases.html": {
       "hash": "2d1148cd00f7537fa8c5292330cf1e8a",
@@ -1651,12 +1699,12 @@
       "date": "2026-09-23"
     },
     "enrollment.html": {
-      "hash": "3b05bc52701b790422c7424b553a6496",
-      "date": "2026-09-24"
+      "hash": "cdc268b0696b758ca745ebca9d0a06be",
+      "date": "2026-10-02"
     },
     "getting-help.html": {
-      "hash": "89c0362f02f05efcb2cc0a490857b9d3",
-      "date": "2026-09-23"
+      "hash": "1220e2f00ef49959ba2acae70a951e1f",
+      "date": "2026-10-02"
     },
     "glossary.html": {
       "hash": "c5f063d46cf3a10445fffed26c88f7dd",
@@ -1671,12 +1719,12 @@
       "date": "2026-09-18"
     },
     "how-do-i.html": {
-      "hash": "2c3969c43d7b136255fbe9960319636c",
-      "date": "2026-09-23"
+      "hash": "68a7e17210d61695805cc21b8427ae1b",
+      "date": "2026-10-02"
     },
     "index.html": {
-      "hash": "fda27b50479c052ef436f64d59dec7b5",
-      "date": "2026-09-23"
+      "hash": "7cf801d3c4fdc2390f10593a5af8907e",
+      "date": "2026-10-02"
     },
     "irmaa-appeal-ssa-44.html": {
       "hash": "84a0734e0baf1ef32cb9a4f2932a79f4",
@@ -1695,8 +1743,8 @@
       "date": "2026-09-18"
     },
     "marketplace.html": {
-      "hash": "76555c96520d26dbf6183561cf434f0f",
-      "date": "2026-09-23"
+      "hash": "1d7a5fd9f3163ab12580ec91601cf18e",
+      "date": "2026-10-02"
     },
     "medicaid-dental-adults.html": {
       "hash": "b841d8e3a92f7ce91f3b29b14c566fe9",
@@ -2085,6 +2133,22 @@
     "rights.html": {
       "hash": "49e538ff5eb209ee5458bc9c1cf4a907",
       "date": "2026-09-23"
+    },
+    "extra-help-low-income-subsidy.html": {
+      "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6",
+      "date": "2026-10-02"
+    },
+    "medicare-late-enrollment-penalties.html": {
+      "hash": "cfb9050acbc672e0077029a0106530e4",
+      "date": "2026-10-02"
+    },
+    "mixed-status-family-marketplace.html": {
+      "hash": "031978e65d5a9915f2570dd0244ceec8",
+      "date": "2026-10-02"
+    },
+    "pace-program-nursing-home-alternative.html": {
+      "hash": "9a1ed088a0473b88a2b724c3b549a819",
+      "date": "2026-10-02"
     }
   },
   "tl": {
@@ -2161,8 +2225,8 @@
       "date": "2026-09-19"
     },
     "dual-eligible.html": {
-      "hash": "ad4b6896f578c88f5e14052128f7f086",
-      "date": "2026-09-24"
+      "hash": "97c1613e81f9c3dcb905493024f5c854",
+      "date": "2026-10-02"
     },
     "edge-cases.html": {
       "hash": "2d1148cd00f7537fa8c5292330cf1e8a",
@@ -2181,8 +2245,8 @@
       "date": "2026-09-23"
     },
     "getting-help.html": {
-      "hash": "89c0362f02f05efcb2cc0a490857b9d3",
-      "date": "2026-09-23"
+      "hash": "1220e2f00ef49959ba2acae70a951e1f",
+      "date": "2026-10-02"
     },
     "glossary.html": {
       "hash": "c5f063d46cf3a10445fffed26c88f7dd",
@@ -2197,8 +2261,8 @@
       "date": "2026-09-19"
     },
     "how-do-i.html": {
-      "hash": "2c3969c43d7b136255fbe9960319636c",
-      "date": "2026-09-24"
+      "hash": "68a7e17210d61695805cc21b8427ae1b",
+      "date": "2026-10-02"
     },
     "irmaa-appeal-ssa-44.html": {
       "hash": "84a0734e0baf1ef32cb9a4f2932a79f4",
@@ -2457,8 +2521,8 @@
       "date": "2026-09-20"
     },
     "marketplace.html": {
-      "hash": "76555c96520d26dbf6183561cf434f0f",
-      "date": "2026-09-23"
+      "hash": "1d7a5fd9f3163ab12580ec91601cf18e",
+      "date": "2026-10-02"
     },
     "medicaid-eligibility.html": {
       "hash": "fe1714c2714da853a3fb95feb50ae73d",
@@ -2561,8 +2625,8 @@
       "date": "2026-09-23"
     },
     "enrollment.html": {
-      "hash": "3b05bc52701b790422c7424b553a6496",
-      "date": "2026-09-26"
+      "hash": "cdc268b0696b758ca745ebca9d0a06be",
+      "date": "2026-10-02"
     },
     "medigap.html": {
       "hash": "32f67d205ea36b08026d5d471ac0e305",
@@ -2591,6 +2655,22 @@
     "star-ratings.html": {
       "hash": "5fda928e061bb62f8f24f08be30fed14",
       "date": "2026-10-01"
+    },
+    "extra-help-low-income-subsidy.html": {
+      "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6",
+      "date": "2026-10-02"
+    },
+    "medicare-late-enrollment-penalties.html": {
+      "hash": "cfb9050acbc672e0077029a0106530e4",
+      "date": "2026-10-02"
+    },
+    "mixed-status-family-marketplace.html": {
+      "hash": "031978e65d5a9915f2570dd0244ceec8",
+      "date": "2026-10-02"
+    },
+    "pace-program-nursing-home-alternative.html": {
+      "hash": "9a1ed088a0473b88a2b724c3b549a819",
+      "date": "2026-10-02"
     }
   }
 }
