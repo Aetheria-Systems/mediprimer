@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Penalizaciones por Inscripción Tardía de Medicare: Parte B y Parte D — MediPrimer</title>
+<meta name="description" content="Cómo se calculan las penalizaciones por inscripción tardía de la Parte B y la Parte D de Medicare, con ejemplos de 2026, formas de evitarlas y cómo pedir una revisión de la Parte D.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medicare-late-enrollment-penalties.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Penalizaciones por Inscripción Tardía de Medicare: Parte B y Parte D — MediPrimer">
+<meta property="og:description" content="Cómo se calculan las penalizaciones por inscripción tardía de la Parte B y la Parte D de Medicare, con ejemplos de 2026, formas de evitarlas y cómo pedir una revisión de la Parte D.">
+<meta property="og:url" content="https://mediprimer.org/es/medicare-late-enrollment-penalties.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Penalizaciones por Inscripción Tardía de Medicare: Parte B y Parte D — MediPrimer">
+<meta name="twitter:description" content="Cómo se calculan las penalizaciones por inscripción tardía de la Parte B y la Parte D de Medicare, con ejemplos de 2026, formas de evitarlas y cómo pedir una revisión de la Parte D.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿La penalización por inscripción tardía es un cargo de una sola vez?", "acceptedAnswer": {"@type": "Answer", "text": "No. Se suma a su Prima mensual. Para la mayoría de las personas dura mientras tengan esa cobertura."}}, {"@type": "Question", "name": "Tengo cobertura a través de mi trabajo. ¿Debo una penalización?", "acceptedAnswer": {"@type": "Answer", "text": "No, si esa cobertura tiene un valor similar al de Medicare. Para la Parte D, la cobertura de medicamentos debe ser acreditable. Pídale a su empleador o sindicato un aviso que lo indique y guárdelo."}}, {"@type": "Question", "name": "¿La penalización sube cada año?", "acceptedAnswer": {"@type": "Answer", "text": "La Prima base de la Parte D puede subir cada año, así que su penalización también puede subir. La penalización de la Parte B se suma a la Prima estándar de la Parte B, que también cambia cada año."}}, {"@type": "Question", "name": "¿Qué cuenta como un mes para la Parte D?", "acceptedAnswer": {"@type": "Answer", "text": "La penalización usa el número de meses completos sin cobertura en los que usted pudo unirse a un plan de medicamentos y no lo hizo."}}, {"@type": "Question", "name": "¿Puedo librarme de una penalización de la Parte D cambiando de plan?", "acceptedAnswer": {"@type": "Answer", "text": "No. La penalización lo sigue si cambia de plan."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Penalizaciones por Inscripción Tardía de Medicare: Parte B y Parte D", "description": "Cómo se calculan las penalizaciones por inscripción tardía de la Parte B y la Parte D de Medicare, con ejemplos de 2026, formas de evitarlas y cómo pedir una revisión de la Parte D.", "url": "https://mediprimer.org/es/medicare-late-enrollment-penalties.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-02", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-late-enrollment-penalties.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-late-enrollment-penalties.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Penalizaciones por Inscripción Tardía de Medicare: Parte B y Parte D", "item": "https://mediprimer.org/es/medicare-late-enrollment-penalties.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-late-enrollment-penalties.html" lang="en">English</a>
+    <a href="/es/medicare-late-enrollment-penalties.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Penalizaciones por Inscripción Tardía de Medicare: cómo se calculan y cómo presentar una Apelación</h1>
+    <p>¿Se inscribió tarde? Aquí le explicamos cómo funcionan las penalizaciones de la Parte B y la Parte D, cuánto cuestan y qué puede hacer al respecto.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> La penalización de la Parte B es el 10% de la Prima estándar de la Parte B por cada período completo de 12 meses en que pudo inscribirse y no lo hizo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> La penalización de la Parte D es el 1% de la Prima base nacional del beneficiario por cada mes completo que pasó sin cobertura de medicamentos. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Ambas se suman a su Prima mensual. Ninguna es un cargo de una sola vez. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Usted puede pedir una revisión de una penalización de la Parte D. Tiene 60 días a partir de la fecha de la carta. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>La Penalización por Inscripción Tardía de la Parte B</h2>
+    <p>Usted paga un 10% adicional por cada año en que pudo inscribirse en la Parte B de Medicare y no lo hizo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Solo cuentan los períodos completos de 12 meses. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> La penalización se suma a su Prima mensual de la Parte B. Usted la paga cada mes mientras tenga la Parte B. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/sign-up/when-can-i-sign-up-for-medicare --></p>
+    <p><strong>Cómo se calcula.</strong> Cuente los años completos que esperó. Multiplíquelos por 10%. Luego tome ese porcentaje de la Prima estándar de la Parte B. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <p><strong>Ejemplo para 2026 (el propio ejemplo de Medicare.gov).</strong> Una persona esperó 2 años completos (24 meses) y no calificó para un Período Especial de Inscripción. La penalización es del 20%. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <table>
+      <thead><tr><th>Paso</th><th>Cantidad en 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Prima estándar de la Parte B</td><td>$202.90</td></tr>
+        <tr><td>Más la penalización del 20%</td><td>$40.58</td></tr>
+        <tr><td>Total, luego redondeado a los $0.10 más cercanos</td><td>$243.48, que se convierte en $243.50</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Las personas con ingresos más altos también pueden pagar un recargo adicional relacionado con los ingresos. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Ese es un cargo aparte. Vea <a href="/es/irmaa-appeal-ssa-44.html">cómo pedir una Cantidad de Ajuste Mensual Relacionada con Ingresos (IRMAA) más baja</a>.</p>
+
+    <h2>Cuándo no debe una penalización de la Parte B</h2>
+    <ul>
+      <li><strong>Usted tenía una cobertura similar.</strong> La cobertura de un empleador puede contar, así que puede esperar para inscribirse. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Vea <a href="/es/working-past-65.html">Trabajar después de los 65 años</a>.</li>
+      <li><strong>Usted califica para un Período Especial de Inscripción.</strong> <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Usted se une a un Programa de Ahorro de Medicare.</strong> <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Vea <a href="/es/medicare-savings-programs.html">el Programa de Ahorro de Medicare</a>.</li>
+    </ul>
+
+    <h2>La Penalización por Inscripción Tardía de la Parte D</h2>
+    <p>Es posible que deba esta penalización si pasa 63 días seguidos o más sin cobertura de medicamentos de la Parte D de Medicare ni otra cobertura acreditable de medicamentos. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> La Cobertura Acreditable es una cobertura de medicamentos que es casi tan buena como la Parte D. Puede venir de un empleador, un sindicato, TRICARE, el VA o el Servicio de Salud para Indígenas (Indian Health Service). <!-- src: https://www.medicare.gov/basics/costs/help/drug-costs --></p>
+    <p><strong>Cómo se calcula.</strong> Tome el 1%. Multiplíquelo por la Prima base nacional del beneficiario. Multiplique el resultado por el número de meses completos que pasó sin cobertura. Redondee a los $0.10 más cercanos. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+    <p><strong>Ejemplo para 2026 (el propio ejemplo de Medicare.gov).</strong> Una persona esperó 14 meses y no tenía cobertura acreditable. La penalización es del 14%. La Prima base nacional del beneficiario en 2026 es de $38.99. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <table>
+      <thead><tr><th>Paso</th><th>Cantidad en 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Prima base nacional del beneficiario</td><td>$38.99</td></tr>
+        <tr><td>Por 14%</td><td>$5.46</td></tr>
+        <tr><td>Redondeado a los $0.10 más cercanos</td><td>$5.50 al mes</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Esto se suma a la Prima de su plan. Se queda con usted mientras tenga la Parte D, aunque cambie de plan. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> La Prima base puede subir cada año, así que la penalización también puede subir. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+    <p><strong>La Ayuda Adicional la elimina.</strong> Usted no paga una penalización de la Parte D mientras reciba la Ayuda Adicional. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Vea <a href="/es/extra-help-low-income-subsidy.html">la Ayuda Adicional para los costos de medicamentos de Medicare</a>.</p>
+
+    <h2>La Parte B y la Parte D lado a lado</h2>
+    <table>
+      <thead><tr><th></th><th>Parte B</th><th>Parte D</th></tr></thead>
+      <tbody>
+        <tr><td>Tasa</td><td>10% por cada 12 meses completos</td><td>1% por cada mes completo</td></tr>
+        <tr><td>Se aplica a</td><td>La Prima estándar de la Parte B</td><td>La Prima base nacional del beneficiario</td></tr>
+        <tr><td>Comienza después de</td><td>Su Período de Inscripción Inicial, sin cobertura similar</td><td>63 días seguidos o más sin cobertura acreditable de medicamentos</td></tr>
+        <tr><td>Por cuánto tiempo</td><td>Mientras tenga la Parte B</td><td>Mientras tenga la Parte D</td></tr>
+        <tr><td>Revisión formal</td><td>Vea la sección de la Parte B más abajo</td><td>Sí, una "reconsideración"</td></tr>
+      </tbody>
+    </table>
+    <p><!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> La penalización de la Parte A de Medicare es diferente. La mayoría de las personas recibe la Parte A sin Prima y nunca la ve. Si usted tiene que comprar la Parte A y espera, su Prima puede subir un 10%. Usted la paga por el doble del número de años que esperó. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>Cómo presentar una Apelación por una penalización de la Parte D</h2>
+    <p>Usted puede pedir una "reconsideración". La revisión la hace un contratista de Medicare que no tiene relación con su plan de medicamentos. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <ol class="steps">
+      <li><strong>Lea la carta de su plan.</strong> Dice que usted debe una penalización. Su plan también le enviará información sobre cómo pedir una revisión. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Cuente 60 días a partir de la fecha de esa carta.</strong> Ese es su plazo. Si la envía tarde, debe explicar por qué. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Llene el formulario y devuélvalo.</strong> Use la dirección o el número de fax que aparece en el formulario. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Incluya prueba de cobertura acreditable.</strong> Algunos ejemplos son una copia de su tarjeta de medicamentos recetados o un aviso de cobertura acreditable de un plan de su empleador o sindicato. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Espere la decisión.</strong> El contratista suele decidir en 90 días. Por una causa justificada, puede tardar 14 días más. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+    </ol>
+    <p><strong>Siga pagando mientras espera.</strong> Por ley, la penalización es parte de su Prima. Usted debe pagarla aunque pida una revisión. Un plan puede cancelar la inscripción de los miembros que no paguen las Primas, incluida la parte de la penalización. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <p>Si el contratista determina que la penalización es incorrecta, su plan la elimina o la reduce. El plan le enviará una carta que muestra la Prima correcta e indica si usted recibe un reembolso. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Si el contratista determina que es correcta, usted sigue pagándola. A veces el contratista no revisa una solicitud. Por ejemplo, puede ser tardía o estar incompleta. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Por lo general, no tiene otra oportunidad de pedirla si antes se unió a un plan diferente y ya estaba pagando una penalización. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <h2>Si cree que su penalización de la Parte B es incorrecta</h2>
+    <p>Las páginas de Medicare.gov que revisamos describen una revisión formal solo para la penalización de la Parte D. No establecen un proceso de apelación ni un plazo aparte para la Parte B. El Seguro Social se encarga de la inscripción en la Parte B de Medicare. <!-- src: https://www.ssa.gov/medicare/sign-up --> Si tenía una cobertura que debió contar, o cree que el número de años es incorrecto, comience allí. Llame al 1-800-772-1213 (TTY 1-800-325-0778). <!-- src: https://www.ssa.gov/medicare/sign-up --> Tenga a la mano las fechas de su cobertura del empleador. Su <a href="/es/ship-directory.html">SHIP</a> puede ayudarle gratis. Para conocer los pasos generales de una Apelación, vea <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Preguntas frecuentes</h2>
+    <details class="qa">
+      <summary>¿La penalización por inscripción tardía es un cargo de una sola vez?</summary>
+      <div>
+        <p>No. Se suma a su Prima mensual. Para la mayoría de las personas dura mientras tengan esa cobertura. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tengo cobertura a través de mi trabajo. ¿Debo una penalización?</summary>
+      <div>
+        <p>No, si esa cobertura tiene un valor similar al de Medicare. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Para la Parte D, la cobertura de medicamentos debe ser acreditable. Pídale a su empleador o sindicato un aviso que lo indique y guárdelo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿La penalización sube cada año?</summary>
+      <div>
+        <p>La Prima base de la Parte D puede subir cada año, así que su penalización también puede subir. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> La penalización de la Parte B se suma a la Prima estándar de la Parte B, que también cambia cada año. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Qué cuenta como un mes para la Parte D?</summary>
+      <div>
+        <p>La penalización usa el número de meses completos sin cobertura en los que usted pudo unirse a un plan de medicamentos y no lo hizo. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puedo librarme de una penalización de la Parte D cambiando de plan?</summary>
+      <div>
+        <p>No. La penalización lo sigue si cambia de plan. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+      </div>
+    </details>
+
+
+    <h2>Páginas relacionadas</h2>
+    <ul>
+      <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+      <li><a href="/es/costs.html">Cómo entender sus costos</a></li>
+      <li><a href="/es/medicare-part-d.html">Parte D de Medicare</a></li>
+      <li><a href="/es/extra-help-low-income-subsidy.html">Ayuda Adicional para los costos de medicamentos de Medicare</a></li>
+      <li><a href="/es/irmaa-appeal-ssa-44.html">Cómo apelar la IRMAA con el Formulario SSA-44</a></li>
+      <li><a href="/es/glossary.html">Glosario</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties" rel="noopener">Medicare.gov: Evite las penalizaciones por inscripción tardía</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Costos de la Parte D</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer es información educativa general y no está afiliado a ninguna agencia ni aseguradora. Las cantidades en dólares que aparecen aquí son ejemplos de 2026 tomados de Medicare.gov. Cambian cada año. Confirme las cifras actuales en <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>. Su <a href="/es/ship-directory.html">SHIP</a> puede revisar sus propias fechas gratis.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicare-late-enrollment-penalties.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
