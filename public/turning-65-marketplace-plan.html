@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turning 65 on a Marketplace Plan: When to Cancel</title>
+<meta name="description" content="On a Marketplace plan and turning 65? Learn when your savings stop, how to end your plan, and how to avoid a gap or a tax credit payback.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/turning-65-marketplace-plan.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Turning 65 on a Marketplace Plan: When to Cancel">
+<meta property="og:description" content="On a Marketplace plan and turning 65? Learn when your savings stop, how to end your plan, and how to avoid a gap or a tax credit payback.">
+<meta property="og:url" content="https://mediprimer.org/turning-65-marketplace-plan.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Turning 65 on a Marketplace Plan: When to Cancel">
+<meta name="twitter:description" content="On a Marketplace plan and turning 65? Learn when your savings stop, how to end your plan, and how to avoid a gap or a tax credit payback.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does my Marketplace plan end when I turn 65?", "acceptedAnswer": {"@type": "Answer", "text": "No. It doesn't end automatically when Medicare starts. You update your Marketplace application to end it."}}, {"@type": "Question", "name": "When do my savings stop?", "acceptedAnswer": {"@type": "Answer", "text": "Once you're eligible for Medicare Part A, or once your Part A or Medicare Advantage coverage starts."}}, {"@type": "Question", "name": "Can I have both a Marketplace plan and Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "You can keep a Marketplace plan, but you'll pay full price, and the insurer might end it. Generally, no one may sell you a new Marketplace plan once they know you have Medicare."}}, {"@type": "Question", "name": "Does Medicare have its own Open Enrollment?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Medicare's yearly Open Enrollment Period is October 15 to December 7. It is separate from the Marketplace. See Marketplace Open Enrollment 2027 and Medicare Open Enrollment 2027 ."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/turning-65-marketplace-plan.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/turning-65-marketplace-plan.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Turning 65 on a Marketplace Plan: When to Cancel", "description": "On a Marketplace plan and turning 65? Learn when your savings stop, how to end your plan, and how to avoid a gap or a tax credit payback.", "url": "https://mediprimer.org/turning-65-marketplace-plan.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-06", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Turning 65 on a Marketplace Plan: When to Cancel", "item": "https://mediprimer.org/turning-65-marketplace-plan.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Turning 65 on a Marketplace Plan: When Your Savings Stop and When to Cancel</h1>
+    <p>Medicare does not replace your Marketplace plan on its own. If you do nothing, you could pay full price, or owe money back at tax time. Here is how to hand off cleanly.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> Once you are eligible for Medicare Part A, or once your Part A or Medicare Advantage coverage starts, you can't get savings on your Marketplace plan premiums or out-of-pocket costs. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> Marketplace coverage doesn't end on its own when Medicare starts. You have to update your Marketplace application to end it. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> You can report your Medicare start date up to 3 months before it starts. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> Plan on signing up for Medicare in your sign-up window and ending the Marketplace plan the day before Medicare begins.</p>
+    <p class="tool-callout">New to all this? See <a href="/turning-65.html">Turning 65: Start Here</a> for the full sign-up walkthrough.</p>
+
+    <h2>Why timing matters</h2>
+    <p>Two problems can happen if you mix up the dates.</p>
+    <ul>
+      <li><strong>Paying back tax credits.</strong> If you use the premium tax credit and don't end your Marketplace coverage, you'll have to pay back the credit you used when you file your federal taxes. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></li>
+      <li><strong>Full price.</strong> You can keep a Marketplace plan with Medicare, but you pay full price, and the insurance company might end your coverage. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> It is also against the law for someone who knows you have Medicare to sell you a Marketplace plan. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --></li>
+    </ul>
+    <p>The other risk runs the opposite way: ending Marketplace coverage before Medicare starts leaves a gap. So the order matters.</p>
+
+    <h2>Step by step</h2>
+    <ol class="steps">
+      <li><strong>Learn your sign-up window.</strong> Your Initial Enrollment Period is usually when you turn 65. It lasts 7 months, from 3 months before you turn 65 to 3 months after. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> If you miss it, you may have to wait to sign up and may pay late penalties that grow the longer you wait. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></li>
+      <li><strong>Sign up for Medicare.</strong> If you already get Social Security benefits before you are eligible for Medicare, you'll get Medicare automatically when you are eligible. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --> Otherwise you sign up yourself. See <a href="/enrollment.html">Enrollment &amp; Deadlines</a>.</li>
+      <li><strong>Confirm your Medicare start date.</strong> Your approval notice or my Social Security account shows it.</li>
+      <li><strong>Update your Marketplace application.</strong> Report the Medicare start date. For example, if Medicare begins May 1, you can update your application as early as February 1. Your Marketplace coverage ends April 30, the day before Medicare starts. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></li>
+      <li><strong>Confirm the plan for others on your application.</strong> After you submit the update, confirm the plan for anyone in your household who is keeping Marketplace coverage. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> Their savings may be re-checked.</li>
+      <li><strong>Add the pieces Medicare lacks.</strong> The Marketplace doesn't offer Medigap or Medicare drug plans. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --> Look at <a href="/medigap.html">Medigap</a>, <a href="/medicare-part-d.html">Part D</a>, or <a href="/medicare-advantage.html">Medicare Advantage</a>.</li>
+    </ol>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>If you forget to end your Marketplace plan</h2>
+    <p>The Marketplace sometimes re-checks its records. If you still get the premium tax credit after Medicare starts, you may get a letter. It says you must act within 30 days, or the Marketplace will change your coverage based on what you chose in your application. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> If it stops your savings, you keep the plan but pay full price. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> Don't wait for that letter.</p>
+
+    <h2>Special cases</h2>
+    <ul>
+      <li><strong>You turn 65 mid-year.</strong> You can have a Marketplace plan until Medicare begins. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --></li>
+      <li><strong>You'd pay a Part A premium.</strong> If you pay a premium for Part A, you can choose whether to have Medicare or the Marketplace. Compare costs and coverage, and think about late enrollment penalties. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></li>
+      <li><strong>Your coverage is through a job.</strong> Job coverage through the SHOP Marketplace is treated like any job-based plan. You may be able to delay Part B without a penalty. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --> See <a href="/working-past-65.html">Working Past 65</a>.</li>
+      <li><strong>You lose other coverage.</strong> See <a href="/retiring-losing-coverage.html">Retiring or Losing Coverage</a>.</li>
+      <li><strong>Dental.</strong> If your state uses the federal Marketplace, you generally can't buy a stand-alone dental plan with Medicare. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --></li>
+    </ul>
+    <p>Medicare also has programs that lower premiums and costs. See <a href="/getting-help.html">Getting Help Paying</a>.</p>
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Does my Marketplace plan end when I turn 65?</summary>
+      <div>
+        <p>No. It doesn't end automatically when Medicare starts. You update your Marketplace application to end it. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>When do my savings stop?</summary>
+      <div>
+        <p>Once you're eligible for Medicare Part A, or once your Part A or Medicare Advantage coverage starts. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I have both a Marketplace plan and Medicare?</summary>
+      <div>
+        <p>You can keep a Marketplace plan, but you'll pay full price, and the insurer might end it. <!-- src: https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/ --> Generally, no one may sell you a new Marketplace plan once they know you have Medicare. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does Medicare have its own Open Enrollment?</summary>
+      <div>
+        <p>Yes. Medicare's yearly Open Enrollment Period is October 15 to December 7. <!-- src: https://www.healthcare.gov/medicare/medicare-and-the-marketplace/ --> It is separate from the Marketplace. See <a href="/marketplace-open-enrollment-2027.html">Marketplace Open Enrollment 2027</a> and <a href="/medicare-open-enrollment-2027.html">Medicare Open Enrollment 2027</a>.</p>
+      </div>
+    </details>
+
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://www.healthcare.gov/medicare/changing-from-marketplace-to-medicare/" rel="noopener">HealthCare.gov: Changing from Marketplace to Medicare</a></li>
+      <li><a href="https://www.healthcare.gov/medicare/medicare-and-the-marketplace/" rel="noopener">HealthCare.gov: Medicare and the Marketplace</a></li>
+      <li>Learn more about <a href="/marketplace.html">the Marketplace</a> on this site.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency. Confirm your Medicare start date and your Marketplace steps with HealthCare.gov or your SHIP.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
