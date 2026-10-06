@@ -16,7 +16,7 @@
   "hash": "3499a6d72acd416be78879561050a383"
  },
  "appeals-timelines.html": {
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "hash": "f7bc5bf24eeec497a8b5b1a9c44c4ee9"
  },
  "basics.html": {
@@ -112,8 +112,8 @@
   "hash": "17d5a5cbe151daaa1aca2a7fe8a5faa6"
  },
  "getting-help.html": {
-  "date": "2026-10-01",
-  "hash": "1220e2f00ef49959ba2acae70a951e1f"
+  "date": "2026-10-06",
+  "hash": "7c51a7a3ca74c39ca4362483b4769f1d"
  },
  "glossary.html": {
   "date": "2026-09-18",
@@ -128,8 +128,8 @@
   "hash": "9ee44773cff665b0d802a09db84aea73"
  },
  "how-do-i.html": {
-  "date": "2026-10-01",
-  "hash": "68a7e17210d61695805cc21b8427ae1b"
+  "date": "2026-10-06",
+  "hash": "e4298af555790872048e93d0262cd911"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-18",
@@ -204,7 +204,7 @@
   "hash": "b06430e516d8fb3d583784ea813ce597"
  },
  "medicaid-starting-out.html": {
-  "date": "2026-09-30",
+  "date": "2026-10-06",
   "hash": "e43b5a697820040e5297f4bd9e1c1d9a"
  },
  "medicaid-work-requirements.html": {
@@ -224,7 +224,7 @@
   "hash": "d20731e284f2ef5bacde2c2fb676c8d3"
  },
  "medicare-advantage.html": {
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "hash": "b18d63d9afad77a6b4c3840eae3721b6"
  },
  "medicare-ambulance-emergency-room.html": {
@@ -242,6 +242,10 @@
  "medicare-assignment.html": {
   "date": "2026-09-06",
   "hash": "4166e5f8a4d56d3dd00080194ac78bbe"
+ },
+ "medicare-assistance.html": {
+  "date": "2026-10-06",
+  "hash": "220fc028992b19fe08082db01f403336"
  },
  "medicare-cancer-treatment.html": {
   "date": "2026-09-18",
@@ -312,7 +316,7 @@
   "hash": "51735b20a90d337fe7cdcce65e71e5a2"
  },
  "medicare-medical-equipment-dme.html": {
-  "date": "2026-09-18",
+  "date": "2026-10-06",
   "hash": "631c1673a2a284706bdef5201f382790"
  },
  "medicare-mental-health.html": {
@@ -332,7 +336,7 @@
   "hash": "81a06033e946be5169346b307e53949e"
  },
  "medicare-part-b.html": {
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "hash": "43eb0c2acd4515bf303d6e500f6ccc62"
  },
  "medicare-part-d.html": {
@@ -344,7 +348,7 @@
   "hash": "593b9288caa17a0717d25e21543e0455"
  },
  "medicare-plan-comparison-2027.html": {
-  "date": "2026-09-30",
+  "date": "2026-10-06",
   "hash": "49ce310ff00598b19c536cebdf5c5138"
  },
  "medicare-prescription-payment-plan.html": {
@@ -396,7 +400,7 @@
   "hash": "62eb5a13630e8f48bf8099e1d11c00cc"
  },
  "medicare-vaccines.html": {
-  "date": "2026-09-30",
+  "date": "2026-10-06",
   "hash": "2322892559073b6b534ba429cac6e6a3"
  },
  "medicare-vs-medicaid.html": {
@@ -416,7 +420,7 @@
   "hash": "b6dd04349ea8672247f30e48b824cc47"
  },
  "medigap.html": {
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "hash": "32f67d205ea36b08026d5d471ac0e305"
  },
  "member-journey.html": {
@@ -488,7 +492,7 @@
   "hash": "324cb63d4120c63875f3b3896675c5b6"
  },
  "resources.html": {
-  "date": "2026-09-22",
+  "date": "2026-10-06",
   "hash": "25805bef1df55e0c8e19ff109d1ee20e"
  },
  "retiring-losing-coverage.html": {
@@ -504,7 +508,7 @@
   "hash": "dcdd8ac631adac2f4ca04c297c049f29"
  },
  "ship-directory.html": {
-  "date": "2026-09-23",
+  "date": "2026-10-06",
   "hash": "2dfedc7c63bd409f0f8bd2e05a030b94"
  },
  "site-map.html": {
@@ -544,7 +548,7 @@
   "hash": "59cded26fd20388ad52771b9f95ea9a9"
  },
  "turning-65.html": {
-  "date": "2026-09-18",
+  "date": "2026-10-06",
   "hash": "48618bee6d75095f86126a51ef71b69d"
  },
  "using-plan-finder.html": {
