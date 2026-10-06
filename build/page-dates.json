@@ -60,8 +60,8 @@
   "hash": "f06e614a57fc58267a6906ddcacdfc4a"
  },
  "costs.html": {
-  "date": "2026-09-30",
-  "hash": "fb4fa6af5f4ff3f4fd89f58c27eefbf9"
+  "date": "2026-10-06",
+  "hash": "da0edbd1e7c80edf86868106852721b7"
  },
  "coverage-basics.html": {
   "date": "2026-09-22",
@@ -129,7 +129,7 @@
  },
  "how-do-i.html": {
   "date": "2026-10-06",
-  "hash": "68a7e17210d61695805cc21b8427ae1b"
+  "hash": "767c0064b0cbc53d3d34e435cc628e82"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-18",
@@ -155,13 +155,17 @@
   "date": "2026-09-18",
   "hash": "d6ed18a5ea7760e8eae38233eb4e83ca"
  },
+ "marketplace-open-enrollment-2027.html": {
+  "date": "2026-10-06",
+  "hash": "fbac01641d77d274a316de1fb6e02446"
+ },
  "marketplace-premium-increase.html": {
   "date": "2026-09-18",
   "hash": "84ce43f6d57769eac3e0b06533bb08ee"
  },
  "marketplace.html": {
-  "date": "2026-10-01",
-  "hash": "1d7a5fd9f3163ab12580ec91601cf18e"
+  "date": "2026-10-06",
+  "hash": "2892a0335e49f2c5b4ecd80becbff817"
  },
  "medicaid-dental-adults.html": {
   "date": "2026-09-18",
@@ -215,6 +219,10 @@
   "date": "2026-09-18",
   "hash": "6a17859d77cd118ac29ef2044c6bf70d"
  },
+ "medicare-advantage-plan-ending.html": {
+  "date": "2026-10-06",
+  "hash": "1dca3b7690db9e0a6a104ddce5fb09e8"
+ },
  "medicare-advantage-prior-authorization.html": {
   "date": "2026-09-18",
   "hash": "f0c536c28cb5e29b1b8efb01e5190f1c"
@@ -232,8 +240,8 @@
   "hash": "bd4da1aadac09f869a313b71a9ea94d7"
  },
  "medicare-annual-notice-of-change.html": {
-  "date": "2026-09-18",
-  "hash": "fee6c2b91cdc4637a60c928c77e4ab30"
+  "date": "2026-10-06",
+  "hash": "6ebedc011ec75b73d30b398fc6d03e77"
  },
  "medicare-assignment-excess-charges.html": {
   "date": "2026-09-06",
@@ -294,6 +302,10 @@
  "medicare-flex-card.html": {
   "date": "2026-09-22",
   "hash": "ed4a7344d5ceac429641e289521cbec6"
+ },
+ "medicare-hold-harmless.html": {
+  "date": "2026-10-06",
+  "hash": "cd04a27bdfdda743913e4381cbaa9bce"
  },
  "medicare-hospice-home-health.html": {
   "date": "2026-09-18",
@@ -421,7 +433,7 @@
  },
  "medigap.html": {
   "date": "2026-10-06",
-  "hash": "1f743fdd7deea2439c0c3e80ec7f0d09"
+  "hash": "b9f30174d7c232f063d2f78faa04c8b9"
  },
  "member-journey.html": {
   "date": "2026-09-22",
@@ -547,9 +559,13 @@
   "date": "2026-09-18",
   "hash": "59cded26fd20388ad52771b9f95ea9a9"
  },
+ "turning-65-marketplace-plan.html": {
+  "date": "2026-10-06",
+  "hash": "9841a7fdbfdccb9bbc6df72e20fbec9e"
+ },
  "turning-65.html": {
   "date": "2026-10-06",
-  "hash": "e98f95128efd007829616cff813ed74b"
+  "hash": "85473f0f43824d5b2f53c64718ebc835"
  },
  "using-plan-finder.html": {
   "date": "2026-09-18",
