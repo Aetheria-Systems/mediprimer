@@ -99,7 +99,6 @@ ACTIVE = {
     "medicare-summary-notice.html": "members",
     "medicare-telehealth.html": "members",
     "medicare-vaccines.html": "members",
-    "medicare-assistance.html": "members",
     "part-d-formulary-exception-appeal.html": "members",
     "turning-26-health-insurance.html": "members",
 
