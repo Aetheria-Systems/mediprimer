@@ -1,177 +1,209 @@
 {
-  "_doc": "Official program figures with their government source. build/check_facts.py fails the build when a page states a SUPERSEDED value for one of these NEAR the words that identify it. Proximity matters: $200 and $1,600 appear all over the site as illustrative examples ('your share would be $1,600'), and matching the bare number flagged four such examples as errors on 2026-10-01. A gate that cries wolf gets ignored. Re-verify each November when CMS publishes the new year.",
-  "_sources": {
-    "cms-2026-ab": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
-    "medicare-costs": "https://www.medicare.gov/basics/costs/medicare-costs"
+ "_doc": "Official program figures with their government source. build/check_facts.py fails the build when a page states a SUPERSEDED value for one of these NEAR the words that identify it. Proximity matters: $200 and $1,600 appear all over the site as illustrative examples ('your share would be $1,600'), and matching the bare number flagged four such examples as errors on 2026-10-01. A gate that cries wolf gets ignored. Re-verify each November when CMS publishes the new year.",
+ "_sources": {
+  "cms-2026-ab": "https://www.cms.gov/newsroom/fact-sheets/2026-medicare-parts-b-premiums-deductibles",
+  "medicare-costs": "https://www.medicare.gov/basics/costs/medicare-costs",
+  "medicare-part-d-costs": "https://www.medicare.gov/health-drug-plans/part-d/basics/costs"
+ },
+ "verified": "2026-10-01",
+ "figures": [
+  {
+   "id": "part_b_premium_2026",
+   "value": "$202.90",
+   "year": 2026,
+   "what": "Part B standard monthly premium",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$185.00",
+    "$185",
+    "$174.70",
+    "$164.90"
+   ],
+   "near": [
+    "part b",
+    "premium"
+   ]
   },
-  "verified": "2026-10-01",
-  "figures": [
-    {
-      "id": "part_b_premium_2026",
-      "value": "$202.90",
-      "year": 2026,
-      "what": "Part B standard monthly premium",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$185.00",
-        "$185",
-        "$174.70",
-        "$164.90"
-      ],
-      "near": [
-        "part b",
-        "premium"
-      ]
-    },
-    {
-      "id": "part_b_deductible_2026",
-      "value": "$283",
-      "year": 2026,
-      "what": "Part B annual deductible",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$257",
-        "$240",
-        "$226"
-      ],
-      "near": [
-        "part b",
-        "deductible"
-      ]
-    },
-    {
-      "id": "part_a_deductible_2026",
-      "value": "$1,736",
-      "year": 2026,
-      "what": "Part A inpatient hospital deductible per benefit period",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$1,676",
-        "$1,632",
-        "$1,556"
-      ],
-      "near": [
-        "part a",
-        "deductible",
-        "benefit period",
-        "hospital"
-      ]
-    },
-    {
-      "id": "part_a_coins_61_90_2026",
-      "value": "$434",
-      "year": 2026,
-      "what": "Part A daily coinsurance, days 61-90",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$419",
-        "$408"
-      ],
-      "near": [
-        "coinsurance",
-        "day",
-        "hospital"
-      ]
-    },
-    {
-      "id": "part_a_coins_lifetime_2026",
-      "value": "$868",
-      "year": 2026,
-      "what": "Part A daily coinsurance, lifetime reserve days",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$838",
-        "$816"
-      ],
-      "near": [
-        "lifetime reserve",
-        "coinsurance"
-      ]
-    },
-    {
-      "id": "snf_coins_21_100_2026",
-      "value": "$217",
-      "year": 2026,
-      "what": "Skilled nursing facility daily coinsurance, days 21-100",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$209.50",
-        "$204"
-      ],
-      "near": [
-        "skilled nursing",
-        "snf",
-        "coinsurance"
-      ]
-    },
-    {
-      "id": "part_a_premium_full_2026",
-      "value": "$565",
-      "year": 2026,
-      "what": "Part A monthly premium, fewer than 30 quarters",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$518",
-        "$505",
-        "$499"
-      ],
-      "near": [
-        "part a",
-        "premium",
-        "quarter"
-      ]
-    },
-    {
-      "id": "part_a_premium_reduced_2026",
-      "value": "$311",
-      "year": 2026,
-      "what": "Part A monthly premium, 30-39 quarters",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$285",
-        "$278",
-        "$274"
-      ],
-      "near": [
-        "part a",
-        "premium",
-        "quarter"
-      ]
-    },
-    {
-      "id": "irmaa_single_threshold_2026",
-      "value": "$109,000",
-      "year": 2026,
-      "what": "IRMAA first income threshold, individual filer",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$106,000",
-        "$103,000",
-        "$97,000"
-      ],
-      "near": [
-        "irmaa",
-        "income-related",
-        "higher income"
-      ]
-    },
-    {
-      "id": "irmaa_joint_threshold_2026",
-      "value": "$218,000",
-      "year": 2026,
-      "what": "IRMAA first income threshold, joint filers",
-      "source": "cms-2026-ab",
-      "wrong_if_seen": [
-        "$212,000",
-        "$206,000",
-        "$194,000"
-      ],
-      "near": [
-        "irmaa",
-        "income-related",
-        "higher income",
-        "jointly"
-      ]
-    }
-  ]
+  {
+   "id": "part_b_deductible_2026",
+   "value": "$283",
+   "year": 2026,
+   "what": "Part B annual deductible",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$257",
+    "$240",
+    "$226"
+   ],
+   "near": [
+    "part b",
+    "deductible"
+   ]
+  },
+  {
+   "id": "part_a_deductible_2026",
+   "value": "$1,736",
+   "year": 2026,
+   "what": "Part A inpatient hospital deductible per benefit period",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$1,676",
+    "$1,632",
+    "$1,556"
+   ],
+   "near": [
+    "part a",
+    "deductible",
+    "benefit period",
+    "hospital"
+   ]
+  },
+  {
+   "id": "part_a_coins_61_90_2026",
+   "value": "$434",
+   "year": 2026,
+   "what": "Part A daily coinsurance, days 61-90",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$419",
+    "$408"
+   ],
+   "near": [
+    "coinsurance",
+    "day",
+    "hospital"
+   ]
+  },
+  {
+   "id": "part_a_coins_lifetime_2026",
+   "value": "$868",
+   "year": 2026,
+   "what": "Part A daily coinsurance, lifetime reserve days",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$838",
+    "$816"
+   ],
+   "near": [
+    "lifetime reserve",
+    "coinsurance"
+   ]
+  },
+  {
+   "id": "snf_coins_21_100_2026",
+   "value": "$217",
+   "year": 2026,
+   "what": "Skilled nursing facility daily coinsurance, days 21-100",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$209.50",
+    "$204"
+   ],
+   "near": [
+    "skilled nursing",
+    "snf",
+    "coinsurance"
+   ]
+  },
+  {
+   "id": "part_a_premium_full_2026",
+   "value": "$565",
+   "year": 2026,
+   "what": "Part A monthly premium, fewer than 30 quarters",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$518",
+    "$505",
+    "$499"
+   ],
+   "near": [
+    "part a",
+    "premium",
+    "quarter"
+   ]
+  },
+  {
+   "id": "part_a_premium_reduced_2026",
+   "value": "$311",
+   "year": 2026,
+   "what": "Part A monthly premium, 30-39 quarters",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$285",
+    "$278",
+    "$274"
+   ],
+   "near": [
+    "part a",
+    "premium",
+    "quarter"
+   ]
+  },
+  {
+   "id": "irmaa_single_threshold_2026",
+   "value": "$109,000",
+   "year": 2026,
+   "what": "IRMAA first income threshold, individual filer",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$106,000",
+    "$103,000",
+    "$97,000"
+   ],
+   "near": [
+    "irmaa",
+    "income-related",
+    "higher income"
+   ]
+  },
+  {
+   "id": "irmaa_joint_threshold_2026",
+   "value": "$218,000",
+   "year": 2026,
+   "what": "IRMAA first income threshold, joint filers",
+   "source": "cms-2026-ab",
+   "wrong_if_seen": [
+    "$212,000",
+    "$206,000",
+    "$194,000"
+   ],
+   "near": [
+    "irmaa",
+    "income-related",
+    "higher income",
+    "jointly"
+   ]
+  },
+  {
+   "id": "part_d_oop_cap_2026",
+   "value": "$2,100",
+   "year": 2026,
+   "what": "Part D yearly out-of-pocket limit",
+   "source": "medicare-costs",
+   "wrong_if_seen": [
+    "$2,000"
+   ],
+   "near": [
+    "out-of-pocket",
+    "out of pocket"
+   ]
+  },
+  {
+   "id": "part_d_deductible_2026",
+   "value": "$615",
+   "year": 2026,
+   "what": "Part D maximum plan deductible",
+   "source": "medicare-part-d-costs",
+   "wrong_if_seen": [
+    "$590",
+    "$545"
+   ],
+   "near": [
+    "part d",
+    "drug plan",
+    "drug deductible",
+    "drug coverage"
+   ]
+  }
+ ]
 }
