@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare 「免受損害」規則：B部分保費與您的社會安全金支票</title>
+<meta name="description" content="說明 Medicare「免受損害」規則是什麼、保護哪些人、不保護哪些人，以及為什麼醫療保險B部分保費上漲時，您的社會安全金支票仍可能改變。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/medicare-hold-harmless.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare 「免受損害」規則：B部分保費與您的社會安全金支票">
+<meta property="og:description" content="說明 Medicare「免受損害」規則是什麼、保護哪些人、不保護哪些人，以及為什麼醫療保險B部分保費上漲時，您的社會安全金支票仍可能改變。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/medicare-hold-harmless.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare 「免受損害」規則：B部分保費與您的社會安全金支票">
+<meta name="twitter:description" content="說明 Medicare「免受損害」規則是什麼、保護哪些人、不保護哪些人，以及為什麼醫療保險B部分保費上漲時，您的社會安全金支票仍可能改變。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "醫療保險B部分保費上漲時，我的社會安全金支票會減少嗎？", "acceptedAnswer": {"@type": "Answer", "text": "如果您受免受損害規則保護，這項規則的目的就是防止這種情況。 如果您不在保護範圍內，您實際拿到的金額可能會比加薪幅度顯示的少。"}}, {"@type": "Question", "name": "我今年剛加入 Medicare。我受保護嗎？", "acceptedAnswer": {"@type": "Answer", "text": "社會安全局表示，當年才剛取得醫療保險B部分資格的人不受保護。"}}, {"@type": "Question", "name": "我的州政府替我支付醫療保險B部分保費。這會影響我嗎？", "acceptedAnswer": {"@type": "Answer", "text": "保費上漲時，您的社會安全金不會改變。任何漲幅都必須由州政府支付。"}}, {"@type": "Question", "name": "在哪裡可以看到新的醫療保險B部分保費？", "acceptedAnswer": {"@type": "Answer", "text": "美國醫療保險和醫療補助服務中心（CMS）公布後，Medicare.gov 會發布，通常在秋季。請參閱 2027年 Medicare 費用有哪些變動 和 醫療保險B部分 。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare 「免受損害」規則：B部分保費與您的社會安全金支票", "description": "說明 Medicare「免受損害」規則是什麼、保護哪些人、不保護哪些人，以及為什麼醫療保險B部分保費上漲時，您的社會安全金支票仍可能改變。", "url": "https://mediprimer.org/zh-Hant/medicare-hold-harmless.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-hold-harmless.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-hold-harmless.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "Medicare 「免受損害」規則：B部分保費與您的社會安全金支票", "item": "https://mediprimer.org/zh-Hant/medicare-hold-harmless.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-hold-harmless.html" lang="en">English</a>
+    <a href="/es/medicare-hold-harmless.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-hold-harmless.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照護者</p>
+    <h1>Medicare「免受損害」規則：醫療保險B部分保費會讓我的社會安全金支票變少嗎？</h1>
+    <p>每年秋天，社會安全局會公布加薪幅度，Medicare 也會公布醫療保險B部分保費。聯邦規則可以保護一些人，避免支票變少，但並非保護每一個人。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案如下。</strong>「免受損害」規則是寫進法律的保護措施。如果醫療保險B部分保費上漲，這項規則的目的是讓您的社會安全金淨額不會減少。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 但它不保護每一個人。社會安全局表示，它不涵蓋繳納依收入調整的醫療保險B部分保費的高收入者，也不涵蓋當年才剛取得醫療保險B部分資格的人。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 另外，如果有州政府計劃替您支付醫療保險B部分保費，您的社會安全金不會改變；任何漲幅都由州政府支付。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --></p>
+
+    <h2>為什麼每年秋天都會出現這個問題</h2>
+    <p>兩項公布的時間很接近。社會安全局會公布每年的生活費調整（COLA）。2026年的調整幅度是百分之2.8，社會安全局表示，退休福利平均每月增加約 $56。<!-- src: https://www.ssa.gov/news/en/press/releases/2025-10-24.html --> Medicare 也會訂定當年的醫療保險B部分保費。對許多人來說，醫療保險B部分保費會在支票發放前先從社會安全金中扣除。因此，保費上漲可能會吃掉一部分加薪。</p>
+    <p>免受損害規則，就是有些人在保費上漲時支票不會變少的原因。撰寫本頁時，2027年的醫療保險B部分保費尚未公布。有關目前已知的最新情況，請參閱<a href="/zh-Hant/medicare-costs-2027.html">2027年 Medicare 費用有哪些變動</a>。</p>
+
+    <h2>這項規則打算保護哪些人</h2>
+    <p>社會安全局的說明是：法律中有免受損害條款，保護約百分之70的社會安全金受益人不必繳納較高的醫療保險B部分保費，以避免他們的社會安全金淨額減少。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 受保護的人數比例每年不同，因此請把這個數字當成過去某一年的例子。</p>
+    <p>簡單來說，如果您已經加入醫療保險B部分，而且保費是從您的社會安全金中扣除，這項規則就是為您這類人而寫的。</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>哪些人不受保護</h2>
+    <ul>
+      <li><strong>高收入會員。</strong>如果您繳納依收入調整的醫療保險B部分保費，這項規則不保護您。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 有關與收入相關的保費如何運作，請參閱<a href="/zh-Hant/costs.html">了解您的費用</a>。</li>
+      <li><strong>剛加入醫療保險B部分的人。</strong>社會安全局表示，當年才剛取得醫療保險B部分資格的人不受保護。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --></li>
+      <li><strong>由州政府支付保費的人。</strong>他們的社會安全金不會改變。任何漲幅都由州政府支付。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 請參閱<a href="/zh-Hant/getting-help.html">取得付費協助</a>和<a href="/zh-Hant/dual-eligible.html">雙重資格承保</a>。</li>
+    </ul>
+
+    <h2>這項規則不能做到的事</h2>
+    <ul>
+      <li>它不會改變醫療保險B部分的承保內容。請參閱<a href="/zh-Hant/medicare-part-b.html">醫療保險B部分</a>。</li>
+      <li>它不涉及其他費用，例如您的醫療保險D部分或 Medicare Advantage 保費，或您的自付額。這些都是分開的。請查看您的<a href="/zh-Hant/medicare-annual-notice-of-change.html">年度變更通知</a>。</li>
+      <li>它只針對從您的社會安全金中扣除的醫療保險B部分保費。您自己的結果取決於您的情況。</li>
+    </ul>
+
+    <h2>如何查看您自己的信件</h2>
+    <ol class="steps">
+      <li><strong>留意您的 COLA 通知。</strong>社會安全局會在12月初開始寄出新福利通知。通知會顯示您的新福利金額和任何扣款。<!-- src: https://www.ssa.gov/news/en/press/releases/2025-10-24.html --></li>
+      <li><strong>找到醫療保險B部分那一行。</strong>它會顯示為 Medicare 扣除的金額。</li>
+      <li><strong>與去年比較。</strong>如果數字讓您意外，請致電社會安全局。</li>
+      <li><strong>詢問付費協助。</strong>如果保費造成負擔，請詢問醫療保險儲蓄計劃（MSP），也就是 Medicare Savings Programs。請參閱<a href="/zh-Hant/getting-help.html">取得付費協助</a>。您的 <a href="/zh-Hant/ship-directory.html">SHIP</a> 提供免費諮詢。</li>
+    </ol>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>醫療保險B部分保費上漲時，我的社會安全金支票會減少嗎？</summary>
+      <div>
+        <p>如果您受免受損害規則保護，這項規則的目的就是防止這種情況。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --> 如果您不在保護範圍內，您實際拿到的金額可能會比加薪幅度顯示的少。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我今年剛加入 Medicare。我受保護嗎？</summary>
+      <div>
+        <p>社會安全局表示，當年才剛取得醫療保險B部分資格的人不受保護。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我的州政府替我支付醫療保險B部分保費。這會影響我嗎？</summary>
+      <div>
+        <p>保費上漲時，您的社會安全金不會改變。任何漲幅都必須由州政府支付。<!-- src: https://www.ssa.gov/news/en/press/releases/2015-10-15.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>在哪裡可以看到新的醫療保險B部分保費？</summary>
+      <div>
+        <p>美國醫療保險和醫療補助服務中心（CMS）公布後，Medicare.gov 會發布，通常在秋季。請參閱<a href="/zh-Hant/medicare-costs-2027.html">2027年 Medicare 費用有哪些變動</a>和<a href="/zh-Hant/medicare-part-b.html">醫療保險B部分</a>。</p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.ssa.gov/news/en/press/releases/2015-10-15.html" rel="noopener">SSA.gov：說明免受損害條款的新聞稿（2015年10月）</a></li>
+      <li><a href="https://www.ssa.gov/news/en/press/releases/2025-10-24.html" rel="noopener">SSA.gov：2026年福利調升公告</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov：Medicare 費用</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先確認。</strong>MediPrimer 提供一般教育資訊，與任何機構都沒有隸屬關係。此處對免受損害規則的說明，來自社會安全局過去的公告。請向社會安全局或您的 SHIP 詢問這項規則今年如何適用於您。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/medicare-hold-harmless.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

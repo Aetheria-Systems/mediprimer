@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi plan Medicare Advantage termina para 2027: sus opciones</title>
+<meta name="description" content="¿Su plan Medicare Advantage termina? Usted tiene un período especial para cambiar de plan y puede tener derechos de Seguro Complementario de Medicare (Medigap). Vea las fechas, la regla de 63 días y los próximos pasos.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medicare-advantage-plan-ending.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Mi plan Medicare Advantage termina para 2027: sus opciones">
+<meta property="og:description" content="¿Su plan Medicare Advantage termina? Usted tiene un período especial para cambiar de plan y puede tener derechos de Seguro Complementario de Medicare (Medigap). Vea las fechas, la regla de 63 días y los próximos pasos.">
+<meta property="og:url" content="https://mediprimer.org/es/medicare-advantage-plan-ending.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Mi plan Medicare Advantage termina para 2027: sus opciones">
+<meta name="twitter:description" content="¿Su plan Medicare Advantage termina? Usted tiene un período especial para cambiar de plan y puede tener derechos de Seguro Complementario de Medicare (Medigap). Vea las fechas, la regla de 63 días y los próximos pasos.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Perderé Medicare si mi plan termina?", "acceptedAnswer": {"@type": "Answer", "text": "No. Su Parte A de Medicare y su Parte B de Medicare se mantienen. Si no se une a otro plan Medicare Advantage antes de que termine el suyo, quedará inscrito en la Cobertura Original de Medicare."}}, {"@type": "Question", "name": "¿Cuánto tiempo tengo para elegir un plan nuevo?", "acceptedAnswer": {"@type": "Answer", "text": "El período especial empieza 1 mes antes de que termine el contrato de su plan y acaba 2 meses completos después. La Inscripción Abierta, del 15 de octubre al 7 de diciembre, también se aplica."}}, {"@type": "Question", "name": "¿Puedo obtener una póliza de Medigap si tengo problemas de salud?", "acceptedAnswer": {"@type": "Answer", "text": "Si su plan deja Medicare y usted cambia a la Cobertura Original de Medicare, tiene derecho a comprar una póliza de Medigap dentro del período que va desde 60 días antes hasta 63 días después. Fuera de ese período, una compañía podría rechazarlo según su estado de salud."}}, {"@type": "Question", "name": "¿Necesito cancelar mi plan anterior?", "acceptedAnswer": {"@type": "Answer", "text": "No. Su plan anterior termina por sí solo en su fecha de cierre. Cuando se une a un nuevo plan Medicare Advantage, lo pasan fuera del anterior. Fíjese en la fecha de inicio del plan nuevo para no quedarse sin cobertura."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Mi plan Medicare Advantage termina para 2027: sus opciones", "description": "¿Su plan Medicare Advantage termina? Usted tiene un período especial para cambiar de plan y puede tener derechos de Seguro Complementario de Medicare (Medigap). Vea las fechas, la regla de 63 días y los próximos pasos.", "url": "https://mediprimer.org/es/medicare-advantage-plan-ending.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-07", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-advantage-plan-ending.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Mi plan Medicare Advantage termina para 2027: sus opciones", "item": "https://mediprimer.org/es/medicare-advantage-plan-ending.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-advantage-plan-ending.html" lang="en">English</a>
+    <a href="/es/medicare-advantage-plan-ending.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Mi plan Medicare Advantage termina para 2027. ¿Y ahora qué?</h1>
+    <p>La carta de su plan dice que no se ofrecerá el próximo año. Usted no se queda sin cobertura, pero sí tiene fechas límite. Aquí le explicamos qué significa la carta y cómo usar su tiempo adicional para cambiar de plan.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Si su plan Medicare Advantage deja de participar en Medicare, usted tiene que unirse a otro plan de salud de Medicare o volver a la Cobertura Original de Medicare. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --> Usted tiene tiempo adicional para hacerlo. Cuando Medicare termina el contrato de su plan, su oportunidad de cambiar empieza 1 mes antes de que termine el contrato y dura hasta 2 meses completos después de que termine. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Si no hace nada, quedará inscrito en la Cobertura Original de Medicare. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Si quiere una póliza de Seguro Complementario de Medicare (Medigap), tiene un período corto para comprarla: desde 60 días antes de que termine su plan hasta no más de 63 días después. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+
+    <div class="note">
+      <strong>Revise qué carta tiene.</strong> Muchos planes envían cada año un <a href="/es/medicare-annual-notice-of-change.html">Aviso Anual de Cambios</a> que indica nuevos costos y reglas. En ese caso, su plan sigue existiendo. Esta página es para la otra carta, la que dice que su plan no se ofrecerá en absoluto.
+    </div>
+
+    <h2>Qué significa la carta</h2>
+    <p>Las aseguradoras privadas deciden cada año si siguen ofreciendo un plan en su área. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --> Cuando un plan termina, su cobertura bajo ese plan acaba en la fecha de cierre, por lo general el 31 de diciembre. Su Parte A de Medicare y su Parte B de Medicare no terminan. Solo desaparece la capa del plan privado.</p>
+    <p>Esto es distinto de un plan que solo cambia sus precios o sus médicos. También es distinto de <a href="/es/medicare-advantage-to-original-medicare.html">decidir por su cuenta dejar Medicare Advantage</a>. Como el plan mismo termina, usted tiene derechos especiales para cambiar que de otro modo no tendría.</p>
+
+    <h2>Sus tres opciones</h2>
+    <ol class="steps">
+      <li><strong>Unirse a otro plan Medicare Advantage.</strong> El Buscador de Planes muestra los planes que se venden donde usted vive. Verifique que cubran sus medicamentos, sus médicos y sus farmacias. Vea <a href="/es/switching-medicare-advantage-plans.html">Cambiar de plan Medicare Advantage: qué revisar primero</a>.</li>
+      <li><strong>Volver a la Cobertura Original de Medicare.</strong> Después puede añadir un plan de medicamentos de la Parte D de Medicare y, en algunos casos, una póliza de Medigap. La Cobertura Original de Medicare no cubre la mayoría de los medicamentos recetados por sí sola, así que un plan de medicamentos es importante.</li>
+      <li><strong>No hacer nada.</strong> Si no se une a otro plan Medicare Advantage antes de que termine el suyo, quedará inscrito en la Cobertura Original de Medicare. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> No tendría cobertura de medicamentos hasta que se una a un plan de la Parte D de Medicare, y no tendría Medigap a menos que compre una póliza.</li>
+    </ol>
+    <p>MediPrimer no le dice cuál opción es la mejor. Vea <a href="/es/choosing-coverage.html">Cómo elegir su cobertura</a> para una comparación neutral.</p>
+
+    <h2>El período especial de inscripción</h2>
+    <p>Medicare le llama a esto un Período Especial de Inscripción. Se aplica cuando Medicare termina el contrato de su plan. Usted puede cambiar a otro plan Medicare Advantage o a un plan de medicamentos de Medicare. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Su oportunidad de cambiar empieza 1 mes antes de que termine el contrato y acaba 2 meses completos después. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Fecha</th><th>Qué sucede</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Del 15 de octubre al 7 de diciembre</td><td>Inscripción Abierta regular. Usted puede cambiar de plan como de costumbre. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></td></tr>
+          <tr><td>31 de diciembre de 2026</td><td>Su plan termina, si esa es la fecha de cierre que dice su carta.</td></tr>
+          <tr><td>Hasta 2 meses completos después de que termine el plan</td><td>El período especial se cierra. Para una fecha de cierre del 31 de diciembre, eso es a fines de febrero de 2027. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Su carta indica la fecha exacta en que termina su plan. Cuente a partir de esa fecha, no de esta página.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Derechos de Medigap cuando su plan termina</h2>
+    <p>Medigap es un seguro adicional que venden compañías privadas. Ayuda a pagar costos que la Cobertura Original de Medicare no cubre. Solo se puede usar con la Cobertura Original de Medicare. <a href="/es/medigap.html">Nuestra guía de Medigap</a> explica los planes identificados con letras.</p>
+    <p>Normalmente, fuera de sus primeros seis meses con la Parte B de Medicare, una compañía de Medigap puede revisar su salud y negarse a venderle una póliza. Cuando su plan Medicare Advantage deja Medicare, usted tiene en cambio un derecho de Garantía de Emisión. Eso significa que la compañía tiene que venderle una póliza. Esto es lo que dice Medicare sobre los plazos y los límites:</p>
+    <ul>
+      <li><strong>El plazo.</strong> Debe solicitarla desde 60 días antes de que termine la cobertura de su plan hasta no más de 63 días después de que termine. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Debe cambiar a la Cobertura Original de Medicare.</strong> Usted solo tiene este derecho si cambia a la Cobertura Original de Medicare, no si se une a otro plan Medicare Advantage. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>La fecha de inicio.</strong> La cobertura de Medigap no puede empezar hasta que termine la cobertura de su plan Medicare Advantage. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Cuáles planes.</strong> En algunas de estas situaciones, Medicare indica el derecho a comprar el plan Medigap A, B, C, D, F, G, K o L que se venda en su estado. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Pregunte a Medicare o a su SHIP cuáles planes le corresponden.</li>
+      <li><strong>Reglas estatales.</strong> Estos son derechos federales. Su estado puede ofrecer más. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+    </ul>
+    <p>Guarde las cartas y los avisos de su plan. Es posible que necesite mostrar que su cobertura terminó. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Como el período es de solo 63 días después de que termine su plan, decida pronto si quiere Medigap. Para ver todos los pasos, consulte <a href="/es/medicare-advantage-to-original-medicare.html">cómo cambiar de Medicare Advantage a la Cobertura Original de Medicare</a>.</p>
+
+    <h2>Una lista corta de acciones</h2>
+    <ol class="steps">
+      <li><strong>Busque la fecha de cierre</strong> en su carta y anótela.</li>
+      <li><strong>Haga una lista de sus medicamentos, médicos y farmacias.</strong> La necesitará para comparar planes.</li>
+      <li><strong>Compare planes</strong> para 2027 en el <a href="/es/using-plan-finder.html">Buscador de Planes de Medicare</a>.</li>
+      <li><strong>Decida pronto sobre Medigap</strong> si podría volver a la Cobertura Original de Medicare. Cuente los 63 días.</li>
+      <li><strong>Llame a su Programa Estatal de Asistencia sobre Seguros de Salud.</strong> Ofrece ayuda gratuita e imparcial y no tiene vínculo con ninguna aseguradora. Encuentre el suyo en el <a href="/es/ship-directory.html">directorio de SHIP</a>. También puede llamar al 1-800-MEDICARE (1-800-633-4227). <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></li>
+    </ol>
+    <p>Vea <a href="/es/medicare-open-enrollment-2027.html">Inscripción Abierta de Medicare 2027</a> para conocer las fechas y la lista de revisión de este año.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Perderé Medicare si mi plan termina?</summary>
+      <div>
+        <p>No. Su Parte A de Medicare y su Parte B de Medicare se mantienen. Si no se une a otro plan Medicare Advantage antes de que termine el suyo, quedará inscrito en la Cobertura Original de Medicare. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Cuánto tiempo tengo para elegir un plan nuevo?</summary>
+      <div>
+        <p>El período especial empieza 1 mes antes de que termine el contrato de su plan y acaba 2 meses completos después. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> La Inscripción Abierta, del 15 de octubre al 7 de diciembre, también se aplica.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puedo obtener una póliza de Medigap si tengo problemas de salud?</summary>
+      <div>
+        <p>Si su plan deja Medicare y usted cambia a la Cobertura Original de Medicare, tiene derecho a comprar una póliza de Medigap dentro del período que va desde 60 días antes hasta 63 días después. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Fuera de ese período, una compañía podría rechazarlo según su estado de salud.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Necesito cancelar mi plan anterior?</summary>
+      <div>
+        <p>No. Su plan anterior termina por sí solo en su fecha de cierre. Cuando se une a un nuevo plan Medicare Advantage, lo pasan fuera del anterior. Fíjese en la fecha de inicio del plan nuevo para no quedarse sin cobertura.</p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: Períodos Especiales de Inscripción</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: ¿Cuándo puedo comprar una póliza de Medigap?</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options" rel="noopener">Medicare.gov: Sus opciones de planes de salud</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer ofrece información educativa general y no está afiliado con ninguna agencia ni aseguradora. Las reglas de Medigap varían según el estado. Confirme sus fechas y sus derechos con Medicare, con la carta de su plan o con su SHIP.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicare-advantage-plan-ending.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
