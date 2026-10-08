@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare and Alzheimer's: Memory Tests, Leqembi and Costs</title>
+<meta name="description" content="What Medicare covers for dementia: memory checks, the care-planning visit, and Alzheimer&#x27;s drugs like Leqembi. Plus the 20% cost and the registry rule.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare and Alzheimer's: Memory Tests, Leqembi and Costs">
+<meta property="og:description" content="What Medicare covers for dementia: memory checks, the care-planning visit, and Alzheimer&#x27;s drugs like Leqembi. Plus the 20% cost and the registry rule.">
+<meta property="og:url" content="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare and Alzheimer's: Memory Tests, Leqembi and Costs">
+<meta name="twitter:description" content="What Medicare covers for dementia: memory checks, the care-planning visit, and Alzheimer&#x27;s drugs like Leqembi. Plus the 20% cost and the registry rule.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Medicare cover Leqembi?", "acceptedAnswer": {"@type": "Answer", "text": "Part B may cover it if you meet the rules above and your provider collects evidence for a qualifying study or registry. After the deductible you pay 20%."}}, {"@type": "Question", "name": "Does Medicare cover a memory test?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. A cognitive assessment can happen at your Wellness visit, and Part B covers a separate visit for a full review."}}, {"@type": "Question", "name": "Can a caregiver come to the visit?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Medicare says you can bring a spouse, friend or caregiver to help listen and answer questions."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare and Alzheimer's: Memory Tests, Leqembi and Costs", "description": "What Medicare covers for dementia: memory checks, the care-planning visit, and Alzheimer's drugs like Leqembi. Plus the 20% cost and the registry rule.", "url": "https://mediprimer.org/medicare-alzheimers-dementia-coverage.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-08", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare and Alzheimer's: Memory Tests, Leqembi and Costs", "item": "https://mediprimer.org/medicare-alzheimers-dementia-coverage.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Alzheimer's and Dementia Under Medicare: Memory Checks, Diagnosis, and Drugs Like Leqembi</h1>
+    <p>Medicare covers memory checks, a full care-planning visit, and some Alzheimer's drugs. Each has its own rules and costs. Here is what to expect.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> Medicare Part B covers a cognitive assessment (a memory and thinking check) at your yearly Wellness visit. It also covers a separate longer visit to confirm a diagnosis like Alzheimer's disease and make a care plan. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Part B may also cover FDA-approved Alzheimer's drugs such as Leqembi (lecanemab) and Kisunla (donanemab), but only if your provider collects evidence for a qualifying study or registry. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> For both, after the Part B deductible you pay 20% of the Medicare-approved amount. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+
+    <h2>Step 1: A memory check at your Wellness visit</h2>
+    <p>Your provider can look for signs of dementia during your yearly "Wellness" visit and at other visits. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Signs of trouble include trouble remembering, learning new things, concentrating, managing money, and making decisions. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Depression, anxiety and delirium can also cause confusion, so it matters to find the cause. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> To learn more about this visit, see <a href="/medicare-wellness-visit-vs-physical.html">Wellness Visit vs. Physical</a>.</p>
+
+    <h2>Step 2: The separate cognitive assessment and care plan visit</h2>
+    <p>Part B covers a separate visit to fully review your thinking and memory, establish or confirm a diagnosis, and build a care plan. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> At this visit, your provider may:</p>
+    <ul>
+      <li>Do an exam, ask about your history, and review your medicines.</li>
+      <li>Identify your supports, including care your usual caregiver can give.</li>
+      <li>Make a care plan for your symptoms.</li>
+      <li>Help you set up or update an advance care plan.</li>
+      <li>Refer you to a specialist and point you to community help, such as adult day health programs and support groups.</li>
+    </ul>
+    <p>All of the above come from Medicare.gov. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> You can bring a spouse, friend or caregiver. The Part B deductible and 20% coinsurance apply. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Step 3: Alzheimer's drugs like Leqembi and Kisunla</h2>
+    <p>These drugs are called monoclonal antibodies. They target beta-amyloid plaques in the brain. They may slow or delay symptoms, but they don't cure or reverse the disease. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+    <h3>Who is eligible</h3>
+    <p>Your provider must confirm that you have beta-amyloid plaques consistent with Alzheimer's disease. They must also diagnose you with mild cognitive impairment due to Alzheimer's, or mild dementia due to Alzheimer's. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+    <h3>The registry rule</h3>
+    <p>Medicare coverage requires your provider to collect evidence on how well the drug works for a qualifying study or registry. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Ask your provider's office whether they take part before you plan treatment.</p>
+    <h3>What you pay</h3>
+    <p>After the Part B deductible, you pay 20% of the Medicare-approved amount. You may also need scans and tests before or during treatment, which can add to your costs. The drug is given by IV in a provider's office or other outpatient setting. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Medigap or other coverage may pay some of the 20%. See <a href="/medigap.html">Medigap Plans</a>.</p>
+    <h3>If you don't meet the Part B rules</h3>
+    <p>Your Medicare drug plan (Part D) might cover it. Contact your plan. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+
+    <h2>Extra support for families</h2>
+    <p>Some people living with dementia, and their unpaid caregivers, may get added support through the Guiding an Improved Dementia Experience (GUIDE) Model without paying coinsurance. Ask your provider whether they take part. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> For caregivers, see <a href="/caregivers.html">Caregivers</a>.</p>
+
+    <h2>What Medicare doesn't solve</h2>
+    <p>Long-term care for dementia is a different question. See <a href="/medicare-long-term-care.html">Medicare and Long-Term Care</a>. Cancer care has its own page too: <a href="/medicare-cancer-treatment.html">Medicare and Cancer Treatment</a>.</p>
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Does Medicare cover Leqembi?</summary>
+      <div>
+        <p>Part B may cover it if you meet the rules above and your provider collects evidence for a qualifying study or registry. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> After the deductible you pay 20%.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does Medicare cover a memory test?</summary>
+      <div>
+        <p>Yes. A cognitive assessment can happen at your Wellness visit, and Part B covers a separate visit for a full review. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can a caregiver come to the visit?</summary>
+      <div>
+        <p>Yes. Medicare says you can bring a spouse, friend or caregiver to help listen and answer questions. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --></p>
+      </div>
+    </details>
+
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services" rel="noopener">Medicare.gov: Cognitive assessment &amp; care plan services</a></li>
+      <li><a href="https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease" rel="noopener">Medicare.gov: Monoclonal antibodies for early Alzheimer's</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare.gov: Medicare &amp; You handbook</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information, not medical advice, and is not affiliated with any agency. Whether a drug is right for you is a decision for you and your doctor.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
