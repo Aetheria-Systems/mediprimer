@@ -167,6 +167,9 @@ ACTIVE = {
     # Content-gap pages (2026-10-06)
     "medicare-advantage-plan-ending.html": "members", "medicare-hold-harmless.html": "members",
     "turning-65-marketplace-plan.html": "members", "marketplace-open-enrollment-2027.html": "members",
+    # Content-gap pages (2026-10-08)
+    "medicare-drug-price-negotiation-2027.html": "members", "medicare-advantage-open-enrollment-period.html": "members",
+    "medicare-alzheimers-dementia-coverage.html": "members", "state-health-coverage-older-immigrants.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",

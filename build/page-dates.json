@@ -28,8 +28,8 @@
   "hash": "baaf4c80cfe68c51e99f9d7f7dc9e862"
  },
  "caregivers.html": {
-  "date": "2026-09-22",
-  "hash": "b3e2ba3fe10521ee3023970557383516"
+  "date": "2026-10-08",
+  "hash": "321476f95604e0cbfa22a07b8598c19f"
  },
  "checklists.html": {
   "date": "2026-09-18",
@@ -100,8 +100,8 @@
   "hash": "079e96f5185780e6d46ffb1d47711e9c"
  },
  "enrollment-calendar.html": {
-  "date": "2026-09-22",
-  "hash": "c71d5089fe4bc91bebdb2054b7de57dd"
+  "date": "2026-10-08",
+  "hash": "8c6ee82c85811990ba2bf2935e866f7d"
  },
  "enrollment.html": {
   "date": "2026-10-01",
@@ -128,8 +128,8 @@
   "hash": "9ee44773cff665b0d802a09db84aea73"
  },
  "how-do-i.html": {
-  "date": "2026-10-06",
-  "hash": "767c0064b0cbc53d3d34e435cc628e82"
+  "date": "2026-10-08",
+  "hash": "5943c503eee87a778457a0c19a5f0c92"
  },
  "hsa-and-medicare.html": {
   "date": "2026-09-18",
@@ -219,6 +219,10 @@
   "date": "2026-09-18",
   "hash": "6a17859d77cd118ac29ef2044c6bf70d"
  },
+ "medicare-advantage-open-enrollment-period.html": {
+  "date": "2026-10-08",
+  "hash": "2585062323e11e77e60e5d590a1fbc10"
+ },
  "medicare-advantage-plan-ending.html": {
   "date": "2026-10-06",
   "hash": "1dca3b7690db9e0a6a104ddce5fb09e8"
@@ -234,6 +238,10 @@
  "medicare-advantage.html": {
   "date": "2026-10-06",
   "hash": "5c8f40d5695c6a46818a61cfc578bbcd"
+ },
+ "medicare-alzheimers-dementia-coverage.html": {
+  "date": "2026-10-08",
+  "hash": "3c9b9598556734704f95828a0a6baf61"
  },
  "medicare-ambulance-emergency-room.html": {
   "date": "2026-09-18",
@@ -287,6 +295,10 @@
   "date": "2026-09-18",
   "hash": "1530ec1f9950399411c46e347d8711cd"
  },
+ "medicare-drug-price-negotiation-2027.html": {
+  "date": "2026-10-08",
+  "hash": "f745c888dd2107fc2c85437575d58f19"
+ },
  "medicare-enrollment-calculator.html": {
   "date": "2026-09-18",
   "hash": "caa500f74c555b70f1fb8ac27f081c0d"
@@ -312,8 +324,8 @@
   "hash": "1798da343e011a3cac6239908ca999ad"
  },
  "medicare-immigrants.html": {
-  "date": "2026-09-18",
-  "hash": "66cb5c509f368f9190b3be6139c40c94"
+  "date": "2026-10-08",
+  "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a"
  },
  "medicare-late-enrollment-penalties.html": {
   "date": "2026-10-01",
@@ -352,8 +364,8 @@
   "hash": "bf3f20e4d6d0fc6996b92353f8474210"
  },
  "medicare-part-d.html": {
-  "date": "2026-09-22",
-  "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8"
+  "date": "2026-10-08",
+  "hash": "37fd2cbce69d80c825e7b4511b0f07cc"
  },
  "medicare-physical-therapy.html": {
   "date": "2026-10-07",
@@ -530,6 +542,10 @@
  "star-ratings.html": {
   "date": "2026-09-30",
   "hash": "5fda928e061bb62f8f24f08be30fed14"
+ },
+ "state-health-coverage-older-immigrants.html": {
+  "date": "2026-10-08",
+  "hash": "e8d2f31b8096597c5177e9caf1554638"
  },
  "state-medicaid.html": {
   "date": "2026-09-18",

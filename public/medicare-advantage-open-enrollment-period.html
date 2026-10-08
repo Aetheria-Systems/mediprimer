@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare Advantage Open Enrollment (Jan 1–Mar 31) Explained</title>
+<meta name="description" content="Who can use the Medicare Advantage Open Enrollment Period, the one-change rule, what you can and can&#x27;t do, and how it differs from fall open enrollment.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Advantage Open Enrollment (Jan 1–Mar 31) Explained">
+<meta property="og:description" content="Who can use the Medicare Advantage Open Enrollment Period, the one-change rule, what you can and can&#x27;t do, and how it differs from fall open enrollment.">
+<meta property="og:url" content="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare Advantage Open Enrollment (Jan 1–Mar 31) Explained">
+<meta name="twitter:description" content="Who can use the Medicare Advantage Open Enrollment Period, the one-change rule, what you can and can&#x27;t do, and how it differs from fall open enrollment.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is the Medicare Advantage Open Enrollment Period the same as Annual Enrollment?", "acceptedAnswer": {"@type": "Answer", "text": "No. Fall open enrollment runs October 15 to December 7 and is open to everyone with Medicare. The January to March period is only for people already in a Medicare Advantage plan."}}, {"@type": "Question", "name": "Can I change more than once?", "acceptedAnswer": {"@type": "Answer", "text": "No. You can only make one change during this period."}}, {"@type": "Question", "name": "I have Original Medicare. Can I join a Medicare Advantage plan in January?", "acceptedAnswer": {"@type": "Answer", "text": "Not through this period. It does not let you switch from Original Medicare to a Medicare Advantage plan. You may qualify for a Special Enrollment Period in some situations. See Enrollment & Deadlines ."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Advantage Open Enrollment (Jan 1–Mar 31) Explained", "description": "Who can use the Medicare Advantage Open Enrollment Period, the one-change rule, what you can and can't do, and how it differs from fall open enrollment.", "url": "https://mediprimer.org/medicare-advantage-open-enrollment-period.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-08", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Advantage Open Enrollment (Jan 1–Mar 31) Explained", "item": "https://mediprimer.org/medicare-advantage-open-enrollment-period.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>The Medicare Advantage Open Enrollment Period (January 1–March 31): One Change, and Who Can Use It</h1>
+    <p>If you are in a Medicare Advantage plan, you get one chance each winter to switch plans or go back to Original Medicare. It is not the same as fall open enrollment.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> The Medicare Advantage Open Enrollment Period runs from January 1 to March 31 each year. It is only for people already in a Medicare Advantage plan. You can make one change: switch to a different Medicare Advantage plan, or drop your plan and return to Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> If you return to Original Medicare, you can also join a separate Medicare drug plan. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Any change starts the first day of the month after the plan gets your request. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <h2>Who can use it</h2>
+    <p>You can use this period only if you are already in a Medicare Advantage plan, with or without drug coverage. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> If you have Original Medicare, this period is not for you.</p>
+
+    <h2>What you can do</h2>
+    <ul>
+      <li><strong>Switch to another Medicare Advantage plan.</strong> The new plan can have drug coverage or not. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Drop your plan and go back to Original Medicare.</strong> You can then join a separate Medicare drug plan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> See <a href="/medicare-advantage-to-original-medicare.html">Switching From Medicare Advantage to Original Medicare</a>, including what to know about Medigap.</li>
+    </ul>
+
+    <h2>What you can't do</h2>
+    <ul>
+      <li>You can't switch from Original Medicare to a Medicare Advantage plan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>You can't join a separate drug plan if you have Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>You can't switch from one drug plan to another if you have Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>You can't make more than one change. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Because you only get one change, check the new plan before you use it. Look at its doctors, drugs and costs first. See <a href="/switching-medicare-advantage-plans.html">Switching Medicare Advantage Plans</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>How it differs from fall open enrollment</h2>
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">Fall Open Enrollment</th><th scope="col">MA Open Enrollment</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Dates</th><td>October 15 – December 7</td><td>January 1 – March 31</td></tr>
+        <tr><th scope="row">Who</th><td>Anyone with Medicare</td><td>Only people already in a Medicare Advantage plan</td></tr>
+        <tr><th scope="row">What</th><td>Join, drop or switch a plan</td><td>One change: switch MA plans, or return to Original Medicare</td></tr>
+        <tr><th scope="row">Coverage starts</th><td>January 1</td><td>First of the month after the plan gets your request</td></tr>
+      </tbody>
+    </table>
+    <p>The fall dates and the coverage start come from Medicare.gov. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> For the full fall picture, see <a href="/medicare-open-enrollment-2027.html">Medicare Open Enrollment 2027</a> and the <a href="/enrollment-calendar.html">Enrollment Calendar</a>.</p>
+
+    <h2>If you joined a plan this fall and changed your mind</h2>
+    <p>Medicare says that if you join a Medicare Advantage plan during fall open enrollment and change your mind, you can switch back to Original Medicare or change to a different Medicare Advantage plan from January 1 to March 31. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> That is your one change.</p>
+
+    <h2>How to make the change</h2>
+    <ol class="steps">
+      <li><strong>Pick the plan first.</strong> Use <a href="/using-plan-finder.html">the Medicare Plan Finder</a> and check doctors and drugs.</li>
+      <li><strong>Join the new plan.</strong> If you are switching to a new Medicare Advantage plan, enrolling in it ends your old plan.</li>
+      <li><strong>If returning to Original Medicare,</strong> join a separate drug plan too. Medicare says you don't need to contact your Medicare Advantage plan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Call for help.</strong> 1-800-MEDICARE (1-800-633-4227), or your free <a href="/ship-directory.html">SHIP counselor</a>.</li>
+    </ol>
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Is the Medicare Advantage Open Enrollment Period the same as Annual Enrollment?</summary>
+      <div>
+        <p>No. Fall open enrollment runs October 15 to December 7 and is open to everyone with Medicare. The January to March period is only for people already in a Medicare Advantage plan. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I change more than once?</summary>
+      <div>
+        <p>No. You can only make one change during this period. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>I have Original Medicare. Can I join a Medicare Advantage plan in January?</summary>
+      <div>
+        <p>Not through this period. It does not let you switch from Original Medicare to a Medicare Advantage plan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> You may qualify for a Special Enrollment Period in some situations. See <a href="/enrollment.html">Enrollment &amp; Deadlines</a>.</p>
+      </div>
+    </details>
+
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare.gov: Medicare &amp; You handbook</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan" rel="noopener">Medicare.gov: Joining a plan</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency. It does not recommend any plan. Confirm dates and your own options with Medicare or your SHIP.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
