@@ -42,4 +42,4 @@ req = urllib.request.Request(
 with urllib.request.urlopen(req, timeout=30) as resp:
     if not 200 <= resp.status < 300:
         sys.exit("indexnow: HTTP %d from api.indexnow.org" % resp.status)
-    print("indexnow: submitted %d urls (HTTP %d)" % (len(urls), resp.status))
+    print("indexnow: notification accepted for %d urls (HTTP %d) — Bing, Yandex and partners only; Google does not use IndexNow, and acceptance is not indexing" % (len(urls), resp.status))
