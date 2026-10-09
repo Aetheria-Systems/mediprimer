@@ -166,6 +166,7 @@ ACTIVE = {
     "mixed-status-family-marketplace.html": "members", "pace-program-nursing-home-alternative.html": "members",
     # Content-gap pages (2026-10-06)
     "medicare-advantage-plan-ending.html": "members", "medicare-hold-harmless.html": "members",
+    "insurers-dropping-plans-2027.html": "members",
     "turning-65-marketplace-plan.html": "members", "marketplace-open-enrollment-2027.html": "members",
     # Content-gap pages (2026-10-08)
     "medicare-drug-price-negotiation-2027.html": "members", "medicare-advantage-open-enrollment-period.html": "members",

@@ -18,6 +18,17 @@ MEMBER = {
  "enrollment-calendar","checklists","member-journey","coverage-basics","plan-types",
  "medicaid-starting-out","using-plan-finder","common-mistakes","planning-for-two",
 }
+# Every page registered for members in build/normalize.py is held to the target
+# too. Until 2026-10-09 only the fixed list above was checked, so 78 newer
+# member pages — most of them written by the automated page builder — were
+# never measured; six of them read above grade 9.5 when first measured.
+import ast as _ast
+_norm = open(os.path.join(os.path.dirname(__file__), "normalize.py"), encoding="utf-8").read()
+_m = re.search(r"ACTIVE = \{[\s\S]*?\n\}", _norm)
+if not _m:
+    sys.exit("readability: cannot find ACTIVE map in normalize.py")
+MEMBER |= {k[:-5] for k, v in _ast.literal_eval(re.sub(r"#.*", "", _m.group(0).split("=", 1)[1])).items()
+           if v == "members" and k.endswith(".html")}
 
 def text_of_main(html):
     m = re.search(r'<main.*?>(.*?)</main>', html, re.DOTALL)
