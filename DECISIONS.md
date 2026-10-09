@@ -2,6 +2,19 @@
 
 Strategic decisions and pivots, with the reasoning. Newest first.
 
+## 2026-10-09 — GitHub is the source of truth; the live site is a commit
+
+Until today the pipelines published their working tree with rsync and then
+committed "for parity", and the engine code was not under version control on
+GitHub at all. Kurt: "I want a professional development environment and that
+includes pushes to GitHub and deploy from there." Decision: nothing publishes
+except the Deploy workflow on `main`; every gate runs again on a clean checkout
+before anything is copied to the web root; the deployed commit is verifiable
+from the live site; the engine lives in a private repository with nightly
+pushes. Cost: a deploy now takes a minute instead of seconds and depends on
+the runner being up — the pipelines detect both and fail loudly rather than
+publishing around it.
+
 ## 2026-10-09 — Wholly automated: risk is answered with gates, never with a human step
 
 An outside review recommended pausing unattended publication, a named human

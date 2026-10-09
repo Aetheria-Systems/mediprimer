@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-09 — Deploy from GitHub
+
+Every merge to `main` is now built, gated and published by
+`.github/workflows/deploy.yml` on the self-hosted runner; the live site is
+always exactly a commit on `main`, stamped at `/deploy-stamp.txt`. The
+content pipelines no longer rsync their working tree and commit afterwards;
+they commit, merge and wait for the Deploy run. `build/validate.py`,
+`build/verify_new_figures.py`, `build/verify_news_claims.py` and
+`build/lang-title-overrides.json` moved into the public build folder so a
+clean checkout runs every gate and produces the same pages.
+
 ## 2026-10-06 / 09 — Accuracy gates, 2027 plan-exit coverage, corrections
 
 **New pages.** *Medicare Advantage Plans Going Away in 2027: Who and Why* — a
