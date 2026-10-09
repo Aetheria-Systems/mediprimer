@@ -148,7 +148,7 @@
   <url><loc>https://mediprimer.org/es/appeals-timelines.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/basics.html</loc><lastmod>2026-10-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/es/brokers.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/es/caregivers.html</loc><lastmod>2026-09-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/es/caregivers.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/es/checklists.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/chip.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/choosing-coverage.html</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
@@ -166,14 +166,14 @@
   <url><loc>https://mediprimer.org/es/edge-cases.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/editorial-standards.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/emergency-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/es/enrollment-calendar.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/enrollment-calendar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/enrollment.html</loc><lastmod>2026-10-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/es/extra-help-low-income-subsidy.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/getting-help.html</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/es/glossary.html</loc><lastmod>2026-09-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/es/health-insurance-terms-chinese-english.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/hospital-observation-status.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/es/how-do-i.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/es/how-do-i.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/es/hsa-and-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/</loc><lastmod>2026-10-02</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/es/insurance-departments.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
@@ -196,10 +196,12 @@
   <url><loc>https://mediprimer.org/es/medicaid-starting-out.html</loc><lastmod>2026-10-07</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/es/medicaid-work-requirements.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medical-interpreter-rights.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/medicare-advantage-open-enrollment-period.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-advantage-plan-ending.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-advantage-prior-authorization.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-advantage-to-original-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-advantage.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/medicare-alzheimers-dementia-coverage.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-ambulance-emergency-room.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-annual-notice-of-change.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-cancer-treatment.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
@@ -210,13 +212,14 @@
   <url><loc>https://mediprimer.org/es/medicare-costs-card.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-dental-vision-hearing.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-diabetes-coverage.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-enrollment-calculator.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-esrd-kidney-failure.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-five-star-special-enrollment-period.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-flex-card.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-hold-harmless.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-hospice-home-health.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/es/medicare-immigrants.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/medicare-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-long-term-care.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-medicaid-chinese.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -226,7 +229,7 @@
   <url><loc>https://mediprimer.org/es/medicare-part-a.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-part-b-giveback.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-part-b.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/es/medicare-part-d.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/medicare-part-d.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-physical-therapy.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-plan-comparison-2027.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/medicare-prescription-payment-plan.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -269,6 +272,7 @@
   <url><loc>https://mediprimer.org/es/ship-directory.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/site-map.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/es/star-ratings.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/state-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/support.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/switching-medicare-advantage-plans.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -286,7 +290,7 @@
   <url><loc>https://mediprimer.org/ko/appeals-timelines.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/basics.html</loc><lastmod>2026-10-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/ko/brokers.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/caregivers.html</loc><lastmod>2026-09-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/ko/caregivers.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/ko/checklists.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/chip.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/choosing-coverage.html</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
@@ -304,14 +308,14 @@
   <url><loc>https://mediprimer.org/ko/edge-cases.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/editorial-standards.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/emergency-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/enrollment-calendar.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/enrollment-calendar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/enrollment.html</loc><lastmod>2026-10-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/ko/extra-help-low-income-subsidy.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/getting-help.html</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/ko/glossary.html</loc><lastmod>2026-09-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/ko/health-insurance-terms-chinese-english.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/hospital-observation-status.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/how-do-i.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/ko/how-do-i.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/ko/hsa-and-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/</loc><lastmod>2026-10-02</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/ko/insurance-departments.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
@@ -334,10 +338,12 @@
   <url><loc>https://mediprimer.org/ko/medicaid-starting-out.html</loc><lastmod>2026-10-07</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/ko/medicaid-work-requirements.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medical-interpreter-rights.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-advantage-open-enrollment-period.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-advantage-plan-ending.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-advantage-prior-authorization.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-advantage-to-original-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-advantage.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-alzheimers-dementia-coverage.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-ambulance-emergency-room.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-annual-notice-of-change.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-cancer-treatment.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -348,13 +354,14 @@
   <url><loc>https://mediprimer.org/ko/medicare-costs-card.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-dental-vision-hearing.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-diabetes-coverage.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-drug-price-negotiation-2027.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-enrollment-calculator.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-esrd-kidney-failure.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-five-star-special-enrollment-period.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-flex-card.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-hold-harmless.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-hospice-home-health.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/medicare-immigrants.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-long-term-care.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-medicaid-chinese.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -364,7 +371,7 @@
   <url><loc>https://mediprimer.org/ko/medicare-part-a.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-part-b-giveback.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-part-b.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/medicare-part-d.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-part-d.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-physical-therapy.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-plan-comparison-2027.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-prescription-payment-plan.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -378,7 +385,7 @@
   <url><loc>https://mediprimer.org/ko/medicare-telehealth.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-travel.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-vaccines.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/ko/medicare-vs-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/medicare-vs-medicaid.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-weight-loss-drugs.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medicare-wellness-visit-vs-physical.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/medigap-plan-g-vs-plan-n.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -407,6 +414,7 @@
   <url><loc>https://mediprimer.org/ko/ship-directory.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/site-map.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/ko/star-ratings.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/ko/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/state-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/support.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/ko/switching-medicare-advantage-plans.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -424,7 +432,7 @@
   <url><loc>https://mediprimer.org/tl/appeals-timelines.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/basics.html</loc><lastmod>2026-10-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/tl/brokers.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/caregivers.html</loc><lastmod>2026-09-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/tl/caregivers.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/tl/checklists.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/chip.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/choosing-coverage.html</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
@@ -441,14 +449,14 @@
   <url><loc>https://mediprimer.org/tl/edge-cases.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/editorial-standards.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/emergency-medicaid.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/enrollment-calendar.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/enrollment-calendar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/enrollment.html</loc><lastmod>2026-10-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/tl/extra-help-low-income-subsidy.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/getting-help.html</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/tl/glossary.html</loc><lastmod>2026-09-19</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/tl/health-insurance-terms-chinese-english.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/hospital-observation-status.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/how-do-i.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/tl/how-do-i.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/tl/hsa-and-medicare.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/</loc><lastmod>2026-09-27</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/tl/insurance-departments.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
@@ -471,10 +479,12 @@
   <url><loc>https://mediprimer.org/tl/medicaid-starting-out.html</loc><lastmod>2026-10-07</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/tl/medicaid-work-requirements.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medical-interpreter-rights.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-advantage-open-enrollment-period.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-advantage-plan-ending.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-advantage-prior-authorization.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-advantage-to-original-medicare.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-advantage.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-alzheimers-dementia-coverage.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-ambulance-emergency-room.html</loc><lastmod>2026-09-19</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-annual-notice-of-change.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-cancer-treatment.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
@@ -485,13 +495,14 @@
   <url><loc>https://mediprimer.org/tl/medicare-costs-card.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-dental-vision-hearing.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-diabetes-coverage.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-drug-price-negotiation-2027.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-enrollment-calculator.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-esrd-kidney-failure.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-five-star-special-enrollment-period.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-flex-card.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-hold-harmless.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-hospice-home-health.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/medicare-immigrants.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-long-term-care.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-medicaid-chinese.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
@@ -501,12 +512,12 @@
   <url><loc>https://mediprimer.org/tl/medicare-part-a.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-part-b-giveback.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-part-b.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/medicare-part-d.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-part-d.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-physical-therapy.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-plan-comparison-2027.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-prescription-payment-plan.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-preventive-screening-costs.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/tl/medicare-savings-programs.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/medicare-savings-programs.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-scams.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-special-needs-plans.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/medicare-spouse-work-record.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
@@ -543,6 +554,7 @@
   <url><loc>https://mediprimer.org/tl/ship-directory.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/site-map.html</loc><lastmod>2026-09-20</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/tl/star-ratings.html</loc><lastmod>2026-10-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/state-medicaid.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/support.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/switching-medicare-advantage-plans.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
@@ -559,7 +571,7 @@
   <url><loc>https://mediprimer.org/vi/appeals-timelines.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/basics.html</loc><lastmod>2026-10-08</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/vi/brokers.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/caregivers.html</loc><lastmod>2026-09-23</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/vi/caregivers.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/vi/checklists.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/chip.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/choosing-coverage.html</loc><lastmod>2026-09-23</lastmod><priority>0.9</priority></url>
@@ -577,14 +589,14 @@
   <url><loc>https://mediprimer.org/vi/edge-cases.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/editorial-standards.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/emergency-medicaid.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/enrollment-calendar.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/enrollment-calendar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/enrollment.html</loc><lastmod>2026-10-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/vi/extra-help-low-income-subsidy.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/getting-help.html</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/vi/glossary.html</loc><lastmod>2026-09-18</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/vi/health-insurance-terms-chinese-english.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/hospital-observation-status.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/how-do-i.html</loc><lastmod>2026-10-07</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/vi/how-do-i.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/vi/hsa-and-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/</loc><lastmod>2026-10-02</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/vi/insurance-departments.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
@@ -607,10 +619,12 @@
   <url><loc>https://mediprimer.org/vi/medicaid-starting-out.html</loc><lastmod>2026-10-07</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/vi/medicaid-work-requirements.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medical-interpreter-rights.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-advantage-plan-ending.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-advantage-prior-authorization.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-advantage-to-original-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-advantage.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-ambulance-emergency-room.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-annual-notice-of-change.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-cancer-treatment.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
@@ -621,13 +635,14 @@
   <url><loc>https://mediprimer.org/vi/medicare-costs-card.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-dental-vision-hearing.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-diabetes-coverage.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-drug-price-negotiation-2027.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-enrollment-calculator.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-esrd-kidney-failure.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-five-star-special-enrollment-period.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-flex-card.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-hold-harmless.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-hospice-home-health.html</loc><lastmod>2026-09-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/medicare-immigrants.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-long-term-care.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-medicaid-chinese.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -637,7 +652,7 @@
   <url><loc>https://mediprimer.org/vi/medicare-part-a.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-part-b-giveback.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-part-b.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/medicare-part-d.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-part-d.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-physical-therapy.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-plan-comparison-2027.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-prescription-payment-plan.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
@@ -680,6 +695,7 @@
   <url><loc>https://mediprimer.org/vi/ship-directory.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/site-map.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/vi/star-ratings.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/state-medicaid.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/support.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/switching-medicare-advantage-plans.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -715,14 +731,14 @@
   <url><loc>https://mediprimer.org/zh-Hant/edge-cases.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/editorial-standards.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/emergency-medicaid.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/enrollment-calendar.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/enrollment-calendar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/enrollment.html</loc><lastmod>2026-10-02</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/extra-help-low-income-subsidy.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/getting-help.html</loc><lastmod>2026-10-08</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/glossary.html</loc><lastmod>2026-09-16</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/health-insurance-terms-chinese-english.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/hospital-observation-status.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/how-do-i.html</loc><lastmod>2026-10-08</lastmod><priority>0.8</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/how-do-i.html</loc><lastmod>2026-10-09</lastmod><priority>0.8</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/hsa-and-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/</loc><lastmod>2026-10-02</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/insurance-departments.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
@@ -745,9 +761,12 @@
   <url><loc>https://mediprimer.org/zh-Hant/medicaid-starting-out.html</loc><lastmod>2026-10-07</lastmod><priority>0.9</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicaid-work-requirements.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medical-interpreter-rights.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-advantage-open-enrollment-period.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-advantage-prior-authorization.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-advantage-to-original-medicare.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-advantage.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-alzheimers-dementia-coverage.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-ambulance-emergency-room.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-annual-notice-of-change.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-cancer-treatment.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
@@ -758,13 +777,14 @@
   <url><loc>https://mediprimer.org/zh-Hant/medicare-costs-card.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-dental-vision-hearing.html</loc><lastmod>2026-09-24</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-diabetes-coverage.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-enrollment-calculator.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-esrd-kidney-failure.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-five-star-special-enrollment-period.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-flex-card.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-hold-harmless.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-hospice-home-health.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/medicare-immigrants.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-02</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-long-term-care.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-medicaid-chinese.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
@@ -774,7 +794,7 @@
   <url><loc>https://mediprimer.org/zh-Hant/medicare-part-a.html</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-part-b-giveback.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-part-b.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/medicare-part-d.html</loc><lastmod>2026-09-23</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-part-d.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-physical-therapy.html</loc><lastmod>2026-10-08</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-plan-comparison-2027.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-prescription-payment-plan.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -817,6 +837,7 @@
   <url><loc>https://mediprimer.org/zh-Hant/ship-directory.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/site-map.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/star-ratings.html</loc><lastmod>2026-09-25</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/state-medicaid.html</loc><lastmod>2026-09-16</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/support.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/switching-medicare-advantage-plans.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>

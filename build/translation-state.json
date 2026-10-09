@@ -9,8 +9,8 @@
       "date": "2026-09-15"
     },
     "caregivers.html": {
-      "hash": "b3e2ba3fe10521ee3023970557383516",
-      "date": "2026-09-23"
+      "hash": "321476f95604e0cbfa22a07b8598c19f",
+      "date": "2026-10-09"
     },
     "about.html": {
       "hash": "5c62de5e11f0c5e0ca9fa9ce675c296e",
@@ -73,8 +73,8 @@
       "date": "2026-09-18"
     },
     "enrollment-calendar.html": {
-      "hash": "c71d5089fe4bc91bebdb2054b7de57dd",
-      "date": "2026-09-23"
+      "hash": "8c6ee82c85811990ba2bf2935e866f7d",
+      "date": "2026-10-09"
     },
     "enrollment.html": {
       "hash": "cdc268b0696b758ca745ebca9d0a06be",
@@ -89,8 +89,8 @@
       "date": "2026-09-18"
     },
     "how-do-i.html": {
-      "hash": "767c0064b0cbc53d3d34e435cc628e82",
-      "date": "2026-10-07"
+      "hash": "5943c503eee87a778457a0c19a5f0c92",
+      "date": "2026-10-09"
     },
     "index.html": {
       "hash": "7cf801d3c4fdc2390f10593a5af8907e",
@@ -233,8 +233,8 @@
       "date": "2026-09-24"
     },
     "medicare-part-d.html": {
-      "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8",
-      "date": "2026-09-23"
+      "hash": "37fd2cbce69d80c825e7b4511b0f07cc",
+      "date": "2026-10-09"
     },
     "risk-adjustment.html": {
       "hash": "dcdd8ac631adac2f4ca04c297c049f29",
@@ -273,8 +273,8 @@
       "date": "2026-09-18"
     },
     "medicare-immigrants.html": {
-      "hash": "66cb5c509f368f9190b3be6139c40c94",
-      "date": "2026-09-18"
+      "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a",
+      "date": "2026-10-09"
     },
     "medicare-long-term-care.html": {
       "hash": "c288be6070b54ff61d9144996a9a1d68",
@@ -551,6 +551,22 @@
     "turning-65-marketplace-plan.html": {
       "hash": "9841a7fdbfdccb9bbc6df72e20fbec9e",
       "date": "2026-10-07"
+    },
+    "medicare-advantage-open-enrollment-period.html": {
+      "hash": "2585062323e11e77e60e5d590a1fbc10",
+      "date": "2026-10-09"
+    },
+    "medicare-alzheimers-dementia-coverage.html": {
+      "hash": "3c9b9598556734704f95828a0a6baf61",
+      "date": "2026-10-09"
+    },
+    "medicare-drug-price-negotiation-2027.html": {
+      "hash": "f745c888dd2107fc2c85437575d58f19",
+      "date": "2026-10-09"
+    },
+    "state-health-coverage-older-immigrants.html": {
+      "hash": "e8d2f31b8096597c5177e9caf1554638",
+      "date": "2026-10-09"
     }
   },
   "zh-Hant": {
@@ -603,8 +619,8 @@
       "date": "2026-09-18"
     },
     "enrollment-calendar.html": {
-      "hash": "c71d5089fe4bc91bebdb2054b7de57dd",
-      "date": "2026-09-23"
+      "hash": "8c6ee82c85811990ba2bf2935e866f7d",
+      "date": "2026-10-09"
     },
     "enrollment.html": {
       "hash": "cdc268b0696b758ca745ebca9d0a06be",
@@ -619,8 +635,8 @@
       "date": "2026-09-16"
     },
     "how-do-i.html": {
-      "hash": "767c0064b0cbc53d3d34e435cc628e82",
-      "date": "2026-10-08"
+      "hash": "5943c503eee87a778457a0c19a5f0c92",
+      "date": "2026-10-09"
     },
     "index.html": {
       "hash": "7cf801d3c4fdc2390f10593a5af8907e",
@@ -639,8 +655,8 @@
       "date": "2026-10-07"
     },
     "medicare-part-d.html": {
-      "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8",
-      "date": "2026-09-23"
+      "hash": "37fd2cbce69d80c825e7b4511b0f07cc",
+      "date": "2026-10-09"
     },
     "member-journey.html": {
       "hash": "48750e85e531ee40d64cab8bd3495263",
@@ -827,8 +843,8 @@
       "date": "2026-09-18"
     },
     "medicare-immigrants.html": {
-      "hash": "66cb5c509f368f9190b3be6139c40c94",
-      "date": "2026-09-18"
+      "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a",
+      "date": "2026-10-09"
     },
     "medicare-long-term-care.html": {
       "hash": "c288be6070b54ff61d9144996a9a1d68",
@@ -1101,6 +1117,26 @@
     "turning-65-marketplace-plan.html": {
       "hash": "9841a7fdbfdccb9bbc6df72e20fbec9e",
       "date": "2026-10-07"
+    },
+    "medicare-advantage-open-enrollment-period.html": {
+      "hash": "2585062323e11e77e60e5d590a1fbc10",
+      "date": "2026-10-09"
+    },
+    "medicare-advantage-plan-ending.html": {
+      "hash": "1dca3b7690db9e0a6a104ddce5fb09e8",
+      "date": "2026-10-09"
+    },
+    "medicare-alzheimers-dementia-coverage.html": {
+      "hash": "3c9b9598556734704f95828a0a6baf61",
+      "date": "2026-10-09"
+    },
+    "medicare-drug-price-negotiation-2027.html": {
+      "hash": "f745c888dd2107fc2c85437575d58f19",
+      "date": "2026-10-09"
+    },
+    "state-health-coverage-older-immigrants.html": {
+      "hash": "e8d2f31b8096597c5177e9caf1554638",
+      "date": "2026-10-09"
     }
   },
   "vi": {
@@ -1121,8 +1157,8 @@
       "date": "2026-10-08"
     },
     "caregivers.html": {
-      "hash": "b3e2ba3fe10521ee3023970557383516",
-      "date": "2026-09-23"
+      "hash": "321476f95604e0cbfa22a07b8598c19f",
+      "date": "2026-10-09"
     },
     "checklists.html": {
       "hash": "1ca05d32ebf3753c521d9d026af6863c",
@@ -1193,8 +1229,8 @@
       "date": "2026-09-15"
     },
     "enrollment-calendar.html": {
-      "hash": "c71d5089fe4bc91bebdb2054b7de57dd",
-      "date": "2026-09-23"
+      "hash": "8c6ee82c85811990ba2bf2935e866f7d",
+      "date": "2026-10-09"
     },
     "enrollment.html": {
       "hash": "cdc268b0696b758ca745ebca9d0a06be",
@@ -1213,8 +1249,8 @@
       "date": "2026-09-18"
     },
     "how-do-i.html": {
-      "hash": "767c0064b0cbc53d3d34e435cc628e82",
-      "date": "2026-10-07"
+      "hash": "5943c503eee87a778457a0c19a5f0c92",
+      "date": "2026-10-09"
     },
     "hsa-and-medicare.html": {
       "hash": "2a0d92df325ba532de4696f87705e906",
@@ -1337,8 +1373,8 @@
       "date": "2026-09-21"
     },
     "medicare-immigrants.html": {
-      "hash": "66cb5c509f368f9190b3be6139c40c94",
-      "date": "2026-09-18"
+      "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a",
+      "date": "2026-10-09"
     },
     "medicare-long-term-care.html": {
       "hash": "c288be6070b54ff61d9144996a9a1d68",
@@ -1365,8 +1401,8 @@
       "date": "2026-10-07"
     },
     "medicare-part-d.html": {
-      "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8",
-      "date": "2026-09-23"
+      "hash": "37fd2cbce69d80c825e7b4511b0f07cc",
+      "date": "2026-10-09"
     },
     "medicare-scams.html": {
       "hash": "3f66ad525dedf23c97f680c6a4c18e53",
@@ -1655,6 +1691,22 @@
     "turning-65-marketplace-plan.html": {
       "hash": "9841a7fdbfdccb9bbc6df72e20fbec9e",
       "date": "2026-10-07"
+    },
+    "medicare-advantage-open-enrollment-period.html": {
+      "hash": "2585062323e11e77e60e5d590a1fbc10",
+      "date": "2026-10-09"
+    },
+    "medicare-alzheimers-dementia-coverage.html": {
+      "hash": "3c9b9598556734704f95828a0a6baf61",
+      "date": "2026-10-09"
+    },
+    "medicare-drug-price-negotiation-2027.html": {
+      "hash": "f745c888dd2107fc2c85437575d58f19",
+      "date": "2026-10-09"
+    },
+    "state-health-coverage-older-immigrants.html": {
+      "hash": "e8d2f31b8096597c5177e9caf1554638",
+      "date": "2026-10-09"
     }
   },
   "ko": {
@@ -1679,8 +1731,8 @@
       "date": "2026-10-08"
     },
     "caregivers.html": {
-      "hash": "b3e2ba3fe10521ee3023970557383516",
-      "date": "2026-09-23"
+      "hash": "321476f95604e0cbfa22a07b8598c19f",
+      "date": "2026-10-09"
     },
     "checklists.html": {
       "hash": "1ca05d32ebf3753c521d9d026af6863c",
@@ -1739,8 +1791,8 @@
       "date": "2026-09-18"
     },
     "enrollment-calendar.html": {
-      "hash": "c71d5089fe4bc91bebdb2054b7de57dd",
-      "date": "2026-09-23"
+      "hash": "8c6ee82c85811990ba2bf2935e866f7d",
+      "date": "2026-10-09"
     },
     "enrollment.html": {
       "hash": "cdc268b0696b758ca745ebca9d0a06be",
@@ -1763,8 +1815,8 @@
       "date": "2026-09-18"
     },
     "how-do-i.html": {
-      "hash": "767c0064b0cbc53d3d34e435cc628e82",
-      "date": "2026-10-07"
+      "hash": "5943c503eee87a778457a0c19a5f0c92",
+      "date": "2026-10-09"
     },
     "index.html": {
       "hash": "7cf801d3c4fdc2390f10593a5af8907e",
@@ -1911,8 +1963,8 @@
       "date": "2026-09-18"
     },
     "medicare-immigrants.html": {
-      "hash": "66cb5c509f368f9190b3be6139c40c94",
-      "date": "2026-09-18"
+      "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a",
+      "date": "2026-10-09"
     },
     "medicare-long-term-care.html": {
       "hash": "c288be6070b54ff61d9144996a9a1d68",
@@ -1947,8 +1999,8 @@
       "date": "2026-10-07"
     },
     "medicare-part-d.html": {
-      "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8",
-      "date": "2026-09-23"
+      "hash": "37fd2cbce69d80c825e7b4511b0f07cc",
+      "date": "2026-10-09"
     },
     "medicare-physical-therapy.html": {
       "hash": "ff81e1422ef788128e792f8a67523a4c",
@@ -1999,8 +2051,8 @@
       "date": "2026-10-07"
     },
     "medicare-vs-medicaid.html": {
-      "hash": "29582332d01b7ef75a3d92bdbeafe769",
-      "date": "2026-09-18"
+      "hash": "01a972e6554ed323f8cb6141aa692f2c",
+      "date": "2026-10-09"
     },
     "medicare-weight-loss-drugs.html": {
       "hash": "fab403b5009dcb8399264bd501943ff8",
@@ -2209,6 +2261,22 @@
     "turning-65-marketplace-plan.html": {
       "hash": "9841a7fdbfdccb9bbc6df72e20fbec9e",
       "date": "2026-10-07"
+    },
+    "medicare-advantage-open-enrollment-period.html": {
+      "hash": "2585062323e11e77e60e5d590a1fbc10",
+      "date": "2026-10-09"
+    },
+    "medicare-alzheimers-dementia-coverage.html": {
+      "hash": "3c9b9598556734704f95828a0a6baf61",
+      "date": "2026-10-09"
+    },
+    "medicare-drug-price-negotiation-2027.html": {
+      "hash": "f745c888dd2107fc2c85437575d58f19",
+      "date": "2026-10-09"
+    },
+    "state-health-coverage-older-immigrants.html": {
+      "hash": "e8d2f31b8096597c5177e9caf1554638",
+      "date": "2026-10-09"
     }
   },
   "tl": {
@@ -2233,8 +2301,8 @@
       "date": "2026-10-07"
     },
     "caregivers.html": {
-      "hash": "b3e2ba3fe10521ee3023970557383516",
-      "date": "2026-09-23"
+      "hash": "321476f95604e0cbfa22a07b8598c19f",
+      "date": "2026-10-09"
     },
     "checklists.html": {
       "hash": "1ca05d32ebf3753c521d9d026af6863c",
@@ -2301,8 +2369,8 @@
       "date": "2026-09-19"
     },
     "enrollment-calendar.html": {
-      "hash": "c71d5089fe4bc91bebdb2054b7de57dd",
-      "date": "2026-09-23"
+      "hash": "8c6ee82c85811990ba2bf2935e866f7d",
+      "date": "2026-10-09"
     },
     "getting-help.html": {
       "hash": "d079f64aa68b3c2b2f373d84e19d80f2",
@@ -2321,8 +2389,8 @@
       "date": "2026-09-19"
     },
     "how-do-i.html": {
-      "hash": "767c0064b0cbc53d3d34e435cc628e82",
-      "date": "2026-10-07"
+      "hash": "5943c503eee87a778457a0c19a5f0c92",
+      "date": "2026-10-09"
     },
     "irmaa-appeal-ssa-44.html": {
       "hash": "84a0734e0baf1ef32cb9a4f2932a79f4",
@@ -2477,8 +2545,8 @@
       "date": "2026-10-07"
     },
     "medicare-part-d.html": {
-      "hash": "cfa7d55ff6e8cd851585d3aafcf3b3f8",
-      "date": "2026-09-23"
+      "hash": "37fd2cbce69d80c825e7b4511b0f07cc",
+      "date": "2026-10-09"
     },
     "medicare-physical-therapy.html": {
       "hash": "ff81e1422ef788128e792f8a67523a4c",
@@ -2497,8 +2565,8 @@
       "date": "2026-09-20"
     },
     "medicare-savings-programs.html": {
-      "hash": "4f4ca47446806942900c75dba7345028",
-      "date": "2026-09-20"
+      "hash": "18671411fdcc1d0f20ce885b93f02feb",
+      "date": "2026-10-09"
     },
     "medicare-scams.html": {
       "hash": "3f66ad525dedf23c97f680c6a4c18e53",
@@ -2597,8 +2665,8 @@
       "date": "2026-09-24"
     },
     "medicare-immigrants.html": {
-      "hash": "66cb5c509f368f9190b3be6139c40c94",
-      "date": "2026-09-20"
+      "hash": "bcb62bdd76a3e6eab4462b9f6b1ed50a",
+      "date": "2026-10-09"
     },
     "medicare-telehealth.html": {
       "hash": "4e0881f75782308242d5008e7c93c37a",
@@ -2751,6 +2819,22 @@
     "professionals.html": {
       "hash": "0d9d777a77e7581777718e7a305264b8",
       "date": "2026-10-08"
+    },
+    "medicare-advantage-open-enrollment-period.html": {
+      "hash": "2585062323e11e77e60e5d590a1fbc10",
+      "date": "2026-10-09"
+    },
+    "medicare-alzheimers-dementia-coverage.html": {
+      "hash": "3c9b9598556734704f95828a0a6baf61",
+      "date": "2026-10-09"
+    },
+    "medicare-drug-price-negotiation-2027.html": {
+      "hash": "f745c888dd2107fc2c85437575d58f19",
+      "date": "2026-10-09"
+    },
+    "state-health-coverage-older-immigrants.html": {
+      "hash": "e8d2f31b8096597c5177e9caf1554638",
+      "date": "2026-10-09"
     }
   }
 }

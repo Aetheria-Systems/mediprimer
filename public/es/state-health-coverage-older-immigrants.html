@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cobertura para inmigrantes mayores que no pueden obtener Medicare</title>
+<meta name="description" content="Por qué algunas personas de 65 años o más no pueden obtener Medicare ni Medicaid completo, qué cubre la atención de emergencia y cómo preguntar por los programas estatales. Medicare para indocumentados.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/state-health-coverage-older-immigrants.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Cobertura para inmigrantes mayores que no pueden obtener Medicare">
+<meta property="og:description" content="Por qué algunas personas de 65 años o más no pueden obtener Medicare ni Medicaid completo, qué cubre la atención de emergencia y cómo preguntar por los programas estatales. Medicare para indocumentados.">
+<meta property="og:url" content="https://mediprimer.org/es/state-health-coverage-older-immigrants.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Cobertura para inmigrantes mayores que no pueden obtener Medicare">
+<meta name="twitter:description" content="Por qué algunas personas de 65 años o más no pueden obtener Medicare ni Medicaid completo, qué cubre la atención de emergencia y cómo preguntar por los programas estatales. Medicare para indocumentados.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puede una persona indocumentada de 65 años o más obtener Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "Por lo general, no. Para comprar Medicare debe ser ciudadano o titular de una tarjeta verde con 5 años continuos en EE. UU."}}, {"@type": "Question", "name": "¿Medicare cubre a personas indocumentadas?", "acceptedAnswer": {"@type": "Answer", "text": "En general, no. Para comprar Medicare hace falta ser ciudadano o residente permanente con 5 años continuos en EE. UU. Medicaid federal solo paga la atención de emergencia. Pregunte a su estado por programas estatales."}}, {"@type": "Question", "name": "¿Me rechazará el hospital en una emergencia?", "acceptedAnswer": {"@type": "Answer", "text": "No. Un hospital que acepta Medicare y tiene sala de emergencias debe examinarle y atenderle en una emergencia, incluido el trabajo de parto activo, sin importar si puede pagar o no."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Cobertura para inmigrantes mayores que no pueden obtener Medicare", "description": "Por qué algunas personas de 65 años o más no pueden obtener Medicare ni Medicaid completo, qué cubre la atención de emergencia y cómo preguntar por los programas estatales. Medicare para indocumentados.", "url": "https://mediprimer.org/es/state-health-coverage-older-immigrants.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Cobertura para inmigrantes mayores que no pueden obtener Medicare", "item": "https://mediprimer.org/es/state-health-coverage-older-immigrants.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/state-health-coverage-older-immigrants.html" lang="en">English</a>
+    <a href="/es/state-health-coverage-older-immigrants.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Cobertura de salud para inmigrantes mayores que no pueden obtener Medicare: qué dicen las reglas federales y dónde encajan los programas estatales</h1>
+    <p>Algunas personas de 65 años o más no pueden obtener Medicare ni Medicaid completo por su estatus migratorio. Algunos estados tienen sus propios programas. Aquí le explicamos cómo averiguarlo.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Para comprar Medicare, una persona debe tener 65 años o más, vivir en EE. UU. y ser ciudadana de EE. UU. o titular de una tarjeta verde que haya vivido aquí durante 5 años continuos. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> El dinero federal de Medicaid, por lo general, se limita a la atención de emergencia para las personas sin un estatus migratorio que califique. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --> Algunos estados tienen programas separados pagados con dinero estatal. Esos programas son distintos en cada estado y pueden cambiar. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> La única forma de saber qué opciones tiene usted es preguntar a la agencia de su estado.</p>
+    <p><em>En español:</em> Medicare para indocumentados. En general, una persona sin estatus migratorio calificado no puede inscribirse en Medicare. Esta página explica qué dicen las reglas federales y cómo preguntar por programas estatales.</p>
+
+    <h2>Por qué Medicare no está abierto para algunos adultos mayores</h2>
+    <p>Medicare es un programa federal ligado a la ciudadanía o a la residencia permanente legal. Hay dos maneras de entrar:</p>
+    <ul>
+      <li><strong>Créditos de trabajo.</strong> La Parte A de Medicare sin Prima por lo general requiere 10 años de impuestos de Medicare pagados, por usted o por su cónyuge. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Los créditos de trabajo cuentan, pero la persona también debe cumplir la regla de ciudadanía o residencia para inscribirse.</li>
+      <li><strong>Comprar la cobertura.</strong> Debe tener 65 años o más, vivir en EE. UU. y ser ciudadano o titular de una tarjeta verde con 5 años continuos aquí. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></li>
+    </ul>
+    <p>Para conocer todos los detalles, lea <a href="/es/medicare-immigrants.html">Medicare para inmigrantes</a>.</p>
+
+    <h2>Qué cubre Medicaid federal</h2>
+    <p>La ley federal permite que Medicaid pague la atención de personas sin un estatus migratorio que califique solo cuando es necesaria para tratar una emergencia médica, y solo si la persona cumple las demás reglas de Medicaid del estado. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Esto suele llamarse Medicaid de emergencia. No es un seguro de salud completo. Vea <a href="/es/emergency-medicaid.html">Medicaid de emergencia</a>.</p>
+    <p>Los inmigrantes con presencia legal pueden enfrentar reglas distintas. Por ejemplo, algunos titulares de tarjeta verde tienen un patrocinador cuyos ingresos se toman en cuenta. Vea <a href="/es/medicaid-sponsor-deeming.html">Atribución de ingresos del patrocinador en Medicaid</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Dónde encajan los programas financiados por el estado</h2>
+    <p>Las reglas federales no impiden que un estado use su propio dinero. Los Centros de Servicios de Medicare y Medicaid (CMS) han descrito "programas solo estatales" que ofrecen servicios adicionales a personas que no son elegibles para Medicaid completo. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> Lo que cubren estos programas, quién puede participar y las edades que atienden lo define cada estado. Pueden comenzar, cambiar o terminar. Los funcionarios federales también han dicho que están revisando cómo pagan los estados parte de esta atención. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --></p>
+    <p>MediPrimer no enumera el programa de cada estado, porque los detalles cambian y solo publicamos datos que podemos confirmar con fuentes federales. Pregunte directamente a la agencia de su estado.</p>
+
+    <h2>El Mercado de Seguros no es una opción para todos</h2>
+    <p>Los inmigrantes indocumentados no pueden obtener cobertura del Mercado de Seguros. Pueden presentar la solicitud en nombre de familiares que sí sean elegibles. <!-- src: https://www.healthcare.gov/immigrants/coverage/ --> Vea <a href="/es/mixed-status-family-marketplace.html">Familias de estatus mixto y el Mercado de Seguros</a>.</p>
+
+    <h2>Cómo averiguar qué opciones tiene usted</h2>
+    <ol class="steps">
+      <li><strong>Empiece por la agencia estatal de Medicaid.</strong> Use el <a href="/es/state-medicaid.html">directorio estatal de Medicaid</a>. Pregunte: "¿Tienen un programa financiado por el estado para adultos de 65 años o más que no califican para Medicaid por su estatus migratorio?"</li>
+      <li><strong>Pregunte por la cobertura de emergencia.</strong> El consejero financiero de un hospital puede ayudarle a presentar la solicitud durante una emergencia o después de ella.</li>
+      <li><strong>Pruebe un centro de salud comunitario.</strong> Estas clínicas pueden cobrar según sus ingresos. Pregunte por sus tarifas.</li>
+      <li><strong>Pida una línea de idiomas.</strong> Usted tiene derecho a recibir ayuda en su idioma. Vea <a href="/es/medical-interpreter-rights.html">Derechos de los intérpretes médicos</a>.</li>
+      <li><strong>Llame a un SHIP.</strong> Su <a href="/es/ship-directory.html">Programa Estatal de Asistencia sobre Seguros de Salud</a> ofrece orientación gratuita e imparcial.</li>
+    </ol>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Puede una persona indocumentada de 65 años o más obtener Medicare?</summary>
+      <div>
+        <p>Por lo general, no. Para comprar Medicare debe ser ciudadano o titular de una tarjeta verde con 5 años continuos en EE. UU. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Medicare cubre a personas indocumentadas?</summary>
+      <div>
+        <p>En general, no. Para comprar Medicare hace falta ser ciudadano o residente permanente con 5 años continuos en EE. UU. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Medicaid federal solo paga la atención de emergencia. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Pregunte a su estado por programas estatales.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Me rechazará el hospital en una emergencia?</summary>
+      <div>
+        <p>No. Un hospital que acepta Medicare y tiene sala de emergencias debe examinarle y atenderle en una emergencia, incluido el trabajo de parto activo, sin importar si puede pagar o no. <!-- src: https://www.cms.gov/medicare/regulations-guidance/legislation/emergency-medical-treatment-labor-act --></p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b" rel="noopener">CMS.gov: Elegibilidad para la Cobertura Original de Medicare (Partes A y B)</a></li>
+      <li><a href="https://www.ssa.gov/OP_Home/ssact/title19/1903.htm" rel="noopener">SSA.gov: Ley del Seguro Social, §1903 (pagos a los estados)</a></li>
+      <li><a href="https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf" rel="noopener">Medicaid.gov: carta SMD 25-003 de los CMS sobre Medicaid de emergencia</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/coverage/" rel="noopener">HealthCare.gov: cobertura para inmigrantes</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer ofrece información educativa general, no asesoría legal, y no está afiliado a ninguna agencia. Las reglas de inmigración y de cobertura cambian. Para preguntas legales, hable con un abogado de inmigración calificado o con un representante acreditado.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/state-health-coverage-older-immigrants.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
