@@ -29,37 +29,37 @@
   "9,10,11": {
    "en": {
     "head": "Open enrollment ends December 7. We'll remind you.",
-    "blurb": "Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.",
+    "blurb": "Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. After that, a short email only when something changes, never more than one a week. No ads, no plan sales.",
     "button": "Send me the checklist",
     "fine": "We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click."
    },
    "es": {
     "head": "La inscripción abierta termina el 7 de diciembre. Le avisamos.",
-    "blurb": "Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.",
+    "blurb": "Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.",
     "button": "Envíenme la lista",
     "fine": "Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic."
    },
    "zh-Hant": {
     "head": "公開報名 12 月 7 日截止，我們會提醒您。",
-    "blurb": "取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。",
+    "blurb": "取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。",
     "button": "寄給我檢查清單",
     "fine": "我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。"
    },
    "vi": {
     "head": "Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.",
-    "blurb": "Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.",
+    "blurb": "Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Sau đó, chỉ một email ngắn khi có thay đổi, không quá một email mỗi tuần. Không quảng cáo, không bán gói bảo hiểm.",
     "button": "Gửi cho tôi danh sách kiểm tra",
     "fine": "Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp."
    },
    "ko": {
     "head": "가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.",
-    "blurb": "가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 외엔 없습니다. 광고 없음, 플랜 판매 없음.",
+    "blurb": "가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 후에는 변경 사항이 있을 때만 짧은 이메일을 보내며, 주 1회를 넘지 않습니다. 광고 없음, 플랜 판매 없음.",
     "button": "체크리스트 받기",
     "fine": "확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 마감 전 알림 한 통, 그 후엔 평소처럼 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다."
    },
    "tl": {
     "head": "Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.",
-    "blurb": "Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.",
+    "blurb": "Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.",
     "button": "Ipadala sa akin ang checklist",
     "fine": "Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click."
    }
