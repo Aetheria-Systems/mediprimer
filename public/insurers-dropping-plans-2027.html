@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Insurers Are Dropping Plans for 2027: What It Means for You</title>
+<meta name="description" content="11 insurers quit Medicare Advantage, 9 left the Marketplace, Medicaid plans are leaving states. Why it happened, what it can cost you, and what to do before December 7.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Insurers Are Dropping Plans for 2027: What It Means for You">
+<meta property="og:description" content="11 insurers quit Medicare Advantage, 9 left the Marketplace, Medicaid plans are leaving states. Why it happened, what it can cost you, and what to do before December 7.">
+<meta property="og:url" content="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Insurers Are Dropping Plans for 2027: What It Means for You">
+<meta name="twitter:description" content="11 insurers quit Medicare Advantage, 9 left the Marketplace, Medicaid plans are leaving states. Why it happened, what it can cost you, and what to do before December 7.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is Medicare Advantage going away?", "acceptedAnswer": {"@type": "Answer", "text": "No. Most insurers kept most of their plans, and most counties still have many choices. What is going away is the marginal plan: lower-rated, in rural or high-cost counties, or run by small hospital-system insurers. Check whether yours is one of them."}}, {"@type": "Question", "name": "Why did the government cut payments to these plans?", "acceptedAnswer": {"@type": "Answer", "text": "Federal auditors and Congress's advisers have said for years that Medicare pays Advantage plans more per person than Original Medicare would cost, partly through diagnosis coding. The changes since 2024 aim to narrow that gap. Insurers say the changes went too far, too fast. Both sides are describing the same money from opposite ends."}}, {"@type": "Question", "name": "My plan is ending. Will I lose Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "No. Part A and Part B stay. If you do nothing, you will be in Original Medicare on January 1, without drug coverage unless you join a Part D plan."}}, {"@type": "Question", "name": "Should I leave Medicare Advantage because of this?", "acceptedAnswer": {"@type": "Answer", "text": "That depends on your health, your doctors and your budget, and we do not pick for you. What we will say: if your plan is ending and you have health conditions, you have a short-lived right to Medigap with no health questions. Decide with that door open, not after it closes."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Insurers Are Dropping Plans for 2027: What It Means for You", "description": "11 insurers quit Medicare Advantage, 9 left the Marketplace, Medicaid plans are leaving states. Why it happened, what it can cost you, and what to do before December 7.", "url": "https://mediprimer.org/insurers-dropping-plans-2027.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Insurers Are Dropping Plans for 2027: What It Means for You", "item": "https://mediprimer.org/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>My Medicare Advantage Plan Is Ending for 2027. What Now?</h1>
+    <p>Your plan's letter says it won't be offered next year. You are not left without coverage, but you do have deadlines. Here is what the letter means and how to use your extra time to switch.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short version.</strong> For 2027, health insurers are dropping plans on a scale not seen in years. At least 11 companies quit Medicare Advantage entirely, and about 3.8 million people have to pick new coverage. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> Nine insurers are leaving the Marketplace in 24 states. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Big Medicaid insurers are walking away from state contracts. None of this is about you. It is about money: government decisions made these plans less profitable, and the companies left the places where they earn the least. This page explains what is happening, why, what it can cost you, and what to do before the deadlines.</p>
+
+    <div class="note">
+      <strong>Deadlines that matter right now.</strong> Medicare Open Enrollment runs October 15 to December 7. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Marketplace Open Enrollment on HealthCare.gov runs November 1 to December 15. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> If your plan is ending, your letters give you extra rights — but one of them expires fast. See <a href="#act">what to do now</a>.
+    </div>
+
+    <h2>What is happening</h2>
+
+    <h3>Medicare Advantage</h3>
+    <ul>
+      <li><strong>Whole companies are leaving.</strong> At least 11 insurers that sold Medicare Advantage plans in 2026 will not sell them in 2027. Eight are plans owned by hospital systems. <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>The biggest insurers are shrinking.</strong> UnitedHealthcare is leaving 228 counties and Humana 62. Health Care Service Corporation (Blue Cross plans in five states) is leaving 498 counties. Elevance (Anthem) is leaving 181 and Aetna 100. <a href="https://www.beckerspayer.com/payer/medicare-advantage/medicare-advantage-insurers-ranked-by-county-entries-exits-in-2027/" rel="noopener">(Becker's Payer)</a></li>
+      <li><strong>Roughly a million people are in plans that end December 31.</strong> About 600,000 Humana members and about 390,000 UnitedHealthcare members got non-renewal letters dated October 2. <a href="https://www.beckerspayer.com/payer/medicare-advantage/humana-to-exit-medicare-advantage-plans-covering-600000-members-in-2027/" rel="noopener">(Becker's Payer)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a></li>
+      <li><strong>Some places will have no Medicare Advantage plan at all.</strong> 181 counties, up from 67 this year. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> People there go back to Original Medicare.</li>
+    </ul>
+
+    <h3>Part D drug plans</h3>
+    <ul>
+      <li>There are fewer stand-alone drug plans for 2027, and no plan with a zero premium unless you get Extra Help. Many people will see a small premium rise. Some will see a large one if they stay in their current plan. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>The yearly cap on what you pay for covered drugs rises to $2,400 in 2027, and no plan may charge a deductible above $700. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> See <a href="/medicare-costs-2027.html">2027 Medicare costs</a>.</li>
+    </ul>
+
+    <h3>Marketplace (Obamacare) plans</h3>
+    <ul>
+      <li>Nine insurers are leaving Marketplaces in 24 states for 2027. Cigna is leaving all 11 states where it sold plans, about 369,000 people. Molina is cutting from 14 states to six. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a></li>
+      <li>Prices are going up again. The typical proposed increase for 2027 is about 15 percent, the second year of double-digit rises. <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>Medicaid plans</h3>
+    <ul>
+      <li>Elevance told investors it expects to leave Medicaid markets "where the economics don't support sustainable performance" over 12 to 18 months. Its Healthy Blue plan leaves Louisiana Medicaid at the end of 2026, and UnitedHealthcare left that state's program in March. About 580,000 Louisiana members are being moved to new plans. <a href="https://lailluminator.com/2026/09/18/louisiana-prepares-to-pay-more-to-its-remaining-private-medicaid-plans/" rel="noopener">(Louisiana Illuminator)</a></li>
+      <li>Centene plans to leave Arkansas's Medicaid expansion program in 2027. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> More exits are expected as the 2025 federal budget law's Medicaid cuts take effect.</li>
+    </ul>
+
+    <h2>Why: the money, plainly</h2>
+    <p>Insurers say costs went up because people used more care. That is true. It is also true that the government changed the rules in ways that cut what these businesses earn. Here is what changed.</p>
+
+    <h3>Medicare Advantage</h3>
+    <ol class="steps">
+      <li><strong>Payments stopped growing as fast.</strong> For 2027, the government first proposed a payment increase of almost nothing: 0.09 percent. Insurers protested. The final increase was 2.48 percent, about 13 billion dollars, after the government dropped a planned update to the formula that would have cut payments more. <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(CMS fact sheet)</a> Even so, it is far below the cost growth insurers report.</li>
+      <li><strong>Diagnosis coding pays less.</strong> Since 2024, Medicare has phased in a new risk-adjustment model that pays plans less for many recorded diagnoses. Plans that leaned on heavy coding lost the most.</li>
+      <li><strong>Fewer star bonuses.</strong> Plans rated 4 stars or more get bonus money. Ratings fell for several big insurers, and the bonuses fell with them. Humana said it would cut "the lower tail of profitability," meaning plans rated 3.5 stars or lower. <a href="https://www.beckerspayer.com/payer/medicare-advantage/humana-to-exit-medicare-advantage-plans-covering-600000-members-in-2027/" rel="noopener">(Becker's Payer)</a></li>
+      <li><strong>Drug costs shifted to plans.</strong> The 2022 drug law capped what you pay for Part D drugs and made plans pay more of the cost above the cap. Good for you. Expensive for them, and the temporary federal support that cushioned stand-alone drug plans ends December 31, 2026. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>Put together: the plans that were marginal, often PPOs, rural counties, and lower-rated plans, stopped making money. Companies cut them. The plans left behind tend to be HMOs with tighter networks and fewer extras.</p>
+
+    <h3>Marketplace</h3>
+    <ol class="steps">
+      <li><strong>Congress let the bigger subsidies expire</strong> at the end of 2025. Sign-ups fell by more than a million for 2026. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> The people who dropped out were, on average, healthier, so the remaining pool costs more to insure.</li>
+      <li><strong>New rules make enrolling harder.</strong> The federal sign-up window is shorter and more people must prove eligibility before coverage starts. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Insurers expect fewer, sicker customers and price or leave accordingly.</li>
+    </ol>
+
+    <h3>Medicaid</h3>
+    <ol class="steps">
+      <li><strong>The 2025 federal budget law cuts Medicaid funding</strong> over the coming years: work requirements for many adults, eligibility checks every six months, and limits on how states raise their share of the money. States then pay plans less or later, and plans leave. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>What this can cost you</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>If you have…</th><th>The risk</th></tr></thead>
+        <tbody>
+          <tr><td>A Medicare Advantage plan that is ending</td><td>A gap in coverage if you miss the letters. Losing your doctors if the new plan's network differs. Missing the short window to buy Medigap without health questions.</td></tr>
+          <tr><td>A Medicare Advantage plan that continues</td><td>Smaller networks, higher copays, and fewer extras in 2027. Extras like dental, over-the-counter cards and gym benefits are cut first because they are the easiest to cut. Read the Annual Notice of Change line by line.</td></tr>
+          <tr><td>A stand-alone Part D plan</td><td>A premium jump if you stay put. Your plan may also change its drug list. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>A Marketplace plan</td><td>Being moved to a different insurer's plan if yours leaves, with a new network. A bigger premium bill, though subsidies rise with the benchmark price for most people who qualify.</td></tr>
+          <tr><td>Medicaid</td><td>Being assigned to a new plan if yours leaves the state, and losing coverage at a renewal if a letter goes unanswered.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="act">What to do now</h2>
+    <p>This is the part most sites soften. We won't.</p>
+    <ol class="steps">
+      <li><strong>Open every envelope from your plan in October.</strong> A <a href="/medicare-annual-notice-of-change.html">notice of change</a> means your plan continues with new terms. A non-renewal notice means it ends December 31. Keep the non-renewal letter; it is your proof of rights.</li>
+      <li><strong>If your Medicare Advantage plan is ending, know your two clocks.</strong> You can switch Medicare plans from December 8 through the end of February. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> But the right to buy a Medigap policy with no health questions lasts only 63 days after your coverage ends. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> People miss the shorter one. If you have health problems and have ever wanted Original Medicare plus Medigap, this may be your only chance to get it without underwriting. Price it before you pick another Advantage plan. Details on <a href="/medicare-advantage-plan-ending.html">your options when a plan ends</a>.</li>
+      <li><strong>Do not pick a plan for its extras.</strong> Dental, vision, hearing, gym and grocery cards are the first things cut when a plan loses money, and they can change every January. Pick by your doctors, your drugs, and your hospital.</li>
+      <li><strong>Check the star rating and the insurer's direction.</strong> Humana cut plans rated 3.5 stars or lower. A low-rated plan, or a plan from an insurer shrinking in your state, is more likely to be cut again next year. Star ratings are in <a href="/using-plan-finder.html">Plan Finder</a>; see <a href="/medicare-star-ratings.html">what the stars mean</a>.</li>
+      <li><strong>If you have a stand-alone drug plan, compare, don't renew.</strong> Enter your drugs in Plan Finder. Staying put can cost far more than switching this year. <a href="/switching-medicare-part-d-formulary-check.html">How to check your drug list</a>.</li>
+      <li><strong>If you live in a county with no Medicare Advantage plan,</strong> you will be in Original Medicare. Add a Part D plan by December 7 so you are not without drug coverage. Then look at <a href="/medigap.html">Medigap</a>.</li>
+      <li><strong>Marketplace: act early and check the letter about your mapped plan.</strong> The federal window is November 1 to December 15. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> If your insurer is leaving, HealthCare.gov may move you to another plan; it may not include your doctors. Update your income estimate so your subsidy is right. See <a href="/marketplace-open-enrollment-2027.html">Marketplace open enrollment 2027</a>.</li>
+      <li><strong>Medicaid: answer every letter and keep your address current.</strong> Renewals are coming more often. If your plan is leaving your state, choose a new plan yourself before the state assigns one, so you keep your doctors. See <a href="/medicaid-renewal.html">Medicaid renewal</a>.</li>
+      <li><strong>Get free, unbiased help.</strong> SHIP counselors do not sell plans. <a href="/ship-directory.html">Find yours</a>. Agents can help too, but they are paid by the plans they sell.</li>
+    </ol>
+
+    <h2>What we expect next</h2>
+    <p>Our read of the evidence, not a prediction you should bank on: the exits are not finished. Medicare Advantage payment growth for 2027 is modest and the coding changes are now fully in place, so insurers will keep trimming lower-rated plans and thin counties. Marketplace prices will stay high unless Congress restores the larger subsidies. Medicaid plan exits will spread as the federal cuts phase in through 2027 and 2028. The practical lesson is the same each year: never assume the plan you have will be the plan you keep, and review it every fall.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. Nothing else, no ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Is Medicare Advantage going away?</summary>
+      <div>
+        <p>No. Most insurers kept most of their plans, and most counties still have many choices. What is going away is the marginal plan: lower-rated, in rural or high-cost counties, or run by small hospital-system insurers. Check whether yours is one of them.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Why did the government cut payments to these plans?</summary>
+      <div>
+        <p>Federal auditors and Congress's advisers have said for years that Medicare pays Advantage plans more per person than Original Medicare would cost, partly through diagnosis coding. The changes since 2024 aim to narrow that gap. Insurers say the changes went too far, too fast. Both sides are describing the same money from opposite ends.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>My plan is ending. Will I lose Medicare?</summary>
+      <div>
+        <p>No. Part A and Part B stay. If you do nothing, you will be in Original Medicare on January 1, without drug coverage unless you join a Part D plan. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Should I leave Medicare Advantage because of this?</summary>
+      <div>
+        <p>That depends on your health, your doctors and your budget, and we do not pick for you. What we will say: if your plan is ending and you have health conditions, you have a short-lived right to Medigap with no health questions. Decide with that door open, not after it closes.</p>
+      </div>
+    </details>
+
+    <h2>Sources</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS: 2027 Medicare Advantage and Part D Rate Announcement</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF: Medicare Advantage plan availability by county for 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF: Part D stand-alone plan premiums for 2027</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF: Insurer participation in the ACA Marketplaces in 2027</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF: Medicaid managed care and the 2025 reconciliation law</a></li>
+      <li><a href="https://www.beckerspayer.com/payer/medicare-advantage/medicare-advantage-insurers-ranked-by-county-entries-exits-in-2027/" rel="noopener">Becker's Payer: insurers ranked by county exits in 2027</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive: how much insurers are cutting Medicare Advantage for 2027</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: Special Enrollment Periods</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: When can I buy a Medigap policy?</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. This page explains the market and your rights; it does not recommend a plan. Member counts and county figures come from the news and research sources linked above, as of October 2026. Confirm your own dates and rights with 1-800-MEDICARE, HealthCare.gov, your state Medicaid office, or your <a href="/ship-directory.html">SHIP</a>.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

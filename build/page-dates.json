@@ -136,12 +136,16 @@
   "hash": "2a0d92df325ba532de4696f87705e906"
  },
  "index.html": {
-  "date": "2026-10-01",
-  "hash": "7cf801d3c4fdc2390f10593a5af8907e"
+  "date": "2026-10-09",
+  "hash": "0950469d5c93d286e7319225549d11d0"
  },
  "insurance-departments.html": {
   "date": "2026-10-07",
   "hash": "a8bb2083d70ce4be8bb669c35b61b624"
+ },
+ "insurers-dropping-plans-2027.html": {
+  "date": "2026-10-09",
+  "hash": "46e305c153252e15d421fb47e38ac342"
  },
  "irmaa-appeal-ssa-44.html": {
   "date": "2026-09-18",
@@ -200,8 +204,8 @@
   "hash": "73aedc217dc3f2cdce3d297e76f1ed12"
  },
  "medicaid-sponsor-deeming.html": {
-  "date": "2026-09-18",
-  "hash": "688afa63f890524ba07b9f448cdc6db2"
+  "date": "2026-10-09",
+  "hash": "09c5582a1e8bf63a4267ce992da2c9dc"
  },
  "medicaid-spousal-impoverishment.html": {
   "date": "2026-09-18",
@@ -216,8 +220,8 @@
   "hash": "e32a7fda2d01cb9a741b681e21fea768"
  },
  "medical-interpreter-rights.html": {
-  "date": "2026-09-18",
-  "hash": "6a17859d77cd118ac29ef2044c6bf70d"
+  "date": "2026-10-09",
+  "hash": "668f7959695b0d9e7849d75dec27f5f2"
  },
  "medicare-advantage-open-enrollment-period.html": {
   "date": "2026-10-08",
@@ -368,8 +372,8 @@
   "hash": "37fd2cbce69d80c825e7b4511b0f07cc"
  },
  "medicare-physical-therapy.html": {
-  "date": "2026-10-07",
-  "hash": "ff81e1422ef788128e792f8a67523a4c"
+  "date": "2026-10-09",
+  "hash": "f88468bee7305db1deaf1311a8684752"
  },
  "medicare-plan-comparison-2027.html": {
   "date": "2026-10-06",
@@ -380,8 +384,8 @@
   "hash": "39eb93ca79d6feb6306cfca7d494124f"
  },
  "medicare-preventive-screening-costs.html": {
-  "date": "2026-09-18",
-  "hash": "e4469413b46ce7d4cd4abffb11e0795b"
+  "date": "2026-10-09",
+  "hash": "e15991273ca499ee42a7bfb1739d8cdd"
  },
  "medicare-savings-programs.html": {
   "date": "2026-10-07",
@@ -464,8 +468,8 @@
   "hash": "66df1ea0a5d3b8dd5d4347a7a6423378"
  },
  "multigenerational-household-coverage.html": {
-  "date": "2026-09-18",
-  "hash": "acdc025e73adf9a08aeda1ba2f850b9e"
+  "date": "2026-10-09",
+  "hash": "8859bba20f97de13439b0b122aa73235"
  },
  "navigators.html": {
   "date": "2026-09-30",
@@ -560,8 +564,8 @@
   "hash": "cfcf0155325973a741d046e587980d67"
  },
  "switching-medicare-advantage-plans.html": {
-  "date": "2026-09-18",
-  "hash": "9f232faf72b2d3f9bb42a374805498e6"
+  "date": "2026-10-09",
+  "hash": "600b4f281d9ac157321dccdd1f1f4cf8"
  },
  "switching-medicare-part-d-formulary-check.html": {
   "date": "2026-09-18",
