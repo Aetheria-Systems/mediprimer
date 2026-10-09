@@ -2,7 +2,7 @@
  "_doc": "Homepage 'Happening right now' section. Keyed by month number. Each item: q = the trigger question in the visitor's voice, sub = one plain sentence, href = target page (item is SKIPPED if the file doesn't exist yet). 'breaking' may be swapped by the weekly update job when a real change lands; it fills the last slot when present.",
  "breaking": [
   {
-   "q": "Medicare Advantage plans for 2027: Humana, UnitedHealthcare and others are dropping plans.",
+   "q": "Medicare Advantage plans going away in 2027: Humana, UnitedHealthcare and others are dropping plans.",
    "sub": "Who is leaving, why, what changes for you, and what to do before December 7.",
    "href": "/insurers-dropping-plans-2027.html"
   },
