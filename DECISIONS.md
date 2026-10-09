@@ -2,6 +2,52 @@
 
 Strategic decisions and pivots, with the reasoning. Newest first.
 
+## 2026-10-09 — Wholly automated: risk is answered with gates, never with a human step
+
+An outside review recommended pausing unattended publication, a named human
+reviewer per guide, and routing news-driven edits to a draft for approval.
+Declined. MediPrimer is a wholly automated platform; a step that waits on a
+person is a step that stalls. Every accuracy risk found this week was answered
+with an automatic check instead: new dollar figures must appear on the cited
+official page; counts and percentages from news must be quoted verbatim from
+the article and are re-fetched; a reviewing-editor pass checks that each
+changed page keeps its sources' scope (program, population, place, year,
+qualification) and agrees with itself (lead, body, FAQ, title, meta); the
+plain-language gate covers all member pages; thin rewrites are sent back to
+the editor before being judged; one failing page is dropped rather than the
+whole run. Where a check cannot be automated (no server-side way to see an
+analytics event fire), the report says so rather than reading zero as zero.
+
+## 2026-10-09 — Tell readers what is really going on in the market
+
+The 2027 insurer withdrawals are the story of this enrollment season, and
+most coverage is either trade press or broker marketing. MediPrimer's page
+names the insurers, the member and county counts, and the government payment,
+risk-adjustment, star-rating and subsidy decisions that made the plans
+unprofitable — and the insurers' response — plainly, with each figure sourced.
+It stays short of recommending a plan, but it does tell people what to check
+and what not to do (don't choose a plan for its extras; know the two clocks
+when a plan ends). Being candid about causes is compatible with being neutral
+about products.
+
+## 2026-10-09 — Three 2027 pages, three questions
+
+"Medicare Advantage plans 2027" stays with the plan-comparison guide, which
+already ranks for it. The exits article owns "going away / dropping /
+insurer withdrawals"; the plan-ending guide owns "my plan is ending / non-
+renewal notice". The planner is told these assignments and does not merge
+pages whose assigned term families are distinct. Several useful pages
+answering different questions beat one page trying to answer all of them.
+
+## 2026-10-06 — Measure what shipped, not what was planned
+
+The weekly edit log recorded every planned change, including ones a gate had
+reverted, so "rewrites moved rankings" rested on edits that may never have
+gone live. The log now records only edits that reached the site, the daily
+report compares complete non-overlapping periods with exact dates, and the
+scoreboard separates improved / declined / about the same / insufficient
+evidence. A position change is reported as correlation, not proof.
+
 ## 2026-09-21 — Pause new languages; the constraint is authority, not content
 
 New-language rollout is suspended. Ten languages stay frozen (ru, ar, ht, pt,
