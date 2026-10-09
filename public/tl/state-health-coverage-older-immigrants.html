@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saklaw para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare</title>
+<meta name="description" content="Bakit hindi makakakuha ng Medicare o buong Medicaid ang ilang taong 65 pataas, ano ang sakop ng pangangalagang pang-emergency, at paano magtanong tungkol sa mga programa ng estado. Medicare para sa mga undocumented.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/state-health-coverage-older-immigrants.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Saklaw para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare">
+<meta property="og:description" content="Bakit hindi makakakuha ng Medicare o buong Medicaid ang ilang taong 65 pataas, ano ang sakop ng pangangalagang pang-emergency, at paano magtanong tungkol sa mga programa ng estado. Medicare para sa mga undocumented.">
+<meta property="og:url" content="https://mediprimer.org/tl/state-health-coverage-older-immigrants.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Saklaw para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare">
+<meta name="twitter:description" content="Bakit hindi makakakuha ng Medicare o buong Medicaid ang ilang taong 65 pataas, ano ang sakop ng pangangalagang pang-emergency, at paano magtanong tungkol sa mga programa ng estado. Medicare para sa mga undocumented.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Makakakuha ba ng Medicare ang isang undocumented na taong 65 taong gulang pataas?", "acceptedAnswer": {"@type": "Answer", "text": "Sa pangkalahatan, hindi. Para makabili ng Medicare, dapat kang mamamayan o may green card na may 5 magkakasunod na taon sa U.S."}}, {"@type": "Question", "name": "Sinasaklaw ba ng Medicare ang mga undocumented na tao?", "acceptedAnswer": {"@type": "Answer", "text": "Sa pangkalahatan, hindi. Para makabili ng Medicare, kailangan mong maging mamamayan o permanenteng residente na may 5 magkakasunod na taon sa U.S. Ang pederal na Medicaid ay nagbabayad lamang para sa pangangalagang pang-emergency. Magtanong sa iyong estado tungkol sa mga programa ng estado."}}, {"@type": "Question", "name": "Tatanggihan ba ako ng ospital sa isang emergency?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Ang ospital na tumatanggap ng Medicare at may emergency room ay dapat kang suriin at gamutin sa isang emergency, kasama ang aktibong panganganak, kahit kaya mo man o hindi ang magbayad."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Saklaw para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare", "description": "Bakit hindi makakakuha ng Medicare o buong Medicaid ang ilang taong 65 pataas, ano ang sakop ng pangangalagang pang-emergency, at paano magtanong tungkol sa mga programa ng estado. Medicare para sa mga undocumented.", "url": "https://mediprimer.org/tl/state-health-coverage-older-immigrants.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Saklaw para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare", "item": "https://mediprimer.org/tl/state-health-coverage-older-immigrants.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/state-health-coverage-older-immigrants.html" lang="en">English</a>
+    <a href="/es/state-health-coverage-older-immigrants.html" lang="es">Español</a>
+    <a href="/zh-Hant/state-health-coverage-older-immigrants.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/state-health-coverage-older-immigrants.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/state-health-coverage-older-immigrants.html" lang="ko">한국어</a>
+    <a href="/tl/state-health-coverage-older-immigrants.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Saklaw sa Kalusugan para sa mga Matatandang Imigrante na Hindi Makakakuha ng Medicare: Ano ang Sinasabi ng mga Pederal na Patakaran at Saan Pumapasok ang mga Programa ng Estado</h1>
+    <p>Hindi makakakuha ng Medicare o buong Medicaid ang ilang taong 65 pataas dahil sa kanilang katayuan sa imigrasyon. May ilang estado na may sariling mga programa. Narito kung paano malalaman.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Para makabili ng Medicare, ang isang tao ay dapat 65 taong gulang pataas, nakatira sa U.S., at maging mamamayan ng U.S. o may green card na 5 magkakasunod na taon nang naninirahan dito. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Ang pederal na pondo ng Medicaid ay karaniwang limitado sa pangangalagang pang-emergency para sa mga taong walang kwalipikadong katayuan sa imigrasyon. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --> May ilang estado na may hiwalay na mga programang binabayaran ng pondo ng estado. Magkakaiba ang mga programang iyon sa bawat estado at maaaring magbago. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> Ang tanging paraan para malaman kung ano ang bukas sa iyo ay ang magtanong sa ahensya ng iyong estado.</p>
+    <p><em>En español:</em> Medicare para sa mga undocumented. Sa pangkalahatan, ang taong walang kwalipikadong katayuan sa imigrasyon ay hindi makakapagpatala sa Medicare. Ipinapaliwanag ng pahinang ito kung ano ang sinasabi ng mga pederal na patakaran at kung paano magtanong tungkol sa mga programa ng estado.</p>
+
+    <h2>Bakit sarado ang Medicare sa ilang matatanda</h2>
+    <p>Ang Medicare ay isang pederal na programa na nakadepende sa pagkamamamayan o legal na permanenteng paninirahan. May dalawang paraan para makapasok:</p>
+    <ul>
+      <li><strong>Mga work credit.</strong> Ang Part A na walang Premium ay karaniwang nangangailangan ng 10 taon ng nabayarang buwis para sa Medicare, ikaw man o ang iyong asawa ang nagbayad. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Binibilang ang mga work credit, ngunit kailangan ding matugunan ng tao ang patakaran sa pagkamamamayan o paninirahan para makapagpatala.</li>
+      <li><strong>Pagbili.</strong> Dapat ay 65 taong gulang ka pataas, nakatira sa U.S., at mamamayan o may green card na may 5 magkakasunod na taon dito. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></li>
+    </ul>
+    <p>Para sa buong detalye, basahin ang <a href="/tl/medicare-immigrants.html">Medicare para sa mga Imigrante</a>.</p>
+
+    <h2>Ano ang sakop ng pederal na Medicaid</h2>
+    <p>Pinapayagan ng pederal na batas na bayaran ng Medicaid ang pangangalaga para sa mga taong walang kwalipikadong katayuan sa imigrasyon kapag kailangan lamang ito para gamutin ang isang medikal na kondisyong pang-emergency, at kung natutugunan lamang ng tao ang iba pang patakaran ng Medicaid ng estado. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Madalas itong tawaging Emergency Medicaid. Hindi ito buong health insurance. Tingnan ang <a href="/tl/emergency-medicaid.html">Emergency Medicaid</a>.</p>
+    <p>Maaaring iba ang mga patakaran para sa mga imigranteng legal na naninirahan dito. Halimbawa, may ilang may hawak ng green card na may sponsor na kasama ang kita sa pagbibilang. Tingnan ang <a href="/tl/medicaid-sponsor-deeming.html">Sponsor Deeming sa Medicaid</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Wala nang iba, walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Saan pumapasok ang mga programang pinondohan ng estado</h2>
+    <p>Hindi pinipigilan ng mga pederal na patakaran ang isang estado na gamitin ang sarili nitong pondo. Inilarawan ng CMS ang "mga programang pang-estado lamang" na nagbibigay ng karagdagang serbisyo sa mga taong hindi kwalipikado sa buong Medicaid. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> Ang saklaw ng mga programang ito, kung sino ang maaaring sumali, at ang mga edad na pinagsisilbihan ay itinakda ng bawat estado. Maaari silang magsimula, magbago o magtapos. Sinabi rin ng mga pederal na opisyal na sinusuri nila kung paano binabayaran ng mga estado ang ilan sa pangangalagang ito. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --></p>
+    <p>Hindi inililista ng MediPrimer ang programa ng bawat estado, dahil nagbabago ang mga detalye at nagpa-publish lamang kami ng mga katotohanang makukumpirma namin mula sa mga pederal na pinagmulan. Direktang magtanong sa ahensya ng iyong estado.</p>
+
+    <h2>Hindi bukas sa lahat ang Marketplace</h2>
+    <p>Hindi makakakuha ng saklaw sa Marketplace ang mga undocumented na imigrante. Maaari silang mag-apply para sa mga miyembro ng pamilya na kwalipikado. <!-- src: https://www.healthcare.gov/immigrants/coverage/ --> Tingnan ang <a href="/tl/mixed-status-family-marketplace.html">Mga Pamilyang may Magkahalong Katayuan at ang Marketplace</a>.</p>
+
+    <h2>Paano malalaman kung ano ang bukas sa iyo</h2>
+    <ol class="steps">
+      <li><strong>Magsimula sa ahensya ng Medicaid ng iyong estado.</strong> Gamitin ang <a href="/tl/state-medicaid.html">direktoryo ng Medicaid ng estado</a>. Itanong: "Mayroon ba kayong programang pinondohan ng estado para sa mga adultong 65 taong gulang pataas na hindi kwalipikado sa Medicaid dahil sa katayuan sa imigrasyon?"</li>
+      <li><strong>Magtanong tungkol sa saklaw na pang-emergency.</strong> Matutulungan ka ng financial counselor ng ospital na mag-apply habang o pagkatapos ng isang emergency.</li>
+      <li><strong>Subukan ang isang community health center.</strong> Maaaring maningil ang mga klinikang ito ayon sa kita. Itanong ang kanilang mga singil.</li>
+      <li><strong>Humingi ng language line.</strong> May karapatan kang makakuha ng tulong sa iyong wika. Tingnan ang <a href="/tl/medical-interpreter-rights.html">Mga Karapatan sa Medical Interpreter</a>.</li>
+      <li><strong>Tumawag sa SHIP.</strong> Ang iyong <a href="/tl/ship-directory.html">State Health Insurance Assistance Program</a> ay nagbibigay ng libre at walang kinikilingang pagpapayo.</li>
+    </ol>
+
+    <h2>Mga karaniwang tanong</h2>
+
+    <details class="qa">
+      <summary>Makakakuha ba ng Medicare ang isang undocumented na taong 65 taong gulang pataas?</summary>
+      <div>
+        <p>Sa pangkalahatan, hindi. Para makabili ng Medicare, dapat kang mamamayan o may green card na may 5 magkakasunod na taon sa U.S. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Sinasaklaw ba ng Medicare ang mga undocumented na tao?</summary>
+      <div>
+        <p>Sa pangkalahatan, hindi. Para makabili ng Medicare, kailangan mong maging mamamayan o permanenteng residente na may 5 magkakasunod na taon sa U.S. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Ang pederal na Medicaid ay nagbabayad lamang para sa pangangalagang pang-emergency. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Magtanong sa iyong estado tungkol sa mga programa ng estado.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tatanggihan ba ako ng ospital sa isang emergency?</summary>
+      <div>
+        <p>Hindi. Ang ospital na tumatanggap ng Medicare at may emergency room ay dapat kang suriin at gamutin sa isang emergency, kasama ang aktibong panganganak, kahit kaya mo man o hindi ang magbayad. <!-- src: https://www.cms.gov/medicare/regulations-guidance/legislation/emergency-medical-treatment-labor-act --></p>
+      </div>
+    </details>
+
+    <h2>Mga opisyal na pinagmulan</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b" rel="noopener">CMS.gov: Pagiging kwalipikado sa Orihinal na Medicare (Part A at B)</a></li>
+      <li><a href="https://www.ssa.gov/OP_Home/ssact/title19/1903.htm" rel="noopener">SSA.gov: Social Security Act §1903 (mga bayad sa mga estado)</a></li>
+      <li><a href="https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf" rel="noopener">Medicaid.gov: Liham ng CMS na SMD 25-003 tungkol sa emergency Medicaid</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/coverage/" rel="noopener">HealthCare.gov: Saklaw para sa mga imigrante</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Beripikahin bago kumilos.</strong> Ang MediPrimer ay pangkalahatang impormasyong pang-edukasyon, hindi legal na payo, at hindi kaakibat ng anumang ahensya. Nagbabago ang mga patakaran sa imigrasyon at saklaw. Para sa mga legal na tanong, makipag-usap sa isang kwalipikadong abogado sa imigrasyon o akreditadong kinatawan.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/state-health-coverage-older-immigrants.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

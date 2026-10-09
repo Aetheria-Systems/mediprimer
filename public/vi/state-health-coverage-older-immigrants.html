@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare</title>
+<meta name="description" content="Vì sao một số người từ 65 tuổi trở lên không thể tham gia Medicare hoặc Medicaid đầy đủ, chăm sóc khẩn cấp được chi trả những gì, và cách hỏi về các chương trình của tiểu bang. Medicare para indocumentados.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/state-health-coverage-older-immigrants.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare">
+<meta property="og:description" content="Vì sao một số người từ 65 tuổi trở lên không thể tham gia Medicare hoặc Medicaid đầy đủ, chăm sóc khẩn cấp được chi trả những gì, và cách hỏi về các chương trình của tiểu bang. Medicare para indocumentados.">
+<meta property="og:url" content="https://mediprimer.org/vi/state-health-coverage-older-immigrants.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare">
+<meta name="twitter:description" content="Vì sao một số người từ 65 tuổi trở lên không thể tham gia Medicare hoặc Medicaid đầy đủ, chăm sóc khẩn cấp được chi trả những gì, và cách hỏi về các chương trình của tiểu bang. Medicare para indocumentados.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Người không có giấy tờ từ 65 tuổi trở lên có thể tham gia Medicare không?", "acceptedAnswer": {"@type": "Answer", "text": "Nói chung là không. Để mua Medicare, bạn phải là công dân hoặc người có thẻ xanh với 5 năm liên tục ở Hoa Kỳ."}}, {"@type": "Question", "name": "¿Medicare cubre a personas indocumentadas?", "acceptedAnswer": {"@type": "Answer", "text": "En general, no. Para comprar Medicare hace falta ser ciudadano o residente permanente con 5 años continuos en EE. UU. Medicaid federal solo paga la atención de emergencia. Pregunte a su estado por programas estatales."}}, {"@type": "Question", "name": "Bệnh viện có từ chối tôi trong trường hợp khẩn cấp không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Bệnh viện nhận Medicare và có phòng cấp cứu phải khám và điều trị cho bạn trong trường hợp khẩn cấp, kể cả khi đang chuyển dạ, dù bạn có khả năng chi trả hay không."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare", "description": "Vì sao một số người từ 65 tuổi trở lên không thể tham gia Medicare hoặc Medicaid đầy đủ, chăm sóc khẩn cấp được chi trả những gì, và cách hỏi về các chương trình của tiểu bang. Medicare para indocumentados.", "url": "https://mediprimer.org/vi/state-health-coverage-older-immigrants.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/state-health-coverage-older-immigrants.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/state-health-coverage-older-immigrants.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare", "item": "https://mediprimer.org/vi/state-health-coverage-older-immigrants.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/state-health-coverage-older-immigrants.html" lang="en">English</a>
+    <a href="/es/state-health-coverage-older-immigrants.html" lang="es">Español</a>
+    <a href="/zh-Hant/state-health-coverage-older-immigrants.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/state-health-coverage-older-immigrants.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Thành Viên &amp; Người Chăm Sóc</p>
+    <h1>Bảo Hiểm Y Tế cho Người Nhập Cư Lớn Tuổi Không Thể Tham Gia Medicare: Quy Định Liên Bang Nói Gì và Các Chương Trình Của Tiểu Bang Nằm Ở Đâu</h1>
+    <p>Một số người từ 65 tuổi trở lên không thể tham gia Medicare hoặc Medicaid đầy đủ vì tình trạng nhập cư của họ. Một số tiểu bang có chương trình riêng. Sau đây là cách tìm hiểu.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Câu trả lời ngắn gọn.</strong> Để mua Medicare, một người phải từ 65 tuổi trở lên, sống tại Hoa Kỳ, và phải là công dân Hoa Kỳ hoặc người có thẻ xanh đã sống ở đây liên tục 5 năm. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Tiền Medicaid liên bang nói chung chỉ giới hạn ở chăm sóc khẩn cấp đối với những người không có tình trạng nhập cư đủ điều kiện. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --> Một số tiểu bang có các chương trình riêng được chi trả bằng ngân sách của tiểu bang. Các chương trình đó khác nhau tùy tiểu bang và có thể thay đổi. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> Cách duy nhất để biết bạn được tham gia chương trình nào là hỏi cơ quan của tiểu bang bạn.</p>
+    <p><em>En español:</em> Medicare para indocumentados. En general, una persona sin estatus migratorio calificado no puede inscribirse en Medicare. Esta página explica qué dicen las reglas federales y cómo preguntar por programas estatales.</p>
+
+    <h2>Vì sao Medicare không dành cho một số người lớn tuổi</h2>
+    <p>Medicare là chương trình liên bang gắn với quốc tịch hoặc tình trạng thường trú nhân hợp pháp. Có hai cách để tham gia:</p>
+    <ul>
+      <li><strong>Tín chỉ lao động.</strong> Medicare Phần A không phải trả phí bảo hiểm nói chung cần 10 năm đóng thuế Medicare, do bạn hoặc người phối ngẫu đóng. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Tín chỉ lao động có giá trị, nhưng người đó cũng phải đáp ứng quy định về quốc tịch hoặc cư trú để được ghi danh.</li>
+      <li><strong>Mua bảo hiểm.</strong> Bạn phải từ 65 tuổi trở lên, sống tại Hoa Kỳ, và là công dân hoặc người có thẻ xanh với 5 năm liên tục ở đây. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></li>
+    </ul>
+    <p>Để biết đầy đủ chi tiết, hãy đọc <a href="/vi/medicare-immigrants.html">Medicare dành cho Người Nhập Cư</a>.</p>
+
+    <h2>Medicaid liên bang chi trả những gì</h2>
+    <p>Luật liên bang cho phép Medicaid chi trả chăm sóc cho những người không có tình trạng nhập cư đủ điều kiện chỉ khi cần thiết để điều trị một tình trạng y tế khẩn cấp, và chỉ khi người đó đáp ứng các quy định Medicaid khác của tiểu bang. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Điều này thường được gọi là Emergency Medicaid. Đây không phải là bảo hiểm y tế đầy đủ. Xem <a href="/vi/emergency-medicaid.html">Emergency Medicaid</a>.</p>
+    <p>Người nhập cư hiện diện hợp pháp có thể gặp các quy định khác. Ví dụ, một số người có thẻ xanh có người bảo lãnh mà thu nhập của họ được tính vào. Xem <a href="/vi/medicaid-sponsor-deeming.html">Tính Thu Nhập Người Bảo Lãnh trong Medicaid</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Các chương trình do tiểu bang tài trợ nằm ở đâu</h2>
+    <p>Quy định liên bang không ngăn một tiểu bang dùng ngân sách của chính mình. Trung Tâm Dịch Vụ Medicare & Medicaid (CMS) đã mô tả "các chương trình chỉ do tiểu bang" cung cấp thêm dịch vụ cho những người không đủ điều kiện hưởng Medicaid đầy đủ. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf --> Các chương trình này chi trả những gì, ai được tham gia, và độ tuổi được phục vụ đều do từng tiểu bang quy định. Chúng có thể bắt đầu, thay đổi hoặc chấm dứt. Các quan chức liên bang cũng cho biết họ đang xem xét cách các tiểu bang chi trả cho một phần của loại chăm sóc này. <!-- src: https://www.cms.gov/newsroom/press-releases/cms-increasing-oversight-states-illegally-using-federal-medicaid-funding-health-care-illegal --></p>
+    <p>MediPrimer không liệt kê chương trình của từng tiểu bang, vì các chi tiết thay đổi và chúng tôi chỉ đăng những thông tin có thể xác nhận từ nguồn liên bang. Hãy hỏi trực tiếp cơ quan của tiểu bang bạn.</p>
+
+    <h2>Thị Trường Bảo Hiểm (Marketplace) không dành cho tất cả mọi người</h2>
+    <p>Người nhập cư không có giấy tờ không thể mua bảo hiểm qua Thị Trường Bảo Hiểm (Marketplace). Họ có thể nộp đơn thay cho các thành viên gia đình đủ điều kiện. <!-- src: https://www.healthcare.gov/immigrants/coverage/ --> Xem <a href="/vi/mixed-status-family-marketplace.html">Gia Đình Có Tình Trạng Nhập Cư Hỗn Hợp và Thị Trường Bảo Hiểm</a>.</p>
+
+    <h2>Cách tìm hiểu bạn được tham gia chương trình nào</h2>
+    <ol class="steps">
+      <li><strong>Bắt đầu với cơ quan Medicaid của tiểu bang bạn.</strong> Hãy dùng <a href="/vi/state-medicaid.html">danh bạ Medicaid của các tiểu bang</a>. Hãy hỏi: "Quý vị có chương trình do tiểu bang tài trợ dành cho người lớn từ 65 tuổi trở lên không đủ điều kiện hưởng Medicaid vì tình trạng nhập cư không?"</li>
+      <li><strong>Hỏi về bảo hiểm khẩn cấp.</strong> Nhân viên tư vấn tài chính của bệnh viện có thể giúp bạn nộp đơn trong hoặc sau một trường hợp khẩn cấp.</li>
+      <li><strong>Thử một trung tâm y tế cộng đồng.</strong> Các phòng khám này có thể tính phí theo thu nhập. Hãy hỏi về mức phí của họ.</li>
+      <li><strong>Yêu cầu đường dây thông dịch.</strong> Bạn có quyền được giúp đỡ bằng ngôn ngữ của mình. Xem <a href="/vi/medical-interpreter-rights.html">Quyền Được Thông Dịch Y Tế</a>.</li>
+      <li><strong>Gọi cho SHIP.</strong> <a href="/vi/ship-directory.html">Chương Trình Hỗ Trợ Bảo Hiểm Y Tế của Tiểu Bang</a> (SHIP) cung cấp tư vấn miễn phí, không thiên vị.</li>
+    </ol>
+
+    <h2>Câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Người không có giấy tờ từ 65 tuổi trở lên có thể tham gia Medicare không?</summary>
+      <div>
+        <p>Nói chung là không. Để mua Medicare, bạn phải là công dân hoặc người có thẻ xanh với 5 năm liên tục ở Hoa Kỳ. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Medicare cubre a personas indocumentadas?</summary>
+      <div>
+        <p>En general, no. Para comprar Medicare hace falta ser ciudadano o residente permanente con 5 años continuos en EE. UU. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Medicaid federal solo paga la atención de emergencia. <!-- src: https://www.ssa.gov/OP_Home/ssact/title19/1903.htm --> Pregunte a su estado por programas estatales.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Bệnh viện có từ chối tôi trong trường hợp khẩn cấp không?</summary>
+      <div>
+        <p>Không. Bệnh viện nhận Medicare và có phòng cấp cứu phải khám và điều trị cho bạn trong trường hợp khẩn cấp, kể cả khi đang chuyển dạ, dù bạn có khả năng chi trả hay không. <!-- src: https://www.cms.gov/medicare/regulations-guidance/legislation/emergency-medical-treatment-labor-act --></p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b" rel="noopener">CMS.gov: Điều kiện tham gia Original Medicare (Phần A và B)</a></li>
+      <li><a href="https://www.ssa.gov/OP_Home/ssact/title19/1903.htm" rel="noopener">SSA.gov: Đạo Luật An Sinh Xã Hội §1903 (thanh toán cho các tiểu bang)</a></li>
+      <li><a href="https://www.medicaid.gov/federal-policy-guidance/downloads/smd25003.pdf" rel="noopener">Medicaid.gov: Thư CMS SMD 25-003 về Emergency Medicaid</a></li>
+      <li><a href="https://www.healthcare.gov/immigrants/coverage/" rel="noopener">HealthCare.gov: Bảo hiểm cho người nhập cư</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục tổng quát, không phải tư vấn pháp lý, và không liên kết với bất kỳ cơ quan nào. Các quy định về nhập cư và bảo hiểm có thể thay đổi. Đối với các câu hỏi pháp lý, hãy trao đổi với luật sư di trú có chuyên môn hoặc đại diện được công nhận.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/state-health-coverage-older-immigrants.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

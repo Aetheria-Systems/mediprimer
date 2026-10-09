@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare 藥價談判 2027：15 種藥物與您的實際費用</title>
+<meta name="description" content="2027 年起適用 Medicare 新價格的 15 種藥物，包括 Ozempic 和 Wegovy，以及為什麼新價格不等於您的共付額。另附需要檢查的事項。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare 藥價談判 2027：15 種藥物與您的實際費用">
+<meta property="og:description" content="2027 年起適用 Medicare 新價格的 15 種藥物，包括 Ozempic 和 Wegovy，以及為什麼新價格不等於您的共付額。另附需要檢查的事項。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare 藥價談判 2027：15 種藥物與您的實際費用">
+<meta name="twitter:description" content="2027 年起適用 Medicare 新價格的 15 種藥物，包括 Ozempic 和 Wegovy，以及為什麼新價格不等於您的共付額。另附需要檢查的事項。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Medicare 的新藥價何時開始適用？", "acceptedAnswer": {"@type": "Answer", "text": "第二輪的 15 種藥物，自 2027 年 1 月 1 日起適用。"}}, {"@type": "Question", "name": "我買 Ozempic 就是付談判價格嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不一定。談判價格是 30 天用量的價格。 您要付多少，取決於您的計劃的自付額、共付額或共同保險，以及年度上限。"}}, {"@type": "Question", "name": "這適用於 Medicare Advantage 計劃嗎？", "acceptedAnswer": {"@type": "Answer", "text": "這些價格適用於醫療保險D部分下的藥物。 如果您的 Medicare Advantage 計劃含有藥物承保，請向您的計劃詢問 2027 年的價格會如何影響您的費用，並查看您的計劃寄來的通知。"}}, {"@type": "Question", "name": "價格降低，表示我的計劃就必須承保該藥物嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不是。計劃仍然自行決定哪些藥物列入其藥品清單。請在註冊或續保前先查看您的計劃。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare 藥價談判 2027：15 種藥物與您的實際費用", "description": "2027 年起適用 Medicare 新價格的 15 種藥物，包括 Ozempic 和 Wegovy，以及為什麼新價格不等於您的共付額。另附需要檢查的事項。", "url": "https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-drug-price-negotiation-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "Medicare 藥價談判 2027：15 種藥物與您的實際費用", "item": "https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-drug-price-negotiation-2027.html" lang="en">English</a>
+    <a href="/es/medicare-drug-price-negotiation-2027.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-drug-price-negotiation-2027.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">適用於會員與照護者</p>
+    <h1>2027 年 Medicare 藥價談判：15 種藥物與您實際要付的費用</h1>
+    <p>Medicare 已為另外 15 種藥物訂出談判價格，將於 1 月 1 日、2027 年起生效。新價格不等於您的共付額。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短回答如下。</strong> Medicare 為另外 15 種醫療保險D部分藥物談判出較低的價格，這些價格自 2027 年 1 月 1 日起生效。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 名單包括 Ozempic、Rybelsus 和 Wegovy，這三種藥物 30 天用量共用同一個談判價格。您可以在 <a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf">CMS 2027 年談判價格情況說明</a>中查看該價格。但談判價格是 Medicare 與藥廠談定的價格，並不是您在櫃檯付的金額。您自己的費用仍取決於您的藥物計劃的自付額、共付額或共同保險，以及年度上限。</p>
+
+    <h2>「談判價格」是什麼意思</h2>
+    <p>根據 Medicare 藥價談判計劃，Medicare 會親自就某些沒有學名藥或生物相似藥競爭的高價藥物談判價格。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 法律把這個結果稱為「最高合理價格」。這是第二輪談判。第一輪的 10 種藥物已於 2026 年 1 月 1 日開始適用。<!-- src: https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices --></p>
+    <p>就 2027 年這一輪而言，Medicare 表示，在 5,300 萬名參加醫療保險D部分的人當中，約有 530 萬人在 2024 年用過其中一種藥物。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> Medicare 也估計，參加醫療保險D部分的人在 2027 年可節省數億美元的自付費用。確切的估計數字請見 <a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf">CMS 情況說明</a>。這是全體人口的總額，並不是對任何個人的保證。</p>
+
+    <h2>這 15 種藥物</h2>
+    <p>以下列出這些藥物、它們治療的病症，以及新價格比 2024 年 30 天用量的定價低多少。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 折扣是和定價相比，不是和您現在付的金額相比。</p>
+    <table>
+      <thead><tr><th scope="col">藥物</th><th scope="col">常用於治療</th><th scope="col">低於 2024 年定價</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Ozempic；Rybelsus；Wegovy</th><td>第 2 型糖尿病；心臟病；肥胖或體重過重</td><td>71%</td></tr>
+        <tr><th scope="row">Trelegy Ellipta</th><td>氣喘；慢性阻塞性肺病（COPD）</td><td>73%</td></tr>
+        <tr><th scope="row">Breo Ellipta</th><td>氣喘；慢性阻塞性肺病（COPD）</td><td>83%</td></tr>
+        <tr><th scope="row">Tradjenta</th><td>第 2 型糖尿病</td><td>84%</td></tr>
+        <tr><th scope="row">Janumet；Janumet XR</th><td>第 2 型糖尿病</td><td>85%</td></tr>
+        <tr><th scope="row">Linzess</th><td>慢性便秘；伴有便秘的腸躁症</td><td>75%</td></tr>
+        <tr><th scope="row">Xtandi</th><td>攝護腺癌</td><td>48%</td></tr>
+        <tr><th scope="row">Pomalyst</th><td>卡波西氏肉瘤；多發性骨髓瘤</td><td>60%</td></tr>
+        <tr><th scope="row">Ibrance</th><td>乳癌</td><td>50%</td></tr>
+        <tr><th scope="row">Calquence</th><td>某些白血病和淋巴瘤</td><td>40%</td></tr>
+        <tr><th scope="row">Ofev</th><td>特發性肺纖維化</td><td>50%</td></tr>
+        <tr><th scope="row">Austedo；Austedo XR</th><td>亨廷頓舞蹈症；遲發性運動障礙</td><td>38%</td></tr>
+        <tr><th scope="row">Xifaxan</th><td>肝性腦病變；伴有腹瀉的腸躁症</td><td>63%</td></tr>
+        <tr><th scope="row">Vraylar</th><td>雙相情緒障礙症第一型；重度憂鬱症；思覺失調症</td><td>44%</td></tr>
+        <tr><th scope="row">Otezla；Otezla XR</th><td>貝賽特氏症口腔潰瘍；斑塊型乾癬；乾癬性關節炎</td><td>65%</td></tr>
+      </tbody>
+    </table>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>為什麼新價格不等於您的共付額</h2>
+    <p>這是人們常常搞錯的地方。談判價格是為藥物本身訂的價格。您要付多少，則由您的醫療保險D部分計劃決定。有三件事很重要：</p>
+    <ul>
+      <li><strong>您的計劃的自付額。</strong> 2027 年，任何醫療保險D部分計劃的自付額都不得超過 $700。<!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> 有些計劃沒有自付額。</li>
+      <li><strong>您的計劃的共付額或共同保險。</strong> 這取決於該藥物在您的計劃藥品清單（承保藥物的名單）上屬於哪個藥品等級。請參閱 <a href="/zh-Hant/medicare-part-d.html">Medicare 醫療保險D部分</a>。</li>
+      <li><strong>年度上限。</strong> 2027 年，醫療保險D部分承保藥物的自付上限為 $2,400。<!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> 達到上限後，該年度內承保藥物您不必再多付任何費用。</li>
+    </ul>
+    <p>Medicare 的情況說明是在「標準福利設計下」估計節省金額。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 實際的計劃與這個標準設計並不相同。因此，您節省的金額可能更多、更少，或完全沒有。若想完整了解 2027 年的費用，請參閱<a href="/zh-Hant/medicare-costs-2027.html">2027 年 Medicare 費用有哪些變動</a>。</p>
+    <p>如果高額藥費難以負擔，<a href="/zh-Hant/medicare-prescription-payment-plan.html">Medicare 處方藥付款計劃</a>可讓您按月分期支付。</p>
+
+    <h2>Ozempic 和 Wegovy：兩條不同的路</h2>
+    <p>Ozempic、Rybelsus 和 Wegovy 共用同一個談判價格。Medicare 表示，2024 年這幾種藥物是醫療保險D部分總支出最高的藥物，其價格比 2024 年定價下降 71%。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 名單顯示它們治療第 2 型糖尿病、心臟病，以及肥胖或體重過重。</p>
+    <p>您能否獲得承保，仍取決於開這種藥的原因以及您的計劃。用於減重時，另有一個臨時性的計劃。請閱讀 <a href="/zh-Hant/medicare-weight-loss-drugs.html">Medicare 與減重藥物</a>，了解其運作方式。</p>
+
+    <h2>今年秋天該做什麼</h2>
+    <ol class="steps">
+      <li><strong>逐一檢查您服用的每種藥物。</strong> 看看是否在上面的名單中。</li>
+      <li><strong>閱讀您的年度變更通知。</strong> 通知會顯示您的計劃 2027 年的自付額、藥品等級和費用。請參閱<a href="/zh-Hant/medicare-annual-notice-of-change.html">年度變更通知</a>。</li>
+      <li><strong>檢查您的計劃的藥品清單。</strong> 有了談判價格，並不表示計劃就一定會承保該藥物。</li>
+      <li><strong>在 12 月 7 日前比較各項計劃。</strong> 請參閱 <a href="/zh-Hant/medicare-open-enrollment-2027.html">2027 年 Medicare 公開註冊期</a>。</li>
+      <li><strong>取得免費協助。</strong> 您的 <a href="/zh-Hant/ship-directory.html">SHIP</a> 輔導員可以和您一起檢視您的藥物。</li>
+    </ol>
+
+    <h2>接下來會怎樣</h2>
+    <p>Medicare 還挑選了另外 15 種藥物進入第三輪。談判在 2026 年進行，任何談判後的價格都將從 2028 年開始適用。<!-- src: https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices --></p>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>Medicare 的新藥價何時開始適用？</summary>
+      <div>
+        <p>第二輪的 15 種藥物，自 2027 年 1 月 1 日起適用。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我買 Ozempic 就是付談判價格嗎？</summary>
+      <div>
+        <p>不一定。談判價格是 30 天用量的價格。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 您要付多少，取決於您的計劃的自付額、共付額或共同保險，以及年度上限。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>這適用於 Medicare Advantage 計劃嗎？</summary>
+      <div>
+        <p>這些價格適用於醫療保險D部分下的藥物。<!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> 如果您的 Medicare Advantage 計劃含有藥物承保，請向您的計劃詢問 2027 年的價格會如何影響您的費用，並查看您的計劃寄來的通知。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>價格降低，表示我的計劃就必須承保該藥物嗎？</summary>
+      <div>
+        <p>不是。計劃仍然自行決定哪些藥物列入其藥品清單。請在註冊或續保前先查看您的計劃。</p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf" rel="noopener">CMS.gov：2027 年談判價格（情況說明）</a></li>
+      <li><a href="https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices" rel="noopener">CMS.gov：入選藥物與談判價格</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov：醫療保險D部分費用</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先核實。</strong> MediPrimer 提供一般教育性資訊，與任何機構均無隸屬關係。它不會告訴您該選擇哪個計劃或哪種藥物。您自己的費用取決於您的計劃。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/medicare-drug-price-negotiation-2027.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

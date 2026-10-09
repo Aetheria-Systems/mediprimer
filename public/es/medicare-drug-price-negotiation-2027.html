@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Negociación de Precios de Medicamentos de Medicare 2027: 15 medicamentos y su costo</title>
+<meta name="description" content="Los 15 medicamentos con nuevos precios de Medicare en 2027, incluidos Ozempic y Wegovy, y por qué el nuevo precio no es su Copago. Además, qué debe revisar.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Negociación de Precios de Medicamentos de Medicare 2027: 15 medicamentos y su costo">
+<meta property="og:description" content="Los 15 medicamentos con nuevos precios de Medicare en 2027, incluidos Ozempic y Wegovy, y por qué el nuevo precio no es su Copago. Además, qué debe revisar.">
+<meta property="og:url" content="https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Negociación de Precios de Medicamentos de Medicare 2027: 15 medicamentos y su costo">
+<meta name="twitter:description" content="Los 15 medicamentos con nuevos precios de Medicare en 2027, incluidos Ozempic y Wegovy, y por qué el nuevo precio no es su Copago. Además, qué debe revisar.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuándo comienzan los nuevos precios de medicamentos de Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "El 1 de enero de 2027, para los 15 medicamentos de la segunda ronda."}}, {"@type": "Question", "name": "¿Me costará Ozempic el precio negociado?", "acceptedAnswer": {"@type": "Answer", "text": "No necesariamente. El precio negociado es para un suministro de 30 días. Lo que usted paga depende del Deducible de su plan, del Copago o Coaseguro, y del límite anual."}}, {"@type": "Question", "name": "¿Esto se aplica a los planes de Medicare Advantage?", "acceptedAnswer": {"@type": "Answer", "text": "Los precios se aplican a los medicamentos bajo la Parte D de Medicare. Si tiene un plan de Medicare Advantage con cobertura de medicamentos, pregunte a su plan cómo afectan los precios de 2027 sus costos, y revise el aviso de su plan."}}, {"@type": "Question", "name": "¿Un precio más bajo significa que mi plan debe cubrir el medicamento?", "acceptedAnswer": {"@type": "Answer", "text": "No. Los planes siguen eligiendo qué medicamentos incluyen en su Formulario de Medicamentos. Revise el suyo antes de inscribirse o renovar."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Negociación de Precios de Medicamentos de Medicare 2027: 15 medicamentos y su costo", "description": "Los 15 medicamentos con nuevos precios de Medicare en 2027, incluidos Ozempic y Wegovy, y por qué el nuevo precio no es su Copago. Además, qué debe revisar.", "url": "https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-drug-price-negotiation-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-drug-price-negotiation-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Negociación de Precios de Medicamentos de Medicare 2027: 15 medicamentos y su costo", "item": "https://mediprimer.org/es/medicare-drug-price-negotiation-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-drug-price-negotiation-2027.html" lang="en">English</a>
+    <a href="/es/medicare-drug-price-negotiation-2027.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Negociación de Precios de Medicamentos de Medicare en 2027: los 15 medicamentos y lo que usted realmente paga</h1>
+    <p>Medicare ha fijado nuevos precios negociados para 15 medicamentos más. Comienzan el 1 de enero de 2027. El nuevo precio no es lo mismo que su Copago.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Medicare negoció precios más bajos para 15 medicamentos más de la Parte D de Medicare, y esos precios comienzan el 1 de enero de 2027. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> La lista incluye Ozempic, Rybelsus y Wegovy, que comparten un mismo precio negociado para un suministro de 30 días. Puede ver ese precio en la <a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf">hoja informativa de los Centros de Servicios de Medicare y Medicaid sobre los precios negociados de 2027</a>. Pero el precio negociado es el precio que Medicare acordó con la compañía farmacéutica. No es la cantidad que usted paga en el mostrador. Su costo sigue dependiendo del Deducible de su plan de medicamentos, del Copago o Coaseguro, y del límite anual.</p>
+
+    <h2>Qué significa "precio negociado"</h2>
+    <p>Bajo el Programa de Negociación de Precios de Medicamentos de Medicare, Medicare mismo negocia el precio de ciertos medicamentos de alto costo que no tienen competencia de genéricos ni de biosimilares. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> La ley llama al resultado el "precio máximo justo". Esta es la segunda ronda. La primera ronda, de 10 medicamentos, comenzó el 1 de enero de 2026. <!-- src: https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices --></p>
+    <p>Para la ronda de 2027, Medicare dice que unos 5.3 millones de los 53 millones de personas con la Parte D de Medicare tomaron uno de estos medicamentos en 2024. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> Medicare también estima que las personas con la Parte D ahorrarán cientos de millones de dólares en gastos de bolsillo en 2027. La estimación exacta está en la <a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf">hoja informativa de los Centros de Servicios de Medicare y Medicaid</a>. Ese es un total para todas las personas, no una promesa para una persona en particular.</p>
+
+    <h2>Los 15 medicamentos</h2>
+    <p>Estos son los medicamentos, las afecciones que suelen tratar y cuánto por debajo del precio de lista de 2024 queda el nuevo precio para un suministro de 30 días. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> El descuento se mide contra el precio de lista, no contra lo que usted paga hoy.</p>
+    <table>
+      <thead><tr><th scope="col">Medicamento</th><th scope="col">Suele tratar</th><th scope="col">Por debajo del precio de lista de 2024</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Ozempic; Rybelsus; Wegovy</th><td>Diabetes tipo 2; enfermedad del corazón; obesidad o sobrepeso</td><td>71%</td></tr>
+        <tr><th scope="row">Trelegy Ellipta</th><td>Asma; EPOC</td><td>73%</td></tr>
+        <tr><th scope="row">Breo Ellipta</th><td>Asma; EPOC</td><td>83%</td></tr>
+        <tr><th scope="row">Tradjenta</th><td>Diabetes tipo 2</td><td>84%</td></tr>
+        <tr><th scope="row">Janumet; Janumet XR</th><td>Diabetes tipo 2</td><td>85%</td></tr>
+        <tr><th scope="row">Linzess</th><td>Estreñimiento crónico; síndrome del intestino irritable con estreñimiento</td><td>75%</td></tr>
+        <tr><th scope="row">Xtandi</th><td>Cáncer de próstata</td><td>48%</td></tr>
+        <tr><th scope="row">Pomalyst</th><td>Sarcoma de Kaposi; mieloma múltiple</td><td>60%</td></tr>
+        <tr><th scope="row">Ibrance</th><td>Cáncer de mama</td><td>50%</td></tr>
+        <tr><th scope="row">Calquence</th><td>Ciertos tipos de leucemia y linfoma</td><td>40%</td></tr>
+        <tr><th scope="row">Ofev</th><td>Fibrosis pulmonar idiopática</td><td>50%</td></tr>
+        <tr><th scope="row">Austedo; Austedo XR</th><td>Corea de Huntington; discinesia tardía</td><td>38%</td></tr>
+        <tr><th scope="row">Xifaxan</th><td>Encefalopatía hepática; síndrome del intestino irritable con diarrea</td><td>63%</td></tr>
+        <tr><th scope="row">Vraylar</th><td>Trastorno bipolar I; depresión mayor; esquizofrenia</td><td>44%</td></tr>
+        <tr><th scope="row">Otezla; Otezla XR</th><td>Úlceras bucales de Behçet; psoriasis en placas; artritis psoriásica</td><td>65%</td></tr>
+      </tbody>
+    </table>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Nada más, sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Por qué el nuevo precio no es su Copago</h2>
+    <p>Esta es la parte que la gente suele entender mal. El precio negociado es el precio fijado para el medicamento. Lo que usted paga lo fija su plan de la Parte D de Medicare. Importan tres cosas:</p>
+    <ul>
+      <li><strong>El Deducible de su plan.</strong> Ningún plan de la Parte D de Medicare puede tener un Deducible superior a $700 en 2027. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Algunos planes no tienen ninguno.</li>
+      <li><strong>El Copago o Coaseguro de su plan.</strong> Esto depende del nivel del medicamento en el Formulario de Medicamentos de su plan (su lista de medicamentos cubiertos), es decir, de los Niveles de Medicamentos. Vea la <a href="/es/medicare-part-d.html">Parte D de Medicare</a>.</li>
+      <li><strong>El límite anual.</strong> El límite de desembolso de bolsillo para los medicamentos cubiertos de la Parte D de Medicare es de $2,400 en 2027. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Cuando lo alcanza, no paga nada más por los medicamentos cubiertos ese año.</li>
+    </ul>
+    <p>La hoja informativa de Medicare presenta la estimación de ahorros "bajo el diseño de beneficio estándar definido". <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> Los planes reales difieren de ese diseño estándar. Por eso, su ahorro podría ser mayor, menor o ninguno. Para una mirada completa a los costos de 2027, vea <a href="/es/medicare-costs-2027.html">Qué cambia en los costos de Medicare para 2027</a>.</p>
+    <p>Si le cuesta distribuir una factura alta de medicamentos, el <a href="/es/medicare-prescription-payment-plan.html">Plan de Pago de Medicamentos Recetados de Medicare</a> le permite pagar en montos mensuales.</p>
+
+    <h2>Ozempic y Wegovy: dos caminos distintos</h2>
+    <p>Ozempic, Rybelsus y Wegovy comparten un mismo precio negociado. Medicare dice que en 2024 estos medicamentos tuvieron el mayor gasto total de la Parte D de Medicare de todos los medicamentos, y que la baja de precio es de 71% respecto al precio de lista de 2024. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> La lista muestra que tratan la diabetes tipo 2, la enfermedad del corazón, y la obesidad o el sobrepeso.</p>
+    <p>Su cobertura sigue dependiendo de por qué se receta el medicamento y de su plan. Para el uso en la pérdida de peso, existe un programa temporal aparte. Lea <a href="/es/medicare-weight-loss-drugs.html">Medicare y los medicamentos para bajar de peso</a> para saber cómo funciona.</p>
+
+    <h2>Qué hacer este otoño</h2>
+    <ol class="steps">
+      <li><strong>Revise cada medicamento que toma.</strong> Vea si está en la lista de arriba.</li>
+      <li><strong>Lea su Aviso Anual de Cambios.</strong> Muestra el Deducible, los niveles y los costos de 2027 de su plan. Vea el <a href="/es/medicare-annual-notice-of-change.html">Aviso Anual de Cambios</a>.</li>
+      <li><strong>Revise el Formulario de Medicamentos de su plan.</strong> Un precio negociado no obliga a un plan a cubrir un medicamento.</li>
+      <li><strong>Compare planes antes del 7 de diciembre.</strong> Vea <a href="/es/medicare-open-enrollment-2027.html">Inscripción Abierta de Medicare 2027</a>.</li>
+      <li><strong>Obtenga ayuda gratuita.</strong> Un consejero de su <a href="/es/ship-directory.html">SHIP</a> puede revisar sus medicamentos con usted.</li>
+    </ol>
+
+    <h2>Qué sigue</h2>
+    <p>Medicare también eligió 15 medicamentos más para una tercera ronda. Las negociaciones se realizan en 2026, y cualquier precio negociado comenzaría en 2028. <!-- src: https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices --></p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Cuándo comienzan los nuevos precios de medicamentos de Medicare?</summary>
+      <div>
+        <p>El 1 de enero de 2027, para los 15 medicamentos de la segunda ronda. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Me costará Ozempic el precio negociado?</summary>
+      <div>
+        <p>No necesariamente. El precio negociado es para un suministro de 30 días. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> Lo que usted paga depende del Deducible de su plan, del Copago o Coaseguro, y del límite anual.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Esto se aplica a los planes de Medicare Advantage?</summary>
+      <div>
+        <p>Los precios se aplican a los medicamentos bajo la Parte D de Medicare. <!-- src: https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf --> Si tiene un plan de Medicare Advantage con cobertura de medicamentos, pregunte a su plan cómo afectan los precios de 2027 sus costos, y revise el aviso de su plan.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Un precio más bajo significa que mi plan debe cubrir el medicamento?</summary>
+      <div>
+        <p>No. Los planes siguen eligiendo qué medicamentos incluyen en su Formulario de Medicamentos. Revise el suyo antes de inscribirse o renovar.</p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/files/document/fact-sheet-negotiated-prices-ipay-2027.pdf" rel="noopener">CMS.gov: Precios negociados para 2027 (hoja informativa)</a></li>
+      <li><a href="https://www.cms.gov/initiatives/medicare-prescription-drug-affordability/overview/medicare-drug-price-negotiation-program/selected-drugs-negotiated-prices" rel="noopener">CMS.gov: Medicamentos seleccionados y precios negociados</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Costos de la Parte D</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer es información educativa general y no está afiliado a ninguna agencia. No le dice qué plan o medicamento elegir. Su costo depende de su plan.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicare-drug-price-negotiation-2027.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

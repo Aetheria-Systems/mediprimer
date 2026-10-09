@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>我的 Medicare Advantage 計劃 2027 年將終止：您的選擇</title>
+<meta name="description" content="您的 Medicare Advantage 計劃要終止了嗎？您會有一段特殊期間可以更換計劃，也可能享有 Medigap（醫療保險補充計劃）的購買權利。請看重要日期、63 天規定和下一步該怎麼做。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="我的 Medicare Advantage 計劃 2027 年將終止：您的選擇">
+<meta property="og:description" content="您的 Medicare Advantage 計劃要終止了嗎？您會有一段特殊期間可以更換計劃，也可能享有 Medigap（醫療保險補充計劃）的購買權利。請看重要日期、63 天規定和下一步該怎麼做。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="我的 Medicare Advantage 計劃 2027 年將終止：您的選擇">
+<meta name="twitter:description" content="您的 Medicare Advantage 計劃要終止了嗎？您會有一段特殊期間可以更換計劃，也可能享有 Medigap（醫療保險補充計劃）的購買權利。請看重要日期、63 天規定和下一步該怎麼做。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "如果我的計劃終止，我會失去 Medicare 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。您的醫療保險A部分和醫療保險B部分會繼續保留。如果您在計劃結束前沒有加入另一個 Medicare Advantage 計劃，您會被註冊到原始醫療保險。"}}, {"@type": "Question", "name": "我有多久的時間選擇新計劃？", "acceptedAnswer": {"@type": "Answer", "text": "特殊期間從您計劃的合約結束前 1 個月開始，到結束後整整 2 個月為止。 10 月 15 日至 12 月 7 日的公開註冊期同樣適用。"}}, {"@type": "Question", "name": "如果我有健康問題，還能買 Medigap 保單嗎？", "acceptedAnswer": {"@type": "Answer", "text": "如果您的計劃要退出 Medicare，而您改回原始醫療保險，您有權在計劃結束前 60 天到結束後 63 天的期間內購買 Medigap 保單。 在這段期間以外，公司可能會根據您的健康狀況拒絕您。"}}, {"@type": "Question", "name": "我需要取消舊計劃嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不需要。舊計劃會在它自己的結束日期終止。當您加入新的 Medicare Advantage 計劃時，您會自動從舊計劃轉出。請留意新計劃的開始日期，才不會出現空窗期。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "我的 Medicare Advantage 計劃 2027 年將終止：您的選擇", "description": "您的 Medicare Advantage 計劃要終止了嗎？您會有一段特殊期間可以更換計劃，也可能享有 Medigap（醫療保險補充計劃）的購買權利。請看重要日期、63 天規定和下一步該怎麼做。", "url": "https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-advantage-plan-ending.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "我的 Medicare Advantage 計劃 2027 年將終止：您的選擇", "item": "https://mediprimer.org/zh-Hant/medicare-advantage-plan-ending.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-advantage-plan-ending.html" lang="en">English</a>
+    <a href="/es/medicare-advantage-plan-ending.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-advantage-plan-ending.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    <a href="/vi/medicare-advantage-plan-ending.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/medicare-advantage-plan-ending.html" lang="ko">한국어</a>
+    <a href="/tl/medicare-advantage-plan-ending.html" lang="tl">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照顧者</p>
+    <h1>我的 Medicare Advantage 計劃 2027 年將終止。現在該怎麼辦？</h1>
+    <p>您的計劃來信說，明年不會再提供這個計劃。您不會沒有保障，但有幾個期限要注意。以下說明這封信的意思，以及如何利用額外的時間更換計劃。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案如下。</strong>如果您的 Medicare Advantage 計劃要退出 Medicare，您必須加入另一個 Medicare 健康計劃，或回到原始醫療保險。<!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --> 您有額外的時間可以辦理。當 Medicare 終止您的計劃合約時，您可以更換計劃的時間從合約結束前 1 個月開始，一直到合約結束後整整 2 個月為止。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 如果您什麼都不做，您會被註冊到原始醫療保險。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 如果您想要 Medigap（醫療保險補充計劃）保單，購買期間很短：從計劃結束前 60 天起，到結束後不超過 63 天為止。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+
+    <div class="note">
+      <strong>先確認您收到的是哪一種信。</strong>許多計劃每年都會寄出<a href="/zh-Hant/medicare-annual-notice-of-change.html">年度變更通知</a>，列出新的費用和規則。這種情況下，您的計劃仍然存在。本頁說明的是另一種信，也就是通知您計劃完全不再提供的信。
+    </div>
+
+    <h2>這封信的意思</h2>
+    <p>私人保險公司每年都會決定，是否繼續在您所在的地區提供某個計劃。<!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --> 當計劃停止時，您在該計劃下的保障會在結束日終止，通常是 12 月 31 日。您的醫療保險A部分和醫療保險B部分不會終止。消失的只有私人計劃這一層。</p>
+    <p>這和計劃只是調整價格或更換醫生不同。也和<a href="/zh-Hant/medicare-advantage-to-original-medicare.html">您自己選擇退出 Medicare Advantage</a>不同。因為計劃本身要終止，您會有特殊的更換權利，這是平常沒有的。</p>
+
+    <h2>您的三個選擇</h2>
+    <ol class="steps">
+      <li><strong>加入另一個 Medicare Advantage 計劃。</strong>Plan Finder 會顯示您居住地區銷售的計劃。請確認您的藥物、醫生和藥局都在承保範圍內。請參閱<a href="/zh-Hant/switching-medicare-advantage-plans.html">更換 Medicare Advantage 計劃：先確認什麼</a>。</li>
+      <li><strong>回到原始醫療保險。</strong>之後您可以加入醫療保險D部分藥物計劃，某些情況下也可以加購 Medigap（醫療保險補充計劃）保單。原始醫療保險本身不承保大多數處方藥，所以藥物計劃很重要。</li>
+      <li><strong>什麼都不做。</strong>如果您在計劃結束前沒有加入另一個 Medicare Advantage 計劃，您會被註冊到原始醫療保險。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 在您加入醫療保險D部分計劃之前，您不會有藥物保障；除非您自行購買，否則也不會有 Medigap。</li>
+    </ol>
+    <p>MediPrimer 不會告訴您哪個選擇最好。請參閱<a href="/zh-Hant/choosing-coverage.html">選擇保障</a>，取得中立的比較。</p>
+
+    <h2>特殊註冊期</h2>
+    <p>Medicare 稱之為特殊註冊期（SEP）。當 Medicare 終止您的計劃合約時適用。您可以改換到另一個 Medicare Advantage 計劃或 Medicare 藥物計劃。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 您可以更換計劃的時間從合約結束前 1 個月開始，到結束後整整 2 個月為止。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>日期</th><th>會發生什麼事</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>10 月 15 日至 12 月 7 日</td><td>一般公開註冊期。您可以像平常一樣更換計劃。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></td></tr>
+          <tr><td>2026 年 12 月 31 日</td><td>您的計劃終止，前提是這是您信上寫的結束日期。</td></tr>
+          <tr><td>計劃結束後整整 2 個月內</td><td>特殊期間結束。如果結束日期是 12 月 31 日，就是 2027 年 2 月底。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>您的信上會列出計劃確切的結束日期。請從該日期開始計算，不要以本頁為準。</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>計劃終止時的 Medigap 權利</h2>
+    <p>Medigap（醫療保險補充計劃）是由私人公司銷售的額外保險。它協助支付原始醫療保險不支付的費用。它只能搭配原始醫療保險使用。<a href="/zh-Hant/medigap.html">我們的 Medigap 指南</a>會說明各個字母代號的計劃。</p>
+    <p>一般來說，在您加入B部分的最初六個月之後，Medigap 公司可以審查您的健康狀況並拒絕您。當您的 Medicare Advantage 計劃要退出 Medicare 時，您則享有保證承保的權利。這表示公司必須賣保單給您。以下是 Medicare 對期限和限制的說明：</p>
+    <ul>
+      <li><strong>期限。</strong>您必須在計劃保障結束前 60 天起，到結束後不超過 63 天內提出申請。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>您必須改回原始醫療保險。</strong>只有在您改回原始醫療保險時才有這項權利；如果您加入另一個 Medicare Advantage 計劃，就沒有。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>開始日期。</strong>在您的 Medicare Advantage 計劃保障結束之前，Medigap 保障無法開始。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>哪些計劃。</strong>在其中某些情況下，Medicare 列出的權利是購買您所在州銷售的 Medigap A、B、C、D、F、G、K 或 L 計劃。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> 請向 Medicare 或您的 SHIP 詢問哪些計劃適用於您。</li>
+      <li><strong>各州規定。</strong>這些是聯邦權利。您所在的州可能提供更多。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+    </ul>
+    <p>請保留您計劃寄來的信件和通知。您可能需要證明您的保障已經結束。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> 因為期限只到計劃結束後 63 天，如果您想要 Medigap，請及早決定。完整步驟請參閱<a href="/zh-Hant/medicare-advantage-to-original-medicare.html">從 Medicare Advantage 改回原始醫療保險</a>。</p>
+
+    <h2>簡短的行動清單</h2>
+    <ol class="steps">
+      <li><strong>找出結束日期</strong>，它在您的信上，請寫下來。</li>
+      <li><strong>列出您的藥物、醫生和藥局。</strong>比較計劃時會用到。</li>
+      <li><strong>比較計劃</strong>，在 <a href="/zh-Hant/using-plan-finder.html">Medicare Plan Finder</a> 查看 2027 年的計劃。</li>
+      <li><strong>如果您可能回到原始醫療保險，請及早決定要不要買 Medigap。</strong>請算好那 63 天。</li>
+      <li><strong>致電您所在州的州健康保險協助計劃。</strong>它提供免費、不偏頗的協助，與任何保險公司都沒有關係。請在 <a href="/zh-Hant/ship-directory.html">SHIP 名錄</a>中找到您所在州的 SHIP。您也可以撥打 1-800-MEDICARE（1-800-633-4227）。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></li>
+    </ol>
+    <p>今年的日期和檢查清單，請參閱 <a href="/zh-Hant/medicare-open-enrollment-2027.html">2027 年 Medicare 公開註冊期</a>。</p>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>如果我的計劃終止，我會失去 Medicare 嗎？</summary>
+      <div>
+        <p>不會。您的醫療保險A部分和醫療保險B部分會繼續保留。如果您在計劃結束前沒有加入另一個 Medicare Advantage 計劃，您會被註冊到原始醫療保險。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我有多久的時間選擇新計劃？</summary>
+      <div>
+        <p>特殊期間從您計劃的合約結束前 1 個月開始，到結束後整整 2 個月為止。<!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 10 月 15 日至 12 月 7 日的公開註冊期同樣適用。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我有健康問題，還能買 Medigap 保單嗎？</summary>
+      <div>
+        <p>如果您的計劃要退出 Medicare，而您改回原始醫療保險，您有權在計劃結束前 60 天到結束後 63 天的期間內購買 Medigap 保單。<!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> 在這段期間以外，公司可能會根據您的健康狀況拒絕您。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我需要取消舊計劃嗎？</summary>
+      <div>
+        <p>不需要。舊計劃會在它自己的結束日期終止。當您加入新的 Medicare Advantage 計劃時，您會自動從舊計劃轉出。請留意新計劃的開始日期，才不會出現空窗期。</p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov：特殊註冊期</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov：我什麼時候可以購買 Medigap 保單？</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options" rel="noopener">Medicare.gov：您的健康計劃選擇</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>採取行動前請先確認。</strong>MediPrimer 提供一般性的教育資訊，與任何機構或保險公司沒有關聯。Medigap 規定因州而異。請向 Medicare、您的計劃來信或您的 SHIP 確認您的日期和權利。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/medicare-advantage-plan-ending.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

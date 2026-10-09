@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare và bệnh Alzheimer: Kiểm Tra Trí Nhớ, Leqembi và Chi Phí</title>
+<meta name="description" content="Những gì Medicare chi trả cho chứng sa sút trí tuệ: kiểm tra trí nhớ, buổi khám lập kế hoạch chăm sóc, và các loại thuốc Alzheimer như Leqembi. Cùng với khoản 20% bạn trả và quy định về sổ đăng ký.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare và bệnh Alzheimer: Kiểm Tra Trí Nhớ, Leqembi và Chi Phí">
+<meta property="og:description" content="Những gì Medicare chi trả cho chứng sa sút trí tuệ: kiểm tra trí nhớ, buổi khám lập kế hoạch chăm sóc, và các loại thuốc Alzheimer như Leqembi. Cùng với khoản 20% bạn trả và quy định về sổ đăng ký.">
+<meta property="og:url" content="https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare và bệnh Alzheimer: Kiểm Tra Trí Nhớ, Leqembi và Chi Phí">
+<meta name="twitter:description" content="Những gì Medicare chi trả cho chứng sa sút trí tuệ: kiểm tra trí nhớ, buổi khám lập kế hoạch chăm sóc, và các loại thuốc Alzheimer như Leqembi. Cùng với khoản 20% bạn trả và quy định về sổ đăng ký.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Medicare có chi trả cho Leqembi không?", "acceptedAnswer": {"@type": "Answer", "text": "Medicare Phần B có thể chi trả nếu bạn đáp ứng các quy định ở trên và Nhà Cung Cấp của bạn thu thập dữ liệu cho một nghiên cứu hoặc sổ đăng ký đủ điều kiện. Sau khi trả Khoản Khấu Trừ, bạn trả 20%."}}, {"@type": "Question", "name": "Medicare có chi trả cho bài kiểm tra trí nhớ không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Việc đánh giá nhận thức có thể được thực hiện trong buổi khám Sức Khỏe Tổng Quát (Wellness) của bạn, và Medicare Phần B chi trả cho một buổi khám riêng để xem xét đầy đủ."}}, {"@type": "Question", "name": "Người chăm sóc có thể đến buổi khám không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Medicare cho biết bạn có thể đưa theo vợ/chồng, bạn bè hoặc người chăm sóc để giúp lắng nghe và trả lời câu hỏi."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare và bệnh Alzheimer: Kiểm Tra Trí Nhớ, Leqembi và Chi Phí", "description": "Những gì Medicare chi trả cho chứng sa sút trí tuệ: kiểm tra trí nhớ, buổi khám lập kế hoạch chăm sóc, và các loại thuốc Alzheimer như Leqembi. Cùng với khoản 20% bạn trả và quy định về sổ đăng ký.", "url": "https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-alzheimers-dementia-coverage.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-alzheimers-dementia-coverage.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Medicare và bệnh Alzheimer: Kiểm Tra Trí Nhớ, Leqembi và Chi Phí", "item": "https://mediprimer.org/vi/medicare-alzheimers-dementia-coverage.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-alzheimers-dementia-coverage.html" lang="en">English</a>
+    <a href="/es/medicare-alzheimers-dementia-coverage.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-alzheimers-dementia-coverage.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-alzheimers-dementia-coverage.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành cho Hội Viên &amp; Người Chăm Sóc</p>
+    <h1>Bệnh Alzheimer và Chứng Sa Sút Trí Tuệ theo Medicare: Kiểm Tra Trí Nhớ, Chẩn Đoán và Các Loại Thuốc như Leqembi</h1>
+    <p>Medicare chi trả cho việc kiểm tra trí nhớ, một buổi khám đầy đủ để lập kế hoạch chăm sóc, và một số loại thuốc điều trị Alzheimer. Mỗi loại có quy định và chi phí riêng. Dưới đây là những gì bạn nên biết.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Câu trả lời ngắn gọn.</strong> Medicare Phần B chi trả cho việc đánh giá nhận thức (kiểm tra trí nhớ và khả năng suy nghĩ) trong buổi khám Sức Khỏe Tổng Quát (Wellness) hằng năm của bạn. Medicare Phần B cũng chi trả cho một buổi khám riêng, dài hơn, để xác nhận chẩn đoán như bệnh Alzheimer và lập kế hoạch chăm sóc. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Medicare Phần B cũng có thể chi trả cho các loại thuốc Alzheimer đã được FDA chấp thuận như Leqembi (lecanemab) và Kisunla (donanemab), nhưng chỉ khi Nhà Cung Cấp của bạn thu thập dữ liệu cho một nghiên cứu hoặc sổ đăng ký đủ điều kiện. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Với cả hai, sau khi bạn trả Khoản Khấu Trừ của Medicare Phần B, bạn trả 20% Số Tiền Được Chấp Thuận của Medicare. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+
+    <h2>Bước 1: Kiểm tra trí nhớ trong buổi khám Sức Khỏe Tổng Quát</h2>
+    <p>Nhà Cung Cấp của bạn có thể tìm các dấu hiệu của chứng sa sút trí tuệ trong buổi khám "Sức Khỏe Tổng Quát" (Wellness) hằng năm và trong các buổi khám khác. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Các dấu hiệu gặp vấn đề gồm khó nhớ, khó học điều mới, khó tập trung, khó quản lý tiền bạc và khó đưa ra quyết định. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Trầm cảm, lo âu và mê sảng cũng có thể gây lú lẫn, nên việc tìm ra nguyên nhân rất quan trọng. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Để tìm hiểu thêm về buổi khám này, xem <a href="/vi/medicare-wellness-visit-vs-physical.html">Khám Sức Khỏe Tổng Quát so với Khám Tổng Thể</a>.</p>
+
+    <h2>Bước 2: Buổi khám riêng để đánh giá nhận thức và lập kế hoạch chăm sóc</h2>
+    <p>Medicare Phần B chi trả cho một buổi khám riêng để xem xét đầy đủ khả năng suy nghĩ và trí nhớ của bạn, xác lập hoặc xác nhận chẩn đoán, và xây dựng kế hoạch chăm sóc. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Trong buổi khám này, Nhà Cung Cấp của bạn có thể:</p>
+    <ul>
+      <li>Khám, hỏi về tiền sử bệnh và xem lại các loại thuốc bạn dùng.</li>
+      <li>Xác định những nguồn hỗ trợ của bạn, gồm cả sự chăm sóc mà người chăm sóc thường xuyên của bạn có thể đảm nhận.</li>
+      <li>Lập kế hoạch chăm sóc cho các triệu chứng của bạn.</li>
+      <li>Giúp bạn lập hoặc cập nhật kế hoạch chăm sóc trước (advance care plan).</li>
+      <li>Giới thiệu bạn đến bác sĩ chuyên khoa và chỉ cho bạn các nguồn trợ giúp trong cộng đồng, như chương trình chăm sóc sức khỏe ban ngày cho người lớn tuổi và các nhóm hỗ trợ.</li>
+    </ul>
+    <p>Tất cả thông tin trên đến từ Medicare.gov. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --> Bạn có thể đưa theo vợ/chồng, bạn bè hoặc người chăm sóc. Khoản Khấu Trừ của Medicare Phần B và Đồng Bảo Hiểm 20% được áp dụng. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Bước 3: Thuốc Alzheimer như Leqembi và Kisunla</h2>
+    <p>Những loại thuốc này được gọi là kháng thể đơn dòng. Chúng nhắm vào các mảng beta-amyloid trong não. Thuốc có thể làm chậm hoặc trì hoãn các triệu chứng, nhưng không chữa khỏi hay đảo ngược bệnh. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+    <h3>Ai đủ điều kiện</h3>
+    <p>Nhà Cung Cấp của bạn phải xác nhận rằng bạn có các mảng beta-amyloid phù hợp với bệnh Alzheimer. Họ cũng phải chẩn đoán bạn bị suy giảm nhận thức nhẹ do bệnh Alzheimer, hoặc sa sút trí tuệ nhẹ do bệnh Alzheimer. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+    <h3>Quy định về sổ đăng ký</h3>
+    <p>Để Medicare chi trả, Nhà Cung Cấp của bạn phải thu thập dữ liệu về mức độ hiệu quả của thuốc cho một nghiên cứu hoặc sổ đăng ký đủ điều kiện. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Hãy hỏi văn phòng Nhà Cung Cấp của bạn xem họ có tham gia hay không trước khi bạn lên kế hoạch điều trị.</p>
+    <h3>Bạn trả bao nhiêu</h3>
+    <p>Sau khi trả Khoản Khấu Trừ của Medicare Phần B, bạn trả 20% Số Tiền Được Chấp Thuận của Medicare. Bạn cũng có thể cần chụp chiếu và xét nghiệm trước hoặc trong khi điều trị, và điều này có thể làm tăng chi phí của bạn. Thuốc được truyền qua đường tĩnh mạch (IV) tại văn phòng của Nhà Cung Cấp hoặc một cơ sở ngoại trú khác. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Bảo Hiểm Bổ Sung Medicare (Medigap) hoặc bảo hiểm khác có thể trả một phần của khoản 20% đó. Xem <a href="/vi/medigap.html">Các Chương Trình Medigap</a>.</p>
+    <h3>Nếu bạn không đáp ứng quy định của Medicare Phần B</h3>
+    <p>Chương trình thuốc của Medicare (Medicare Phần D) của bạn có thể chi trả. Hãy liên hệ với chương trình của bạn. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --></p>
+
+    <h2>Hỗ trợ thêm cho gia đình</h2>
+    <p>Một số người sống chung với chứng sa sút trí tuệ, cùng với những người chăm sóc không lương của họ, có thể nhận thêm hỗ trợ thông qua Mô Hình Hướng Dẫn Trải Nghiệm Sa Sút Trí Tuệ Tốt Hơn (GUIDE) mà không phải trả Đồng Bảo Hiểm. Hãy hỏi Nhà Cung Cấp của bạn xem họ có tham gia hay không. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Dành cho người chăm sóc, xem <a href="/vi/caregivers.html">Người Chăm Sóc</a>.</p>
+
+    <h2>Những gì Medicare không giải quyết</h2>
+    <p>Chăm sóc dài hạn cho chứng sa sút trí tuệ là một vấn đề khác. Xem <a href="/vi/medicare-long-term-care.html">Medicare và Chăm Sóc Dài Hạn</a>. Việc chăm sóc ung thư cũng có trang riêng: <a href="/vi/medicare-cancer-treatment.html">Medicare và Điều Trị Ung Thư</a>.</p>
+
+    <h2>Các câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Medicare có chi trả cho Leqembi không?</summary>
+      <div>
+        <p>Medicare Phần B có thể chi trả nếu bạn đáp ứng các quy định ở trên và Nhà Cung Cấp của bạn thu thập dữ liệu cho một nghiên cứu hoặc sổ đăng ký đủ điều kiện. <!-- src: https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease --> Sau khi trả Khoản Khấu Trừ, bạn trả 20%.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Medicare có chi trả cho bài kiểm tra trí nhớ không?</summary>
+      <div>
+        <p>Có. Việc đánh giá nhận thức có thể được thực hiện trong buổi khám Sức Khỏe Tổng Quát (Wellness) của bạn, và Medicare Phần B chi trả cho một buổi khám riêng để xem xét đầy đủ. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Người chăm sóc có thể đến buổi khám không?</summary>
+      <div>
+        <p>Có. Medicare cho biết bạn có thể đưa theo vợ/chồng, bạn bè hoặc người chăm sóc để giúp lắng nghe và trả lời câu hỏi. <!-- src: https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services --></p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/coverage/cognitive-assessment-care-plan-services" rel="noopener">Medicare.gov: Dịch vụ đánh giá nhận thức &amp; lập kế hoạch chăm sóc</a></li>
+      <li><a href="https://www.medicare.gov/coverage/monoclonal-antibodies-for-the-treatment-of-early-alzheimers-disease" rel="noopener">Medicare.gov: Kháng thể đơn dòng cho bệnh Alzheimer giai đoạn sớm</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare.gov: Sổ tay Medicare &amp; You</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục chung, không phải lời khuyên y tế, và không trực thuộc bất kỳ cơ quan nào. Một loại thuốc có phù hợp với bạn hay không là quyết định của bạn và bác sĩ của bạn.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/medicare-alzheimers-dementia-coverage.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giải Thích Thời Gian Ghi Danh Mở Medicare Advantage (1/1–31/3)</title>
+<meta name="description" content="Ai có thể dùng Thời Gian Ghi Danh Mở Medicare Advantage, quy tắc chỉ được đổi một lần, những gì bạn được và không được làm, và điểm khác với thời gian ghi danh mở vào mùa thu.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Giải Thích Thời Gian Ghi Danh Mở Medicare Advantage (1/1–31/3)">
+<meta property="og:description" content="Ai có thể dùng Thời Gian Ghi Danh Mở Medicare Advantage, quy tắc chỉ được đổi một lần, những gì bạn được và không được làm, và điểm khác với thời gian ghi danh mở vào mùa thu.">
+<meta property="og:url" content="https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Giải Thích Thời Gian Ghi Danh Mở Medicare Advantage (1/1–31/3)">
+<meta name="twitter:description" content="Ai có thể dùng Thời Gian Ghi Danh Mở Medicare Advantage, quy tắc chỉ được đổi một lần, những gì bạn được và không được làm, và điểm khác với thời gian ghi danh mở vào mùa thu.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Thời Gian Ghi Danh Mở Medicare Advantage có giống với Ghi Danh Hằng Năm không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Thời gian ghi danh mở vào mùa thu kéo dài từ ngày 15 tháng 10 đến ngày 7 tháng 12 và dành cho tất cả mọi người có Medicare. Thời gian từ tháng 1 đến tháng 3 chỉ dành cho những người đã tham gia một chương trình Medicare Advantage."}}, {"@type": "Question", "name": "Tôi có thể thay đổi nhiều hơn một lần không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Bạn chỉ có thể thực hiện một thay đổi trong thời gian này."}}, {"@type": "Question", "name": "Tôi có Original Medicare. Tôi có thể tham gia một chương trình Medicare Advantage vào tháng 1 không?", "acceptedAnswer": {"@type": "Answer", "text": "Không thông qua thời gian này. Thời gian này không cho phép bạn chuyển từ Original Medicare sang một chương trình Medicare Advantage. Trong một số trường hợp, bạn có thể đủ điều kiện cho Thời Gian Ghi Danh Đặc Biệt. Xem Ghi Danh & Thời Hạn ."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Giải Thích Thời Gian Ghi Danh Mở Medicare Advantage (1/1–31/3)", "description": "Ai có thể dùng Thời Gian Ghi Danh Mở Medicare Advantage, quy tắc chỉ được đổi một lần, những gì bạn được và không được làm, và điểm khác với thời gian ghi danh mở vào mùa thu.", "url": "https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-09", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-advantage-open-enrollment-period.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-advantage-open-enrollment-period.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Giải Thích Thời Gian Ghi Danh Mở Medicare Advantage (1/1–31/3)", "item": "https://mediprimer.org/vi/medicare-advantage-open-enrollment-period.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-advantage-open-enrollment-period.html" lang="en">English</a>
+    <a href="/es/medicare-advantage-open-enrollment-period.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-advantage-open-enrollment-period.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-advantage-open-enrollment-period.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành Cho Hội Viên &amp; Người Chăm Sóc</p>
+    <h1>Thời Gian Ghi Danh Mở Medicare Advantage (1 Tháng 1–31 Tháng 3): Một Lần Thay Đổi, và Ai Có Thể Sử Dụng</h1>
+    <p>Nếu bạn đang tham gia một chương trình Medicare Advantage, mỗi mùa đông bạn có một cơ hội để đổi chương trình hoặc quay lại Original Medicare. Đây không phải là Thời Gian Ghi Danh Mở vào mùa thu.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Câu trả lời ngắn gọn.</strong> Thời Gian Ghi Danh Mở Medicare Advantage kéo dài từ ngày 1 tháng 1 đến ngày 31 tháng 3 hằng năm. Thời gian này chỉ dành cho những người đã tham gia một chương trình Medicare Advantage. Bạn có thể thực hiện một thay đổi: chuyển sang một chương trình Medicare Advantage khác, hoặc rời chương trình của bạn và quay lại Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Nếu bạn quay lại Original Medicare, bạn cũng có thể tham gia một chương trình thuốc Medicare riêng. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Mọi thay đổi có hiệu lực từ ngày đầu tiên của tháng sau khi chương trình nhận được yêu cầu của bạn. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <h2>Ai có thể sử dụng</h2>
+    <p>Bạn chỉ có thể dùng thời gian này nếu bạn đã tham gia một chương trình Medicare Advantage, dù có hoặc không có bảo hiểm thuốc. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Nếu bạn có Original Medicare, thời gian này không dành cho bạn.</p>
+
+    <h2>Những gì bạn có thể làm</h2>
+    <ul>
+      <li><strong>Chuyển sang một chương trình Medicare Advantage khác.</strong> Chương trình mới có thể có hoặc không có bảo hiểm thuốc. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Rời chương trình của bạn và quay lại Original Medicare.</strong> Sau đó bạn có thể tham gia một chương trình thuốc Medicare riêng. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Xem <a href="/vi/medicare-advantage-to-original-medicare.html">Chuyển Từ Medicare Advantage Sang Original Medicare</a>, bao gồm những điều cần biết về Bảo Hiểm Bổ Sung Medicare (Medigap).</li>
+    </ul>
+
+    <h2>Những gì bạn không thể làm</h2>
+    <ul>
+      <li>Bạn không thể chuyển từ Original Medicare sang một chương trình Medicare Advantage. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>Bạn không thể tham gia một chương trình thuốc riêng nếu bạn có Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>Bạn không thể chuyển từ chương trình thuốc này sang chương trình thuốc khác nếu bạn có Original Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li>Bạn không thể thực hiện nhiều hơn một thay đổi. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Vì bạn chỉ có một lần thay đổi, hãy kiểm tra chương trình mới trước khi tham gia. Hãy xem trước các bác sĩ, thuốc và chi phí của chương trình đó. Xem <a href="/vi/switching-medicare-advantage-plans.html">Chuyển Đổi Chương Trình Medicare Advantage</a>.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Không gì khác, không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Điểm khác với thời gian ghi danh mở vào mùa thu</h2>
+    <table>
+      <thead><tr><th scope="col"></th><th scope="col">Thời Gian Ghi Danh Mở Mùa Thu</th><th scope="col">Thời Gian Ghi Danh Mở MA</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Ngày</th><td>15 Tháng 10 – 7 Tháng 12</td><td>1 Tháng 1 – 31 Tháng 3</td></tr>
+        <tr><th scope="row">Ai</th><td>Bất kỳ ai có Medicare</td><td>Chỉ những người đã tham gia một chương trình Medicare Advantage</td></tr>
+        <tr><th scope="row">Làm gì</th><td>Tham gia, rời hoặc đổi chương trình</td><td>Một thay đổi: đổi chương trình MA, hoặc quay lại Original Medicare</td></tr>
+        <tr><th scope="row">Bảo hiểm bắt đầu</th><td>1 Tháng 1</td><td>Ngày đầu tiên của tháng sau khi chương trình nhận được yêu cầu của bạn</td></tr>
+      </tbody>
+    </table>
+    <p>Các ngày của mùa thu và ngày bảo hiểm bắt đầu lấy từ Medicare.gov. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Để xem toàn cảnh về mùa thu, hãy xem <a href="/vi/medicare-open-enrollment-2027.html">Thời Gian Ghi Danh Mở Medicare 2027</a> và <a href="/vi/enrollment-calendar.html">Lịch Ghi Danh</a>.</p>
+
+    <h2>Nếu bạn đã tham gia một chương trình vào mùa thu này và đổi ý</h2>
+    <p>Medicare cho biết nếu bạn tham gia một chương trình Medicare Advantage trong thời gian ghi danh mở vào mùa thu rồi đổi ý, bạn có thể quay lại Original Medicare hoặc đổi sang một chương trình Medicare Advantage khác từ ngày 1 tháng 1 đến ngày 31 tháng 3. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Đó là một lần thay đổi của bạn.</p>
+
+    <h2>Cách thực hiện thay đổi</h2>
+    <ol class="steps">
+      <li><strong>Chọn chương trình trước.</strong> Dùng <a href="/vi/using-plan-finder.html">Công Cụ Tìm Chương Trình Medicare</a> và kiểm tra các bác sĩ và thuốc.</li>
+      <li><strong>Tham gia chương trình mới.</strong> Nếu bạn đổi sang một chương trình Medicare Advantage mới, việc Ghi Danh vào chương trình đó sẽ chấm dứt chương trình cũ của bạn.</li>
+      <li><strong>Nếu quay lại Original Medicare,</strong> hãy tham gia thêm một chương trình thuốc riêng. Medicare cho biết bạn không cần liên lạc với chương trình Medicare Advantage của mình. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Gọi để được giúp đỡ.</strong> 1-800-MEDICARE (1-800-633-4227), hoặc cố vấn <a href="/vi/ship-directory.html">SHIP</a> miễn phí của bạn.</li>
+    </ol>
+
+    <h2>Các câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Thời Gian Ghi Danh Mở Medicare Advantage có giống với Ghi Danh Hằng Năm không?</summary>
+      <div>
+        <p>Không. Thời gian ghi danh mở vào mùa thu kéo dài từ ngày 15 tháng 10 đến ngày 7 tháng 12 và dành cho tất cả mọi người có Medicare. Thời gian từ tháng 1 đến tháng 3 chỉ dành cho những người đã tham gia một chương trình Medicare Advantage. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi có thể thay đổi nhiều hơn một lần không?</summary>
+      <div>
+        <p>Không. Bạn chỉ có thể thực hiện một thay đổi trong thời gian này. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi có Original Medicare. Tôi có thể tham gia một chương trình Medicare Advantage vào tháng 1 không?</summary>
+      <div>
+        <p>Không thông qua thời gian này. Thời gian này không cho phép bạn chuyển từ Original Medicare sang một chương trình Medicare Advantage. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Trong một số trường hợp, bạn có thể đủ điều kiện cho Thời Gian Ghi Danh Đặc Biệt. Xem <a href="/vi/enrollment.html">Ghi Danh &amp; Thời Hạn</a>.</p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare.gov: Sổ tay Medicare &amp; Bạn</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan" rel="noopener">Medicare.gov: Tham gia một chương trình</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục chung và không liên kết với bất kỳ cơ quan nào. MediPrimer không đề xuất bất kỳ chương trình nào. Hãy xác nhận các ngày và các lựa chọn của riêng bạn với Medicare hoặc SHIP của bạn.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/medicare-advantage-open-enrollment-period.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
