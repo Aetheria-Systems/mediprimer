@@ -40,7 +40,7 @@ REPAIRS = [
      # render_diagrams sets every translated page's alt from
      # diagram-strings.json, which is the source of truth for those strings.
      ["python3", "build/render_diagrams.py"]),
-    (["python3", "update/validate.py"],
+    (["python3", "build/validate.py"],
      "dead links into pages that have no translation yet",
      # relink points them at the English page, which is already the build's
      # documented behaviour for a language launched below 100%.
