@@ -24,16 +24,36 @@ A static website that explains U.S. health-coverage programs in plain English (a
   - `readability.py` — checks member pages against a plain-language target.
   - `factdiff.py` — flags factual drift after bulk edits.
 
-## Build
+## Build, check, deploy
 
-```sh
+```
 make build    # normalize + assemble + seo (stamps today's date)
-make check    # build, then JS syntax check + plain-language gate (grade <= 9.5)
-make deploy   # check, factual-drift report, rsync to the live docroot
+make check    # build, then every quality gate (see below)
+make deploy   # check, then commit -> pull request -> merge -> GitHub Actions publishes
 ```
 
-`make check` is the canonical verification — run it before committing content
-changes. Then serve `public/` with any static web server.
+`make check` is the canonical verification — run it before committing content.
+It runs the plain-language gate (grade <= 9.5 on every member page), the
+JS syntax check, language-coverage and translated-attribute checks, the
+official-figures check (`build/official-figures.json`), chrome and chatbot
+injection checks, and `build/validate.py` (dead links, unsourced dollar
+figures).
+
+**Nothing is deployed from a working tree.** `.github/workflows/deploy.yml`
+builds and re-runs every gate on a clean checkout of `main`, then publishes
+from the self-hosted runner on the web server and verifies that the live site
+serves that exact commit (`/deploy-stamp.txt`). Two further gates run there
+against the live site: `build/verify_new_figures.py` (every newly added
+dollar figure must be printed on the official page cited beside it) and
+`build/verify_news_claims.py` (every count or percentage taken from a news or
+research article must be quoted verbatim from the article, which is fetched
+and matched). To ship: commit, open a PR to `main`, merge. Rollback is
+`git revert` + merge.
+
+The automated content pipelines commit to the `autopilot` branch, open and
+merge their PR, wait for the Deploy run, and fail loudly if the live stamp
+does not match. Their code lives in a separate private repository
+(operational tooling, not part of the public site).
 
 ## License
 
