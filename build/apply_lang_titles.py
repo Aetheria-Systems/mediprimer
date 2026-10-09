@@ -13,7 +13,7 @@ import re
 
 BASE = pathlib.Path(__file__).parent.parent
 PUB = BASE / "public"
-OVERRIDES = BASE / "seo" / "lang-title-overrides.json"
+OVERRIDES = BASE / "build" / "lang-title-overrides.json"   # in the public repo so a clean GitHub checkout builds the same titles
 
 
 def main():

@@ -12,7 +12,7 @@ import json, os, re, sys, urllib.request
 
 BASE = "https://mediprimer.org"
 HERE = os.path.dirname(os.path.abspath(__file__))
-KEY_FILE = os.path.join(HERE, ".indexnow-key")
+KEY_FILE = os.environ.get("INDEXNOW_KEY_FILE") or os.path.join(HERE, ".indexnow-key")
 SITEMAP = os.path.join(HERE, "..", "public", "sitemap.xml")
 
 if not os.path.exists(KEY_FILE):

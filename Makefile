@@ -1,7 +1,7 @@
 # MediPrimer build / verify / deploy.
 #   make build   — normalize + assemble + seo (stamps today's date)
 #   make check   — build, then JS syntax check + plain-language gate (grade <= 9.5)
-#   make deploy  — check, show factual-drift report vs live, rsync to /var/www
+#   make deploy  — check, factual-drift report, then commit -> PR -> merge -> GitHub Actions publishes
 
 DATE  := $(shell date +%F)
 PUB   := public
@@ -26,8 +26,11 @@ check: build
 	python3 build/check_chatbot_injected.py
 	python3 update/validate.py
 
+# Deploys happen from GitHub: .github/workflows/deploy.yml builds and publishes
+# every merge to main on the self-hosted runner. `make deploy` therefore
+# commits the working tree, opens and merges the PR, waits for that workflow,
+# and verifies the live stamp. A direct rsync from a working tree is no longer
+# a supported path (2026-10-09).
 deploy: check
 	python3 build/factdiff.py
-	sudo rsync -a --delete --chown=www-data:www-data $(PUB)/ $(LIVE)/
-	python3 build/indexnow.py
-	@echo 'Deployed to $(LIVE)'
+	bash seo/deploy-via-github.sh "deploy: $(shell git log -1 --format=%s 2>/dev/null | cut -c1-60) + working-tree changes $(DATE)"
