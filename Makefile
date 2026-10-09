@@ -24,7 +24,7 @@ check: build
 	python3 build/check_facts.py --all
 	python3 build/check_chrome_labels.py
 	python3 build/check_chatbot_injected.py
-	python3 update/validate.py
+	python3 build/validate.py
 
 # Deploys happen from GitHub: .github/workflows/deploy.yml builds and publishes
 # every merge to main on the self-hosted runner. `make deploy` therefore

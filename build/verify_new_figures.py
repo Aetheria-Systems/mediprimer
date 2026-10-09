@@ -25,7 +25,7 @@ import re
 import sys
 import urllib.request
 
-PUB = pathlib.Path("/home/deltaprism/mediprimer/public")
+PUB = pathlib.Path(__file__).resolve().parent.parent / "public"
 LIVE = pathlib.Path("/var/www/mediprimer/public")
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 FIG = re.compile(r"\$[0-9][0-9,]*(?:\.[0-9]{2})?")
