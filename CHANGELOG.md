@@ -1,5 +1,46 @@
 # Changelog
 
+## 2026-10-06 / 09 — Accuracy gates, 2027 plan-exit coverage, corrections
+
+**New pages.** *Medicare Advantage Plans Going Away in 2027: Who and Why* — a
+candid explainer of the insurer withdrawals for 2027 (Medicare Advantage,
+Part D, Marketplace, Medicaid), the government payment and subsidy decisions
+behind them, what changes for readers, how to check whether your own plan is
+ending, and what to do before December 7. Every figure cites its source
+beside it, and the page is reconciled with the plan-comparison and
+plan-ending guides so each answers a different question. Also published:
+Marketplace open enrollment 2027, a Medicare Advantage plan ending for 2027,
+the hold-harmless rule, turning 65 on a Marketplace plan, late-enrollment
+penalties, Extra Help, mixed-status families and the Marketplace, PACE.
+
+**Content corrections.** The retirement/loss-of-coverage page wrongly put
+Medicaid under the 60-day Marketplace window; Medicaid has no deadline and
+the page now says so. The privacy policy described a site with no forms after
+an email signup had been added; it now explains exactly what the signup
+stores, sends, and how to unsubscribe or be deleted, and every copy of the old
+statement (meta, social, structured data, "Your choices") was reconciled. The
+signup box promised "nothing else" while the fine print said weekly; both now
+say the same thing in all six languages. Stacked introductions on the
+help-paying page were merged. 2027 Part D figures posted by Medicare.gov
+(deductible limit $700, out-of-pocket cap $2,400) replaced "published in the
+fall" wording. Twenty-five existing pages were rewritten with answer-first
+openings; two page-1 listings got titles that no longer give the whole answer
+away in the results.
+
+**Build gates (`make check` / `make deploy`).** The plain-language gate now
+covers every member page registered in `build/normalize.py` (it checked a
+fixed list of 32; six newer pages read above grade 9.5 and were simplified).
+`build/official-figures.json` now also guards the Part D out-of-pocket cap and
+maximum deductible. The deploy pipeline additionally requires every newly
+added dollar figure to be printed on the official page cited beside it, and
+every count or percentage taken from a news or research article to carry the
+article's exact sentence, which is fetched and matched before deploy. The
+newsletter confirmation email now delivers the promised checklist in the
+reader's language, and the page tells readers a confirmation click is needed.
+
+**Reporting.** The IndexNow message says what it is (notification accepted by
+Bing and partners; Google does not use IndexNow; not indexing).
+
 ## 2026-09-21 / 22 — Indexing, Core Web Vitals, cannibalisation, AI-search readiness
 
 **Indexing and crawl.** Google was fetching roughly 7 URLs a day against 774
