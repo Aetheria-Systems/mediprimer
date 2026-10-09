@@ -1,0 +1,24 @@
+{
+ "es": {
+  "retiring-losing-coverage.html": {
+   "title": "Periodo sin cobertura de Medicare: qué hacer al jubilarte",
+   "description": "¿Periodo sin cobertura de Medicare? Qué hacer si te quedas sin cobertura al jubilarte o al perder el seguro que tenías por tu empleo.",
+   "query": "periodo sin cobertura de medicare",
+   "set": "2026-10-06"
+  },
+  "brokers.html": {
+   "title": "Apoyo a agentes de seguros: licencias y normas de Medicare",
+   "description": "Apoyo a agentes de seguros: referencia educativa sobre licencias, cumplimiento de Medicare, regulaciones de CMS y obligaciones profesionales.",
+   "query": "apoyo a agentes de seguros",
+   "set": "2026-10-06"
+  }
+ },
+ "zh-Hant": {
+  "medicaid-starting-out.html": {
+   "title": "Medicaid 中文指南：新手入門 — MediPrimer",
+   "description": "以淺顯易懂的中文介紹Medicaid：是什麼、與Medicare的差異、資格與申請下一步。",
+   "query": "medicaid 中文",
+   "set": "2026-09-15"
+  }
+ }
+}

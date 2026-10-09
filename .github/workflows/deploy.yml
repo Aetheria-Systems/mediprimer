@@ -1,0 +1,43 @@
+# Deploy mediprimer.org from GitHub.
+#
+# Every merge to main is built and checked here, then published by the
+# self-hosted runner that lives on the web server (SSH to that server is
+# Tailscale-only, so a hosted runner could not reach it). Nothing is deployed
+# from anyone's working tree: what is live is always a commit on main.
+# The automated content pipelines commit to the `autopilot` branch, open and
+# merge a PR, then wait for this workflow and verify the stamp below.
+name: Deploy
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: self-hosted
+    timeout-minutes: 30
+    env:
+      DOCROOT: /var/www/mediprimer/public
+      INDEXNOW_KEY_FILE: /home/deltaprism/mediprimer/build/.indexnow-key
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and quality gates
+        run: make check
+      - name: Fact gates against the live site
+        run: |
+          python3 build/verify_new_figures.py --pub public --live "$DOCROOT"
+          python3 build/verify_news_claims.py --pub public --live "$DOCROOT"
+      - name: Stamp the build with its commit
+        run: echo "${GITHUB_SHA}" > public/deploy-stamp.txt
+      - name: Publish
+        run: |
+          sudo -n rsync -a --delete --chown=www-data:www-data public/ "$DOCROOT/"
+          sudo -n systemctl reload nginx
+      - name: Verify the live site serves this commit
+        run: |
+          live="$(curl -fsS --resolve mediprimer.org:443:127.0.0.1 https://mediprimer.org/deploy-stamp.txt)"
+          test "$live" = "$GITHUB_SHA" || { echo "live stamp $live != $GITHUB_SHA"; exit 1; }
+      - name: Notify search engines (IndexNow)
+        run: python3 build/indexnow.py
