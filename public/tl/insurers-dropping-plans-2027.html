@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino at Bakit</title>
+<meta name="description" content="Itinitigil ng Humana, UnitedHealthcare at iba pa ang mga plano ng Medicare Advantage para sa 2027. Bakit ito nangyayari, paano alamin kung magtatapos ang inyong plano, at ano ang gagawin bago ang Dis 7.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino at Bakit">
+<meta property="og:description" content="Itinitigil ng Humana, UnitedHealthcare at iba pa ang mga plano ng Medicare Advantage para sa 2027. Bakit ito nangyayari, paano alamin kung magtatapos ang inyong plano, at ano ang gagawin bago ang Dis 7.">
+<meta property="og:url" content="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino at Bakit">
+<meta name="twitter:description" content="Itinitigil ng Humana, UnitedHealthcare at iba pa ang mga plano ng Medicare Advantage para sa 2027. Bakit ito nangyayari, paano alamin kung magtatapos ang inyong plano, at ano ang gagawin bago ang Dis 7.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Mawawala ba ang mga plano ng Medicare Advantage sa 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Pinanatili ng karamihan ng mga insurer ang karamihan ng kanilang mga plano, at karamihan ng mga county ay marami pa ring pagpipilian. Ang mawawala ay ang mga planong marginal: mababa ang rating, nasa mga kanayunan o mamahaling county, o pinatatakbo ng maliliit na insurer na pag-aari ng mga sistema ng ospital. Alamin kung kabilang dito ang sa inyo."}}, {"@type": "Question", "name": "Nagtitigil ba ang Humana ng mga plano ng Medicare Advantage para sa 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Oo. Tinatapos ng Humana ang mga planong sumasaklaw sa humigit-kumulang 600,000 miyembro, kadalasan ay mga planong may rating na 3.5 bituin o mas mababa. Nakatanggap ang mga miyembro ng mga liham ng hindi pag-renew na may petsang Oktubre 2, at magtatapos ang kanilang mga plano sa Disyembre 31. (Insurance Business) Kung wala kayong natanggap na liham, magpapatuloy ang inyong planong Humana; basahin ang Taunang Abiso ng Pagbabago nito para sa mga pagbabago sa 2027. Tingnan ang paano suriin ang sarili ninyong plano ."}}, {"@type": "Question", "name": "Nagtitigil ba ang UnitedHealthcare (AARP) ng mga plano ng Medicare Advantage para sa 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Oo. Itinitigil ng UnitedHealthcare ang mga planong sumasaklaw sa humigit-kumulang 390,000 miyembro at aalis ito sa 228 county. (Yahoo Finance) (KFF) Magpapatuloy ang karamihan ng mga plano nito. Sinasabi ng inyong liham kung alin sa dalawa ang sitwasyon ninyo."}}, {"@type": "Question", "name": "Aalis ba ang Aetna sa Medicare Advantage sa 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi ganap. Aalis ang Aetna (CVS Health) sa humigit-kumulang 103 county para sa 2027 pero patuloy itong magbebenta ng mga plano sa ibang lugar. (Healthcare Dive) Kung kabilang ang inyong county sa mga iyon, nakatanggap kayo ng liham ng hindi pag-renew."}}, {"@type": "Question", "name": "Ano ang nagbabago sa mga plano ng Medicare Advantage sa 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Mas kaunting plano at mas kaunting insurer sa maraming county, mas maraming HMO at mas kaunting PPO, mas maliliit na dagdag na benepisyo, at 193 county na walang planong Advantage sa pangkalahatang pagpapatala na may kasamang saklaw sa gamot. Nagbabago rin ang mga gastos na babayaran ninyo sa Orihinal na Medicare at Part D; tingnan ang mga gastos sa Medicare para sa 2027 ."}}, {"@type": "Question", "name": "Bakit binawasan ng pamahalaan ang mga bayad sa mga planong ito?", "acceptedAnswer": {"@type": "Answer", "text": "Matagal nang sinasabi ng mga pederal na auditor at ng mga tagapayo ng Kongreso na mas malaki ang binabayad ng Medicare sa mga planong Advantage kada tao kaysa sa magiging gastos ng Orihinal na Medicare, bahagyang dahil sa coding ng diagnosis. Layunin ng mga pagbabago mula 2024 na paliitin ang agwat na iyon. Sinasabi ng mga insurer na sobra at sobrang bilis ang mga pagbabago. Parehong inilalarawan ng dalawang panig ang iisang pera mula sa magkabilang dulo."}}, {"@type": "Question", "name": "Magtatapos ang aking plano. Mawawala ba ang aking Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Mananatili ang Part A at Part B. Kung wala kayong gagawin, mapupunta kayo sa Orihinal na Medicare sa Enero 1, na walang saklaw sa gamot maliban kung sasali kayo sa isang plano ng Part D."}}, {"@type": "Question", "name": "Dapat ba akong umalis sa Medicare Advantage dahil dito?", "acceptedAnswer": {"@type": "Answer", "text": "Nakadepende iyan sa inyong kalusugan, sa inyong mga doktor at sa inyong badyet, at hindi kami ang pipili para sa inyo. Ang masasabi namin: kung magtatapos ang inyong plano at may mga kondisyon kayo sa kalusugan, may panandalian kayong karapatan sa Medigap nang walang mga tanong tungkol sa kalusugan. Magpasya habang bukas pa ang pintong iyon, hindi pagkatapos itong magsara."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino at Bakit", "description": "Itinitigil ng Humana, UnitedHealthcare at iba pa ang mga plano ng Medicare Advantage para sa 2027. Bakit ito nangyayari, paano alamin kung magtatapos ang inyong plano, at ano ang gagawin bago ang Dis 7.", "url": "https://mediprimer.org/tl/insurers-dropping-plans-2027.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-10", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino at Bakit", "item": "https://mediprimer.org/tl/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/insurers-dropping-plans-2027.html" lang="en">English</a>
+    <a href="/zh-Hant/insurers-dropping-plans-2027.html" lang="zh-Hant">繁體中文</a>
+    <a href="/tl/insurers-dropping-plans-2027.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Mga Plano ng Medicare Advantage na Mawawala sa 2027: Sino ang Nagtitigil, Bakit, at Ano ang Dapat Gawin</h1>
+    <p>Sinasabi sa liham ng inyong plano na hindi na ito iaalok sa susunod na taon. Hindi kayo mawawalan ng saklaw, pero may mga deadline kayong dapat tandaan. Narito kung ano ang ibig sabihin ng liham at kung paano gamitin ang inyong dagdag na oras para lumipat.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling buod.</strong> Para sa 2027, nagtitigil ang mga kompanya ng health insurance ng mga plano sa antas na hindi pa nakikita sa loob ng maraming taon. Ang Humana at UnitedHealthcare lamang ay nagtatapos ng mga plano ng Medicare Advantage na sumasaklaw sa humigit-kumulang isang milyong tao. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Labing-isang insurer ang umaalis sa mga Marketplace sa ilan o sa lahat ng estado nila. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Ang malalaking insurer ng Medicaid ay umaatras sa mga kontrata sa estado. Walang kinalaman dito ang anumang nagawa ninyo. Pera ang dahilan: ang mga desisyon ng pamahalaan ay naging dahilan para mas kaunti ang kita sa mga planong ito, at iniwan ng mga kompanya ang mga lugar kung saan pinakamaliit ang kinikita nila. Ipinapaliwanag ng pahinang ito kung ano ang nangyayari, bakit, magkano ang maaaring magastos sa inyo, at ano ang gagawin bago ang mga deadline.</p>
+
+    <div class="note">
+      <strong>Mga deadline na mahalaga ngayon.</strong> Ang Bukas na Pagpapatala ng Medicare ay mula Oktubre 15 hanggang Disyembre 7. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Ang Bukas na Pagpapatala sa Marketplace sa HealthCare.gov ay mula Nobyembre 1 hanggang Disyembre 15. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Kung magtatapos ang inyong plano, may dagdag kayong mga karapatan sa mga liham — pero mabilis mawawalan ng bisa ang isa sa mga ito. Tingnan ang <a href="#act">ano ang gagawin ngayon</a>.
+    </div>
+
+    <h2>Aling mga plano ng Medicare Advantage ang mawawala sa 2027?</h2>
+
+    <h3>Medicare Advantage</h3>
+    <ul>
+      <li><strong>Humigit-kumulang isang milyong tao ang nasa mga planong magtatapos sa Disyembre 31.</strong> Mga 600,000 miyembro ng Humana at mga 390,000 miyembro ng UnitedHealthcare ang nasa mga planong itinitigil. Ang mga liham ng hindi pag-renew ay may petsang Oktubre 2. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Kasunod ito ng isang taon kung kailan halos 3 milyong tao ang kinailangang humanap ng bagong saklaw ng Medicare Advantage para sa 2026. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a></li>
+      <li><strong>Pinaliliit ng pinakamalalaking insurer ang kanilang mga sakop na lugar.</strong> Ang Health Care Service Corporation (mga plano ng Blue Cross sa limang estado) ay aalis sa 498 county at wala itong papasukan. Ang Centene ay aalis sa 359, ang UnitedHealthcare sa 228, ang Elevance (Anthem) sa 66 at ang Humana sa 62. Isang kompanya, ang Devoted Health, ay lumalawak sa 342 county. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF, Oktubre 9, 2026)</a></li>
+      <li><strong>Ilang mas maliliit na insurer, na marami ay pag-aari ng mga sistema ng ospital, ay ganap nang umaalis sa programa.</strong> <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>Sa ilang lugar, walang karaniwang plano ng Medicare Advantage na may saklaw sa gamot.</strong> Sa 193 county, kung saan nakatira ang humigit-kumulang 638,000 taong may Medicare, walang planong Medicare Advantage na may saklaw sa gamot ng Part D na bukas sa pangkalahatang pagpapatala para sa 2027, mula sa 123 county ngayong taon. Anim sa mga county na iyon ang may planong Advantage na walang saklaw sa gamot, at ang ilan ay may mga plano lamang para sa mga kwalipikado sa isang Plano para sa mga Espesyal na Pangangailangan. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> Para sa karamihan ng mga tao roon, ang pagpipilian ay ang Orihinal na Medicare kasama ang isang plano sa gamot ng Part D.</li>
+    </ul>
+
+    <h3>Mga plano sa gamot ng Part D</h3>
+    <ul>
+      <li>Ang karaniwang tao ay makapipili mula sa 9 na hiwalay na plano sa gamot para sa 2027, mula sa 11, at walang planong may zero na premium maliban kung makakakuha kayo ng Karagdagang Tulong. Maraming tao ang makakakita ng maliit na pagtaas ng Premium. Ang ilan ay makakakita ng mas malaking pagtaas kung mananatili sila sa kasalukuyan nilang plano. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>Ang taunang limitasyon sa babayaran ninyo para sa mga saklaw na gamot ay tataas sa $2,400 sa 2027, at walang planong maaaring maningil ng Deductible (Nababawas) na higit sa $700. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Tingnan ang <a href="/tl/medicare-costs-2027.html">mga gastos sa Medicare sa 2027</a>.</li>
+    </ul>
+
+    <h3>Mga plano ng Marketplace (Obamacare)</h3>
+    <ul>
+      <li>Labing-isang insurer ang nag-anunsyo na aalis sila sa mga Marketplace para sa 2027 sa ilan o sa lahat ng estado kung saan sila nagbebenta. Ang pinakamalaki, ang Cigna, ay aalis sa lahat ng 11 estado nito, na may mahigit 350,000 taong nakatala sa pamamagitan ng Marketplace. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF, na-update noong Oktubre 7, 2026)</a></li>
+      <li>Tataas muli ang mga presyo. Ang mga iminungkahing pagtaas para sa 2027 ay may average na mula humigit-kumulang 6.5 porsiyento sa Vermont hanggang 22.4 porsiyento sa Washington, matapos ang isang taon kung kailan 18 porsiyento ang karaniwang iminungkahing pagtaas. <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>Mga plano ng Medicaid</h3>
+    <ul>
+      <li>Sinabi ng Elevance sa mga investor na inaasahan nitong aalis sa mga pamilihan ng Medicaid "kung saan hindi sinusuportahan ng ekonomiya ang tuloy-tuloy na pagganap" sa loob ng 12 hanggang 18 buwan. Umalis ito sa programa ng Washington, D.C. noong Agosto 1, 2026. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Ang planong Healthy Blue nito, na may humigit-kumulang 292,000 miyembro, ay aalis sa Medicaid ng Louisiana sa katapusan ng 2026. Ang UnitedHealthcare, na may humigit-kumulang 278,000, ay umalis sa programa ng estadong iyon noong Marso 31, 2026. Hanggang 580,000 miyembro sa Louisiana ang lilipat sa isa sa apat na planong natitira. <a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">(Hoodline)</a></li>
+      <li>Plano ng Centene na umalis sa programa ng pagpapalawak ng Medicaid ng Arkansas sa 2027. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Inaasahan ang mas marami pang pag-alis habang nagkakabisa ang mga pagbabawas sa Medicaid ng pederal na batas sa badyet noong 2025.</li>
+    </ul>
+
+    <h2>Bakit nagtitigil ng mga plano ng Medicare Advantage ang mga insurer: ang pera, nang malinaw</h2>
+    <p>Sinasabi ng mga insurer na tumaas ang mga gastos dahil mas maraming pangangalaga ang ginamit ng mga tao. Totoo iyan. Totoo rin na binago ng pamahalaan ang mga patakaran sa paraang nagpababa ng kinikita ng mga negosyong ito. Narito ang mga nagbago.</p>
+
+    <h3>Medicare Advantage</h3>
+    <ol class="steps">
+      <li><strong>Bumagal ang paglago ng mga bayad.</strong> Para sa 2027, unang iminungkahi ng pamahalaan ang halos walang pagtaas sa bayad: 0.09 porsiyento. Nagprotesta ang mga insurer. Ang pinal na pagtaas ay 2.48 porsiyento, humigit-kumulang 13 bilyong dolyar, matapos ibasura ng pamahalaan ang planadong pag-update sa pormula na mas magbabawas pa sana ng mga bayad. <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(CMS fact sheet)</a> Kahit ganoon, mas mababa pa rin ito kaysa sa paglago ng gastos na iniuulat ng mga insurer.</li>
+      <li><strong>Mas mababa na ang bayad sa pag-coding ng diagnosis.</strong> Mula 2024, unti-unting ipinatupad ng Medicare ang bagong modelo ng risk-adjustment na mas mababa ang bayad sa mga plano para sa maraming naitalang diagnosis. Ang mga planong umasa sa mabigat na coding ang pinakamalaki ang nawala.</li>
+      <li><strong>Mas kaunting star bonus.</strong> Ang mga planong may rating na 4 na bituin o higit pa ay nakakakuha ng bonus na pera. Bumaba ang mga rating ng ilang malalaking insurer, at bumaba rin ang mga bonus. Sinabi ng Humana na puputulin nito ang "ibabang bahagi ng kakayahang kumita," ibig sabihin ay ang mga planong may rating na 3.5 bituin o mas mababa. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a></li>
+      <li><strong>Inilipat sa mga plano ang gastos sa gamot.</strong> Nilimitahan ng batas sa gamot noong 2022 ang babayaran ninyo para sa mga gamot ng Part D at pinabayaran sa mga plano ang mas malaking bahagi ng gastos na lampas sa limitasyon. Mabuti iyan para sa inyo. Magastos iyan para sa kanila, at nagtatapos sa Disyembre 31, 2026 ang pansamantalang suporta ng pederal na nagsilbing unan para sa mga hiwalay na plano sa gamot. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>Pinagsama-sama: ang mga planong marginal, kadalasan ay mga Organisasyon ng mga Ginustong Provider (PPO), mga kanayunang county, at mga planong mababa ang rating, ay tumigil nang kumita. Pinutol ng mga kompanya ang mga ito. Ang mga planong naiwan ay kadalasang mga Organisasyon sa Pagpapanatili ng Kalusugan (HMO) na mas masikip ang network at mas kaunti ang dagdag na benepisyo.</p>
+
+    <h3>Marketplace</h3>
+    <ol class="steps">
+      <li><strong>Hinayaan ng Kongreso na mawalan ng bisa ang mas malalaking subsidyo</strong> sa katapusan ng 2025. Bumaba ng mahigit isang milyon ang mga nag-sign up para sa 2026. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Ang mga umalis ay, sa karaniwan, mas malulusog, kaya mas magastos nang i-insure ang natitirang grupo.</li>
+      <li><strong>Pinahihirap ng mga bagong patakaran ang pagpapatala.</strong> Mas maikli ang pederal na panahon ng pag-sign up at mas maraming tao ang kailangang patunayan ang pagiging karapat-dapat bago magsimula ang saklaw. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Inaasahan ng mga insurer na mas kaunti at mas may sakit ang kanilang mga customer, kaya nagpepresyo sila nang naaayon o umaalis.</li>
+    </ol>
+
+    <h3>Medicaid</h3>
+    <ol class="steps">
+      <li><strong>Binabawasan ng pederal na batas sa badyet noong 2025 ang pondo ng Medicaid</strong> sa mga darating na taon: mga kinakailangang trabaho para sa maraming nasa hustong gulang, pagsusuri ng pagiging karapat-dapat tuwing anim na buwan, at mga limitasyon sa paraan ng pagtaas ng mga estado sa kanilang bahagi ng pondo. Dahil dito, mas mababa o mas huli ang bayad ng mga estado sa mga plano, at umaalis ang mga plano. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>Ano ang magbabago para sa inyo sa 2027</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Kung mayroon kayong…</th><th>Ang panganib</th></tr></thead>
+        <tbody>
+          <tr><td>Planong Medicare Advantage na magtatapos</td><td>Puwang sa saklaw kung hindi ninyo mapansin ang mga liham. Pagkawala ng inyong mga doktor kung iba ang network ng bagong plano. Pagkawala ng maikling panahon para bumili ng Medigap (Karagdagang Medicare) nang walang mga tanong tungkol sa kalusugan.</td></tr>
+          <tr><td>Planong Medicare Advantage na magpapatuloy</td><td>Mas maliliit na network, mas mataas na Copayment, at mas kaunting dagdag na benepisyo sa 2027. Ang mga dagdag tulad ng dental, mga card para sa mga gamot na mabibili nang walang reseta, at benepisyo sa gym ang unang pinuputol dahil pinakamadali itong putulin. Basahin nang linya por linya ang Taunang Abiso ng Pagbabago.</td></tr>
+          <tr><td>Hiwalay na plano ng Part D</td><td>Pagtaas ng Premium kung mananatili kayo. Maaari ring baguhin ng inyong plano ang listahan nito ng mga gamot. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>Plano ng Marketplace</td><td>Paglipat sa plano ng ibang insurer kung aalis ang sa inyo, na may bagong network. Mas malaking bayarin sa Premium, bagaman tumataas ang mga subsidyo kasabay ng benchmark na presyo para sa karamihan ng mga kwalipikado.</td></tr>
+          <tr><td>Medicaid</td><td>Pagtatalaga sa bagong plano kung aalis sa estado ang inyong plano, at pagkawala ng saklaw sa panahon ng renewal kung hindi nasagot ang isang liham.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="check">Paano ko malalaman kung magtatapos ang aking planong Medicare Advantage?</h2>
+    <p>Ang isang balita tungkol sa inyong insurer ay hindi nangangahulugang magtatapos ang inyong plano. Karaniwang itinitigil ng mga insurer ang <em>ilang</em> plano sa <em>ilang</em> county at pinapanatili ang iba. Suriin ang sarili ninyong plano, sa ganitong pagkakasunod-sunod:</p>
+    <ol class="steps">
+      <li><strong>Hanapin ang liham.</strong> Kung magtatapos ang inyong plano, kailangan kayong padalhan ng insurer ng abiso ng hindi pag-renew sa simula ng Oktubre, nakapangalan sa inyo, na nagbabanggit ng plano at ng petsa ng pagtatapos nito. Kung Taunang Abiso ng Pagbabago ang natanggap ninyo, magpapatuloy ang inyong plano sa 2027 kasama ang mga pagbabagong nakalista rito. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+      <li><strong>Itugma ang pangalan at numero ng plano.</strong> Ipinapakita ng inyong member card ang pangalan ng plano at isang numero ng kontrata (H at apat na digit) at ang plan ID. Ihambing ang mga ito sa liham. Maaaring tapusin ng isang insurer ang "Plan A" sa inyong county at panatilihin ang "Plan B"; ang eksaktong planong nasa liham lamang ang apektado.</li>
+      <li><strong>Hanapin ang mga plano para sa 2027 ayon sa inyong ZIP code.</strong> Sa <a href="/tl/using-plan-finder.html">Medicare Plan Finder</a>, piliin ang saklaw para sa 2027 at ilagay ang inyong ZIP code. Kung hindi nakalista ang kasalukuyan ninyong plano para sa 2027, nagtatapos ito sa inyong lugar. <!-- src: https://www.medicare.gov/plan-compare/ --></li>
+      <li><strong>Tawagan ang plano kung may hindi malinaw.</strong> Nasa inyong card ang numero ng member services. Itanong: "Iniaalok ba ang aking plano, numero ng kontrata H-xxxx, plano xxx, sa aking county para sa 2027?"</li>
+      <li><strong>Kung magtatapos ito,</strong> pumunta sa <a href="/tl/medicare-advantage-plan-ending.html">Magtatapos ang Aking Planong Medicare Advantage para sa 2027</a> para sa inyong mga petsa, karapatan at mga pagpipilian. Para makita kung ano pa ang ibinebenta sa inyong lugar, <a href="/tl/medicare-plan-comparison-2027.html">ihambing ang inyong mga pagpipilian sa Medicare Advantage para sa 2027</a>.</li>
+    </ol>
+
+    <h2 id="act">Ano ang gagawin ngayon</h2>
+    <p>Ito ang bahaging pinalalambot ng karamihan sa mga site. Hindi namin gagawin iyon.</p>
+    <ol class="steps">
+      <li><strong>Buksan ang bawat sobre mula sa inyong plano sa Oktubre.</strong> Ang <a href="/tl/medicare-annual-notice-of-change.html">abiso ng pagbabago</a> ay nangangahulugang magpapatuloy ang inyong plano na may mga bagong tuntunin. Ang abiso ng hindi pag-renew ay nangangahulugang magtatapos ito sa Disyembre 31. Itago ang liham ng hindi pag-renew; ito ang patunay ng inyong mga karapatan.</li>
+      <li><strong>Kung magtatapos ang inyong planong Medicare Advantage, alamin ang dalawa ninyong orasan.</strong> Maaari kayong lumipat ng mga plano ng Medicare mula Disyembre 8 hanggang katapusan ng Pebrero. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Pero ang karapatang bumili ng patakaran ng Medigap (Karagdagang Medicare) nang walang mga tanong tungkol sa kalusugan ay tumatagal lamang ng 63 araw matapos magtapos ang inyong saklaw. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Ang mas maikli ang madalas na nakakaligtaan ng mga tao. Kung may mga problema kayo sa kalusugan at nais ninyo kailanman ang Orihinal na Medicare kasama ang Medigap, maaaring ito lamang ang pagkakataon ninyong makuha ito nang walang Pagsusuri sa Panganib (Underwriting). Alamin ang presyo bago kayo pumili ng isa pang planong Advantage. Mga detalye sa <a href="/tl/medicare-advantage-plan-ending.html">inyong mga pagpipilian kapag nagtapos ang isang plano</a>.</li>
+      <li><strong>Huwag pumili ng plano dahil sa mga dagdag nito.</strong> Ang dental, paningin, pandinig, gym at mga grocery card ang unang pinuputol kapag nalulugi ang isang plano, at maaari silang magbago tuwing Enero. Pumili ayon sa inyong mga doktor, inyong mga gamot, at inyong ospital.</li>
+      <li><strong>Suriin ang star rating at ang direksyon ng insurer.</strong> Pinutol ng Humana ang mga planong may rating na 3.5 bituin o mas mababa. Ang planong mababa ang rating, o planong mula sa insurer na lumiliit sa inyong estado, ay mas malamang na putulin muli sa susunod na taon. Makikita ang mga star rating sa <a href="/tl/using-plan-finder.html">Plan Finder</a>; tingnan ang <a href="/tl/medicare-star-ratings.html">ano ang ibig sabihin ng mga bituin</a>, at ang Mga Rating na Bituin ng planong isinasaalang-alang ninyo.</li>
+      <li><strong>Kung mayroon kayong hiwalay na plano sa gamot, maghambing, huwag basta mag-renew.</strong> Ilagay ang inyong mga gamot sa Plan Finder. Ang pananatili ay maaaring magkahalaga nang mas malaki kaysa sa paglipat ngayong taon. <a href="/tl/switching-medicare-part-d-formulary-check.html">Paano suriin ang inyong listahan ng mga gamot</a>.</li>
+      <li><strong>Kung walang karaniwang plano ng Medicare Advantage na may saklaw sa gamot sa inyong county para sa 2027,</strong> mapupunta kayo sa Orihinal na Medicare. Magdagdag ng plano ng Part D bago ang Disyembre 7 para hindi kayo mawalan ng saklaw sa gamot. Pagkatapos ay tingnan ang <a href="/tl/medigap.html">Medigap</a>.</li>
+      <li><strong>Marketplace: kumilos nang maaga at suriin ang liham tungkol sa inyong inilipat na plano.</strong> Ang pederal na panahon ay Nobyembre 1 hanggang Disyembre 15. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Kung aalis ang inyong insurer, maaaring ilipat kayo ng HealthCare.gov sa ibang plano; maaaring hindi kasama roon ang inyong mga doktor. I-update ang tantiya ng inyong kita para tama ang inyong Subsidyo. Tingnan ang <a href="/tl/marketplace-open-enrollment-2027.html">bukas na pagpapatala sa Marketplace 2027</a>.</li>
+      <li><strong>Medicaid: sagutin ang bawat liham at panatilihing napapanahon ang inyong address.</strong> Mas madalas na ang mga renewal. Kung aalis sa inyong estado ang inyong plano, pumili ng bagong plano nang kayo mismo bago pa magtalaga ang estado, para mapanatili ninyo ang inyong mga doktor. Tingnan ang <a href="/tl/medicaid-renewal.html">renewal ng Medicaid</a>.</li>
+      <li><strong>Humingi ng libre at walang kinikilingang tulong.</strong> Hindi nagbebenta ng mga plano ang mga tagapayo ng SHIP. <a href="/tl/ship-directory.html">Hanapin ang sa inyo</a>. Makakatulong din ang mga ahente, pero binabayaran sila ng mga planong ibinebenta nila.</li>
+    </ol>
+
+    <h2>Ano ang inaasahan namin sa susunod</h2>
+    <p>Ito ang basa namin sa ebidensya, hindi hulang dapat ninyong panghawakan: hindi pa tapos ang mga pag-alis. Katamtaman ang paglago ng bayad sa Medicare Advantage para sa 2027 at ganap nang may bisa ang mga pagbabago sa coding, kaya patuloy na puputulin ng mga insurer ang mga planong mababa ang rating at ang mga county na kakaunti ang tao. Mananatiling mataas ang mga presyo sa Marketplace maliban kung ibabalik ng Kongreso ang mas malalaking subsidyo. Lalaganap ang mga pag-alis ng mga plano ng Medicaid habang unti-unting nagkakabisa ang mga pagbabawas ng pederal hanggang 2027 at 2028. Pareho ang praktikal na aral bawat taon: huwag ipagpalagay na ang planong mayroon kayo ang planong mapapanatili ninyo, at suriin ito tuwing taglagas.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Mga karaniwang tanong</h2>
+
+    <details class="qa">
+      <summary>Mawawala ba ang mga plano ng Medicare Advantage sa 2027?</summary>
+      <div>
+        <p>Hindi. Pinanatili ng karamihan ng mga insurer ang karamihan ng kanilang mga plano, at karamihan ng mga county ay marami pa ring pagpipilian. Ang mawawala ay ang mga planong marginal: mababa ang rating, nasa mga kanayunan o mamahaling county, o pinatatakbo ng maliliit na insurer na pag-aari ng mga sistema ng ospital. Alamin kung kabilang dito ang sa inyo.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Nagtitigil ba ang Humana ng mga plano ng Medicare Advantage para sa 2027?</summary>
+      <div>
+        <p>Oo. Tinatapos ng Humana ang mga planong sumasaklaw sa humigit-kumulang 600,000 miyembro, kadalasan ay mga planong may rating na 3.5 bituin o mas mababa. Nakatanggap ang mga miyembro ng mga liham ng hindi pag-renew na may petsang Oktubre 2, at magtatapos ang kanilang mga plano sa Disyembre 31. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> Kung wala kayong natanggap na liham, magpapatuloy ang inyong planong Humana; basahin ang Taunang Abiso ng Pagbabago nito para sa mga pagbabago sa 2027. Tingnan ang <a href="#check">paano suriin ang sarili ninyong plano</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Nagtitigil ba ang UnitedHealthcare (AARP) ng mga plano ng Medicare Advantage para sa 2027?</summary>
+      <div>
+        <p>Oo. Itinitigil ng UnitedHealthcare ang mga planong sumasaklaw sa humigit-kumulang 390,000 miyembro at aalis ito sa 228 county. <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> Magpapatuloy ang karamihan ng mga plano nito. Sinasabi ng inyong liham kung alin sa dalawa ang sitwasyon ninyo.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Aalis ba ang Aetna sa Medicare Advantage sa 2027?</summary>
+      <div>
+        <p>Hindi ganap. Aalis ang Aetna (CVS Health) sa humigit-kumulang 103 county para sa 2027 pero patuloy itong magbebenta ng mga plano sa ibang lugar. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> Kung kabilang ang inyong county sa mga iyon, nakatanggap kayo ng liham ng hindi pag-renew.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Ano ang nagbabago sa mga plano ng Medicare Advantage sa 2027?</summary>
+      <div>
+        <p>Mas kaunting plano at mas kaunting insurer sa maraming county, mas maraming HMO at mas kaunting PPO, mas maliliit na dagdag na benepisyo, at 193 county na walang planong Advantage sa pangkalahatang pagpapatala na may kasamang saklaw sa gamot. Nagbabago rin ang mga gastos na babayaran ninyo sa Orihinal na Medicare at Part D; tingnan ang <a href="/tl/medicare-costs-2027.html">mga gastos sa Medicare para sa 2027</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Bakit binawasan ng pamahalaan ang mga bayad sa mga planong ito?</summary>
+      <div>
+        <p>Matagal nang sinasabi ng mga pederal na auditor at ng mga tagapayo ng Kongreso na mas malaki ang binabayad ng Medicare sa mga planong Advantage kada tao kaysa sa magiging gastos ng Orihinal na Medicare, bahagyang dahil sa coding ng diagnosis. Layunin ng mga pagbabago mula 2024 na paliitin ang agwat na iyon. Sinasabi ng mga insurer na sobra at sobrang bilis ang mga pagbabago. Parehong inilalarawan ng dalawang panig ang iisang pera mula sa magkabilang dulo.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Magtatapos ang aking plano. Mawawala ba ang aking Medicare?</summary>
+      <div>
+        <p>Hindi. Mananatili ang Part A at Part B. Kung wala kayong gagawin, mapupunta kayo sa Orihinal na Medicare sa Enero 1, na walang saklaw sa gamot maliban kung sasali kayo sa isang plano ng Part D. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Dapat ba akong umalis sa Medicare Advantage dahil dito?</summary>
+      <div>
+        <p>Nakadepende iyan sa inyong kalusugan, sa inyong mga doktor at sa inyong badyet, at hindi kami ang pipili para sa inyo. Ang masasabi namin: kung magtatapos ang inyong plano at may mga kondisyon kayo sa kalusugan, may panandalian kayong karapatan sa Medigap nang walang mga tanong tungkol sa kalusugan. Magpasya habang bukas pa ang pintong iyon, hindi pagkatapos itong magsara.</p>
+      </div>
+    </details>
+
+    <h2>Mga Pinagmulan</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS: Anunsyo ng Rate ng Medicare Advantage at Part D para sa 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF: Availability ng plano ng Medicare Advantage ayon sa county para sa 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF: Mga premium ng hiwalay na plano ng Part D para sa 2027</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF: Paglahok ng mga insurer sa mga Marketplace ng ACA sa 2027</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF: Pinamamahalaang pangangalaga ng Medicaid at ang batas sa reconciliation ng 2025</a></li>
+      <li><a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">Insurance Business: Ang pag-alis ng Humana ay makakaapekto sa 600,000 miyembro</a></li>
+      <li><a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">Yahoo Finance: Umaalis ang UnitedHealthcare sa ilang plano ng Medicare Advantage para sa 2027</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive: gaano karami ang pinuputol ng mga insurer sa Medicare Advantage para sa 2027</a></li>
+      <li><a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">Hoodline: Lumiliit sa apat na insurer ng Medicaid ang Louisiana habang 580,000 ang lilipat ng plano</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: Mga Espesyal na Panahon ng Pagpapatala (Espesyal na Panahon ng Pagpapatala)</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: Kailan ako makakabili ng patakaran ng Medigap?</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Tiyakin bago kumilos.</strong> Ang MediPrimer ay pangkalahatang impormasyong pang-edukasyon at hindi kaanib ng anumang ahensya o insurer. Ipinapaliwanag ng pahinang ito ang merkado at ang inyong mga karapatan; hindi ito nagrerekomenda ng plano. Ang mga bilang ng miyembro at mga numero ng county ay mula sa mga pananaliksik at balitang pinagmulan na naka-link sa tabi ng bawat isa; sinuri ang bawat isa laban sa orihinal na pinagmulan noong Oktubre 9, 2026, at ina-update ang pahinang ito habang kinukumpirma ang mga bagong anunsyo. Kumpirmahin ang sarili ninyong mga petsa at karapatan sa 1-800-MEDICARE, HealthCare.gov, sa tanggapan ng Medicaid ng inyong estado, o sa inyong <a href="/tl/ship-directory.html">SHIP</a>.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/insurers-dropping-plans-2027.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

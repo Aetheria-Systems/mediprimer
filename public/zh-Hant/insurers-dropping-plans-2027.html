@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做</title>
+<meta name="description" content="Humana、UnitedHealthcare 等保險公司將在2027年停辦部分 Medicare Advantage 計劃。本文說明原因、如何查看您的計劃是否終止，以及12月7日前該怎麼做。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做">
+<meta property="og:description" content="Humana、UnitedHealthcare 等保險公司將在2027年停辦部分 Medicare Advantage 計劃。本文說明原因、如何查看您的計劃是否終止，以及12月7日前該怎麼做。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做">
+<meta name="twitter:description" content="Humana、UnitedHealthcare 等保險公司將在2027年停辦部分 Medicare Advantage 計劃。本文說明原因、如何查看您的計劃是否終止，以及12月7日前該怎麼做。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Medicare Advantage 計劃在2027年會消失嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。大多數保險公司保留了大部分計劃，大多數縣仍有許多選擇。消失的是勉強維持的計劃：評級較低、位於鄉村或高成本的縣，或由小型醫院系統保險公司經營的計劃。請查查您的是否屬於這些。"}}, {"@type": "Question", "name": "Humana 在2027年停辦 Medicare Advantage 計劃嗎？", "acceptedAnswer": {"@type": "Answer", "text": "是的。Humana 正在終止涵蓋約600,000名會員的計劃，多半是評為3.5星或更低的計劃。會員收到日期為10月2日的不續約通知，他們的計劃在12月31日結束。 (Insurance Business) 如果您沒有收到信，您的 Humana 計劃會繼續；請閱讀其年度變更通知，了解2027年的變更。請看 如何查看您自己的計劃 。"}}, {"@type": "Question", "name": "UnitedHealthcare（AARP）在2027年停辦 Medicare Advantage 計劃嗎？", "acceptedAnswer": {"@type": "Answer", "text": "是的。UnitedHealthcare 正在終止涵蓋約390,000名會員的計劃，並退出228個縣。 (Yahoo Finance) (KFF) 它大多數的計劃會繼續。您的來信會告訴您屬於哪一種情況。"}}, {"@type": "Question", "name": "Aetna 會在2027年退出 Medicare Advantage 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不是全部退出。Aetna（CVS Health）2027年將退出約103個縣，但在其他地方繼續銷售計劃。 (Healthcare Dive) 如果您的縣是其中之一，您就會收到不續約通知。"}}, {"@type": "Question", "name": "2027年 Medicare Advantage 計劃有什麼變化？", "acceptedAnswer": {"@type": "Answer", "text": "許多縣的計劃和保險公司都變少，健康維護組織（HMO）增加、優選提供者組織（PPO）減少，額外福利縮水，還有193個縣沒有含藥物承保的一般註冊期 Advantage 計劃。您在原始醫療保險和醫療保險D部分要付的費用也會改變；請看 2027年 Medicare 費用 。"}}, {"@type": "Question", "name": "政府為什麼削減給這些計劃的給付？", "acceptedAnswer": {"@type": "Answer", "text": "聯邦審計人員和國會顧問多年來一直指出，Medicare 付給 Advantage 計劃的每人金額，比原始醫療保險實際花費的更多，部分原因來自診斷編碼。2024年以來的變更，目的就是縮小這個差距。保險公司則說這些變更太過頭、太快。雙方說的其實是同一筆錢，只是從相反的兩端來看。"}}, {"@type": "Question", "name": "我的計劃要終止了。我會失去 Medicare 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。醫療保險A部分和B部分都會保留。如果您什麼都不做，1月1日您將使用原始醫療保險，而且除非您加入醫療保險D部分計劃，否則沒有藥物承保。"}}, {"@type": "Question", "name": "我是否該因此離開 Medicare Advantage？", "acceptedAnswer": {"@type": "Answer", "text": "這要看您的健康狀況、您的醫師和您的預算，我們不會替您做決定。我們能說的是：如果您的計劃要終止，而且您有健康問題，您有一項為期很短的權利，可以不回答健康問題就取得 Medigap。請趁這扇門還開著的時候做決定，不要等門關上之後。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做", "description": "Humana、UnitedHealthcare 等保險公司將在2027年停辦部分 Medicare Advantage 計劃。本文說明原因、如何查看您的計劃是否終止，以及12月7日前該怎麼做。", "url": "https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-10", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做", "item": "https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/insurers-dropping-plans-2027.html" lang="en">English</a>
+    <a href="/zh-Hant/insurers-dropping-plans-2027.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照顧者</p>
+    <h1>2027年將停辦的 Medicare Advantage 計劃：誰在退出、為什麼，以及該怎麼做</h1>
+    <p>您的計劃寄來的信說，明年不再提供該計劃。您不會沒有保障，但有幾個期限要注意。以下說明這封信的意思，以及如何利用多出來的時間轉換計劃。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>先說重點。</strong>2027年，健康保險公司停辦計劃的規模是多年來少見的。光是 Humana 和 UnitedHealthcare 就要終止涵蓋約一百萬人的 Medicare Advantage 計劃。 <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> 有十一家保險公司將在部分或全部所在州退出醫療保險市場。 <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> 大型 Medicaid 保險公司也正退出各州的合約。這些都不是您的問題，而是錢的問題：政府的決定讓這些計劃的獲利變少，公司便離開賺錢最少的地方。本頁說明目前發生什麼事、為什麼、可能讓您付出什麼代價，以及在期限前該怎麼做。</p>
+
+    <div class="note">
+      <strong>現在最重要的期限。</strong>Medicare 公開註冊期從10月15日到12月7日。 <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> HealthCare.gov 上的醫療保險市場公開註冊期從11月1日到12月15日。 <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 如果您的計劃要終止，來信會給您額外的權利，但其中一項很快就會到期。請看<a href="#act">現在該怎麼做</a>。
+    </div>
+
+    <h2>2027年有哪些 Medicare Advantage 計劃將停辦？</h2>
+
+    <h3>Medicare Advantage</h3>
+    <ul>
+      <li><strong>約一百萬人的計劃將在12月31日終止。</strong>約600,000名 Humana 會員和約390,000名 UnitedHealthcare 會員的計劃將被停辦。不續約通知信的日期是10月2日。 <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> 在此之前的一年，已有近3百萬人必須為2026年另找新的 Medicare Advantage 承保。 <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a></li>
+      <li><strong>最大的保險公司正在縮小服務版圖。</strong>Health Care Service Corporation（五個州的 Blue Cross 計劃）將退出498個縣，沒有新進任何一個縣。Centene 退出359個縣，UnitedHealthcare 退出228個，Elevance（Anthem）退出66個，Humana 退出62個。只有 Devoted Health 一家公司在擴張，新進342個縣。 <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF, October 9, 2026)</a></li>
+      <li><strong>幾家規模較小、多半由醫院系統擁有的保險公司，將完全退出這個計劃。</strong> <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>有些地方將沒有一般的、含藥物承保的 Medicare Advantage 計劃。</strong>在193個縣，約638,000名 Medicare 受益人所在的地方，2027年沒有任何含醫療保險D部分藥物承保的 Medicare Advantage 計劃開放給一般註冊期，今年則是123個縣。其中六個縣仍有不含藥物承保的 Advantage 計劃，有些縣只有提供給符合資格者的特殊需求計劃（SNP）。 <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> 對當地大多數人來說，選擇就是原始醫療保險加上一個醫療保險D部分藥物計劃。</li>
+    </ul>
+
+    <h3>醫療保險D部分藥物計劃</h3>
+    <ul>
+      <li>2027年，一般人可從9個單獨的藥物計劃中選擇，比11個減少，而且除非您領有額外補助（低收入補貼），否則沒有任何計劃的保費是零。許多人會看到保費小幅上漲。如果留在原來的計劃，有些人的保費會高出許多。 <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>2027年，您為承保藥物每年付費的上限提高到$2,400，而且任何計劃收取的自付額都不得超過$700。 <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> 請看<a href="/zh-Hant/medicare-costs-2027.html">2027年 Medicare 費用</a>。</li>
+    </ul>
+
+    <h3>醫療保險市場（Obamacare）計劃</h3>
+    <ul>
+      <li>有十一家保險公司已宣布，2027年將在部分或全部銷售的州退出醫療保險市場。其中最大的 Cigna 將退出其全部11個州，透過醫療保險市場投保的人數超過350,000人。 <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF, updated October 7, 2026)</a></li>
+      <li>價格又要上漲。2027年提議的漲幅平均從佛蒙特州的約百分之6.5到華盛頓州的百分之22.4不等，而前一年典型的提議漲幅是百分之18。 <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>Medicaid 計劃</h3>
+    <ul>
+      <li>Elevance 告訴投資人，預計將在12到18個月內退出「經濟效益無法支撐可持續表現」的 Medicaid 市場。該公司已於2026年8月1日退出華盛頓特區的計劃。 <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> 其 Healthy Blue 計劃約有292,000名會員，將於2026年底退出路易斯安那州 Medicaid。約278,000名會員的 UnitedHealthcare 已在2026年3月31日退出該州的計劃。最多580,000名路易斯安那州會員將轉入剩下的四個計劃之一。 <a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">(Hoodline)</a></li>
+      <li>Centene 打算在2027年退出阿肯色州的 Medicaid 擴大計劃。 <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> 隨著2025年聯邦預算法對 Medicaid 的刪減生效，預計還會有更多公司退出。</li>
+    </ul>
+
+    <h2>保險公司為什麼停辦 Medicare Advantage 計劃：直白說錢的問題</h2>
+    <p>保險公司說，成本上升是因為大家用了更多醫療服務。這是事實。同樣屬實的是，政府改變了規則，減少了這些公司的收入。以下是改變的內容。</p>
+
+    <h3>Medicare Advantage</h3>
+    <ol class="steps">
+      <li><strong>給付成長的速度放慢了。</strong>2027年，政府一開始提議的給付增幅幾乎是零：百分之0.09。保險公司提出抗議。最後的增幅是百分之2.48，約13十億美元，因為政府取消了原本計劃更新的公式，那項更新會讓給付減得更多。 <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(美國醫療保險和醫療補助服務中心（CMS）fact sheet)</a> 即便如此，仍遠低於保險公司所說的成本成長。</li>
+      <li><strong>診斷編碼的給付變少了。</strong>自2024年起，Medicare 逐步採用新的風險調整模型，對許多已記錄的診斷給付計劃的錢變少。過去倚重大量編碼的計劃損失最大。</li>
+      <li><strong>星級獎金減少。</strong>評為4星以上的計劃可獲得獎金。幾家大型保險公司的評級下滑，獎金也隨之減少。Humana 表示將砍掉「獲利的尾端」，指的是評為3.5星或更低的計劃。 <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a></li>
+      <li><strong>藥物成本轉到計劃身上。</strong>2022年的藥物法律限制了您為醫療保險D部分藥物付的費用，並讓計劃負擔超過上限後更多的費用。這對您有利，對它們卻很花錢，而且原本緩衝單獨藥物計劃的暫時性聯邦支援也將在2026年12月31日結束。 <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>綜合來看：那些原本就勉強維持的計劃，常常是優選提供者組織（PPO）、鄉村的縣，以及評級較低的計劃，已經不賺錢了。公司就把它們砍掉。留下來的計劃多半是網絡較窄、額外福利較少的健康維護組織（HMO）。</p>
+
+    <h3>醫療保險市場</h3>
+    <ol class="steps">
+      <li><strong>國會讓較高的補貼到期</strong>，時間是2025年底。2026年的投保人數減少了一百萬人以上。 <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> 退出的人平均來說比較健康，所以剩下的群體投保成本更高。</li>
+      <li><strong>新規則讓註冊更困難。</strong>聯邦的註冊期間縮短了，而且更多人必須在承保開始前證明自己的資格。 <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 保險公司預期客戶更少、病情更重，因此調整價格或退出。</li>
+    </ol>
+
+    <h3>Medicaid</h3>
+    <ol class="steps">
+      <li><strong>2025年聯邦預算法在未來幾年削減 Medicaid 經費</strong>：對許多成人設立工作要求、每六個月做一次資格審查，並限制各州籌措自己負擔款項的方式。各州因此減少或延後給付計劃，計劃就離開。 <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>2027年對您有什麼改變</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>如果您有……</th><th>風險</th></tr></thead>
+        <tbody>
+          <tr><td>即將終止的 Medicare Advantage 計劃</td><td>如果錯過來信，可能出現承保空窗。如果新計劃的網絡不同，可能失去原本的醫師。錯過不必回答健康問題就能購買 Medigap（醫療保險補充計劃）的短暫期間。</td></tr>
+          <tr><td>仍會繼續的 Medicare Advantage 計劃</td><td>2027年網絡縮小、共付額提高、額外福利減少。牙科、非處方藥卡和健身福利這類額外福利最先被砍，因為最容易砍。請逐行閱讀年度變更通知。</td></tr>
+          <tr><td>單獨的醫療保險D部分計劃</td><td>如果不換，保費可能大幅上漲。您的計劃也可能更改藥品清單。 <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>醫療保險市場計劃</td><td>如果您的保險公司退出，會被轉到另一家保險公司的計劃，網絡也不同。保費帳單可能變高，不過對大多數符合資格的人來說，補貼會隨基準價格上升。</td></tr>
+          <tr><td>Medicaid</td><td>如果您的計劃離開該州，會被分配到新計劃；如果沒回覆來信，在續約時可能失去承保。</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="check">我要怎麼查我的 Medicare Advantage 計劃是否即將終止？</h2>
+    <p>關於您保險公司的新聞標題，不代表您的計劃要終止。保險公司通常是在<em>某些</em>縣停辦<em>某些</em>計劃，其餘的繼續辦理。請依下列順序查看您自己的計劃：</p>
+    <ol class="steps">
+      <li><strong>找出那封信。</strong>如果您的計劃要終止，保險公司必須在10月初把不續約通知寄給您，信上會寫明計劃名稱和結束日期。如果您收到的是年度變更通知，表示您的計劃在2027年繼續，並有信中列出的變更。 <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+      <li><strong>核對計劃名稱和編號。</strong>您的會員卡上有計劃名稱、合約編號（H加四位數字）和計劃代碼。請與信件比對。保險公司可以在您的縣終止「計劃A」，同時保留「計劃B」；只有信上寫的那個計劃會受影響。</li>
+      <li><strong>用郵遞區號查詢2027年的計劃。</strong>在 <a href="/zh-Hant/using-plan-finder.html">Medicare Plan Finder</a> 選擇2027年承保並輸入您的郵遞區號。如果您目前的計劃沒有出現在2027年的清單上，表示它在您所在地區將終止。 <!-- src: https://www.medicare.gov/plan-compare/ --></li>
+      <li><strong>如有不清楚的地方，請打電話給計劃。</strong>會員服務電話在您的卡上。請問：「我的計劃，合約編號 H-xxxx、計劃 xxx，2027年在我的縣還有提供嗎？」</li>
+      <li><strong>如果計劃要終止，</strong>請前往<a href="/zh-Hant/medicare-advantage-plan-ending.html">我的 Medicare Advantage 計劃在2027年終止</a>，了解您的日期、權利和選擇。想看您居住地還有哪些計劃在賣，請<a href="/zh-Hant/medicare-plan-comparison-2027.html">比較2027年的 Medicare Advantage 選項</a>。</li>
+    </ol>
+
+    <h2 id="act">現在該怎麼做</h2>
+    <p>這是多數網站會輕描淡寫的部分。我們不會。</p>
+    <ol class="steps">
+      <li><strong>10月份，打開您的計劃寄來的每一封信。</strong><a href="/zh-Hant/medicare-annual-notice-of-change.html">變更通知</a>表示您的計劃繼續，但條件有變。不續約通知表示計劃在12月31日結束。請保留不續約通知信，這是您的權利證明。</li>
+      <li><strong>如果您的 Medicare Advantage 計劃要終止，請記住兩個時鐘。</strong>您可以從12月8日到2月底轉換 Medicare 計劃。 <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 但是，不必回答健康問題就能購買 Medigap（醫療保險補充計劃）保單的權利，只在您的承保結束後63天內有效。 <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> 人們常常錯過比較短的那個。如果您有健康問題，而且曾經想要原始醫療保險加 Medigap，這可能是您能免核保取得的唯一機會。在選擇另一個 Advantage 計劃之前，先把價格查清楚。詳情請看<a href="/zh-Hant/medicare-advantage-plan-ending.html">計劃終止時您的選項</a>。</li>
+      <li><strong>不要為了額外福利而選計劃。</strong>牙科、視力、聽力、健身和雜貨卡，是計劃虧損時最先被砍的項目，而且每年1月都可能改變。請依據您的醫師、您的藥物和您的醫院來選。</li>
+      <li><strong>查看星級評定和保險公司的動向。</strong>Humana 砍掉了評為3.5星或更低的計劃。評級低的計劃，或來自在您所在州縮編的保險公司的計劃，明年更可能再被砍。星級評定可在 <a href="/zh-Hant/using-plan-finder.html">Plan Finder</a> 查到；請看<a href="/zh-Hant/medicare-star-ratings.html">星級代表什麼</a>。</li>
+      <li><strong>如果您有單獨的藥物計劃，請比較，不要直接續約。</strong>在 Plan Finder 輸入您的藥物。今年留在原計劃，花費可能比轉換高出許多。<a href="/zh-Hant/switching-medicare-part-d-formulary-check.html">如何查看您的藥品清單</a>。</li>
+      <li><strong>如果您的縣在2027年沒有含藥物承保的一般 Medicare Advantage 計劃，</strong>您將使用原始醫療保險。請在12月7日前加入醫療保險D部分計劃，才不會沒有藥物承保。然後再看看 <a href="/zh-Hant/medigap.html">Medigap</a>。</li>
+      <li><strong>醫療保險市場：及早行動，並查看關於您被轉入計劃的來信。</strong>聯邦的註冊期是11月1日到12月15日。 <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 如果您的保險公司退出，HealthCare.gov 可能會把您轉到另一個計劃；那個計劃可能不包含您的醫師。請更新您的收入估算，讓您的補貼正確。請看<a href="/zh-Hant/marketplace-open-enrollment-2027.html">2027年醫療保險市場公開註冊期</a>。</li>
+      <li><strong>Medicaid：回覆每一封來信，並隨時更新您的地址。</strong>續約的次數越來越頻繁。如果您的計劃要離開您的州，請在州政府分配之前自己選一個新計劃，這樣才能保住您的醫師。請看 <a href="/zh-Hant/medicaid-renewal.html">Medicaid 續約</a>。</li>
+      <li><strong>取得免費、公正的協助。</strong>SHIP 輔導員不賣計劃。<a href="/zh-Hant/ship-directory.html">找到您當地的 SHIP</a>。經紀人也能幫忙，但他們的收入來自所賣的計劃。</li>
+    </ol>
+
+    <h2>我們預期接下來會怎樣</h2>
+    <p>以下是我們對證據的判讀，不是您應該押注的預測：退出潮還沒結束。2027年 Medicare Advantage 的給付成長有限，編碼變更現已全面到位，所以保險公司會繼續削減評級較低的計劃和人口稀少的縣。除非國會恢復較高的補貼，否則醫療保險市場的價格會維持高檔。隨著聯邦刪減經費在2027年和2028年逐步生效，Medicaid 計劃的退出會擴大。每年的實際教訓都一樣：絕不要以為您現在的計劃會一直是您的計劃，每年秋天都要重新檢視。</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>Medicare Advantage 計劃在2027年會消失嗎？</summary>
+      <div>
+        <p>不會。大多數保險公司保留了大部分計劃，大多數縣仍有許多選擇。消失的是勉強維持的計劃：評級較低、位於鄉村或高成本的縣，或由小型醫院系統保險公司經營的計劃。請查查您的是否屬於這些。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Humana 在2027年停辦 Medicare Advantage 計劃嗎？</summary>
+      <div>
+        <p>是的。Humana 正在終止涵蓋約600,000名會員的計劃，多半是評為3.5星或更低的計劃。會員收到日期為10月2日的不續約通知，他們的計劃在12月31日結束。 <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> 如果您沒有收到信，您的 Humana 計劃會繼續；請閱讀其年度變更通知，了解2027年的變更。請看<a href="#check">如何查看您自己的計劃</a>。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>UnitedHealthcare（AARP）在2027年停辦 Medicare Advantage 計劃嗎？</summary>
+      <div>
+        <p>是的。UnitedHealthcare 正在終止涵蓋約390,000名會員的計劃，並退出228個縣。 <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> 它大多數的計劃會繼續。您的來信會告訴您屬於哪一種情況。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Aetna 會在2027年退出 Medicare Advantage 嗎？</summary>
+      <div>
+        <p>不是全部退出。Aetna（CVS Health）2027年將退出約103個縣，但在其他地方繼續銷售計劃。 <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> 如果您的縣是其中之一，您就會收到不續約通知。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>2027年 Medicare Advantage 計劃有什麼變化？</summary>
+      <div>
+        <p>許多縣的計劃和保險公司都變少，健康維護組織（HMO）增加、優選提供者組織（PPO）減少，額外福利縮水，還有193個縣沒有含藥物承保的一般註冊期 Advantage 計劃。您在原始醫療保險和醫療保險D部分要付的費用也會改變；請看<a href="/zh-Hant/medicare-costs-2027.html">2027年 Medicare 費用</a>。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>政府為什麼削減給這些計劃的給付？</summary>
+      <div>
+        <p>聯邦審計人員和國會顧問多年來一直指出，Medicare 付給 Advantage 計劃的每人金額，比原始醫療保險實際花費的更多，部分原因來自診斷編碼。2024年以來的變更，目的就是縮小這個差距。保險公司則說這些變更太過頭、太快。雙方說的其實是同一筆錢，只是從相反的兩端來看。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我的計劃要終止了。我會失去 Medicare 嗎？</summary>
+      <div>
+        <p>不會。醫療保險A部分和B部分都會保留。如果您什麼都不做，1月1日您將使用原始醫療保險，而且除非您加入醫療保險D部分計劃，否則沒有藥物承保。 <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我是否該因此離開 Medicare Advantage？</summary>
+      <div>
+        <p>這要看您的健康狀況、您的醫師和您的預算，我們不會替您做決定。我們能說的是：如果您的計劃要終止，而且您有健康問題，您有一項為期很短的權利，可以不回答健康問題就取得 Medigap。請趁這扇門還開著的時候做決定，不要等門關上之後。</p>
+      </div>
+    </details>
+
+    <h2>資料來源</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS：2027年 Medicare Advantage 與醫療保險D部分費率公告</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF：2027年各縣 Medicare Advantage 計劃供應情況</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF：2027年醫療保險D部分單獨計劃保費</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF：2027年保險公司參與 ACA 醫療保險市場的情況</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF：Medicaid 管理式醫療與2025年預算調整法</a></li>
+      <li><a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">Insurance Business：Humana 退出影響600,000名會員</a></li>
+      <li><a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">Yahoo Finance：UnitedHealthcare 於2027年退出部分 Medicare Advantage 計劃</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive：保險公司2027年削減 Medicare Advantage 的幅度</a></li>
+      <li><a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">Hoodline：路易斯安那州縮減為四家 Medicaid 保險公司，580,000人轉換計劃</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov：特殊註冊期</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov：我什麼時候可以購買 Medigap 保單？</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先查證。</strong>MediPrimer 提供的是一般教育資訊，與任何政府機構或保險公司都沒有關聯。本頁說明市場情況和您的權利，不推薦任何計劃。會員人數和各縣數字來自各處所附連結的研究和新聞來源；每一項都已在2026年10月9日對照原始來源核對，本頁也會隨新公告獲得確認而更新。請向 1-800-MEDICARE、HealthCare.gov、您所在州的 Medicaid 辦公室或您當地的 <a href="/zh-Hant/ship-directory.html">SHIP</a> 確認您自己的日期與權利。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/insurers-dropping-plans-2027.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
