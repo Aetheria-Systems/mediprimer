@@ -178,6 +178,7 @@
   <url><loc>https://mediprimer.org/es/hsa-and-medicare.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/</loc><lastmod>2026-10-10</lastmod><priority>1.0</priority></url>
   <url><loc>https://mediprimer.org/es/insurance-departments.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/es/insurers-dropping-plans-2027.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/irmaa-appeal-ssa-44.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/lost-medicaid-what-now.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/es/marketplace-income-estimate.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
@@ -555,7 +556,7 @@
   <url><loc>https://mediprimer.org/tl/risk-adjustment.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/ship-directory.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/site-map.html</loc><lastmod>2026-09-20</lastmod><priority>0.3</priority></url>
-  <url><loc>https://mediprimer.org/tl/star-ratings.html</loc><lastmod>2026-10-01</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/tl/star-ratings.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/state-medicaid.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/tl/support.html</loc><lastmod>2026-09-20</lastmod><priority>0.7</priority></url>
@@ -646,7 +647,7 @@
   <url><loc>https://mediprimer.org/vi/medicare-hospice-home-health.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-immigrants.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/vi/medicare-long-term-care.html</loc><lastmod>2026-09-15</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/vi/medicare-long-term-care.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-medicaid-chinese.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-medical-equipment-dme.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/vi/medicare-mental-health.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
@@ -790,7 +791,7 @@
   <url><loc>https://mediprimer.org/zh-Hant/medicare-immigrants.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-late-enrollment-penalties.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-long-term-care.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/medicare-medicaid-chinese.html</loc><lastmod>2026-09-17</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/medicare-medicaid-chinese.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-medical-equipment-dme.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-mental-health.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/medicare-open-enrollment-2027.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
@@ -837,14 +838,14 @@
   <url><loc>https://mediprimer.org/zh-Hant/retiring-losing-coverage.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/rights.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/risk-adjustment.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/ship-directory.html</loc><lastmod>2026-10-07</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/ship-directory.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/site-map.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/star-ratings.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/state-health-coverage-older-immigrants.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/state-medicaid.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/support.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/switching-medicare-advantage-plans.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
-  <url><loc>https://mediprimer.org/zh-Hant/switching-medicare-part-d-formulary-check.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+  <url><loc>https://mediprimer.org/zh-Hant/switching-medicare-part-d-formulary-check.html</loc><lastmod>2026-10-11</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/terms-of-use.html</loc><lastmod>2026-10-10</lastmod><priority>0.3</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/turning-26-health-insurance.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>
   <url><loc>https://mediprimer.org/zh-Hant/turning-65-marketplace-plan.html</loc><lastmod>2026-10-10</lastmod><priority>0.7</priority></url>

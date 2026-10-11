@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planes Medicare Advantage que desaparecen en 2027: quiénes y por qué</title>
+<meta name="description" content="Humana, UnitedHealthcare y otras aseguradoras eliminan planes Medicare Advantage para 2027. Por qué sucede, cómo saber si su plan termina y qué hacer antes del 7 de dic.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Planes Medicare Advantage que desaparecen en 2027: quiénes y por qué">
+<meta property="og:description" content="Humana, UnitedHealthcare y otras aseguradoras eliminan planes Medicare Advantage para 2027. Por qué sucede, cómo saber si su plan termina y qué hacer antes del 7 de dic.">
+<meta property="og:url" content="https://mediprimer.org/es/insurers-dropping-plans-2027.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Planes Medicare Advantage que desaparecen en 2027: quiénes y por qué">
+<meta name="twitter:description" content="Humana, UnitedHealthcare y otras aseguradoras eliminan planes Medicare Advantage para 2027. Por qué sucede, cómo saber si su plan termina y qué hacer antes del 7 de dic.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Los planes Medicare Advantage desaparecen en 2027?", "acceptedAnswer": {"@type": "Answer", "text": "No. La mayoría de las aseguradoras conservó la mayoría de sus planes, y la mayoría de los condados todavía tiene muchas opciones. Lo que desaparece es el plan marginal: el de menor calificación, en condados rurales o de costo alto, o el de aseguradoras pequeñas de sistemas hospitalarios. Revise si el suyo es uno de ellos."}}, {"@type": "Question", "name": "¿Humana elimina planes Medicare Advantage para 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Humana termina planes que cubren a unos 600,000 miembros, en su mayoría planes con 3.5 estrellas o menos. Los miembros recibieron cartas de no renovación con fecha del 2 de octubre, y sus planes terminan el 31 de diciembre. (Insurance Business) Si no recibió una carta, su plan de Humana continúa; lea su Aviso Anual de Cambios para ver los cambios de 2027. Vea cómo revisar su propio plan ."}}, {"@type": "Question", "name": "¿UnitedHealthcare (AARP) elimina planes Medicare Advantage para 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. UnitedHealthcare descontinúa planes que cubren a unos 390,000 miembros y sale de 228 condados. (Yahoo Finance) (KFF) La mayoría de sus planes continúa. Su carta le dice en qué caso está usted."}}, {"@type": "Question", "name": "¿Aetna deja Medicare Advantage en 2027?", "acceptedAnswer": {"@type": "Answer", "text": "No del todo. Aetna (CVS Health) se retira de unos 103 condados para 2027, pero sigue vendiendo planes en otros lugares. (Healthcare Dive) Si su condado es uno de ellos, recibió una carta de no renovación."}}, {"@type": "Question", "name": "¿Qué cambia con los planes Medicare Advantage en 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Menos planes y menos aseguradoras en muchos condados, más Organizaciones de Mantenimiento de la Salud y menos Organizaciones de Proveedores Preferidos, beneficios adicionales más pequeños y 193 condados sin un plan Advantage de inscripción general que incluya cobertura de medicamentos. Los costos que usted paga en la Cobertura Original de Medicare y en la Parte D de Medicare también cambian; vea los costos de Medicare para 2027 ."}}, {"@type": "Question", "name": "¿Por qué el gobierno recortó los pagos a estos planes?", "acceptedAnswer": {"@type": "Answer", "text": "Los auditores federales y los asesores del Congreso llevan años diciendo que Medicare paga a los planes Advantage más por persona de lo que costaría la Cobertura Original de Medicare, en parte por la codificación de diagnósticos. Los cambios desde 2024 buscan reducir esa diferencia. Las aseguradoras dicen que los cambios fueron demasiado lejos y demasiado rápido. Ambos lados describen el mismo dinero desde extremos opuestos."}}, {"@type": "Question", "name": "Mi plan termina. ¿Perderé Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "No. La Parte A de Medicare y la Parte B de Medicare se mantienen. Si no hace nada, el 1 de enero estará en la Cobertura Original de Medicare, sin cobertura de medicamentos a menos que se inscriba en un plan de la Parte D de Medicare."}}, {"@type": "Question", "name": "¿Debo dejar Medicare Advantage por esto?", "acceptedAnswer": {"@type": "Answer", "text": "Eso depende de su salud, sus médicos y su presupuesto, y nosotros no elegimos por usted. Lo que sí le decimos: si su plan termina y usted tiene problemas de salud, tiene un derecho de corta duración a un Seguro Complementario de Medicare sin preguntas de salud. Decida con esa puerta abierta, no después de que se cierre."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Planes Medicare Advantage que desaparecen en 2027: quiénes y por qué", "description": "Humana, UnitedHealthcare y otras aseguradoras eliminan planes Medicare Advantage para 2027. Por qué sucede, cómo saber si su plan termina y qué hacer antes del 7 de dic.", "url": "https://mediprimer.org/es/insurers-dropping-plans-2027.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-11", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Planes Medicare Advantage que desaparecen en 2027: quiénes y por qué", "item": "https://mediprimer.org/es/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/insurers-dropping-plans-2027.html" lang="en">English</a>
+    <a href="/es/insurers-dropping-plans-2027.html" lang="es" aria-current="page">Español</a>
+    <a href="/zh-Hant/insurers-dropping-plans-2027.html" lang="zh-Hant">繁體中文</a>
+    <a href="/tl/insurers-dropping-plans-2027.html" lang="tl">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Planes Medicare Advantage que desaparecen en 2027: quiénes los eliminan, por qué y qué hacer</h1>
+    <p>La carta de su plan dice que no se ofrecerá el próximo año. Usted no se queda sin cobertura, pero sí hay fechas límite. Aquí le explicamos qué significa la carta y cómo aprovechar su tiempo extra para cambiar de plan.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Este es el resumen.</strong> Para 2027, las aseguradoras de salud están eliminando planes a una escala que no se veía en años. Solo Humana y UnitedHealthcare terminan planes Medicare Advantage que cubren a casi un millón de personas. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Once aseguradoras se van del Mercado de Seguros en algunos o todos sus estados. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Grandes aseguradoras de Medicaid se retiran de contratos estatales. Nada de esto tiene que ver con usted. Se trata de dinero: decisiones del gobierno hicieron que estos planes fueran menos rentables, y las compañías abandonaron los lugares donde ganan menos. Esta página explica qué está pasando, por qué, cuánto le puede costar y qué hacer antes de las fechas límite.</p>
+
+    <div class="note">
+      <strong>Fechas límite que importan ahora.</strong> La Inscripción Abierta de Medicare va del 15 de octubre al 7 de diciembre. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> La Inscripción Abierta del Mercado de Seguros en HealthCare.gov va del 1 de noviembre al 15 de diciembre. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Si su plan termina, sus cartas le dan derechos adicionales, pero uno de ellos vence pronto. Vea <a href="#act">qué hacer ahora</a>.
+    </div>
+
+    <h2>¿Qué planes Medicare Advantage desaparecen en 2027?</h2>
+
+    <h3>Medicare Advantage</h3>
+    <ul>
+      <li><strong>Cerca de un millón de personas están en planes que terminan el 31 de diciembre.</strong> Unos 600,000 miembros de Humana y unos 390,000 de UnitedHealthcare están en planes que se descontinúan. Las cartas de no renovación tienen fecha del 2 de octubre. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Esto sigue a un año en que casi 3 millones de personas tuvieron que buscar nueva cobertura Medicare Advantage para 2026. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a></li>
+      <li><strong>Las aseguradoras más grandes están reduciendo sus mapas.</strong> Health Care Service Corporation (planes Blue Cross en cinco estados) se va de 498 condados y no entra en ninguno. Centene se va de 359, UnitedHealthcare de 228, Elevance (Anthem) de 66 y Humana de 62. Una compañía, Devoted Health, se expande a 342 condados. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF, 9 de octubre de 2026)</a></li>
+      <li><strong>Varias aseguradoras más pequeñas, muchas de ellas propiedad de sistemas hospitalarios, abandonan el programa por completo.</strong> <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>En algunos lugares no habrá un plan Medicare Advantage regular con cobertura de medicamentos.</strong> En 193 condados, donde viven unas 638,000 personas con Medicare, ningún plan Medicare Advantage con cobertura de medicamentos de la Parte D de Medicare está abierto a la inscripción general para 2027, frente a 123 condados este año. En seis de esos condados todavía hay un plan Advantage sin cobertura de medicamentos, y en algunos solo hay planes para quienes califican para un Plan de Necesidades Especiales. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> Para la mayoría de las personas allí, la opción es la Cobertura Original de Medicare más un plan de medicamentos de la Parte D de Medicare.</li>
+    </ul>
+
+    <h3>Planes de medicamentos de la Parte D de Medicare</h3>
+    <ul>
+      <li>La persona promedio puede elegir entre 9 planes de medicamentos independientes para 2027, frente a 11, y ninguno tiene Prima de cero a menos que usted reciba la Ayuda Adicional. Muchas personas verán un pequeño aumento en la Prima. Algunas verán uno mucho mayor si se quedan en su plan actual. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>El tope anual de lo que usted paga por medicamentos cubiertos sube a $2,400 en 2027, y ningún plan puede cobrar un Deducible superior a $700. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Vea <a href="/es/medicare-costs-2027.html">los costos de Medicare en 2027</a>.</li>
+    </ul>
+
+    <h3>Planes del Mercado de Seguros (Obamacare)</h3>
+    <ul>
+      <li>Once aseguradoras anunciaron que dejarán el Mercado de Seguros para 2027 en algunos o todos los estados donde venden. La más grande, Cigna, se va de sus 11 estados, con más de 350,000 personas inscritas por medio del Mercado de Seguros. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF, actualizado el 7 de octubre de 2026)</a></li>
+      <li>Los precios vuelven a subir. Los aumentos propuestos para 2027 promediaron desde cerca de 6.5 por ciento en Vermont hasta 22.4 por ciento en Washington, después de un año en que el aumento propuesto típico fue de 18 por ciento. <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>Planes de Medicaid</h3>
+    <ul>
+      <li>Elevance dijo a los inversionistas que espera salir de los mercados de Medicaid "donde la economía no respalda un desempeño sostenible" en un plazo de 12 a 18 meses. Dejó el programa de Washington, D.C. el 1 de agosto de 2026. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Su plan Healthy Blue, con unos 292,000 miembros, sale de Medicaid en Luisiana a fines de 2026. UnitedHealthcare, con unos 278,000, salió del programa de ese estado el 31 de marzo de 2026. Hasta 580,000 miembros de Luisiana pasan a uno de los cuatro planes que quedan. <a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">(Hoodline)</a></li>
+      <li>Centene planea dejar el programa de expansión de Medicaid de Arkansas en 2027. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Se esperan más salidas a medida que entren en vigor los recortes a Medicaid de la ley de presupuesto federal de 2025.</li>
+    </ul>
+
+    <h2>Por qué las aseguradoras eliminan planes Medicare Advantage: el dinero, sin rodeos</h2>
+    <p>Las aseguradoras dicen que los costos subieron porque la gente usó más atención médica. Eso es cierto. También es cierto que el gobierno cambió las reglas de maneras que reducen lo que ganan estos negocios. Esto es lo que cambió.</p>
+
+    <h3>Medicare Advantage</h3>
+    <ol class="steps">
+      <li><strong>Los pagos dejaron de crecer tan rápido.</strong> Para 2027, el gobierno propuso primero un aumento de pago casi nulo: 0.09 por ciento. Las aseguradoras protestaron. El aumento final fue de 2.48 por ciento, unos 13 mil millones de dólares, después de que el gobierno retiró una actualización planeada de la fórmula que habría recortado más los pagos. <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(hoja informativa de CMS)</a> Aun así, está muy por debajo del crecimiento de costos que reportan las aseguradoras.</li>
+      <li><strong>La codificación de diagnósticos paga menos.</strong> Desde 2024, Medicare ha introducido poco a poco un nuevo modelo de ajuste de riesgo que paga menos a los planes por muchos diagnósticos registrados. Los planes que dependían de una codificación intensa perdieron más.</li>
+      <li><strong>Menos bonos por estrellas.</strong> Los planes con calificación de 4 estrellas o más reciben dinero adicional. Las calificaciones bajaron para varias aseguradoras grandes, y los bonos bajaron con ellas. Humana dijo que recortaría "la cola inferior de rentabilidad", es decir, los planes con 3.5 estrellas o menos. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a></li>
+      <li><strong>Los costos de medicamentos pasaron a los planes.</strong> La ley de medicamentos de 2022 limitó lo que usted paga por los medicamentos de la Parte D de Medicare e hizo que los planes paguen más del costo por encima del tope. Es bueno para usted. Es costoso para ellos, y el apoyo federal temporal que amortiguaba a los planes de medicamentos independientes termina el 31 de diciembre de 2026. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>En conjunto: los planes marginales, a menudo Organizaciones de Proveedores Preferidos, condados rurales y planes con menor calificación, dejaron de ser rentables. Las compañías los eliminaron. Los planes que quedan tienden a ser Organizaciones de Mantenimiento de la Salud con Redes de Proveedores más reducidas y menos extras.</p>
+
+    <h3>Mercado de Seguros</h3>
+    <ol class="steps">
+      <li><strong>El Congreso dejó vencer los Subsidios más grandes</strong> a fines de 2025. Las inscripciones bajaron en más de un millón para 2026. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Las personas que se retiraron eran, en promedio, más sanas, así que asegurar al grupo restante cuesta más.</li>
+      <li><strong>Las nuevas reglas dificultan la inscripción.</strong> El plazo federal para inscribirse es más corto y más personas deben comprobar que son elegibles antes de que empiece la cobertura. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Las aseguradoras esperan menos clientes y más enfermos, y fijan precios o se van en consecuencia.</li>
+    </ol>
+
+    <h3>Medicaid</h3>
+    <ol class="steps">
+      <li><strong>La ley de presupuesto federal de 2025 recorta el financiamiento de Medicaid</strong> en los próximos años: requisitos de trabajo para muchos adultos, verificaciones de elegibilidad cada seis meses y límites a cómo los estados aumentan su parte del dinero. Luego los estados pagan menos o más tarde a los planes, y los planes se van. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>Qué cambia para usted en 2027</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Si usted tiene…</th><th>El riesgo</th></tr></thead>
+        <tbody>
+          <tr><td>Un plan Medicare Advantage que termina</td><td>Un vacío de cobertura si no atiende las cartas. Perder a sus médicos si la Red de Proveedores del nuevo plan es distinta. Perder el corto plazo para comprar un Seguro Complementario de Medicare sin preguntas de salud.</td></tr>
+          <tr><td>Un plan Medicare Advantage que continúa</td><td>Redes más pequeñas, Copagos más altos y menos extras en 2027. Los extras como dental, tarjetas para productos sin receta y beneficios de gimnasio se recortan primero porque son los más fáciles de recortar. Lea el Aviso Anual de Cambios línea por línea.</td></tr>
+          <tr><td>Un plan independiente de la Parte D de Medicare</td><td>Un salto en la Prima si se queda donde está. Su plan también puede cambiar su Formulario de Medicamentos. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>Un plan del Mercado de Seguros</td><td>Que lo pasen al plan de otra aseguradora si la suya se va, con una red nueva. Una factura de Prima mayor, aunque los Subsidios suben junto con el precio de referencia para la mayoría de las personas que califican.</td></tr>
+          <tr><td>Medicaid</td><td>Que le asignen un plan nuevo si el suyo deja el estado, y perder la cobertura en una renovación si no responde una carta.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="check">¿Cómo sé si mi plan Medicare Advantage termina?</h2>
+    <p>Un titular sobre su aseguradora no significa que su plan termine. Las aseguradoras suelen eliminar <em>algunos</em> planes en <em>algunos</em> condados y conservar el resto. Revise su propio plan, en este orden:</p>
+    <ol class="steps">
+      <li><strong>Busque la carta.</strong> Si su plan termina, la aseguradora debió enviarle por correo un aviso de no renovación a principios de octubre, a su nombre, con el nombre del plan y su fecha de término. Si en cambio recibió un Aviso Anual de Cambios, su plan continúa en 2027 con los cambios que indica. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+      <li><strong>Compare el nombre y el número del plan.</strong> Su tarjeta de miembro muestra el nombre del plan, un número de contrato (H y cuatro dígitos) y el ID del plan. Compárelos con la carta. Una aseguradora puede terminar el "Plan A" en su condado y conservar el "Plan B"; solo se afecta el plan exacto que aparece en la carta.</li>
+      <li><strong>Busque los planes de 2027 para su código postal.</strong> En <a href="/es/using-plan-finder.html">Medicare Plan Finder</a>, elija la cobertura de 2027 e ingrese su código postal. Si su plan actual no aparece para 2027, termina en su área. <!-- src: https://www.medicare.gov/plan-compare/ --></li>
+      <li><strong>Llame al plan si algo no está claro.</strong> El número de servicios para miembros está en su tarjeta. Pregunte: "¿Mi plan, contrato número H-xxxx, plan xxx, se ofrece en mi condado para 2027?"</li>
+      <li><strong>Si termina,</strong> vaya a <a href="/es/medicare-advantage-plan-ending.html">Mi plan Medicare Advantage termina en 2027</a> para ver sus fechas, derechos y opciones. Para ver qué más se vende donde usted vive, <a href="/es/medicare-plan-comparison-2027.html">compare sus opciones de Medicare Advantage para 2027</a>.</li>
+    </ol>
+
+    <h2 id="act">Qué hacer ahora</h2>
+    <p>Esta es la parte que la mayoría de los sitios suaviza. Nosotros no.</p>
+    <ol class="steps">
+      <li><strong>Abra todos los sobres de su plan en octubre.</strong> Un <a href="/es/medicare-annual-notice-of-change.html">aviso de cambios</a> significa que su plan continúa con nuevas condiciones. Un aviso de no renovación significa que termina el 31 de diciembre. Guarde la carta de no renovación; es la prueba de sus derechos.</li>
+      <li><strong>Si su plan Medicare Advantage termina, conozca sus dos relojes.</strong> Puede cambiar de plan de Medicare del 8 de diciembre a fines de febrero. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Pero el derecho a comprar una póliza de Seguro Complementario de Medicare sin preguntas de salud dura solo 63 días después de que termine su cobertura. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> La gente pierde el más corto. Si tiene problemas de salud y alguna vez quiso la Cobertura Original de Medicare más un Seguro Complementario de Medicare, esta puede ser su única oportunidad de obtenerlo sin Suscripción. Averigüe el precio antes de elegir otro plan Advantage. Detalles en <a href="/es/medicare-advantage-plan-ending.html">sus opciones cuando termina un plan</a>.</li>
+      <li><strong>No elija un plan por sus extras.</strong> Las tarjetas de dental, visión, audición, gimnasio y comestibles son lo primero que se recorta cuando un plan pierde dinero, y pueden cambiar cada enero. Elija según sus médicos, sus medicamentos y su hospital.</li>
+      <li><strong>Revise la Clasificación de Estrellas y la dirección de la aseguradora.</strong> Humana eliminó planes con 3.5 estrellas o menos. Un plan con baja calificación, o de una aseguradora que se reduce en su estado, tiene más probabilidad de ser eliminado otra vez el próximo año. Las estrellas aparecen en <a href="/es/using-plan-finder.html">Plan Finder</a>; vea <a href="/es/medicare-star-ratings.html">qué significan las estrellas</a>.</li>
+      <li><strong>Si tiene un plan de medicamentos independiente, compare; no renueve sin revisar.</strong> Ingrese sus medicamentos en Plan Finder. Quedarse donde está puede costar mucho más que cambiar este año. <a href="/es/switching-medicare-part-d-formulary-check.html">Cómo revisar su lista de medicamentos</a>.</li>
+      <li><strong>Si su condado no tiene un plan Medicare Advantage regular con cobertura de medicamentos para 2027,</strong> estará en la Cobertura Original de Medicare. Agregue un plan de la Parte D de Medicare antes del 7 de diciembre para no quedarse sin cobertura de medicamentos. Luego vea el <a href="/es/medigap.html">Seguro Complementario de Medicare</a>.</li>
+      <li><strong>Mercado de Seguros: actúe pronto y revise la carta sobre su plan asignado.</strong> El plazo federal es del 1 de noviembre al 15 de diciembre. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Si su aseguradora se va, HealthCare.gov puede pasarlo a otro plan; es posible que no incluya a sus médicos. Actualice su estimado de ingresos para que su Subsidio sea correcto. Vea la <a href="/es/marketplace-open-enrollment-2027.html">Inscripción Abierta del Mercado de Seguros 2027</a>.</li>
+      <li><strong>Medicaid: responda todas las cartas y mantenga su dirección al día.</strong> Las renovaciones serán más frecuentes. Si su plan deja su estado, elija usted mismo un plan nuevo antes de que el estado le asigne uno, para conservar a sus médicos. Vea la <a href="/es/medicaid-renewal.html">renovación de Medicaid</a>.</li>
+      <li><strong>Obtenga ayuda gratuita e imparcial.</strong> Los consejeros de SHIP no venden planes. <a href="/es/ship-directory.html">Encuentre el suyo</a>. Los agentes también pueden ayudar, pero los pagan los planes que venden.</li>
+    </ol>
+
+    <h2>Qué esperamos después</h2>
+    <p>Nuestra lectura de la evidencia, no una predicción en la que deba confiar: las salidas no han terminado. El crecimiento de los pagos de Medicare Advantage para 2027 es modesto y los cambios de codificación ya están plenamente vigentes, así que las aseguradoras seguirán recortando planes de menor calificación y condados con poca población. Los precios del Mercado de Seguros seguirán altos a menos que el Congreso restablezca los Subsidios más grandes. Las salidas de planes de Medicaid se extenderán a medida que los recortes federales entren en vigor durante 2027 y 2028. La lección práctica es la misma cada año: nunca dé por hecho que el plan que tiene será el plan que conserve, y revíselo cada otoño.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Los planes Medicare Advantage desaparecen en 2027?</summary>
+      <div>
+        <p>No. La mayoría de las aseguradoras conservó la mayoría de sus planes, y la mayoría de los condados todavía tiene muchas opciones. Lo que desaparece es el plan marginal: el de menor calificación, en condados rurales o de costo alto, o el de aseguradoras pequeñas de sistemas hospitalarios. Revise si el suyo es uno de ellos.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Humana elimina planes Medicare Advantage para 2027?</summary>
+      <div>
+        <p>Sí. Humana termina planes que cubren a unos 600,000 miembros, en su mayoría planes con 3.5 estrellas o menos. Los miembros recibieron cartas de no renovación con fecha del 2 de octubre, y sus planes terminan el 31 de diciembre. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> Si no recibió una carta, su plan de Humana continúa; lea su Aviso Anual de Cambios para ver los cambios de 2027. Vea <a href="#check">cómo revisar su propio plan</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿UnitedHealthcare (AARP) elimina planes Medicare Advantage para 2027?</summary>
+      <div>
+        <p>Sí. UnitedHealthcare descontinúa planes que cubren a unos 390,000 miembros y sale de 228 condados. <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> La mayoría de sus planes continúa. Su carta le dice en qué caso está usted.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Aetna deja Medicare Advantage en 2027?</summary>
+      <div>
+        <p>No del todo. Aetna (CVS Health) se retira de unos 103 condados para 2027, pero sigue vendiendo planes en otros lugares. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> Si su condado es uno de ellos, recibió una carta de no renovación.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Qué cambia con los planes Medicare Advantage en 2027?</summary>
+      <div>
+        <p>Menos planes y menos aseguradoras en muchos condados, más Organizaciones de Mantenimiento de la Salud y menos Organizaciones de Proveedores Preferidos, beneficios adicionales más pequeños y 193 condados sin un plan Advantage de inscripción general que incluya cobertura de medicamentos. Los costos que usted paga en la Cobertura Original de Medicare y en la Parte D de Medicare también cambian; vea <a href="/es/medicare-costs-2027.html">los costos de Medicare para 2027</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Por qué el gobierno recortó los pagos a estos planes?</summary>
+      <div>
+        <p>Los auditores federales y los asesores del Congreso llevan años diciendo que Medicare paga a los planes Advantage más por persona de lo que costaría la Cobertura Original de Medicare, en parte por la codificación de diagnósticos. Los cambios desde 2024 buscan reducir esa diferencia. Las aseguradoras dicen que los cambios fueron demasiado lejos y demasiado rápido. Ambos lados describen el mismo dinero desde extremos opuestos.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Mi plan termina. ¿Perderé Medicare?</summary>
+      <div>
+        <p>No. La Parte A de Medicare y la Parte B de Medicare se mantienen. Si no hace nada, el 1 de enero estará en la Cobertura Original de Medicare, sin cobertura de medicamentos a menos que se inscriba en un plan de la Parte D de Medicare. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Debo dejar Medicare Advantage por esto?</summary>
+      <div>
+        <p>Eso depende de su salud, sus médicos y su presupuesto, y nosotros no elegimos por usted. Lo que sí le decimos: si su plan termina y usted tiene problemas de salud, tiene un derecho de corta duración a un Seguro Complementario de Medicare sin preguntas de salud. Decida con esa puerta abierta, no después de que se cierre.</p>
+      </div>
+    </details>
+
+    <h2>Fuentes</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS: Anuncio de tarifas de Medicare Advantage y Parte D de Medicare para 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF: Disponibilidad de planes Medicare Advantage por condado para 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF: Primas de planes independientes de la Parte D de Medicare para 2027</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF: Participación de las aseguradoras en el Mercado de Seguros de la ACA en 2027</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF: La atención administrada de Medicaid y la ley de reconciliación de 2025</a></li>
+      <li><a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">Insurance Business: Las salidas de Humana afectan a 600,000 miembros</a></li>
+      <li><a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">Yahoo Finance: UnitedHealthcare sale de ciertos planes Medicare Advantage para 2027</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive: cuánto recortan las aseguradoras Medicare Advantage para 2027</a></li>
+      <li><a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">Hoodline: Luisiana se reduce a cuatro aseguradoras de Medicaid mientras 580,000 cambian de plan</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: Períodos Especiales de Inscripción</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: ¿Cuándo puedo comprar una póliza de Seguro Complementario de Medicare?</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer es información educativa general y no está afiliado con ninguna agencia ni aseguradora. Esta página explica el mercado y sus derechos; no recomienda ningún plan. Las cifras de miembros y condados provienen de las fuentes de investigación y noticias enlazadas junto a cada una; cada una se comparó con la fuente original el 9 de octubre de 2026, y esta página se actualiza a medida que se confirman nuevos anuncios. Confirme sus propias fechas y derechos con 1-800-MEDICARE, HealthCare.gov, la oficina de Medicaid de su estado o su <a href="/es/ship-directory.html">SHIP</a>.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/insurers-dropping-plans-2027.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
