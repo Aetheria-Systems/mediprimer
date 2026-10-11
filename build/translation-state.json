@@ -567,6 +567,10 @@
     "state-health-coverage-older-immigrants.html": {
       "hash": "94a9ce8799278eef70e54ada5ab19d8b",
       "date": "2026-10-10"
+    },
+    "insurers-dropping-plans-2027.html": {
+      "hash": "f6772095f8dfd2fcec323867db424108",
+      "date": "2026-10-11"
     }
   },
   "zh-Hant": {
@@ -699,8 +703,8 @@
       "date": "2026-10-10"
     },
     "ship-directory.html": {
-      "hash": "28f5117533022d77012e996a8c9ab358",
-      "date": "2026-10-07"
+      "hash": "4c8a787462e25331eeb6389f042125a5",
+      "date": "2026-10-11"
     },
     "support.html": {
       "hash": "caf008ceabcc6da1e5552fa12d9320a6",
@@ -1059,16 +1063,16 @@
       "date": "2026-10-10"
     },
     "switching-medicare-part-d-formulary-check.html": {
-      "hash": "0d646bebf52b5d609e1bbf63a2169234",
-      "date": "2026-09-18"
+      "hash": "4d7bc6d510b80281de99bbd8f438d503",
+      "date": "2026-10-11"
     },
     "medicare-costs-card.html": {
       "hash": "68d0eaa77bc1d635f9927d076c10609e",
       "date": "2026-10-10"
     },
     "medicare-medicaid-chinese.html": {
-      "hash": "51735b20a90d337fe7cdcce65e71e5a2",
-      "date": "2026-09-17"
+      "hash": "8c56b8ef8766545ab683e78fab7ded50",
+      "date": "2026-10-11"
     },
     "medicare-prescription-payment-plan.html": {
       "hash": "716aa7f4d4a9240ffc816d63c4e5d788",
@@ -1381,8 +1385,8 @@
       "date": "2026-10-10"
     },
     "medicare-long-term-care.html": {
-      "hash": "c288be6070b54ff61d9144996a9a1d68",
-      "date": "2026-09-15"
+      "hash": "f045361761ac8f5575cbb6052b2857b7",
+      "date": "2026-10-11"
     },
     "medicare-medical-equipment-dme.html": {
       "hash": "f94eb3bfbdd4d92f58b308f9b88e07b9",
@@ -2785,8 +2789,8 @@
       "date": "2026-10-10"
     },
     "star-ratings.html": {
-      "hash": "5fda928e061bb62f8f24f08be30fed14",
-      "date": "2026-10-01"
+      "hash": "b516d8d7056d31652fb8014be931cbe6",
+      "date": "2026-10-11"
     },
     "extra-help-low-income-subsidy.html": {
       "hash": "fd26dc941ae1d641091d74e794275226",
