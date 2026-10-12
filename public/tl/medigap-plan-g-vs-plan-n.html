@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medigap Plan G kumpara sa Plan N: Paano Pumili — MediPrimer</title>
+<meta name="description" content="Mas malawak ang saklaw ng Plan G pero mas mataas ang bayad. Mas mura ang Plan N pero may maliliit na bayad sa bawat dalaw. Narito ang magkatabing paghahambing para makapili ka.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/medigap-plan-g-vs-plan-n.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medigap Plan G kumpara sa Plan N: Paano Pumili — MediPrimer">
+<meta property="og:description" content="Mas malawak ang saklaw ng Plan G pero mas mataas ang bayad. Mas mura ang Plan N pero may maliliit na bayad sa bawat dalaw. Narito ang magkatabing paghahambing para makapili ka.">
+<meta property="og:url" content="https://mediprimer.org/tl/medigap-plan-g-vs-plan-n.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medigap Plan G kumpara sa Plan N: Paano Pumili — MediPrimer">
+<meta name="twitter:description" content="Mas malawak ang saklaw ng Plan G pero mas mataas ang bayad. Mas mura ang Plan N pero may maliliit na bayad sa bawat dalaw. Narito ang magkatabing paghahambing para makapili ka.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Ano ang pinakamalaking pagkakaiba ng Plan G at Plan N?", "acceptedAnswer": {"@type": "Answer", "text": "Binabayaran nang buo ng Plan G ang labis na singil sa Medicare Part B at walang Copayment sa klinika o silid-pang-emergency. Hindi sinasaklaw ng Plan N ang labis na singil at nagdaragdag ito ng Copayment na hanggang $20 sa ilang dalaw sa klinika at hanggang $50 sa mga dalaw sa silid-pang-emergency na hindi nauuwi sa pagpapaospital."}}, {"@type": "Question", "name": "Ano ang labis na singil sa Medicare Part B, at kailangan ko bang mag-alala rito?", "acceptedAnswer": {"@type": "Answer", "text": "Ang ilang doktor na hindi tumatanggap ng halagang inaprubahan ng Medicare ay maaaring maningil ng hanggang 15% na higit sa halagang iyon. Sinasaklaw ng Plan G ang dagdag na gastos na iyon; hindi ito sinasaklaw ng Plan N. Nakasalalay ito sa kung naniningil ba ng labis ang mga Provider sa inyong lugar — magtanong bago magpasya."}}, {"@type": "Question", "name": "Sinasaklaw ba ng dalawang plano ang Deductible (Nababawas) ng Medicare Part A?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Hindi sinasaklaw ng Plan G o Plan N ang Deductible (Nababawas) ng Medicare Part A o ng Medicare Part B. Parehong binabayaran ng dalawa ang Coinsurance ng Medicare Part A at mga gastos sa ospital, at ang Coinsurance ng Medicare Part B (bawas ang maliliit na Copayment ng Plan N) sa 100%."}}, {"@type": "Question", "name": "Laging mas mura ba ang Plan N kaysa sa Plan G?", "acceptedAnswer": {"@type": "Answer", "text": "Karaniwang mas mababa ang Premium ng Plan N, dahil mas mababa ang presyo nito kaysa sa Plan G ayon sa mga Copayment nito at kawalan ng saklaw sa labis na singil. Ngunit nag-iiba ang eksaktong presyo ayon sa kompanya, kaya ihambing ang presyo ng dalawa sa inyong lugar bago magpasya."}}, {"@type": "Question", "name": "Maaari ba akong lumipat mula sa Plan N patungong Plan G sa hinaharap, o kabaligtaran?", "acceptedAnswer": {"@type": "Answer", "text": "Maaari kang humiling na lumipat, ngunit pagkatapos matapos ang iyong Bukas na Pagpapatala sa Medigap (Karagdagang Medicare), maaaring gumamit ang kompanya ng Pagsusuri sa Panganib (Underwriting) at maaari kang tanggihan o singilin nang higit batay sa iyong kalusugan. Tingnan ang Mga Plano ng Medigap kung paano gumagana ang paglipat at ang mga karapatan sa Garantisadong Pagbibigay ng Saklaw."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medigap Plan G kumpara sa Plan N: Paano Pumili", "description": "Mas malawak ang saklaw ng Plan G pero mas mataas ang bayad. Mas mura ang Plan N pero may maliliit na bayad sa bawat dalaw. Narito ang magkatabing paghahambing para makapili ka.", "url": "https://mediprimer.org/tl/medigap-plan-g-vs-plan-n.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-12", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medigap-plan-g-vs-plan-n.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medigap-plan-g-vs-plan-n.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Medigap Plan G kumpara sa Plan N: Paano Pumili", "item": "https://mediprimer.org/tl/medigap-plan-g-vs-plan-n.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medigap-plan-g-vs-plan-n.html" lang="en">English</a>
+    <a href="/es/medigap-plan-g-vs-plan-n.html" lang="es">Español</a>
+    <a href="/zh-Hant/medigap-plan-g-vs-plan-n.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medigap-plan-g-vs-plan-n.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/medigap-plan-g-vs-plan-n.html" lang="ko">한국어</a>
+    <a href="/tl/medigap-plan-g-vs-plan-n.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop active">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Alamin ang mga Pangunahing Kaalaman</p>
+    <h1>Medigap Plan G kumpara sa Plan N: Paano Pumili</h1>
+    <p>Ito ang dalawang planong Medigap (Karagdagang Medicare) na pinakamadalas paghambingin. Mas malawak ang saklaw ng Plan G; kadalasang mas mura ang Plan N. Narito ang eksaktong pagkakaiba nila.</p>
+  </div>
+</section>
+
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Ang Plan G at Plan N ay parehong standardisadong polisiya ng Medigap (Karagdagang Medicare) na nagbabayad sa karamihan ng hindi binabayaran ng Orihinal na Medicare. Tatlong bagay ang pagkakaiba nila: may maliit na Copayment ang Plan N sa ilang dalaw sa klinika at sa silid-pang-emergency, hindi sinasaklaw ng Plan N ang labis na singil sa Medicare Part B, at ang mas malawak na saklaw ng Plan G ay kadalasang nangangahulugan ng mas mataas na Premium. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --> Hindi sinasaklaw ng alinman sa dalawang plano ang Deductible (Nababawas) ng Medicare Part A o Medicare Part B. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></p>
+
+    <div class="note">
+      <strong>Parehong titik, parehong benepisyo, saanman.</strong> Ang bawat kompanyang nagbebenta ng "Plan G" o "Plan N" sa isang estado ay dapat mag-alok ng magkakaparehong benepisyo para sa titik na iyon. Ang Premium lamang ang nagkakaiba sa bawat kompanya. Ipinapaliwanag nang buo ng <a href="/tl/medigap.html">Mga Plano ng Medigap</a> ang standardisasyon.
+    </div>
+
+    <h2>Magkatabing paghahambing: ano ang sinasaklaw ng bawat plano</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Benepisyo</th>
+            <th>Plan G</th>
+            <th>Plan N</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Coinsurance ng Medicare Part A at mga gastos sa ospital</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Coinsurance ng Hospisyo sa Medicare Part A</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Coinsurance ng Pasilidad ng Bihasang Pangangalaga ng Nurse</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Coinsurance ng Medicare Part B</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Sinasaklaw, ngunit may Copayment na hanggang $20 sa ilang dalaw sa klinika at hanggang $50 sa isang dalaw sa silid-pang-emergency na hindi nauuwi sa pagpapaospital <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Labis na singil sa Medicare Part B</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Deductible (Nababawas) ng Medicare Part A</td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Deductible (Nababawas) ng Medicare Part B</td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Hindi sinasaklaw <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Dugo (unang 3 pinta)</td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>Sinasaklaw nang buo <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+          <tr>
+            <td>Emergency kapag naglalakbay sa ibang bansa</td>
+            <td>80% hanggang sa limitasyon ng plano <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+            <td>80% hanggang sa limitasyon ng plano <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Pag-unawa sa labis na singil sa Medicare Part B</h2>
+    <p>Ang ilang doktor ay hindi pumapayag na tanggapin bilang buong bayad ang halagang inaprubahan ng Medicare. Maaaring maningil ang mga Provider na iyon ng hanggang 15% na higit sa halagang inaprubahan ng Medicare para sa isang serbisyo — ang dagdag na halagang iyon ay "labis na singil," at ikaw ang magbabayad nito maliban kung sinasaklaw ito ng iyong planong Medigap (Karagdagang Medicare). Binabayaran nang buo ng Plan G ang mga labis na singil. Hindi ito binabayaran ng Plan N, kaya kung nagpapakonsulta ka sa mga Provider na naniningil ng labis, ikaw ang sasagot sa gastos na iyon sa ilalim ng Plan N. Bago pumili ng Plan N, itanong sa mga opisina ng iyong mga doktor kung naniningil sila nang higit sa halagang inaprubahan ng Medicare, o alamin kung pinapayagan ba talaga ang labis na singil sa iyong estado — may mga estadong tuluyang nagbabawal nito.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Ang mga Copayment sa klinika at silid-pang-emergency sa ilalim ng Plan N</h2>
+    <p>Kapalit ng mas mababang Premium, ang Plan N ay may maliit na Copayment na direkta mong babayaran sa Provider: hanggang $20 sa ilang dalaw sa klinika, at hanggang $50 sa isang dalaw sa silid-pang-emergency na hindi nauuwi sa pagpapaospital. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --> Ito ay mga takdang halaga, hindi mga porsiyento, kaya madaling mahulaan — ngunit kung madalas kang magpatingin sa doktor, mas mabilis itong madaragdagan kaysa sa disenyo ng Plan G na walang Copayment.</p>
+
+    <h2>Paano timbangin ang kapalit</h2>
+    <ul>
+      <li><strong>Piliin ang Plan G</strong> kung gusto mo ng pinakakaunting sorpresa sa opisina ng doktor at ganap na proteksyon laban sa labis na singil, at komportable kang magbayad ng mas mataas na buwanang Premium para sa katiyakang iyon.</li>
+      <li><strong>Piliin ang Plan N</strong> kung gusto mo ng mas mababang buwanang Premium, hindi ka naaabala sa maliliit na Copayment sa bawat dalaw, at nakumpirma mong hindi naniningil (o bihirang maningil) ng labis ang iyong mga Provider.</li>
+    </ul>
+    <p>Nag-iiba ang Premium ng dalawang plano ayon sa kompanya, estado, at iyong edad, kaya humingi ng presyo para sa pareho bago magpasya — ang malaking agwat sa Premium ay maaaring mas mabigat kaysa sa pagkakaiba sa Copayment, o kabaligtaran. Tinutulungan ka ng <a href="/tl/costs.html">Pag-unawa sa Iyong mga Gastos</a> at <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a> na ihambing ang kabuuang gastos, hindi lamang ang nakikitang Premium.</p>
+
+    <h2>Mga karaniwang tanong</h2>
+
+    <details class="qa">
+      <summary>Ano ang pinakamalaking pagkakaiba ng Plan G at Plan N?</summary>
+      <div>
+        <p>Binabayaran nang buo ng Plan G ang labis na singil sa Medicare Part B at walang Copayment sa klinika o silid-pang-emergency. Hindi sinasaklaw ng Plan N ang labis na singil at nagdaragdag ito ng Copayment na hanggang $20 sa ilang dalaw sa klinika at hanggang $50 sa mga dalaw sa silid-pang-emergency na hindi nauuwi sa pagpapaospital. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Ano ang labis na singil sa Medicare Part B, at kailangan ko bang mag-alala rito?</summary>
+      <div>
+        <p>Ang ilang doktor na hindi tumatanggap ng halagang inaprubahan ng Medicare ay maaaring maningil ng hanggang 15% na higit sa halagang iyon. Sinasaklaw ng Plan G ang dagdag na gastos na iyon; hindi ito sinasaklaw ng Plan N. Nakasalalay ito sa kung naniningil ba ng labis ang mga Provider sa inyong lugar — magtanong bago magpasya.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Sinasaklaw ba ng dalawang plano ang Deductible (Nababawas) ng Medicare Part A?</summary>
+      <div>
+        <p>Hindi. Hindi sinasaklaw ng Plan G o Plan N ang Deductible (Nababawas) ng Medicare Part A o ng Medicare Part B. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --> Parehong binabayaran ng dalawa ang Coinsurance ng Medicare Part A at mga gastos sa ospital, at ang Coinsurance ng Medicare Part B (bawas ang maliliit na Copayment ng Plan N) sa 100%.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Laging mas mura ba ang Plan N kaysa sa Plan G?</summary>
+      <div>
+        <p>Karaniwang mas mababa ang Premium ng Plan N, dahil mas mababa ang presyo nito kaysa sa Plan G ayon sa mga Copayment nito at kawalan ng saklaw sa labis na singil. Ngunit nag-iiba ang eksaktong presyo ayon sa kompanya, kaya ihambing ang presyo ng dalawa sa inyong lugar bago magpasya.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Maaari ba akong lumipat mula sa Plan N patungong Plan G sa hinaharap, o kabaligtaran?</summary>
+      <div>
+        <p>Maaari kang humiling na lumipat, ngunit pagkatapos matapos ang iyong Bukas na Pagpapatala sa Medigap (Karagdagang Medicare), maaaring gumamit ang kompanya ng Pagsusuri sa Panganib (Underwriting) at maaari kang tanggihan o singilin nang higit batay sa iyong kalusugan. Tingnan ang <a href="/tl/medigap.html">Mga Plano ng Medigap</a> kung paano gumagana ang paglipat at ang mga karapatan sa Garantisadong Pagbibigay ng Saklaw.</p>
+      </div>
+    </details>
+
+    <h2>Mga opisyal na pinagmulan</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits" rel="noopener">Medicare.gov: Ihambing ang mga benepisyo ng planong Medigap (buong talaan ng benepisyo, lahat ng titik ng plano)</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/medigap/basics/costs" rel="noopener">Medicare.gov: Alamin ang mga gastos sa Medigap</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Tiyakin bago kumilos.</strong> Ang MediPrimer ay pangkalahatang impormasyong pang-edukasyon at hindi kaakibat ng anumang ahensya o kompanya ng seguro. Nag-iiba ang Premium, mga tuntunin sa labis na singil, at pagkakaroon ng plano ayon sa estado at kompanya. Humingi ng presyo at kumpirmahin ang mga detalye bago bumili. Hindi nagrerekomenda ang pahinang ito ng partikular na plano.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/medigap-plan-g-vs-plan-n.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
