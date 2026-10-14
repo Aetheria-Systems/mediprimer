@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Rút Lui và Vì Sao</title>
+<meta name="description" content="Humana, UnitedHealthcare và các công ty khác đang ngừng các chương trình Medicare Advantage cho năm 2027. Vì sao việc này xảy ra, cách kiểm tra chương trình của bạn có bị chấm dứt không, và việc cần làm trước ngày 7 tháng 12.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Rút Lui và Vì Sao">
+<meta property="og:description" content="Humana, UnitedHealthcare và các công ty khác đang ngừng các chương trình Medicare Advantage cho năm 2027. Vì sao việc này xảy ra, cách kiểm tra chương trình của bạn có bị chấm dứt không, và việc cần làm trước ngày 7 tháng 12.">
+<meta property="og:url" content="https://mediprimer.org/vi/insurers-dropping-plans-2027.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Rút Lui và Vì Sao">
+<meta name="twitter:description" content="Humana, UnitedHealthcare và các công ty khác đang ngừng các chương trình Medicare Advantage cho năm 2027. Vì sao việc này xảy ra, cách kiểm tra chương trình của bạn có bị chấm dứt không, và việc cần làm trước ngày 7 tháng 12.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Các chương trình Medicare Advantage có ngừng hoạt động năm 2027 không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Hầu hết các công ty bảo hiểm giữ phần lớn chương trình của họ, và hầu hết các quận vẫn có nhiều lựa chọn. Thứ đang biến mất là các chương trình cận biên: xếp hạng thấp hơn, ở các quận nông thôn hoặc chi phí cao, hoặc do các công ty bảo hiểm nhỏ thuộc hệ thống bệnh viện điều hành. Hãy kiểm tra xem chương trình của bạn có thuộc nhóm đó không."}}, {"@type": "Question", "name": "Humana có ngừng các chương trình Medicare Advantage cho năm 2027 không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Humana đang chấm dứt các chương trình bao phủ khoảng 600.000 hội viên, chủ yếu là các chương trình được đánh giá từ 3,5 sao trở xuống. Hội viên đã nhận thư không gia hạn đề ngày 2 tháng 10, và chương trình của họ kết thúc vào ngày 31 tháng 12. (Insurance Business) Nếu bạn không nhận được thư, chương trình Humana của bạn vẫn tiếp tục; hãy đọc Thông Báo Thay Đổi Hàng Năm của chương trình để biết các thay đổi năm 2027. Xem cách kiểm tra chương trình của chính bạn ."}}, {"@type": "Question", "name": "UnitedHealthcare (AARP) có ngừng các chương trình Medicare Advantage cho năm 2027 không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. UnitedHealthcare đang ngừng các chương trình bao phủ khoảng 390.000 hội viên và rời 228 quận. (Yahoo Finance) (KFF) Hầu hết các chương trình của họ vẫn tiếp tục. Lá thư của bạn cho biết bạn thuộc trường hợp nào."}}, {"@type": "Question", "name": "Aetna có rời Medicare Advantage năm 2027 không?", "acceptedAnswer": {"@type": "Answer", "text": "Không hoàn toàn. Aetna (CVS Health) rút khỏi khoảng 103 quận cho năm 2027 nhưng vẫn tiếp tục bán các chương trình ở nơi khác. (Healthcare Dive) Nếu quận của bạn là một trong số đó, bạn đã nhận được thư không gia hạn."}}, {"@type": "Question", "name": "Điều gì đang thay đổi với các chương trình Medicare Advantage năm 2027?", "acceptedAnswer": {"@type": "Answer", "text": "Ít chương trình hơn và ít công ty bảo hiểm hơn ở nhiều quận, nhiều HMO hơn và ít PPO hơn, quyền lợi thêm nhỏ hơn, và 193 quận không có chương trình Advantage ghi danh chung nào kèm bảo hiểm thuốc. Các chi phí bạn trả trong Original Medicare và Medicare Phần D cũng thay đổi; xem chi phí Medicare cho năm 2027 ."}}, {"@type": "Question", "name": "Vì sao chính phủ cắt giảm thanh toán cho các chương trình này?", "acceptedAnswer": {"@type": "Answer", "text": "Các kiểm toán viên liên bang và cố vấn của Quốc hội đã nói nhiều năm rằng Medicare trả cho các chương trình Advantage nhiều hơn mỗi người so với chi phí của Original Medicare, một phần thông qua việc mã hóa chẩn đoán. Các thay đổi từ năm 2024 nhằm thu hẹp khoảng cách đó. Các công ty bảo hiểm nói các thay đổi đi quá xa, quá nhanh. Cả hai bên đang mô tả cùng một khoản tiền từ hai đầu đối lập."}}, {"@type": "Question", "name": "Chương trình của tôi sắp chấm dứt. Tôi có mất Medicare không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Medicare Phần A và Medicare Phần B vẫn còn. Nếu bạn không làm gì, bạn sẽ ở trong Original Medicare vào ngày 1 tháng 1, không có bảo hiểm thuốc trừ khi bạn tham gia một chương trình Medicare Phần D."}}, {"@type": "Question", "name": "Tôi có nên rời Medicare Advantage vì điều này không?", "acceptedAnswer": {"@type": "Answer", "text": "Điều đó tùy thuộc vào sức khỏe, các bác sĩ và ngân sách của bạn, và chúng tôi không chọn thay bạn. Điều chúng tôi sẽ nói: nếu chương trình của bạn sắp chấm dứt và bạn có bệnh lý, bạn có một quyền ngắn hạn để mua Medigap mà không bị hỏi về sức khỏe. Hãy quyết định khi cánh cửa đó còn mở, đừng đợi đến khi nó đóng lại."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Rút Lui và Vì Sao", "description": "Humana, UnitedHealthcare và các công ty khác đang ngừng các chương trình Medicare Advantage cho năm 2027. Vì sao việc này xảy ra, cách kiểm tra chương trình của bạn có bị chấm dứt không, và việc cần làm trước ngày 7 tháng 12.", "url": "https://mediprimer.org/vi/insurers-dropping-plans-2027.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-14", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Rút Lui và Vì Sao", "item": "https://mediprimer.org/vi/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/insurers-dropping-plans-2027.html" lang="en">English</a>
+    <a href="/es/insurers-dropping-plans-2027.html" lang="es">Español</a>
+    <a href="/zh-Hant/insurers-dropping-plans-2027.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/insurers-dropping-plans-2027.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    <a href="/tl/insurers-dropping-plans-2027.html" lang="tl">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành Cho Hội Viên &amp; Người Chăm Sóc</p>
+    <h1>Các Chương Trình Medicare Advantage Ngừng Hoạt Động Năm 2027: Ai Đang Rút Lui, Vì Sao, và Cần Làm Gì</h1>
+    <p>Thư của chương trình cho biết chương trình sẽ không được cung cấp vào năm sau. Bạn không bị mất bảo hiểm, nhưng bạn có các thời hạn cần lưu ý. Dưới đây là ý nghĩa của lá thư và cách tận dụng thời gian thêm để chuyển đổi.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Tóm tắt ngắn gọn.</strong> Trong năm 2027, các công ty bảo hiểm sức khỏe đang ngừng các chương trình ở quy mô chưa từng thấy trong nhiều năm. Riêng Humana và UnitedHealthcare đang chấm dứt các chương trình Medicare Advantage bao phủ khoảng một triệu người. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Mười một công ty bảo hiểm đang rời khỏi Thị Trường Bảo Hiểm (Marketplace) ở một số hoặc tất cả các tiểu bang của họ. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Các công ty bảo hiểm Medicaid lớn đang rút khỏi các hợp đồng với tiểu bang. Không có việc nào trong số này là lỗi của bạn. Đây là vấn đề tiền bạc: các quyết định của chính phủ khiến những chương trình này kém sinh lời, và các công ty rời khỏi những nơi họ kiếm được ít nhất. Trang này giải thích chuyện gì đang xảy ra, vì sao, bạn có thể tốn kém ra sao, và cần làm gì trước các thời hạn.</p>
+
+    <div class="note">
+      <strong>Các thời hạn quan trọng ngay lúc này.</strong> Thời Gian Ghi Danh Mở của Medicare diễn ra từ ngày 15 tháng 10 đến ngày 7 tháng 12. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> Thời Gian Ghi Danh Mở của Thị Trường Bảo Hiểm (Marketplace) trên HealthCare.gov diễn ra từ ngày 1 tháng 11 đến ngày 15 tháng 12. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Nếu chương trình của bạn sắp chấm dứt, các lá thư cho bạn thêm quyền lợi — nhưng có một quyền sẽ hết hạn rất nhanh. Xem <a href="#act">việc cần làm ngay bây giờ</a>.
+    </div>
+
+    <h2>Những chương trình Medicare Advantage nào sẽ ngừng hoạt động năm 2027?</h2>
+
+    <h3>Medicare Advantage</h3>
+    <ul>
+      <li><strong>Khoảng một triệu người đang ở trong các chương trình kết thúc vào ngày 31 tháng 12.</strong> Khoảng 600.000 hội viên Humana và khoảng 390.000 hội viên UnitedHealthcare đang ở trong các chương trình bị ngừng. Thư thông báo không gia hạn đề ngày 2 tháng 10. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> Điều này diễn ra sau một năm mà gần 3 triệu người phải tìm bảo hiểm Medicare Advantage mới cho năm 2026. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a></li>
+      <li><strong>Các công ty bảo hiểm lớn nhất đang thu hẹp phạm vi hoạt động.</strong> Health Care Service Corporation (các chương trình Blue Cross ở năm tiểu bang) đang rời 498 quận và không vào quận nào thêm. Centene rời 359 quận, UnitedHealthcare 228, Elevance (Anthem) 66 và Humana 62. Một công ty, Devoted Health, đang mở rộng sang 342 quận. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF, ngày 9 tháng 10 năm 2026)</a></li>
+      <li><strong>Một số công ty bảo hiểm nhỏ hơn, nhiều công ty thuộc sở hữu của các hệ thống bệnh viện, đang rời hoàn toàn khỏi chương trình.</strong> <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>Tại Hawaii, HMSA đang đóng hai chương trình Medicare Advantage của họ.</strong> Hai chương trình Tổ Chức Nhà Cung Cấp Ưu Tiên (PPO) có quyền lợi cao hơn là Akamai Advantage Complete Plus và Standard Plus. Khoảng 16.000 hội viên bị ảnh hưởng. HMSA vẫn ở lại Medicare Advantage và đang cung cấp các chương trình mới có quyền lợi cao hơn với Phí Bảo Hiểm cao hơn. Những hội viên không chọn chương trình sẽ trở về Original Medicare vào ngày 1 tháng 1, không có bảo hiểm thuốc. <a href="https://www.staradvertiser.com/2026/10/04/hawaii-news/hmsa-revamping-medicare-advantage-plans/" rel="noopener">(Honolulu Star-Advertiser, ngày 4 tháng 10 năm 2026)</a> <!-- news: https://www.staradvertiser.com/2026/10/04/hawaii-news/hmsa-revamping-medicare-advantage-plans/ | "The Hawaii Medical Service Association is closing two of its higher-option Medicare Advantage Plans at the end of the year, leaving about 16,000 of its members disenrolled on Dec. 31 unless they opt to get coverage from another carrier or choose new higher-option plans HMSA is offering at higher premiums." --></li>
+      <li><strong>Một số nơi sẽ không có chương trình Medicare Advantage thông thường nào có bảo hiểm thuốc.</strong> Tại 193 quận, nơi có khoảng 638.000 người dùng Medicare, không có chương trình Medicare Advantage nào kèm bảo hiểm thuốc Medicare Phần D mở cho Thời Gian Ghi Danh Chung trong năm 2027, tăng từ 123 quận trong năm nay. Sáu trong số các quận đó vẫn còn một chương trình Advantage không có bảo hiểm thuốc, và một số quận chỉ có các chương trình dành cho người đủ điều kiện tham gia Chương Trình Nhu Cầu Đặc Biệt. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> Với hầu hết mọi người ở đó, lựa chọn là Original Medicare cộng với một chương trình thuốc Medicare Phần D.</li>
+    </ul>
+
+    <h3>Các chương trình thuốc Medicare Phần D</h3>
+    <ul>
+      <li>Người bình thường có thể chọn trong 9 chương trình thuốc độc lập cho năm 2027, giảm từ 11, và không chương trình nào có Phí Bảo Hiểm bằng không trừ khi bạn nhận được Trợ Giúp Thêm (Extra Help). Nhiều người sẽ thấy Phí Bảo Hiểm tăng nhẹ. Một số người sẽ thấy mức tăng lớn hơn nhiều nếu họ ở lại chương trình hiện tại. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>Mức trần hàng năm cho số tiền bạn trả cho các loại thuốc được bảo hiểm tăng lên $2,400 vào năm 2027, và không chương trình nào được tính Khoản Khấu Trừ cao hơn $700. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Xem <a href="/vi/medicare-costs-2027.html">chi phí Medicare năm 2027</a>.</li>
+    </ul>
+
+    <h3>Các chương trình Thị Trường Bảo Hiểm (Marketplace) (Obamacare)</h3>
+    <ul>
+      <li>Mười một công ty bảo hiểm đã thông báo sẽ rời Thị Trường Bảo Hiểm (Marketplace) trong năm 2027 ở một số hoặc tất cả các tiểu bang nơi họ bán bảo hiểm. Công ty lớn nhất, Cigna, đang rời cả 11 tiểu bang của mình, với hơn 350.000 người ghi danh qua Thị Trường Bảo Hiểm (Marketplace). <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF, cập nhật ngày 7 tháng 10 năm 2026)</a></li>
+      <li>Giá lại tăng. Mức tăng đề xuất cho năm 2027 trung bình từ khoảng 6,5 phần trăm ở Vermont đến 22,4 phần trăm ở Washington, sau một năm mà mức tăng đề xuất điển hình là 18 phần trăm. <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>Các chương trình Medicaid</h3>
+    <ul>
+      <li>Elevance nói với các nhà đầu tư rằng họ dự kiến rời các thị trường Medicaid "nơi hiệu quả kinh tế không hỗ trợ hoạt động bền vững" trong vòng 12 đến 18 tháng. Họ đã rời chương trình của Washington, D.C. vào ngày 1 tháng 8 năm 2026. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Chương trình Healthy Blue của họ, với khoảng 292.000 hội viên, rời Medicaid Louisiana vào cuối năm 2026. UnitedHealthcare, với khoảng 278.000 hội viên, đã rời chương trình của tiểu bang đó vào ngày 31 tháng 3 năm 2026. Có tới 580.000 hội viên Louisiana đang chuyển sang một trong bốn chương trình còn lại. <a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">(Hoodline)</a></li>
+      <li>Centene dự định rời chương trình mở rộng Medicaid của Arkansas vào năm 2027. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> Dự kiến sẽ có thêm các công ty rút lui khi các khoản cắt giảm Medicaid trong luật ngân sách liên bang năm 2025 có hiệu lực.</li>
+    </ul>
+
+    <h2>Vì sao các công ty bảo hiểm ngừng các chương trình Medicare Advantage: nói rõ về tiền bạc</h2>
+    <p>Các công ty bảo hiểm nói chi phí tăng vì mọi người sử dụng nhiều dịch vụ chăm sóc hơn. Điều đó đúng. Cũng đúng là chính phủ đã thay đổi các quy tắc theo cách làm giảm thu nhập của các doanh nghiệp này. Sau đây là những gì đã thay đổi.</p>
+
+    <h3>Medicare Advantage</h3>
+    <ol class="steps">
+      <li><strong>Các khoản thanh toán không còn tăng nhanh như trước.</strong> Cho năm 2027, chính phủ ban đầu đề xuất mức tăng thanh toán gần như bằng không: 0,09 phần trăm. Các công ty bảo hiểm phản đối. Mức tăng cuối cùng là 2,48 phần trăm, khoảng 13 tỷ đô la, sau khi chính phủ bỏ kế hoạch cập nhật công thức vốn sẽ cắt giảm thanh toán nhiều hơn. <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(Bản tóm tắt của Trung Tâm Dịch Vụ Medicare & Medicaid (CMS))</a> Dù vậy, mức này vẫn thấp hơn nhiều so với mức tăng chi phí mà các công ty bảo hiểm báo cáo.</li>
+      <li><strong>Việc mã hóa chẩn đoán được trả ít hơn.</strong> Từ năm 2024, Medicare đã dần áp dụng một mô hình điều chỉnh rủi ro mới trả cho các chương trình ít hơn đối với nhiều chẩn đoán được ghi nhận. Các chương trình dựa nhiều vào việc mã hóa chịu thiệt nhiều nhất.</li>
+      <li><strong>Ít tiền thưởng theo sao hơn.</strong> Các chương trình được đánh giá từ 4 sao trở lên nhận tiền thưởng. Xếp Hạng Sao của một số công ty bảo hiểm lớn đã giảm, và tiền thưởng giảm theo. Humana nói họ sẽ cắt "phần đuôi thấp về lợi nhuận", nghĩa là các chương trình được đánh giá từ 3,5 sao trở xuống. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a></li>
+      <li><strong>Chi phí thuốc chuyển sang các chương trình.</strong> Luật thuốc năm 2022 đặt mức trần cho số tiền bạn trả cho thuốc Medicare Phần D và buộc các chương trình trả nhiều hơn phần chi phí vượt mức trần. Tốt cho bạn. Tốn kém cho họ, và khoản hỗ trợ liên bang tạm thời vốn giúp đỡ các chương trình thuốc độc lập sẽ kết thúc vào ngày 31 tháng 12 năm 2026. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>Gộp lại: những chương trình ở mức cận biên, thường là PPO, các quận nông thôn, và các chương trình được đánh giá thấp hơn, đã ngừng sinh lời. Các công ty cắt chúng. Những chương trình còn lại thường là Tổ Chức Duy Trì Sức Khỏe (HMO) với Mạng Lưới chặt hơn và ít quyền lợi bổ sung hơn.</p>
+
+    <h3>Thị Trường Bảo Hiểm (Marketplace)</h3>
+    <ol class="steps">
+      <li><strong>Quốc hội để các khoản Trợ Cấp lớn hơn hết hạn</strong> vào cuối năm 2025. Số người đăng ký giảm hơn một triệu cho năm 2026. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> Những người rút lui, trung bình, khỏe mạnh hơn, nên nhóm người còn lại tốn nhiều chi phí bảo hiểm hơn.</li>
+      <li><strong>Các quy tắc mới khiến việc ghi danh khó hơn.</strong> Thời gian đăng ký liên bang ngắn hơn và nhiều người hơn phải chứng minh đủ điều kiện trước khi bảo hiểm bắt đầu. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Các công ty bảo hiểm dự đoán có ít khách hàng hơn, bệnh nặng hơn, và định giá hoặc rút lui tương ứng.</li>
+    </ol>
+
+    <h3>Medicaid</h3>
+    <ol class="steps">
+      <li><strong>Luật ngân sách liên bang năm 2025 cắt giảm tài trợ Medicaid</strong> trong những năm tới: yêu cầu làm việc đối với nhiều người lớn, kiểm tra điều kiện mỗi sáu tháng, và giới hạn cách các tiểu bang tăng phần tiền của mình. Khi đó các tiểu bang trả cho các chương trình ít hơn hoặc muộn hơn, và các chương trình rời đi. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>Điều gì thay đổi với bạn trong năm 2027</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Nếu bạn có…</th><th>Rủi ro</th></tr></thead>
+        <tbody>
+          <tr><td>Một chương trình Medicare Advantage sắp chấm dứt</td><td>Bị gián đoạn bảo hiểm nếu bạn bỏ lỡ các lá thư. Mất các bác sĩ của bạn nếu Mạng Lưới của chương trình mới khác. Bỏ lỡ khoảng thời gian ngắn để mua Bảo Hiểm Bổ Sung Medicare (Medigap) mà không bị hỏi về sức khỏe.</td></tr>
+          <tr><td>Một chương trình Medicare Advantage vẫn tiếp tục</td><td>Mạng Lưới nhỏ hơn, Khoản Đồng Thanh Toán (Copay) cao hơn, và ít quyền lợi thêm hơn trong năm 2027. Các quyền lợi thêm như nha khoa, thẻ mua hàng không kê đơn và quyền lợi phòng tập bị cắt trước vì dễ cắt nhất. Hãy đọc Thông Báo Thay Đổi Hàng Năm từng dòng một.</td></tr>
+          <tr><td>Một chương trình thuốc Medicare Phần D độc lập</td><td>Phí Bảo Hiểm tăng vọt nếu bạn giữ nguyên. Chương trình của bạn cũng có thể thay đổi danh sách thuốc. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>Một chương trình Thị Trường Bảo Hiểm (Marketplace)</td><td>Bị chuyển sang chương trình của công ty bảo hiểm khác nếu công ty của bạn rời đi, với Mạng Lưới mới. Hóa đơn Phí Bảo Hiểm lớn hơn, dù Trợ Cấp tăng theo giá chuẩn đối với hầu hết những người đủ điều kiện.</td></tr>
+          <tr><td>Medicaid</td><td>Bị phân vào một chương trình mới nếu chương trình của bạn rời tiểu bang, và mất bảo hiểm khi gia hạn nếu một lá thư không được trả lời.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="check">Làm thế nào để kiểm tra chương trình Medicare Advantage của tôi có sắp chấm dứt không?</h2>
+    <p>Một tiêu đề báo về công ty bảo hiểm của bạn không có nghĩa chương trình của bạn sắp chấm dứt. Các công ty bảo hiểm thường ngừng <em>một số</em> chương trình ở <em>một số</em> quận và giữ phần còn lại. Hãy kiểm tra chương trình của chính bạn, theo thứ tự này:</p>
+    <ol class="steps">
+      <li><strong>Tìm lá thư.</strong> Nếu chương trình của bạn sắp chấm dứt, công ty bảo hiểm phải gửi cho bạn thông báo không gia hạn vào đầu tháng 10, ghi đích danh bạn, nêu tên chương trình và ngày kết thúc. Nếu thay vào đó bạn nhận được Thông Báo Thay Đổi Hàng Năm, chương trình của bạn vẫn tiếp tục trong năm 2027 với những thay đổi được liệt kê. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+      <li><strong>Đối chiếu tên và số chương trình.</strong> Thẻ hội viên của bạn ghi tên chương trình, số hợp đồng (chữ H và bốn chữ số) và mã chương trình. Hãy so sánh với lá thư. Một công ty bảo hiểm có thể chấm dứt "Chương trình A" ở quận của bạn và giữ "Chương trình B"; chỉ chương trình chính xác trong thư bị ảnh hưởng.</li>
+      <li><strong>Tra các chương trình năm 2027 theo mã ZIP của bạn.</strong> Trong <a href="/vi/using-plan-finder.html">Medicare Plan Finder</a>, chọn bảo hiểm năm 2027 và nhập mã ZIP của bạn. Nếu chương trình hiện tại của bạn không được liệt kê cho năm 2027, chương trình đó đang chấm dứt tại khu vực của bạn. <!-- src: https://www.medicare.gov/plan-compare/ --></li>
+      <li><strong>Gọi cho chương trình nếu có điều gì chưa rõ.</strong> Số điện thoại dịch vụ hội viên có trên thẻ của bạn. Hãy hỏi: "Chương trình của tôi, số hợp đồng H-xxxx, chương trình xxx, có được cung cấp tại quận của tôi trong năm 2027 không?"</li>
+      <li><strong>Nếu chương trình sắp chấm dứt,</strong> hãy xem <a href="/vi/medicare-advantage-plan-ending.html">Chương Trình Medicare Advantage Của Tôi Sắp Chấm Dứt Năm 2027</a> để biết các ngày, quyền lợi và lựa chọn của bạn. Để xem còn có gì được bán nơi bạn sống, hãy <a href="/vi/medicare-plan-comparison-2027.html">so sánh các lựa chọn Medicare Advantage của bạn cho năm 2027</a>.</li>
+    </ol>
+
+    <h2 id="act">Cần làm gì ngay bây giờ</h2>
+    <p>Đây là phần mà hầu hết các trang web nói giảm nói tránh. Chúng tôi sẽ không làm vậy.</p>
+    <ol class="steps">
+      <li><strong>Mở mọi phong bì từ chương trình của bạn trong tháng 10.</strong> Một <a href="/vi/medicare-annual-notice-of-change.html">thông báo thay đổi</a> nghĩa là chương trình của bạn tiếp tục với các điều khoản mới. Một thông báo không gia hạn nghĩa là chương trình kết thúc vào ngày 31 tháng 12. Hãy giữ lại thư không gia hạn; đó là bằng chứng về quyền của bạn.</li>
+      <li><strong>Nếu chương trình Medicare Advantage của bạn sắp chấm dứt, hãy biết hai thời hạn của bạn.</strong> Bạn có thể đổi chương trình Medicare từ ngày 8 tháng 12 đến cuối tháng 2. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> Nhưng quyền mua hợp đồng Bảo Hiểm Bổ Sung Medicare (Medigap) mà không bị hỏi về sức khỏe chỉ kéo dài 63 ngày sau khi bảo hiểm của bạn kết thúc. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Mọi người hay bỏ lỡ thời hạn ngắn hơn. Nếu bạn có vấn đề sức khỏe và từng muốn có Original Medicare cộng với Medigap, đây có thể là cơ hội duy nhất để có được mà không qua Thẩm Định Bảo Hiểm. Hãy xem giá trước khi chọn một chương trình Advantage khác. Chi tiết tại <a href="/vi/medicare-advantage-plan-ending.html">các lựa chọn của bạn khi một chương trình chấm dứt</a>.</li>
+      <li><strong>Đừng chọn chương trình vì các quyền lợi thêm.</strong> Nha khoa, thị lực, thính lực, phòng tập và thẻ mua thực phẩm là những thứ bị cắt đầu tiên khi một chương trình thua lỗ, và chúng có thể thay đổi mỗi tháng 1. Hãy chọn theo các bác sĩ, thuốc và bệnh viện của bạn.</li>
+      <li><strong>Kiểm tra xếp hạng sao và hướng đi của công ty bảo hiểm.</strong> Humana đã cắt các chương trình được đánh giá từ 3,5 sao trở xuống. Một chương trình xếp hạng thấp, hoặc một chương trình của công ty bảo hiểm đang thu hẹp tại tiểu bang của bạn, có nhiều khả năng bị cắt lần nữa vào năm sau. Xếp Hạng Sao có trong <a href="/vi/using-plan-finder.html">Plan Finder</a>; xem <a href="/vi/medicare-star-ratings.html">ý nghĩa của các ngôi sao</a>.</li>
+      <li><strong>Nếu bạn có chương trình thuốc độc lập, hãy so sánh, đừng tự động gia hạn.</strong> Nhập các loại thuốc của bạn vào Plan Finder. Giữ nguyên có thể tốn kém hơn nhiều so với đổi chương trình trong năm nay. <a href="/vi/switching-medicare-part-d-formulary-check.html">Cách kiểm tra danh sách thuốc của bạn</a>.</li>
+      <li><strong>Nếu quận của bạn không có chương trình Medicare Advantage ghi danh chung nào có bảo hiểm thuốc cho năm 2027,</strong> lựa chọn chính của bạn là Original Medicare. Hãy thêm một chương trình Medicare Phần D trước ngày 7 tháng 12 để bạn không bị thiếu bảo hiểm thuốc. Sau đó hãy xem <a href="/vi/medigap.html">Medigap</a>.</li>
+      <li><strong>Thị Trường Bảo Hiểm (Marketplace): hành động sớm và kiểm tra thư về chương trình được chuyển của bạn.</strong> Thời gian liên bang là từ ngày 1 tháng 11 đến ngày 15 tháng 12. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> Nếu công ty bảo hiểm của bạn rời đi, HealthCare.gov có thể chuyển bạn sang chương trình khác; chương trình đó có thể không có các bác sĩ của bạn. Hãy cập nhật ước tính thu nhập để Trợ Cấp của bạn đúng. Xem <a href="/vi/marketplace-open-enrollment-2027.html">Thời Gian Ghi Danh Mở của Thị Trường Bảo Hiểm (Marketplace) năm 2027</a>.</li>
+      <li><strong>Medicaid: trả lời mọi lá thư và luôn cập nhật địa chỉ của bạn.</strong> Việc gia hạn sẽ diễn ra thường xuyên hơn. Nếu chương trình của bạn rời tiểu bang, hãy tự chọn chương trình mới trước khi tiểu bang phân cho bạn, để bạn giữ được các bác sĩ của mình. Xem <a href="/vi/medicaid-renewal.html">gia hạn Medicaid</a>.</li>
+      <li><strong>Nhận trợ giúp miễn phí, khách quan.</strong> Các cố vấn SHIP không bán chương trình. <a href="/vi/ship-directory.html">Tìm cố vấn của bạn</a>. Các đại lý cũng có thể giúp, nhưng họ được các chương trình mà họ bán trả tiền.</li>
+    </ol>
+
+    <h2>Chúng tôi dự đoán điều gì tiếp theo</h2>
+    <p>Đánh giá của chúng tôi dựa trên bằng chứng, không phải một dự đoán để bạn dựa vào: các đợt rút lui chưa kết thúc. Mức tăng thanh toán Medicare Advantage cho năm 2027 là khiêm tốn và các thay đổi về mã hóa nay đã áp dụng đầy đủ, vì vậy các công ty bảo hiểm sẽ tiếp tục cắt giảm các chương trình xếp hạng thấp hơn và các quận ít người. Giá Thị Trường Bảo Hiểm (Marketplace) sẽ vẫn cao trừ khi Quốc hội khôi phục các khoản Trợ Cấp lớn hơn. Việc các chương trình Medicaid rút lui sẽ lan rộng khi các khoản cắt giảm liên bang được áp dụng dần qua năm 2027 và 2028. Bài học thực tế mỗi năm đều giống nhau: đừng bao giờ cho rằng chương trình bạn đang có sẽ là chương trình bạn giữ được, và hãy xem xét lại mỗi mùa thu.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Sau đó, chỉ một email ngắn khi có thay đổi, không quá một email mỗi tuần. Không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Các câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Các chương trình Medicare Advantage có ngừng hoạt động năm 2027 không?</summary>
+      <div>
+        <p>Không. Hầu hết các công ty bảo hiểm giữ phần lớn chương trình của họ, và hầu hết các quận vẫn có nhiều lựa chọn. Thứ đang biến mất là các chương trình cận biên: xếp hạng thấp hơn, ở các quận nông thôn hoặc chi phí cao, hoặc do các công ty bảo hiểm nhỏ thuộc hệ thống bệnh viện điều hành. Hãy kiểm tra xem chương trình của bạn có thuộc nhóm đó không.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Humana có ngừng các chương trình Medicare Advantage cho năm 2027 không?</summary>
+      <div>
+        <p>Có. Humana đang chấm dứt các chương trình bao phủ khoảng 600.000 hội viên, chủ yếu là các chương trình được đánh giá từ 3,5 sao trở xuống. Hội viên đã nhận thư không gia hạn đề ngày 2 tháng 10, và chương trình của họ kết thúc vào ngày 31 tháng 12. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> Nếu bạn không nhận được thư, chương trình Humana của bạn vẫn tiếp tục; hãy đọc Thông Báo Thay Đổi Hàng Năm của chương trình để biết các thay đổi năm 2027. Xem <a href="#check">cách kiểm tra chương trình của chính bạn</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>UnitedHealthcare (AARP) có ngừng các chương trình Medicare Advantage cho năm 2027 không?</summary>
+      <div>
+        <p>Có. UnitedHealthcare đang ngừng các chương trình bao phủ khoảng 390.000 hội viên và rời 228 quận. <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> Hầu hết các chương trình của họ vẫn tiếp tục. Lá thư của bạn cho biết bạn thuộc trường hợp nào.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Aetna có rời Medicare Advantage năm 2027 không?</summary>
+      <div>
+        <p>Không hoàn toàn. Aetna (CVS Health) rút khỏi khoảng 103 quận cho năm 2027 nhưng vẫn tiếp tục bán các chương trình ở nơi khác. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> Nếu quận của bạn là một trong số đó, bạn đã nhận được thư không gia hạn.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Điều gì đang thay đổi với các chương trình Medicare Advantage năm 2027?</summary>
+      <div>
+        <p>Ít chương trình hơn và ít công ty bảo hiểm hơn ở nhiều quận, nhiều HMO hơn và ít PPO hơn, quyền lợi thêm nhỏ hơn, và 193 quận không có chương trình Advantage ghi danh chung nào kèm bảo hiểm thuốc. Các chi phí bạn trả trong Original Medicare và Medicare Phần D cũng thay đổi; xem <a href="/vi/medicare-costs-2027.html">chi phí Medicare cho năm 2027</a>.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Vì sao chính phủ cắt giảm thanh toán cho các chương trình này?</summary>
+      <div>
+        <p>Các kiểm toán viên liên bang và cố vấn của Quốc hội đã nói nhiều năm rằng Medicare trả cho các chương trình Advantage nhiều hơn mỗi người so với chi phí của Original Medicare, một phần thông qua việc mã hóa chẩn đoán. Các thay đổi từ năm 2024 nhằm thu hẹp khoảng cách đó. Các công ty bảo hiểm nói các thay đổi đi quá xa, quá nhanh. Cả hai bên đang mô tả cùng một khoản tiền từ hai đầu đối lập.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Chương trình của tôi sắp chấm dứt. Tôi có mất Medicare không?</summary>
+      <div>
+        <p>Không. Medicare Phần A và Medicare Phần B vẫn còn. Nếu bạn không làm gì, bạn sẽ ở trong Original Medicare vào ngày 1 tháng 1, không có bảo hiểm thuốc trừ khi bạn tham gia một chương trình Medicare Phần D. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi có nên rời Medicare Advantage vì điều này không?</summary>
+      <div>
+        <p>Điều đó tùy thuộc vào sức khỏe, các bác sĩ và ngân sách của bạn, và chúng tôi không chọn thay bạn. Điều chúng tôi sẽ nói: nếu chương trình của bạn sắp chấm dứt và bạn có bệnh lý, bạn có một quyền ngắn hạn để mua Medigap mà không bị hỏi về sức khỏe. Hãy quyết định khi cánh cửa đó còn mở, đừng đợi đến khi nó đóng lại.</p>
+      </div>
+    </details>
+
+    <h2>Nguồn</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS: Thông báo mức thanh toán Medicare Advantage và Medicare Phần D năm 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF: Tình trạng có sẵn của các chương trình Medicare Advantage theo quận cho năm 2027</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF: Phí Bảo Hiểm của các chương trình Medicare Phần D độc lập cho năm 2027</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF: Sự tham gia của các công ty bảo hiểm trên Thị Trường Bảo Hiểm (Marketplace) ACA năm 2027</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF: Chăm sóc có quản lý của Medicaid và luật điều hòa ngân sách năm 2025</a></li>
+      <li><a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">Insurance Business: Việc Humana rút lui ảnh hưởng 600.000 hội viên</a></li>
+      <li><a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">Yahoo Finance: UnitedHealthcare rút khỏi một số chương trình Medicare Advantage cho năm 2027</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive: các công ty bảo hiểm đang cắt giảm Medicare Advantage bao nhiêu cho năm 2027</a></li>
+      <li><a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">Hoodline: Louisiana thu hẹp còn bốn công ty bảo hiểm Medicaid khi 580.000 người đổi chương trình</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: Thời Gian Ghi Danh Đặc Biệt</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: Khi nào tôi có thể mua hợp đồng Medigap?</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục chung và không liên kết với bất kỳ cơ quan hay công ty bảo hiểm nào. Trang này giải thích thị trường và các quyền của bạn; trang không giới thiệu chương trình nào. Số lượng hội viên và số liệu theo quận đến từ các nguồn nghiên cứu và tin tức được liên kết bên cạnh từng số liệu; mỗi số liệu đã được đối chiếu với nguồn gốc vào ngày 9 tháng 10 năm 2026, và trang này được cập nhật khi có thông báo mới được xác nhận. Hãy xác nhận các ngày và quyền của riêng bạn với 1-800-MEDICARE, HealthCare.gov, văn phòng Medicaid tiểu bang của bạn, hoặc <a href="/vi/ship-directory.html">SHIP</a> của bạn.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/insurers-dropping-plans-2027.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
