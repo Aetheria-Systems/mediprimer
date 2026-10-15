@@ -61,8 +61,8 @@
       "date": "2026-10-10"
     },
     "dual-eligible.html": {
-      "hash": "2ed0083e54611970670845bd8e35e4cf",
-      "date": "2026-10-10"
+      "hash": "0671a946e67c29683dd788a850fc8f7a",
+      "date": "2026-10-15"
     },
     "edge-cases.html": {
       "hash": "4ec54d49397abe3eb494448a02915723",
@@ -77,8 +77,8 @@
       "date": "2026-10-10"
     },
     "enrollment.html": {
-      "hash": "5bba71c8007a8ca77f6cd4fff61e00ba",
-      "date": "2026-10-10"
+      "hash": "4d256dae684dad36b96bdbe005f10047",
+      "date": "2026-10-15"
     },
     "getting-help.html": {
       "hash": "f138df0d3118b6d5a3c3fd2fc5b33942",
@@ -101,12 +101,12 @@
       "date": "2026-10-10"
     },
     "marketplace.html": {
-      "hash": "bde721302ec0290a9327f7e98c2a8a49",
-      "date": "2026-10-10"
+      "hash": "3afa2679bb3a255bc8a5e72d1d3a98df",
+      "date": "2026-10-15"
     },
     "medicaid-eligibility.html": {
-      "hash": "c432a951897f2fa6d15a88ab434649e1",
-      "date": "2026-10-10"
+      "hash": "97784f27a30d7d6bac3068a380bc455a",
+      "date": "2026-10-15"
     },
     "medicaid-starting-out.html": {
       "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
@@ -137,8 +137,8 @@
       "date": "2026-10-10"
     },
     "navigators.html": {
-      "hash": "7a6d073b35a019f01fe5f627932336df",
-      "date": "2026-10-10"
+      "hash": "1d3b1008bc4f0d96d1faa80151783a6a",
+      "date": "2026-10-15"
     },
     "operations.html": {
       "hash": "496f540dc8ceb3c4aa308a9c8277ab8c",
@@ -193,8 +193,8 @@
       "date": "2026-09-18"
     },
     "star-ratings.html": {
-      "hash": "b516d8d7056d31652fb8014be931cbe6",
-      "date": "2026-10-10"
+      "hash": "be276fa2c045712b86a9a9bbe3d230a1",
+      "date": "2026-10-15"
     },
     "state-medicaid.html": {
       "hash": "f180f3f70c74433af74e9b5d1c2c0fd1",
@@ -241,8 +241,8 @@
       "date": "2026-10-10"
     },
     "costs.html": {
-      "hash": "a2fd4cf3f73a63fe89af7a20bbba2c45",
-      "date": "2026-10-10"
+      "hash": "d8ada6212aef9fd3232d6e747b3864f1",
+      "date": "2026-10-15"
     },
     "marketplace-premium-increase.html": {
       "hash": "a01360b05f1f0358bfe2a12d54135c94",
@@ -293,20 +293,20 @@
       "date": "2026-10-10"
     },
     "medicare-weight-loss-drugs.html": {
-      "hash": "8834a6b74668fc9d21db69e8cdf6b1d9",
-      "date": "2026-10-10"
+      "hash": "e3f0a707bbdc08ea722126e47b8f2769",
+      "date": "2026-10-15"
     },
     "medicare-dental-vision-hearing.html": {
-      "hash": "f658eac7cc3cad2c36d3747fae291165",
-      "date": "2026-10-10"
+      "hash": "5de4ee954ee909ccc1744f267fbd29c1",
+      "date": "2026-10-15"
     },
     "hospital-observation-status.html": {
       "hash": "b8360427d074bebed96a49a0043b2afb",
       "date": "2026-10-10"
     },
     "medicare-star-ratings.html": {
-      "hash": "0c14dcefdae4dde90e3d05f9dc0325d0",
-      "date": "2026-10-10"
+      "hash": "c5fbc1b6ac8b66984c20ed8d1d1ee64b",
+      "date": "2026-10-15"
     },
     "cobra-and-medicare.html": {
       "hash": "9ada2d3b0a0e65692c34ab1ea0345327",
@@ -389,16 +389,16 @@
       "date": "2026-10-10"
     },
     "medicare-open-enrollment-2027.html": {
-      "hash": "bb542b506f1171c42fe9b38c424e780e",
-      "date": "2026-10-10"
+      "hash": "8873792fa10a232b9b7ce68ebcd57d6d",
+      "date": "2026-10-15"
     },
     "medicare-part-b-giveback.html": {
       "hash": "95412fcef51004a0cf6c2fddfc97c2a9",
       "date": "2026-10-10"
     },
     "medicare-special-needs-plans.html": {
-      "hash": "4fe1dc0107b1352e528632c5fa2ae352",
-      "date": "2026-10-10"
+      "hash": "decf31ab0f22e7969f8688821a191b2b",
+      "date": "2026-10-15"
     },
     "medicare-telehealth.html": {
       "hash": "391687a37f1f9ce9bcb200cbf351d3bd",
@@ -603,8 +603,8 @@
       "date": "2026-10-10"
     },
     "costs.html": {
-      "hash": "a2fd4cf3f73a63fe89af7a20bbba2c45",
-      "date": "2026-10-10"
+      "hash": "d8ada6212aef9fd3232d6e747b3864f1",
+      "date": "2026-10-15"
     },
     "coverage-basics.html": {
       "hash": "7bafe3e6cf196a106cdeef5e695d678c",
@@ -615,8 +615,8 @@
       "date": "2026-10-10"
     },
     "dual-eligible.html": {
-      "hash": "2ed0083e54611970670845bd8e35e4cf",
-      "date": "2026-10-10"
+      "hash": "0671a946e67c29683dd788a850fc8f7a",
+      "date": "2026-10-15"
     },
     "editorial-standards.html": {
       "hash": "e5db33dd28518693f5afe9bae8b619ad",
@@ -627,8 +627,8 @@
       "date": "2026-10-10"
     },
     "enrollment.html": {
-      "hash": "5bba71c8007a8ca77f6cd4fff61e00ba",
-      "date": "2026-10-10"
+      "hash": "4d256dae684dad36b96bdbe005f10047",
+      "date": "2026-10-15"
     },
     "getting-help.html": {
       "hash": "f138df0d3118b6d5a3c3fd2fc5b33942",
@@ -647,8 +647,8 @@
       "date": "2026-10-10"
     },
     "marketplace.html": {
-      "hash": "bde721302ec0290a9327f7e98c2a8a49",
-      "date": "2026-10-10"
+      "hash": "3afa2679bb3a255bc8a5e72d1d3a98df",
+      "date": "2026-10-15"
     },
     "medicaid-starting-out.html": {
       "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
@@ -747,8 +747,8 @@
       "date": "2026-10-10"
     },
     "medicaid-eligibility.html": {
-      "hash": "c432a951897f2fa6d15a88ab434649e1",
-      "date": "2026-10-10"
+      "hash": "97784f27a30d7d6bac3068a380bc455a",
+      "date": "2026-10-15"
     },
     "medicare-part-a.html": {
       "hash": "141eb6afdaef0afac377596099cccab7",
@@ -763,8 +763,8 @@
       "date": "2026-10-10"
     },
     "navigators.html": {
-      "hash": "7a6d073b35a019f01fe5f627932336df",
-      "date": "2026-10-10"
+      "hash": "1d3b1008bc4f0d96d1faa80151783a6a",
+      "date": "2026-10-15"
     },
     "planning-for-two.html": {
       "hash": "c940ec8c93fdaf698e5de1705fdcc722",
@@ -783,8 +783,8 @@
       "date": "2026-09-18"
     },
     "star-ratings.html": {
-      "hash": "b516d8d7056d31652fb8014be931cbe6",
-      "date": "2026-10-10"
+      "hash": "be276fa2c045712b86a9a9bbe3d230a1",
+      "date": "2026-10-15"
     },
     "state-medicaid.html": {
       "hash": "f180f3f70c74433af74e9b5d1c2c0fd1",
@@ -839,8 +839,8 @@
       "date": "2026-10-10"
     },
     "medicare-dental-vision-hearing.html": {
-      "hash": "f658eac7cc3cad2c36d3747fae291165",
-      "date": "2026-10-10"
+      "hash": "5de4ee954ee909ccc1744f267fbd29c1",
+      "date": "2026-10-15"
     },
     "medicare-hospice-home-health.html": {
       "hash": "6b35dc7641bfe6e1ab8156409790806a",
@@ -867,8 +867,8 @@
       "date": "2026-10-10"
     },
     "medicare-weight-loss-drugs.html": {
-      "hash": "8834a6b74668fc9d21db69e8cdf6b1d9",
-      "date": "2026-10-10"
+      "hash": "e3f0a707bbdc08ea722126e47b8f2769",
+      "date": "2026-10-15"
     },
     "medicaid-spend-down-look-back.html": {
       "hash": "52b6891f32e8f32d964c6b6d2c516c64",
@@ -879,8 +879,8 @@
       "date": "2026-10-10"
     },
     "medicare-star-ratings.html": {
-      "hash": "0c14dcefdae4dde90e3d05f9dc0325d0",
-      "date": "2026-10-10"
+      "hash": "c5fbc1b6ac8b66984c20ed8d1d1ee64b",
+      "date": "2026-10-15"
     },
     "cobra-and-medicare.html": {
       "hash": "9ada2d3b0a0e65692c34ab1ea0345327",
@@ -955,16 +955,16 @@
       "date": "2026-10-10"
     },
     "medicare-open-enrollment-2027.html": {
-      "hash": "bb542b506f1171c42fe9b38c424e780e",
-      "date": "2026-10-10"
+      "hash": "8873792fa10a232b9b7ce68ebcd57d6d",
+      "date": "2026-10-15"
     },
     "medicare-part-b-giveback.html": {
       "hash": "95412fcef51004a0cf6c2fddfc97c2a9",
       "date": "2026-10-10"
     },
     "medicare-special-needs-plans.html": {
-      "hash": "4fe1dc0107b1352e528632c5fa2ae352",
-      "date": "2026-10-10"
+      "hash": "decf31ab0f22e7969f8688821a191b2b",
+      "date": "2026-10-15"
     },
     "medicare-telehealth.html": {
       "hash": "391687a37f1f9ce9bcb200cbf351d3bd",
@@ -1197,8 +1197,8 @@
       "date": "2026-10-10"
     },
     "costs.html": {
-      "hash": "a2fd4cf3f73a63fe89af7a20bbba2c45",
-      "date": "2026-10-10"
+      "hash": "d8ada6212aef9fd3232d6e747b3864f1",
+      "date": "2026-10-15"
     },
     "coverage-basics.html": {
       "hash": "7bafe3e6cf196a106cdeef5e695d678c",
@@ -1221,8 +1221,8 @@
       "date": "2026-10-10"
     },
     "dual-eligible.html": {
-      "hash": "2ed0083e54611970670845bd8e35e4cf",
-      "date": "2026-10-10"
+      "hash": "0671a946e67c29683dd788a850fc8f7a",
+      "date": "2026-10-15"
     },
     "edge-cases.html": {
       "hash": "4ec54d49397abe3eb494448a02915723",
@@ -1241,8 +1241,8 @@
       "date": "2026-10-10"
     },
     "enrollment.html": {
-      "hash": "5bba71c8007a8ca77f6cd4fff61e00ba",
-      "date": "2026-10-10"
+      "hash": "4d256dae684dad36b96bdbe005f10047",
+      "date": "2026-10-15"
     },
     "getting-help.html": {
       "hash": "f138df0d3118b6d5a3c3fd2fc5b33942",
@@ -1289,16 +1289,16 @@
       "date": "2026-10-10"
     },
     "marketplace.html": {
-      "hash": "bde721302ec0290a9327f7e98c2a8a49",
-      "date": "2026-10-10"
+      "hash": "3afa2679bb3a255bc8a5e72d1d3a98df",
+      "date": "2026-10-15"
     },
     "medicaid-dental-adults.html": {
       "hash": "bfee201c767fd214e26304511704f52a",
       "date": "2026-10-10"
     },
     "medicaid-eligibility.html": {
-      "hash": "c432a951897f2fa6d15a88ab434649e1",
-      "date": "2026-10-10"
+      "hash": "97784f27a30d7d6bac3068a380bc455a",
+      "date": "2026-10-15"
     },
     "medicaid-estate-recovery.html": {
       "hash": "5becfea349be9da4168ffcca0d87f70d",
@@ -1361,8 +1361,8 @@
       "date": "2026-10-10"
     },
     "medicare-dental-vision-hearing.html": {
-      "hash": "f658eac7cc3cad2c36d3747fae291165",
-      "date": "2026-10-10"
+      "hash": "5de4ee954ee909ccc1744f267fbd29c1",
+      "date": "2026-10-15"
     },
     "medicare-diabetes-coverage.html": {
       "hash": "a6c7238cd936fbf4fa42b185457bae0a",
@@ -1397,8 +1397,8 @@
       "date": "2026-10-10"
     },
     "medicare-open-enrollment-2027.html": {
-      "hash": "bb542b506f1171c42fe9b38c424e780e",
-      "date": "2026-10-10"
+      "hash": "8873792fa10a232b9b7ce68ebcd57d6d",
+      "date": "2026-10-15"
     },
     "medicare-part-a.html": {
       "hash": "141eb6afdaef0afac377596099cccab7",
@@ -1417,12 +1417,12 @@
       "date": "2026-10-10"
     },
     "medicare-special-needs-plans.html": {
-      "hash": "4fe1dc0107b1352e528632c5fa2ae352",
-      "date": "2026-10-10"
+      "hash": "decf31ab0f22e7969f8688821a191b2b",
+      "date": "2026-10-15"
     },
     "medicare-star-ratings.html": {
-      "hash": "0c14dcefdae4dde90e3d05f9dc0325d0",
-      "date": "2026-10-10"
+      "hash": "c5fbc1b6ac8b66984c20ed8d1d1ee64b",
+      "date": "2026-10-15"
     },
     "medicare-telehealth.html": {
       "hash": "391687a37f1f9ce9bcb200cbf351d3bd",
@@ -1437,8 +1437,8 @@
       "date": "2026-10-10"
     },
     "medicare-weight-loss-drugs.html": {
-      "hash": "8834a6b74668fc9d21db69e8cdf6b1d9",
-      "date": "2026-10-10"
+      "hash": "e3f0a707bbdc08ea722126e47b8f2769",
+      "date": "2026-10-15"
     },
     "medicare-wellness-visit-vs-physical.html": {
       "hash": "f603dd89f0a04fc2c22462fca49e8493",
@@ -1461,8 +1461,8 @@
       "date": "2026-10-10"
     },
     "navigators.html": {
-      "hash": "7a6d073b35a019f01fe5f627932336df",
-      "date": "2026-10-10"
+      "hash": "1d3b1008bc4f0d96d1faa80151783a6a",
+      "date": "2026-10-15"
     },
     "operations.html": {
       "hash": "496f540dc8ceb3c4aa308a9c8277ab8c",
@@ -1521,8 +1521,8 @@
       "date": "2026-09-18"
     },
     "star-ratings.html": {
-      "hash": "b516d8d7056d31652fb8014be931cbe6",
-      "date": "2026-10-10"
+      "hash": "be276fa2c045712b86a9a9bbe3d230a1",
+      "date": "2026-10-15"
     },
     "state-medicaid.html": {
       "hash": "f180f3f70c74433af74e9b5d1c2c0fd1",
@@ -1787,8 +1787,8 @@
       "date": "2026-10-10"
     },
     "dual-eligible.html": {
-      "hash": "2ed0083e54611970670845bd8e35e4cf",
-      "date": "2026-10-10"
+      "hash": "0671a946e67c29683dd788a850fc8f7a",
+      "date": "2026-10-15"
     },
     "edge-cases.html": {
       "hash": "4ec54d49397abe3eb494448a02915723",
@@ -1807,8 +1807,8 @@
       "date": "2026-10-10"
     },
     "enrollment.html": {
-      "hash": "5bba71c8007a8ca77f6cd4fff61e00ba",
-      "date": "2026-10-10"
+      "hash": "4d256dae684dad36b96bdbe005f10047",
+      "date": "2026-10-15"
     },
     "getting-help.html": {
       "hash": "f138df0d3118b6d5a3c3fd2fc5b33942",
@@ -1851,16 +1851,16 @@
       "date": "2026-10-10"
     },
     "marketplace.html": {
-      "hash": "bde721302ec0290a9327f7e98c2a8a49",
-      "date": "2026-10-10"
+      "hash": "3afa2679bb3a255bc8a5e72d1d3a98df",
+      "date": "2026-10-15"
     },
     "medicaid-dental-adults.html": {
       "hash": "bfee201c767fd214e26304511704f52a",
       "date": "2026-10-10"
     },
     "medicaid-eligibility.html": {
-      "hash": "c432a951897f2fa6d15a88ab434649e1",
-      "date": "2026-10-10"
+      "hash": "97784f27a30d7d6bac3068a380bc455a",
+      "date": "2026-10-15"
     },
     "medicaid-estate-recovery.html": {
       "hash": "5becfea349be9da4168ffcca0d87f70d",
@@ -1947,8 +1947,8 @@
       "date": "2026-10-10"
     },
     "medicare-dental-vision-hearing.html": {
-      "hash": "f658eac7cc3cad2c36d3747fae291165",
-      "date": "2026-10-10"
+      "hash": "5de4ee954ee909ccc1744f267fbd29c1",
+      "date": "2026-10-15"
     },
     "medicare-diabetes-coverage.html": {
       "hash": "a6c7238cd936fbf4fa42b185457bae0a",
@@ -1995,8 +1995,8 @@
       "date": "2026-10-10"
     },
     "medicare-open-enrollment-2027.html": {
-      "hash": "bb542b506f1171c42fe9b38c424e780e",
-      "date": "2026-10-10"
+      "hash": "8873792fa10a232b9b7ce68ebcd57d6d",
+      "date": "2026-10-15"
     },
     "medicare-part-a.html": {
       "hash": "141eb6afdaef0afac377596099cccab7",
@@ -2039,8 +2039,8 @@
       "date": "2026-10-10"
     },
     "medicare-special-needs-plans.html": {
-      "hash": "4fe1dc0107b1352e528632c5fa2ae352",
-      "date": "2026-10-10"
+      "hash": "decf31ab0f22e7969f8688821a191b2b",
+      "date": "2026-10-15"
     },
     "medicare-spouse-work-record.html": {
       "hash": "77d75df067d4eccef88f000d8f36e115",
@@ -2067,8 +2067,8 @@
       "date": "2026-10-10"
     },
     "medicare-weight-loss-drugs.html": {
-      "hash": "8834a6b74668fc9d21db69e8cdf6b1d9",
-      "date": "2026-10-10"
+      "hash": "e3f0a707bbdc08ea722126e47b8f2769",
+      "date": "2026-10-15"
     },
     "medicare-wellness-visit-vs-physical.html": {
       "hash": "f603dd89f0a04fc2c22462fca49e8493",
@@ -2099,8 +2099,8 @@
       "date": "2026-10-10"
     },
     "navigators.html": {
-      "hash": "7a6d073b35a019f01fe5f627932336df",
-      "date": "2026-10-10"
+      "hash": "1d3b1008bc4f0d96d1faa80151783a6a",
+      "date": "2026-10-15"
     },
     "operations.html": {
       "hash": "496f540dc8ceb3c4aa308a9c8277ab8c",
@@ -2215,24 +2215,24 @@
       "date": "2026-10-10"
     },
     "medicare-star-ratings.html": {
-      "hash": "0c14dcefdae4dde90e3d05f9dc0325d0",
-      "date": "2026-10-10"
+      "hash": "c5fbc1b6ac8b66984c20ed8d1d1ee64b",
+      "date": "2026-10-15"
     },
     "brokers.html": {
       "hash": "c4574423fd55846bdf5a5ebc93228b51",
       "date": "2026-10-10"
     },
     "star-ratings.html": {
-      "hash": "b516d8d7056d31652fb8014be931cbe6",
-      "date": "2026-10-10"
+      "hash": "be276fa2c045712b86a9a9bbe3d230a1",
+      "date": "2026-10-15"
     },
     "insurance-departments.html": {
       "hash": "824e7d52c3bb16083c27ee90a0a6084e",
       "date": "2026-10-10"
     },
     "costs.html": {
-      "hash": "a2fd4cf3f73a63fe89af7a20bbba2c45",
-      "date": "2026-10-10"
+      "hash": "d8ada6212aef9fd3232d6e747b3864f1",
+      "date": "2026-10-15"
     },
     "chip.html": {
       "hash": "9e2956e80e7b5ad4a9ed17dfbb8c3acb",
@@ -2289,6 +2289,10 @@
     "state-health-coverage-older-immigrants.html": {
       "hash": "94a9ce8799278eef70e54ada5ab19d8b",
       "date": "2026-10-10"
+    },
+    "insurers-dropping-plans-2027.html": {
+      "hash": "462dd94c0e258f51244328fcec5f934a",
+      "date": "2026-10-15"
     }
   },
   "tl": {
@@ -2345,8 +2349,8 @@
       "date": "2026-10-10"
     },
     "costs.html": {
-      "hash": "a2fd4cf3f73a63fe89af7a20bbba2c45",
-      "date": "2026-10-10"
+      "hash": "d8ada6212aef9fd3232d6e747b3864f1",
+      "date": "2026-10-15"
     },
     "coverage-basics.html": {
       "hash": "7bafe3e6cf196a106cdeef5e695d678c",
@@ -2365,8 +2369,8 @@
       "date": "2026-10-10"
     },
     "dual-eligible.html": {
-      "hash": "2ed0083e54611970670845bd8e35e4cf",
-      "date": "2026-10-10"
+      "hash": "0671a946e67c29683dd788a850fc8f7a",
+      "date": "2026-10-15"
     },
     "edge-cases.html": {
       "hash": "4ec54d49397abe3eb494448a02915723",
@@ -2541,8 +2545,8 @@
       "date": "2026-10-10"
     },
     "medicare-open-enrollment-2027.html": {
-      "hash": "bb542b506f1171c42fe9b38c424e780e",
-      "date": "2026-10-10"
+      "hash": "8873792fa10a232b9b7ce68ebcd57d6d",
+      "date": "2026-10-15"
     },
     "medicare-part-a.html": {
       "hash": "141eb6afdaef0afac377596099cccab7",
@@ -2585,16 +2589,16 @@
       "date": "2026-10-10"
     },
     "medicare-special-needs-plans.html": {
-      "hash": "4fe1dc0107b1352e528632c5fa2ae352",
-      "date": "2026-10-10"
+      "hash": "decf31ab0f22e7969f8688821a191b2b",
+      "date": "2026-10-15"
     },
     "medicare-spouse-work-record.html": {
       "hash": "77d75df067d4eccef88f000d8f36e115",
       "date": "2026-10-10"
     },
     "medicare-star-ratings.html": {
-      "hash": "0c14dcefdae4dde90e3d05f9dc0325d0",
-      "date": "2026-10-10"
+      "hash": "c5fbc1b6ac8b66984c20ed8d1d1ee64b",
+      "date": "2026-10-15"
     },
     "medicare-summary-notice.html": {
       "hash": "89875a71ad1bccae78d77c2e1d1807b5",
@@ -2621,8 +2625,8 @@
       "date": "2026-10-10"
     },
     "navigators.html": {
-      "hash": "7a6d073b35a019f01fe5f627932336df",
-      "date": "2026-10-10"
+      "hash": "1d3b1008bc4f0d96d1faa80151783a6a",
+      "date": "2026-10-15"
     },
     "part-d-formulary-exception-appeal.html": {
       "hash": "d4b7eca173b4ac55465159f4b75c35d6",
@@ -2661,8 +2665,8 @@
       "date": "2026-10-10"
     },
     "marketplace.html": {
-      "hash": "bde721302ec0290a9327f7e98c2a8a49",
-      "date": "2026-10-10"
+      "hash": "3afa2679bb3a255bc8a5e72d1d3a98df",
+      "date": "2026-10-15"
     },
     "medicaid-eligibility.html": {
       "hash": "c432a951897f2fa6d15a88ab434649e1",
@@ -2673,8 +2677,8 @@
       "date": "2026-10-10"
     },
     "medicare-dental-vision-hearing.html": {
-      "hash": "f658eac7cc3cad2c36d3747fae291165",
-      "date": "2026-10-10"
+      "hash": "5de4ee954ee909ccc1744f267fbd29c1",
+      "date": "2026-10-15"
     },
     "medicare-immigrants.html": {
       "hash": "eebaf8751b1390ba811234d8a1344a01",
@@ -2693,8 +2697,8 @@
       "date": "2026-10-10"
     },
     "medicare-weight-loss-drugs.html": {
-      "hash": "8834a6b74668fc9d21db69e8cdf6b1d9",
-      "date": "2026-10-10"
+      "hash": "e3f0a707bbdc08ea722126e47b8f2769",
+      "date": "2026-10-15"
     },
     "member-journey.html": {
       "hash": "8689578ca764012cfa1272a8a13ee783",
@@ -2765,8 +2769,8 @@
       "date": "2026-10-10"
     },
     "enrollment.html": {
-      "hash": "5bba71c8007a8ca77f6cd4fff61e00ba",
-      "date": "2026-10-10"
+      "hash": "4d256dae684dad36b96bdbe005f10047",
+      "date": "2026-10-15"
     },
     "medigap.html": {
       "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",

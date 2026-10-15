@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2027년에 사라지는 메디케어 어드밴티지 플랜: 누가, 왜 중단하나</title>
+<meta name="description" content="Humana, UnitedHealthcare 등이 2027년 메디케어 어드밴티지 플랜을 중단합니다. 중단 이유, 내 플랜이 종료되는지 확인하는 방법, 12월 7일까지 해야 할 일을 알려 드립니다.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/ko/insurers-dropping-plans-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="2027년에 사라지는 메디케어 어드밴티지 플랜: 누가, 왜 중단하나">
+<meta property="og:description" content="Humana, UnitedHealthcare 등이 2027년 메디케어 어드밴티지 플랜을 중단합니다. 중단 이유, 내 플랜이 종료되는지 확인하는 방법, 12월 7일까지 해야 할 일을 알려 드립니다.">
+<meta property="og:url" content="https://mediprimer.org/ko/insurers-dropping-plans-2027.html">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="2027년에 사라지는 메디케어 어드밴티지 플랜: 누가, 왜 중단하나">
+<meta name="twitter:description" content="Humana, UnitedHealthcare 등이 2027년 메디케어 어드밴티지 플랜을 중단합니다. 중단 이유, 내 플랜이 종료되는지 확인하는 방법, 12월 7일까지 해야 할 일을 알려 드립니다.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "2027년에 메디케어 어드밴티지 플랜이 사라지나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. 대부분의 보험사는 대부분의 플랜을 유지했고, 대부분의 카운티에는 여전히 선택지가 많습니다. 사라지는 것은 한계 수준의 플랜입니다. 등급이 낮거나, 농촌이나 비용이 높은 카운티에 있거나, 병원 시스템이 운영하는 소규모 보험사의 플랜입니다. 내 플랜이 그중 하나인지 확인하세요."}}, {"@type": "Question", "name": "Humana는 2027년에 메디케어 어드밴티지 플랜을 중단하나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. Humana는 약 60만 명이 가입한 플랜을 종료하며, 대부분 3.5점 이하 등급의 플랜입니다. 가입자들은 10월 2일자 갱신 불가 편지를 받았고, 플랜은 12월 31일에 끝납니다. (Insurance Business) 편지를 받지 못했다면 Humana 플랜은 계속됩니다. 2027년 변경 사항은 연례 변경 통지에서 읽어 보세요. 내 플랜 확인 방법 을 참고하세요."}}, {"@type": "Question", "name": "UnitedHealthcare(AARP)는 2027년에 메디케어 어드밴티지 플랜을 중단하나요?", "acceptedAnswer": {"@type": "Answer", "text": "네. UnitedHealthcare는 약 39만 명이 가입한 플랜을 중단하고 228개 카운티에서 철수합니다. (Yahoo Finance) (KFF) 대부분의 플랜은 계속됩니다. 여러분이 어느 경우인지는 편지에 나와 있습니다."}}, {"@type": "Question", "name": "Aetna는 2027년에 메디케어 어드밴티지를 떠나나요?", "acceptedAnswer": {"@type": "Answer", "text": "완전히 떠나는 것은 아닙니다. Aetna(CVS Health)는 2027년에 약 103개 카운티에서 철수하지만 다른 지역에서는 계속 플랜을 판매합니다. (Healthcare Dive) 사는 카운티가 그중 하나라면 갱신 불가 편지를 받았을 것입니다."}}, {"@type": "Question", "name": "2027년에 메디케어 어드밴티지 플랜에서 무엇이 달라지나요?", "acceptedAnswer": {"@type": "Answer", "text": "많은 카운티에서 플랜과 보험사가 줄고, 선호 제공자 기구(PPO)는 줄고 건강관리기구(HMO)는 늘며, 추가 혜택이 작아지고, 193개 카운티에는 약 보장을 포함한 일반 가입 어드밴티지 플랜이 없습니다. 오리지널 메디케어와 메디케어 파트 D에서 여러분이 내는 비용도 바뀝니다. 2027년 메디케어 비용 을 확인하세요."}}, {"@type": "Question", "name": "정부는 왜 이런 플랜에 대한 지급액을 줄였나요?", "acceptedAnswer": {"@type": "Answer", "text": "연방 감사관들과 의회 자문 기관들은 오래전부터 메디케어가 진단 코딩 등을 통해 어드밴티지 플랜에 오리지널 메디케어가 들었을 비용보다 1인당 더 많이 지급한다고 말해 왔습니다. 2024년 이후의 변경은 그 차이를 좁히려는 것입니다. 보험사들은 변경이 너무 지나치고 너무 빨랐다고 말합니다. 양쪽은 같은 돈을 서로 반대편에서 설명하고 있습니다."}}, {"@type": "Question", "name": "제 플랜이 종료됩니다. 메디케어를 잃게 되나요?", "acceptedAnswer": {"@type": "Answer", "text": "아니요. 메디케어 파트 A와 메디케어 파트 B는 유지됩니다. 아무것도 하지 않으면 1월 1일에 오리지널 메디케어에 있게 되며, 메디케어 파트 D 플랜에 가입하지 않으면 약 보장이 없습니다."}}, {"@type": "Question", "name": "이 때문에 메디케어 어드밴티지를 떠나야 하나요?", "acceptedAnswer": {"@type": "Answer", "text": "건강 상태, 의사, 예산에 따라 다르며, 저희가 대신 골라 드리지는 않습니다. 다만 이렇게 말씀드릴 수는 있습니다. 플랜이 종료되고 건강 문제가 있다면, 건강 질문 없이 메디케어 보충보험(메디갭)에 가입할 수 있는 기간이 짧게 열려 있습니다. 그 문이 닫힌 뒤가 아니라 열려 있을 때 결정하세요."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "2027년에 사라지는 메디케어 어드밴티지 플랜: 누가, 왜 중단하나", "description": "Humana, UnitedHealthcare 등이 2027년 메디케어 어드밴티지 플랜을 중단합니다. 중단 이유, 내 플랜이 종료되는지 확인하는 방법, 12월 7일까지 해야 할 일을 알려 드립니다.", "url": "https://mediprimer.org/ko/insurers-dropping-plans-2027.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/insurers-dropping-plans-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/insurers-dropping-plans-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "2027년에 사라지는 메디케어 어드밴티지 플랜: 누가, 왜 중단하나", "item": "https://mediprimer.org/ko/insurers-dropping-plans-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/ko/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="언어: 한국어"><span class="lang-switch-current">한국어</span> ▾</button>
+    <div class="dropdown">
+    <a href="/insurers-dropping-plans-2027.html" lang="en">English</a>
+    <a href="/es/insurers-dropping-plans-2027.html" lang="es">Español</a>
+    <a href="/zh-Hant/insurers-dropping-plans-2027.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/insurers-dropping-plans-2027.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/insurers-dropping-plans-2027.html" lang="ko" aria-current="page">한국어</a>
+    <a href="/tl/insurers-dropping-plans-2027.html" lang="tl">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="메뉴">☰</button>
+    <nav class="main">
+      <a href="/ko/" class="navtop">홈</a>
+      <div class="navitem has-menu">
+        <a href="/ko/turning-65.html" class="navtop active">여기서 시작하기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 여기서 시작하기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/turning-65.html" class="star">★ 65세가 되면: 여기서 시작하기</a>
+        <a href="/ko/planning-for-two.html">부부를 위한 메디케어</a>
+        <a href="/ko/choosing-coverage.html">보장 선택하기</a>
+        <a href="/ko/costs.html">비용 이해하기</a>
+        <a href="/ko/enrollment.html">가입 및 마감일</a>
+        <a href="/ko/getting-help.html">비용 지원 받기</a>
+        <a href="/ko/questions-to-ask.html">확인해야 할 질문</a>
+        <a href="/ko/edge-cases.html">특수한 상황 및 복잡한 사례</a>
+        <a href="/ko/members.html">모든 회원 안내서 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/basics.html" class="navtop">기본 사항 알아보기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 기본 사항 알아보기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/coverage-basics.html">보장 기본 사항</a>
+        <a href="/ko/plan-types.html">플랜 종류</a>
+        <a href="/ko/medigap.html">메디갭 플랜</a>
+        <a href="/ko/medicare-advantage.html">메디케어 어드밴티지</a>
+        <a href="/ko/marketplace.html">마켓플레이스(ACA)</a>
+        <a href="/ko/cms-updates.html">프로그램 운영 방식</a>
+        <a href="/ko/policy-changes.html">정책 및 규정 변경</a>
+        <a href="/ko/basics.html">모든 기본 정보 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/ko/directories.html" class="navtop">도움 찾기</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 도움 찾기">▾</button>
+        <div class="dropdown">
+        <a href="/ko/state-medicaid.html">주 메디케이드</a>
+        <a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a>
+        <a href="/ko/insurance-departments.html">보험국</a>
+        <a href="/ko/resources.html">모든 자료</a>
+        <a href="/ko/checklists.html">인쇄 가능한 체크리스트</a>
+        <a href="/ko/directories.html">디렉토리 홈 →</a>
+        </div>
+      </div>
+      <a href="/ko/glossary.html" class="navtop">용어집</a>
+      <div class="navitem has-menu">
+        <a href="/ko/professionals.html" class="navtop">협력 기관 및 전문가용</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="메뉴 열기 협력 기관 및 전문가용">▾</button>
+        <div class="dropdown">
+        <a href="/ko/partner-materials.html" class="star">★ 무료 배포 자료</a>
+        <a href="/ko/operations.html">건강 플랜 운영</a>
+        <a href="/ko/providers.html">제공자 및 청구</a>
+        <a href="/ko/brokers.html">브로커 및 상담사</a>
+        <a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a>
+        <a href="/ko/star-ratings.html">스타 등급 및 품질</a>
+        <a href="/ko/appeals-timelines.html">이의신청: 단계 및 일정</a>
+        <a href="/ko/professionals.html">모든 전문가 자료 →</a>
+        </div>
+      </div>
+      <a href="/ko/about.html" class="navtop">소개</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">수혜자 및 보호자를 위한 안내</p>
+    <h1>2027년에 사라지는 메디케어 어드밴티지 플랜: 누가 중단하고, 왜 중단하며, 무엇을 해야 할까요</h1>
+    <p>플랜에서 온 편지에 내년에는 이 플랜을 제공하지 않는다고 적혀 있습니다. 보장이 아예 없어지는 것은 아니지만 지켜야 할 기한이 있습니다. 편지가 무슨 뜻인지, 그리고 주어진 시간을 활용해 플랜을 바꾸는 방법을 안내합니다.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>먼저 짧게 요약합니다.</strong> 2027년에는 건강보험 회사들이 최근 몇 년간 보기 드문 규모로 플랜을 중단하고 있습니다. Humana와 UnitedHealthcare 두 곳만 해도 약 100만 명이 가입한 메디케어 어드밴티지(파트 C) 플랜을 종료합니다. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> 보험사 11곳은 일부 또는 모든 주에서 마켓플레이스(보험 거래소)를 떠납니다. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> 대형 메디케이드 보험사들도 주 정부와의 계약에서 손을 떼고 있습니다. 이는 여러분 때문이 아닙니다. 돈 문제입니다. 정부의 결정으로 이런 플랜의 수익성이 낮아졌고, 회사들은 수익이 가장 적은 지역에서 철수했습니다. 이 페이지에서는 무슨 일이 일어나고 있는지, 왜 그런지, 여러분에게 어떤 비용이 생길 수 있는지, 기한 전에 무엇을 해야 하는지 설명합니다.</p>
+
+    <div class="note">
+      <strong>지금 중요한 기한입니다.</strong> 메디케어 공개 가입 기간은 10월 15일부터 12월 7일까지입니다. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --> HealthCare.gov의 마켓플레이스(보험 거래소) 공개 가입 기간은 11월 1일부터 12월 15일까지입니다. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 플랜이 종료되는 경우 편지에 따라 추가 권리가 생기지만, 그중 하나는 빨리 만료됩니다. <a href="#act">지금 해야 할 일</a>을 확인하세요.
+    </div>
+
+    <h2>2027년에 사라지는 메디케어 어드밴티지 플랜은 무엇인가요?</h2>
+
+    <h3>메디케어 어드밴티지</h3>
+    <ul>
+      <li><strong>약 100만 명이 12월 31일에 종료되는 플랜에 가입해 있습니다.</strong> Humana 가입자 약 60만 명과 UnitedHealthcare 가입자 약 39만 명이 중단되는 플랜에 있습니다. 갱신 불가 통지서는 10월 2일자였습니다. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> 이는 2026년에 거의 300만 명이 새 메디케어 어드밴티지 보장을 찾아야 했던 해에 이어 나온 일입니다. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a></li>
+      <li><strong>가장 큰 보험사들이 서비스 지역을 줄이고 있습니다.</strong> Health Care Service Corporation(5개 주의 Blue Cross 플랜)은 498개 카운티에서 철수하고 새로 들어가는 곳은 없습니다. Centene은 359곳, UnitedHealthcare는 228곳, Elevance(Anthem)는 66곳, Humana는 62곳에서 철수합니다. Devoted Health 한 곳만 342개 카운티로 확장합니다. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF, 2026년 10월 9일)</a></li>
+      <li><strong>병원 시스템이 소유한 곳이 많은 몇몇 소규모 보험사는 프로그램에서 완전히 떠납니다.</strong> <a href="https://www.beckershospitalreview.com/finance/10-payers-exiting-medicare-advantage-in-2027/" rel="noopener">(Becker's)</a></li>
+      <li><strong>하와이에서는 HMSA가 메디케어 어드밴티지 플랜 두 개를 닫습니다.</strong> 상위 옵션 선호 제공자 기구(PPO) 플랜인 Akamai Advantage Complete Plus와 Standard Plus입니다. 약 16,000명이 영향을 받습니다. HMSA는 메디케어 어드밴티지에 남으며, 더 높은 보험료의 새 상위 옵션 플랜을 제공합니다. 플랜을 고르지 않은 가입자는 1월 1일에 오리지널 메디케어로 돌아가며, 이 경우 약 보장이 없습니다. <a href="https://www.staradvertiser.com/2026/10/04/hawaii-news/hmsa-revamping-medicare-advantage-plans/" rel="noopener">(Honolulu Star-Advertiser, 2026년 10월 4일)</a> <!-- news: https://www.staradvertiser.com/2026/10/04/hawaii-news/hmsa-revamping-medicare-advantage-plans/ | "The Hawaii Medical Service Association is closing two of its higher-option Medicare Advantage Plans at the end of the year, leaving about 16,000 of its members disenrolled on Dec. 31 unless they opt to get coverage from another carrier or choose new higher-option plans HMSA is offering at higher premiums." --></li>
+      <li><strong>일부 지역에는 약 보장이 있는 일반 메디케어 어드밴티지 플랜이 없습니다.</strong> 메디케어 가입자 약 638,000명이 사는 193개 카운티에서는 2027년에 일반 가입이 가능한 메디케어 파트 D 약 보장 포함 메디케어 어드밴티지 플랜이 없습니다. 올해는 123개 카운티였습니다. 그중 6개 카운티에는 약 보장이 없는 어드밴티지 플랜이 남아 있고, 일부는 특수 필요사항 플랜(SNP) 자격이 있는 사람만 가입할 수 있는 플랜만 있습니다. <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> 그곳 대부분의 사람에게는 오리지널 메디케어에 메디케어 파트 D 약 플랜을 더하는 것이 선택지입니다.</li>
+    </ul>
+
+    <h3>파트 D 약 플랜</h3>
+    <ul>
+      <li>2027년에 일반적인 사람이 고를 수 있는 단독 약 플랜은 11개에서 9개로 줄었으며, 추가 도움(저소득 보조금)을 받지 않는 한 보험료가 전혀 없는 플랜은 없습니다. 많은 사람이 보험료가 조금 오르는 것을 보게 됩니다. 지금 플랜에 그대로 있으면 훨씬 크게 오르는 경우도 있습니다. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+      <li>보장되는 약에 대해 내는 연간 한도는 2027년에 $2,400으로 오르고, 어떤 플랜도 $700를 넘는 공제액(디덕터블)을 부과할 수 없습니다. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> <a href="/ko/medicare-costs-2027.html">2027년 메디케어 비용</a>을 확인하세요.</li>
+    </ul>
+
+    <h3>마켓플레이스(보험 거래소, Obamacare) 플랜</h3>
+    <ul>
+      <li>보험사 11곳이 2027년에 판매하는 주의 일부 또는 전부에서 마켓플레이스를 떠난다고 발표했습니다. 가장 큰 Cigna는 11개 주 전체에서 철수하며, 마켓플레이스를 통해 가입한 사람이 35만 명이 넘습니다. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF, 2026년 10월 7일 업데이트)</a></li>
+      <li>가격이 다시 오르고 있습니다. 2027년 제안된 인상률은 평균적으로 버몬트의 약 6.5퍼센트에서 워싱턴의 22.4퍼센트까지였으며, 전해에는 일반적인 제안 인상률이 18퍼센트였습니다. <a href="https://chir.georgetown.edu/early-signals-suggest-a-second-year-of-double-digit-marketplace-premium-increases/" rel="noopener">(Georgetown CHIR)</a></li>
+    </ul>
+
+    <h3>메디케이드 플랜</h3>
+    <ul>
+      <li>Elevance는 투자자들에게 12개월에서 18개월에 걸쳐 "경제성이 지속 가능한 실적을 뒷받침하지 못하는" 메디케이드 시장에서 철수할 것으로 예상한다고 밝혔습니다. 2026년 8월 1일에 워싱턴 D.C. 프로그램에서 떠났습니다. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> 가입자 약 292,000명의 Healthy Blue 플랜은 2026년 말에 루이지애나 메디케이드를 떠납니다. 가입자 약 278,000명의 UnitedHealthcare는 2026년 3월 31일에 그 주의 프로그램을 떠났습니다. 최대 580,000명의 루이지애나 가입자가 남은 네 개 플랜 중 하나로 옮겨 갑니다. <a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">(Hoodline)</a></li>
+      <li>Centene은 2027년에 아칸소의 메디케이드 확대 프로그램에서 철수할 계획입니다. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a> 2025년 연방 예산법의 메디케이드 삭감이 시행되면서 더 많은 철수가 예상됩니다.</li>
+    </ul>
+
+    <h2>보험사가 메디케어 어드밴티지 플랜을 중단하는 이유: 돈 이야기를 솔직하게</h2>
+    <p>보험사들은 사람들이 의료를 더 많이 이용해서 비용이 올랐다고 말합니다. 그 말은 사실입니다. 한편 정부가 이 사업의 수익을 줄이는 방향으로 규칙을 바꾼 것도 사실입니다. 무엇이 바뀌었는지 살펴봅니다.</p>
+
+    <h3>메디케어 어드밴티지</h3>
+    <ol class="steps">
+      <li><strong>지급액이 예전만큼 빠르게 늘지 않았습니다.</strong> 정부는 2027년에 처음에는 거의 없는 수준인 0.09퍼센트 인상을 제안했습니다. 보험사들이 항의했습니다. 최종 인상률은 2.48퍼센트, 약 13십억 달러였으며, 이는 정부가 지급액을 더 깎았을 공식 개편 계획을 철회한 뒤의 결과입니다. <a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">(CMS 팩트시트)</a> 그래도 보험사들이 밝히는 비용 증가에는 크게 못 미칩니다.</li>
+      <li><strong>진단 코딩에 대한 지급이 줄었습니다.</strong> 2024년부터 메디케어는 기록된 많은 진단에 대해 플랜에 지급하는 금액을 줄이는 새 위험 조정 모델을 단계적으로 도입했습니다. 공격적인 코딩에 의존한 플랜이 가장 큰 타격을 입었습니다.</li>
+      <li><strong>별점 보너스가 줄었습니다.</strong> 4점 이상 등급을 받은 플랜은 보너스를 받습니다. 몇몇 대형 보험사의 등급이 떨어지면서 보너스도 줄었습니다. Humana는 3.5점 이하 등급의 플랜을 뜻하는 "수익성이 낮은 하위 구간"을 정리하겠다고 말했습니다. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a></li>
+      <li><strong>약값 부담이 플랜으로 넘어갔습니다.</strong> 2022년 약 관련 법은 메디케어 파트 D 약에 대해 여러분이 내는 금액에 한도를 두고, 한도를 넘는 비용은 플랜이 더 많이 부담하게 했습니다. 여러분에게는 좋은 일입니다. 플랜에는 비용이 큰 일이며, 단독 약 플랜을 받쳐 주던 임시 연방 지원은 2026년 12월 31일에 끝납니다. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></li>
+    </ol>
+    <p>종합하면, 한계 수준이던 플랜, 즉 선호 제공자 기구(PPO), 농촌 카운티, 낮은 등급의 플랜이 수익을 내지 못하게 되었습니다. 회사들은 이런 플랜을 정리했습니다. 남은 플랜은 제공자 네트워크가 더 좁고 부가 혜택이 적은 건강관리기구(HMO)인 경향이 있습니다.</p>
+
+    <h3>마켓플레이스(보험 거래소)</h3>
+    <ol class="steps">
+      <li><strong>의회가 확대된 보조금을 종료되도록 두었습니다.</strong> 2025년 말에 끝났습니다. 2026년 가입자는 100만 명 넘게 줄었습니다. <a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">(KFF)</a> 빠져나간 사람들은 평균적으로 더 건강했기 때문에, 남은 가입자 집단은 보장 비용이 더 많이 듭니다.</li>
+      <li><strong>새 규정 때문에 가입이 더 어려워졌습니다.</strong> 연방 가입 기간이 짧아지고, 더 많은 사람이 보장이 시작되기 전에 자격을 증명해야 합니다. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 보험사들은 가입자가 더 적고 더 아플 것으로 예상해 그에 맞게 가격을 올리거나 떠납니다.</li>
+    </ol>
+
+    <h3>메디케이드</h3>
+    <ol class="steps">
+      <li><strong>2025년 연방 예산법이 앞으로 몇 년에 걸쳐 메디케이드 재원을 줄입니다.</strong> 많은 성인에게 근로 요건이 생기고, 6개월마다 자격 확인을 하며, 주가 자기 몫의 재원을 마련하는 방식에 제한이 생깁니다. 그 결과 주 정부는 플랜에 더 적게 또는 더 늦게 지급하고, 플랜은 떠납니다. <a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">(KFF)</a></li>
+    </ol>
+
+    <h2>2027년에 여러분에게 달라지는 점</h2>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>가지고 계신 보장이…</th><th>위험</th></tr></thead>
+        <tbody>
+          <tr><td>종료되는 메디케어 어드밴티지 플랜</td><td>편지를 놓치면 보장 공백이 생길 수 있습니다. 새 플랜의 네트워크가 다르면 지금 의사를 잃을 수 있습니다. 건강 관련 질문 없이 메디케어 보충보험(메디갭)을 살 수 있는 짧은 기간을 놓칠 수 있습니다.</td></tr>
+          <tr><td>계속되는 메디케어 어드밴티지 플랜</td><td>2027년에 네트워크가 작아지고, 공동부담금(코페이먼트)이 오르고, 부가 혜택이 줄 수 있습니다. 치과, 일반의약품 카드, 헬스장 혜택 같은 부가 혜택은 줄이기 가장 쉬워서 먼저 줄어듭니다. 연례 변경 통지를 한 줄씩 읽어 보세요.</td></tr>
+          <tr><td>단독 메디케어 파트 D 플랜</td><td>그대로 있으면 보험료가 크게 오를 수 있습니다. 플랜이 약제 목록(처방집)을 바꿀 수도 있습니다. <a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">(KFF)</a></td></tr>
+          <tr><td>마켓플레이스(보험 거래소) 플랜</td><td>보험사가 떠나면 다른 보험사의 플랜으로 옮겨지고 네트워크도 새로워집니다. 보험료 청구액이 늘 수 있지만, 자격이 되는 대부분의 사람은 기준 가격이 오르면 보조금도 함께 오릅니다.</td></tr>
+          <tr><td>메디케이드</td><td>보험사가 그 주를 떠나면 새 플랜에 배정되고, 편지에 답하지 않으면 갱신 시 보장을 잃을 수 있습니다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="check">내 메디케어 어드밴티지 플랜이 종료되는지 어떻게 확인하나요?</h2>
+    <p>보험사에 관한 기사 제목이 곧 내 플랜이 종료된다는 뜻은 아닙니다. 보험사는 보통 <em>일부</em> 카운티의 <em>일부</em> 플랜만 중단하고 나머지는 유지합니다. 아래 순서대로 내 플랜을 확인하세요.</p>
+    <ol class="steps">
+      <li><strong>편지를 찾으세요.</strong> 플랜이 종료되는 경우 보험사는 10월 초에 플랜 이름과 종료일이 적힌 갱신 불가 통지서를 우편으로 보내야 했습니다. 대신 연례 변경 통지를 받았다면 그 플랜은 2027년에도 계속되며 통지서에 적힌 변경 사항이 적용됩니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></li>
+      <li><strong>플랜 이름과 번호를 맞춰 보세요.</strong> 가입자 카드에는 플랜 이름과 계약 번호(H와 숫자 네 자리), 플랜 ID가 있습니다. 편지와 비교해 보세요. 보험사는 여러분의 카운티에서 "플랜 A"를 끝내고 "플랜 B"는 유지할 수 있습니다. 편지에 적힌 바로 그 플랜만 영향을 받습니다.</li>
+      <li><strong>내 우편번호의 2027년 플랜을 찾아보세요.</strong> <a href="/ko/using-plan-finder.html">메디케어 플랜 파인더</a>에서 2027년 보장을 선택하고 우편번호를 입력하세요. 지금 플랜이 2027년 목록에 없다면 여러분 지역에서 종료되는 것입니다. <!-- src: https://www.medicare.gov/plan-compare/ --></li>
+      <li><strong>불분명하면 플랜에 전화하세요.</strong> 가입자 서비스 번호는 카드에 있습니다. "제 플랜, 계약 번호 H-xxxx, 플랜 xxx가 2027년에 제 카운티에서 제공됩니까?"라고 물어보세요.</li>
+      <li><strong>종료된다면,</strong> <a href="/ko/medicare-advantage-plan-ending.html">2027년에 내 메디케어 어드밴티지 플랜이 종료됩니다</a>에서 기한, 권리, 선택지를 확인하세요. 사는 곳에서 어떤 다른 플랜이 판매되는지 보려면 <a href="/ko/medicare-plan-comparison-2027.html">2027년 메디케어 어드밴티지 선택지를 비교</a>해 보세요.</li>
+    </ol>
+
+    <h2 id="act">지금 해야 할 일</h2>
+    <p>대부분의 사이트가 부드럽게 넘어가는 부분입니다. 저희는 그러지 않겠습니다.</p>
+    <ol class="steps">
+      <li><strong>10월에 플랜에서 온 봉투를 모두 열어 보세요.</strong> <a href="/ko/medicare-annual-notice-of-change.html">변경 통지</a>는 플랜이 새 조건으로 계속된다는 뜻입니다. 갱신 불가 통지서는 12월 31일에 끝난다는 뜻입니다. 갱신 불가 편지는 권리를 증명하는 서류이니 보관하세요.</li>
+      <li><strong>메디케어 어드밴티지 플랜이 종료된다면 두 개의 시계를 알아 두세요.</strong> 12월 8일부터 2월 말까지 메디케어 플랜을 바꿀 수 있습니다. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods --> 하지만 건강 질문 없이 메디케어 보충보험(메디갭) 증권을 살 수 있는 권리는 보장이 끝난 뒤 63일 동안만 유지됩니다. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> 많은 사람이 더 짧은 쪽을 놓칩니다. 건강 문제가 있고 오리지널 메디케어와 메디갭을 원한 적이 있다면, 보험 인수 심사 없이 가입할 수 있는 유일한 기회일 수 있습니다. 다른 어드밴티지 플랜을 고르기 전에 가격을 알아보세요. 자세한 내용은 <a href="/ko/medicare-advantage-plan-ending.html">플랜이 종료될 때의 선택지</a>에서 확인하세요.</li>
+      <li><strong>부가 혜택만 보고 플랜을 고르지 마세요.</strong> 치과, 시력, 청력, 헬스장, 식료품 카드는 플랜이 손실을 보면 가장 먼저 줄어드는 혜택이고, 매년 1월마다 바뀔 수 있습니다. 의사, 약, 병원을 기준으로 고르세요.</li>
+      <li><strong>스타 등급(별점 평가)과 보험사의 방향을 확인하세요.</strong> Humana는 3.5점 이하 등급의 플랜을 정리했습니다. 낮은 등급의 플랜이나 여러분의 주에서 규모를 줄이는 보험사의 플랜은 내년에 다시 정리될 가능성이 더 큽니다. 별점은 <a href="/ko/using-plan-finder.html">플랜 파인더</a>에 있습니다. <a href="/ko/medicare-star-ratings.html">별점의 의미</a>도 확인하세요.</li>
+      <li><strong>단독 약 플랜이 있다면 갱신하지 말고 비교하세요.</strong> 플랜 파인더에 복용하는 약을 입력하세요. 올해는 그대로 있는 것이 바꾸는 것보다 훨씬 비쌀 수 있습니다. <a href="/ko/switching-medicare-part-d-formulary-check.html">약제 목록 확인 방법</a>.</li>
+      <li><strong>2027년에 사는 카운티에 약 보장이 포함된 일반 가입 메디케어 어드밴티지 플랜이 없다면,</strong> 주된 선택지는 오리지널 메디케어입니다. 약 보장이 없는 상태가 되지 않도록 12월 7일까지 메디케어 파트 D 플랜을 추가하세요. 그다음 <a href="/ko/medigap.html">메디케어 보충보험(메디갭)</a>을 살펴보세요.</li>
+      <li><strong>마켓플레이스(보험 거래소): 일찍 행동하고 배정된 플랜에 관한 편지를 확인하세요.</strong> 연방 기간은 11월 1일부터 12월 15일까지입니다. <!-- src: https://www.healthcare.gov/quick-guide/dates-and-deadlines/ --> 보험사가 떠나면 HealthCare.gov가 다른 플랜으로 옮길 수 있으며, 그 플랜에 지금 의사가 없을 수 있습니다. 보조금이 정확하도록 소득 추정치를 업데이트하세요. <a href="/ko/marketplace-open-enrollment-2027.html">2027년 마켓플레이스 공개 가입 기간</a>을 확인하세요.</li>
+      <li><strong>메디케이드: 모든 편지에 답하고 주소를 최신으로 유지하세요.</strong> 갱신이 더 자주 옵니다. 플랜이 주를 떠난다면 주 정부가 배정하기 전에 직접 새 플랜을 골라야 지금 의사를 유지할 수 있습니다. <a href="/ko/medicaid-renewal.html">메디케이드 갱신</a>을 확인하세요.</li>
+      <li><strong>무료이고 중립적인 도움을 받으세요.</strong> SHIP 상담원은 플랜을 판매하지 않습니다. <a href="/ko/ship-directory.html">가까운 곳 찾기</a>. 설계사도 도움이 될 수 있지만, 판매한 플랜에서 보수를 받습니다.</li>
+    </ol>
+
+    <h2>앞으로 예상되는 일</h2>
+    <p>증거에 근거한 저희의 판단이며, 믿고 의지해야 할 예측은 아닙니다. 철수는 끝나지 않았습니다. 2027년 메디케어 어드밴티지 지급액 증가는 크지 않고 코딩 변경은 이제 완전히 적용되므로, 보험사들은 낮은 등급의 플랜과 가입자가 적은 카운티를 계속 정리할 것입니다. 의회가 확대된 보조금을 되살리지 않는 한 마켓플레이스 가격은 계속 높을 것입니다. 연방 삭감이 2027년과 2028년에 걸쳐 단계적으로 시행되면서 메디케이드 플랜의 철수는 더 퍼질 것입니다. 실용적인 교훈은 해마다 같습니다. 지금 가진 플랜이 계속 유지될 것이라고 가정하지 말고, 매년 가을마다 점검하세요.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="이메일로 MediPrimer 소식 받기">
+      <h2>가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.</h2>
+      <p>가을철 점검 체크리스트를 받아보세요 — 마감 전 플랜에서 확인해야 할 항목들을 간단히 정리했습니다 — 그리고 12월 7일 전 알림 이메일 한 통도 보내드립니다. 그 후에는 변경 사항이 있을 때만 짧은 이메일을 보내며, 주 1회를 넘지 않습니다. 광고 없음, 플랜 판매 없음.</p>
+      <form class="newsletter-form" data-lang="ko">
+        <label class="sr-only" for="nl-email">이메일 주소를 입력하세요</label>
+        <input id="nl-email" type="email" required placeholder="이메일 주소를 입력하세요">
+        <button type="submit">체크리스트 받기</button>
+      </form>
+      <p class="newsletter-fine">확인을 위해 한 번 이메일을 보내드립니다 — 클릭해야 구독이 완료됩니다. 마감 전 알림 한 통, 그 후엔 평소처럼 일주일에 최대 한 통입니다. 언제든 한 번의 클릭으로 구독 취소가 가능합니다.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>자주 묻는 질문</h2>
+
+    <details class="qa">
+      <summary>2027년에 메디케어 어드밴티지 플랜이 사라지나요?</summary>
+      <div>
+        <p>아니요. 대부분의 보험사는 대부분의 플랜을 유지했고, 대부분의 카운티에는 여전히 선택지가 많습니다. 사라지는 것은 한계 수준의 플랜입니다. 등급이 낮거나, 농촌이나 비용이 높은 카운티에 있거나, 병원 시스템이 운영하는 소규모 보험사의 플랜입니다. 내 플랜이 그중 하나인지 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Humana는 2027년에 메디케어 어드밴티지 플랜을 중단하나요?</summary>
+      <div>
+        <p>네. Humana는 약 60만 명이 가입한 플랜을 종료하며, 대부분 3.5점 이하 등급의 플랜입니다. 가입자들은 10월 2일자 갱신 불가 편지를 받았고, 플랜은 12월 31일에 끝납니다. <a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">(Insurance Business)</a> 편지를 받지 못했다면 Humana 플랜은 계속됩니다. 2027년 변경 사항은 연례 변경 통지에서 읽어 보세요. <a href="#check">내 플랜 확인 방법</a>을 참고하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>UnitedHealthcare(AARP)는 2027년에 메디케어 어드밴티지 플랜을 중단하나요?</summary>
+      <div>
+        <p>네. UnitedHealthcare는 약 39만 명이 가입한 플랜을 중단하고 228개 카운티에서 철수합니다. <a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">(Yahoo Finance)</a> <a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">(KFF)</a> 대부분의 플랜은 계속됩니다. 여러분이 어느 경우인지는 편지에 나와 있습니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Aetna는 2027년에 메디케어 어드밴티지를 떠나나요?</summary>
+      <div>
+        <p>완전히 떠나는 것은 아닙니다. Aetna(CVS Health)는 2027년에 약 103개 카운티에서 철수하지만 다른 지역에서는 계속 플랜을 판매합니다. <a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">(Healthcare Dive)</a> 사는 카운티가 그중 하나라면 갱신 불가 편지를 받았을 것입니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>2027년에 메디케어 어드밴티지 플랜에서 무엇이 달라지나요?</summary>
+      <div>
+        <p>많은 카운티에서 플랜과 보험사가 줄고, 선호 제공자 기구(PPO)는 줄고 건강관리기구(HMO)는 늘며, 추가 혜택이 작아지고, 193개 카운티에는 약 보장을 포함한 일반 가입 어드밴티지 플랜이 없습니다. 오리지널 메디케어와 메디케어 파트 D에서 여러분이 내는 비용도 바뀝니다. <a href="/ko/medicare-costs-2027.html">2027년 메디케어 비용</a>을 확인하세요.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>정부는 왜 이런 플랜에 대한 지급액을 줄였나요?</summary>
+      <div>
+        <p>연방 감사관들과 의회 자문 기관들은 오래전부터 메디케어가 진단 코딩 등을 통해 어드밴티지 플랜에 오리지널 메디케어가 들었을 비용보다 1인당 더 많이 지급한다고 말해 왔습니다. 2024년 이후의 변경은 그 차이를 좁히려는 것입니다. 보험사들은 변경이 너무 지나치고 너무 빨랐다고 말합니다. 양쪽은 같은 돈을 서로 반대편에서 설명하고 있습니다.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>제 플랜이 종료됩니다. 메디케어를 잃게 되나요?</summary>
+      <div>
+        <p>아니요. 메디케어 파트 A와 메디케어 파트 B는 유지됩니다. 아무것도 하지 않으면 1월 1일에 오리지널 메디케어에 있게 되며, 메디케어 파트 D 플랜에 가입하지 않으면 약 보장이 없습니다. <!-- src: https://www.medicare.gov/health-drug-plans/health-plans/your-health-plan-options --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>이 때문에 메디케어 어드밴티지를 떠나야 하나요?</summary>
+      <div>
+        <p>건강 상태, 의사, 예산에 따라 다르며, 저희가 대신 골라 드리지는 않습니다. 다만 이렇게 말씀드릴 수는 있습니다. 플랜이 종료되고 건강 문제가 있다면, 건강 질문 없이 메디케어 보충보험(메디갭)에 가입할 수 있는 기간이 짧게 열려 있습니다. 그 문이 닫힌 뒤가 아니라 열려 있을 때 결정하세요.</p>
+      </div>
+    </details>
+
+    <h2>출처</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/newsroom/fact-sheets/2027-medicare-advantage-part-d-rate-announcement" rel="noopener">CMS: 2027년 메디케어 어드밴티지 및 파트 D 지급률 발표</a></li>
+      <li><a href="https://www.kff.org/medicare/medicare-advantage-plan-availability-varies-widely-by-county-for-2027/" rel="noopener">KFF: 2027년 카운티별 메디케어 어드밴티지 플랜 제공 현황</a></li>
+      <li><a href="https://www.kff.org/medicare/many-medicare-part-d-stand-alone-drug-plan-enrollees-will-see-modest-premium-increases-for-2027-but-others-could-pay-much-more-if-they-dont-switch-plans/" rel="noopener">KFF: 2027년 단독 파트 D 플랜 보험료</a></li>
+      <li><a href="https://www.kff.org/affordable-care-act/tracking-insurer-participation-changes-in-the-aca-marketplaces-in-2027/" rel="noopener">KFF: 2027년 ACA 마켓플레이스의 보험사 참여 현황</a></li>
+      <li><a href="https://www.kff.org/medicaid/implementation-of-2025-reconciliation-law-medicaid-managed-care-rate-setting-uncertainty-potential-plan-exits/" rel="noopener">KFF: 메디케이드 관리 의료와 2025년 조정법</a></li>
+      <li><a href="https://www.insurancebusinessmag.com/us/news/benefits/humana-exits-affect-600000-members--brokers-have-weeks-to-act-587965.aspx" rel="noopener">Insurance Business: Humana 철수가 60만 명에게 영향</a></li>
+      <li><a href="https://finance.yahoo.com/healthcare/articles/unh-exits-select-medicare-advantage-144800301.html" rel="noopener">Yahoo Finance: UnitedHealthcare, 2027년 일부 메디케어 어드밴티지 플랜에서 철수</a></li>
+      <li><a href="https://www.healthcaredive.com/news/medicare-advantage-cuts-2027-cms-landscape/831563/" rel="noopener">Healthcare Dive: 2027년 보험사들이 메디케어 어드밴티지를 얼마나 줄이는가</a></li>
+      <li><a href="https://hoodline.com/2026/09/louisiana-to-pay-four-medicaid-insurers-16-1b-as-580-000-switch-plans/" rel="noopener">Hoodline: 루이지애나, 580,000명이 플랜을 바꾸며 메디케이드 보험사 네 곳으로 축소</a></li>
+      <li><a href="https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan/special-enrollment-periods" rel="noopener">Medicare.gov: 특별 가입 기간</a></li>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: 메디갭 증권은 언제 살 수 있나요?</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>행동하기 전에 확인하세요.</strong> MediPrimer는 일반적인 교육용 정보이며 어떤 기관이나 보험사와도 제휴하지 않습니다. 이 페이지는 시장과 여러분의 권리를 설명할 뿐 특정 플랜을 추천하지 않습니다. 가입자 수와 카운티 수치는 각 항목 옆에 링크된 연구 및 뉴스 출처에서 가져왔으며, 각각 2026년 10월 9일에 원본 출처와 대조했고, 새로운 발표가 확인되면 이 페이지를 업데이트합니다. 본인의 기한과 권리는 1-800-MEDICARE, HealthCare.gov, 주 메디케이드 사무소 또는 <a href="/ko/ship-directory.html">SHIP</a>에 확인하세요.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>기본 사항</h4>
+        <ul>
+          <li><a href="/ko/coverage-basics.html">보장 기본 사항</a></li>
+          <li><a href="/ko/plan-types.html">플랜 종류</a></li>
+          <li><a href="/ko/medigap.html">메디갭 플랜</a></li>
+          <li><a href="/ko/policy-changes.html">정책 및 규정 변경</a></li>
+          <li><a href="/ko/glossary.html">용어집</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>회원용</h4>
+        <ul>
+          <li><a href="/ko/enrollment.html">가입 및 마감일</a></li>
+          <li><a href="/ko/costs.html">비용 이해하기</a></li>
+          <li><a href="/ko/choosing-coverage.html">보장 선택하기</a></li>
+          <li><a href="/ko/getting-help.html">비용 지원 받기</a></li>
+          <li><a href="/ko/turning-65.html">65세가 되면</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>전문가용</h4>
+        <ul>
+          <li><a href="/ko/operations.html">건강 플랜 운영</a></li>
+          <li><a href="/ko/providers.html">제공자 및 청구</a></li>
+          <li><a href="/ko/brokers.html">브로커 및 상담사</a></li>
+          <li><a href="/ko/navigators.html">케이스 매니저 및 내비게이터</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>디렉토리 및 도구</h4>
+        <ul>
+          <li><a href="/ko/state-medicaid.html">주 메디케이드</a></li>
+          <li><a href="/ko/ship-directory.html">SHIP(메디케어 도움)</a></li>
+          <li><a href="/ko/insurance-departments.html">보험국</a></li>
+          <li><a href="/ko/resources.html">모든 자료</a></li>
+          <li><a href="/ko/checklists.html">인쇄 가능한 체크리스트</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>공식 출처</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">독립적인 교육 자료입니다. CMS, 메디케어, 메디케이드, 주 정부 기관, 건강보험 회사 중 어느 곳과도 제휴 관계가 없습니다. 이 정보는 일반적인 내용이며 공식 프로그램 및 플랜 자료를 통해 확인해야 합니다. 이 사이트의 어떤 내용도 의료, 법률, 재정 자문이 아니며, 어떤 페이지도 특정 플랜을 추천하지 않습니다. 콘텐츠는 2026년 7월에 마지막으로 검토되었습니다.</p>
+    <nav class="legal-links">
+      <a href="/ko/privacy.html">개인정보 보호</a>
+      <a href="/ko/terms-of-use.html">이용 약관</a>
+      <a href="/ko/disclaimer.html">면책 조항</a>
+      <a href="/ko/accessibility.html">접근성</a>
+      <a href="/ko/editorial-standards.html">편집 기준</a>
+      <a href="/ko/support.html">후원</a>
+      <a href="/ko/site-map.html">사이트맵</a>
+    </nav>
+    <div class="note">
+      <p>영어 원문 번역본입니다.</p>
+      <p>
+        <a href="/insurers-dropping-plans-2027.html">영어 원문 보기</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">메디케어 공식 한국어 자료</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
