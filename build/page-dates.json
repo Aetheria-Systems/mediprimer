@@ -128,12 +128,16 @@
   "hash": "b8360427d074bebed96a49a0043b2afb"
  },
  "how-do-i.html": {
-  "date": "2026-10-09",
-  "hash": "9e59c67d6f9bf4a54f256336b70dadd1"
+  "date": "2026-10-15",
+  "hash": "7903ecdd54a2ec23cb206243bcf26518"
  },
  "hsa-and-medicare.html": {
   "date": "2026-10-09",
   "hash": "2f1bac2a82fff32abd9997335634b542"
+ },
+ "immigrant-eligibility-changes-medicare-medicaid.html": {
+  "date": "2026-10-15",
+  "hash": "06dd6bab7fe3fcb219b2284b87fc368b"
  },
  "index.html": {
   "date": "2026-10-09",
@@ -196,8 +200,16 @@
   "hash": "35f13a584513b880b9354aad63226819"
  },
  "medicaid-renewal.html": {
-  "date": "2026-10-09",
-  "hash": "e929f3b66446bed7bcbf3aadd778b001"
+  "date": "2026-10-15",
+  "hash": "e7eff00928a9b560949b09cec3d4c67e"
+ },
+ "medicaid-retroactive-coverage-2027.html": {
+  "date": "2026-10-15",
+  "hash": "69f0159ef7ea0f1127692847447c824c"
+ },
+ "medicaid-six-month-renewals-2027.html": {
+  "date": "2026-10-15",
+  "hash": "f580d78723bf8869cad8c4700682f94b"
  },
  "medicaid-spend-down-look-back.html": {
   "date": "2026-10-09",
@@ -212,8 +224,8 @@
   "hash": "e5740af2533ecee25ce8397aef09c467"
  },
  "medicaid-starting-out.html": {
-  "date": "2026-10-09",
-  "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58"
+  "date": "2026-10-15",
+  "hash": "b0d2c81be19c5370ee6faccb086f1774"
  },
  "medicaid-work-requirements.html": {
   "date": "2026-10-09",
@@ -236,8 +248,12 @@
   "hash": "443930e2b1b24cfc0bb1fcc442eee630"
  },
  "medicare-advantage-to-original-medicare.html": {
-  "date": "2026-10-09",
-  "hash": "b4ee4eb538c971a49211c8ef53d35b8d"
+  "date": "2026-10-15",
+  "hash": "8146e673e05b7878730d6d37e94bd64b"
+ },
+ "medicare-advantage-vs-medigap-underwriting.html": {
+  "date": "2026-10-15",
+  "hash": "ae35bc16b234d6e19d9c2d395fc10abc"
  },
  "medicare-advantage.html": {
   "date": "2026-10-09",
@@ -328,8 +344,8 @@
   "hash": "6b35dc7641bfe6e1ab8156409790806a"
  },
  "medicare-immigrants.html": {
-  "date": "2026-10-09",
-  "hash": "eebaf8751b1390ba811234d8a1344a01"
+  "date": "2026-10-15",
+  "hash": "d416ed00598fec1d575135c6f218d4f5"
  },
  "medicare-late-enrollment-penalties.html": {
   "date": "2026-10-09",
