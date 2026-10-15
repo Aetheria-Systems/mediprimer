@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>별점 평가(스타 등급) 산정 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer</title>
-<meta name="description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 구간 기준점, 위험 조정과의 상호작용, 품질 보너스 지급.">
+<title>스타 등급(별점 평가) 평가 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer</title>
+<meta name="description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 기준점(컷 포인트), 위험 조정과의 상호작용, 품질 보너스 지급을 설명합니다.">
 <link rel="stylesheet" href="/style.css">
 <!--P:analytics-->
 <script>
@@ -76,8 +76,8 @@ function gtag(){dataLayer.push(arguments);}
 <link rel="canonical" href="https://mediprimer.org/ko/star-ratings.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="MediPrimer">
-<meta property="og:title" content="별점 평가(스타 등급) 산정 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer">
-<meta property="og:description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 구간 기준점, 위험 조정과의 상호작용, 품질 보너스 지급.">
+<meta property="og:title" content="스타 등급(별점 평가) 평가 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer">
+<meta property="og:description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 기준점(컷 포인트), 위험 조정과의 상호작용, 품질 보너스 지급을 설명합니다.">
 <meta property="og:url" content="https://mediprimer.org/ko/star-ratings.html">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="https://mediprimer.org/og-image.png">
@@ -86,12 +86,12 @@ function gtag(){dataLayer.push(arguments);}
 <meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://mediprimer.org/og-image.png">
-<meta name="twitter:title" content="별점 평가(스타 등급) 산정 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer">
-<meta name="twitter:description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 구간 기준점, 위험 조정과의 상호작용, 품질 보너스 지급.">
+<meta name="twitter:title" content="스타 등급(별점 평가) 평가 방법: HEDIS, CAHPS 및 품질 보너스 지급 — MediPrimer">
+<meta name="twitter:description" content="전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 기준점(컷 포인트), 위험 조정과의 상호작용, 품질 보너스 지급을 설명합니다.">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "별점 평가(스타 등급) 산정 방법: HEDIS, CAHPS 및 품질 보너스 지급", "description": "전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 구간 기준점, 위험 조정과의 상호작용, 품질 보너스 지급.", "url": "https://mediprimer.org/ko/star-ratings.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-10-10", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "스타 등급(별점 평가) 평가 방법: HEDIS, CAHPS 및 품질 보너스 지급", "description": "전문가를 위한 기술 참고 자료: CMS가 스타 등급(별점 평가)을 산정하는 방법 — HEDIS, CAHPS, HOS 측정 항목 세트, 평가 영역, 기준점(컷 포인트), 위험 조정과의 상호작용, 품질 보너스 지급을 설명합니다.", "url": "https://mediprimer.org/ko/star-ratings.html", "inLanguage": "ko-US", "datePublished": "2026-07-12", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
 <link rel="alternate" hreflang="en" href="https://mediprimer.org/star-ratings.html">
 <link rel="alternate" hreflang="es" href="https://mediprimer.org/es/star-ratings.html">
 <link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/star-ratings.html">
@@ -99,7 +99,7 @@ function gtag(){dataLayer.push(arguments);}
 <link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/star-ratings.html">
 <link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/star-ratings.html">
 <link rel="alternate" hreflang="x-default" href="https://mediprimer.org/star-ratings.html">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "별점 평가(스타 등급) 산정 방법: HEDIS, CAHPS 및 품질 보너스 지급", "item": "https://mediprimer.org/ko/star-ratings.html"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "홈", "item": "https://mediprimer.org/ko/"}, {"@type": "ListItem", "position": 2, "name": "스타 등급(별점 평가) 평가 방법: HEDIS, CAHPS 및 품질 보너스 지급", "item": "https://mediprimer.org/ko/star-ratings.html"}]}</script>
 <!--/seo-->
 </head>
 <body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
@@ -181,24 +181,46 @@ function gtag(){dataLayer.push(arguments);}
 </header><section class="hero">
   <div class="wrap">
     <p class="kicker">전문가용</p>
-    <h1>스타 등급(별점 평가) 산정 방법: 측정 항목 세트와 품질 보너스 지급</h1>
-    <p class="lede">플랜 및 제공자 직원을 위한 기술 참고 자료입니다. 본인이나 가족을 위해 플랜을 고르는 중이라면 <a href="/ko/medicare-star-ratings.html">메디케어 스타 등급(별점 평가) 쉽게 알아보기</a>를 대신 읽어 보세요.</p>
-    <p>스타 측정 항목이 무엇인지, 이 항목들이 어떻게 모여 메디케어 어드밴티지(파트 C)와 메디케어 파트 D 플랜에 대한 CMS의 1~5점 척도 등급이 되는지, 그리고 등급이 보너스 지급, 리베이트, 가입자의 선택에 어떤 영향을 미치는지 설명합니다.</p>
+    <h1>스타 등급(별점 평가) 평가 방법: 측정 항목 세트와 품질 보너스 지급</h1>
+    <p class="lede">플랜 및 제공자 직원을 위한 기술 참고 자료입니다. 본인이나 가족을 위해 플랜을 고르는 중이라면 대신 <a href="/ko/medicare-star-ratings.html">메디케어 스타 등급(별점 평가) 쉽게 알아보기</a>를 읽어 보세요.</p>
   </div>
 </section>
 
 <main>
   <div class="wrap">
 
-    <p class="lead"><strong>전문가를 위한 CMS 메디케어 스타 등급(별점 평가):</strong> CMS가 메디케어 어드밴티지(파트 C) 및 메디케어 파트 D 계약마다 매년 발표하는 1~5점의 종합 품질 점수입니다. HEDIS, CAHPS, HOS 측정 항목 세트를 바탕으로 하며, 품질 보너스 지급과 Medicare.gov의 가입자용 플랜 비교의 근거가 됩니다.</p>
-<h2>CMS의 메디케어 스타 등급(별점 평가)이란 무엇인가요?</h2>
-    <p>메디케어 스타 등급(별점 평가)은 CMS가 메디케어 어드밴티지(MA) 및 메디케어 파트 D 처방약 플랜에 대해 매년 발표하는 종합 품질 지표입니다. 1~5점 척도의 스타 등급은 수십 개의 임상, 운영, 가입자 경험 측정 항목의 성과를 하나로 모아, 표준화된 단일 지표로 플랜을 비교할 수 있게 해 줍니다. 5점 등급 체계는 가입자에게 차이를 눈에 띄게 보여 주고, 플랜 선택 행동에 영향을 주며, 플랜이 <strong>품질 보너스 지급</strong>(리베이트) 대상이 되는지를 결정합니다.</p>
-    <p>CMS는 매년 가을 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 스타 등급(별점 평가)을 발표하며, 보통 다음 플랜 연도에 적용되는 등급입니다. 등급은 CMS의 Part C &amp; D Performance Data 페이지에 있는 상세 기술 문서와 공개 데이터 세트를 통해 업계 전문가도 확인할 수 있습니다.</p>
-    <p><em>이 글은 CMS가 메디케어 스타 등급(별점 평가)을 산정하는 방법에 대한 전문가용 참고 자료입니다. 플랜을 비교하는 가입자라면 쉬운 말로 쓴 안내서 <a href="/ko/medicare-star-ratings.html">메디케어 스타 등급(별점 평가): 별의 의미</a>를 참고하세요.</em></p>
+    <p class="lead"><strong>전문가를 위한 CMS 메디케어 스타 등급(별점 평가):</strong> CMS가 메디케어 어드밴티지 및 파트 D 계약별로 매년 발표하는 1~5점의 종합 품질 점수입니다. HEDIS, CAHPS, HOS 측정 항목 세트를 바탕으로 산정하며, 품질 보너스 지급과 Medicare.gov의 가입자용 플랜 비교의 기준이 됩니다.</p>
 
-    <h2>스타 측정 항목이란 무엇인가요?</h2>
-    <p><strong>스타 측정 항목</strong>은 계약의 전체 스타 등급(별점 평가)을 이루는 개별 품질 및 성과 지표입니다. 각 측정 항목은 CMS가 정한 기준인 <strong>구간 기준점</strong>에 따라 1~5점으로 평가되며, 이 기준점은 측정 기간의 성과를 바탕으로 매년 다시 계산됩니다. 이렇게 얻은 측정 항목별 별점에 가중치를 적용해 합산하면 영역별 등급과 전체 등급이 됩니다. 2026년 스타 등급(별점 평가)에서 MA-PD 계약은 최대 43개의 고유 측정 항목으로, 파트 D가 없는 MA 전용 계약은 최대 33개로, 단독 PDP 계약은 최대 12개로 평가됩니다. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
-    <p>측정 항목은 네 가지 표준화된 데이터 출처, 즉 HEDIS 임상 데이터, CAHPS 가입자 경험 설문조사, 건강 결과 설문조사(HOS), CMS 행정 및 불만 데이터에서 가져오며, 아래에 설명하는 다섯 개 영역으로 나뉩니다. 공식 측정 항목 목록, 가중치, 구간 기준점은 매년 <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">CMS.gov의 Part C &amp; D Performance Data 페이지</a>에 있는 Part C &amp; D Star Ratings Technical Notes에 발표됩니다. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --></p>
+    <h2>건강보험 플랜 성과 데이터를 찾을 수 있는 곳</h2>
+    <p>CMS는 메디케어 어드밴티지 및 파트 D 플랜의 공식 성과 데이터를 <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">파트 C 및 D 성과 데이터 페이지</a>에 게시합니다. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --> 매년 발표에는 다음 파일이 포함됩니다.</p>
+    <ul>
+      <li><strong>팩트 시트</strong>: 주요 결과와 평가 방법의 변경 사항 목록이 담겨 있습니다.</li>
+      <li><strong>스타 등급(별점 평가) 데이터 표</strong>(ZIP 파일): 계약 단위의 결과가 담겨 있습니다.</li>
+      <li><strong>기술 노트</strong>: 각 측정 항목의 점수 산정 및 가중치 방식을 설명합니다.</li>
+      <li><strong>측정 항목 목록</strong>과 <strong>범주 조정 지수 보충 자료</strong>.</li>
+      <li><strong>표시용 측정 항목</strong>: CMS가 참고용으로 보여 주지만 별점 계산에는 쓰이지 않는 항목입니다.</li>
+    </ul>
+    <p>2027년 파일은 2026년 10월 8일에 게시되었습니다. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --> 이전 연도 자료도 같은 페이지에 남아 있어 해마다 결과를 비교할 수 있습니다. 가입자는 <a href="https://www.medicare.gov/plan-compare/" rel="noopener">Medicare.gov의 플랜 찾기(Plan Finder)</a>에서 최종 별점만 볼 수 있습니다. 데이터 표는 측정 항목 단위의 세부 내용이 필요한 분석가를 위한 것입니다.</p>
+
+    <h2>2027년 스타 등급(별점 평가)에서 달라진 점</h2>
+    <p>CMS는 2027년 평가를 위해 다음과 같이 평가 방법을 변경했습니다. <!-- src: https://www.cms.gov/files/document/fact-sheet-2027-ma-part-d-star-ratings-october-8-2026.pdf --></p>
+    <ul>
+      <li>새로운 과정 측정 항목 두 가지: 아편유사제와 벤조디아제핀의 동시 사용, 그리고 다약제 복용: 고령자의 여러 항콜린성 약물 사용.</li>
+      <li>고령자 돌봄 – 기능 상태 평가 측정 항목이 사양 변경 후 다시 포함되었습니다.</li>
+      <li>사양을 새로 정한 대장암 검진 측정 항목이 기존 측정 항목을 대체했습니다.</li>
+      <li>신체 건강 개선 또는 유지, 정신 건강 개선 또는 유지 측정 항목의 가중치가 1에서 3으로 올라갔습니다.</li>
+      <li>고령자 돌봄 – 통증 평가, 퇴원 후 약물 조정 측정 항목은 폐지되었습니다.</li>
+      <li>약물 치료 관리 프로그램 완료율 측정 항목은 측정 연도 2025년과 2026년에는 표시 페이지로 옮겨졌습니다. 2029년 평가부터 다시 별점에 반영됩니다.</li>
+    </ul>
+
+    <h2>CMS의 메디케어 스타 등급(별점 평가)이란?</h2>
+    <p>메디케어 스타 등급(별점 평가)은 CMS가 메디케어 어드밴티지(MA) 및 파트 D 처방약 플랜에 대해 매년 발표하는 종합 품질 지표입니다. 1~5점 척도로 수십 가지 임상, 운영, 가입자 경험 측정 항목의 성과를 합산하므로, 하나의 표준화된 지표로 플랜을 비교할 수 있습니다. 5점 별점 체계는 가입자에게 눈에 띄는 차이를 보여 주고, 플랜 선택 행동에 영향을 주며, 플랜이 <strong>품질 보너스 지급</strong>(리베이트) 자격을 갖추는지를 결정합니다.</p>
+    <p>CMS는 매년 가을 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 스타 등급(별점 평가)을 발표하며, 보통 다음 플랜 연도부터 적용되는 등급입니다. 업계 전문가는 CMS의 파트 C 및 D 성과 데이터 페이지에 있는 상세 기술 문서와 공개 데이터 세트에서도 등급을 확인할 수 있습니다.</p>
+    <p><em>이 글은 CMS가 메디케어 별점을 산정하는 방법에 대한 전문가용 참고 자료입니다. 플랜을 비교하는 가입자라면 쉬운 말로 쓴 안내서인 <a href="/ko/medicare-star-ratings.html">메디케어 스타 등급(별점 평가): 별이 의미하는 것</a>을 보세요.</em></p>
+
+    <h2>별점 측정 항목이란?</h2>
+    <p><strong>별점 측정 항목</strong>은 계약의 종합 스타 등급(별점 평가)으로 합산되는 개별 품질 및 성과 지표입니다. 각 측정 항목은 <strong>기준점(컷 포인트)</strong>이라고 하는 CMS가 정한 임계값에 따라 1~5점으로 매겨집니다. 기준점은 측정 기간의 성과를 바탕으로 매년 다시 계산됩니다. 이후 측정 항목별 별점에 가중치를 적용하고 합쳐서 영역별 등급과 종합 등급을 산출합니다. 2027년 스타 등급(별점 평가)에서 MA-PD 계약은 최대 43개의 고유 측정 항목, 파트 D가 없는 MA 단독 계약은 최대 32개, 단독 PDP 계약은 최대 13개 항목으로 평가됩니다. <!-- src: https://www.cms.gov/files/document/fact-sheet-2027-ma-part-d-star-ratings-october-8-2026.pdf --></p>
+    <p>측정 항목은 네 가지 표준화된 데이터 출처, 즉 HEDIS 임상 데이터, CAHPS 가입자 경험 설문, 건강 결과 설문(HOS), CMS 행정 및 민원 데이터를 사용하며, 아래에서 자세히 설명하는 다섯 개 영역으로 나뉩니다. 공식 측정 항목 목록, 가중치, 기준점은 <a href="https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data" rel="noopener">CMS.gov의 파트 C 및 D 성과 데이터 페이지</a>에 있는 파트 C 및 D 스타 등급(별점 평가) 기술 노트에 매년 게시됩니다. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --></p>
 <!--newsletter-->
     <aside class="newsletter" aria-label="이메일로 MediPrimer 소식 받기">
       <h2>가입 변경 기간은 12월 7일에 끝납니다. 미리 알려드릴게요.</h2>
@@ -213,19 +235,19 @@ function gtag(){dataLayer.push(arguments);}
     <!--/newsletter-->
 
 
-    <h2>등급 척도와 계산</h2>
+    <h2>등급 척도와 계산 방법</h2>
     <p>1~5점 별점 척도는 다음과 같습니다.</p>
     <ul>
-      <li><strong>5점:</strong> 최상위 성과</li>
-      <li><strong>4~4.5점:</strong> 평균 이상</li>
-      <li><strong>3~3.5점:</strong> 평균</li>
-      <li><strong>2~2.5점:</strong> 평균 이하</li>
-      <li><strong>1점:</strong> 최하위 성과</li>
+      <li><strong>별 5개:</strong> 가장 우수한 성과 중 하나</li>
+      <li><strong>별 4~4.5개:</strong> 평균 이상</li>
+      <li><strong>별 3~3.5개:</strong> 평균</li>
+      <li><strong>별 2~2.5개:</strong> 평균 이하</li>
+      <li><strong>별 1개:</strong> 가장 낮은 성과 중 하나</li>
     </ul>
-    <p>각 플랜은 영역별 등급의 가중 평균인 전체 별점과 함께 품질 영역별 등급도 따로 받습니다. 등급은 전년도 데이터를 사용해 계산하며, 전국 플랜 단위 등급, 지역별 차이, 측정 항목별 성과 등 여러 수준으로 확인할 수 있습니다.</p>
+    <p>각 플랜은 종합 별점(영역별 등급의 가중 평균)과 품질 영역별 별도 등급을 받습니다. 등급은 전년도 데이터를 사용해 계산하며, 전국 플랜 단위 등급, 지역별 차이, 측정 항목별 성과 등 여러 수준에서 확인할 수 있습니다.</p>
 
     <h2>측정 영역</h2>
-    <p>스타 등급(별점 평가)은 플랜의 품질과 성과를 다섯 가지 핵심 영역으로 측정합니다.</p>
+    <p>스타 등급(별점 평가)은 플랜의 품질과 성과를 다섯 가지 핵심 영역에서 측정합니다.</p>
 
     <div class="table-scroll">
       <table>
@@ -244,78 +266,78 @@ function gtag(){dataLayer.push(arguments);}
           </tr>
           <tr>
             <td><strong>만성 질환 관리</strong></td>
-            <td>당뇨병, 고혈압, 관상동맥질환(CAD), 만성 폐쇄성 폐질환(COPD), 우울증의 질환 관리 품질, 약물 복용 준수, 적절한 검사/모니터링</td>
+            <td>당뇨병, 고혈압, 관상동맥 질환, 만성 폐쇄성 폐질환, 우울증의 질환 관리 품질, 복약 순응도, 적절한 검사/모니터링</td>
             <td>HEDIS, HOS, 행정 청구 데이터</td>
           </tr>
           <tr>
             <td><strong>가입자 경험 및 만족도</strong></td>
-            <td>플랜의 대응성, 고객 서비스, 진료 조정, 진료와 보장에 대한 전반적 만족도</td>
-            <td>CAHPS 설문조사(파트 C 및 파트 D)</td>
+            <td>플랜의 대응성, 고객 서비스, 진료 조율, 진료와 보장에 대한 전반적인 만족도</td>
+            <td>CAHPS 설문(파트 C 및 파트 D)</td>
           </tr>
           <tr>
-            <td><strong>불만 및 고객 서비스</strong></td>
-            <td>가입자 불만 비율, 이의신청 및 불만 제기 처리, 가입자 우려에 대한 플랜의 대응성</td>
-            <td>CMS 불만 데이터베이스, 이의신청 데이터</td>
+            <td><strong>민원 및 고객 서비스</strong></td>
+            <td>가입자 민원 비율, 이의신청 및 불만 제기 처리, 가입자 우려에 대한 플랜의 대응성</td>
+            <td>CMS 민원 데이터베이스, 이의신청 데이터</td>
           </tr>
           <tr>
-            <td><strong>약물 안전 및 가격 정확성</strong></td>
-            <td>약 가격의 정확성, 약제 목록(처방집)에 대한 가입자 만족도, 약물 부작용 모니터링, 약국 이용 편의성</td>
-            <td>파트 D 행정 데이터, CAHPS 파트 D 설문조사</td>
+            <td><strong>약물 안전 및 가격 정확도</strong></td>
+            <td>약품 가격 정확도, 약제 목록(처방집)에 대한 가입자 만족도, 약물 부작용 모니터링, 약국 이용 편의성</td>
+            <td>파트 D 행정 데이터, CAHPS 파트 D 설문</td>
           </tr>
         </tbody>
       </table>
     </div>
 
     <h2>기반이 되는 측정 항목 세트</h2>
-    <p>스타 등급(별점 평가)은 여러 표준화된 측정 항목 세트로 구성되며, 각각 플랜 성과의 서로 다른 측면을 포착합니다.</p>
+    <p>스타 등급(별점 평가)은 여러 표준화된 측정 항목 세트로 구성되며, 각 세트는 플랜 성과의 서로 다른 측면을 포착합니다.</p>
 
     <h3>HEDIS (건강관리 효과성 데이터 및 정보 세트)</h3>
-    <p>HEDIS는 미국 품질보증위원회(NCQA)가 개발한 근거 기반 임상 품질 측정 항목 세트입니다. HEDIS 측정 항목은 행정 청구 데이터를 바탕으로 하며, 예방 서비스(암 검진, 예방접종), 만성 질환 관리(당뇨병 조절, 혈압 관리), 약물 사용에 대한 비율을 포함합니다. 플랜은 HEDIS 데이터를 매년 보고하며, 이 항목들은 "건강 유지"와 "만성 질환 관리" 영역의 스타 계산에서 큰 비중을 차지합니다.</p>
+    <p>HEDIS는 미국 질 관리 위원회(NCQA)가 개발한 근거 기반 임상 품질 측정 항목 모음입니다. HEDIS 측정 항목은 행정 청구 데이터를 바탕으로 하며, 예방 서비스(암 검진, 예방접종), 만성 질환 관리(당뇨병 조절, 혈압 관리), 약물 사용 비율을 포함합니다. 플랜은 HEDIS 데이터를 매년 보고하며, 이 측정 항목들은 "건강 유지"와 "만성 질환 관리" 영역의 별점 계산에서 큰 비중을 차지합니다.</p>
 
     <h3>CAHPS (의료 제공자 및 시스템에 대한 소비자 평가)</h3>
-    <p>CAHPS는 제3자가 실시하는 플랜 가입자 대상 표준화 설문조사입니다. 파트 C CAHPS와 파트 D CAHPS는 플랜의 고객 서비스, 진료 받기의 용이성, 제공자의 품질, 전반적 만족도에 대한 가입자의 경험을 묻습니다. 결과는 스타 등급(별점 평가)의 "가입자 경험"과 "약물 안전" 영역에 곧바로 반영됩니다.</p>
+    <p>CAHPS는 제3자가 실시하는 플랜 가입자 대상 표준화 설문입니다. 파트 C CAHPS와 파트 D CAHPS는 플랜의 고객 서비스, 진료 받기의 편의성, 제공자의 품질, 전반적인 만족도에 대한 가입자 경험을 묻습니다. 결과는 스타 등급(별점 평가)의 "가입자 경험"과 "약물 안전" 영역에 직접 반영됩니다.</p>
 
-    <h3>HOS (건강 결과 설문조사)</h3>
-    <p>HOS는 메디케어 어드밴티지(파트 C) 가입자에게 신체 및 정신 건강 결과, 기능 상태, 진료 조정 경험을 매년 묻습니다. 주요 HOS 측정 항목에는 투약 조정, 증상 모니터링, 신체/정신 건강 상태 변화가 있으며, "만성 질환 관리" 영역에 반영됩니다.</p>
+    <h3>HOS (건강 결과 설문)</h3>
+    <p>HOS는 메디케어 어드밴티지 가입자를 대상으로 신체 및 정신 건강 결과, 기능 상태, 진료 조율 경험에 관해 매년 설문합니다. 주요 HOS 측정 항목에는 약물 조정, 증상 모니터링, 신체/정신 건강 상태 변화가 있으며, "만성 질환 관리" 영역에 기여합니다.</p>
 
-    <h3>CMS 행정 데이터 및 불만</h3>
-    <p>CMS는 플랜이 제출한 자료와 CMS 감독 시스템에서 불만 비율, 이의신청/불만 제기 데이터, 가입자 이의신청 결과를 직접 수집합니다. 이 자료는 "불만 및 고객 서비스" 영역에 반영됩니다.</p>
+    <h3>CMS 행정 데이터 및 민원</h3>
+    <p>CMS는 민원 비율, 이의신청/불만 제기 데이터, 가입자 이의신청 결과를 플랜의 제출 자료와 CMS 감독 시스템에서 직접 수집합니다. 이 자료는 "민원 및 고객 서비스" 영역에 반영됩니다.</p>
 
-    <p>CMS는 매년 측정 항목 세트를 조정하거나, 영역별 가중치를 갱신하거나, 계산 방법을 다듬을 수 있습니다. 스타 등급(별점 평가) 갱신에 관한 CMS 발표는 <a href="/ko/policy-changes.html">정책 변경</a>에서 보시고, 최신 기술 명세는 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>에서 확인하세요.</p>
+    <p>CMS는 매년 측정 항목 세트를 조정하거나, 영역별 가중치를 갱신하거나, 계산 방법을 다듬을 수 있습니다. 스타 등급(별점 평가) 변경에 대한 CMS 발표는 <a href="/ko/policy-changes.html">정책 변경</a>을 참고하고, 현재의 기술 사양은 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>에서 확인하세요.</p>
 
     <h2>품질 보너스 지급</h2>
-    <p>4점 이상을 받은 메디케어 어드밴티지(파트 C) 기관은 <strong>품질 보너스 지급</strong> 대상이 될 수 있으며, 이는 MA 시장의 핵심적인 재정적 인센티브입니다. (MA 플랜에 적용되며, 단독 메디케어 파트 D 플랜은 QBP 대상이 아닙니다.) CMS는 플랜의 카운티별 요율을 계산하는 데 쓰는 해당 비율에 표준 5퍼센트포인트 인상분을 더합니다. 그 결과 플랜에 돌아가는 리베이트가 늘어나고, 이는 부가 혜택, 낮은 보험료, 줄어든 비용 분담의 형태로 (간접적으로) 가입자에게도 돌아갑니다.</p>
+    <p>별 4개 이상을 받은 메디케어 어드밴티지 기관은 <strong>품질 보너스 지급</strong> 자격이 있으며, 이는 MA 시장의 핵심 재정적 유인책입니다. (이는 MA 플랜에 적용되며, 단독 파트 D 플랜은 QBP 대상이 아닙니다.) CMS는 플랜의 카운티별 지급률을 계산하는 데 쓰이는 해당 비율에 표준 5퍼센트포인트 인상을 더합니다. 그 결과 플랜에 돌아오는 리베이트가 늘고, 이는 부가 혜택, 낮은 보험료, 줄어든 비용 분담의 형태로 (간접적으로) 가입자에게도 돌아갑니다.</p>
     <ul>
-      <li><strong>4점, 4.5점, 5점 플랜</strong>은 모두 해당 비율에 같은 표준 5퍼센트포인트 인상분을 받습니다</li>
-      <li><strong>5점 플랜</strong>은 가입자에게 특별 가입 기간도 열어 줍니다(아래 참조)</li>
+      <li><strong>별 4개, 4.5개, 5개 플랜</strong>은 모두 해당 비율에 같은 표준 5퍼센트포인트 인상을 받습니다.</li>
+      <li><strong>별 5개 플랜</strong>은 1회에 한한 특별 가입 기간을 통해서도 가입할 수 있습니다(아래 참조).</li>
     </ul>
-    <p>실제 리베이트 금액은 (이제 높아진) 카운티 요율 대비 플랜의 실제 절감액에 따라 달라지므로, 별점이 같은 두 플랜도 리베이트가 다를 수 있습니다. 이러한 인센티브 구조는 플랜이 품질 개선에 투자하도록 이끌며, 스타 등급(별점 평가)을 플랜 전략과 경쟁적 위치 선정의 주요 요소로 만듭니다. 자세한 리베이트 계산은 CMS 지침에 발표되어 있으며, 운영상의 의미는 <a href="/ko/operations.html">건강 플랜 운영</a>을 참고하세요.</p>
+    <p>최종 리베이트 금액은 (이제 더 높아진) 카운티별 지급률 대비 플랜의 실제 절감액에 따라 달라지므로, 별점이 같은 두 플랜도 리베이트가 다를 수 있습니다. 이러한 유인 구조는 플랜이 품질 개선에 투자하도록 이끌고, 스타 등급(별점 평가)을 플랜 전략과 경쟁 위치 설정의 주요 요소로 만듭니다. 자세한 리베이트 계산은 CMS 지침에 게시되어 있으며, 운영상의 영향은 <a href="/ko/operations.html">건강보험 플랜 운영</a>을 참고하세요.</p>
 
-    <h2>특별 가입 기간 (5점 SEP)</h2>
-    <p>5점을 받은 메디케어 어드밴티지(파트 C) 플랜의 가입자는 12월 8일부터 다음 해 11월 30일 사이에 <strong>한 번</strong> 사용할 수 있는 특별 가입 기간을 얻어, 일반 연례 가입 기간 밖에도 5점 플랜으로 바꿀 수 있습니다. 이는 플랜이 받는 혜택이 아니라 수혜자의 권리이며, 가입자의 가입 결정을 좌우하는 핵심 요인입니다. 가입자용 전체 안내는 <a href="/ko/medicare-five-star-special-enrollment-period.html">5점 특별 가입 기간: 연례 가입 기간 밖에 최상위 등급 플랜으로 바꾸기</a>를, 플랜 변경 전반은 <a href="/ko/enrollment.html">가입 및 마감일</a>과 <a href="/ko/choosing-coverage.html">보장 선택</a>을 참고하세요.</p>
+    <h2>특별 가입 기간 (별 5개 SEP)</h2>
+    <p>메디케어 가입자는 12월 8일부터 다음 해 11월 30일 사이에 <strong>한 번</strong> 사용할 수 있는 특별 가입 기간을 받습니다. 이를 이용하면 정기 연례 가입 기간이 아니더라도 거주 지역에서 이용할 수 있는 별 5개의 메디케어 어드밴티지, 비용(Cost) 또는 파트 D 플랜으로 바꿀 수 있습니다. 이것은 플랜이 받는 혜택이 아니라 수혜자의 권리이며, 별 5개 플랜으로의 가입을 늘릴 수 있습니다. 가입자 관점의 전체 안내는 <a href="/ko/medicare-five-star-special-enrollment-period.html">별 5개 특별 가입 기간: AEP 외 기간에 최고 등급 플랜으로 바꾸기</a>를, 플랜 변경 전반에 관해서는 <a href="/ko/enrollment.html">가입 및 마감일</a>과 <a href="/ko/choosing-coverage.html">보장 선택하기</a>를 참고하세요.</p>
 
     <h2>위험 조정과 스타 등급(별점 평가)의 상호작용</h2>
-    <p>스타 등급(별점 평가)은 조정되지 않은 원시 비율로 발표됩니다. 다만 품질 측정 항목의 성과는 플랜의 위험 프로필이라는 더 넓은 맥락에서 평가됩니다. 더 아픈 사람들을 담당하는 플랜은 원시 HEDIS 비율이 낮을 수 있어도, 그 위험 수준에 비하면 여전히 뛰어난 품질 관리를 보여 줄 수 있습니다. 위험 조정, 환자 구성(케이스 믹스), 스타 등급(별점 평가) 해석 사이의 관계를 이해하는 것은 정확한 비교 분석에 필수적입니다. 자세한 내용은 <a href="/ko/risk-adjustment.html">위험 조정</a>을 참고하세요.</p>
+    <p>서로 다른 집단을 담당하는 플랜은 같은 측정 항목에서도 달라지는 조건에 놓일 수 있습니다. CMS는 매년 등급과 함께 범주 조정 지수 측정 보충 자료를 게시합니다. 매우 다른 가입자를 담당하는 플랜을 비교할 때는 기술 노트와 함께 읽어 보세요. <!-- src: https://www.cms.gov/medicare/health-drug-plans/part-c-d-performance-data --> 위험 점수가 지급에서 어떻게 작동하는지는 <a href="/ko/risk-adjustment.html">위험 조정</a>을 참고하세요.</p>
 
-    <h2>플랜 노출과 가입자의 의사 결정</h2>
-    <p>스타 등급(별점 평가)은 가입 기간 중 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 눈에 띄게 표시되며, 대화형 도구로 가입자가 등급별로 플랜을 걸러 내고 비교할 수 있습니다. 5점 표시는 가입자를 끌어들이는 큰 요인입니다. 5점 플랜은 가입자가 더 많이 늘어나는 경우가 많고, 1~2점 플랜은 가입자 이탈로 어려움을 겪을 수 있습니다. 이러한 노출 덕분에 스타 등급(별점 평가)은 플랜의 시장 위치에 가장 큰 영향을 미치는 품질 지표 중 하나입니다.</p>
+    <h2>플랜 노출도와 가입자의 의사 결정</h2>
+    <p>스타 등급(별점 평가)은 가입 기간 동안 <a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a>에 눈에 띄게 표시되며, 가입자가 등급별로 플랜을 걸러 내고 비교할 수 있는 대화형 도구도 있습니다. 별 5개 표시는 가입자에게 큰 매력으로 작용합니다. 별 5개 플랜은 가입이 더 늘어나는 경우가 많고, 별 1~2개 플랜은 가입자 이탈에 어려움을 겪을 수 있습니다. 이러한 노출도 때문에 스타 등급(별점 평가)은 플랜의 시장 위치에 가장 큰 영향을 미치는 품질 지표 중 하나가 됩니다.</p>
 
-    <h2>계속되는 변경과 방법론 갱신</h2>
-    <p>CMS는 스타 등급(별점 평가) 방법론을 주기적으로 갱신하고, 새 측정 항목을 추가하며, 영역별 가중치를 조정하고, 데이터 수집 또는 제출 요건을 바꿉니다. 예를 들어 새로운 임상 근거, 보장 혜택의 변화, 수혜자 옹호 단체와 업계 이해관계자의 의견에 따라 측정 항목이 추가되거나 다듬어졌습니다.</p>
-    <p>2026년 스타 등급(별점 평가)은 한 주기에 얼마나 많은 것이 바뀔 수 있는지 보여 줍니다. 환자 경험/불만 및 접근성 측정 항목의 가중치는 4에서 2로 낮아졌고, 새로운 '당뇨병 환자 신장 건강 평가' 측정 항목이 추가되었으며, 두 가지 건강 결과 측정 항목(신체 건강 개선 또는 유지, 정신 건강 개선 또는 유지)은 명세 변경 후 가중치 1로 돌아왔고 2027년 스타 등급(별점 평가)부터는 3으로 올라갑니다. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --></p>
-    <p>전문가는 연례 스타 등급(별점 평가) 갱신, 기술 명세, 측정 항목 정의를 위해 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>와 <a href="/ko/policy-changes.html">정책 변경</a>을 확인해야 합니다. 변경 사항은 보통 10월 1일에 시행되며, 플랜이 보고와 운영을 조정할 시간을 갖도록 몇 달 전에 공지됩니다.</p>
+    <h2>지속적인 변경과 방법론 갱신</h2>
+    <p>CMS는 스타 등급(별점 평가)의 평가 방법을 주기적으로 갱신하고, 새 측정 항목을 추가하고, 영역별 가중치를 조정하며, 데이터 수집이나 제출 요건을 바꿉니다. 예를 들어 새로운 임상 근거, 보장 혜택의 변화, 수혜자 권익 단체와 업계 이해관계자의 의견에 따라 측정 항목이 추가되거나 다듬어진 적이 있습니다.</p>
+    <p>2026년 스타 등급(별점 평가)은 한 주기에 얼마나 많은 것이 달라질 수 있는지를 보여 줍니다. 환자 경험/민원 및 접근성 측정 항목의 가중치는 4에서 2로 낮아졌고, 당뇨병 환자 신장 건강 평가라는 새 측정 항목이 추가되었으며, 두 가지 건강 결과 측정 항목(신체 건강 개선 또는 유지, 정신 건강 개선 또는 유지)이 사양 변경 후 가중치 1로 다시 포함되었고, 2027년 스타 등급(별점 평가)부터는 3으로 올라갑니다. <!-- src: https://www.cms.gov/files/document/2026-star-ratings-fact-sheet.pdf --> 3으로의 상향은 2026년 10월 8일에 발표된 2027년 등급부터 적용되었습니다. <!-- src: https://www.cms.gov/files/document/fact-sheet-2027-ma-part-d-star-ratings-october-8-2026.pdf --></p>
+    <p>전문가는 연례 스타 등급(별점 평가) 갱신, 기술 사양, 측정 항목 정의를 확인하기 위해 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>와 <a href="/ko/policy-changes.html">정책 변경</a>을 계속 살펴보아야 합니다. 변경 사항은 보통 10월 1일에 시행되며, 플랜이 보고와 운영을 조정할 시간을 갖도록 몇 달 전에 미리 공지됩니다.</p>
 
     <h2>전문가용 자료</h2>
-    <p>스타 등급(별점 평가)에 관한 상세 문서, 데이터 파일, 기술 지침은 다음을 참고하세요.</p>
+    <p>스타 등급(별점 평가)의 상세 문서, 데이터 파일, 기술 지침은 다음을 참고하세요.</p>
     <ul>
-      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 기술 명세, 측정 항목 정의, 계산 방법</li>
+      <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a> — 기술 사양, 측정 항목 정의, 계산 방법</li>
       <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a> — 공개 스타 등급(별점 평가), 플랜 비교 도구, 가입자 자료</li>
-      <li>NCQA — HEDIS 측정 항목 정의 및 갱신</li>
-      <li>플랜 제출 시스템 — 상세 성과 데이터, 측정 항목별 결과, 추이 분석</li>
+      <li>NCQA — HEDIS 측정 항목 정의 및 갱신 내용</li>
+      <li>플랜 제출 시스템 — 상세 성과 데이터, 측정 항목별 결과, 추세 분석</li>
     </ul>
 
     <div class="note">
-      <strong>출처에서 확인하세요:</strong> 스타 등급(별점 평가)의 방법론, 가중치, 측정 항목은 매년 바뀝니다. 등급 계산, 구체적인 측정 항목 정의, 보고 요건에 대한 확정적인 지침은 항상 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>의 최신 연도 CMS 기술 문서와 Medicare.gov의 공식 자료를 참고하세요.
+      <strong>출처에서 확인하세요:</strong> 스타 등급(별점 평가)의 평가 방법, 가중치, 측정 항목은 매년 바뀝니다. 등급 계산, 특정 측정 항목 정의, 보고 요건에 대한 확정된 지침은 항상 <a href="https://www.cms.gov/" rel="noopener">CMS.gov</a>의 해당 연도 CMS 기술 문서와 Medicare.gov의 공식 자료를 참고하세요.
     </div>
 
   </div>
