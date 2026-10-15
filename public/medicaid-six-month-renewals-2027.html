@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicaid Renewals Every 6 Months in 2027: What to Do</title>
+<meta name="description" content="Starting in 2027, expansion adults renew Medicaid every 6 months. Learn who is affected, when you switch, and how to stay covered.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicaid Renewals Every 6 Months in 2027: What to Do">
+<meta property="og:description" content="Starting in 2027, expansion adults renew Medicaid every 6 months. Learn who is affected, when you switch, and how to stay covered.">
+<meta property="og:url" content="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicaid Renewals Every 6 Months in 2027: What to Do">
+<meta name="twitter:description" content="Starting in 2027, expansion adults renew Medicaid every 6 months. Learn who is affected, when you switch, and how to stay covered.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do I have to renew Medicaid every 6 months?", "acceptedAnswer": {"@type": "Answer", "text": "If you are an expansion adult, almost always yes, starting with renewals scheduled on or after January 1, 2027. Most other groups keep the 12-month schedule."}}, {"@type": "Question", "name": "Will I lose coverage because of this change?", "acceptedAnswer": {"@type": "Answer", "text": "Not if you still qualify and you respond to your state's notices. The main risk is a missed notice or late form."}}, {"@type": "Question", "name": "When is my next renewal?", "acceptedAnswer": {"@type": "Answer", "text": "Your state's notice has the date. If you are not sure, contact your state Medicaid agency."}}, {"@type": "Question", "name": "Does this affect Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "No. Medicare has its own rules. If you have both Medicare and Medicaid, see the dual-eligible guide, since your Medicaid renewal still follows your state's schedule."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicaid Renewals Every 6 Months in 2027: What to Do", "description": "Starting in 2027, expansion adults renew Medicaid every 6 months. Learn who is affected, when you switch, and how to stay covered.", "url": "https://mediprimer.org/medicaid-six-month-renewals-2027.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-15", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicaid Renewals Every 6 Months in 2027: What to Do", "item": "https://mediprimer.org/medicaid-six-month-renewals-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Medicaid Renewals Every 6 Months Starting in 2027</h1>
+    <p>Expansion adults will renew twice a year instead of once. Here is who is affected, when it starts, and how to stay covered.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> If you have Medicaid as an adult through the expansion (the "adult group"), your state must, in almost all cases, check your eligibility <strong>every 6 months</strong> instead of every 12. This starts with renewals scheduled on or after <strong>January 1, 2027</strong>. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> You still keep your coverage if you still qualify. The risk is missing a notice. With two renewals a year, there are twice as many chances to miss one.</p>
+
+    <h2>Who renews every 6 months</h2>
+    <p>The rule covers almost everyone in the Medicaid adult group. That is, roughly, adults who qualify by income alone. It also covers people in this group who are covered through a state waiver that gives full coverage to the whole group. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <p>It does <em>not</em> change the schedule for: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ul>
+      <li>Certain American Indians and Alaska Natives in the adult group.</li>
+      <li>People in other income-based groups, such as children.</li>
+      <li>People in groups based on age, disability, or other factors that do not use income rules alone.</li>
+    </ul>
+    <p>These people keep renewing at least every 12 months. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+
+    <h2>When you switch to the 6-month schedule</h2>
+    <p><strong>If you apply and your coverage starts on or after January 1, 2027,</strong> your state must give you a 6-month eligibility period. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <p><strong>If you already have Medicaid on January 1, 2027,</strong> your state picks one of two ways to move you. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ul>
+      <li><strong>Option 1:</strong> The state moves your renewal earlier, to get as close to a 6-month period as it can. It cannot move it earlier than January 1, 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></li>
+      <li><strong>Option 2:</strong> The state keeps your current renewal date. At that first renewal in 2027, you get a 6-month period. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></li>
+    </ul>
+    <p>Which option your state uses decides when you first see the new schedule. Check your state's notices. Whatever the schedule, your state must also re-check you between renewals if something changes that could affect eligibility. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. After that, a short email only when something changes, never more than one a week. No ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>An example from CMS</h2>
+    <p>CMS gives this sample. A person applies on June 5, 2027. Their state starts coverage on the first day of the month of application. Their eligibility period runs from June 1 through November 30, 2027. The state starts the renewal about 90 days before the period ends. In CMS's example, that is September 1. If the person still qualifies, the next 6-month period runs December 1, 2027 through May 31, 2028. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+
+    <h2>What the renewal process looks like</h2>
+    <p>The rule changes how often, not how. The steps stay the same: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ol class="steps">
+      <li><strong>The state checks its data first.</strong> It tries to renew you without contacting you, using reliable data it already has.</li>
+      <li><strong>If it cannot, it sends you a pre-filled form.</strong> You get at least 30 days to return the form and any papers it asks for.</li>
+      <li><strong>Before ending your coverage,</strong> the state must look at all ways you might qualify. It must give at least 10 days' notice and tell you about your right to a fair hearing.</li>
+    </ol>
+
+    <h2>How to stay covered</h2>
+    <ul>
+      <li><strong>Keep your address, phone, and email current</strong> with your <a href="/state-medicaid.html">state Medicaid agency</a>.</li>
+      <li><strong>Open every letter from Medicaid.</strong> Write down the due date.</li>
+      <li><strong>Return the form on time,</strong> even if you think nothing changed.</li>
+      <li><strong>Ask for help early.</strong> Your <a href="/ship-directory.html">SHIP</a> or a local navigator can help.</li>
+      <li><strong>If coverage ends, act fast.</strong> See <a href="/lost-medicaid-what-now.html">Lost Medicaid: What Now?</a></li>
+    </ul>
+
+    <h2>Work requirements add to the paperwork</h2>
+    <p>Many people on 6-month renewals must also show "community engagement" (work or similar activity) starting January 1, 2027. Your state will check this at each renewal. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> But almost everyone in the adult group renews every 6 months, whether or not the work rule applies to them. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> See <a href="/medicaid-work-requirements.html">Medicaid Work Requirements</a> for who is exempt. Another change from the same law shortens <a href="/medicaid-retroactive-coverage-2027.html">retroactive coverage</a>. For how renewal works now, read <a href="/medicaid-renewal.html">Medicaid Renewal</a>.</p>
+
+    <h2>Common Questions</h2>
+
+    <details class="qa">
+      <summary>Do I have to renew Medicaid every 6 months?</summary>
+      <div>
+        <p>If you are an expansion adult, almost always yes, starting with renewals scheduled on or after January 1, 2027. Most other groups keep the 12-month schedule. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Will I lose coverage because of this change?</summary>
+      <div>
+        <p>Not if you still qualify and you respond to your state's notices. The main risk is a missed notice or late form.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>When is my next renewal?</summary>
+      <div>
+        <p>Your state's notice has the date. If you are not sure, contact your state Medicaid agency.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does this affect Medicare?</summary>
+      <div>
+        <p>No. Medicare has its own rules. If you have both Medicare and Medicaid, see the dual-eligible guide, since your Medicaid renewal still follows your state's schedule.</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>Verify at the source.</strong> This summary follows <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf" rel="noopener">CMS State Medicaid Director Letter #26-001 (March 6, 2026)</a>. States choose some details, so ask your <a href="/state-medicaid.html">state Medicaid agency</a>. You can also read our <a href="/policy-changes.html">Policy &amp; Rule Changes</a> page.
+    </div>
+
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
