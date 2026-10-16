@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>移民資格變更：Medicaid 與 Medicare</title>
+<meta name="description" content="2025年的一項法律，自2026年10月1日起限制聯邦對許多移民的 Medicaid 和 CHIP 經費，並自約2027年1月起限制 Medicare 資格。了解哪些人會受影響。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="移民資格變更：Medicaid 與 Medicare">
+<meta property="og:description" content="2025年的一項法律，自2026年10月1日起限制聯邦對許多移民的 Medicaid 和 CHIP 經費，並自約2027年1月起限制 Medicare 資格。了解哪些人會受影響。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="移民資格變更：Medicaid 與 Medicare">
+<meta name="twitter:description" content="2025年的一項法律，自2026年10月1日起限制聯邦對許多移民的 Medicaid 和 CHIP 經費，並自約2027年1月起限制 Medicare 資格。了解哪些人會受影響。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "難民和庇護獲准者還能獲得 Medicaid 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "從2026年10月1日起，除非難民和庇護獲准者同時具有名單上的身分（例如綠卡），否則聯邦不會為他們提供完整 Medicaid 的經費。 在採用 CHIPRA 214 選項的州，兒童和孕婦仍可能符合資格。 緊急 Medicaid 仍然保留。"}}, {"@type": "Question", "name": "綠卡持有人會失去 Medicaid 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。合法永久居民仍在名單上。通常的5年等待期仍適用於他們當中的許多人。"}}, {"@type": "Question", "name": "緊急照護仍然有承保嗎？", "acceptedAnswer": {"@type": "Answer", "text": "有。聯邦對治療緊急醫療狀況的照護的經費仍會繼續。"}}, {"@type": "Question", "name": "Medicare 的變更何時開始？", "acceptedAnswer": {"@type": "Answer", "text": "該法律的 Medicare 規定從2025年7月4日起18個月後開始，也就是約2027年1月。 CMS 計劃提供更多指引。"}}, {"@type": "Question", "name": "申請福利會影響我的移民案件嗎？", "acceptedAnswer": {"@type": "Answer", "text": "這方面的規定與本頁無關，是另外的規定。在您決定之前，請先洽詢移民法律援助團體。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "移民資格變更：Medicaid 與 Medicare", "description": "2025年的一項法律，自2026年10月1日起限制聯邦對許多移民的 Medicaid 和 CHIP 經費，並自約2027年1月起限制 Medicare 資格。了解哪些人會受影響。", "url": "https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "移民資格變更：Medicaid 與 Medicare", "item": "https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/immigrant-eligibility-changes-medicare-medicaid.html" lang="en">English</a>
+    <a href="/es/immigrant-eligibility-changes-medicare-medicaid.html" lang="es">Español</a>
+    <a href="/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照護者</p>
+    <h1>Medicaid 與 Medicare 的移民資格變更</h1>
+    <p>2025年的一項聯邦法律，依移民身分限制聯邦對 Medicaid 和 CHIP 的經費，以及 Medicare 的資格。以下是官方資料的說明。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>先說重點。</strong>從<strong>2026年10月1日</strong>起，聯邦對 Medicaid 和 CHIP 完整福利的經費，僅限於美國公民和國民、綠卡持有人（合法永久居民）、古巴和海地入境者，以及自由聯合協定（COFA）下的人士。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 這表示許多難民、庇護獲准者及其他人將失去聯邦 Medicaid 經費。聯邦對緊急 Medicaid 的經費仍會繼續。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 同一項法律也將非公民的 <strong>Medicare</strong> 資格限制在相同的群體，自該法律於2025年7月4日成為法律起算18個月後開始。那大約是2027年1月。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <div class="note">
+      <strong>本頁是什麼。</strong>這是對聯邦指引的白話摘要，不是法律意見。各州規定不同，美國醫療保險和醫療補助服務中心（CMS）表示還會有更多指引。如果這對您有影響，請洽詢您所在州的 Medicaid 機關、法律援助團體，或您的 <a href="/zh-Hant/ship-directory.html">SHIP</a>。
+    </div>
+
+    <h2>Medicaid 和 CHIP：2026年10月1日起有什麼變更</h2>
+    <p>公法119-21第71109條限制聯邦對 Medicaid 和 CHIP 的經費（稱為「聯邦財務參與」）。從2026年10月1日起，聯邦政府只會為以下群體支付其應負擔的部分：<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <ul>
+      <li>美國公民和美國國民</li>
+      <li>合法永久居民（綠卡持有人）</li>
+      <li>古巴和海地入境者</li>
+      <li>依自由聯合協定居住在美國的人士（COFA 移民）</li>
+    </ul>
+    <p>在此之前，許多其他「合資格非公民」可以獲得完整的 Medicaid 或 CHIP。這包括難民和庇護獲准者。他們原本就不受5年等待期的限制。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> CMS 表示，除非庇護獲准者、難民、假釋者和人口販運受害者同時具有上述名單中的身分或類別，否則聯邦經費將不再提供他們完整福利。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <h2>哪些沒有改變</h2>
+    <p>經費限制不適用於：<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+    <ul>
+      <li><strong>緊急 Medicaid。</strong>治療緊急醫療狀況的照護。請見<a href="/zh-Hant/emergency-medicaid.html">緊急 Medicaid</a>。</li>
+      <li>在選擇該選項的州，<strong>合法居留的兒童和孕婦</strong>（「CHIPRA 214 選項」）。<!-- src: https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens --></li>
+      <li>各州辦理的<strong>某些 CHIP 健康服務計畫</strong>。</li>
+    </ul>
+    <p>這項法律沒有改變許多綠卡持有人仍須面對的5年等待期。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 它也不會禁止州政府使用自己的經費來承保某人。CMS 不會要求各州這麼做。CMS 還表示，州政府僅以州經費支付的承保，不算作 Medicaid。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>目前已有 Medicaid 的人會怎麼樣</h2>
+    <p>新的限制不只適用於新申請人，也適用於2026年10月1日時已經註冊的人。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 在終止承保之前，州政府必須提前通知，並給予公平聽證的權利。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 州政府還必須檢查您是否能以其他方式符合資格。例如，難民兒童或孕婦仍可能依該州的 CHIPRA 214 選項符合資格。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <p>CMS 所說的「完整 Medicaid 和 CHIP 福利」也包括部分福利，例如醫療保險儲蓄計劃（MSP）。但不包括緊急 Medicaid。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 如果您從醫療保險儲蓄計劃（MSP）獲得協助，請向您所在的州詢問這對您有何影響。請見<a href="/zh-Hant/medicare-savings-programs.html">醫療保險儲蓄計劃（MSP）</a>。</p>
+
+    <h2>Medicare：約2027年1月起有什麼變更</h2>
+    <p>同一項法律的第71201條為 Medicare 增加了一項新規定。它將非公民的 Medicare 資格限制在可獲得聯邦資助的完整 Medicaid 的相同群體：綠卡持有人、古巴和海地入境者，以及 COFA 移民。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 它從該法律簽署日期後18個月開始。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 該法律於2025年7月4日簽署，所以就是2027年1月。</p>
+    <p>CMS 表示，會在之後的指引中提供這部分的更多資訊。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 在那之前，完整的細節尚未確定。關於 Medicare 目前如何適用於移民，包括工作紀錄和5年規定，請閱讀<a href="/zh-Hant/medicare-immigrants.html">移民與綠卡持有人的 Medicare</a>。</p>
+
+    <h2>其他可能改變的承保</h2>
+    <ul>
+      <li><strong>醫療保險市場稅收抵免。</strong>CMS 指出，該法律也將保費稅收抵免限制在屬於「合資格外籍人士」的非公民（綠卡持有人、古巴和海地入境者，以及 COFA 移民）。這從2027年開始。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 請見<a href="/zh-Hant/mixed-status-family-marketplace.html">混合身分家庭的醫療保險市場承保</a>。</li>
+      <li><strong>年長移民。</strong>有些州以自己的經費承保年長移民。請見<a href="/zh-Hant/state-health-coverage-older-immigrants.html">年長移民的州健康承保</a>。</li>
+      <li><strong>擔保人規定。</strong>有些 Medicaid 規定會計入擔保人的收入。請見 <a href="/zh-Hant/medicaid-sponsor-deeming.html">Medicaid 擔保人收入計入</a>。</li>
+    </ul>
+
+    <h2>您現在可以做什麼</h2>
+    <ul>
+      <li><strong>保管好您的文件。</strong>保留您的移民身分或類別的證明，以及每一份 Medicaid 通知。</li>
+      <li><strong>閱讀您所在州寄來的信件。</strong>信中會說明您的承保是否有變動，以及如何申請聽證。</li>
+      <li><strong>緊急情況下不要延誤就醫。</strong>符合州其他規定的人，仍可使用緊急 Medicaid。</li>
+      <li><strong>取得免費協助。</strong>可以洽詢您的<a href="/zh-Hant/state-medicaid.html">州 Medicaid 機關</a>、您的 SHIP，或法律援助團體。</li>
+    </ul>
+    <p>想看聯邦變更的最新清單，請見<a href="/zh-Hant/policy-changes.html">政策與規定變更</a>。</p>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>難民和庇護獲准者還能獲得 Medicaid 嗎？</summary>
+      <div>
+        <p>從2026年10月1日起，除非難民和庇護獲准者同時具有名單上的身分（例如綠卡），否則聯邦不會為他們提供完整 Medicaid 的經費。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 在採用 CHIPRA 214 選項的州，兒童和孕婦仍可能符合資格。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> 緊急 Medicaid 仍然保留。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>綠卡持有人會失去 Medicaid 嗎？</summary>
+      <div>
+        <p>不會。合法永久居民仍在名單上。通常的5年等待期仍適用於他們當中的許多人。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>緊急照護仍然有承保嗎？</summary>
+      <div>
+        <p>有。聯邦對治療緊急醫療狀況的照護的經費仍會繼續。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Medicare 的變更何時開始？</summary>
+      <div>
+        <p>該法律的 Medicare 規定從2025年7月4日起18個月後開始，也就是約2027年1月。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> CMS 計劃提供更多指引。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>申請福利會影響我的移民案件嗎？</summary>
+      <div>
+        <p>這方面的規定與本頁無關，是另外的規定。在您決定之前，請先洽詢移民法律援助團體。</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>請到來源查證。</strong>請閱讀 CMS 的<a href="https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf" rel="noopener">州健康官員信函（2026年4月8日）</a>、<a href="https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens" rel="noopener">CMS 公告</a>和 <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf" rel="noopener">CMS 摘要公報</a>。然後向您所在的州確認。
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/immigrant-eligibility-changes-medicare-medicaid.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

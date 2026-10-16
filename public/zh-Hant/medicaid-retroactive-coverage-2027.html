@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicaid 追溯承保在 2027 年縮短</title>
+<meta name="description" content="Medicaid 可以支付您申請之前的帳單。2027 年 1 月 1 日起提出的申請，追溯期會縮短。看看哪些人可以追溯幾個月。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/medicaid-retroactive-coverage-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicaid 追溯承保在 2027 年縮短">
+<meta property="og:description" content="Medicaid 可以支付您申請之前的帳單。2027 年 1 月 1 日起提出的申請，追溯期會縮短。看看哪些人可以追溯幾個月。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/medicaid-retroactive-coverage-2027.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicaid 追溯承保在 2027 年縮短">
+<meta name="twitter:description" content="Medicaid 可以支付您申請之前的帳單。2027 年 1 月 1 日起提出的申請，追溯期會縮短。看看哪些人可以追溯幾個月。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Medicaid 追溯承保會終止嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不會。只是變短了。對於 2027 年 1 月 1 日或之後提出的申請，擴大承保的成人可追溯 1 個月，Medicaid 的其他所有人可追溯 2 個月。"}}, {"@type": "Question", "name": "如果我在 2026 年申請，新規則適用嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不適用。較短的追溯期適用於 2027 年 1 月 1 日或之後提出的申請。 美國醫療保險和醫療補助服務中心（CMS）表示預計會發布更多指引，所以請向您所在的州查詢。"}}, {"@type": "Question", "name": "Medicaid 一定會承保整個追溯期嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不一定。您必須在那段期間接受過 Medicaid 承保的服務，而且當時必須符合資格。"}}, {"@type": "Question", "name": "我要在哪裡申請？", "acceptedAnswer": {"@type": "Answer", "text": "請向您所在州的 Medicaid 機關申請。我們的各州 Medicaid 名錄連結到每一個機關。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicaid 追溯承保在 2027 年縮短", "description": "Medicaid 可以支付您申請之前的帳單。2027 年 1 月 1 日起提出的申請，追溯期會縮短。看看哪些人可以追溯幾個月。", "url": "https://mediprimer.org/zh-Hant/medicaid-retroactive-coverage-2027.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicaid-retroactive-coverage-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicaid-retroactive-coverage-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "Medicaid 追溯承保在 2027 年縮短", "item": "https://mediprimer.org/zh-Hant/medicaid-retroactive-coverage-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicaid-retroactive-coverage-2027.html" lang="en">English</a>
+    <a href="/es/medicaid-retroactive-coverage-2027.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicaid-retroactive-coverage-2027.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照顧者</p>
+    <h1>Medicaid 追溯承保在 2027 年縮短</h1>
+    <p>Medicaid 可以支付您申請當月之前的帳單。一項新的聯邦法律縮短了追溯期，適用於 2027 年 1 月 1 日或之後提出的申請。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案如下。</strong>現在，如果您在申請當月之前曾接受承保範圍內的醫療照護，而且當時符合資格，Medicaid 必須承保您申請當月之前最多 <strong>3 個月</strong>。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 對於 <strong>2027 年 1 月 1 日</strong>或之後提出的申請，這個期限會縮短。Medicaid「成人組」（擴大承保組）的成人可追溯 <strong>1 個月</strong>。其他所有人可追溯 <strong>2 個月</strong>。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 計算的日期是您<em>申請</em>的日期，不是您接受照護的日期。</p>
+
+    <h2>什麼是追溯承保</h2>
+    <p>追溯承保讓 Medicaid 可以支付您<em>申請之前</em>所接受的照護。當有人先住院、之後才申請時，這很有幫助。依照現行聯邦規定，各州必須讓申請人回溯申請當月之前最多三個月。申請人必須接受過 Medicaid 承保的服務，而且當時必須符合資格。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+
+    <h2>2027 年 1 月 1 日有哪些變化</h2>
+    <p>公法 119-21 第 71112 條（2025 年的一項法律）縮短了追溯期。這項變更適用於 2027 年 1 月 1 日或之後提出的申請。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+    <div class="table-scroll">
+      <table>
+        <caption>申請當月之前的 Medicaid 追溯承保月數</caption>
+        <thead><tr><th scope="col">您的身分</th><th scope="col">2027 年 1 月 1 日之前的申請</th><th scope="col">2027 年 1 月 1 日或之後的申請</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Medicaid 成人組的成人（擴大承保的成人）</th><td>最多 3 個月</td><td>1 個月</td></tr>
+          <tr><th scope="row">Medicaid 的其他所有人</th><td>最多 3 個月</td><td>2 個月</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 成人組大致上是指只靠收入就符合資格的 65 歲以下成人。不包括因殘疾、年齡或懷孕而符合資格的人。對於獨立的 CHIP 計劃，追溯承保由各州自行選擇是否提供。對於 2027 年 1 月 1 日或之後提出的申請，提供追溯承保的州，承保開始日不得早於申請當月之前的兩個月。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>範例（僅供說明）</h2>
+    <p>Maria 是擴大承保組的成人。她在 2027 年 3 月住院。她在 2027 年 4 月申請 Medicaid。追溯承保可以回溯到 4 月之前的一個月。那就是 3 月，所以如果她當時符合資格，3 月的住院費用可以獲得承保。依照舊的 3 個月規則，可以回溯到 1 月。如果她的住院是在 2 月，就會落在新的追溯期之外。這個範例採用 CMS 函件中「申請前一個月」的規則。您所在州的確切開始日期可能不同。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+    <p>重點很簡單：<strong>盡快申請</strong>。申請得越早，落在期限之外的帳單就越少。</p>
+
+    <h2>住院或突然生病後該怎麼做</h2>
+    <ul>
+      <li><strong>立刻申請。</strong>不要等帳單堆積。Medicaid 全年都接受申請。<!-- src: https://www.healthcare.gov/medicaid-chip/getting-medicaid-chip/ --></li>
+      <li><strong>請醫院協助。</strong>許多醫院設有財務諮詢人員，可以協助辦理 Medicaid 申請。</li>
+      <li><strong>保留每一張帳單和通知。</strong>您可能需要用它們來證明您接受了哪些照護、是在何時接受的。</li>
+      <li><strong>向您所在的州詢問開始日期。</strong>依州計劃不同，承保可能從申請日開始，也可能從申請當月的第一天開始。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></li>
+    </ul>
+    <p>不確定如何申請？請參閱<a href="/zh-Hant/medicaid-starting-out.html">Medicaid 入門</a>和 <a href="/zh-Hant/medicaid-eligibility.html">Medicaid 資格</a>。您可以在<a href="/zh-Hant/state-medicaid.html">各州 Medicaid 名錄</a>中找到您所在州的機關。如果您失去了承保，請參閱<a href="/zh-Hant/lost-medicaid-what-now.html">失去 Medicaid：現在怎麼辦？</a></p>
+
+    <h2>為什麼這對某些家庭影響最大</h2>
+    <p>拖延申請的人受到的衝擊最大。這可能包括不確定自己是否符合資格的家庭，或擔心申請會帶來麻煩的家庭。如果您不確定，請詢問值得信任的來源，例如您所在州的州健康保險協助計劃（SHIP）或醫院的財務諮詢人員。移民身分的規定也在改變。請參閱<a href="/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">移民資格變更</a>。同一項 2025 年法律也為擴大承保的成人增加了<a href="/zh-Hant/medicaid-work-requirements.html">工作要求</a>和 <a href="/zh-Hant/medicaid-six-month-renewals-2027.html">6 個月續期</a>。想了解目前每年續期的方式，請參閱 <a href="/zh-Hant/medicaid-renewal.html">Medicaid 續期</a>。</p>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>Medicaid 追溯承保會終止嗎？</summary>
+      <div>
+        <p>不會。只是變短了。對於 2027 年 1 月 1 日或之後提出的申請，擴大承保的成人可追溯 1 個月，Medicaid 的其他所有人可追溯 2 個月。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我在 2026 年申請，新規則適用嗎？</summary>
+      <div>
+        <p>不適用。較短的追溯期適用於 2027 年 1 月 1 日或之後提出的申請。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> 美國醫療保險和醫療補助服務中心（CMS）表示預計會發布更多指引，所以請向您所在的州查詢。</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Medicaid 一定會承保整個追溯期嗎？</summary>
+      <div>
+        <p>不一定。您必須在那段期間接受過 Medicaid 承保的服務，而且當時必須符合資格。<!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我要在哪裡申請？</summary>
+      <div>
+        <p>請向您所在州的 Medicaid 機關申請。我們的各州 Medicaid 名錄連結到每一個機關。</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>請以原始來源為準。</strong>各州仍在準備這項變更。細節由您所在的州決定。請閱讀 <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf" rel="noopener">CMS 資訊公告（2025 年 11 月 18 日）</a>中的聯邦摘要，並詢問您的<a href="/zh-Hant/state-medicaid.html">州 Medicaid 機關</a>這項變更如何適用於您。
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/medicaid-retroactive-coverage-2027.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

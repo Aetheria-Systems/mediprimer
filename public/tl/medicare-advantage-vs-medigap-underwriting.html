@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)</title>
+<meta name="description" content="Aalis ka ba sa Medicare Advantage para sa Orihinal na Medicare at Medigap? Alamin ang karapatan sa 12-buwang pagsubok, ang 63-araw na palugit, at kung kailan maaaring tumanggi ang mga insurer.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/medicare-advantage-vs-medigap-underwriting.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)">
+<meta property="og:description" content="Aalis ka ba sa Medicare Advantage para sa Orihinal na Medicare at Medigap? Alamin ang karapatan sa 12-buwang pagsubok, ang 63-araw na palugit, at kung kailan maaaring tumanggi ang mga insurer.">
+<meta property="og:url" content="https://mediprimer.org/tl/medicare-advantage-vs-medigap-underwriting.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)">
+<meta name="twitter:description" content="Aalis ka ba sa Medicare Advantage para sa Orihinal na Medicare at Medigap? Alamin ang karapatan sa 12-buwang pagsubok, ang 63-araw na palugit, at kung kailan maaaring tumanggi ang mga insurer.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Puwede ba akong lumipat mula sa Medicare Advantage patungong Medigap?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi mo puwedeng hawakan ang dalawa. Puwede kang umalis sa Medicare Advantage para sa Orihinal na Medicare at pagkatapos ay bumili ng Medigap. Nakadepende sa iyong sitwasyon kung obligadong magbenta sa iyo ang kompanya. Suriin muna ang karapatan sa pagsubok at iba pang karapatan sa Garantisadong Pagbibigay ng Saklaw."}}, {"@type": "Question", "name": "Puwede ba akong tanggihan ng kompanya ng Medigap pagkatapos ng unang taon ko sa Medicare Advantage?", "acceptedAnswer": {"@type": "Answer", "text": "Madalas, oo. Kung walang karapatan sa Garantisadong Pagbibigay ng Saklaw o palugit ng Bukas na Pagpapatala, puwedeng gamitin ng kompanya ang medikal na Pagsusuri sa Panganib (Underwriting) para tanggihan ka o singilin nang mas mataas. May ilang estado na nagbibigay ng dagdag na proteksyon, kaya magtanong sa iyong Kagawaran ng Seguro ng Estado."}}, {"@type": "Question", "name": "Paano kung lumampas ako sa 63-araw na palugit?", "acceptedAnswer": {"@type": "Answer", "text": "Wala na ang garantiya. Sa ilang sitwasyon, maaaring tumagal nang dagdag na 12 buwan ang iyong mga karapatan. Masasabi ito sa iyo ng iyong Kagawaran ng Seguro ng Estado."}}, {"@type": "Question", "name": "Tamang hakbang ba para sa akin ang bumalik?", "acceptedAnswer": {"@type": "Answer", "text": "Personal na desisyon iyan. Hindi nagrerekomenda ng mga plano ang site na ito. Magkaiba ang bigay at kapalit ng Orihinal na Medicare at Medicare Advantage pagdating sa mga network, karagdagang benepisyo, at gastos. May libreng tulong mula sa iyong SHIP."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)", "description": "Aalis ka ba sa Medicare Advantage para sa Orihinal na Medicare at Medigap? Alamin ang karapatan sa 12-buwang pagsubok, ang 63-araw na palugit, at kung kailan maaaring tumanggi ang mga insurer.", "url": "https://mediprimer.org/tl/medicare-advantage-vs-medigap-underwriting.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-advantage-vs-medigap-underwriting.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-advantage-vs-medigap-underwriting.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)", "item": "https://mediprimer.org/tl/medicare-advantage-vs-medigap-underwriting.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-advantage-vs-medigap-underwriting.html" lang="en">English</a>
+    <a href="/es/medicare-advantage-vs-medigap-underwriting.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-advantage-vs-medigap-underwriting.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-advantage-vs-medigap-underwriting.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/medicare-advantage-vs-medigap-underwriting.html" lang="ko">한국어</a>
+    <a href="/tl/medicare-advantage-vs-medigap-underwriting.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Medicare Advantage vs. Medigap: Ang Patibong ng Pagsusuri sa Panganib (Underwriting)</h1>
+    <p>Kadalasan, puwede kang umalis sa Medicare Advantage. Ang mahirap ay ang pagbili ng polisiya ng Medigap pagkatapos.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Puwede kang umalis sa isang plano ng Medicare Advantage at bumalik sa Orihinal na Medicare sa mga takdang panahon bawat taon. Pero maaaring hindi obligadong magbenta sa iyo ng polisiya ang isang kompanya ng Medigap (Karagdagang Medicare). Pagkatapos ng unang taon mo sa Medicare Advantage, karamihan sa mga tao ay walang garantiya mula sa pederal na batas. Maaaring tingnan ng kompanya ang kasaysayan ng iyong kalusugan, singilin ka nang mas mataas, o tumanggi. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap/guaranteed-issue-rights --> Ang malaking eksepsiyon ay ang <strong>karapatan sa 12-buwang pagsubok</strong>. Maaari ka nitong protektahan kung kikilos ka sa loob ng <strong>63 araw</strong> pagkatapos matapos ang saklaw ng iyong plano. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+
+    <h2>Bakit pagpipilian ang Medigap at Medicare Advantage: isa lang sa dalawa</h2>
+    <p>Ang Medigap (Karagdagang Medicare) ay nagbabayad ng ilang gastos na iniiwan sa iyo ng Orihinal na Medicare. Gumagana lang ito sa Orihinal na Medicare. Hindi ito gumagana sa Medicare Advantage. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --> Ilegal para sa sinuman na magbenta sa iyo ng polisiya ng Medigap habang nasa plano ka ng Medicare Advantage, maliban kung magsisimula lang ang polisiya pagkatapos matapos ang saklaw ng planong iyon. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+    <p>Kaya hindi ito magkatabing pagsubok. Pipili ka ng isang landas. Kung gusto mong lumipat ng landas sa susunod, ang mga patakaran tungkol sa Medigap ang magpapasya kung gaano ito kadali. Tungkol sa mga patakarang iyon ang pahinang ito. Para sa walang kinikilingang paghahambing ng dalawang landas, tingnan ang <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>. Hindi nagrerekomenda ng mga plano ang site na ito.</p>
+
+    <h2>Ano ang ibig sabihin ng "Pagsusuri sa Panganib (Underwriting)"</h2>
+    <p>Ang Pagsusuri sa Panganib (Underwriting) ay kapag sinusuri ng insurer ang iyong kalusugan bago ito magpasya kung magbebenta sa iyo ng polisiya. Para sa Medigap, maaaring magtanong ang kompanya tungkol sa iyong kalusugan. Pagkatapos ay maaari ka nitong tanggihan o singilin nang mas mataas. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap/guaranteed-issue-rights --></p>
+    <p>Protektado ka laban dito sa dalawang kaso:</p>
+    <ul>
+      <li><strong>Ang iyong Panahon ng Bukas na Pagpapatala sa Medigap.</strong> Ito ay isang beses lang na 6-na-buwang palugit. Nagsisimula ito kapag 65 taong gulang ka na o mas matanda at mayroon kang Medicare Part B. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></li>
+      <li><strong>Isang karapatan sa Garantisadong Pagbibigay ng Saklaw.</strong> Ito ay isang sitwasyon kung saan obligado ang kompanya na magbenta sa iyo ng polisiya. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap/guaranteed-issue-rights --></li>
+    </ul>
+    <p>Sa labas ng dalawang kasong iyon, walang garantiya mula sa pederal na batas. Kung makakabili ka ng polisiya, maaaring mas mahal ito dahil sa mga problema sa kalusugan. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --> May ilang estado na nagdaragdag ng sarili nilang mga patakaran, kaya makipag-ugnayan sa iyong Kagawaran ng Seguro ng Estado. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Ang patibong: bakit mahalaga ang unang taon</h2>
+    <p>Sabihin nating sumali ka sa Medicare Advantage noong una kang nagkaroon ng Medicare. Nagsisimula ang 6-na-buwang palugit mo para sa Medigap kapag mayroon ka nang Medicare Part B. Lumilipas ito habang nasa plano ka, dahil hindi mo ito magagamit doon. Sa ikalawang taon o pagkatapos nito, maaaring gusto mo ang Orihinal na Medicare. Ngayon ay hinihiling mo na sa isang kompanya na magbenta sa iyo ng Medigap nang walang garantiya mula sa pederal na batas. Kung nagbago ang iyong kalusugan, maaaring tumanggi ang kompanya o singilin ka nang mas mataas.</p>
+    <p>Iyan ang patibong. Madali ang pag-alis sa Medicare Advantage. Maaaring hindi madali ang pagkuha ng Medigap pagkatapos.</p>
+
+    <h2>Ang karapatan sa 12-buwang pagsubok</h2>
+    <p>Nagbibigay ang Medicare ng "pagsubok" kung susubukan mo ang Medicare Advantage at gusto mong bumalik. May dalawang kaso na kwalipikado. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+    <ul>
+      <li><strong>Sumali ka sa Medicare Advantage noong una kang naging kwalipikado sa Medicare, at wala pang isang taon mula noon.</strong> Puwede kang lumipat sa Orihinal na Medicare. Pagkatapos ay puwede kang bumili ng anumang polisiya ng Medigap na ibinebenta sa iyong estado. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></li>
+      <li><strong>Binitawan mo ang isang polisiya ng Medigap para subukan ang Medicare Advantage sa unang pagkakataon, at wala pang isang taon mula noon.</strong> Maaari mong makuhang muli ang dati mong polisiya kung ibinebenta pa rin ito ng parehong kompanya. Kung hindi, maaari kang bumili ng ilang karaniwang plano mula sa alinmang kompanya sa iyong estado. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></li>
+    </ul>
+    <p>Nalalapat lang ang karapatan kung lilipat ka sa Orihinal na Medicare. Hindi ito nalalapat kung sasali ka sa ibang plano ng Medicare Advantage. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+
+    <h2>Ang 63-araw na palugit</h2>
+    <p>Mahigpit ang takdang oras ng mga karapatan sa Garantisadong Pagbibigay ng Saklaw. Dapat kang mag-apply para sa polisiya ng Medigap: <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+    <ul>
+      <li>Kasing-aga ng <strong>60 araw bago</strong> matapos ang saklaw mo sa Medicare Advantage.</li>
+      <li>Hindi lalampas sa <strong>63 araw pagkatapos</strong> nitong matapos.</li>
+    </ul>
+    <p>Hindi puwedeng magsimula ang saklaw ng Medigap hangga't hindi pa natatapos ang saklaw mo sa Medicare Advantage. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --> Itago ang bawat liham, abiso, at email mula sa iyong plano. Maaaring kailanganin mo ang mga ito para patunayang natapos ang iyong saklaw. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+
+    <h2>Kailan ka puwedeng umalis sa Medicare Advantage</h2>
+    <p>Puwede kang umalis sa iyong plano sa ilang partikular na panahon: <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></p>
+    <ul>
+      <li>Ang Panahon ng Bukas na Pagpapatala sa taglagas, Oktubre 15 – Disyembre 7. Nagsisimula ang saklaw sa Enero 1. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></li>
+      <li>Ang Panahon ng Bukas na Pagpapatala ng Medicare Advantage, Enero 1 – Marso 31. Puwede mong iwan ang plano at bumalik sa Orihinal na Medicare. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></li>
+      <li>Isang Espesyal na Panahon ng Pagpapatala, tulad ng kapag lumipat ka palabas ng lugar na sakop ng plano. <!-- src: https://www.medicare.gov/basics/get-started-with-medicare/get-more-coverage/joining-a-plan --></li>
+    </ul>
+    <p>Saklaw ng aming hakbang-hakbang na gabay ang bawat isa: <a href="/tl/medicare-advantage-to-original-medicare.html">Paglipat mula sa Medicare Advantage patungo sa Orihinal na Medicare</a>. Kung ibang plano lang ng Medicare Advantage ang gusto mo, tingnan ang <a href="/tl/switching-medicare-advantage-plans.html">Paglipat ng mga Plano ng Medicare Advantage</a> at ang <a href="/tl/medicare-advantage-open-enrollment-period.html">Panahon ng Bukas na Pagpapatala ng Medicare Advantage</a>. Para sa mga liham ng plano at kung ano ang saklaw ng Medigap, tingnan ang <a href="/tl/medigap.html">Mga Plano ng Medigap</a>.</p>
+
+    <h2>Mga tanong na dapat itanong bago ka umalis sa iyong plano</h2>
+    <ul>
+      <li>Nasa loob pa ba ako ng unang 12 buwan ko sa Medicare Advantage?</li>
+      <li>May iba pa ba akong karapatan sa Garantisadong Pagbibigay ng Saklaw, tulad ng planong aalis sa aking lugar?</li>
+      <li>Nagdaragdag ba ang aking estado ng mga proteksyon na lampas sa pederal na batas?</li>
+      <li>Makukumpirma ko ba na magbebenta sa akin ang isang kompanya ng Medigap <em>bago</em> matapos ang saklaw ng aking plano?</li>
+    </ul>
+    <p>Nagbibigay ang iyong SHIP (State Health Insurance Assistance Program) ng libre at isa-sa-isang tulong. Hanapin ang sa iyo sa <a href="/tl/ship-directory.html">direktoryo ng SHIP</a>.</p>
+
+    <h2>Mga Karaniwang Tanong</h2>
+
+    <details class="qa">
+      <summary>Puwede ba akong lumipat mula sa Medicare Advantage patungong Medigap?</summary>
+      <div>
+        <p>Hindi mo puwedeng hawakan ang dalawa. Puwede kang umalis sa Medicare Advantage para sa Orihinal na Medicare at pagkatapos ay bumili ng Medigap. Nakadepende sa iyong sitwasyon kung obligadong magbenta sa iyo ang kompanya. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap/guaranteed-issue-rights --> Suriin muna ang karapatan sa pagsubok at iba pang karapatan sa Garantisadong Pagbibigay ng Saklaw.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Puwede ba akong tanggihan ng kompanya ng Medigap pagkatapos ng unang taon ko sa Medicare Advantage?</summary>
+      <div>
+        <p>Madalas, oo. Kung walang karapatan sa Garantisadong Pagbibigay ng Saklaw o palugit ng Bukas na Pagpapatala, puwedeng gamitin ng kompanya ang medikal na Pagsusuri sa Panganib (Underwriting) para tanggihan ka o singilin nang mas mataas. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap/guaranteed-issue-rights --> May ilang estado na nagbibigay ng dagdag na proteksyon, kaya magtanong sa iyong Kagawaran ng Seguro ng Estado.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Paano kung lumampas ako sa 63-araw na palugit?</summary>
+      <div>
+        <p>Wala na ang garantiya. Sa ilang sitwasyon, maaaring tumagal nang dagdag na 12 buwan ang iyong mga karapatan. Masasabi ito sa iyo ng iyong Kagawaran ng Seguro ng Estado. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tamang hakbang ba para sa akin ang bumalik?</summary>
+      <div>
+        <p>Personal na desisyon iyan. Hindi nagrerekomenda ng mga plano ang site na ito. Magkaiba ang bigay at kapalit ng Orihinal na Medicare at Medicare Advantage pagdating sa mga network, karagdagang benepisyo, at gastos. May libreng tulong mula sa iyong SHIP.</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>Magberipika sa pinagmulan.</strong> Nakadepende sa iyong estado at sitwasyon ang iyong mga karapatan. Gamitin ang tool ng Medicare na <a href="https://www.medicare.gov/health-drug-plans/medigap/ready-to-buy/when" rel="noopener">"Kailan ako puwedeng bumili ng polisiya ng Medigap?"</a>, tumawag sa 1-800-MEDICARE (1-800-633-4227), o makipag-ugnayan sa iyong <a href="/tl/insurance-departments.html">Kagawaran ng Seguro ng Estado</a>. Huwag bitawan ang saklaw hangga't hindi pa handa ang bago mong saklaw.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/medicare-advantage-vs-medigap-underwriting.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

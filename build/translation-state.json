@@ -89,8 +89,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "9e59c67d6f9bf4a54f256336b70dadd1",
-      "date": "2026-10-10"
+      "hash": "7903ecdd54a2ec23cb206243bcf26518",
+      "date": "2026-10-16"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -109,8 +109,8 @@
       "date": "2026-10-15"
     },
     "medicaid-starting-out.html": {
-      "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
-      "date": "2026-10-10"
+      "hash": "b0d2c81be19c5370ee6faccb086f1774",
+      "date": "2026-10-16"
     },
     "medicare-advantage.html": {
       "hash": "cb9ebcd7343105add077c003d12c5be8",
@@ -265,16 +265,16 @@
       "date": "2026-10-10"
     },
     "medicare-advantage-to-original-medicare.html": {
-      "hash": "b4ee4eb538c971a49211c8ef53d35b8d",
-      "date": "2026-10-10"
+      "hash": "8146e673e05b7878730d6d37e94bd64b",
+      "date": "2026-10-16"
     },
     "medicare-hospice-home-health.html": {
       "hash": "6b35dc7641bfe6e1ab8156409790806a",
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "eebaf8751b1390ba811234d8a1344a01",
-      "date": "2026-10-10"
+      "hash": "d416ed00598fec1d575135c6f218d4f5",
+      "date": "2026-10-16"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -437,8 +437,8 @@
       "date": "2026-10-10"
     },
     "medicaid-renewal.html": {
-      "hash": "e929f3b66446bed7bcbf3aadd778b001",
-      "date": "2026-10-10"
+      "hash": "e7eff00928a9b560949b09cec3d4c67e",
+      "date": "2026-10-16"
     },
     "medicare-card-replacement.html": {
       "hash": "781c8f6821c5a5a00860b44c015338f1",
@@ -545,8 +545,8 @@
       "date": "2026-10-10"
     },
     "medicare-hold-harmless.html": {
-      "hash": "9d4045a7da98285d8377929c835b8e19",
-      "date": "2026-10-10"
+      "hash": "fa65a475884363d00b90de178a02f474",
+      "date": "2026-10-16"
     },
     "turning-65-marketplace-plan.html": {
       "hash": "124cec3d51a024bdb072ab5009d8fdbc",
@@ -571,6 +571,22 @@
     "insurers-dropping-plans-2027.html": {
       "hash": "462dd94c0e258f51244328fcec5f934a",
       "date": "2026-10-13"
+    },
+    "immigrant-eligibility-changes-medicare-medicaid.html": {
+      "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
+      "date": "2026-10-16"
+    },
+    "medicaid-retroactive-coverage-2027.html": {
+      "hash": "69f0159ef7ea0f1127692847447c824c",
+      "date": "2026-10-16"
+    },
+    "medicaid-six-month-renewals-2027.html": {
+      "hash": "f580d78723bf8869cad8c4700682f94b",
+      "date": "2026-10-16"
+    },
+    "medicare-advantage-vs-medigap-underwriting.html": {
+      "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
+      "date": "2026-10-16"
     }
   },
   "zh-Hant": {
@@ -639,8 +655,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "9e59c67d6f9bf4a54f256336b70dadd1",
-      "date": "2026-10-10"
+      "hash": "7903ecdd54a2ec23cb206243bcf26518",
+      "date": "2026-10-16"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -651,8 +667,8 @@
       "date": "2026-10-15"
     },
     "medicaid-starting-out.html": {
-      "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
-      "date": "2026-10-10"
+      "hash": "b0d2c81be19c5370ee6faccb086f1774",
+      "date": "2026-10-16"
     },
     "medicare-advantage.html": {
       "hash": "cb9ebcd7343105add077c003d12c5be8",
@@ -835,8 +851,8 @@
       "date": "2026-10-10"
     },
     "medicare-advantage-to-original-medicare.html": {
-      "hash": "b4ee4eb538c971a49211c8ef53d35b8d",
-      "date": "2026-10-10"
+      "hash": "8146e673e05b7878730d6d37e94bd64b",
+      "date": "2026-10-16"
     },
     "medicare-dental-vision-hearing.html": {
       "hash": "5de4ee954ee909ccc1744f267fbd29c1",
@@ -847,8 +863,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "eebaf8751b1390ba811234d8a1344a01",
-      "date": "2026-10-10"
+      "hash": "d416ed00598fec1d575135c6f218d4f5",
+      "date": "2026-10-16"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -1015,8 +1031,8 @@
       "date": "2026-10-10"
     },
     "medicaid-renewal.html": {
-      "hash": "e929f3b66446bed7bcbf3aadd778b001",
-      "date": "2026-10-10"
+      "hash": "e7eff00928a9b560949b09cec3d4c67e",
+      "date": "2026-10-16"
     },
     "medicaid-sponsor-deeming.html": {
       "hash": "bb147797a9fba1d708c59e4fbe46b080",
@@ -1115,8 +1131,8 @@
       "date": "2026-10-10"
     },
     "medicare-hold-harmless.html": {
-      "hash": "9d4045a7da98285d8377929c835b8e19",
-      "date": "2026-10-10"
+      "hash": "fa65a475884363d00b90de178a02f474",
+      "date": "2026-10-16"
     },
     "turning-65-marketplace-plan.html": {
       "hash": "124cec3d51a024bdb072ab5009d8fdbc",
@@ -1145,6 +1161,22 @@
     "insurers-dropping-plans-2027.html": {
       "hash": "f6772095f8dfd2fcec323867db424108",
       "date": "2026-10-10"
+    },
+    "immigrant-eligibility-changes-medicare-medicaid.html": {
+      "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
+      "date": "2026-10-16"
+    },
+    "medicaid-retroactive-coverage-2027.html": {
+      "hash": "69f0159ef7ea0f1127692847447c824c",
+      "date": "2026-10-16"
+    },
+    "medicaid-six-month-renewals-2027.html": {
+      "hash": "f580d78723bf8869cad8c4700682f94b",
+      "date": "2026-10-16"
+    },
+    "medicare-advantage-vs-medigap-underwriting.html": {
+      "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
+      "date": "2026-10-16"
     }
   },
   "vi": {
@@ -1257,8 +1289,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "9e59c67d6f9bf4a54f256336b70dadd1",
-      "date": "2026-10-10"
+      "hash": "7903ecdd54a2ec23cb206243bcf26518",
+      "date": "2026-10-16"
     },
     "hsa-and-medicare.html": {
       "hash": "2f1bac2a82fff32abd9997335634b542",
@@ -1321,8 +1353,8 @@
       "date": "2026-10-10"
     },
     "medicaid-starting-out.html": {
-      "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
-      "date": "2026-10-10"
+      "hash": "b0d2c81be19c5370ee6faccb086f1774",
+      "date": "2026-10-16"
     },
     "medicaid-work-requirements.html": {
       "hash": "5739cfa9c56002c34bac54b8ee18f307",
@@ -1333,8 +1365,8 @@
       "date": "2026-10-10"
     },
     "medicare-advantage-to-original-medicare.html": {
-      "hash": "b4ee4eb538c971a49211c8ef53d35b8d",
-      "date": "2026-10-10"
+      "hash": "8146e673e05b7878730d6d37e94bd64b",
+      "date": "2026-10-16"
     },
     "medicare-advantage.html": {
       "hash": "cb9ebcd7343105add077c003d12c5be8",
@@ -1381,8 +1413,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "eebaf8751b1390ba811234d8a1344a01",
-      "date": "2026-10-10"
+      "hash": "d416ed00598fec1d575135c6f218d4f5",
+      "date": "2026-10-16"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -1585,8 +1617,8 @@
       "date": "2026-10-10"
     },
     "medicaid-renewal.html": {
-      "hash": "e929f3b66446bed7bcbf3aadd778b001",
-      "date": "2026-10-10"
+      "hash": "e7eff00928a9b560949b09cec3d4c67e",
+      "date": "2026-10-16"
     },
     "medical-interpreter-rights.html": {
       "hash": "64c52e5834c8a5a38a86dc6d5f21a51f",
@@ -1693,8 +1725,8 @@
       "date": "2026-10-10"
     },
     "medicare-hold-harmless.html": {
-      "hash": "9d4045a7da98285d8377929c835b8e19",
-      "date": "2026-10-10"
+      "hash": "fa65a475884363d00b90de178a02f474",
+      "date": "2026-10-16"
     },
     "turning-65-marketplace-plan.html": {
       "hash": "124cec3d51a024bdb072ab5009d8fdbc",
@@ -1719,6 +1751,22 @@
     "insurers-dropping-plans-2027.html": {
       "hash": "462dd94c0e258f51244328fcec5f934a",
       "date": "2026-10-14"
+    },
+    "immigrant-eligibility-changes-medicare-medicaid.html": {
+      "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
+      "date": "2026-10-16"
+    },
+    "medicaid-retroactive-coverage-2027.html": {
+      "hash": "69f0159ef7ea0f1127692847447c824c",
+      "date": "2026-10-16"
+    },
+    "medicaid-six-month-renewals-2027.html": {
+      "hash": "f580d78723bf8869cad8c4700682f94b",
+      "date": "2026-10-16"
+    },
+    "medicare-advantage-vs-medigap-underwriting.html": {
+      "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
+      "date": "2026-10-16"
     }
   },
   "ko": {
@@ -1827,8 +1875,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "9e59c67d6f9bf4a54f256336b70dadd1",
-      "date": "2026-10-10"
+      "hash": "7903ecdd54a2ec23cb206243bcf26518",
+      "date": "2026-10-16"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -1879,8 +1927,8 @@
       "date": "2026-10-10"
     },
     "medicaid-renewal.html": {
-      "hash": "e929f3b66446bed7bcbf3aadd778b001",
-      "date": "2026-10-10"
+      "hash": "e7eff00928a9b560949b09cec3d4c67e",
+      "date": "2026-10-16"
     },
     "medicaid-spend-down-look-back.html": {
       "hash": "52b6891f32e8f32d964c6b6d2c516c64",
@@ -1891,8 +1939,8 @@
       "date": "2026-10-10"
     },
     "medicaid-starting-out.html": {
-      "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
-      "date": "2026-10-10"
+      "hash": "b0d2c81be19c5370ee6faccb086f1774",
+      "date": "2026-10-16"
     },
     "medicaid-work-requirements.html": {
       "hash": "5739cfa9c56002c34bac54b8ee18f307",
@@ -1907,8 +1955,8 @@
       "date": "2026-10-10"
     },
     "medicare-advantage-to-original-medicare.html": {
-      "hash": "b4ee4eb538c971a49211c8ef53d35b8d",
-      "date": "2026-10-10"
+      "hash": "8146e673e05b7878730d6d37e94bd64b",
+      "date": "2026-10-16"
     },
     "medicare-advantage.html": {
       "hash": "cb9ebcd7343105add077c003d12c5be8",
@@ -1975,8 +2023,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "eebaf8751b1390ba811234d8a1344a01",
-      "date": "2026-10-10"
+      "hash": "d416ed00598fec1d575135c6f218d4f5",
+      "date": "2026-10-16"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -2267,8 +2315,8 @@
       "date": "2026-10-07"
     },
     "medicare-hold-harmless.html": {
-      "hash": "9d4045a7da98285d8377929c835b8e19",
-      "date": "2026-10-10"
+      "hash": "fa65a475884363d00b90de178a02f474",
+      "date": "2026-10-16"
     },
     "turning-65-marketplace-plan.html": {
       "hash": "124cec3d51a024bdb072ab5009d8fdbc",
@@ -2293,6 +2341,22 @@
     "insurers-dropping-plans-2027.html": {
       "hash": "462dd94c0e258f51244328fcec5f934a",
       "date": "2026-10-15"
+    },
+    "immigrant-eligibility-changes-medicare-medicaid.html": {
+      "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
+      "date": "2026-10-16"
+    },
+    "medicaid-retroactive-coverage-2027.html": {
+      "hash": "69f0159ef7ea0f1127692847447c824c",
+      "date": "2026-10-16"
+    },
+    "medicaid-six-month-renewals-2027.html": {
+      "hash": "f580d78723bf8869cad8c4700682f94b",
+      "date": "2026-10-16"
+    },
+    "medicare-advantage-vs-medigap-underwriting.html": {
+      "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
+      "date": "2026-10-16"
     }
   },
   "tl": {
@@ -2405,8 +2469,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "9e59c67d6f9bf4a54f256336b70dadd1",
-      "date": "2026-10-10"
+      "hash": "7903ecdd54a2ec23cb206243bcf26518",
+      "date": "2026-10-16"
     },
     "irmaa-appeal-ssa-44.html": {
       "hash": "0fa1ec3d581573e3b8f3474764cb61b8",
@@ -2441,16 +2505,16 @@
       "date": "2026-10-10"
     },
     "medicaid-renewal.html": {
-      "hash": "e929f3b66446bed7bcbf3aadd778b001",
-      "date": "2026-10-10"
+      "hash": "e7eff00928a9b560949b09cec3d4c67e",
+      "date": "2026-10-16"
     },
     "medicaid-spousal-impoverishment.html": {
       "hash": "e5740af2533ecee25ce8397aef09c467",
       "date": "2026-10-10"
     },
     "medicaid-starting-out.html": {
-      "hash": "dfacdffde3d1c7aa9fc0a8f2b09b2f58",
-      "date": "2026-10-10"
+      "hash": "b0d2c81be19c5370ee6faccb086f1774",
+      "date": "2026-10-16"
     },
     "medicaid-work-requirements.html": {
       "hash": "5739cfa9c56002c34bac54b8ee18f307",
@@ -2465,8 +2529,8 @@
       "date": "2026-10-10"
     },
     "medicare-advantage-to-original-medicare.html": {
-      "hash": "b4ee4eb538c971a49211c8ef53d35b8d",
-      "date": "2026-10-10"
+      "hash": "8146e673e05b7878730d6d37e94bd64b",
+      "date": "2026-10-16"
     },
     "medicare-advantage.html": {
       "hash": "cb9ebcd7343105add077c003d12c5be8",
@@ -2681,8 +2745,8 @@
       "date": "2026-10-15"
     },
     "medicare-immigrants.html": {
-      "hash": "eebaf8751b1390ba811234d8a1344a01",
-      "date": "2026-10-10"
+      "hash": "d416ed00598fec1d575135c6f218d4f5",
+      "date": "2026-10-16"
     },
     "medicare-telehealth.html": {
       "hash": "391687a37f1f9ce9bcb200cbf351d3bd",
@@ -2797,8 +2861,8 @@
       "date": "2026-10-10"
     },
     "star-ratings.html": {
-      "hash": "b516d8d7056d31652fb8014be931cbe6",
-      "date": "2026-10-11"
+      "hash": "be276fa2c045712b86a9a9bbe3d230a1",
+      "date": "2026-10-16"
     },
     "extra-help-low-income-subsidy.html": {
       "hash": "fd26dc941ae1d641091d74e794275226",
@@ -2825,8 +2889,8 @@
       "date": "2026-10-10"
     },
     "medicare-hold-harmless.html": {
-      "hash": "9d4045a7da98285d8377929c835b8e19",
-      "date": "2026-10-10"
+      "hash": "fa65a475884363d00b90de178a02f474",
+      "date": "2026-10-16"
     },
     "turning-65-marketplace-plan.html": {
       "hash": "124cec3d51a024bdb072ab5009d8fdbc",
@@ -2859,6 +2923,22 @@
     "medigap-plan-g-vs-plan-n.html": {
       "hash": "849399cf4e1c25b28ab38b4bbb7a9fa7",
       "date": "2026-10-12"
+    },
+    "immigrant-eligibility-changes-medicare-medicaid.html": {
+      "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
+      "date": "2026-10-16"
+    },
+    "medicaid-retroactive-coverage-2027.html": {
+      "hash": "69f0159ef7ea0f1127692847447c824c",
+      "date": "2026-10-16"
+    },
+    "medicaid-six-month-renewals-2027.html": {
+      "hash": "f580d78723bf8869cad8c4700682f94b",
+      "date": "2026-10-16"
+    },
+    "medicare-advantage-vs-medigap-underwriting.html": {
+      "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
+      "date": "2026-10-16"
     }
   }
 }
