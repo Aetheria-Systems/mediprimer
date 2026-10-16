@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Renovaciones de Medicaid cada 6 meses en 2027: qué hacer</title>
+<meta name="description" content="A partir de 2027, los adultos de la expansión renuevan Medicaid cada 6 meses. Conozca a quién afecta, cuándo cambia el plazo y cómo mantener su cobertura.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medicaid-six-month-renewals-2027.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Renovaciones de Medicaid cada 6 meses en 2027: qué hacer">
+<meta property="og:description" content="A partir de 2027, los adultos de la expansión renuevan Medicaid cada 6 meses. Conozca a quién afecta, cuándo cambia el plazo y cómo mantener su cobertura.">
+<meta property="og:url" content="https://mediprimer.org/es/medicaid-six-month-renewals-2027.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Renovaciones de Medicaid cada 6 meses en 2027: qué hacer">
+<meta name="twitter:description" content="A partir de 2027, los adultos de la expansión renuevan Medicaid cada 6 meses. Conozca a quién afecta, cuándo cambia el plazo y cómo mantener su cobertura.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Tengo que renovar Medicaid cada 6 meses?", "acceptedAnswer": {"@type": "Answer", "text": "Si usted es un adulto de la expansión, casi siempre sí, a partir de las renovaciones programadas a partir del 1 de enero de 2027. La mayoría de los otros grupos mantienen el calendario de 12 meses."}}, {"@type": "Question", "name": "¿Perderé mi cobertura por este cambio?", "acceptedAnswer": {"@type": "Answer", "text": "No, si todavía califica y responde a los avisos de su estado. El principal riesgo es perder un aviso o entregar un formulario tarde."}}, {"@type": "Question", "name": "¿Cuándo es mi próxima renovación?", "acceptedAnswer": {"@type": "Answer", "text": "El aviso de su estado tiene la fecha. Si no está seguro, comuníquese con la agencia estatal de Medicaid."}}, {"@type": "Question", "name": "¿Esto afecta a Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "No. Medicare tiene sus propias reglas. Si tiene Medicare y Medicaid, consulte la guía de Doble Elegibilidad, ya que su renovación de Medicaid sigue el calendario de su estado."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Renovaciones de Medicaid cada 6 meses en 2027: qué hacer", "description": "A partir de 2027, los adultos de la expansión renuevan Medicaid cada 6 meses. Conozca a quién afecta, cuándo cambia el plazo y cómo mantener su cobertura.", "url": "https://mediprimer.org/es/medicaid-six-month-renewals-2027.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicaid-six-month-renewals-2027.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicaid-six-month-renewals-2027.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Renovaciones de Medicaid cada 6 meses en 2027: qué hacer", "item": "https://mediprimer.org/es/medicaid-six-month-renewals-2027.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicaid-six-month-renewals-2027.html" lang="en">English</a>
+    <a href="/es/medicaid-six-month-renewals-2027.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para miembros y cuidadores</p>
+    <h1>Renovaciones de Medicaid cada 6 meses a partir de 2027</h1>
+    <p>Los adultos de la expansión renovarán dos veces al año en lugar de una. Aquí le explicamos a quién afecta, cuándo empieza y cómo mantener su cobertura.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Si usted tiene Medicaid como adulto por medio de la expansión (el "grupo de adultos"), su estado debe, en casi todos los casos, revisar su elegibilidad <strong>cada 6 meses</strong> en lugar de cada 12. Esto comienza con las renovaciones programadas a partir del <strong>1 de enero de 2027</strong>. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> Usted conserva su cobertura si todavía califica. El riesgo es perder un aviso. Con dos renovaciones al año, hay el doble de oportunidades de perder uno.</p>
+
+    <h2>Quiénes renuevan cada 6 meses</h2>
+    <p>La regla cubre a casi todas las personas del grupo de adultos de Medicaid. Es decir, más o menos, a los adultos que califican solo por sus ingresos. También cubre a las personas de este grupo que tienen cobertura por medio de una exención estatal que da cobertura completa a todo el grupo. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <p><em>No</em> cambia el calendario de: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ul>
+      <li>Ciertos indios americanos y nativos de Alaska del grupo de adultos.</li>
+      <li>Las personas de otros grupos basados en ingresos, como los niños.</li>
+      <li>Las personas de grupos basados en la edad, una discapacidad u otros factores que no usan solo reglas de ingresos.</li>
+    </ul>
+    <p>Estas personas siguen renovando al menos cada 12 meses. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+
+    <h2>Cuándo pasa al calendario de 6 meses</h2>
+    <p><strong>Si presenta su solicitud y su cobertura comienza el 1 de enero de 2027 o después,</strong> su estado debe darle un período de elegibilidad de 6 meses. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <p><strong>Si ya tiene Medicaid el 1 de enero de 2027,</strong> su estado elige una de dos maneras de pasarlo al nuevo calendario. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ul>
+      <li><strong>Opción 1:</strong> El estado adelanta su renovación para acercarse lo más posible a un período de 6 meses. No puede adelantarla a una fecha anterior al 1 de enero de 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></li>
+      <li><strong>Opción 2:</strong> El estado mantiene su fecha de renovación actual. En esa primera renovación de 2027, usted recibe un período de 6 meses. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></li>
+    </ul>
+    <p>La opción que use su estado determina cuándo verá por primera vez el nuevo calendario. Revise los avisos de su estado. Sea cual sea el calendario, su estado también debe volver a revisar su caso entre renovaciones si ocurre algún cambio que pueda afectar su elegibilidad. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Un ejemplo de CMS</h2>
+    <p>Los Centros de Servicios de Medicare y Medicaid dan este ejemplo. Una persona presenta su solicitud el 5 de junio de 2027. Su estado comienza la cobertura el primer día del mes de la solicitud. Su período de elegibilidad va del 1 de junio al 30 de noviembre de 2027. El estado inicia la renovación unos 90 días antes de que termine el período. En el ejemplo de CMS, eso es el 1 de septiembre. Si la persona todavía califica, el siguiente período de 6 meses va del 1 de diciembre de 2027 al 31 de mayo de 2028. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+
+    <h2>Cómo es el proceso de renovación</h2>
+    <p>La regla cambia con qué frecuencia se renueva, no cómo. Los pasos siguen siendo los mismos: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+    <ol class="steps">
+      <li><strong>El estado revisa primero sus datos.</strong> Intenta renovar su cobertura sin comunicarse con usted, usando datos confiables que ya tiene.</li>
+      <li><strong>Si no puede, le envía un formulario ya llenado.</strong> Usted tiene al menos 30 días para devolver el formulario y los documentos que le pidan.</li>
+      <li><strong>Antes de terminar su cobertura,</strong> el estado debe revisar todas las maneras en que usted podría calificar. Debe avisarle con al menos 10 días de anticipación e informarle sobre su derecho a una audiencia imparcial.</li>
+    </ol>
+
+    <h2>Cómo mantener su cobertura</h2>
+    <ul>
+      <li><strong>Mantenga actualizados su dirección, teléfono y correo electrónico</strong> con la <a href="/es/state-medicaid.html">agencia estatal de Medicaid</a>.</li>
+      <li><strong>Abra todas las cartas de Medicaid.</strong> Anote la fecha límite.</li>
+      <li><strong>Devuelva el formulario a tiempo,</strong> aunque crea que nada cambió.</li>
+      <li><strong>Pida ayuda pronto.</strong> Su <a href="/es/ship-directory.html">SHIP</a> o un navegador local pueden ayudarle.</li>
+      <li><strong>Si termina su cobertura, actúe rápido.</strong> Consulte <a href="/es/lost-medicaid-what-now.html">¿Perdió Medicaid? ¿Qué hacer ahora?</a></li>
+    </ul>
+
+    <h2>Los requisitos de trabajo suman más trámites</h2>
+    <p>Muchas personas con renovaciones cada 6 meses también deberán demostrar "participación comunitaria" (trabajo u otra actividad similar) a partir del 1 de enero de 2027. Su estado lo revisará en cada renovación. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> Pero casi todas las personas del grupo de adultos renuevan cada 6 meses, sin importar si la regla de trabajo se aplica o no a ellas. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --> Consulte <a href="/es/medicaid-work-requirements.html">Requisitos de trabajo de Medicaid</a> para saber quiénes están exentos. Otro cambio de la misma ley acorta la <a href="/es/medicaid-retroactive-coverage-2027.html">cobertura retroactiva</a>. Para saber cómo funciona hoy la renovación, lea <a href="/es/medicaid-renewal.html">Renovación de Medicaid</a>.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Tengo que renovar Medicaid cada 6 meses?</summary>
+      <div>
+        <p>Si usted es un adulto de la expansión, casi siempre sí, a partir de las renovaciones programadas a partir del 1 de enero de 2027. La mayoría de los otros grupos mantienen el calendario de 12 meses. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Perderé mi cobertura por este cambio?</summary>
+      <div>
+        <p>No, si todavía califica y responde a los avisos de su estado. El principal riesgo es perder un aviso o entregar un formulario tarde.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Cuándo es mi próxima renovación?</summary>
+      <div>
+        <p>El aviso de su estado tiene la fecha. Si no está seguro, comuníquese con la agencia estatal de Medicaid.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Esto afecta a Medicare?</summary>
+      <div>
+        <p>No. Medicare tiene sus propias reglas. Si tiene Medicare y Medicaid, consulte la guía de Doble Elegibilidad, ya que su renovación de Medicaid sigue el calendario de su estado.</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>Verifique en la fuente.</strong> Este resumen sigue la <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/smd26001.pdf" rel="noopener">Carta n.º 26-001 de CMS para los directores estatales de Medicaid (6 de marzo de 2026)</a>. Los estados eligen algunos detalles, así que pregunte a la <a href="/es/state-medicaid.html">agencia estatal de Medicaid</a>. También puede leer nuestra página de <a href="/es/policy-changes.html">Cambios de políticas y reglas</a>.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicaid-six-month-renewals-2027.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

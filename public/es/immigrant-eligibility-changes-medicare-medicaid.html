@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cambios en la elegibilidad de inmigrantes: Medicaid y Medicare</title>
+<meta name="description" content="Una ley de 2025 limita los fondos federales de Medicaid y CHIP para muchos inmigrantes desde el 1 de octubre de 2026, y la elegibilidad para Medicare desde aproximadamente enero de 2027. Vea quién resulta afectado.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Cambios en la elegibilidad de inmigrantes: Medicaid y Medicare">
+<meta property="og:description" content="Una ley de 2025 limita los fondos federales de Medicaid y CHIP para muchos inmigrantes desde el 1 de octubre de 2026, y la elegibilidad para Medicare desde aproximadamente enero de 2027. Vea quién resulta afectado.">
+<meta property="og:url" content="https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Cambios en la elegibilidad de inmigrantes: Medicaid y Medicare">
+<meta name="twitter:description" content="Una ley de 2025 limita los fondos federales de Medicaid y CHIP para muchos inmigrantes desde el 1 de octubre de 2026, y la elegibilidad para Medicare desde aproximadamente enero de 2027. Vea quién resulta afectado.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Los refugiados y asilados aún pueden obtener Medicaid?", "acceptedAnswer": {"@type": "Answer", "text": "A partir del 1 de octubre de 2026, los fondos federales para Medicaid completo no están disponibles para refugiados y asilados, a menos que también tengan un estatus de la lista, como una tarjeta verde. Los niños y las mujeres embarazadas aún pueden calificar en los estados que usan la opción CHIPRA 214. Medicaid de emergencia continúa."}}, {"@type": "Question", "name": "¿Los titulares de la tarjeta verde pierden Medicaid?", "acceptedAnswer": {"@type": "Answer", "text": "No. Los residentes permanentes legales siguen en la lista. El Período de Espera de 5 años habitual aún se aplica a muchos de ellos."}}, {"@type": "Question", "name": "¿Sigue cubierta la atención de emergencia?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los fondos federales continúan para la atención que trata una afección médica de emergencia."}}, {"@type": "Question", "name": "¿Cuándo comienza el cambio de Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "La regla de Medicare de la ley comienza 18 meses después del 4 de julio de 2025, que es aproximadamente enero de 2027. Los Centros de Servicios de Medicare y Medicaid planean dar más guías."}}, {"@type": "Question", "name": "¿Solicitar beneficios perjudicará mi caso de inmigración?", "acceptedAnswer": {"@type": "Answer", "text": "Las reglas sobre eso son independientes de esta página. Hable con un grupo de asistencia legal en inmigración antes de decidir."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Cambios en la elegibilidad de inmigrantes: Medicaid y Medicare", "description": "Una ley de 2025 limita los fondos federales de Medicaid y CHIP para muchos inmigrantes desde el 1 de octubre de 2026, y la elegibilidad para Medicare desde aproximadamente enero de 2027. Vea quién resulta afectado.", "url": "https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Cambios en la elegibilidad de inmigrantes: Medicaid y Medicare", "item": "https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/immigrant-eligibility-changes-medicare-medicaid.html" lang="en">English</a>
+    <a href="/es/immigrant-eligibility-changes-medicare-medicaid.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Beneficiarios y Cuidadores</p>
+    <h1>Cambios en la elegibilidad de inmigrantes para Medicaid y Medicare</h1>
+    <p>Una ley federal de 2025 limita los fondos federales de Medicaid y CHIP, y la elegibilidad para Medicare, según el estatus migratorio. Esto es lo que dicen las fuentes oficiales.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> A partir del <strong>1 de octubre de 2026</strong>, el dinero federal de Medicaid y CHIP para beneficios completos se limita a los ciudadanos y nacionales de EE. UU., los titulares de la tarjeta verde (residentes permanentes legales), los entrantes cubanos y haitianos, y las personas de los Compactos de Libre Asociación (COFA). <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Esto significa que muchos refugiados, asilados y otras personas pierden los fondos federales de Medicaid. Los fondos federales para Medicaid de emergencia continúan. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> La misma ley limita <strong>Medicare</strong> para las personas que no son ciudadanas a esos mismos grupos, a partir de 18 meses después de que se convirtió en ley el 4 de julio de 2025. Eso es aproximadamente enero de 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <div class="note">
+      <strong>Qué es esta página.</strong> Es un resumen en lenguaje sencillo de la guía federal. No es asesoría legal. Las reglas varían según el estado, y los Centros de Servicios de Medicare y Medicaid dicen que habrá más guías. Si esto le afecta, hable con la agencia de Medicaid de su estado, un grupo de asistencia legal o su <a href="/es/ship-directory.html">SHIP</a>.
+    </div>
+
+    <h2>Medicaid y CHIP: qué cambió el 1 de octubre de 2026</h2>
+    <p>La Sección 71109 de la Ley Pública 119-21 limita los fondos federales (llamados "participación financiera federal") para Medicaid y CHIP. A partir del 1 de octubre de 2026, el gobierno federal pagará su parte solo para estos grupos: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <ul>
+      <li>Ciudadanos y nacionales de EE. UU.</li>
+      <li>Residentes permanentes legales (titulares de la tarjeta verde)</li>
+      <li>Entrantes cubanos y haitianos</li>
+      <li>Personas que viven en EE. UU. bajo un Compacto de Libre Asociación (migrantes COFA)</li>
+    </ul>
+    <p>Antes de esto, muchos otros "no ciudadanos calificados" podían obtener Medicaid o CHIP completo. Esto incluía a refugiados y asilados. Ellos ya estaban exentos del Período de Espera de 5 años. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> Los Centros de Servicios de Medicare y Medicaid dicen que los fondos federales ya no estarán disponibles para beneficios completos para asilados, refugiados, personas con permiso humanitario (parole) y víctimas de trata, a menos que también tengan un estatus o categoría de la lista anterior. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <h2>Lo que no cambia</h2>
+    <p>El límite de fondos no se aplica a: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+    <ul>
+      <li><strong>Medicaid de emergencia.</strong> Atención para tratar una afección médica de emergencia. Vea <a href="/es/emergency-medicaid.html">Medicaid de emergencia</a>.</li>
+      <li><strong>Niños y mujeres embarazadas que residen legalmente</strong> en estados que eligen esa opción (la "opción CHIPRA 214"). <!-- src: https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens --></li>
+      <li><strong>Ciertas iniciativas de servicios de salud de CHIP</strong> administradas por los estados.</li>
+    </ul>
+    <p>La ley no cambia el Período de Espera de 5 años que muchos titulares de la tarjeta verde aún enfrentan. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> Tampoco impide que un estado use su propio dinero para cubrir a alguien. Los Centros de Servicios de Medicare y Medicaid no exigirán que los estados lo hagan. Además, dicen que la cobertura que un estado paga solo con dinero estatal no se cuenta como Medicaid. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Qué pasa con las personas que tienen Medicaid ahora</h2>
+    <p>Los nuevos límites se aplican a las personas que ya están inscritas el 1 de octubre de 2026, no solo a los nuevos solicitantes. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Antes de terminar la cobertura, un estado debe dar aviso previo y el derecho a una audiencia imparcial. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> El estado también debe revisar si usted califica de alguna otra manera. Por ejemplo, un niño refugiado o una mujer refugiada embarazada aún puede calificar bajo la opción CHIPRA 214 del estado. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <p>Los Centros de Servicios de Medicare y Medicaid usan el término "beneficios completos de Medicaid y CHIP" para incluir beneficios parciales, como el Programa de Ahorro de Medicare. No incluye Medicaid de emergencia. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Si recibe ayuda de un Programa de Ahorro de Medicare, pregunte a su estado cómo se aplica esto a usted. Vea <a href="/es/medicare-savings-programs.html">Programas de Ahorro de Medicare</a>.</p>
+
+    <h2>Medicare: qué cambia alrededor de enero de 2027</h2>
+    <p>La Sección 71201 de la misma ley agrega una nueva regla para Medicare. Limita la elegibilidad para Medicare de las personas que no son ciudadanas a los mismos grupos que pueden obtener Medicaid completo con fondos federales: titulares de la tarjeta verde, entrantes cubanos y haitianos, y migrantes COFA. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Comienza 18 meses después de la fecha en que se firmó la ley. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> La ley se firmó el 4 de julio de 2025, así que eso es enero de 2027.</p>
+    <p>Los Centros de Servicios de Medicare y Medicaid dicen que darán más información sobre esta parte en guías posteriores. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Hasta entonces, los detalles completos no están definidos. Para saber cómo funciona Medicare hoy para los inmigrantes, incluyendo el historial de trabajo y la regla de 5 años, lea <a href="/es/medicare-immigrants.html">Medicare para inmigrantes y titulares de la tarjeta verde</a>.</p>
+
+    <h2>Otra cobertura que puede cambiar</h2>
+    <ul>
+      <li><strong>Créditos fiscales del Mercado de Seguros.</strong> Los Centros de Servicios de Medicare y Medicaid señalan que la ley también limita el Crédito Fiscal de Prima a las personas no ciudadanas que son "extranjeros elegibles" (titulares de la tarjeta verde, entrantes cubanos y haitianos, y migrantes COFA). Esto comienza en 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Vea <a href="/es/mixed-status-family-marketplace.html">Cobertura del Mercado de Seguros para familias de estatus mixto</a>.</li>
+      <li><strong>Inmigrantes mayores.</strong> Algunos estados cubren a los inmigrantes mayores con su propio dinero. Vea <a href="/es/state-health-coverage-older-immigrants.html">Cobertura de salud estatal para inmigrantes mayores</a>.</li>
+      <li><strong>Reglas del patrocinador.</strong> Algunas reglas de Medicaid cuentan los ingresos de un patrocinador. Vea <a href="/es/medicaid-sponsor-deeming.html">Atribución de ingresos del patrocinador en Medicaid</a>.</li>
+    </ul>
+
+    <h2>Qué puede hacer ahora</h2>
+    <ul>
+      <li><strong>Guarde sus documentos.</strong> Conserve la prueba de su estatus o categoría migratoria y todos los avisos de Medicaid.</li>
+      <li><strong>Lea las cartas de su estado.</strong> Le dirán si su cobertura va a cambiar y cómo pedir una audiencia.</li>
+      <li><strong>No deje de buscar atención en una emergencia.</strong> Medicaid de emergencia sigue disponible para las personas que cumplen con otras reglas del estado.</li>
+      <li><strong>Obtenga ayuda gratuita.</strong> Pruebe con la <a href="/es/state-medicaid.html">agencia de Medicaid de su estado</a>, su SHIP o un grupo de asistencia legal.</li>
+    </ul>
+    <p>Para ver una lista continua de los cambios federales, vea <a href="/es/policy-changes.html">Cambios de políticas y reglas</a>.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Los refugiados y asilados aún pueden obtener Medicaid?</summary>
+      <div>
+        <p>A partir del 1 de octubre de 2026, los fondos federales para Medicaid completo no están disponibles para refugiados y asilados, a menos que también tengan un estatus de la lista, como una tarjeta verde. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Los niños y las mujeres embarazadas aún pueden calificar en los estados que usan la opción CHIPRA 214. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Medicaid de emergencia continúa.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Los titulares de la tarjeta verde pierden Medicaid?</summary>
+      <div>
+        <p>No. Los residentes permanentes legales siguen en la lista. El Período de Espera de 5 años habitual aún se aplica a muchos de ellos. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Sigue cubierta la atención de emergencia?</summary>
+      <div>
+        <p>Sí. Los fondos federales continúan para la atención que trata una afección médica de emergencia. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Cuándo comienza el cambio de Medicare?</summary>
+      <div>
+        <p>La regla de Medicare de la ley comienza 18 meses después del 4 de julio de 2025, que es aproximadamente enero de 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Los Centros de Servicios de Medicare y Medicaid planean dar más guías.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Solicitar beneficios perjudicará mi caso de inmigración?</summary>
+      <div>
+        <p>Las reglas sobre eso son independientes de esta página. Hable con un grupo de asistencia legal en inmigración antes de decidir.</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>Verifique en la fuente.</strong> Lea la <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf" rel="noopener">carta a los funcionarios estatales de salud (8 de abril de 2026)</a>, el <a href="https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens" rel="noopener">anuncio de los Centros de Servicios de Medicare y Medicaid</a> y el <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf" rel="noopener">boletín de resumen de los Centros de Servicios de Medicare y Medicaid</a>. Luego consulte con su estado.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/immigrant-eligibility-changes-medicare-medicaid.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

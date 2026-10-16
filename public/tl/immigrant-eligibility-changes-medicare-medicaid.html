@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante: Medicaid at Medicare</title>
+<meta name="description" content="Nililimitahan ng batas noong 2025 ang pederal na pondo ng Medicaid at CHIP para sa maraming imigrante simula Oct 1, 2026, at ang pagiging karapat-dapat sa Medicare mula humigit-kumulang Enero 2027. Alamin kung sino ang apektado.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante: Medicaid at Medicare">
+<meta property="og:description" content="Nililimitahan ng batas noong 2025 ang pederal na pondo ng Medicaid at CHIP para sa maraming imigrante simula Oct 1, 2026, at ang pagiging karapat-dapat sa Medicare mula humigit-kumulang Enero 2027. Alamin kung sino ang apektado.">
+<meta property="og:url" content="https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante: Medicaid at Medicare">
+<meta name="twitter:description" content="Nililimitahan ng batas noong 2025 ang pederal na pondo ng Medicaid at CHIP para sa maraming imigrante simula Oct 1, 2026, at ang pagiging karapat-dapat sa Medicare mula humigit-kumulang Enero 2027. Alamin kung sino ang apektado.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Maaari pa bang makakuha ng Medicaid ang mga refugee at asylee?", "acceptedAnswer": {"@type": "Answer", "text": "Mula Oktubre 1, 2026, hindi available ang pederal na pondo para sa buong Medicaid para sa mga refugee at asylee maliban kung mayroon din silang katayuang nasa listahan, tulad ng green card. Maaari pa ring maging kwalipikado ang mga bata at buntis sa mga estadong gumagamit ng CHIPRA 214 option. Nananatili ang emergency Medicaid."}}, {"@type": "Question", "name": "Nawawalan ba ng Medicaid ang mga may green card?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Nananatili sa listahan ang mga lawful permanent resident. Nalalapat pa rin sa marami sa kanila ang karaniwang 5-taong Panahon ng Paghihintay."}}, {"@type": "Question", "name": "Saklaw pa ba ang pangangalaga sa emerhensiya?", "acceptedAnswer": {"@type": "Answer", "text": "Oo. Magpapatuloy ang pederal na pondo para sa pangangalagang gumagamot sa isang medikal na emerhensiya."}}, {"@type": "Question", "name": "Kailan magsisimula ang pagbabago sa Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "Magsisimula ang patakaran ng batas tungkol sa Medicare 18 buwan matapos ang Hulyo 4, 2025, na humigit-kumulang Enero 2027. Nagpaplano ang CMS ng karagdagang gabay."}}, {"@type": "Question", "name": "Makakasama ba sa kaso ko sa imigrasyon ang pag-a-apply para sa mga benepisyo?", "acceptedAnswer": {"@type": "Answer", "text": "Hiwalay sa pahinang ito ang mga patakaran tungkol diyan. Kausapin ang isang legal aid group sa imigrasyon bago ka magpasya."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante: Medicaid at Medicare", "description": "Nililimitahan ng batas noong 2025 ang pederal na pondo ng Medicaid at CHIP para sa maraming imigrante simula Oct 1, 2026, at ang pagiging karapat-dapat sa Medicare mula humigit-kumulang Enero 2027. Alamin kung sino ang apektado.", "url": "https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-16", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/immigrant-eligibility-changes-medicare-medicaid.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante: Medicaid at Medicare", "item": "https://mediprimer.org/tl/immigrant-eligibility-changes-medicare-medicaid.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/immigrant-eligibility-changes-medicare-medicaid.html" lang="en">English</a>
+    <a href="/es/immigrant-eligibility-changes-medicare-medicaid.html" lang="es">Español</a>
+    <a href="/zh-Hant/immigrant-eligibility-changes-medicare-medicaid.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/immigrant-eligibility-changes-medicare-medicaid.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/immigrant-eligibility-changes-medicare-medicaid.html" lang="ko">한국어</a>
+    <a href="/tl/immigrant-eligibility-changes-medicare-medicaid.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Mga Pagbabago sa Pagiging Karapat-dapat ng mga Imigrante para sa Medicaid at Medicare</h1>
+    <p>Nililimitahan ng isang pederal na batas noong 2025 ang pederal na pondo ng Medicaid at CHIP, at ang pagiging karapat-dapat sa Medicare, batay sa katayuan sa imigrasyon. Narito ang sinasabi ng mga opisyal na pinagmulan.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Simula <strong>Oktubre 1, 2026</strong>, ang pederal na pondo ng Medicaid at CHIP para sa buong benepisyo ay limitado sa mga mamamayan at nasyonal ng U.S., mga may green card (lawful permanent residents), mga Cuban at Haitian entrant, at mga tao mula sa Compacts of Free Association (COFA). <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Ibig sabihin nito, maraming refugee, asylee, at iba pa ang mawawalan ng pederal na pondo ng Medicaid. Magpapatuloy ang pederal na pondo para sa emergency Medicaid. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> Nililimitahan din ng parehong batas ang <strong>Medicare</strong> para sa mga hindi mamamayan sa parehong mga grupo, simula 18 buwan matapos itong maging batas noong Hulyo 4, 2025. Iyon ay humigit-kumulang Enero 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <div class="note">
+      <strong>Ano ang pahinang ito.</strong> Ito ay buod sa simpleng wika ng pederal na gabay. Hindi ito legal na payo. Iba-iba ang mga patakaran sa bawat estado, at sinasabi ng Mga Sentro para sa mga Serbisyo ng Medicare at Medicaid (CMS) na may darating pang karagdagang gabay. Kung may epekto ito sa iyo, kausapin ang ahensya ng Medicaid ng iyong estado, isang legal aid group, o ang iyong <a href="/tl/ship-directory.html">SHIP</a>.
+    </div>
+
+    <h2>Medicaid at CHIP: ano ang nagbago noong Oktubre 1, 2026</h2>
+    <p>Nililimitahan ng Section 71109 ng Public Law 119-21 ang pederal na pondo (tinatawag na "federal financial participation") para sa Medicaid at CHIP. Mula Oktubre 1, 2026, babayaran lamang ng pederal na pamahalaan ang bahagi nito para sa mga sumusunod na grupo: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <ul>
+      <li>Mga mamamayan ng U.S. at mga nasyonal ng U.S.</li>
+      <li>Mga lawful permanent resident (mga may green card)</li>
+      <li>Mga Cuban at Haitian entrant</li>
+      <li>Mga taong nakatira sa U.S. sa ilalim ng Compact of Free Association (mga migranteng COFA)</li>
+    </ul>
+    <p>Bago nito, maraming iba pang "qualified noncitizen" ang maaaring makakuha ng buong Medicaid o CHIP. Kasama rito ang mga refugee at asylee. Exempted na sila noon pa sa 5-taong Panahon ng Paghihintay. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> Sinasabi ng CMS na hindi na magiging available ang pederal na pondo para sa buong benepisyo para sa mga asylee, refugee, parolee, at biktima ng human trafficking, maliban kung mayroon din silang katayuan o kategorya na nasa listahan sa itaas. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+
+    <h2>Ano ang hindi nagbago</h2>
+    <p>Hindi nalalapat ang limitasyon sa pondo sa: <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+    <ul>
+      <li><strong>Emergency Medicaid.</strong> Pangangalaga para gamutin ang isang medikal na emerhensiya. Tingnan ang <a href="/tl/emergency-medicaid.html">Emergency Medicaid</a>.</li>
+      <li><strong>Mga batang legal na naninirahan at mga buntis</strong> sa mga estadong pumipili ng opsyong iyon (ang "CHIPRA 214 option"). <!-- src: https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens --></li>
+      <li><strong>Ilang CHIP health services initiative</strong> na pinapatakbo ng mga estado.</li>
+    </ul>
+    <p>Hindi binabago ng batas ang 5-taong Panahon ng Paghihintay na kinakaharap pa rin ng maraming may green card. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --> Hindi rin nito pinipigilan ang isang estado na gamitin ang sarili nitong pera para saklawin ang isang tao. Hindi ipipilit ng CMS sa mga estado na gawin ito. Sinasabi rin ng CMS na ang saklaw na binabayaran ng estado gamit lamang ang pera ng estado ay hindi ibinibilang bilang Medicaid. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Ano ang mangyayari sa mga taong may Medicaid ngayon</h2>
+    <p>Nalalapat ang mga bagong limitasyon sa mga taong naka-enroll na sa Oktubre 1, 2026, hindi lamang sa mga bagong nag-a-apply. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Bago tapusin ang saklaw, dapat magbigay ang estado ng paunang abiso at ng karapatan sa patas na pagdinig. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Dapat ding suriin ng estado kung kwalipikado ka sa ibang paraan. Halimbawa, ang batang refugee o buntis na refugee ay maaari pa ring maging kwalipikado sa ilalim ng CHIPRA 214 option ng estado. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --></p>
+    <p>Ginagamit ng CMS ang katagang "full Medicaid and CHIP benefits" para isama ang bahagyang benepisyo, tulad ng Programa ng Pag-iimpok ng Medicare. Hindi nito kasama ang emergency Medicaid. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Kung tumatanggap ka ng tulong mula sa isang Programa ng Pag-iimpok ng Medicare, itanong sa iyong estado kung paano ito nalalapat sa iyo. Tingnan ang <a href="/tl/medicare-savings-programs.html">Mga Programa ng Pag-iimpok ng Medicare</a>.</p>
+
+    <h2>Medicare: ano ang nagbabago sa paligid ng Enero 2027</h2>
+    <p>Nagdaragdag ang Section 71201 ng parehong batas ng bagong patakaran para sa Medicare. Nililimitahan nito ang pagiging karapat-dapat sa Medicare para sa mga hindi mamamayan sa parehong mga grupong maaaring makakuha ng buong Medicaid na may pederal na pondo: mga may green card, mga Cuban at Haitian entrant, at mga migranteng COFA. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Magsisimula ito 18 buwan matapos ang petsa nang lagdaan ang batas. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Nilagdaan ang batas noong Hulyo 4, 2025, kaya Enero 2027 iyon.</p>
+    <p>Sinasabi ng CMS na magbibigay ito ng karagdagang impormasyon tungkol sa bahaging ito sa mga susunod na gabay. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Hanggang sa panahong iyon, hindi pa tiyak ang buong detalye. Para malaman kung paano gumagana ang Medicare para sa mga imigrante ngayon, kasama ang kasaysayan ng trabaho at ang 5-taong patakaran, basahin ang <a href="/tl/medicare-immigrants.html">Medicare para sa mga Imigrante at mga May Green Card</a>.</p>
+
+    <h2>Iba pang saklaw na maaaring magbago</h2>
+    <ul>
+      <li><strong>Mga tax credit ng Marketplace.</strong> Binabanggit ng CMS na nililimitahan din ng batas ang Kredito sa Buwis ng Premium para sa mga hindi mamamayang "eligible alien" (mga may green card, mga Cuban at Haitian entrant, at mga migranteng COFA). Magsisimula ito sa 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Tingnan ang <a href="/tl/mixed-status-family-marketplace.html">Saklaw ng Marketplace para sa mga Pamilyang may Magkakaibang Katayuan</a>.</li>
+      <li><strong>Mga matatandang imigrante.</strong> Sinasaklaw ng ilang estado ang mga matatandang imigrante gamit ang sarili nilang pera. Tingnan ang <a href="/tl/state-health-coverage-older-immigrants.html">Saklaw na Pangkalusugan ng Estado para sa mga Matatandang Imigrante</a>.</li>
+      <li><strong>Mga patakaran sa sponsor.</strong> Ibinibilang ng ilang patakaran ng Medicaid ang kita ng isang sponsor. Tingnan ang <a href="/tl/medicaid-sponsor-deeming.html">Sponsor Deeming sa Medicaid</a>.</li>
+    </ul>
+
+    <h2>Ano ang magagawa mo ngayon</h2>
+    <ul>
+      <li><strong>Itago ang iyong mga papeles.</strong> Itago ang patunay ng iyong katayuan o kategorya sa imigrasyon, at ang bawat abiso ng Medicaid.</li>
+      <li><strong>Basahin ang mga liham ng iyong estado.</strong> Sasabihin dito kung nagbabago ang iyong saklaw at kung paano humiling ng pagdinig.</li>
+      <li><strong>Huwag ipagpaliban ang pangangalaga sa emerhensiya.</strong> Magagamit pa rin ang emergency Medicaid ng mga taong tumutugon sa iba pang patakaran ng estado.</li>
+      <li><strong>Humingi ng libreng tulong.</strong> Subukan ang <a href="/tl/state-medicaid.html">ahensya ng Medicaid ng iyong estado</a>, ang iyong SHIP, o isang legal aid group.</li>
+    </ul>
+    <p>Para sa tuloy-tuloy na listahan ng mga pederal na pagbabago, tingnan ang <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Panuntunan</a>.</p>
+
+    <h2>Mga Karaniwang Tanong</h2>
+
+    <details class="qa">
+      <summary>Maaari pa bang makakuha ng Medicaid ang mga refugee at asylee?</summary>
+      <div>
+        <p>Mula Oktubre 1, 2026, hindi available ang pederal na pondo para sa buong Medicaid para sa mga refugee at asylee maliban kung mayroon din silang katayuang nasa listahan, tulad ng green card. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Maaari pa ring maging kwalipikado ang mga bata at buntis sa mga estadong gumagamit ng CHIPRA 214 option. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Nananatili ang emergency Medicaid.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Nawawalan ba ng Medicaid ang mga may green card?</summary>
+      <div>
+        <p>Hindi. Nananatili sa listahan ang mga lawful permanent resident. Nalalapat pa rin sa marami sa kanila ang karaniwang 5-taong Panahon ng Paghihintay. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Saklaw pa ba ang pangangalaga sa emerhensiya?</summary>
+      <div>
+        <p>Oo. Magpapatuloy ang pederal na pondo para sa pangangalagang gumagamot sa isang medikal na emerhensiya. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Kailan magsisimula ang pagbabago sa Medicare?</summary>
+      <div>
+        <p>Magsisimula ang patakaran ng batas tungkol sa Medicare 18 buwan matapos ang Hulyo 4, 2025, na humigit-kumulang Enero 2027. <!-- src: https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf --> Nagpaplano ang CMS ng karagdagang gabay.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Makakasama ba sa kaso ko sa imigrasyon ang pag-a-apply para sa mga benepisyo?</summary>
+      <div>
+        <p>Hiwalay sa pahinang ito ang mga patakaran tungkol diyan. Kausapin ang isang legal aid group sa imigrasyon bago ka magpasya.</p>
+      </div>
+    </details>
+
+
+    <div class="note">
+      <strong>I-verify sa pinagmulan.</strong> Basahin ang <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/sho26001.pdf" rel="noopener">State Health Official letter ng CMS (Abril 8, 2026)</a>, ang <a href="https://www.cms.gov/newsroom/press-releases/cms-issues-guidance-implement-new-limits-federal-medicaid-chip-funding-certain-noncitizens" rel="noopener">anunsyo ng CMS</a>, at ang <a href="https://www.medicaid.gov/federal-policy-guidance/downloads/cib11182025.pdf" rel="noopener">buod na bulletin ng CMS</a>. Pagkatapos, magtanong sa iyong estado.
+    </div>
+
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/immigrant-eligibility-changes-medicare-medicaid.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
