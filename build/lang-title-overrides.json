@@ -8,17 +8,29 @@
   },
   "brokers.html": {
    "title": "Apoyo a agentes de seguros: licencias y Medicare",
-   "description": "Apoyo a agentes de seguros: guía educativa sobre licencias, cumplimiento de Medicare, regulaciones de CMS y obligaciones profesionales.",
+   "description": "Apoyo a agentes de seguros: guía educativa sobre licencias, cumplimiento de Medicare, normas de CMS y obligaciones profesionales.",
    "query": "apoyo a agentes de seguros",
-   "set": "2026-10-13"
+   "set": "2026-10-20"
+  },
+  "emergency-medicaid.html": {
+   "title": "Medicaid de emergencia: quién califica y qué paga",
+   "description": "Medicaid de emergencia paga la atención hospitalaria urgente, incluido el parto, si no puede recibir Medicaid regular por su estatus migratorio.",
+   "query": "medicaid de emergencia",
+   "set": "2026-10-20"
+  },
+  "medicare-vs-medicaid.html": {
+   "title": "Diferencia entre Medicare y Medicaid: lado a lado",
+   "description": "Medicare cubre a personas de 65 años o más o con discapacidades; Medicaid, a personas de bajos ingresos. Vea las diferencias y la doble elegibilidad.",
+   "query": "diferencia entre medicare y medicaid",
+   "set": "2026-10-20"
   }
  },
  "zh-Hant": {
   "medicaid-starting-out.html": {
-   "title": "Medicaid 中文指南：新手入門 — MediPrimer",
-   "description": "以淺顯易懂的中文介紹Medicaid：是什麼、與Medicare的差異、資格與申請下一步。",
-   "query": "medicaid 中文",
-   "set": "2026-09-15"
+   "title": "Medicaid 是什麼？中文入門指南、資格與申請",
+   "description": "以淺顯易懂的中文說明 Medicaid：是什麼、與 Medicare 的差異、資格條件，以及申請的下一步。",
+   "query": "medicaid",
+   "set": "2026-10-20"
   }
  }
 }
