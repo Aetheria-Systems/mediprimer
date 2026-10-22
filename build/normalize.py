@@ -175,6 +175,11 @@ ACTIVE = {
     # Content-gap pages (2026-10-08)
     "medicare-drug-price-negotiation-2027.html": "members", "medicare-advantage-open-enrollment-period.html": "members",
     "medicare-alzheimers-dementia-coverage.html": "members", "state-health-coverage-older-immigrants.html": "members",
+    # Content-gap pages (2026-10-22)
+    "medicare-out-of-pocket-maximum.html": "members",
+    "medigap-open-enrollment-guaranteed-issue.html": "members",
+    "cancel-medicare-part-b.html": "members",
+    "totalization-agreements-medicare-40-quarters.html": "members",
     # For Professionals + pro depth
     "professionals.html": "professionals", "operations.html": "professionals",
     "providers.html": "professionals", "brokers.html": "professionals",
