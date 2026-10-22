@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicare Out-of-Pocket Maximum: Who Has One and Who Doesn't</title>
+<meta name="description" content="Original Medicare has no yearly out-of-pocket maximum. Medicare Advantage plans do. See how the limit works, what it covers, and ways to cap your costs.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Medicare Out-of-Pocket Maximum: Who Has One and Who Doesn't">
+<meta property="og:description" content="Original Medicare has no yearly out-of-pocket maximum. Medicare Advantage plans do. See how the limit works, what it covers, and ways to cap your costs.">
+<meta property="og:url" content="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Medicare Out-of-Pocket Maximum: Who Has One and Who Doesn't">
+<meta name="twitter:description" content="Original Medicare has no yearly out-of-pocket maximum. Medicare Advantage plans do. See how the limit works, what it covers, and ways to cap your costs.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Does Original Medicare have an out-of-pocket maximum?", "acceptedAnswer": {"@type": "Answer", "text": "No. There is no yearly limit on what you pay out of pocket in Original Medicare, unless you have other coverage like Medigap or a Medicare Advantage plan."}}, {"@type": "Question", "name": "Does every Medicare Advantage plan have the same limit?", "acceptedAnswer": {"@type": "Answer", "text": "No. The yearly limit varies by plan. Check your own plan's number in its letter or in Plan Finder."}}, {"@type": "Question", "name": "What happens when I reach my plan's limit?", "acceptedAnswer": {"@type": "Answer", "text": "The plan pays 100% of your covered health services for the rest of the calendar year."}}, {"@type": "Question", "name": "Is there a cap on Medicare drug costs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Part D has a yearly cap on drug costs, and it changes each year. See the official Medicare Part D costs page for the current number."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Medicare Out-of-Pocket Maximum: Who Has One and Who Doesn't", "description": "Original Medicare has no yearly out-of-pocket maximum. Medicare Advantage plans do. See how the limit works, what it covers, and ways to cap your costs.", "url": "https://mediprimer.org/medicare-out-of-pocket-maximum.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Medicare Out-of-Pocket Maximum: Who Has One and Who Doesn't", "item": "https://mediprimer.org/medicare-out-of-pocket-maximum.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Medicare Out-of-Pocket Maximum: Who Has One?</h1>
+    <p>Original Medicare has no yearly cap on what you pay. Medicare Advantage plans do. Here is how the limit works, what it covers, and how it differs from the drug cap.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> Original Medicare has no yearly limit on what you pay out of pocket. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Medicare Advantage plans do have a yearly limit. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Once you reach your plan's limit, the plan pays 100% of your covered health services for the rest of the calendar year. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> The limit is set by each plan, so it is not the same for everyone. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Your drug plan has its own separate yearly cap. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+
+    <div class="note">
+      <strong>Look up your own number.</strong> We do not list a 2027 Medicare Advantage dollar limit here, because each plan sets its own. Your plan's letter, your <a href="/medicare-annual-notice-of-change.html">Annual Notice of Change</a>, and <a href="/using-plan-finder.html">Medicare Plan Finder</a> show the exact limit for your plan.
+    </div>
+
+    <h2>Original Medicare: no yearly limit</h2>
+    <p>In Original Medicare, you pay deductibles, copayments, and coinsurance. Most Part B services cost 20% of the Medicare-approved amount after you pay the deductible. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> </p>
+    <p>The same page says there is no limit on what you pay out of pocket, unless you have other coverage. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> The most common kinds of other coverage are:</p>
+    <ul>
+      <li>A <a href="/medigap.html">Medigap policy</a>, which helps pay your share of costs.</li>
+      <li>A <a href="/medicare-advantage.html">Medicare Advantage plan</a>, which has its own yearly limit.</li>
+      <li>Employer, retiree, or union coverage, or Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+
+    <h2>Medicare Advantage: a yearly limit that varies by plan</h2>
+    <p>Medicare Advantage plans cap what you pay for covered services. The limit varies by plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Some plans have different limits for in-network and out-of-network care. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> If you use only in-network providers, the in-network limit is the one that matters. Check your plan's rules before you go out of network.</p>
+    <p>The limit applies to the Part A and Part B services your plan covers. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Once you reach it, you pay nothing more for those services that year. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Two things to keep in mind:</p>
+    <ul>
+      <li><strong>It resets each year.</strong> The limit runs on the calendar year. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>It is not a promise of low costs.</strong> You can pay a lot before you reach the limit. Compare the copayments and coinsurance too. See <a href="/medicare-plan-comparison-2027.html">Medicare plan comparison for 2027</a>.</li>
+    </ul>
+    <p>Plan limits can change from year to year. Always read the number for the year you are choosing. See <a href="/medicare-costs-2027.html">Medicare costs in 2027</a> for the official 2027 figures we have verified.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. After that, a short email only when something changes, never more than one a week. No ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Side by side</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Coverage</th><th>Yearly out-of-pocket limit?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Original Medicare (Parts A and B)</td><td>No limit on its own. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Medicare Advantage plan</td><td>Yes. It varies by plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Medigap Plan K or Plan L</td><td>Yes. Plan K's limit is $8,000 and Plan L's is $4,000 in 2026. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td></tr>
+          <tr><td>Other Medigap plans</td><td>No separate limit. They pay a set share of your costs. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></td></tr>
+          <tr><td>Part D drug coverage</td><td>Yes. A separate cap on covered drugs. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>The drug cap is separate</h2>
+    <p>Drug costs have their own cap. It is separate from the medical limit in a Medicare Advantage plan. In 2026, the Part D cap is $2,100. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> In 2027, it is $2,400. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> It includes your deductible, your spending, and certain payments made for you, like through the Extra Help program. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <p>Most Medicare Advantage plans include drug coverage. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> If yours does, the drug cap still applies on its own. See <a href="/medicare-part-d.html">Part D</a> for how the drug stages work.</p>
+
+    <h2>How people cap their costs</h2>
+    <p>These are the main ways to limit what you could owe. MediPrimer does not say which is best. The right fit depends on your health, your budget, and the doctors you use. See <a href="/choosing-coverage.html">Choosing Coverage</a> and <a href="/plan-types.html">Plan Types</a>.</p>
+    <ol class="steps">
+      <li><strong>Join a Medicare Advantage plan.</strong> The plan's yearly limit caps your covered Part A and Part B costs.</li>
+      <li><strong>Add a Medigap policy to Original Medicare.</strong> Medigap helps pay your share of costs. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Read the <a href="/medigap.html">Medigap guide</a> and the rules on <a href="/medicare-advantage-vs-medigap-underwriting.html">buying Medigap later</a>.</li>
+      <li><strong>Use other coverage you already have.</strong> This could be employer, retiree, or union coverage, or Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Ask about help with costs.</strong> If your income is limited, a <a href="/medicare-savings-programs.html">Medicare Savings Program</a> or <a href="/extra-help-low-income-subsidy.html">Extra Help</a> may lower your costs.</li>
+    </ol>
+    <p>If you are choosing a plan this fall, see <a href="/medicare-open-enrollment-2027.html">Medicare Open Enrollment 2027</a> for dates and a checklist.</p>
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Does Original Medicare have an out-of-pocket maximum?</summary>
+      <div>
+        <p>No. There is no yearly limit on what you pay out of pocket in Original Medicare, unless you have other coverage like Medigap or a Medicare Advantage plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does every Medicare Advantage plan have the same limit?</summary>
+      <div>
+        <p>No. The yearly limit varies by plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Check your own plan's number in its letter or in Plan Finder.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>What happens when I reach my plan's limit?</summary>
+      <div>
+        <p>The plan pays 100% of your covered health services for the rest of the calendar year. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Is there a cap on Medicare drug costs?</summary>
+      <div>
+        <p>Yes. Part D has a yearly cap on drug costs, and it changes each year. See the <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs">official Medicare Part D costs page</a> for the current number.</p>
+      </div>
+    </details>
+
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Costs</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Part D costs</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Medicare &amp; You handbook (Medicare.gov)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. Limits and plan rules change each year. Confirm your plan's limit in its own documents or on Medicare.gov.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

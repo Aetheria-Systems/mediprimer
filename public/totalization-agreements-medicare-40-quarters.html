@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Foreign Work Credits and Medicare Part A: 40 Quarters Rule</title>
+<meta name="description" content="Totalization agreements can count foreign credits for Social Security, but not for free Medicare Part A. See why, and what your options are.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Foreign Work Credits and Medicare Part A: 40 Quarters Rule">
+<meta property="og:description" content="Totalization agreements can count foreign credits for Social Security, but not for free Medicare Part A. See why, and what your options are.">
+<meta property="og:url" content="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Foreign Work Credits and Medicare Part A: 40 Quarters Rule">
+<meta name="twitter:description" content="Totalization agreements can count foreign credits for Social Security, but not for free Medicare Part A. See why, and what your options are.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Do my Korean work credits count toward the 40 quarters for Part A?", "acceptedAnswer": {"@type": "Answer", "text": "No. Social Security says the agreement does not cover Medicare benefits, so it cannot count credits earned in an agreement country to qualify you for free Medicare hospital insurance."}}, {"@type": "Question", "name": "Can Korean credits help with Social Security retirement benefits?", "acceptedAnswer": {"@type": "Answer", "text": "Sometimes. You need at least six U.S. credits for Korean credits to be counted, and the U.S. cannot count them if you already have enough U.S. credits."}}, {"@type": "Question", "name": "Can I still get Medicare without 40 quarters?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, in many cases. You may qualify through a spouse's U.S. work, or you may buy Part A and Part B. The rules on age and residency apply."}}, {"@type": "Question", "name": "Does my spouse's work in the U.S. help me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Premium-free Part A can be based on your own earnings or on those of a spouse, parent, or child."}}]}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Foreign Work Credits and Medicare Part A: 40 Quarters Rule", "description": "Totalization agreements can count foreign credits for Social Security, but not for free Medicare Part A. See why, and what your options are.", "url": "https://mediprimer.org/totalization-agreements-medicare-40-quarters.html", "inLanguage": "en-US", "datePublished": "2026-07-12", "dateModified": "2026-10-22", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/"}, {"@type": "ListItem", "position": 2, "name": "Foreign Work Credits and Medicare Part A: 40 Quarters Rule", "item": "https://mediprimer.org/totalization-agreements-medicare-40-quarters.html"}]}</script>
+<!--/seo-->
+</head>
+<body>
+<!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><span class="mark">MP</span> MediPrimer</a>
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/turning-65.html" class="navtop active">Start Here</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Start Here menu">▾</button>
+        <div class="dropdown">
+        <a href="/turning-65.html" class="star">★ Turning 65: Start Here</a>
+        <a href="/planning-for-two.html">Medicare for Couples</a>
+        <a href="/choosing-coverage.html">Choosing Coverage</a>
+        <a href="/costs.html">Understanding Your Costs</a>
+        <a href="/enrollment.html">Enrollment &amp; Deadlines</a>
+        <a href="/getting-help.html">Getting Help Paying</a>
+        <a href="/questions-to-ask.html">Questions to Ask</a>
+        <a href="/edge-cases.html">Edge Cases &amp; Complications</a>
+        <a href="/members.html">All Member guides →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/basics.html" class="navtop">Learn the Basics</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Learn the Basics menu">▾</button>
+        <div class="dropdown">
+        <a href="/coverage-basics.html">Coverage Basics</a>
+        <a href="/plan-types.html">Plan Types</a>
+        <a href="/medigap.html">Medigap Plans</a>
+        <a href="/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/marketplace.html">The Marketplace (ACA)</a>
+        <a href="/cms-updates.html">How Programs Are Governed</a>
+        <a href="/policy-changes.html">Policy &amp; Rule Changes</a>
+        <a href="/basics.html">All Basics →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/directories.html" class="navtop">Find Help</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open Find Help menu">▾</button>
+        <div class="dropdown">
+        <a href="/state-medicaid.html">State Medicaid</a>
+        <a href="/ship-directory.html">SHIP (Medicare help)</a>
+        <a href="/insurance-departments.html">Insurance Departments</a>
+        <a href="/resources.html">All Resources</a>
+        <a href="/checklists.html">Printable Checklists</a>
+        <a href="/directories.html">Directories home →</a>
+        </div>
+      </div>
+      <a href="/glossary.html" class="navtop">Glossary</a>
+      <div class="navitem has-menu">
+        <a href="/professionals.html" class="navtop">For Partners &amp; Pros</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Open For Partners &amp; Pros menu">▾</button>
+        <div class="dropdown">
+        <a href="/partner-materials.html" class="star">★ Free Materials to Hand Out</a>
+        <a href="/operations.html">Health-Plan Operations</a>
+        <a href="/providers.html">Providers &amp; Billing</a>
+        <a href="/brokers.html">Brokers &amp; Advisors</a>
+        <a href="/navigators.html">Case Managers &amp; Navigators</a>
+        <a href="/star-ratings.html">Star Ratings &amp; Quality</a>
+        <a href="/appeals-timelines.html">Appeals: Levels &amp; Timelines</a>
+        <a href="/professionals.html">All Professional refs →</a>
+        </div>
+      </div>
+      <a href="/about.html" class="navtop">About</a>
+    </nav>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <p class="kicker">For Members &amp; Caregivers</p>
+    <h1>Totalization Agreements and the Medicare 40-Quarters Rule</h1>
+    <p>Work credits from Korea or another agreement country do not count toward free Part A. Here is why, and how you can still get Medicare.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Here's the short answer.</strong> Work you did in another country, such as Korea, does not count toward free Medicare Part A. Social Security has agreements with other countries, called totalization agreements. They can count your foreign credits toward U.S. retirement, disability, or survivor benefits. But Social Security says the agreements do not cover Medicare benefits, so it cannot count those credits to qualify you for free Medicare hospital insurance. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Free Part A generally needs about 10 years of U.S. work, or 40 quarters, by you or your spouse. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+
+    <div class="note">
+      <strong>No free Part A does not mean no Medicare.</strong> You may still be able to buy Part A and Part B. See the "If you don't have 40 quarters" section below and our guide to <a href="/medicare-immigrants.html">Medicare for immigrants</a>.
+    </div>
+
+    <h2>What a totalization agreement does</h2>
+    <p>These agreements have two main purposes. First, they stop people from paying Social Security taxes to two countries on the same earnings. Second, they help workers who split their careers between the United States and another country. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+    <p>The United States has agreements with about 30 countries, including South Korea. <!-- src: https://www.ssa.gov/international/agreements_overview.html --> The Korea agreement took effect on April 1, 2001. <!-- src: https://www.ssa.gov/international/agreements_overview.html --></p>
+    <p>For the United States, the agreements cover Social Security taxes, Medicare taxes, and retirement, disability, and survivors benefits. They do not cover benefits under the Medicare program. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> That one sentence explains most of the confusion.</p>
+
+    <h2>Why foreign credits do not count for Part A</h2>
+    <p>Social Security says it cannot count your credits in an agreement country to establish entitlement to free Medicare hospital insurance. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Part A is the hospital part of Medicare. Premium-free Part A depends on U.S. work and U.S. Medicare taxes. Medicare says most people get it because they or a spouse paid Medicare taxes long enough while working, generally at least 10 years. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>What you want</th><th>Can foreign credits help?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>U.S. Social Security retirement, disability, or survivor benefits</td><td>Sometimes. Social Security may count them if you meet the agreement's rules. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Free (premium-free) Medicare Part A</td><td>No. Foreign credits cannot be counted for this. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Buying Part A or Part B</td><td>Not needed. You use other rules, such as age and residency. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>The Korea example</h2>
+    <p>Say you worked for years under Korea's National Pension system. You then move to the U.S. and work here for a few years. For Social Security retirement benefits, the agreement can help in a narrow way. To have your Korean credits counted, you must have earned at least six U.S. credits, generally one and one-half years of work. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --> If you already have enough U.S. credits, the U.S. cannot count your Korean credits. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+    <p>The U.S. needs 10 years of work, or 40 credits, for retirement benefits if you were born in 1929 or later. <!-- src: https://www.ssa.gov/pubs/EN-05-10072.pdf --> In 2026, you earn one credit for each $1,890 of earnings, up to four credits a year. <!-- src: https://www.ssa.gov/oact/cola/QC.html --> None of this changes the Medicare rule above. Your Korean credits may help your Social Security pension, but they do not make Part A free.</p>
+    <p>The same logic applies to every agreement country, not just Korea.</p>
+
+    <h2>If you don't have 40 quarters</h2>
+    <p>You may still be able to get Medicare. These are the main routes:</p>
+    <ul>
+      <li><strong>A spouse's work.</strong> Premium-free Part A can be based on your own earnings or on those of a spouse, parent, or child. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Only U.S. work counts toward this, so your spouse's U.S. record matters. See <a href="/planning-for-two.html">Medicare for Couples</a> and <a href="/medicare-spouse-work-record.html">using a spouse's work record</a>.</li>
+      <li><strong>U.S. government work.</strong> Time in a government job where you paid Medicare taxes can count. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Buy Part A.</strong> If you don't qualify for free Part A, you may be able to buy it. In 2026 the price is $311 or $565 a month, depending on how long you or your spouse worked and paid Medicare taxes. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> To buy Part A, you must also sign up for Part B. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Buy Part B only.</strong> If you aren't eligible for free Part A, you can buy Part B without Part A. You must be 65 or older, and either a U.S. citizen or a lawfully admitted noncitizen who has lived in the U.S. for at least five years. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+    </ul>
+    <p>If you buy Part A late, the premium can go up 10%, for twice as many years as you could have signed up but didn't. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> See <a href="/medicare-late-enrollment-penalties.html">late enrollment penalties</a>.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Get MediPrimer updates by email">
+      <h2>Open enrollment ends December 7. We'll remind you.</h2>
+      <p>Get our fall review checklist — the short list of things to check on your plan before the deadline — plus one reminder email before December 7. After that, a short email only when something changes, never more than one a week. No ads, no plan sales.</p>
+      <form class="newsletter-form" data-lang="en">
+        <label class="sr-only" for="nl-email">Your email address</label>
+        <input id="nl-email" type="email" required placeholder="Your email address">
+        <button type="submit">Send me the checklist</button>
+      </form>
+      <p class="newsletter-fine">We'll email you once to confirm — you're not subscribed until you click it. A reminder before the deadline, then our usual one-email-a-week-at-most. Unsubscribe in one click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>A short action list</h2>
+    <ol class="steps">
+      <li><strong>Count your U.S. work.</strong> Check your U.S. earnings record through your my Social Security account. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Include your spouse.</strong> Check their U.S. record too.</li>
+      <li><strong>Plan your sign-up.</strong> If you must buy coverage, sign up in your Initial Enrollment Period to avoid penalties. See <a href="/turning-65.html">Turning 65</a>.</li>
+      <li><strong>Call Social Security.</strong> The number is 1-800-772-1213. <!-- src: https://www.ssa.gov/medicare/sign-up --> Ask about your Medicare options and your credits.</li>
+      <li><strong>Ask your SHIP for free help.</strong> Find yours in the <a href="/ship-directory.html">SHIP directory</a>. If you need language help, see <a href="/medical-interpreter-rights.html">interpreter rights</a>.</li>
+    </ol>
+
+    <h2>Common questions</h2>
+
+    <details class="qa">
+      <summary>Do my Korean work credits count toward the 40 quarters for Part A?</summary>
+      <div>
+        <p>No. Social Security says the agreement does not cover Medicare benefits, so it cannot count credits earned in an agreement country to qualify you for free Medicare hospital insurance. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can Korean credits help with Social Security retirement benefits?</summary>
+      <div>
+        <p>Sometimes. You need at least six U.S. credits for Korean credits to be counted, and the U.S. cannot count them if you already have enough U.S. credits. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Can I still get Medicare without 40 quarters?</summary>
+      <div>
+        <p>Yes, in many cases. You may qualify through a spouse's U.S. work, or you may buy Part A and Part B. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> The rules on age and residency apply. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Does my spouse's work in the U.S. help me?</summary>
+      <div>
+        <p>Yes. Premium-free Part A can be based on your own earnings or on those of a spouse, parent, or child. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <h2>Official sources</h2>
+    <ul>
+      <li><a href="https://www.ssa.gov/international/agreement_descriptions.html" rel="noopener">SSA: Totalization agreement descriptions</a></li>
+      <li><a href="https://www.ssa.gov/international/Agreement_Pamphlets/korea.html" rel="noopener">SSA: Totalization agreement with Korea</a></li>
+      <li><a href="https://www.ssa.gov/international/agreements_overview.html" rel="noopener">SSA: U.S. international Social Security agreements</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10072.pdf" rel="noopener">SSA: How You Earn Credits</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10043.pdf" rel="noopener">SSA: Medicare booklet</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Costs</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verify before you act.</strong> MediPrimer is general educational information and is not affiliated with any agency or insurer. Rules for noncitizens and for work credits are detailed. Confirm your own record with Social Security.
+    </div>
+  </div>
+  </main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>The Basics</h4>
+        <ul>
+          <li><a href="/coverage-basics.html">Coverage Basics</a></li>
+          <li><a href="/plan-types.html">Plan Types</a></li>
+          <li><a href="/medigap.html">Medigap Plans</a></li>
+          <li><a href="/policy-changes.html">Policy &amp; Rule Changes</a></li>
+          <li><a href="/glossary.html">Glossary</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Members</h4>
+        <ul>
+          <li><a href="/enrollment.html">Enrollment &amp; Deadlines</a></li>
+          <li><a href="/costs.html">Understanding Your Costs</a></li>
+          <li><a href="/choosing-coverage.html">Choosing Coverage</a></li>
+          <li><a href="/getting-help.html">Getting Help Paying</a></li>
+          <li><a href="/turning-65.html">Turning 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>For Professionals</h4>
+        <ul>
+          <li><a href="/operations.html">Health-Plan Operations</a></li>
+          <li><a href="/providers.html">Providers &amp; Billing</a></li>
+          <li><a href="/brokers.html">Brokers &amp; Advisors</a></li>
+          <li><a href="/navigators.html">Case Managers &amp; Navigators</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directories &amp; Tools</h4>
+        <ul>
+          <li><a href="/state-medicaid.html">State Medicaid</a></li>
+          <li><a href="/ship-directory.html">SHIP (Medicare help)</a></li>
+          <li><a href="/insurance-departments.html">Insurance Departments</a></li>
+          <li><a href="/resources.html">All Resources</a></li>
+          <li><a href="/checklists.html">Printable Checklists</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Official sources</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="disclaimer">Independent educational resource. Not affiliated with CMS, Medicare, Medicaid, any state agency, or any health insurance company. Information is general and should be verified through official program and plan materials. Nothing here is medical, legal, or financial advice, and no page recommends a specific plan. Content last reviewed July 2026.</p>
+    <nav class="legal-links">
+      <a href="/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Terms of Use</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/accessibility.html">Accessibility</a>
+      <a href="/editorial-standards.html">Editorial Standards</a>
+      <a href="/support.html">Support</a>
+      <a href="/site-map.html">Site Map</a>
+    </nav>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
