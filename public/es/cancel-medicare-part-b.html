@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo cancelar la Parte B de Medicare: formulario, plazos y costos</title>
+<meta name="description" content="Puede cancelar la Parte B en cualquier momento con el Formulario CMS-1763. Vea cuándo termina la cobertura, la penalización si vuelve a inscribirse y la cobertura que necesita la Parte B.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/cancel-medicare-part-b.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Cómo cancelar la Parte B de Medicare: formulario, plazos y costos">
+<meta property="og:description" content="Puede cancelar la Parte B en cualquier momento con el Formulario CMS-1763. Vea cuándo termina la cobertura, la penalización si vuelve a inscribirse y la cobertura que necesita la Parte B.">
+<meta property="og:url" content="https://mediprimer.org/es/cancel-medicare-part-b.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Cómo cancelar la Parte B de Medicare: formulario, plazos y costos">
+<meta name="twitter:description" content="Puede cancelar la Parte B en cualquier momento con el Formulario CMS-1763. Vea cuándo termina la cobertura, la penalización si vuelve a inscribirse y la cobertura que necesita la Parte B.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo cancelar la Parte B de Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Puede terminar la Parte B en cualquier momento enviando el Formulario CMS-1763 a su oficina local del Seguro Social."}}, {"@type": "Question", "name": "¿Cuándo termina mi Parte B después de cancelarla?", "acceptedAnswer": {"@type": "Answer", "text": "El último día del mes siguiente al mes en que presente el formulario."}}, {"@type": "Question", "name": "¿Pagaré una penalización si me inscribo de nuevo?", "acceptedAnswer": {"@type": "Answer", "text": "A menudo sí. Usted paga un 10% adicional por cada período completo de 12 meses en que pudo haber tenido la Parte B y no la tuvo. Por lo general, no hay penalización si estaba cubierto por un plan a través del trabajo y se inscribe dentro del plazo permitido."}}, {"@type": "Question", "name": "¿Puedo cancelar la Parte B y conservar la Parte A?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, si su Parte A no tiene Prima. Solo puede terminar la Parte A si paga una Prima por ella."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Cómo cancelar la Parte B de Medicare: formulario, plazos y costos", "description": "Puede cancelar la Parte B en cualquier momento con el Formulario CMS-1763. Vea cuándo termina la cobertura, la penalización si vuelve a inscribirse y la cobertura que necesita la Parte B.", "url": "https://mediprimer.org/es/cancel-medicare-part-b.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/cancel-medicare-part-b.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Cómo cancelar la Parte B de Medicare: formulario, plazos y costos", "item": "https://mediprimer.org/es/cancel-medicare-part-b.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/cancel-medicare-part-b.html" lang="en">English</a>
+    <a href="/es/cancel-medicare-part-b.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Miembros y Cuidadores</p>
+    <h1>¿Puedo cancelar la Parte B de Medicare?</h1>
+    <p>Puede terminar la Parte B cuando quiera. La pregunta más difícil es cuánto le costará volver. Aquí están los pasos, los plazos y los riesgos.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Sí, puede cancelar la Parte B de Medicare en cualquier momento. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> Usted usa el Formulario CMS-1763 y lo envía a su oficina local del Seguro Social. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> Su cobertura de la Parte B termina el último día del mes siguiente al mes en que envíe el formulario. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> El riesgo viene después. Si quiere la Parte B otra vez, solo puede inscribirse en ciertas épocas, y es posible que pague una penalización por inscripción tardía mientras tenga la Parte B. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> La penalización no se aplica en algunos casos, como cuando deja la Parte B porque tiene cobertura a través del trabajo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <div class="note">
+      <strong>Antes de cancelar.</strong> Revise si su otra cobertura necesita la Parte B y revise cómo funcionaría volver a inscribirse. Las secciones siguientes explican ambos temas.
+    </div>
+
+    <h2>Cómo cancelar la Parte B, paso a paso</h2>
+    <ol class="steps">
+      <li><strong>Obtenga el Formulario CMS-1763.</strong> Se llama "Solicitud de terminación de la Prima de Medicare Parte A, Parte B o cobertura de medicamentos inmunosupresores de la Parte B (Parte B-ID)". <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>Llénelo.</strong> Elija la Parte B. Anote su número de Medicare y el mes y año en que quiere que termine la cobertura. Fírmelo y féchelo. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>Envíelo al Seguro Social.</strong> Envíe por correo o fax el formulario firmado a su oficina local del Seguro Social. Encuentre una oficina en SSA.gov/locator. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> También puede llamar al Seguro Social al 1-800-772-1213. <!-- src: https://www.ssa.gov/medicare/sign-up --></li>
+      <li><strong>Anote la fecha de terminación.</strong> La cobertura termina el último día del mes siguiente al mes en que presente el formulario. Por ejemplo, si lo envía el 5 de abril, la cobertura termina el 31 de mayo. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>¿Cambió de opinión?</strong> Comuníquese con el Seguro Social antes de la fecha en que termina su cobertura. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+    </ol>
+    <p>La Parte A de Medicare funciona de otra manera. Solo puede terminar la Parte A si paga una Prima por ella. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> Si usted paga una Prima por la Parte A, terminar la Parte B también termina su Parte A. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+
+    <h2>Si acaba de recibir Medicare automáticamente</h2>
+    <p>Si ya recibe beneficios del Seguro Social, recibe la Parte A y la Parte B automáticamente a los 65 años. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Si no quiere la Parte B, avise al Seguro Social antes de la fecha de inicio de cobertura que aparece en su tarjeta de Medicare. Si no hace nada, conserva la Parte B y la Prima se descuenta de su beneficio del Seguro Social. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <h2>Lo que puede costarle más adelante dejar la Parte B</h2>
+    <p>La Penalización por Inscripción Tardía no es un cargo único. Se suma a su Prima mensual, y por lo general la paga mientras tenga la Parte B. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <ul>
+      <li><strong>La tasa.</strong> Usted paga un 10% adicional por cada período completo de 12 meses en que pudo haber tenido la Parte B y no la tuvo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Un ejemplo para 2026.</strong> Si espera 2 años completos y no califica para un Período Especial de Inscripción, eso es una penalización del 20%. Sobre la Prima estándar de $202.90, eso suma $40.58 al mes. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>Cuándo puede volver a inscribirse.</strong> Solo puede inscribirse en ciertas épocas. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Una de ellas es el Período de Inscripción General, del 1 de enero al 31 de marzo, con cobertura que empieza el mes siguiente a su inscripción. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Para conocer todas las reglas de la penalización, vea <a href="/es/medicare-late-enrollment-penalties.html">las penalizaciones por inscripción tardía de Medicare</a>.</p>
+
+    <h2>La excepción de la cobertura por trabajo</h2>
+    <p>Muchas personas retrasan la Parte B a propósito porque tienen cobertura a través de un trabajo actual. Si es su caso, puede inscribirse en la Parte B: <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+    <ul>
+      <li>En cualquier momento mientras siga cubierto por el plan de salud grupal, o</li>
+      <li>Durante los 8 meses que comienzan el mes siguiente a la terminación del trabajo o de la cobertura, lo que ocurra primero. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Por lo general, no paga una penalización si se inscribe dentro de este plazo. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Debe ser cobertura de un trabajo actual, suyo o de su cónyuge. COBRA, la cobertura de jubilados y la cobertura de VA no cuentan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Como COBRA no cuenta, dejar la Parte B mientras tiene COBRA puede llevar a una penalización. Vea <a href="/es/cobra-and-medicare.html">COBRA y Medicare</a> y <a href="/es/working-past-65.html">Trabajar después de los 65 años</a>.</p>
+
+    <h2>Cobertura que necesita la Parte B</h2>
+    <p>Algunas coberturas dependen de que usted conserve la Parte B. Revise estas primero:</p>
+    <ul>
+      <li><strong>Medicare Advantage.</strong> Debe tener la Parte B y seguir pagando su Prima de la Parte B para permanecer en su plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Seguro Complementario de Medicare.</strong> Debe tener la Parte B y seguir pagando la Prima para mantener su póliza. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>TRICARE.</strong> Por lo general, debe inscribirse en la Parte A y la Parte B para conservarlo. Los miembros del servicio activo y sus familias son una excepción. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>CHAMPVA.</strong> Debe tener la Parte A y la Parte B para conservarlo. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Cobertura de jubilados.</strong> Es posible que no pague su atención si no tiene tanto la Parte A como la Parte B. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Si tiene una cuenta de ahorros para gastos de salud, lea también <a href="/es/hsa-and-medicare.html">las cuentas HSA y Medicare</a>. Si el costo es la razón por la que quiere dejar la Parte B, vea si un <a href="/es/medicare-savings-programs.html">Programa de Ahorro de Medicare</a> podría pagar su Prima. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Puedo cancelar la Parte B de Medicare?</summary>
+      <div>
+        <p>Sí. Puede terminar la Parte B en cualquier momento enviando el Formulario CMS-1763 a su oficina local del Seguro Social. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Cuándo termina mi Parte B después de cancelarla?</summary>
+      <div>
+        <p>El último día del mes siguiente al mes en que presente el formulario. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Pagaré una penalización si me inscribo de nuevo?</summary>
+      <div>
+        <p>A menudo sí. Usted paga un 10% adicional por cada período completo de 12 meses en que pudo haber tenido la Parte B y no la tuvo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Por lo general, no hay penalización si estaba cubierto por un plan a través del trabajo y se inscribe dentro del plazo permitido. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puedo cancelar la Parte B y conservar la Parte A?</summary>
+      <div>
+        <p>Sí, si su Parte A no tiene Prima. Solo puede terminar la Parte A si paga una Prima por ella. <!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf" rel="noopener">CMS: Formulario CMS-1763, Solicitud de terminación de la Prima de Medicare</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties" rel="noopener">Medicare.gov: Cómo evitar las penalizaciones por inscripción tardía</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Manual Medicare y Usted (Medicare.gov)</a></li>
+      <li><a href="https://www.ssa.gov/medicare/sign-up" rel="noopener">SSA: Inscríbase en Medicare</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer es información educativa general y no está afiliado a ninguna agencia ni aseguradora. Dejar la Parte B puede tener costos duraderos. Hable con el Seguro Social, con la oficina de beneficios de su empleador o con su SHIP antes de decidir.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/cancel-medicare-part-b.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

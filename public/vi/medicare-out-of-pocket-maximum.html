@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có và Ai Không Có</title>
+<meta name="description" content="Original Medicare không có Giới Hạn Chi Phí Tự Trả Tối Đa hằng năm. Các chương trình Medicare Advantage thì có. Xem giới hạn này hoạt động ra sao, bao gồm những gì, và các cách để giới hạn chi phí của bạn.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có và Ai Không Có">
+<meta property="og:description" content="Original Medicare không có Giới Hạn Chi Phí Tự Trả Tối Đa hằng năm. Các chương trình Medicare Advantage thì có. Xem giới hạn này hoạt động ra sao, bao gồm những gì, và các cách để giới hạn chi phí của bạn.">
+<meta property="og:url" content="https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có và Ai Không Có">
+<meta name="twitter:description" content="Original Medicare không có Giới Hạn Chi Phí Tự Trả Tối Đa hằng năm. Các chương trình Medicare Advantage thì có. Xem giới hạn này hoạt động ra sao, bao gồm những gì, và các cách để giới hạn chi phí của bạn.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Original Medicare có Giới Hạn Chi Phí Tự Trả Tối Đa không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Original Medicare không có giới hạn hằng năm cho số tiền bạn tự trả, trừ khi bạn có bảo hiểm khác như Bảo Hiểm Bổ Sung Medicare (Medigap) hoặc một chương trình Medicare Advantage."}}, {"@type": "Question", "name": "Mọi chương trình Medicare Advantage có cùng một giới hạn không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Giới hạn hằng năm khác nhau tùy chương trình. Hãy kiểm tra con số của chương trình bạn trong thư của chương trình hoặc trong Plan Finder."}}, {"@type": "Question", "name": "Điều gì xảy ra khi tôi đạt đến giới hạn của chương trình?", "acceptedAnswer": {"@type": "Answer", "text": "Chương trình trả 100% các dịch vụ y tế được bảo hiểm của bạn trong phần còn lại của năm dương lịch."}}, {"@type": "Question", "name": "Chi phí thuốc của Medicare có mức trần không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Medicare Phần D có mức trần hằng năm cho chi phí thuốc, và mức này thay đổi mỗi năm. Xem trang chi phí Medicare Phần D chính thức để biết con số hiện tại."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có và Ai Không Có", "description": "Original Medicare không có Giới Hạn Chi Phí Tự Trả Tối Đa hằng năm. Các chương trình Medicare Advantage thì có. Xem giới hạn này hoạt động ra sao, bao gồm những gì, và các cách để giới hạn chi phí của bạn.", "url": "https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có và Ai Không Có", "item": "https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-out-of-pocket-maximum.html" lang="en">English</a>
+    <a href="/es/medicare-out-of-pocket-maximum.html" lang="es">Español</a>
+    <a href="/zh-Hant/medicare-out-of-pocket-maximum.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medicare-out-of-pocket-maximum.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành Cho Hội Viên &amp; Người Chăm Sóc</p>
+    <h1>Giới Hạn Chi Phí Tự Trả Tối Đa của Medicare: Ai Có?</h1>
+    <p>Original Medicare không có mức trần hằng năm cho số tiền bạn trả. Các chương trình Medicare Advantage thì có. Dưới đây là cách giới hạn này hoạt động, nó bao gồm những gì, và nó khác với mức trần chi phí thuốc như thế nào.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Câu trả lời ngắn gọn.</strong> Original Medicare không có giới hạn hằng năm cho số tiền bạn tự trả. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Các chương trình Medicare Advantage thì có giới hạn hằng năm. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Khi bạn đạt đến giới hạn của chương trình, chương trình sẽ trả 100% các dịch vụ y tế được bảo hiểm của bạn trong phần còn lại của năm dương lịch. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Giới hạn do từng chương trình quy định, nên không giống nhau với mọi người. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Chương trình thuốc của bạn có mức trần hằng năm riêng. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+
+    <div class="note">
+      <strong>Hãy tự tra con số của bạn.</strong> Chúng tôi không đưa ra mức giới hạn bằng đô la của Medicare Advantage cho năm 2027 ở đây, vì mỗi chương trình tự quy định. Thư của chương trình, <a href="/vi/medicare-annual-notice-of-change.html">Thông Báo Thay Đổi Hàng Năm</a> của bạn, và <a href="/vi/using-plan-finder.html">Medicare Plan Finder</a> cho biết chính xác giới hạn của chương trình bạn.
+    </div>
+
+    <h2>Original Medicare: không có giới hạn hằng năm</h2>
+    <p>Trong Original Medicare, bạn trả Khoản Khấu Trừ, Khoản Đồng Thanh Toán (Copay), và Đồng Bảo Hiểm. Hầu hết các dịch vụ Medicare Phần B có chi phí là 20% số tiền được Medicare chấp thuận sau khi bạn trả Khoản Khấu Trừ. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> </p>
+    <p>Cùng trang đó cho biết không có giới hạn nào đối với số tiền bạn tự trả, trừ khi bạn có bảo hiểm khác. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Các loại bảo hiểm khác phổ biến nhất là:</p>
+    <ul>
+      <li>Một <a href="/vi/medigap.html">chính sách Bảo Hiểm Bổ Sung Medicare (Medigap)</a>, giúp trả phần chi phí của bạn.</li>
+      <li>Một <a href="/vi/medicare-advantage.html">chương trình Medicare Advantage</a>, có giới hạn hằng năm riêng.</li>
+      <li>Bảo hiểm của chủ lao động, bảo hiểm hưu trí, bảo hiểm của công đoàn, hoặc Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+
+    <h2>Medicare Advantage: giới hạn hằng năm khác nhau tùy chương trình</h2>
+    <p>Các chương trình Medicare Advantage đặt mức trần cho số tiền bạn trả cho các dịch vụ được bảo hiểm. Giới hạn khác nhau tùy chương trình. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Một số chương trình có giới hạn khác nhau cho dịch vụ chăm sóc Trong Mạng Lưới và Ngoài Mạng Lưới. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Nếu bạn chỉ dùng Nhà Cung Cấp Trong Mạng Lưới, thì giới hạn Trong Mạng Lưới là giới hạn quan trọng. Hãy kiểm tra quy định của chương trình trước khi bạn đi khám Ngoài Mạng Lưới.</p>
+    <p>Giới hạn áp dụng cho các dịch vụ Medicare Phần A và Phần B mà chương trình của bạn bảo hiểm. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Khi bạn đạt đến giới hạn, bạn không phải trả thêm gì cho các dịch vụ đó trong năm ấy. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Hãy lưu ý hai điều:</p>
+    <ul>
+      <li><strong>Giới hạn được đặt lại mỗi năm.</strong> Giới hạn tính theo năm dương lịch. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Đây không phải là lời hứa về chi phí thấp.</strong> Bạn có thể phải trả nhiều trước khi đạt đến giới hạn. Hãy so sánh cả Khoản Đồng Thanh Toán (Copay) và Đồng Bảo Hiểm. Xem <a href="/vi/medicare-plan-comparison-2027.html">So sánh các chương trình Medicare cho năm 2027</a>.</li>
+    </ul>
+    <p>Giới hạn của chương trình có thể thay đổi theo từng năm. Hãy luôn đọc con số của năm bạn đang chọn. Xem <a href="/vi/medicare-costs-2027.html">Chi phí Medicare năm 2027</a> để biết các con số chính thức của năm 2027 mà chúng tôi đã xác minh.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Sau đó, chỉ một email ngắn khi có thay đổi, không quá một email mỗi tuần. Không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>So sánh song song</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Bảo hiểm</th><th>Có giới hạn chi phí tự trả hằng năm không?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Original Medicare (Medicare Phần A và Phần B)</td><td>Tự nó không có giới hạn. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Chương trình Medicare Advantage</td><td>Có. Khác nhau tùy chương trình. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Medigap Plan K hoặc Plan L</td><td>Có. Giới hạn của Plan K là $8,000 và của Plan L là $4,000 trong năm 2026. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td></tr>
+          <tr><td>Các chương trình Medigap khác</td><td>Không có giới hạn riêng. Chúng trả một tỷ lệ cố định trong chi phí của bạn. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></td></tr>
+          <tr><td>Bảo hiểm thuốc Medicare Phần D</td><td>Có. Một mức trần riêng cho các loại thuốc được bảo hiểm. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Mức trần chi phí thuốc là riêng biệt</h2>
+    <p>Chi phí thuốc có mức trần riêng. Mức này tách biệt với giới hạn y tế trong chương trình Medicare Advantage. Trong năm 2026, mức trần Medicare Phần D là $2,100. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Trong năm 2027, mức này là $2,400. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Mức trần này bao gồm Khoản Khấu Trừ của bạn, khoản bạn đã chi, và một số khoản thanh toán được thực hiện thay cho bạn, chẳng hạn qua chương trình Trợ Giúp Thêm (Extra Help). <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <p>Hầu hết các chương trình Medicare Advantage đều có bảo hiểm thuốc. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Nếu chương trình của bạn có, mức trần chi phí thuốc vẫn áp dụng riêng. Xem <a href="/vi/medicare-part-d.html">Medicare Phần D</a> để biết các giai đoạn chi trả thuốc hoạt động ra sao.</p>
+
+    <h2>Mọi người giới hạn chi phí của mình như thế nào</h2>
+    <p>Đây là những cách chính để hạn chế số tiền bạn có thể phải trả. MediPrimer không nói cách nào là tốt nhất. Lựa chọn phù hợp tùy thuộc vào sức khỏe, ngân sách của bạn, và các bác sĩ bạn khám. Xem <a href="/vi/choosing-coverage.html">Chọn Bảo Hiểm</a> và <a href="/vi/plan-types.html">Các Loại Chương Trình</a>.</p>
+    <ol class="steps">
+      <li><strong>Tham gia một chương trình Medicare Advantage.</strong> Giới hạn hằng năm của chương trình đặt mức trần cho chi phí Medicare Phần A và Phần B được bảo hiểm của bạn.</li>
+      <li><strong>Thêm một chính sách Bảo Hiểm Bổ Sung Medicare (Medigap) vào Original Medicare.</strong> Medigap giúp trả phần chi phí của bạn. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Hãy đọc <a href="/vi/medigap.html">hướng dẫn về Medigap</a> và các quy định về <a href="/vi/medicare-advantage-vs-medigap-underwriting.html">mua Medigap sau này</a>.</li>
+      <li><strong>Dùng bảo hiểm khác mà bạn đã có.</strong> Đó có thể là bảo hiểm của chủ lao động, bảo hiểm hưu trí, bảo hiểm của công đoàn, hoặc Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Hỏi về hỗ trợ chi phí.</strong> Nếu thu nhập của bạn hạn chế, <a href="/vi/medicare-savings-programs.html">Chương Trình Tiết Kiệm Medicare</a> hoặc <a href="/vi/extra-help-low-income-subsidy.html">Trợ Giúp Thêm (Extra Help)</a> có thể giảm chi phí của bạn.</li>
+    </ol>
+    <p>Nếu bạn đang chọn chương trình vào mùa thu này, xem <a href="/vi/medicare-open-enrollment-2027.html">Thời Gian Ghi Danh Mở của Medicare năm 2027</a> để biết các mốc ngày và danh sách kiểm tra.</p>
+
+    <h2>Câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Original Medicare có Giới Hạn Chi Phí Tự Trả Tối Đa không?</summary>
+      <div>
+        <p>Không. Original Medicare không có giới hạn hằng năm cho số tiền bạn tự trả, trừ khi bạn có bảo hiểm khác như Bảo Hiểm Bổ Sung Medicare (Medigap) hoặc một chương trình Medicare Advantage. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Mọi chương trình Medicare Advantage có cùng một giới hạn không?</summary>
+      <div>
+        <p>Không. Giới hạn hằng năm khác nhau tùy chương trình. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Hãy kiểm tra con số của chương trình bạn trong thư của chương trình hoặc trong Plan Finder.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Điều gì xảy ra khi tôi đạt đến giới hạn của chương trình?</summary>
+      <div>
+        <p>Chương trình trả 100% các dịch vụ y tế được bảo hiểm của bạn trong phần còn lại của năm dương lịch. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Chi phí thuốc của Medicare có mức trần không?</summary>
+      <div>
+        <p>Có. Medicare Phần D có mức trần hằng năm cho chi phí thuốc, và mức này thay đổi mỗi năm. Xem <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs">trang chi phí Medicare Phần D chính thức</a> để biết con số hiện tại.</p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Chi phí</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Chi phí Phần D</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Sổ tay Medicare &amp; You (Medicare.gov)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục chung và không liên kết với bất kỳ cơ quan hay công ty bảo hiểm nào. Các giới hạn và quy định của chương trình thay đổi mỗi năm. Hãy xác nhận giới hạn của chương trình bạn trong tài liệu của chính chương trình hoặc trên Medicare.gov.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/medicare-out-of-pocket-maximum.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

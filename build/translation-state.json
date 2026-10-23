@@ -89,8 +89,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "7903ecdd54a2ec23cb206243bcf26518",
-      "date": "2026-10-16"
+      "hash": "0f62dfa88d001b3506f42e69fb1f14d9",
+      "date": "2026-10-23"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -113,8 +113,8 @@
       "date": "2026-10-16"
     },
     "medicare-advantage.html": {
-      "hash": "cb9ebcd7343105add077c003d12c5be8",
-      "date": "2026-10-10"
+      "hash": "bf69d1b3a4026cac8faef24b6ae9ea3a",
+      "date": "2026-10-23"
     },
     "medicare-part-a.html": {
       "hash": "141eb6afdaef0afac377596099cccab7",
@@ -125,8 +125,8 @@
       "date": "2026-10-10"
     },
     "medigap.html": {
-      "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",
-      "date": "2026-10-10"
+      "hash": "5a138d7ede8fc1f5f592b11e10b4f787",
+      "date": "2026-10-23"
     },
     "member-journey.html": {
       "hash": "8689578ca764012cfa1272a8a13ee783",
@@ -273,8 +273,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "d416ed00598fec1d575135c6f218d4f5",
-      "date": "2026-10-16"
+      "hash": "d5b7aa6166737eeff962755d39a9c23a",
+      "date": "2026-10-23"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -525,8 +525,8 @@
       "date": "2026-10-10"
     },
     "medicare-late-enrollment-penalties.html": {
-      "hash": "6b00e12af813b0fee6865f12746a864c",
-      "date": "2026-10-10"
+      "hash": "abba472c87ed0d1fc30bbb3974928fd6",
+      "date": "2026-10-23"
     },
     "mixed-status-family-marketplace.html": {
       "hash": "ea4badbb1ac87e5ca6e091e753a74ee5",
@@ -587,6 +587,22 @@
     "medicare-advantage-vs-medigap-underwriting.html": {
       "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
       "date": "2026-10-16"
+    },
+    "cancel-medicare-part-b.html": {
+      "hash": "55f931eedc245827b15d3b3575e8e274",
+      "date": "2026-10-23"
+    },
+    "medicare-out-of-pocket-maximum.html": {
+      "hash": "3bcb71057dbdc56b660659387716e1d4",
+      "date": "2026-10-23"
+    },
+    "medigap-open-enrollment-guaranteed-issue.html": {
+      "hash": "478efde5cfaac8821e5147c8af465ec9",
+      "date": "2026-10-23"
+    },
+    "totalization-agreements-medicare-40-quarters.html": {
+      "hash": "cfc1bb7baa624cbe7e0726015d6ddb73",
+      "date": "2026-10-23"
     }
   },
   "zh-Hant": {
@@ -655,8 +671,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "7903ecdd54a2ec23cb206243bcf26518",
-      "date": "2026-10-16"
+      "hash": "0f62dfa88d001b3506f42e69fb1f14d9",
+      "date": "2026-10-23"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -671,8 +687,8 @@
       "date": "2026-10-16"
     },
     "medicare-advantage.html": {
-      "hash": "cb9ebcd7343105add077c003d12c5be8",
-      "date": "2026-10-10"
+      "hash": "bf69d1b3a4026cac8faef24b6ae9ea3a",
+      "date": "2026-10-23"
     },
     "medicare-part-d.html": {
       "hash": "fe85625f6ba98dac2789fdd69917efc7",
@@ -771,8 +787,8 @@
       "date": "2026-10-10"
     },
     "medigap.html": {
-      "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",
-      "date": "2026-10-10"
+      "hash": "5a138d7ede8fc1f5f592b11e10b4f787",
+      "date": "2026-10-23"
     },
     "members.html": {
       "hash": "0461da3db73ac6863db30f6436fb26f5",
@@ -863,8 +879,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "d416ed00598fec1d575135c6f218d4f5",
-      "date": "2026-10-16"
+      "hash": "d5b7aa6166737eeff962755d39a9c23a",
+      "date": "2026-10-23"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -1115,8 +1131,8 @@
       "date": "2026-10-10"
     },
     "medicare-late-enrollment-penalties.html": {
-      "hash": "6b00e12af813b0fee6865f12746a864c",
-      "date": "2026-10-10"
+      "hash": "abba472c87ed0d1fc30bbb3974928fd6",
+      "date": "2026-10-23"
     },
     "mixed-status-family-marketplace.html": {
       "hash": "ea4badbb1ac87e5ca6e091e753a74ee5",
@@ -1177,6 +1193,22 @@
     "medicare-advantage-vs-medigap-underwriting.html": {
       "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
       "date": "2026-10-16"
+    },
+    "cancel-medicare-part-b.html": {
+      "hash": "55f931eedc245827b15d3b3575e8e274",
+      "date": "2026-10-23"
+    },
+    "medicare-out-of-pocket-maximum.html": {
+      "hash": "3bcb71057dbdc56b660659387716e1d4",
+      "date": "2026-10-23"
+    },
+    "medigap-open-enrollment-guaranteed-issue.html": {
+      "hash": "478efde5cfaac8821e5147c8af465ec9",
+      "date": "2026-10-23"
+    },
+    "totalization-agreements-medicare-40-quarters.html": {
+      "hash": "cfc1bb7baa624cbe7e0726015d6ddb73",
+      "date": "2026-10-23"
     }
   },
   "vi": {
@@ -1289,8 +1321,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "7903ecdd54a2ec23cb206243bcf26518",
-      "date": "2026-10-16"
+      "hash": "0f62dfa88d001b3506f42e69fb1f14d9",
+      "date": "2026-10-23"
     },
     "hsa-and-medicare.html": {
       "hash": "2f1bac2a82fff32abd9997335634b542",
@@ -1369,8 +1401,8 @@
       "date": "2026-10-16"
     },
     "medicare-advantage.html": {
-      "hash": "cb9ebcd7343105add077c003d12c5be8",
-      "date": "2026-10-10"
+      "hash": "bf69d1b3a4026cac8faef24b6ae9ea3a",
+      "date": "2026-10-23"
     },
     "medicare-ambulance-emergency-room.html": {
       "hash": "2cbe0f3c2f093d432ff4b23852358386",
@@ -1413,8 +1445,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "d416ed00598fec1d575135c6f218d4f5",
-      "date": "2026-10-16"
+      "hash": "d5b7aa6166737eeff962755d39a9c23a",
+      "date": "2026-10-23"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -1477,8 +1509,8 @@
       "date": "2026-10-10"
     },
     "medigap.html": {
-      "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",
-      "date": "2026-10-10"
+      "hash": "5a138d7ede8fc1f5f592b11e10b4f787",
+      "date": "2026-10-23"
     },
     "member-journey.html": {
       "hash": "8689578ca764012cfa1272a8a13ee783",
@@ -1705,8 +1737,8 @@
       "date": "2026-10-10"
     },
     "medicare-late-enrollment-penalties.html": {
-      "hash": "6b00e12af813b0fee6865f12746a864c",
-      "date": "2026-10-10"
+      "hash": "abba472c87ed0d1fc30bbb3974928fd6",
+      "date": "2026-10-23"
     },
     "mixed-status-family-marketplace.html": {
       "hash": "ea4badbb1ac87e5ca6e091e753a74ee5",
@@ -1767,6 +1799,22 @@
     "medicare-advantage-vs-medigap-underwriting.html": {
       "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
       "date": "2026-10-16"
+    },
+    "cancel-medicare-part-b.html": {
+      "hash": "55f931eedc245827b15d3b3575e8e274",
+      "date": "2026-10-23"
+    },
+    "medicare-out-of-pocket-maximum.html": {
+      "hash": "3bcb71057dbdc56b660659387716e1d4",
+      "date": "2026-10-23"
+    },
+    "medigap-open-enrollment-guaranteed-issue.html": {
+      "hash": "478efde5cfaac8821e5147c8af465ec9",
+      "date": "2026-10-23"
+    },
+    "totalization-agreements-medicare-40-quarters.html": {
+      "hash": "cfc1bb7baa624cbe7e0726015d6ddb73",
+      "date": "2026-10-23"
     }
   },
   "ko": {
@@ -1875,8 +1923,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "7903ecdd54a2ec23cb206243bcf26518",
-      "date": "2026-10-16"
+      "hash": "0f62dfa88d001b3506f42e69fb1f14d9",
+      "date": "2026-10-23"
     },
     "index.html": {
       "hash": "688e6653cb77c896f13fffc6b6682846",
@@ -1959,8 +2007,8 @@
       "date": "2026-10-16"
     },
     "medicare-advantage.html": {
-      "hash": "cb9ebcd7343105add077c003d12c5be8",
-      "date": "2026-10-10"
+      "hash": "bf69d1b3a4026cac8faef24b6ae9ea3a",
+      "date": "2026-10-23"
     },
     "medicare-ambulance-emergency-room.html": {
       "hash": "2cbe0f3c2f093d432ff4b23852358386",
@@ -2023,8 +2071,8 @@
       "date": "2026-10-10"
     },
     "medicare-immigrants.html": {
-      "hash": "d416ed00598fec1d575135c6f218d4f5",
-      "date": "2026-10-16"
+      "hash": "d5b7aa6166737eeff962755d39a9c23a",
+      "date": "2026-10-23"
     },
     "medicare-long-term-care.html": {
       "hash": "f045361761ac8f5575cbb6052b2857b7",
@@ -2127,8 +2175,8 @@
       "date": "2026-10-10"
     },
     "medigap.html": {
-      "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",
-      "date": "2026-10-10"
+      "hash": "5a138d7ede8fc1f5f592b11e10b4f787",
+      "date": "2026-10-23"
     },
     "member-journey.html": {
       "hash": "8689578ca764012cfa1272a8a13ee783",
@@ -2295,8 +2343,8 @@
       "date": "2026-10-10"
     },
     "medicare-late-enrollment-penalties.html": {
-      "hash": "6b00e12af813b0fee6865f12746a864c",
-      "date": "2026-10-10"
+      "hash": "abba472c87ed0d1fc30bbb3974928fd6",
+      "date": "2026-10-23"
     },
     "mixed-status-family-marketplace.html": {
       "hash": "ea4badbb1ac87e5ca6e091e753a74ee5",
@@ -2339,8 +2387,8 @@
       "date": "2026-10-10"
     },
     "insurers-dropping-plans-2027.html": {
-      "hash": "462dd94c0e258f51244328fcec5f934a",
-      "date": "2026-10-15"
+      "hash": "7d71c5117437dfae85122543472944f6",
+      "date": "2026-10-23"
     },
     "immigrant-eligibility-changes-medicare-medicaid.html": {
       "hash": "06dd6bab7fe3fcb219b2284b87fc368b",
@@ -2357,6 +2405,22 @@
     "medicare-advantage-vs-medigap-underwriting.html": {
       "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
       "date": "2026-10-16"
+    },
+    "cancel-medicare-part-b.html": {
+      "hash": "55f931eedc245827b15d3b3575e8e274",
+      "date": "2026-10-23"
+    },
+    "medicare-out-of-pocket-maximum.html": {
+      "hash": "3bcb71057dbdc56b660659387716e1d4",
+      "date": "2026-10-23"
+    },
+    "medigap-open-enrollment-guaranteed-issue.html": {
+      "hash": "478efde5cfaac8821e5147c8af465ec9",
+      "date": "2026-10-23"
+    },
+    "totalization-agreements-medicare-40-quarters.html": {
+      "hash": "cfc1bb7baa624cbe7e0726015d6ddb73",
+      "date": "2026-10-23"
     }
   },
   "tl": {
@@ -2469,8 +2533,8 @@
       "date": "2026-10-10"
     },
     "how-do-i.html": {
-      "hash": "7903ecdd54a2ec23cb206243bcf26518",
-      "date": "2026-10-16"
+      "hash": "0f62dfa88d001b3506f42e69fb1f14d9",
+      "date": "2026-10-23"
     },
     "irmaa-appeal-ssa-44.html": {
       "hash": "0fa1ec3d581573e3b8f3474764cb61b8",
@@ -2533,8 +2597,8 @@
       "date": "2026-10-16"
     },
     "medicare-advantage.html": {
-      "hash": "cb9ebcd7343105add077c003d12c5be8",
-      "date": "2026-10-10"
+      "hash": "bf69d1b3a4026cac8faef24b6ae9ea3a",
+      "date": "2026-10-23"
     },
     "medicare-ambulance-emergency-room.html": {
       "hash": "2cbe0f3c2f093d432ff4b23852358386",
@@ -2745,8 +2809,8 @@
       "date": "2026-10-15"
     },
     "medicare-immigrants.html": {
-      "hash": "d416ed00598fec1d575135c6f218d4f5",
-      "date": "2026-10-16"
+      "hash": "d5b7aa6166737eeff962755d39a9c23a",
+      "date": "2026-10-23"
     },
     "medicare-telehealth.html": {
       "hash": "391687a37f1f9ce9bcb200cbf351d3bd",
@@ -2837,8 +2901,8 @@
       "date": "2026-10-22"
     },
     "medigap.html": {
-      "hash": "385360cf9eb7c6a11f8e2d3eb92d39f7",
-      "date": "2026-10-10"
+      "hash": "5a138d7ede8fc1f5f592b11e10b4f787",
+      "date": "2026-10-23"
     },
     "operations.html": {
       "hash": "496f540dc8ceb3c4aa308a9c8277ab8c",
@@ -2869,8 +2933,8 @@
       "date": "2026-10-10"
     },
     "medicare-late-enrollment-penalties.html": {
-      "hash": "6b00e12af813b0fee6865f12746a864c",
-      "date": "2026-10-10"
+      "hash": "abba472c87ed0d1fc30bbb3974928fd6",
+      "date": "2026-10-23"
     },
     "mixed-status-family-marketplace.html": {
       "hash": "ea4badbb1ac87e5ca6e091e753a74ee5",
@@ -2939,6 +3003,22 @@
     "medicare-advantage-vs-medigap-underwriting.html": {
       "hash": "ae35bc16b234d6e19d9c2d395fc10abc",
       "date": "2026-10-16"
+    },
+    "cancel-medicare-part-b.html": {
+      "hash": "55f931eedc245827b15d3b3575e8e274",
+      "date": "2026-10-23"
+    },
+    "medicare-out-of-pocket-maximum.html": {
+      "hash": "3bcb71057dbdc56b660659387716e1d4",
+      "date": "2026-10-23"
+    },
+    "medigap-open-enrollment-guaranteed-issue.html": {
+      "hash": "478efde5cfaac8821e5147c8af465ec9",
+      "date": "2026-10-23"
+    },
+    "totalization-agreements-medicare-40-quarters.html": {
+      "hash": "cfc1bb7baa624cbe7e0726015d6ddb73",
+      "date": "2026-10-23"
     }
   }
 }
