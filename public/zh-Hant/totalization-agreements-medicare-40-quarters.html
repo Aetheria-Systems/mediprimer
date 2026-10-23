@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海外工作年資與醫療保險A部分：40季規則</title>
+<meta name="description" content="社會安全合算協定可以把海外年資計入社會安全福利，但不能計入免保費的醫療保險A部分。了解原因，以及您還有哪些選擇。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="海外工作年資與醫療保險A部分：40季規則">
+<meta property="og:description" content="社會安全合算協定可以把海外年資計入社會安全福利，但不能計入免保費的醫療保險A部分。了解原因，以及您還有哪些選擇。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="海外工作年資與醫療保險A部分：40季規則">
+<meta name="twitter:description" content="社會安全合算協定可以把海外年資計入社會安全福利，但不能計入免保費的醫療保險A部分。了解原因，以及您還有哪些選擇。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我的韓國工作年資能計入 A部分的 40 季嗎？", "acceptedAnswer": {"@type": "Answer", "text": "不能。社會安全局表示，協定不涵蓋 Medicare 福利，因此不能用在協定國家賺得的年資，讓您取得免保費的 Medicare 住院保險。"}}, {"@type": "Question", "name": "韓國年資可以幫助取得社會安全退休福利嗎？", "acceptedAnswer": {"@type": "Answer", "text": "有時可以。您至少需要 6 個美國工作點數，韓國年資才會被計入；如果您已經有足夠的美國工作點數，美國就不能再計入韓國年資。"}}, {"@type": "Question", "name": "沒有 40 季，我還能取得 Medicare 嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以，在許多情況下可以。您可能透過配偶在美國的工作而符合資格，或是可以購買 A部分和 B部分。 年齡和居住條件的規定仍然適用。"}}, {"@type": "Question", "name": "我配偶在美國的工作對我有幫助嗎？", "acceptedAnswer": {"@type": "Answer", "text": "有。免保費的 A部分可以依據您本人、配偶、父母或子女的收入。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "海外工作年資與醫療保險A部分：40季規則", "description": "社會安全合算協定可以把海外年資計入社會安全福利，但不能計入免保費的醫療保險A部分。了解原因，以及您還有哪些選擇。", "url": "https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "海外工作年資與醫療保險A部分：40季規則", "item": "https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/totalization-agreements-medicare-40-quarters.html" lang="en">English</a>
+    <a href="/es/totalization-agreements-medicare-40-quarters.html" lang="es">Español</a>
+    <a href="/zh-Hant/totalization-agreements-medicare-40-quarters.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照護者</p>
+    <h1>合算協定與 Medicare 的 40 季規則</h1>
+    <p>在韓國或其他協定國家的工作年資，不能計入免保費的 A部分。以下說明原因，以及您還有哪些方式可以取得 Medicare。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案是：</strong>您在其他國家（例如韓國）的工作，不能計入免保費的醫療保險A部分。社會安全局與其他國家簽有協定，稱為合算協定（totalization agreement）。這些協定可以把您的海外年資計入美國的退休、殘障或遺屬福利。但社會安全局表示，協定不涵蓋 Medicare 福利，因此不能用這些年資讓您取得免保費的 Medicare 住院保險。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> 免保費的 A部分一般需要您或您的配偶有約 10 年的美國工作年資，也就是 40 季。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+
+    <div class="note">
+      <strong>沒有免保費的 A部分，不代表沒有 Medicare。</strong>您仍可能可以購買 A部分和醫療保險B部分。請參閱下方「如果您沒有 40 季」一節，以及我們的 <a href="/zh-Hant/medicare-immigrants.html">移民的 Medicare 指南</a>。
+    </div>
+
+    <h2>合算協定的作用</h2>
+    <p>這些協定有兩個主要目的。第一，避免同一份收入被兩個國家重複課徵社會安全稅。第二，幫助職業生涯分別在美國和另一個國家度過的勞工。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+    <p>美國與約 30 個國家簽有協定，包括南韓。<!-- src: https://www.ssa.gov/international/agreements_overview.html --> 韓國的協定於 2001 年 4 月 1 日生效。<!-- src: https://www.ssa.gov/international/agreements_overview.html --></p>
+    <p>就美國而言，這些協定涵蓋社會安全稅、Medicare 稅，以及退休、殘障和遺屬福利。協定不涵蓋 Medicare 計劃下的福利。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> 這一句話就解釋了大部分的混淆。</p>
+
+    <h2>為什麼海外年資不能計入 A部分</h2>
+    <p>社會安全局表示，不能用您在協定國家的年資，來確立您享有免保費 Medicare 住院保險的資格。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> A部分是 Medicare 中的住院保險。免保費的 A部分取決於在美國的工作和繳納的美國 Medicare 稅。Medicare 指出，大多數人是因為本人或配偶在工作期間繳納 Medicare 稅達到足夠的年限（一般至少 10 年）而取得。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>您想要的福利</th><th>海外年資有幫助嗎？</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>美國社會安全退休、殘障或遺屬福利</td><td>有時有。如果您符合協定的規定，社會安全局可能會計入。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>免保費的 Medicare A部分</td><td>沒有。海外年資不能用於此項。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>購買 A部分或 B部分</td><td>不需要。適用的是其他規定，例如年齡和居住條件。<!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>韓國的例子</h2>
+    <p>假設您曾在韓國的國民年金制度下工作多年，之後搬到美國，在這裡工作了幾年。就社會安全退休福利而言，協定在有限的範圍內可以幫上忙。要讓韓國年資被計入，您必須至少賺得 6 個美國工作點數，一般相當於一年半的工作。<!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --> 如果您已經有足夠的美國工作點數，美國就不能再計入您的韓國年資。<!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+    <p>如果您出生於 1929 年或之後，美國的退休福利需要 10 年工作，也就是 40 個工作點數。<!-- src: https://www.ssa.gov/pubs/EN-05-10072.pdf --> 在 2026 年，每賺 $1,890 可得 1 個工作點數，每年最多 4 個點數。<!-- src: https://www.ssa.gov/oact/cola/QC.html --> 這些都不會改變上述的 Medicare 規定。您的韓國年資可能有助於您的社會安全養老金，但不會讓 A部分變成免保費。</p>
+    <p>同樣的道理適用於每一個協定國家，不只是韓國。</p>
+
+    <h2>如果您沒有 40 季</h2>
+    <p>您仍可能可以取得 Medicare。主要的途徑如下：</p>
+    <ul>
+      <li><strong>配偶的工作。</strong>免保費的 A部分可以依據您本人、配偶、父母或子女的收入。<!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> 只有在美國的工作才算數，所以您配偶的美國工作紀錄很重要。請參閱 <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a> 和 <a href="/zh-Hant/medicare-spouse-work-record.html">使用配偶的工作紀錄</a>。</li>
+      <li><strong>美國政府的工作。</strong>在政府機關任職期間，如果有繳納 Medicare 稅，可以計入。<!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>購買 A部分。</strong>如果您不符合免保費 A部分的資格，可能可以購買。在 2026 年，每月的價格是 $311 或 $565，取決於您或配偶工作並繳納 Medicare 稅的時間長短。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> 要購買 A部分，您也必須同時註冊 B部分。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>只購買 B部分。</strong>如果您沒有資格取得免保費的 A部分，可以只購買 B部分而不買 A部分。您必須年滿 65 歲，並且是美國公民，或是在美國居住至少五年的合法入境非公民。<!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+    </ul>
+    <p>如果您太晚購買 A部分，保費可能會增加 10%，加收的年數是您原本可以註冊卻沒有註冊的年數的兩倍。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> 請參閱 <a href="/zh-Hant/medicare-late-enrollment-penalties.html">遲交註冊罰款</a>。</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>簡短的行動清單</h2>
+    <ol class="steps">
+      <li><strong>計算您在美國的工作。</strong>透過您的 my Social Security 帳戶查看您的美國收入紀錄。<!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>把配偶算進來。</strong>也請查看配偶的美國紀錄。</li>
+      <li><strong>規劃您的註冊時間。</strong>如果您必須購買保險，請在您的初始註冊期內註冊，以避免罰款。請參閱 <a href="/zh-Hant/turning-65.html">滿 65 歲</a>。</li>
+      <li><strong>致電社會安全局。</strong>電話是 1-800-772-1213。<!-- src: https://www.ssa.gov/medicare/sign-up --> 請詢問您的 Medicare 選擇和您的工作點數。</li>
+      <li><strong>向您的 SHIP 尋求免費協助。</strong>請在 <a href="/zh-Hant/ship-directory.html">SHIP 名錄</a> 中找到您所在地的 SHIP。如果您需要語言協助，請參閱 <a href="/zh-Hant/medical-interpreter-rights.html">口譯權利</a>。</li>
+    </ol>
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>我的韓國工作年資能計入 A部分的 40 季嗎？</summary>
+      <div>
+        <p>不能。社會安全局表示，協定不涵蓋 Medicare 福利，因此不能用在協定國家賺得的年資，讓您取得免保費的 Medicare 住院保險。<!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>韓國年資可以幫助取得社會安全退休福利嗎？</summary>
+      <div>
+        <p>有時可以。您至少需要 6 個美國工作點數，韓國年資才會被計入；如果您已經有足夠的美國工作點數，美國就不能再計入韓國年資。<!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>沒有 40 季，我還能取得 Medicare 嗎？</summary>
+      <div>
+        <p>可以，在許多情況下可以。您可能透過配偶在美國的工作而符合資格，或是可以購買 A部分和 B部分。<!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> 年齡和居住條件的規定仍然適用。<!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我配偶在美國的工作對我有幫助嗎？</summary>
+      <div>
+        <p>有。免保費的 A部分可以依據您本人、配偶、父母或子女的收入。<!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.ssa.gov/international/agreement_descriptions.html" rel="noopener">SSA：合算協定說明</a></li>
+      <li><a href="https://www.ssa.gov/international/Agreement_Pamphlets/korea.html" rel="noopener">SSA：與韓國的合算協定</a></li>
+      <li><a href="https://www.ssa.gov/international/agreements_overview.html" rel="noopener">SSA：美國的國際社會安全協定</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10072.pdf" rel="noopener">SSA：如何賺取工作點數</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10043.pdf" rel="noopener">SSA：Medicare 手冊</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov：費用</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>採取行動前請先核實。</strong>MediPrimer 提供的是一般教育資訊，與任何機構或保險公司沒有關係。有關非公民和工作點數的規定相當複雜。請向社會安全局確認您自己的紀錄。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/totalization-agreements-medicare-40-quarters.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

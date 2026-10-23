@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="tl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw</title>
+<meta name="description" content="Isang beses lang ang iyong 6-buwang Panahon ng Bukas na Pagpapatala sa Medigap. Alamin kung kailan ka pa makakabili ng policy, ang 63-araw na deadline, at anong patunay ang dapat itago.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw">
+<meta property="og:description" content="Isang beses lang ang iyong 6-buwang Panahon ng Bukas na Pagpapatala sa Medigap. Alamin kung kailan ka pa makakabili ng policy, ang 63-araw na deadline, at anong patunay ang dapat itago.">
+<meta property="og:url" content="https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html">
+<meta property="og:locale" content="tl_PH">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw">
+<meta name="twitter:description" content="Isang beses lang ang iyong 6-buwang Panahon ng Bukas na Pagpapatala sa Medigap. Alamin kung kailan ka pa makakabili ng policy, ang 63-araw na deadline, at anong patunay ang dapat itago.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Maaari ba akong magkaroon ng Panahon ng Bukas na Pagpapatala sa Medigap nang higit sa isang beses?", "acceptedAnswer": {"@type": "Answer", "text": "Hindi. Isa itong 6-buwang panahon na isang beses lang, na nagsisimula kapag mayroon ka nang Part B at ikaw ay 65 pataas. Hiwalay ang mga karapatan sa Garantisadong Pagbibigay ng Saklaw at nalalapat lamang sa ilang sitwasyon."}}, {"@type": "Question", "name": "Ano ang karapatan sa Garantisadong Pagbibigay ng Saklaw?", "acceptedAnswer": {"@type": "Answer", "text": "Ito ay karapatang bumili ng Medigap policy sa labas ng iyong panahon ng bukas na pagpapatala, sa ilang sitwasyon tulad ng pag-alis ng iyong Medicare Advantage plan sa Medicare."}}, {"@type": "Question", "name": "Gaano katagal ang mayroon ako para bumili pagkatapos matapos ang aking saklaw?", "acceptedAnswer": {"@type": "Answer", "text": "Para sa marami sa mga karapatan sa Garantisadong Pagbibigay ng Saklaw, mayroon kang 63 araw pagkatapos matapos ang dati mong saklaw. Ang ilang karapatan ay nagsisimula rin hanggang 60 araw bago."}}, {"@type": "Question", "name": "Maaari ba akong tanggihan ng isang kompanya pagkatapos matapos ang aking bukas na pagpapatala?", "acceptedAnswer": {"@type": "Answer", "text": "Walang pederal na garantiya na ibebenta sa iyo ng isang kompanya ang isang policy sa labas ng iyong panahon ng bukas na pagpapatala o ng karapatan sa Garantisadong Pagbibigay ng Saklaw. Maaaring may mas maraming proteksyon ang iyong estado."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw", "description": "Isang beses lang ang iyong 6-buwang Panahon ng Bukas na Pagpapatala sa Medigap. Alamin kung kailan ka pa makakabili ng policy, ang 63-araw na deadline, at anong patunay ang dapat itago.", "url": "https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html", "inLanguage": "tl-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medigap-open-enrollment-guaranteed-issue.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mediprimer.org/tl/"}, {"@type": "ListItem", "position": 2, "name": "Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw", "item": "https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/tl/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Wika: Tagalog"><span class="lang-switch-current">Tagalog</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medigap-open-enrollment-guaranteed-issue.html" lang="en">English</a>
+    <a href="/es/medigap-open-enrollment-guaranteed-issue.html" lang="es">Español</a>
+    <a href="/zh-Hant/medigap-open-enrollment-guaranteed-issue.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/medigap-open-enrollment-guaranteed-issue.html" lang="vi">Tiếng Việt</a>
+    <a href="/ko/medigap-open-enrollment-guaranteed-issue.html" lang="ko">한국어</a>
+    <a href="/tl/medigap-open-enrollment-guaranteed-issue.html" lang="tl" aria-current="page">Tagalog</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/tl/" class="navtop">Home</a>
+      <div class="navitem has-menu">
+        <a href="/tl/turning-65.html" class="navtop active">Magsimula Dito</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Magsimula Dito">▾</button>
+        <div class="dropdown">
+        <a href="/tl/turning-65.html" class="star">★ Pag-abot ng 65: Magsimula Dito</a>
+        <a href="/tl/planning-for-two.html">Medicare para sa mga Mag-asawa</a>
+        <a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a>
+        <a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a>
+        <a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a>
+        <a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a>
+        <a href="/tl/questions-to-ask.html">Mga Tanong na Dapat Itanong</a>
+        <a href="/tl/edge-cases.html">Mga Espesyal na Kaso at Komplikasyon</a>
+        <a href="/tl/members.html">Lahat ng Gabay para sa Miyembro →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/basics.html" class="navtop">Alamin ang mga Pangunahing Kaalaman</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Alamin ang mga Pangunahing Kaalaman">▾</button>
+        <div class="dropdown">
+        <a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a>
+        <a href="/tl/plan-types.html">Mga Uri ng Plano</a>
+        <a href="/tl/medigap.html">Mga Plano ng Medigap</a>
+        <a href="/tl/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/tl/marketplace.html">Ang Marketplace (ACA)</a>
+        <a href="/tl/cms-updates.html">Paano Pinamamahalaan ang mga Programa</a>
+        <a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a>
+        <a href="/tl/basics.html">Lahat ng Pangunahing Kaalaman →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/tl/directories.html" class="navtop">Humanap ng Tulong</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Humanap ng Tulong">▾</button>
+        <div class="dropdown">
+        <a href="/tl/state-medicaid.html">Medicaid ng Estado</a>
+        <a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a>
+        <a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a>
+        <a href="/tl/resources.html">Lahat ng Rekurso</a>
+        <a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a>
+        <a href="/tl/directories.html">Home ng mga Direktoryo →</a>
+        </div>
+      </div>
+      <a href="/tl/glossary.html" class="navtop">Glosaryo</a>
+      <div class="navitem has-menu">
+        <a href="/tl/professionals.html" class="navtop">Para sa mga Kasosyo at Propesyonal</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Buksan ang menu ng Para sa mga Kasosyo at Propesyonal">▾</button>
+        <div class="dropdown">
+        <a href="/tl/partner-materials.html" class="star">★ Libreng mga Materyal na Ipapamahagi</a>
+        <a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a>
+        <a href="/tl/providers.html">Mga Provider at Pagsingil</a>
+        <a href="/tl/brokers.html">Mga Broker at Tagapayo</a>
+        <a href="/tl/navigators.html">Mga Case Manager at Navigator</a>
+        <a href="/tl/star-ratings.html">Mga Rating na Bituin at Kalidad</a>
+        <a href="/tl/appeals-timelines.html">Mga Apela: Antas at Takdang Panahon</a>
+        <a href="/tl/professionals.html">Lahat ng Sanggunian para sa Propesyonal →</a>
+        </div>
+      </div>
+      <a href="/tl/about.html" class="navtop">Tungkol</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para sa mga Miyembro at Tagapag-alaga</p>
+    <h1>Panahon ng Bukas na Pagpapatala sa Medigap vs. Mga Karapatan sa Garantisadong Pagbibigay ng Saklaw</h1>
+    <p>Mayroon kang isang 6-buwang panahon para bumili ng Medigap policy na may pinakakaunting hadlang. May ilang sitwasyon na nagbibigay sa iyo ng isa pang pagkakataon. Narito kung paano nagkakaugnay ang dalawa.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Narito ang maikling sagot.</strong> Ang iyong Panahon ng Bukas na Pagpapatala sa Medigap (Karagdagang Medicare) ay isang beses lang at tumatagal ng 6 na buwan. Nagsisimula ito sa unang araw ng buwan na ikaw ay 65 taong gulang pataas at nakapag-sign up ka na sa Medicare Part B. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Pagkatapos nitong matapos, walang pederal na garantiya na ibebenta sa iyo ng isang kompanya ang isang Medigap policy. Kung makakabili ka man, maaaring mas mataas ang halaga dahil sa mga nakaraan o kasalukuyang problema sa kalusugan. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> May ilang sitwasyon na nagbibigay sa iyo ng "mga karapatan sa Garantisadong Pagbibigay ng Saklaw." Pinapayagan ka nitong bumili ng policy kahit lampas na ang iyong panahon ng bukas na pagpapatala. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <div class="note">
+      <strong>Pederal ang mga karapatang ito.</strong> Maaaring bigyan ka ng iyong estado ng mas maraming pagkakataong bumili. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Tawagan ang iyong <a href="/tl/ship-directory.html">State Health Insurance Assistance Program (SHIP)</a> o ang iyong <a href="/tl/insurance-departments.html">State Insurance Department</a> para malaman ang mga patakaran ng iyong estado.
+    </div>
+
+    <h2>Ang Panahon ng Bukas na Pagpapatala sa Medigap</h2>
+    <p>Ito ang pinakamainam na panahon para bumili ng <a href="/tl/medigap.html">Medigap policy</a>. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Isang beses ka lang magkakaroon ng ganitong panahon, at tumatagal ito ng 6 na buwan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+    <ul>
+      <li><strong>Kailangan mong may Part B.</strong> Hindi ka makakabili ng Medigap hangga't hindi ka nagsa-sign up sa Part B. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Kailangan kang 65 taong gulang pataas.</strong> Nagsisimula ang panahon sa unang buwan na mayroon kang Part B at ikaw ay 65 pataas. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Nagtatrabaho pa pagkatapos ng 65?</strong> Kung ipinagpaliban mo ang Part B dahil sa saklaw mula sa employer, hindi magsisimula ang iyong panahon hangga't hindi ka nagkakaroon ng Part B. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Tingnan ang <a href="/tl/working-past-65.html">Pagtatrabaho Pagkatapos ng 65</a>.</li>
+      <li><strong>Wala pang 65?</strong> Karaniwang hindi inoobliga ng pederal na batas ang mga kompanya na magbenta ng Medigap sa mga wala pang 65. Ang ilang estado ay nag-oobliga. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>May mga estadong nagdaragdag ng mas maraming panahon.</strong> <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Hindi nagtatapos ang iyong saklaw kapag nalampasan mo ang panahong ito. Ang ibig sabihin lang nito, maaari kang makatanggap ng mga tanong tungkol sa kalusugan sa susunod. Para malaman kung paano ito gumagana, tingnan ang <a href="/tl/medicare-advantage-vs-medigap-underwriting.html">Pagsusuri sa Panganib (Underwriting) sa Medigap</a>.</p>
+
+    <h2>Mga karapatan sa Garantisadong Pagbibigay ng Saklaw: kailan ka pa makakabili</h2>
+    <p>Ang mga karapatan sa Garantisadong Pagbibigay ng Saklaw ay mga espesyal na pagkakataon para bumili ng Medigap sa labas ng iyong panahon ng Bukas na Pagpapatala. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Inililista ng sariling tool ng Medicare ang mga pangunahing sitwasyong ito. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Ang iyong sitwasyon</th><th>Ano ang sinasabi ng Medicare</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Aalis sa Medicare ang iyong Medicare Advantage plan, o lumipat ka palabas ng saklaw na lugar nito</td><td>Maaari kang bumalik sa Orihinal na Medicare at bumili ng Medigap policy. Mag-apply mula 60 araw bago matapos ang iyong saklaw hanggang hindi lalampas sa 63 araw pagkatapos. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Hindi sumunod sa mga patakaran ang iyong Medicare Advantage plan o niloko ka nito</td><td>Pareho ang mga karapatan at ang takdang panahon: 60 araw bago hanggang 63 araw pagkatapos. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Sumali ka sa isang Medicare Advantage plan noong una kang naging karapat-dapat sa edad na 65 at bumalik ka sa Orihinal na Medicare sa loob ng unang taon</td><td>Maaari kang bumili ng ilang Medigap policy na ibinebenta sa iyong estado. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></td></tr>
+          <tr><td>Itinigil mo ang Medigap para sumali sa isang Medicare Advantage plan sa unang pagkakataon</td><td>Mayroon kang 12-buwang "trial right" para makakuha muli ng Medigap policy. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Kung ibinebenta pa rin ng parehong kompanya ang dati mong policy, maaari mo itong bilhin. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Nawala ang iyong saklaw sa Medigap nang hindi mo kasalanan, tulad ng kompanyang nabangkarote</td><td>Maaari kang bumili ng Plan A, B, C, D, F, G, K, o L na ibinebenta sa iyong estado. Mayroon kang 63 araw pagkatapos matapos ang iyong saklaw. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Nawala ang iyong ibang saklaw pangkalusugan</td><td>Maaaring makabili ka ng Medigap policy. Tawagan ang iyong SHIP para malaman kung kwalipikado ka. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sa ilang kaso, maaaring tumagal ng karagdagang 12 buwan ang iyong mga karapatan. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Nakadepende ang mga detalye sa iyong estado at sitwasyon, kaya kumpirmahin ang sa iyo sa iyong SHIP.</p>
+
+    <h2>Ang 63-araw na deadline</h2>
+    <p>Karamihan sa mga karapatan sa Garantisadong Pagbibigay ng Saklaw ay may maikling takdang panahon. Para sa marami sa mga ito, mayroon kang 63 araw pagkatapos matapos ang dati mong saklaw para mag-apply. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Huwag magpaliban. Itago ang bawat liham, abiso, email, at Pagtanggi sa Claim mula sa dati mong plan. Maaaring kailanganin mong magpadala ng mga kopya kasama ng iyong bagong aplikasyon para patunayang natapos na ang iyong saklaw. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+
+    <h2>Ano ang hindi nagbabago</h2>
+    <ul>
+      <li><strong>Kailangan mo pa ring may Orihinal na Medicare.</strong> Kung mayroon kang Medicare Advantage plan, ilegal para sa sinuman na magbenta sa iyo ng Medigap policy maliban kung babalik ka sa Orihinal na Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Kadalasang hinaharangan ng Medicaid ang pagbebenta.</strong> Karaniwang hindi maaaring ibenta sa iyo ng mga kompanya ang Medigap kung mayroon kang Medicaid. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Maaaring sarado na sa iyo ang Plan C at F.</strong> Kung naging karapat-dapat ka sa Medicare noong o pagkatapos ng Enero 1, 2020, hindi ka makakabili ng Plan C o Plan F. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Tingnan ang <a href="/tl/medigap-plan-g-vs-plan-n.html">Plan G vs. Plan N</a> para sa mga planong madalas ihambing ng mas bagong mga nagpatala.</li>
+      <li><strong>Isang tao lang ang saklaw ng Medigap.</strong> Kailangang bumili ng magkahiwalay na policy ang mag-asawa. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Nagsisimula ang saklaw sa unang araw ng buwan pagkatapos mong mag-apply, maliban kung humiling ka ng mas huling petsa. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Kumuha ng mga update mula sa MediPrimer sa email">
+      <h2>Magtatapos ang open enrollment sa Disyembre 7. Ipaaalala namin sa iyo.</h2>
+      <p>Kunin ang aming fall review checklist — ang maikling listahan ng dapat suriin sa iyong plano bago ang deadline — kasama ang isang paalala bago sumapit ang Disyembre 7. Pagkatapos nito, isang maikling email lang kapag may nagbago, hindi hihigit sa isa kada linggo. Walang ads, walang pagbebenta ng plano.</p>
+      <form class="newsletter-form" data-lang="tl">
+        <label class="sr-only" for="nl-email">Iyong email address</label>
+        <input id="nl-email" type="email" required placeholder="Iyong email address">
+        <button type="submit">Ipadala sa akin ang checklist</button>
+      </form>
+      <p class="newsletter-fine">Magpapadala kami ng email para kumpirmahin — hindi ka pa naka-subscribe hangga't hindi mo ito na-click. Isang paalala bago ang deadline, tapos ang karaniwan naming isang-email-kada-linggo, pinakamarami. Mag-unsubscribe sa isang click.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Maikling listahan ng gagawin</h2>
+    <ol class="steps">
+      <li><strong>Hanapin ang iyong petsa.</strong> Isulat ang araw na magsisimula ang iyong Part B o matatapos ang dati mong saklaw.</li>
+      <li><strong>Bilangin ang iyong panahon.</strong> Anim na buwan para sa bukas na pagpapatala. Animnapu't tatlong araw para sa karamihan ng mga karapatan sa Garantisadong Pagbibigay ng Saklaw.</li>
+      <li><strong>Ipunin ang patunay.</strong> Itago ang mga liham at abiso ng iyong plan.</li>
+      <li><strong>Tawagan ang iyong SHIP.</strong> Nagbibigay ito ng libre at walang kinikilingang tulong at walang kaugnayan sa anumang insurer.</li>
+      <li><strong>Basahin ang mga kaugnay na gabay.</strong> Tingnan ang <a href="/tl/medicare-advantage-plan-ending.html">kapag magtatapos na ang iyong plan</a> at ang <a href="/tl/medicare-advantage-to-original-medicare.html">paglipat sa Orihinal na Medicare</a>.</li>
+    </ol>
+
+    <h2>Mga karaniwang tanong</h2>
+
+    <details class="qa">
+      <summary>Maaari ba akong magkaroon ng Panahon ng Bukas na Pagpapatala sa Medigap nang higit sa isang beses?</summary>
+      <div>
+        <p>Hindi. Isa itong 6-buwang panahon na isang beses lang, na nagsisimula kapag mayroon ka nang Part B at ikaw ay 65 pataas. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Hiwalay ang mga karapatan sa Garantisadong Pagbibigay ng Saklaw at nalalapat lamang sa ilang sitwasyon.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Ano ang karapatan sa Garantisadong Pagbibigay ng Saklaw?</summary>
+      <div>
+        <p>Ito ay karapatang bumili ng Medigap policy sa labas ng iyong panahon ng bukas na pagpapatala, sa ilang sitwasyon tulad ng pag-alis ng iyong Medicare Advantage plan sa Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Gaano katagal ang mayroon ako para bumili pagkatapos matapos ang aking saklaw?</summary>
+      <div>
+        <p>Para sa marami sa mga karapatan sa Garantisadong Pagbibigay ng Saklaw, mayroon kang 63 araw pagkatapos matapos ang dati mong saklaw. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Ang ilang karapatan ay nagsisimula rin hanggang 60 araw bago.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Maaari ba akong tanggihan ng isang kompanya pagkatapos matapos ang aking bukas na pagpapatala?</summary>
+      <div>
+        <p>Walang pederal na garantiya na ibebenta sa iyo ng isang kompanya ang isang policy sa labas ng iyong panahon ng bukas na pagpapatala o ng karapatan sa Garantisadong Pagbibigay ng Saklaw. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Maaaring may mas maraming proteksyon ang iyong estado.</p>
+      </div>
+    </details>
+
+    <h2>Mga opisyal na pinagmulan</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: Kailan ako makakabili ng Medigap policy?</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Handbook na Medicare &amp; You (Medicare.gov)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Tiyakin bago kumilos.</strong> Ang MediPrimer ay pangkalahatang impormasyong pang-edukasyon at walang kaugnayan sa anumang ahensya o insurer. Nag-iiba-iba sa bawat estado ang mga karapatan sa Medigap. Kumpirmahin ang iyong mga petsa at karapatan sa Medicare, sa liham ng iyong plan, o sa iyong SHIP.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Ang mga Pangunahing Kaalaman</h4>
+        <ul>
+          <li><a href="/tl/coverage-basics.html">Mga Pangunahing Kaalaman sa Saklaw</a></li>
+          <li><a href="/tl/plan-types.html">Mga Uri ng Plano</a></li>
+          <li><a href="/tl/medigap.html">Mga Plano ng Medigap</a></li>
+          <li><a href="/tl/policy-changes.html">Mga Pagbabago sa Patakaran at Alituntunin</a></li>
+          <li><a href="/tl/glossary.html">Glosaryo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Miyembro</h4>
+        <ul>
+          <li><a href="/tl/enrollment.html">Pagpapatala at mga Deadline</a></li>
+          <li><a href="/tl/costs.html">Pag-unawa sa Inyong mga Gastos</a></li>
+          <li><a href="/tl/choosing-coverage.html">Pagpili ng Saklaw</a></li>
+          <li><a href="/tl/getting-help.html">Paghingi ng Tulong sa Pagbabayad</a></li>
+          <li><a href="/tl/turning-65.html">Pag-abot ng 65</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para sa mga Propesyonal</h4>
+        <ul>
+          <li><a href="/tl/operations.html">Operasyon ng mga Planong Pangkalusugan</a></li>
+          <li><a href="/tl/providers.html">Mga Provider at Pagsingil</a></li>
+          <li><a href="/tl/brokers.html">Mga Broker at Tagapayo</a></li>
+          <li><a href="/tl/navigators.html">Mga Case Manager at Navigator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Direktoryo at Kagamitan</h4>
+        <ul>
+          <li><a href="/tl/state-medicaid.html">Medicaid ng Estado</a></li>
+          <li><a href="/tl/ship-directory.html">SHIP (tulong sa Medicare)</a></li>
+          <li><a href="/tl/insurance-departments.html">Mga Kagawaran ng Insurance</a></li>
+          <li><a href="/tl/resources.html">Lahat ng Rekurso</a></li>
+          <li><a href="/tl/checklists.html">Mga Checklist na Puwedeng I-print</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Mga Opisyal na Pinagmulan</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Independiyenteng rekursong pang-edukasyon. Hindi ito kaanib ng CMS, Medicare, Medicaid, ng anumang ahensya ng estado, o ng anumang kompanya ng insurance sa kalusugan. Pangkalahatan lamang ang impormasyon dito at dapat itong tiyakin gamit ang opisyal na materyal ng programa at ng plano. Wala sa nilalaman dito ang itinuturing na payo medikal, legal, o pinansyal, at walang pahinang nagrerekomenda ng partikular na plano. Huling sinuri ang nilalaman noong Hulyo 2026.</p>
+    <nav class="legal-links">
+      <a href="/tl/privacy.html">Privacy</a>
+      <a href="/terms-of-use.html">Mga Tuntunin sa Paggamit</a>
+      <a href="/disclaimer.html">Paalala</a>
+      <a href="/tl/accessibility.html">Accessibility</a>
+      <a href="/tl/editorial-standards.html">Mga Pamantayang Editoryal</a>
+      <a href="/tl/support.html">Suporta</a>
+      <a href="/tl/site-map.html">Site Map</a>
+    </nav>
+    <div class="note">
+      <p>Salin mula sa orihinal na Ingles.</p>
+      <p>
+        <a href="/medigap-open-enrollment-guaranteed-issue.html">Tingnan ang orihinal na bersyon sa Ingles</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Opisyal na materyal ng Medicare sa Tagalog</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

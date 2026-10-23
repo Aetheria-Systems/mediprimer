@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión</title>
+<meta name="description" content="Su Período de Inscripción Abierta de 6 meses para Medigap ocurre una sola vez. Vea cuándo más puede comprar una póliza, el plazo de 63 días y qué pruebas debe guardar.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión">
+<meta property="og:description" content="Su Período de Inscripción Abierta de 6 meses para Medigap ocurre una sola vez. Vea cuándo más puede comprar una póliza, el plazo de 63 días y qué pruebas debe guardar.">
+<meta property="og:url" content="https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión">
+<meta name="twitter:description" content="Su Período de Inscripción Abierta de 6 meses para Medigap ocurre una sola vez. Vea cuándo más puede comprar una póliza, el plazo de 63 días y qué pruebas debe guardar.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Puedo tener un Período de Inscripción Abierta de Medigap más de una vez?", "acceptedAnswer": {"@type": "Answer", "text": "No. Es una ventana única de 6 meses que comienza cuando usted tiene la Parte B y tiene 65 años o más. Los derechos de Garantía de Emisión son aparte y se aplican solo en ciertas situaciones."}}, {"@type": "Question", "name": "¿Qué es un derecho de Garantía de Emisión?", "acceptedAnswer": {"@type": "Answer", "text": "Es el derecho a comprar una póliza de Medigap fuera de su ventana de Inscripción Abierta, en ciertas situaciones, como cuando su plan Medicare Advantage deja Medicare."}}, {"@type": "Question", "name": "¿Cuánto tiempo tengo para comprar después de que termine mi cobertura?", "acceptedAnswer": {"@type": "Answer", "text": "En muchos derechos de Garantía de Emisión, usted tiene 63 días después de que termine su cobertura anterior. Algunos derechos también comienzan hasta 60 días antes."}}, {"@type": "Question", "name": "¿Puede una compañía rechazarme después de que termine mi Inscripción Abierta?", "acceptedAnswer": {"@type": "Answer", "text": "No existe una garantía federal de que una compañía le venda una póliza fuera de su ventana de Inscripción Abierta o de un derecho de Garantía de Emisión. Su estado puede tener más protecciones."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión", "description": "Su Período de Inscripción Abierta de 6 meses para Medigap ocurre una sola vez. Vea cuándo más puede comprar una póliza, el plazo de 63 días y qué pruebas debe guardar.", "url": "https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medigap-open-enrollment-guaranteed-issue.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medigap-open-enrollment-guaranteed-issue.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión", "item": "https://mediprimer.org/es/medigap-open-enrollment-guaranteed-issue.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medigap-open-enrollment-guaranteed-issue.html" lang="en">English</a>
+    <a href="/es/medigap-open-enrollment-guaranteed-issue.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Miembros y Cuidadores</p>
+    <h1>Período de Inscripción Abierta de Medigap vs. Derechos de Garantía de Emisión</h1>
+    <p>Usted tiene una sola ventana de 6 meses para comprar una póliza de Seguro Complementario de Medicare (Medigap) con la menor cantidad de obstáculos. Algunas situaciones le dan otra oportunidad. Así encajan las dos.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> Su Período de Inscripción Abierta de Medigap es una ventana única de 6 meses. Comienza el primer día del mes en que usted tiene 65 años o más y se inscribe en la Parte B de Medicare. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Cuando termina, no existe una garantía federal de que una compañía le venda una póliza de Seguro Complementario de Medicare (Medigap). Si puede comprar una, quizás cueste más por problemas de salud pasados o actuales. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Algunas situaciones le dan "derechos de Garantía de Emisión". Estos le permiten comprar una póliza incluso después de que haya pasado su ventana de Inscripción Abierta. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <div class="note">
+      <strong>Estos son derechos federales.</strong> Su estado puede darle más oportunidades para comprar. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Llame a su <a href="/es/ship-directory.html">Programa Estatal de Asistencia sobre Seguros de Salud (SHIP)</a> o al <a href="/es/insurance-departments.html">Departamento de Seguros de su Estado</a> para conocer las reglas de su estado.
+    </div>
+
+    <h2>El Período de Inscripción Abierta de Medigap</h2>
+    <p>Este es el mejor momento para comprar una <a href="/es/medigap.html">póliza de Medigap</a>. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Usted tiene una sola ventana de este tipo, y dura 6 meses. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+    <ul>
+      <li><strong>Debe tener la Parte B.</strong> No puede comprar Medigap hasta que se inscriba en la Parte B de Medicare. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Debe tener 65 años o más.</strong> La ventana comienza el primer mes en que usted tiene la Parte B y tiene 65 años o más. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>¿Sigue trabajando después de los 65?</strong> Si pospone la Parte B por la cobertura de su empleador, su ventana no comienza hasta que obtenga la Parte B. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Consulte <a href="/es/working-past-65.html">Trabajar después de los 65</a>.</li>
+      <li><strong>¿Es menor de 65?</strong> La ley federal generalmente no exige que las compañías vendan Medigap a personas menores de 65 años. Algunos estados sí lo exigen. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Algunos estados añaden más ventanas.</strong> <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>Perder esta ventana no pone fin a su cobertura. Solo significa que más adelante podrían hacerle preguntas de salud. Para saber cómo funciona esto, consulte la <a href="/es/medicare-advantage-vs-medigap-underwriting.html">Suscripción de Medigap</a>.</p>
+
+    <h2>Derechos de Garantía de Emisión: cuándo todavía puede comprar</h2>
+    <p>Los derechos de Garantía de Emisión son oportunidades especiales para comprar Medigap fuera de su ventana de Inscripción Abierta. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> La propia herramienta de Medicare enumera estas situaciones principales. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Su situación</th><th>Lo que dice Medicare</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Su plan Medicare Advantage deja Medicare, o usted se muda fuera de su área</td><td>Puede cambiarse a la Cobertura Original de Medicare y comprar una póliza de Medigap. Presente su solicitud desde 60 días antes de que termine su cobertura hasta un máximo de 63 días después. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Su plan Medicare Advantage no siguió las reglas o lo engañó</td><td>Se aplican los mismos derechos y el mismo plazo, de 60 días antes a 63 días después. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Se unió a un plan Medicare Advantage cuando fue elegible por primera vez a los 65 años y vuelve a la Cobertura Original de Medicare dentro del primer año</td><td>Puede comprar ciertas pólizas de Medigap que se vendan en su estado. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></td></tr>
+          <tr><td>Canceló su Medigap para unirse a un plan Medicare Advantage por primera vez</td><td>Tiene un "derecho de prueba" de 12 meses para recuperar una póliza de Medigap. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Si la misma compañía todavía vende su póliza anterior, puede comprarla. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Perdió su cobertura de Medigap sin culpa suya, por ejemplo, porque una compañía quebró</td><td>Puede comprar el Plan A, B, C, D, F, G, K o L que se venda en su estado. Tiene 63 días después de que termine su cobertura. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+          <tr><td>Perdió otra cobertura de salud</td><td>Es posible que pueda comprar una póliza de Medigap. Llame a su SHIP para ver si califica. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Sus derechos pueden durar 12 meses adicionales en ciertos casos. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Los detalles dependen de su estado y de su situación, así que confirme los suyos con su SHIP.</p>
+
+    <h2>El plazo de 63 días</h2>
+    <p>La mayoría de los derechos de Garantía de Emisión tienen un plazo corto. En muchos de ellos, usted tiene 63 días después de que termine su cobertura anterior para presentar la solicitud. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> No espere. Guarde todas las cartas, avisos, correos electrónicos y Negación de Reclamación de su plan anterior. Es posible que deba enviar copias con su nueva solicitud para probar que su cobertura terminó. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></p>
+
+    <h2>Lo que no cambia</h2>
+    <ul>
+      <li><strong>Sigue necesitando la Cobertura Original de Medicare.</strong> Si tiene un plan Medicare Advantage, es ilegal que alguien le venda una póliza de Medigap, a menos que usted vuelva a la Cobertura Original de Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Medicaid por lo general bloquea la venta.</strong> Las compañías generalmente no pueden venderle Medigap si usted tiene Medicaid. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --></li>
+      <li><strong>Los Planes C y F pueden estar cerrados para usted.</strong> Si usted fue elegible para Medicare el 1 de enero de 2020 o después, no puede comprar el Plan C ni el Plan F. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Consulte <a href="/es/medigap-plan-g-vs-plan-n.html">Plan G vs. Plan N</a> para ver los planes que muchos inscritos más recientes comparan.</li>
+      <li><strong>Medigap cubre a una sola persona.</strong> Los cónyuges deben comprar pólizas separadas. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>La cobertura comienza el primer día del mes siguiente a su solicitud, a menos que usted pida una fecha posterior. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Una lista breve de acciones</h2>
+    <ol class="steps">
+      <li><strong>Encuentre su fecha.</strong> Anote el día en que comienza su Parte B o en que termina su cobertura anterior.</li>
+      <li><strong>Cuente su ventana.</strong> Seis meses para la Inscripción Abierta. Sesenta y tres días para la mayoría de los derechos de Garantía de Emisión.</li>
+      <li><strong>Reúna las pruebas.</strong> Guarde las cartas y los avisos de su plan.</li>
+      <li><strong>Llame a su SHIP.</strong> Ofrece ayuda gratuita e imparcial y no tiene vínculo con ninguna aseguradora.</li>
+      <li><strong>Lea las guías relacionadas.</strong> Consulte <a href="/es/medicare-advantage-plan-ending.html">cuando su plan está por terminar</a> y <a href="/es/medicare-advantage-to-original-medicare.html">cómo cambiarse a la Cobertura Original de Medicare</a>.</li>
+    </ol>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Puedo tener un Período de Inscripción Abierta de Medigap más de una vez?</summary>
+      <div>
+        <p>No. Es una ventana única de 6 meses que comienza cuando usted tiene la Parte B y tiene 65 años o más. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Los derechos de Garantía de Emisión son aparte y se aplican solo en ciertas situaciones.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Qué es un derecho de Garantía de Emisión?</summary>
+      <div>
+        <p>Es el derecho a comprar una póliza de Medigap fuera de su ventana de Inscripción Abierta, en ciertas situaciones, como cuando su plan Medicare Advantage deja Medicare. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Cuánto tiempo tengo para comprar después de que termine mi cobertura?</summary>
+      <div>
+        <p>En muchos derechos de Garantía de Emisión, usted tiene 63 días después de que termine su cobertura anterior. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Algunos derechos también comienzan hasta 60 días antes.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puede una compañía rechazarme después de que termine mi Inscripción Abierta?</summary>
+      <div>
+        <p>No existe una garantía federal de que una compañía le venda una póliza fuera de su ventana de Inscripción Abierta o de un derecho de Garantía de Emisión. <!-- src: https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap --> Su estado puede tener más protecciones.</p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/supplements-other-insurance/when-can-i-buy-medigap" rel="noopener">Medicare.gov: ¿Cuándo puedo comprar una póliza de Medigap?</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Manual Medicare y Usted (Medicare.gov)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer ofrece información educativa general y no está afiliado a ninguna agencia ni aseguradora. Los derechos de Medigap varían según el estado. Confirme sus fechas y derechos con Medicare, con la carta de su plan o con su SHIP.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medigap-open-enrollment-guaranteed-issue.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

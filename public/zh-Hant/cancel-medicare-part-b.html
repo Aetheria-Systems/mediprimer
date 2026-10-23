@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>如何取消醫療保險B部分：表格、時間與費用</title>
+<meta name="description" content="您隨時可以用 CMS-1763 表格取消B部分。了解承保何時結束、重新加入時的罰款，以及哪些承保需要B部分。">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="如何取消醫療保險B部分：表格、時間與費用">
+<meta property="og:description" content="您隨時可以用 CMS-1763 表格取消B部分。了解承保何時結束、重新加入時的罰款，以及哪些承保需要B部分。">
+<meta property="og:url" content="https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="如何取消醫療保險B部分：表格、時間與費用">
+<meta name="twitter:description" content="您隨時可以用 CMS-1763 表格取消B部分。了解承保何時結束、重新加入時的罰款，以及哪些承保需要B部分。">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "我可以取消醫療保險B部分嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以。您隨時可以把 CMS-1763 表格寄給您當地的社會安全局辦公室，來終止B部分。"}}, {"@type": "Question", "name": "取消後，我的B部分何時結束？", "acceptedAnswer": {"@type": "Answer", "text": "在您送出表格當月的下個月最後一天。"}}, {"@type": "Question", "name": "如果我再次註冊，會被罰款嗎？", "acceptedAnswer": {"@type": "Answer", "text": "常常會。您原本可以擁有B部分卻沒有，每滿12個月，就要多付10%。 如果您原本有工作提供的計劃，並在允許的期間內註冊，通常不會有罰款。"}}, {"@type": "Question", "name": "我可以取消B部分，但保留A部分嗎？", "acceptedAnswer": {"@type": "Answer", "text": "可以，前提是您的A部分不需要繳保費。只有在您需要為A部分繳納保費時，才能終止A部分。"}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "如何取消醫療保險B部分：表格、時間與費用", "description": "您隨時可以用 CMS-1763 表格取消B部分。了解承保何時結束、重新加入時的罰款，以及哪些承保需要B部分。", "url": "https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html", "inLanguage": "zh-Hant-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/cancel-medicare-part-b.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "首頁", "item": "https://mediprimer.org/zh-Hant/"}, {"@type": "ListItem", "position": 2, "name": "如何取消醫療保險B部分：表格、時間與費用", "item": "https://mediprimer.org/zh-Hant/cancel-medicare-part-b.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/zh-Hant/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="語言: 繁體中文"><span class="lang-switch-current">繁體中文</span> ▾</button>
+    <div class="dropdown">
+    <a href="/cancel-medicare-part-b.html" lang="en">English</a>
+    <a href="/es/cancel-medicare-part-b.html" lang="es">Español</a>
+    <a href="/zh-Hant/cancel-medicare-part-b.html" lang="zh-Hant" aria-current="page">繁體中文</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="選單">☰</button>
+    <nav class="main">
+      <a href="/zh-Hant/" class="navtop">首頁</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/turning-65.html" class="navtop active">從這裡開始</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 從這裡開始">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/turning-65.html" class="star">★ 年滿65歲：從這裡開始</a>
+        <a href="/zh-Hant/planning-for-two.html">夫妻的 Medicare</a>
+        <a href="/zh-Hant/choosing-coverage.html">選擇保險</a>
+        <a href="/zh-Hant/costs.html">了解您的費用</a>
+        <a href="/zh-Hant/enrollment.html">註冊與截止日期</a>
+        <a href="/zh-Hant/getting-help.html">獲得付款協助</a>
+        <a href="/zh-Hant/questions-to-ask.html">應該問的問題</a>
+        <a href="/zh-Hant/edge-cases.html">特殊情況與複雜問題</a>
+        <a href="/zh-Hant/members.html">所有會員指南 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/basics.html" class="navtop">了解基礎知識</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 了解基礎知識">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/coverage-basics.html">保險基礎知識</a>
+        <a href="/zh-Hant/plan-types.html">計劃類型</a>
+        <a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a>
+        <a href="/zh-Hant/medicare-advantage.html">Medicare Advantage（優勢計劃）</a>
+        <a href="/zh-Hant/marketplace.html">醫療保險市場（ACA）</a>
+        <a href="/zh-Hant/cms-updates.html">項目如何管理</a>
+        <a href="/zh-Hant/policy-changes.html">政策與規則變化</a>
+        <a href="/zh-Hant/basics.html">所有基礎知識 →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/directories.html" class="navtop">尋求協助</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 尋求協助">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/state-medicaid.html">州 Medicaid</a>
+        <a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a>
+        <a href="/zh-Hant/insurance-departments.html">保險部門</a>
+        <a href="/zh-Hant/resources.html">所有資源</a>
+        <a href="/zh-Hant/checklists.html">可列印的清單</a>
+        <a href="/zh-Hant/directories.html">目錄首頁 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/glossary.html" class="navtop">詞彙表</a>
+      <div class="navitem has-menu">
+        <a href="/zh-Hant/professionals.html" class="navtop">給合作夥伴與專業人士</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="開啟選單： 給合作夥伴與專業人士">▾</button>
+        <div class="dropdown">
+        <a href="/zh-Hant/partner-materials.html" class="star">★ 免費可發放的資料</a>
+        <a href="/zh-Hant/operations.html">健康計劃運營</a>
+        <a href="/zh-Hant/providers.html">醫療提供者與帳單</a>
+        <a href="/zh-Hant/brokers.html">經紀人與顧問</a>
+        <a href="/zh-Hant/navigators.html">個案經理與引導員</a>
+        <a href="/zh-Hant/star-ratings.html">星級評定與品質</a>
+        <a href="/zh-Hant/appeals-timelines.html">上訴：級別與時間表</a>
+        <a href="/zh-Hant/professionals.html">所有專業參考資料 →</a>
+        </div>
+      </div>
+      <a href="/zh-Hant/about.html" class="navtop">關於我們</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">給會員與照護者</p>
+    <h1>我可以取消醫療保險B部分嗎？</h1>
+    <p>您隨時可以終止B部分。比較難的問題是，之後想再加入要付出什麼代價。以下說明步驟、時間點和風險。</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>簡短的答案如下。</strong>可以，您隨時都能取消醫療保險B部分。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> 您需要填寫 CMS-1763 表格，並寄給您當地的社會安全局辦公室。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> B部分的承保會在您送出表格當月的下個月最後一天結束。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> 風險在之後。如果您想再加入B部分，只能在特定時間註冊，而且只要您擁有B部分，就可能一直要繳遲交註冊罰款。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> 在某些情況下不會有罰款，例如您因為有工作提供的承保而退出B部分。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+
+    <div class="note">
+      <strong>取消之前。</strong>請先確認您的其他承保是否需要B部分，也請了解重新加入的做法。以下各節會說明這兩點。
+    </div>
+
+    <h2>取消B部分的步驟</h2>
+    <ol class="steps">
+      <li><strong>取得 CMS-1763 表格。</strong>表格名稱是「終止醫療保險保費申請書：A部分、B部分或B部分免疫抑制藥物承保（Part B-ID）」。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>填寫表格。</strong>勾選B部分。寫上您的 Medicare 號碼，以及您希望承保結束的年月。然後簽名並填上日期。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>寄給社會安全局。</strong>把簽好名的表格郵寄或傳真到您當地的社會安全局辦公室。您可以在 SSA.gov/locator 查詢辦公室。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> 您也可以致電社會安全局：1-800-772-1213。<!-- src: https://www.ssa.gov/medicare/sign-up --></li>
+      <li><strong>記下結束日期。</strong>承保會在您送出表格當月的下個月最後一天結束。例如，如果您在4月5日寄出，承保會在5月31日結束。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+      <li><strong>改變心意了嗎？</strong>請在承保結束日之前聯絡社會安全局。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></li>
+    </ol>
+    <p>醫療保險A部分的規定不同。只有在您需要為A部分繳納保費時，才能終止A部分。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --> 如果您為A部分繳納保費，終止B部分也會同時終止您的A部分。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+
+    <h2>如果您剛自動取得 Medicare</h2>
+    <p>如果您已經領取社會安全福利，在65歲時會自動取得A部分和B部分。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> 如果您不想要B部分，請在 Medicare 卡上的承保生效日之前通知社會安全局。如果您什麼都不做，就會保留B部分，保費會從您的社會安全福利中扣除。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+    <h2>退出B部分日後可能的代價</h2>
+    <p>遲交註冊罰款不是一次性的費用。它會加到您每月的保費中，而且只要您擁有B部分，通常就要一直繳。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></p>
+    <ul>
+      <li><strong>罰款比率。</strong>您原本可以擁有B部分卻沒有，每滿12個月，就要多付10%。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>2026年的例子。</strong>如果您等了整整2年，又不符合特殊註冊期的資格，罰款就是20%。以標準保費 $202.90 計算，每月要多付 $40.58。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --></li>
+      <li><strong>何時可以重新加入。</strong>您只能在特定時間註冊。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> 其中之一是一般註冊期，從1月1日到3月31日，承保在您註冊後的下個月開始。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>想了解完整的罰款規定，請看<a href="/zh-Hant/medicare-late-enrollment-penalties.html">Medicare 遲交註冊罰款</a>。</p>
+
+    <h2>工作承保的例外</h2>
+    <p>很多人因為有目前工作提供的承保，所以刻意延後加入B部分。如果您是這種情況，您可以在以下時間註冊B部分：<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+    <ul>
+      <li>只要您仍在團體健康計劃的承保之下，隨時都可以，或是</li>
+      <li>在工作或承保結束後的下個月起算的8個月內，以先發生者為準。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>如果您在這段期間內註冊，通常不必繳罰款。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> 這必須是來自目前工作的承保，可以是您自己的，也可以是配偶的。COBRA、退休人員承保和退伍軍人事務部（VA）承保都不算。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> 因為 COBRA 不算，在使用 COBRA 期間退出B部分，可能會被罰款。請看 <a href="/zh-Hant/cobra-and-medicare.html">COBRA 與 Medicare</a>和<a href="/zh-Hant/working-past-65.html">65歲後繼續工作</a>。</p>
+
+    <h2>需要B部分的承保</h2>
+    <p>有些承保取決於您是否保有B部分。請先檢查以下項目：</p>
+    <ul>
+      <li><strong>Medicare Advantage。</strong>您必須擁有B部分，並持續繳納B部分的保費，才能留在您的計劃中。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Medigap（醫療保險補充計劃）。</strong>您必須擁有B部分，並持續繳納保費，才能保住您的保單。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>TRICARE。</strong>您通常必須註冊A部分和B部分才能保留它。現役軍人及其家屬是例外。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>CHAMPVA。</strong>您必須同時擁有A部分和B部分才能保留它。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>退休人員承保。</strong>如果您沒有A部分和B部分，它可能不會支付您的醫療費用。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+    <p>如果您有健康儲蓄帳戶，也請閱讀 <a href="/zh-Hant/hsa-and-medicare.html">HSA 與 Medicare</a>。如果您想退出B部分是因為費用，請看看<a href="/zh-Hant/medicare-savings-programs.html">醫療保險儲蓄計劃（MSP）</a>是否能幫您付保費。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="以電子郵件接收 MediPrimer 最新消息">
+      <h2>公開報名 12 月 7 日截止，我們會提醒您。</h2>
+      <p>取得我們的秋季檢查清單——在截止日前該檢視的計畫重點——並在 12 月 7 日前收到一次提醒。之後只在規定有變時寄一封簡短郵件，每週最多一封。沒有廣告，不推銷保險計畫。</p>
+      <form class="newsletter-form" data-lang="zh-Hant">
+        <label class="sr-only" for="nl-email">您的電子郵件地址</label>
+        <input id="nl-email" type="email" required placeholder="您的電子郵件地址">
+        <button type="submit">寄給我檢查清單</button>
+      </form>
+      <p class="newsletter-fine">我們會寄一封確認信；您點擊確認後才算完成訂閱。 截止日前一次提醒，之後每週最多一封。隨時可一鍵取消訂閱。</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>常見問題</h2>
+
+    <details class="qa">
+      <summary>我可以取消醫療保險B部分嗎？</summary>
+      <div>
+        <p>可以。您隨時可以把 CMS-1763 表格寄給您當地的社會安全局辦公室，來終止B部分。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>取消後，我的B部分何時結束？</summary>
+      <div>
+        <p>在您送出表格當月的下個月最後一天。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>如果我再次註冊，會被罰款嗎？</summary>
+      <div>
+        <p>常常會。您原本可以擁有B部分卻沒有，每滿12個月，就要多付10%。<!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> 如果您原本有工作提供的計劃，並在允許的期間內註冊，通常不會有罰款。<!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>我可以取消B部分，但保留A部分嗎？</summary>
+      <div>
+        <p>可以，前提是您的A部分不需要繳保費。只有在您需要為A部分繳納保費時，才能終止A部分。<!-- src: https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf --></p>
+      </div>
+    </details>
+
+    <h2>官方資料來源</h2>
+    <ul>
+      <li><a href="https://www.cms.gov/medicare/cms-forms/cms-forms/downloads/cms1763.pdf" rel="noopener">CMS：CMS-1763 表格，終止醫療保險保費申請書</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties" rel="noopener">Medicare.gov：避免遲交註冊罰款</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">《Medicare 與您》手冊（Medicare.gov）</a></li>
+      <li><a href="https://www.ssa.gov/medicare/sign-up" rel="noopener">SSA：註冊 Medicare</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>行動前請先確認。</strong>MediPrimer 提供的是一般教育資訊，與任何政府機構或保險公司都沒有關係。退出B部分可能帶來長期的費用。在您決定之前，請先諮詢社會安全局、您雇主的福利辦公室，或您的 SHIP。
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>基礎知識</h4>
+        <ul>
+          <li><a href="/zh-Hant/coverage-basics.html">保險基礎知識</a></li>
+          <li><a href="/zh-Hant/plan-types.html">計劃類型</a></li>
+          <li><a href="/zh-Hant/medigap.html">Medigap 補充保險計劃</a></li>
+          <li><a href="/zh-Hant/policy-changes.html">政策與規則變化</a></li>
+          <li><a href="/zh-Hant/glossary.html">詞彙表</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>會員專區</h4>
+        <ul>
+          <li><a href="/zh-Hant/enrollment.html">註冊與截止日期</a></li>
+          <li><a href="/zh-Hant/costs.html">了解您的費用</a></li>
+          <li><a href="/zh-Hant/choosing-coverage.html">選擇保險</a></li>
+          <li><a href="/zh-Hant/getting-help.html">獲得付款協助</a></li>
+          <li><a href="/zh-Hant/turning-65.html">年滿65歲</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>專業人士</h4>
+        <ul>
+          <li><a href="/zh-Hant/operations.html">健康計劃運營</a></li>
+          <li><a href="/zh-Hant/providers.html">醫療提供者與帳單</a></li>
+          <li><a href="/zh-Hant/brokers.html">經紀人與顧問</a></li>
+          <li><a href="/zh-Hant/navigators.html">個案經理與引導員</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>目錄與工具</h4>
+        <ul>
+          <li><a href="/zh-Hant/state-medicaid.html">州 Medicaid</a></li>
+          <li><a href="/zh-Hant/ship-directory.html">SHIP（Medicare 協助）</a></li>
+          <li><a href="/zh-Hant/insurance-departments.html">保險部門</a></li>
+          <li><a href="/zh-Hant/resources.html">所有資源</a></li>
+          <li><a href="/zh-Hant/checklists.html">可列印的清單</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>官方來源</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">獨立教育資源。與CMS、Medicare、Medicaid、任何州政府機構或任何健康保險公司均無關聯。本網站資訊為一般性內容，請務必透過官方項目和計劃資料進行核實。本網站內容不構成醫療、法律或財務建議，任何頁面均不推薦特定計劃。內容最後審核於2026年7月。</p>
+    <nav class="legal-links">
+      <a href="/zh-Hant/privacy.html">隱私政策</a>
+      <a href="/zh-Hant/terms-of-use.html">使用條款</a>
+      <a href="/zh-Hant/disclaimer.html">免責聲明</a>
+      <a href="/zh-Hant/accessibility.html">無障礙功能</a>
+      <a href="/zh-Hant/editorial-standards.html">編輯標準</a>
+      <a href="/zh-Hant/support.html">支援</a>
+      <a href="/zh-Hant/site-map.html">網站地圖</a>
+    </nav>
+    <div class="note">
+      <p>譯自英文原文。</p>
+      <p>
+        <a href="/cancel-medicare-part-b.html">查看英文原版</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Medicare 官方多語言資料</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tín Chỉ Làm Việc Ở Nước Ngoài và Medicare Phần A: Quy Tắc 40 Quý</title>
+<meta name="description" content="Hiệp định tổng hợp có thể tính tín chỉ làm việc ở nước ngoài cho Social Security, nhưng không tính cho Medicare Phần A miễn phí. Xem lý do và các lựa chọn của quý vị.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Tín Chỉ Làm Việc Ở Nước Ngoài và Medicare Phần A: Quy Tắc 40 Quý">
+<meta property="og:description" content="Hiệp định tổng hợp có thể tính tín chỉ làm việc ở nước ngoài cho Social Security, nhưng không tính cho Medicare Phần A miễn phí. Xem lý do và các lựa chọn của quý vị.">
+<meta property="og:url" content="https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Tín Chỉ Làm Việc Ở Nước Ngoài và Medicare Phần A: Quy Tắc 40 Quý">
+<meta name="twitter:description" content="Hiệp định tổng hợp có thể tính tín chỉ làm việc ở nước ngoài cho Social Security, nhưng không tính cho Medicare Phần A miễn phí. Xem lý do và các lựa chọn của quý vị.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Tín chỉ làm việc ở Hàn Quốc của tôi có được tính vào 40 quý cho Phần A không?", "acceptedAnswer": {"@type": "Answer", "text": "Không. Social Security cho biết hiệp định không bao gồm quyền lợi Medicare, nên không thể tính tín chỉ có được ở một nước có hiệp định để giúp quý vị đủ điều kiện nhận bảo hiểm bệnh viện Medicare miễn phí."}}, {"@type": "Question", "name": "Tín chỉ Hàn Quốc có giúp ích cho quyền lợi hưu trí Social Security không?", "acceptedAnswer": {"@type": "Answer", "text": "Đôi khi. Quý vị cần ít nhất sáu tín chỉ tại Hoa Kỳ thì tín chỉ Hàn Quốc mới được tính, và Hoa Kỳ không thể tính chúng nếu quý vị đã có đủ tín chỉ tại Hoa Kỳ."}}, {"@type": "Question", "name": "Tôi vẫn có thể có Medicare nếu không đủ 40 quý không?", "acceptedAnswer": {"@type": "Answer", "text": "Có, trong nhiều trường hợp. Quý vị có thể đủ điều kiện nhờ việc làm tại Hoa Kỳ của người phối ngẫu, hoặc quý vị có thể mua Phần A và Phần B. Các quy định về tuổi và nơi cư trú được áp dụng."}}, {"@type": "Question", "name": "Việc làm của người phối ngẫu tôi tại Hoa Kỳ có giúp được tôi không?", "acceptedAnswer": {"@type": "Answer", "text": "Có. Phần A không phải đóng Phí Bảo Hiểm có thể dựa trên thu nhập của chính quý vị hoặc của người phối ngẫu, cha mẹ hay con."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Tín Chỉ Làm Việc Ở Nước Ngoài và Medicare Phần A: Quy Tắc 40 Quý", "description": "Hiệp định tổng hợp có thể tính tín chỉ làm việc ở nước ngoài cho Social Security, nhưng không tính cho Medicare Phần A miễn phí. Xem lý do và các lựa chọn của quý vị.", "url": "https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html", "inLanguage": "vi-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Trang chủ", "item": "https://mediprimer.org/vi/"}, {"@type": "ListItem", "position": 2, "name": "Tín Chỉ Làm Việc Ở Nước Ngoài và Medicare Phần A: Quy Tắc 40 Quý", "item": "https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/vi/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Ngôn ngữ: Tiếng Việt"><span class="lang-switch-current">Tiếng Việt</span> ▾</button>
+    <div class="dropdown">
+    <a href="/totalization-agreements-medicare-40-quarters.html" lang="en">English</a>
+    <a href="/es/totalization-agreements-medicare-40-quarters.html" lang="es">Español</a>
+    <a href="/zh-Hant/totalization-agreements-medicare-40-quarters.html" lang="zh-Hant">繁體中文</a>
+    <a href="/vi/totalization-agreements-medicare-40-quarters.html" lang="vi" aria-current="page">Tiếng Việt</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="main">
+      <a href="/vi/" class="navtop">Trang chủ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/turning-65.html" class="navtop active">Bắt đầu tại đây</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Bắt đầu tại đây">▾</button>
+        <div class="dropdown">
+        <a href="/vi/turning-65.html" class="star">★ Sắp tròn 65 tuổi: Bắt đầu tại đây</a>
+        <a href="/vi/planning-for-two.html">Medicare dành cho các cặp vợ chồng</a>
+        <a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a>
+        <a href="/vi/costs.html">Hiểu về chi phí của quý vị</a>
+        <a href="/vi/enrollment.html">Ghi danh và thời hạn</a>
+        <a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a>
+        <a href="/vi/questions-to-ask.html">Những câu hỏi nên đặt ra</a>
+        <a href="/vi/edge-cases.html">Trường hợp đặc biệt và phức tạp</a>
+        <a href="/vi/members.html">Tất cả hướng dẫn cho thành viên →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/basics.html" class="navtop">Tìm hiểu kiến thức cơ bản</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm hiểu kiến thức cơ bản">▾</button>
+        <div class="dropdown">
+        <a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a>
+        <a href="/vi/plan-types.html">Các loại chương trình</a>
+        <a href="/vi/medigap.html">Chương trình Medigap</a>
+        <a href="/vi/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/vi/marketplace.html">Thị Trường Bảo Hiểm (ACA)</a>
+        <a href="/vi/cms-updates.html">Cách các chương trình được quản lý</a>
+        <a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a>
+        <a href="/vi/basics.html">Tất cả kiến thức cơ bản →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/vi/directories.html" class="navtop">Tìm sự trợ giúp</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Tìm sự trợ giúp">▾</button>
+        <div class="dropdown">
+        <a href="/vi/state-medicaid.html">Medicaid tiểu bang</a>
+        <a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a>
+        <a href="/vi/insurance-departments.html">Sở bảo hiểm</a>
+        <a href="/vi/resources.html">Tất cả tài nguyên</a>
+        <a href="/vi/checklists.html">Danh sách kiểm tra để in</a>
+        <a href="/vi/directories.html">Trang chủ danh bạ →</a>
+        </div>
+      </div>
+      <a href="/vi/glossary.html" class="navtop">Bảng thuật ngữ</a>
+      <div class="navitem has-menu">
+        <a href="/vi/professionals.html" class="navtop">Dành cho đối tác &amp; chuyên viên</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Mở menu của Dành cho đối tác &amp; chuyên viên">▾</button>
+        <div class="dropdown">
+        <a href="/vi/partner-materials.html" class="star">★ Tài liệu miễn phí để phát</a>
+        <a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a>
+        <a href="/vi/providers.html">Nhà cung cấp và thanh toán</a>
+        <a href="/vi/brokers.html">Đại lý và cố vấn</a>
+        <a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a>
+        <a href="/vi/star-ratings.html">Xếp hạng sao và chất lượng</a>
+        <a href="/vi/appeals-timelines.html">Kháng nghị: Các cấp độ và thời hạn</a>
+        <a href="/vi/professionals.html">Tất cả tài liệu tham khảo chuyên môn →</a>
+        </div>
+      </div>
+      <a href="/vi/about.html" class="navtop">Giới thiệu</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Dành Cho Hội Viên &amp; Người Chăm Sóc</p>
+    <h1>Hiệp Định Tổng Hợp và Quy Tắc 40 Quý của Medicare</h1>
+    <p>Tín chỉ làm việc ở Hàn Quốc hoặc một nước khác có hiệp định không được tính vào Phần A miễn phí. Sau đây là lý do, và cách quý vị vẫn có thể có Medicare.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Đây là câu trả lời ngắn gọn.</strong> Thời gian quý vị làm việc ở một nước khác, chẳng hạn Hàn Quốc, không được tính vào Medicare Phần A miễn phí. Social Security có các hiệp định với những nước khác, gọi là hiệp định tổng hợp (totalization agreement). Các hiệp định này có thể tính tín chỉ làm việc ở nước ngoài của quý vị vào quyền lợi hưu trí, khuyết tật hoặc tuất của Hoa Kỳ. Nhưng Social Security cho biết các hiệp định không bao gồm quyền lợi Medicare, nên không thể dùng các tín chỉ đó để giúp quý vị đủ điều kiện nhận bảo hiểm bệnh viện Medicare miễn phí. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Phần A miễn phí thường cần khoảng 10 năm làm việc tại Hoa Kỳ, tức 40 quý, của quý vị hoặc của người phối ngẫu. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+
+    <div class="note">
+      <strong>Không có Phần A miễn phí không có nghĩa là không có Medicare.</strong> Quý vị vẫn có thể mua Medicare Phần A và Medicare Phần B. Xem mục "Nếu quý vị không có đủ 40 quý" bên dưới và hướng dẫn của chúng tôi về <a href="/vi/medicare-immigrants.html">Medicare dành cho người nhập cư</a>.
+    </div>
+
+    <h2>Hiệp định tổng hợp làm gì</h2>
+    <p>Các hiệp định này có hai mục đích chính. Thứ nhất, ngăn người lao động phải đóng thuế Social Security cho hai nước trên cùng một khoản thu nhập. Thứ hai, giúp những người lao động chia sự nghiệp của mình giữa Hoa Kỳ và một nước khác. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+    <p>Hoa Kỳ có hiệp định với khoảng 30 nước, trong đó có Nam Hàn. <!-- src: https://www.ssa.gov/international/agreements_overview.html --> Hiệp định với Hàn Quốc có hiệu lực từ ngày 1 tháng 4 năm 2001. <!-- src: https://www.ssa.gov/international/agreements_overview.html --></p>
+    <p>Đối với Hoa Kỳ, các hiệp định bao gồm thuế Social Security, thuế Medicare, và quyền lợi hưu trí, khuyết tật và tuất. Các hiệp định không bao gồm quyền lợi thuộc chương trình Medicare. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Chỉ một câu đó đã giải thích phần lớn sự nhầm lẫn.</p>
+
+    <h2>Vì sao tín chỉ ở nước ngoài không được tính cho Phần A</h2>
+    <p>Social Security cho biết họ không thể tính tín chỉ của quý vị ở một nước có hiệp định để xác lập quyền hưởng bảo hiểm bệnh viện Medicare miễn phí. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Phần A là phần bệnh viện của Medicare. Phần A không phải đóng Phí Bảo Hiểm phụ thuộc vào việc làm tại Hoa Kỳ và thuế Medicare của Hoa Kỳ. Medicare cho biết hầu hết mọi người có được Phần A vì họ hoặc người phối ngẫu đã đóng thuế Medicare đủ lâu trong thời gian làm việc, thường là ít nhất 10 năm. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Quý vị muốn gì</th><th>Tín chỉ nước ngoài có giúp được không?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Quyền lợi hưu trí, khuyết tật hoặc tuất của Social Security Hoa Kỳ</td><td>Đôi khi. Social Security có thể tính các tín chỉ này nếu quý vị đáp ứng quy định của hiệp định. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Medicare Phần A miễn phí (không có Phí Bảo Hiểm)</td><td>Không. Tín chỉ nước ngoài không thể được tính cho mục này. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Mua Phần A hoặc Phần B</td><td>Không cần. Quý vị áp dụng các quy định khác, chẳng hạn về tuổi và nơi cư trú. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Ví dụ về Hàn Quốc</h2>
+    <p>Giả sử quý vị đã làm việc nhiều năm theo hệ thống Quốc Dân Niên Kim (National Pension) của Hàn Quốc. Sau đó quý vị chuyển đến Hoa Kỳ và làm việc ở đây vài năm. Đối với quyền lợi hưu trí của Social Security, hiệp định có thể giúp ích ở mức hạn chế. Để tín chỉ Hàn Quốc của quý vị được tính, quý vị phải có ít nhất sáu tín chỉ tại Hoa Kỳ, thường tương đương một năm rưỡi làm việc. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --> Nếu quý vị đã có đủ tín chỉ tại Hoa Kỳ, Hoa Kỳ không thể tính tín chỉ Hàn Quốc của quý vị. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+    <p>Hoa Kỳ yêu cầu 10 năm làm việc, tức 40 tín chỉ, để hưởng quyền lợi hưu trí nếu quý vị sinh từ năm 1929 trở về sau. <!-- src: https://www.ssa.gov/pubs/EN-05-10072.pdf --> Trong năm 2026, quý vị có được một tín chỉ cho mỗi $1,890 thu nhập, tối đa bốn tín chỉ một năm. <!-- src: https://www.ssa.gov/oact/cola/QC.html --> Không điều nào ở trên thay đổi quy tắc Medicare nêu trên. Tín chỉ Hàn Quốc của quý vị có thể giúp ích cho lương hưu Social Security, nhưng không làm cho Phần A trở thành miễn phí.</p>
+    <p>Cùng một logic áp dụng cho mọi nước có hiệp định, không chỉ Hàn Quốc.</p>
+
+    <h2>Nếu quý vị không có đủ 40 quý</h2>
+    <p>Quý vị vẫn có thể có Medicare. Sau đây là các hướng chính:</p>
+    <ul>
+      <li><strong>Việc làm của người phối ngẫu.</strong> Phần A không phải đóng Phí Bảo Hiểm có thể dựa trên thu nhập của chính quý vị hoặc của người phối ngẫu, cha mẹ hay con. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Chỉ việc làm tại Hoa Kỳ được tính, nên hồ sơ làm việc tại Hoa Kỳ của người phối ngẫu rất quan trọng. Xem <a href="/vi/planning-for-two.html">Medicare Dành Cho Các Cặp Vợ Chồng</a> và <a href="/vi/medicare-spouse-work-record.html">cách dùng hồ sơ làm việc của người phối ngẫu</a>.</li>
+      <li><strong>Việc làm cho chính phủ Hoa Kỳ.</strong> Thời gian làm việc trong cơ quan chính phủ mà quý vị đã đóng thuế Medicare có thể được tính. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Mua Phần A.</strong> Nếu quý vị không đủ điều kiện nhận Phần A miễn phí, quý vị có thể mua. Trong năm 2026, giá là $311 hoặc $565 một tháng, tùy theo quý vị hoặc người phối ngẫu đã làm việc và đóng thuế Medicare bao lâu. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Để mua Phần A, quý vị cũng phải đăng ký Phần B. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Chỉ mua Phần B.</strong> Nếu quý vị không đủ điều kiện nhận Phần A miễn phí, quý vị có thể mua Phần B mà không có Phần A. Quý vị phải từ 65 tuổi trở lên, và là công dân Hoa Kỳ hoặc người không phải công dân được nhập cảnh hợp pháp và đã sống tại Hoa Kỳ ít nhất năm năm. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+    </ul>
+    <p>Nếu quý vị mua Phần A trễ, Phí Bảo Hiểm có thể tăng 10%, trong số năm gấp đôi số năm quý vị lẽ ra có thể đăng ký nhưng đã không đăng ký. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Xem <a href="/vi/medicare-late-enrollment-penalties.html">Khoản Phạt Ghi Danh Muộn</a>.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Nhận cập nhật từ MediPrimer qua email">
+      <h2>Thời gian ghi danh mở kết thúc ngày 7 tháng 12. Chúng tôi sẽ nhắc bạn.</h2>
+      <p>Nhận danh sách kiểm tra mùa thu của chúng tôi — danh sách ngắn những điều cần xem lại trong gói bảo hiểm của bạn trước hạn chót — cùng một email nhắc nhở trước ngày 7 tháng 12. Sau đó, chỉ một email ngắn khi có thay đổi, không quá một email mỗi tuần. Không quảng cáo, không bán gói bảo hiểm.</p>
+      <form class="newsletter-form" data-lang="vi">
+        <label class="sr-only" for="nl-email">Địa chỉ email của bạn</label>
+        <input id="nl-email" type="email" required placeholder="Địa chỉ email của bạn">
+        <button type="submit">Gửi cho tôi danh sách kiểm tra</button>
+      </form>
+      <p class="newsletter-fine">Chúng tôi sẽ gửi email xác nhận một lần — bạn chưa đăng ký cho đến khi bấm vào đó. Một lời nhắc trước hạn chót, sau đó là email thường lệ tối đa một lần mỗi tuần. Hủy đăng ký chỉ với một cú nhấp.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Danh sách hành động ngắn gọn</h2>
+    <ol class="steps">
+      <li><strong>Đếm thời gian làm việc tại Hoa Kỳ.</strong> Kiểm tra hồ sơ thu nhập tại Hoa Kỳ của quý vị qua tài khoản my Social Security. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Tính cả người phối ngẫu.</strong> Kiểm tra cả hồ sơ làm việc tại Hoa Kỳ của họ.</li>
+      <li><strong>Lên kế hoạch đăng ký.</strong> Nếu quý vị phải mua bảo hiểm, hãy đăng ký trong Thời Gian Ghi Danh Ban Đầu để tránh bị phạt. Xem <a href="/vi/turning-65.html">Bước sang tuổi 65</a>.</li>
+      <li><strong>Gọi cho Social Security.</strong> Số điện thoại là 1-800-772-1213. <!-- src: https://www.ssa.gov/medicare/sign-up --> Hãy hỏi về các lựa chọn Medicare và tín chỉ của quý vị.</li>
+      <li><strong>Nhờ SHIP của quý vị giúp miễn phí.</strong> Tìm SHIP của quý vị trong <a href="/vi/ship-directory.html">danh bạ SHIP</a>. Nếu quý vị cần hỗ trợ ngôn ngữ, xem <a href="/vi/medical-interpreter-rights.html">quyền có thông dịch viên</a>.</li>
+    </ol>
+
+    <h2>Câu hỏi thường gặp</h2>
+
+    <details class="qa">
+      <summary>Tín chỉ làm việc ở Hàn Quốc của tôi có được tính vào 40 quý cho Phần A không?</summary>
+      <div>
+        <p>Không. Social Security cho biết hiệp định không bao gồm quyền lợi Medicare, nên không thể tính tín chỉ có được ở một nước có hiệp định để giúp quý vị đủ điều kiện nhận bảo hiểm bệnh viện Medicare miễn phí. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tín chỉ Hàn Quốc có giúp ích cho quyền lợi hưu trí Social Security không?</summary>
+      <div>
+        <p>Đôi khi. Quý vị cần ít nhất sáu tín chỉ tại Hoa Kỳ thì tín chỉ Hàn Quốc mới được tính, và Hoa Kỳ không thể tính chúng nếu quý vị đã có đủ tín chỉ tại Hoa Kỳ. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Tôi vẫn có thể có Medicare nếu không đủ 40 quý không?</summary>
+      <div>
+        <p>Có, trong nhiều trường hợp. Quý vị có thể đủ điều kiện nhờ việc làm tại Hoa Kỳ của người phối ngẫu, hoặc quý vị có thể mua Phần A và Phần B. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Các quy định về tuổi và nơi cư trú được áp dụng. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>Việc làm của người phối ngẫu tôi tại Hoa Kỳ có giúp được tôi không?</summary>
+      <div>
+        <p>Có. Phần A không phải đóng Phí Bảo Hiểm có thể dựa trên thu nhập của chính quý vị hoặc của người phối ngẫu, cha mẹ hay con. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <h2>Nguồn chính thức</h2>
+    <ul>
+      <li><a href="https://www.ssa.gov/international/agreement_descriptions.html" rel="noopener">SSA: Mô tả các hiệp định tổng hợp</a></li>
+      <li><a href="https://www.ssa.gov/international/Agreement_Pamphlets/korea.html" rel="noopener">SSA: Hiệp định tổng hợp với Hàn Quốc</a></li>
+      <li><a href="https://www.ssa.gov/international/agreements_overview.html" rel="noopener">SSA: Các hiệp định Social Security quốc tế của Hoa Kỳ</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10072.pdf" rel="noopener">SSA: Cách quý vị tích lũy tín chỉ</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10043.pdf" rel="noopener">SSA: Tập sách về Medicare</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Chi phí</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Hãy xác minh trước khi hành động.</strong> MediPrimer là thông tin giáo dục tổng quát và không liên kết với bất kỳ cơ quan hay công ty bảo hiểm nào. Các quy định dành cho người không phải công dân và về tín chỉ làm việc rất chi tiết. Hãy xác nhận hồ sơ của chính quý vị với Social Security.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Kiến thức cơ bản</h4>
+        <ul>
+          <li><a href="/vi/coverage-basics.html">Kiến thức cơ bản về bảo hiểm</a></li>
+          <li><a href="/vi/plan-types.html">Các loại chương trình</a></li>
+          <li><a href="/vi/medigap.html">Chương trình Medigap</a></li>
+          <li><a href="/vi/policy-changes.html">Thay đổi chính sách và quy định</a></li>
+          <li><a href="/vi/glossary.html">Bảng thuật ngữ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho thành viên</h4>
+        <ul>
+          <li><a href="/vi/enrollment.html">Ghi danh và thời hạn</a></li>
+          <li><a href="/vi/costs.html">Hiểu về chi phí của quý vị</a></li>
+          <li><a href="/vi/choosing-coverage.html">Cách chọn bảo hiểm</a></li>
+          <li><a href="/vi/getting-help.html">Nhận trợ giúp thanh toán</a></li>
+          <li><a href="/vi/turning-65.html">Sắp tròn 65 tuổi</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Dành cho chuyên gia</h4>
+        <ul>
+          <li><a href="/vi/operations.html">Hoạt động của chương trình sức khỏe</a></li>
+          <li><a href="/vi/providers.html">Nhà cung cấp và thanh toán</a></li>
+          <li><a href="/vi/brokers.html">Đại lý và cố vấn</a></li>
+          <li><a href="/vi/navigators.html">Quản lý hồ sơ và người hướng dẫn</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Danh bạ và công cụ</h4>
+        <ul>
+          <li><a href="/vi/state-medicaid.html">Medicaid tiểu bang</a></li>
+          <li><a href="/vi/ship-directory.html">SHIP (trợ giúp về Medicare)</a></li>
+          <li><a href="/vi/insurance-departments.html">Sở bảo hiểm</a></li>
+          <li><a href="/vi/resources.html">Tất cả tài nguyên</a></li>
+          <li><a href="/vi/checklists.html">Danh sách kiểm tra để in</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Nguồn chính thức</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">HealthCare.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Nguồn tài liệu giáo dục độc lập. Không liên kết với CMS, Medicare, Medicaid, bất kỳ cơ quan tiểu bang nào, hoặc bất kỳ công ty bảo hiểm sức khỏe nào. Thông tin mang tính tổng quát và cần được xác minh với các tài liệu chính thức của chương trình và kế hoạch. Không có nội dung nào trên trang này là lời khuyên về y tế, pháp lý hoặc tài chính, và không có trang nào đề xuất một chương trình cụ thể. Nội dung được xem xét lần cuối vào tháng 7 năm 2026.</p>
+    <nav class="legal-links">
+      <a href="/vi/privacy.html">Quyền riêng tư</a>
+      <a href="/vi/terms-of-use.html">Điều khoản sử dụng</a>
+      <a href="/vi/disclaimer.html">Miễn trừ trách nhiệm</a>
+      <a href="/vi/accessibility.html">Khả năng tiếp cận</a>
+      <a href="/vi/editorial-standards.html">Tiêu chuẩn biên tập</a>
+      <a href="/vi/support.html">Hỗ trợ</a>
+      <a href="/vi/site-map.html">Sơ đồ trang web</a>
+    </nav>
+    <div class="note">
+      <p>Bản dịch từ bản gốc tiếng Anh.</p>
+      <p>
+        <a href="/totalization-agreements-medicare-40-quarters.html">Xem bản gốc tiếng Anh</a>
+        <a href="https://www.medicare.gov/about-us/information-in-other-languages" rel="noopener">Tài liệu chính thức của Medicare bằng tiếng Việt</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

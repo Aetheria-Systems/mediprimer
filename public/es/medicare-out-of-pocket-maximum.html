@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Máximo de Desembolso de Bolsillo de Medicare: Quién lo Tiene y Quién No</title>
+<meta name="description" content="La Cobertura Original de Medicare no tiene un Máximo de Desembolso de Bolsillo anual. Los planes Medicare Advantage sí lo tienen. Vea cómo funciona el límite, qué cubre y formas de limitar sus costos.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/medicare-out-of-pocket-maximum.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Máximo de Desembolso de Bolsillo de Medicare: Quién lo Tiene y Quién No">
+<meta property="og:description" content="La Cobertura Original de Medicare no tiene un Máximo de Desembolso de Bolsillo anual. Los planes Medicare Advantage sí lo tienen. Vea cómo funciona el límite, qué cubre y formas de limitar sus costos.">
+<meta property="og:url" content="https://mediprimer.org/es/medicare-out-of-pocket-maximum.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Máximo de Desembolso de Bolsillo de Medicare: Quién lo Tiene y Quién No">
+<meta name="twitter:description" content="La Cobertura Original de Medicare no tiene un Máximo de Desembolso de Bolsillo anual. Los planes Medicare Advantage sí lo tienen. Vea cómo funciona el límite, qué cubre y formas de limitar sus costos.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿La Cobertura Original de Medicare tiene un Máximo de Desembolso de Bolsillo?", "acceptedAnswer": {"@type": "Answer", "text": "No. No hay un límite anual sobre lo que usted paga de su bolsillo en la Cobertura Original de Medicare, a menos que tenga otra cobertura, como un Seguro Complementario de Medicare o un plan Medicare Advantage."}}, {"@type": "Question", "name": "¿Todos los planes Medicare Advantage tienen el mismo límite?", "acceptedAnswer": {"@type": "Answer", "text": "No. El límite anual varía según el plan. Revise la cifra de su propio plan en su carta o en el Buscador de Planes."}}, {"@type": "Question", "name": "¿Qué pasa cuando llego al límite de mi plan?", "acceptedAnswer": {"@type": "Answer", "text": "El plan paga el 100% de sus servicios de salud cubiertos durante el resto del año calendario."}}, {"@type": "Question", "name": "¿Hay un límite para los costos de medicamentos de Medicare?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La Parte D de Medicare tiene un límite anual para los costos de medicamentos, y cambia cada año. Vea la página oficial de costos de la Parte D de Medicare para conocer la cifra actual."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Máximo de Desembolso de Bolsillo de Medicare: Quién lo Tiene y Quién No", "description": "La Cobertura Original de Medicare no tiene un Máximo de Desembolso de Bolsillo anual. Los planes Medicare Advantage sí lo tienen. Vea cómo funciona el límite, qué cubre y formas de limitar sus costos.", "url": "https://mediprimer.org/es/medicare-out-of-pocket-maximum.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/medicare-out-of-pocket-maximum.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/medicare-out-of-pocket-maximum.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Máximo de Desembolso de Bolsillo de Medicare: Quién lo Tiene y Quién No", "item": "https://mediprimer.org/es/medicare-out-of-pocket-maximum.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/medicare-out-of-pocket-maximum.html" lang="en">English</a>
+    <a href="/es/medicare-out-of-pocket-maximum.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Miembros y Cuidadores</p>
+    <h1>Máximo de Desembolso de Bolsillo de Medicare: ¿Quién lo Tiene?</h1>
+    <p>La Cobertura Original de Medicare no tiene un límite anual sobre lo que usted paga. Los planes Medicare Advantage sí lo tienen. Aquí le explicamos cómo funciona el límite, qué cubre y en qué se diferencia del límite para medicamentos.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> La Cobertura Original de Medicare no tiene un límite anual sobre lo que usted paga de su bolsillo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Los planes Medicare Advantage sí tienen un límite anual. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Una vez que usted llega al límite de su plan, el plan paga el 100% de sus servicios de salud cubiertos durante el resto del año calendario. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Cada plan establece su propio límite, por lo que no es igual para todos. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Su plan de medicamentos tiene su propio límite anual, por separado. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></p>
+
+    <div class="note">
+      <strong>Busque su propia cifra.</strong> Aquí no publicamos un límite en dólares de Medicare Advantage para 2027, porque cada plan establece el suyo. La carta de su plan, su <a href="/es/medicare-annual-notice-of-change.html">Aviso Anual de Cambios</a> y el <a href="/es/using-plan-finder.html">Buscador de Planes de Medicare</a> muestran el límite exacto de su plan.
+    </div>
+
+    <h2>Cobertura Original de Medicare: sin límite anual</h2>
+    <p>En la Cobertura Original de Medicare, usted paga Deducibles, Copagos y Coaseguro. La mayoría de los servicios de la Parte B de Medicare cuestan el 20% de la cantidad aprobada por Medicare después de que usted paga el Deducible. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> </p>
+    <p>La misma página dice que no hay límite sobre lo que usted paga de su bolsillo, a menos que tenga otra cobertura. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Los tipos más comunes de otra cobertura son:</p>
+    <ul>
+      <li>Una <a href="/es/medigap.html">póliza de Seguro Complementario de Medicare</a>, que ayuda a pagar su parte de los costos.</li>
+      <li>Un <a href="/es/medicare-advantage.html">plan Medicare Advantage</a>, que tiene su propio límite anual.</li>
+      <li>Cobertura de un empleador, de jubilados o de un sindicato, o Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+    </ul>
+
+    <h2>Medicare Advantage: un límite anual que varía según el plan</h2>
+    <p>Los planes Medicare Advantage limitan lo que usted paga por los servicios cubiertos. El límite varía según el plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Algunos planes tienen límites distintos para la atención Dentro de la Red y Fuera de la Red. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Si usted usa solo Proveedores Dentro de la Red, el límite que importa es el de Dentro de la Red. Revise las reglas de su plan antes de recibir atención Fuera de la Red.</p>
+    <p>El límite se aplica a los servicios de la Parte A de Medicare y la Parte B de Medicare que cubre su plan. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Una vez que lo alcanza, no paga nada más por esos servicios ese año. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Hay dos cosas que debe tener en cuenta:</p>
+    <ul>
+      <li><strong>Se reinicia cada año.</strong> El límite corre por año calendario. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>No es una promesa de costos bajos.</strong> Usted puede pagar mucho antes de llegar al límite. Compare también los Copagos y el Coaseguro. Vea <a href="/es/medicare-plan-comparison-2027.html">Comparación de planes de Medicare para 2027</a>.</li>
+    </ul>
+    <p>Los límites de los planes pueden cambiar de un año a otro. Lea siempre la cifra del año que está eligiendo. Vea <a href="/es/medicare-costs-2027.html">Costos de Medicare en 2027</a> para conocer las cifras oficiales de 2027 que hemos verificado.</p>
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+
+    <h2>Comparación lado a lado</h2>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Cobertura</th><th>¿Límite anual de desembolso de bolsillo?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Cobertura Original de Medicare (Partes A y B)</td><td>No tiene límite por sí sola. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Plan Medicare Advantage</td><td>Sí. Varía según el plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></td></tr>
+          <tr><td>Plan K o Plan L del Seguro Complementario de Medicare</td><td>Sí. El límite del Plan K es de $8,000 y el del Plan L es de $4,000 en 2026. <!-- src: https://www.medicare.gov/health-drug-plans/medigap/basics/compare-plan-benefits --></td></tr>
+          <tr><td>Otros planes del Seguro Complementario de Medicare</td><td>Sin límite separado. Pagan una parte fija de sus costos. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></td></tr>
+          <tr><td>Cobertura de medicamentos de la Parte D de Medicare</td><td>Sí. Un límite aparte para los medicamentos cubiertos. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>El límite de medicamentos es aparte</h2>
+    <p>Los costos de los medicamentos tienen su propio límite. Es independiente del límite médico de un plan Medicare Advantage. En 2026, el límite de la Parte D de Medicare es de $2,100. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> En 2027, es de $2,400. <!-- src: https://www.medicare.gov/health-drug-plans/part-d/basics/costs --> Incluye su Deducible, sus gastos y ciertos pagos hechos por usted, como los de la Ayuda Adicional. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <p>La mayoría de los planes Medicare Advantage incluyen cobertura de medicamentos. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Si el suyo la incluye, el límite de medicamentos se aplica por separado. Vea <a href="/es/medicare-part-d.html">Parte D de Medicare</a> para saber cómo funcionan las etapas de los medicamentos.</p>
+
+    <h2>Cómo limitan las personas sus costos</h2>
+    <p>Estas son las formas principales de limitar lo que podría deber. MediPrimer no dice cuál es la mejor. La opción adecuada depende de su salud, su presupuesto y los médicos que usa. Vea <a href="/es/choosing-coverage.html">Cómo elegir su cobertura</a> y <a href="/es/plan-types.html">Tipos de planes</a>.</p>
+    <ol class="steps">
+      <li><strong>Únase a un plan Medicare Advantage.</strong> El límite anual del plan restringe sus costos cubiertos de la Parte A de Medicare y la Parte B de Medicare.</li>
+      <li><strong>Agregue una póliza de Seguro Complementario de Medicare a la Cobertura Original de Medicare.</strong> El Seguro Complementario de Medicare ayuda a pagar su parte de los costos. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --> Lea la <a href="/es/medigap.html">guía del Seguro Complementario de Medicare</a> y las reglas sobre <a href="/es/medicare-advantage-vs-medigap-underwriting.html">comprar un Seguro Complementario de Medicare más adelante</a>.</li>
+      <li><strong>Use otra cobertura que ya tenga.</strong> Puede ser cobertura de un empleador, de jubilados o de un sindicato, o Medicaid. <!-- src: https://www.medicare.gov/publications/10050-medicare-and-you.pdf --></li>
+      <li><strong>Pregunte por ayuda con los costos.</strong> Si sus ingresos son limitados, un <a href="/es/medicare-savings-programs.html">Programa de Ahorro de Medicare</a> o la <a href="/es/extra-help-low-income-subsidy.html">Ayuda Adicional</a> pueden reducir sus costos.</li>
+    </ol>
+    <p>Si está eligiendo un plan este otoño, vea <a href="/es/medicare-open-enrollment-2027.html">Inscripción Abierta de Medicare 2027</a> para conocer las fechas y una lista de revisión.</p>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿La Cobertura Original de Medicare tiene un Máximo de Desembolso de Bolsillo?</summary>
+      <div>
+        <p>No. No hay un límite anual sobre lo que usted paga de su bolsillo en la Cobertura Original de Medicare, a menos que tenga otra cobertura, como un Seguro Complementario de Medicare o un plan Medicare Advantage. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Todos los planes Medicare Advantage tienen el mismo límite?</summary>
+      <div>
+        <p>No. El límite anual varía según el plan. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Revise la cifra de su propio plan en su carta o en el Buscador de Planes.</p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Qué pasa cuando llego al límite de mi plan?</summary>
+      <div>
+        <p>El plan paga el 100% de sus servicios de salud cubiertos durante el resto del año calendario. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Hay un límite para los costos de medicamentos de Medicare?</summary>
+      <div>
+        <p>Sí. La Parte D de Medicare tiene un límite anual para los costos de medicamentos, y cambia cada año. Vea la <a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs">página oficial de costos de la Parte D de Medicare</a> para conocer la cifra actual.</p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Costos</a></li>
+      <li><a href="https://www.medicare.gov/health-drug-plans/part-d/basics/costs" rel="noopener">Medicare.gov: Costos de la Parte D</a></li>
+      <li><a href="https://www.medicare.gov/publications/10050-medicare-and-you.pdf" rel="noopener">Manual Medicare y Usted (Medicare.gov)</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer es información educativa general y no está afiliado a ninguna agencia ni aseguradora. Los límites y las reglas de los planes cambian cada año. Confirme el límite de su plan en sus propios documentos o en Medicare.gov.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/medicare-out-of-pocket-maximum.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>

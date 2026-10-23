@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Créditos de trabajo en el extranjero y la Parte A de Medicare: la regla de los 40 trimestres</title>
+<meta name="description" content="Los acuerdos de totalización pueden contar los créditos del extranjero para el Seguro Social, pero no para la Parte A de Medicare sin prima. Vea por qué y cuáles son sus opciones.">
+<link rel="stylesheet" href="/style.css">
+<!--P:analytics-->
+<script>
+/* Analytics must never run while LCP is still being measured.
+
+   History: before 2026-09-17 gtag.js loaded during first paint — FCP 2.5s,
+   LCP 3.4s on throttled mobile. Deferring it to `load` + a 3s fallback fixed
+   FCP (now ~0.9s) but NOT LCP, and for five days the score sat at 88-91 with
+   LCP bouncing between 0.9s and 3.9s run to run. Measured 2026-09-22: gtag.js
+   produced 74ms and 50ms long tasks at ~2.7s, and the browser then registered
+   a fresh LCP candidate at ~3.5-3.9s. The deferral itself had become the
+   regression.
+
+   The fix follows from how LCP works: the browser keeps promoting new LCP
+   candidates until the first user input or until the page is hidden. Those
+   are therefore the only moments at which loading a script cannot affect the
+   score. So analytics now starts on whichever comes first:
+
+     - the first real interaction (scroll / pointer / key) — LCP is frozen by
+       then, and this is the overwhelming majority of engaged sessions;
+     - the page being hidden (tab switch, navigation away, close) — also
+       freezes LCP, and catches readers who never interacted;
+     - a long fallback, well past any LCP measurement window, for a reader who
+       leaves the page open and untouched.
+
+   Trade-off, stated plainly: a session that loads the page, never scrolls,
+   never clicks, and is closed so abruptly that visibilitychange does not fire
+   may go uncounted. That is a small slice of traffic, and the alternative was
+   a permanently degraded Core Web Vitals score on every page of the site. */
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+(function () {
+  var started = false;
+  function startAnalytics() {
+    if (started) return;
+    started = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-MX4VB3F96P";
+    document.head.appendChild(s);
+    gtag("js", new Date());
+    gtag("config", "G-MX4VB3F96P", { allow_google_signals: false, allow_ad_personalization_signals: false });
+  }
+
+  // First interaction — LCP is final the moment input happens.
+  ["scroll", "pointerdown", "keydown", "touchstart"].forEach(function (evt) {
+    window.addEventListener(evt, startAnalytics, { once: true, passive: true });
+  });
+
+  // Page hidden — also finalises LCP, and catches the non-interacting reader.
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "hidden") startAnalytics();
+  });
+
+  // Last resort for a page left open and untouched. Deliberately long: it must
+  // sit outside the LCP measurement window, which is why 3s did not work.
+  setTimeout(startAnalytics, 15000);
+
+  var printMq = window.matchMedia("print");
+  function onPrintChange(e) {
+    if (e.matches) { startAnalytics(); gtag("event", "print_page", { page_path: location.pathname }); }
+  }
+  if (printMq.addEventListener) { printMq.addEventListener("change", onPrintChange); }
+  else if (printMq.addListener) { printMq.addListener(onPrintChange); }
+})();
+</script>
+<!--/P:analytics-->
+<!--seo-->
+<link rel="canonical" href="https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MediPrimer">
+<meta property="og:title" content="Créditos de trabajo en el extranjero y la Parte A de Medicare: la regla de los 40 trimestres">
+<meta property="og:description" content="Los acuerdos de totalización pueden contar los créditos del extranjero para el Seguro Social, pero no para la Parte A de Medicare sin prima. Vea por qué y cuáles son sus opciones.">
+<meta property="og:url" content="https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html">
+<meta property="og:locale" content="es_US">
+<meta property="og:image" content="https://mediprimer.org/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="MediPrimer — Medicare and Medicaid in plain language, in six languages">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mediprimer.org/og-image.png">
+<meta name="twitter:title" content="Créditos de trabajo en el extranjero y la Parte A de Medicare: la regla de los 40 trimestres">
+<meta name="twitter:description" content="Los acuerdos de totalización pueden contar los créditos del extranjero para el Seguro Social, pero no para la Parte A de Medicare sin prima. Vea por qué y cuáles son sus opciones.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuentan mis créditos de trabajo de Corea para los 40 trimestres de la Parte A?", "acceptedAnswer": {"@type": "Answer", "text": "No. El Seguro Social indica que el acuerdo no cubre los beneficios de Medicare, por lo que no puede contar los créditos ganados en un país con acuerdo para que usted califique para el seguro de hospital de Medicare sin prima."}}, {"@type": "Question", "name": "¿Pueden los créditos de Corea ayudar con los beneficios de jubilación del Seguro Social?", "acceptedAnswer": {"@type": "Answer", "text": "A veces. Necesita al menos seis créditos de EE. UU. para que se cuenten los créditos de Corea, y EE. UU. no puede contarlos si usted ya tiene suficientes créditos de EE. UU."}}, {"@type": "Question", "name": "¿Puedo obtener Medicare sin tener 40 trimestres?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, en muchos casos. Puede calificar por el trabajo de un cónyuge en EE. UU., o puede comprar la Parte A y la Parte B. Se aplican las reglas de edad y residencia."}}, {"@type": "Question", "name": "¿Me ayuda el trabajo de mi cónyuge en EE. UU.?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. La Parte A sin prima puede basarse en sus propios ingresos o en los de un cónyuge, padre, madre o hijo."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Créditos de trabajo en el extranjero y la Parte A de Medicare: la regla de los 40 trimestres", "description": "Los acuerdos de totalización pueden contar los créditos del extranjero para el Seguro Social, pero no para la Parte A de Medicare sin prima. Vea por qué y cuáles son sus opciones.", "url": "https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html", "inLanguage": "es-US", "datePublished": "2026-07-12", "dateModified": "2026-10-23", "author": {"@type": "Person", "name": "Kurt Hamm", "url": "https://mediprimer.org/about.html", "jobTitle": "Founder & Editor", "description": "25+ years in enterprise technology, including systems work inside a national Medicaid/Medicare managed-care organization, plus service as a state-agency CIO and as Chief Administrative Officer of a state employment agency. Service-disabled veteran.", "knowsAbout": ["Medicare", "Medicaid", "Medicare Advantage", "Health Insurance Marketplace", "CHIP"]}, "isPartOf": {"@type": "WebSite", "name": "MediPrimer", "url": "https://mediprimer.org/"}, "publisher": {"@type": "Organization", "name": "MediPrimer", "founder": {"@type": "Person", "name": "Kurt Hamm"}}}</script>
+<link rel="alternate" hreflang="en" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="es" href="https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="ko" href="https://mediprimer.org/ko/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="tl" href="https://mediprimer.org/tl/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="vi" href="https://mediprimer.org/vi/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="zh-Hant" href="https://mediprimer.org/zh-Hant/totalization-agreements-medicare-40-quarters.html">
+<link rel="alternate" hreflang="x-default" href="https://mediprimer.org/totalization-agreements-medicare-40-quarters.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://mediprimer.org/es/"}, {"@type": "ListItem", "position": 2, "name": "Créditos de trabajo en el extranjero y la Parte A de Medicare: la regla de los 40 trimestres", "item": "https://mediprimer.org/es/totalization-agreements-medicare-40-quarters.html"}]}</script>
+<!--/seo-->
+</head>
+<body><!--mp-langs--><script>window.MP_LANGS={"es": "¿Prefiere leer esta página en español?", "zh-Hant": "您希望閱讀本頁的中文版本嗎？", "vi": "Quý vị muốn đọc trang này bằng tiếng Việt không?", "ko": "이 페이지를 한국어로 보시겠습니까?", "tl": "Gusto ba ninyong basahin ang pahinang ito sa Tagalog?", "en": "Would you like to read this page in English?"};</script>
+<script src="/lang-suggest.js" defer></script><!--/mp-langs-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/es/"><span class="mark">MP</span> MediPrimer</a>
+    <!--switcher--><div class="navitem has-menu lang-switch">
+    <button type="button" class="menu-caret lang-switch-trigger" aria-expanded="false" aria-label="Idioma: Español"><span class="lang-switch-current">Español</span> ▾</button>
+    <div class="dropdown">
+    <a href="/totalization-agreements-medicare-40-quarters.html" lang="en">English</a>
+    <a href="/es/totalization-agreements-medicare-40-quarters.html" lang="es" aria-current="page">Español</a>
+    </div>
+  </div><!--/switcher-->
+    <div class="header-controls">
+    <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Menú">☰</button>
+    <nav class="main">
+      <a href="/es/" class="navtop">Inicio</a>
+      <div class="navitem has-menu">
+        <a href="/es/turning-65.html" class="navtop active">Comience aquí</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Comience aquí">▾</button>
+        <div class="dropdown">
+        <a href="/es/turning-65.html" class="star">★ Al cumplir 65 años: comience aquí</a>
+        <a href="/es/planning-for-two.html">Medicare para parejas</a>
+        <a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a>
+        <a href="/es/costs.html">Entienda sus costos</a>
+        <a href="/es/enrollment.html">Inscripción y plazos</a>
+        <a href="/es/getting-help.html">Obtenga ayuda para pagar</a>
+        <a href="/es/questions-to-ask.html">Preguntas que debe hacer</a>
+        <a href="/es/edge-cases.html">Casos especiales y complicaciones</a>
+        <a href="/es/members.html">Todas las guías para miembros →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/basics.html" class="navtop">Aprenda los conceptos básicos</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Aprenda los conceptos básicos">▾</button>
+        <div class="dropdown">
+        <a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a>
+        <a href="/es/plan-types.html">Tipos de planes</a>
+        <a href="/es/medigap.html">Planes Medigap</a>
+        <a href="/es/medicare-advantage.html">Medicare Advantage</a>
+        <a href="/es/marketplace.html">El Mercado de Seguros Médicos (ACA)</a>
+        <a href="/es/cms-updates.html">Cómo se rigen los programas</a>
+        <a href="/es/policy-changes.html">Cambios de políticas y normas</a>
+        <a href="/es/basics.html">Todos los conceptos básicos →</a>
+        </div>
+      </div>
+      <div class="navitem has-menu">
+        <a href="/es/directories.html" class="navtop">Encuentre ayuda</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Encuentre ayuda">▾</button>
+        <div class="dropdown">
+        <a href="/es/state-medicaid.html">Medicaid estatal</a>
+        <a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a>
+        <a href="/es/insurance-departments.html">Departamentos de seguros</a>
+        <a href="/es/resources.html">Todos los recursos</a>
+        <a href="/es/checklists.html">Listas de verificación para imprimir</a>
+        <a href="/es/directories.html">Inicio de directorios →</a>
+        </div>
+      </div>
+      <a href="/es/glossary.html" class="navtop">Glosario</a>
+      <div class="navitem has-menu">
+        <a href="/es/professionals.html" class="navtop">Para socios y profesionales</a><button type="button" class="menu-caret" aria-expanded="false" aria-label="Abrir menú de Para socios y profesionales">▾</button>
+        <div class="dropdown">
+        <a href="/es/partner-materials.html" class="star">★ Materiales gratuitos para repartir</a>
+        <a href="/es/operations.html">Operaciones de planes de salud</a>
+        <a href="/es/providers.html">Proveedores y facturación</a>
+        <a href="/es/brokers.html">Agentes y asesores</a>
+        <a href="/es/navigators.html">Administradores de casos y navegadores</a>
+        <a href="/es/star-ratings.html">Calificaciones de estrellas y calidad</a>
+        <a href="/es/appeals-timelines.html">Apelaciones: niveles y plazos</a>
+        <a href="/es/professionals.html">Todas las referencias profesionales →</a>
+        </div>
+      </div>
+      <a href="/es/about.html" class="navtop">Acerca de</a>
+    </nav>
+    </div>
+  </div>
+</header><section class="hero">
+  <div class="wrap">
+    <p class="kicker">Para Miembros y Cuidadores</p>
+    <h1>Los acuerdos de totalización y la regla de los 40 trimestres de Medicare</h1>
+    <p>Los créditos de trabajo de Corea u otro país con acuerdo no cuentan para la Parte A sin prima. Aquí le explicamos por qué y cómo aún puede obtener Medicare.</p>
+  </div>
+</section>
+<main>
+  <div class="wrap">
+
+    <p class="lead"><strong>Esta es la respuesta corta.</strong> El trabajo que hizo en otro país, como Corea, no cuenta para la Parte A de Medicare sin prima. El Seguro Social tiene acuerdos con otros países, llamados acuerdos de totalización. Estos pueden contar sus créditos del extranjero para los beneficios de jubilación, discapacidad o sobrevivientes de EE. UU. Pero el Seguro Social indica que los acuerdos no cubren los beneficios de Medicare, por lo que no puede usar esos créditos para que usted califique para el seguro de hospital de Medicare sin prima. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> La Parte A sin prima generalmente requiere unos 10 años de trabajo en EE. UU., o 40 trimestres, de usted o de su cónyuge. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+
+    <div class="note">
+      <strong>No tener la Parte A sin prima no significa no tener Medicare.</strong> Es posible que aún pueda comprar la Parte A y la Parte B. Consulte la sección "Si no tiene 40 trimestres" más abajo y nuestra guía sobre <a href="/es/medicare-immigrants.html">Medicare para inmigrantes</a>.
+    </div>
+
+    <h2>Qué hace un acuerdo de totalización</h2>
+    <p>Estos acuerdos tienen dos propósitos principales. Primero, evitan que las personas paguen impuestos del Seguro Social a dos países por los mismos ingresos. Segundo, ayudan a los trabajadores que dividen su carrera entre Estados Unidos y otro país. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+    <p>Estados Unidos tiene acuerdos con unos 30 países, incluida Corea del Sur. <!-- src: https://www.ssa.gov/international/agreements_overview.html --> El acuerdo con Corea entró en vigor el 1 de abril de 2001. <!-- src: https://www.ssa.gov/international/agreements_overview.html --></p>
+    <p>Para Estados Unidos, los acuerdos cubren los impuestos del Seguro Social, los impuestos de Medicare y los beneficios de jubilación, discapacidad y sobrevivientes. No cubren los beneficios del programa de Medicare. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> Esa sola oración explica la mayor parte de la confusión.</p>
+
+    <h2>Por qué los créditos del extranjero no cuentan para la Parte A</h2>
+    <p>El Seguro Social indica que no puede contar sus créditos en un país con acuerdo para establecer el derecho al seguro de hospital de Medicare sin prima. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --> La Parte A es la parte de Medicare que cubre el hospital. La Parte A sin prima depende del trabajo en EE. UU. y de los impuestos de Medicare de EE. UU. Medicare indica que la mayoría de las personas la obtienen porque ellas o su cónyuge pagaron impuestos de Medicare durante suficiente tiempo mientras trabajaban, generalmente al menos 10 años. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></p>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr><th>Lo que usted quiere</th><th>¿Pueden ayudar los créditos del extranjero?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Beneficios de jubilación, discapacidad o sobrevivientes del Seguro Social de EE. UU.</td><td>A veces. El Seguro Social puede contarlos si usted cumple las reglas del acuerdo. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Parte A de Medicare gratuita (sin prima)</td><td>No. Los créditos del extranjero no se pueden contar para esto. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></td></tr>
+          <tr><td>Comprar la Parte A o la Parte B</td><td>No es necesario. Se usan otras reglas, como la edad y la residencia. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>El ejemplo de Corea</h2>
+    <p>Supongamos que trabajó durante años bajo el sistema de Pensión Nacional de Corea. Luego se muda a EE. UU. y trabaja aquí unos años. Para los beneficios de jubilación del Seguro Social, el acuerdo puede ayudar de forma limitada. Para que se cuenten sus créditos de Corea, debe haber ganado al menos seis créditos en EE. UU., que generalmente equivalen a un año y medio de trabajo. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --> Si ya tiene suficientes créditos de EE. UU., EE. UU. no puede contar sus créditos de Corea. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+    <p>EE. UU. requiere 10 años de trabajo, o 40 créditos, para los beneficios de jubilación si usted nació en 1929 o después. <!-- src: https://www.ssa.gov/pubs/EN-05-10072.pdf --> En 2026, usted gana un crédito por cada $1,890 de ingresos, hasta un máximo de cuatro créditos al año. <!-- src: https://www.ssa.gov/oact/cola/QC.html --> Nada de esto cambia la regla de Medicare mencionada arriba. Sus créditos de Corea pueden ayudar con su pensión del Seguro Social, pero no hacen que la Parte A sea gratuita.</p>
+    <p>La misma lógica se aplica a todos los países con acuerdo, no solo a Corea.</p>
+
+    <h2>Si no tiene 40 trimestres</h2>
+    <p>Es posible que aún pueda obtener Medicare. Estas son las vías principales:</p>
+    <ul>
+      <li><strong>El trabajo de un cónyuge.</strong> La Parte A sin prima puede basarse en sus propios ingresos o en los de un cónyuge, padre, madre o hijo. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Solo cuenta el trabajo en EE. UU., por lo que el historial del cónyuge en EE. UU. es importante. Consulte <a href="/es/planning-for-two.html">Medicare para parejas</a> y <a href="/es/medicare-spouse-work-record.html">cómo usar el historial de trabajo de un cónyuge</a>.</li>
+      <li><strong>Trabajo para el gobierno de EE. UU.</strong> Puede contar el tiempo en un empleo del gobierno en el que pagó impuestos de Medicare. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Comprar la Parte A.</strong> Si no califica para la Parte A sin prima, es posible que pueda comprarla. En 2026 el precio es de $311 o $565 al mes, según cuánto tiempo trabajaron y pagaron impuestos de Medicare usted o su cónyuge. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --> Para comprar la Parte A, también debe inscribirse en la Parte B. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs --></li>
+      <li><strong>Comprar solo la Parte B.</strong> Si no es elegible para la Parte A sin prima, puede comprar la Parte B sin la Parte A. Debe tener 65 años o más, y ser ciudadano de EE. UU. o un no ciudadano admitido legalmente que haya vivido en EE. UU. al menos cinco años. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+    </ul>
+    <p>Si compra la Parte A tarde, la prima puede aumentar un 10%, por el doble de años que pudo haberse inscrito pero no lo hizo. <!-- src: https://www.medicare.gov/basics/costs/medicare-costs/avoid-penalties --> Consulte <a href="/es/medicare-late-enrollment-penalties.html">las penalizaciones por inscripción tardía</a>.</p>
+
+<!--newsletter-->
+    <aside class="newsletter" aria-label="Reciba novedades de MediPrimer por correo electrónico">
+      <h2>La inscripción abierta termina el 7 de diciembre. Le avisamos.</h2>
+      <p>Reciba nuestra lista de verificación de otoño — lo que conviene revisar de su plan antes de la fecha límite — y un recordatorio antes del 7 de diciembre. Después, un correo breve solo cuando algo cambie, nunca más de uno por semana. Sin anuncios ni venta de planes.</p>
+      <form class="newsletter-form" data-lang="es">
+        <label class="sr-only" for="nl-email">Su correo electrónico</label>
+        <input id="nl-email" type="email" required placeholder="Su correo electrónico">
+        <button type="submit">Envíenme la lista</button>
+      </form>
+      <p class="newsletter-fine">Le enviaremos un correo para confirmar; no quedará suscrito hasta que haga clic. Un recordatorio antes de la fecha límite y, después, como máximo un correo por semana. Cancele con un clic.</p>
+    </aside>
+    <!--/newsletter-->
+
+    <h2>Una lista breve de acciones</h2>
+    <ol class="steps">
+      <li><strong>Cuente su trabajo en EE. UU.</strong> Revise su historial de ingresos en EE. UU. a través de su cuenta my Social Security. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></li>
+      <li><strong>Incluya a su cónyuge.</strong> Revise también su historial en EE. UU.</li>
+      <li><strong>Planifique su inscripción.</strong> Si debe comprar cobertura, inscríbase durante su Período de Inscripción Inicial para evitar penalizaciones. Consulte <a href="/es/turning-65.html">Cumplir 65 años</a>.</li>
+      <li><strong>Llame al Seguro Social.</strong> El número es 1-800-772-1213. <!-- src: https://www.ssa.gov/medicare/sign-up --> Pregunte sobre sus opciones de Medicare y sus créditos.</li>
+      <li><strong>Pida ayuda gratuita a su SHIP.</strong> Encuentre el suyo en el <a href="/es/ship-directory.html">directorio de SHIP</a>. Si necesita ayuda con el idioma, consulte los <a href="/es/medical-interpreter-rights.html">derechos a un intérprete</a>.</li>
+    </ol>
+
+    <h2>Preguntas frecuentes</h2>
+
+    <details class="qa">
+      <summary>¿Cuentan mis créditos de trabajo de Corea para los 40 trimestres de la Parte A?</summary>
+      <div>
+        <p>No. El Seguro Social indica que el acuerdo no cubre los beneficios de Medicare, por lo que no puede contar los créditos ganados en un país con acuerdo para que usted califique para el seguro de hospital de Medicare sin prima. <!-- src: https://www.ssa.gov/international/agreement_descriptions.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Pueden los créditos de Corea ayudar con los beneficios de jubilación del Seguro Social?</summary>
+      <div>
+        <p>A veces. Necesita al menos seis créditos de EE. UU. para que se cuenten los créditos de Corea, y EE. UU. no puede contarlos si usted ya tiene suficientes créditos de EE. UU. <!-- src: https://www.ssa.gov/international/Agreement_Pamphlets/korea.html --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Puedo obtener Medicare sin tener 40 trimestres?</summary>
+      <div>
+        <p>Sí, en muchos casos. Puede calificar por el trabajo de un cónyuge en EE. UU., o puede comprar la Parte A y la Parte B. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --> Se aplican las reglas de edad y residencia. <!-- src: https://www.ssa.gov/pubs/EN-05-10043.pdf --></p>
+      </div>
+    </details>
+
+    <details class="qa">
+      <summary>¿Me ayuda el trabajo de mi cónyuge en EE. UU.?</summary>
+      <div>
+        <p>Sí. La Parte A sin prima puede basarse en sus propios ingresos o en los de un cónyuge, padre, madre o hijo. <!-- src: https://www.cms.gov/medicare/enrollment-renewal/original-part-a-b --></p>
+      </div>
+    </details>
+
+    <h2>Fuentes oficiales</h2>
+    <ul>
+      <li><a href="https://www.ssa.gov/international/agreement_descriptions.html" rel="noopener">SSA: Descripciones de los acuerdos de totalización</a></li>
+      <li><a href="https://www.ssa.gov/international/Agreement_Pamphlets/korea.html" rel="noopener">SSA: Acuerdo de totalización con Corea</a></li>
+      <li><a href="https://www.ssa.gov/international/agreements_overview.html" rel="noopener">SSA: Acuerdos internacionales de Seguro Social de EE. UU.</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10072.pdf" rel="noopener">SSA: Cómo se ganan los créditos</a></li>
+      <li><a href="https://www.ssa.gov/pubs/EN-05-10043.pdf" rel="noopener">SSA: Folleto sobre Medicare</a></li>
+      <li><a href="https://www.medicare.gov/basics/costs/medicare-costs" rel="noopener">Medicare.gov: Costos</a></li>
+    </ul>
+
+    <div class="note">
+      <strong>Verifique antes de actuar.</strong> MediPrimer ofrece información educativa general y no está afiliado a ninguna agencia ni aseguradora. Las reglas para los no ciudadanos y para los créditos de trabajo son detalladas. Confirme su propio historial con el Seguro Social.
+    </div>
+  </div>
+  </main><footer class="site-footer">
+  <div class="wrap">
+    <div class="footcols">
+      <div>
+        <h4>Los conceptos básicos</h4>
+        <ul>
+          <li><a href="/es/coverage-basics.html">Conceptos básicos de la cobertura</a></li>
+          <li><a href="/es/plan-types.html">Tipos de planes</a></li>
+          <li><a href="/es/medigap.html">Planes Medigap</a></li>
+          <li><a href="/es/policy-changes.html">Cambios de políticas y normas</a></li>
+          <li><a href="/es/glossary.html">Glosario</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para miembros</h4>
+        <ul>
+          <li><a href="/es/enrollment.html">Inscripción y plazos</a></li>
+          <li><a href="/es/costs.html">Entienda sus costos</a></li>
+          <li><a href="/es/choosing-coverage.html">Cómo elegir la cobertura</a></li>
+          <li><a href="/es/getting-help.html">Obtenga ayuda para pagar</a></li>
+          <li><a href="/es/turning-65.html">Al cumplir 65 años</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Para profesionales</h4>
+        <ul>
+          <li><a href="/es/operations.html">Operaciones de planes de salud</a></li>
+          <li><a href="/es/providers.html">Proveedores y facturación</a></li>
+          <li><a href="/es/brokers.html">Agentes y asesores</a></li>
+          <li><a href="/es/navigators.html">Administradores de casos y navegadores</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Directorios y herramientas</h4>
+        <ul>
+          <li><a href="/es/state-medicaid.html">Medicaid estatal</a></li>
+          <li><a href="/es/ship-directory.html">SHIP (ayuda con Medicare)</a></li>
+          <li><a href="/es/insurance-departments.html">Departamentos de seguros</a></li>
+          <li><a href="/es/resources.html">Todos los recursos</a></li>
+          <li><a href="/es/checklists.html">Listas de verificación para imprimir</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Fuentes oficiales</h4>
+        <ul>
+          <li><a href="https://www.medicare.gov/" rel="noopener">Medicare.gov</a></li>
+          <li><a href="https://www.medicaid.gov/" rel="noopener">Medicaid.gov</a></li>
+          <li><a href="https://www.cms.gov/" rel="noopener">CMS.gov</a></li>
+          <li><a href="https://www.healthcare.gov/" rel="noopener">CuidadoDeSalud.gov</a></li>
+        </ul>
+      </div>
+    </div>
+<p class="disclaimer">Recurso educativo independiente. No está afiliado con CMS, Medicare, Medicaid, ninguna agencia estatal ni ninguna compañía de seguros de salud. La información es general y debe verificarse con los materiales oficiales del programa y del plan. Nada de lo que aparece aquí es consejo médico, legal ni financiero, y ninguna página recomienda un plan específico. Contenido revisado por última vez en julio de 2026.</p>
+    <nav class="legal-links">
+      <a href="/es/privacy.html">Privacidad</a>
+      <a href="/es/terms-of-use.html">Términos de uso</a>
+      <a href="/es/disclaimer.html">Aviso legal</a>
+      <a href="/es/accessibility.html">Accesibilidad</a>
+      <a href="/es/editorial-standards.html">Normas editoriales</a>
+      <a href="/es/support.html">Apoyo</a>
+      <a href="/es/site-map.html">Mapa del sitio</a>
+    </nav>
+    <div class="note">
+      <p>Traducción del original en inglés.</p>
+      <p>
+        <a href="/totalization-agreements-medicare-40-quarters.html">Ver la versión original en inglés</a>
+        <a href="https://www.medicare.gov/es" rel="noopener">Materiales oficiales de Medicare en español</a>
+      </p>
+    </div>
+  </div>
+</footer>
+<script src="/glossary-tooltips.js"></script>
+<script src="/nav-menu.js"></script>
+<script src="/newsletter.js" defer></script>
+<script src="/chatbot.js" defer></script>
+</body>
+</html>
